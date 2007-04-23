@@ -1,0 +1,53 @@
+/**
+\mainpage
+
+\section sec_intro Introduction
+
+HPP (Humanoid Path Planner) is a suite of software packages
+implementing path planning functionalities for a humanoid robot.
+HPP KineoWorks (KWS) and KineoPathPlanner-SDK (KPP-SDK). 
+
+It can be extended to path planning for other types of robots like digital actors for instance.
+
+\section sec_organization Organization of the packages
+
+\image html archi.png "Architecture of HPP: the functionalities are distributed into separate software packages. The architecture is composed of Three types of packages: algorithms, CORBA interfaces and KPP-SDK interfaces."
+\image latex archi.pdf "Architecture of HPP: the functionalities are distributed into separate software packages. The architecture is composed of Three types of packages: algorithms, CORBA interfaces and KPP-SDK interfaces."
+
+The code relative to the HPP is distributed into several software packages listed in the following sections:
+
+\subsection subsec_algo Algorithms
+These packages implement path planning algorithms using KineoWorks. They are independent of any interface.
+\htmlonly
+<ul>
+  <li><a href="@KWSPLUS_PREFIX@/share/doc/kwsPlus/main.html">kwsPlus: extension to KineoWorks (cartlike steerinng method).</a></li>
+  <li><a href="@HPPCORE_PREFIX@/share/doc/hppCore/main.html">hppCore: definition of basic classes.</a></li>
+  <li><a href="@WALKGENJRL_PREFIX@/share/doc/walkGenJrl/main.html">walkGenJrl: JRL Walk Pattern Generator</a></li>
+  <li><a href="@HPPHRPPLANNER_PREFIX@/share/doc/hppHRPPlanner/main.html">hppHRPPlanner: functions specific to HRP2 robot.</a></li>
+  <li><a href="@HPPCMPPLANNER_PREFIX@/share/doc/hppCmpPlanner/main.html">hppCmpPlanner: Contact motion planning</a></li>
+  <li><a href="@HPPWALKPLANNER_PREFIX@/share/doc/hppWalkPlanner/main.html">hppWalkPlanner: walk planning for a humanoid robot among obstacles.</a></li>
+</ul>
+\endhtmlonly
+
+\subsection subsec_corba Corba server
+
+These packages implement a Corba server to build objects and send requests to HPP packages.
+\htmlonly
+<ul>
+<li><a href="@HPPCORBASERVER_PREFIX@/share/doc/hppCorbaServer">hppCorbaServer: Corba server.</a></li>
+</ul>
+\endhtmlonly
+
+\subsection subsec_kppInterface KPP interfaces
+\htmlonly
+<ul>
+<li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface">Abstract KPP interface that manages main notifications.</a></li>
+<li><a href="@KPPINTERFACEWALK_PREFIX@/share/doc/kppInterfaceWalk/main.html">KPP interface for hppWalkPlanner.</a></li>
+<li><a href="@KPPINTERFACEHRP_PREFIX@/share/doc/kppInterfaceHRP/main.html">kppInterfaceHRP: KPP interface for functions specific to HRP2 robot.</a></li>
+<li><a href="@KPPINTERFACECMP_PREFIX@/share/doc/kppInterfaceCmp/main.html">kppInterfaceCmp: KPP interface for contact motion planning.</a></li>
+</ul>
+\endhtmlonly
+These packages implement interfaces with Kineo Path Planner GUI.
+
+\
+*/

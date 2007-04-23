@@ -1,0 +1,13 @@
+#
+#  Copyright
+#
+
+Installation instructions for library hppDoc
+----------------------------------------------
+
+It is recommended to create a specific directory to install this package.
+mkdir build
+cd build
+../configure [OPTIONS]
+make 
+make install
