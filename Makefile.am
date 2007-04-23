@@ -3,14 +3,8 @@
 # 
 
 SUBDIRS = \
-	src \
-	include \
-	unitTesting
+	doc
 
 hppDocdir = $(libdir)/pkgconfig
 hppDoc_DATA = hppDoc.pc
 
-install-data-hook: documentation
-
-documentation:
-	cd doc; $(MAKE) install

@@ -7,10 +7,7 @@ AC_INIT([hppDoc], [1.0], [support@company.com])
 AC_PREREQ(2.59)
 
 AM_INIT_AUTOMAKE
-
-AC_PROG_CXX
 AC_PROG_INSTALL
-AC_PROG_LIBTOOL
 
 PKG_CHECK_MODULES(KWSPLUS, kwsPlus)
 KWSPLUS_PREFIX=`$PKG_CONFIG kwsPlus --variable=prefix`
@@ -62,5 +59,5 @@ AC_OUTPUT(
 	Makefile
 	doc/Makefile
 	doc/package.dox
-	doc/additionalDoc.package.h
+	doc/additionalDoc/package.h
 	)

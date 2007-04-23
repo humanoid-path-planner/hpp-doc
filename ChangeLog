@@ -1,1 +1,4 @@
-Write in this file the modifications you commit.
+2007/04/23
+	First version of General documentation for Humanoid Path
+	Planner. This documentation references the different packages
+	composing HPP.

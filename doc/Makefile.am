@@ -12,8 +12,9 @@ EXTRA_DIST = \
 	pictures/footer.jpg \
 	additionalDoc/package.h 
 
+all: html-doc 
 
-install:html-doc 
+install:
 	mkdir -p $(hppDocdir)
 	$(INSTALL_DATA) html/* $(hppDocdir)
 	mkdir -p $(hppDocdir)/pictures
