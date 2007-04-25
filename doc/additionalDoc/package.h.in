@@ -26,6 +26,7 @@ These packages implement path planning algorithms using KineoWorks. They are ind
   <li><a href="@HPPHRPPLANNER_PREFIX@/share/doc/hppHRPPlanner/main.html">hppHRPPlanner: functions specific to HRP2 robot.</a></li>
   <li><a href="@HPPCMPPLANNER_PREFIX@/share/doc/hppCmpPlanner/main.html">hppCmpPlanner: Contact motion planning</a></li>
   <li><a href="@HPPWALKPLANNER_PREFIX@/share/doc/hppWalkPlanner/main.html">hppWalkPlanner: walk planning for a humanoid robot among obstacles.</a></li>
+  <li><a href="@HPPTUTORIALLANNER_PREFIX@/share/doc/hppTutorialPlanner/main.html">hppTutorialPlanner: a simple planner to learn how to make and use a planner .</a></li>
 </ul>
 \endhtmlonly
 
@@ -41,10 +42,11 @@ These packages implement a Corba server to build objects and send requests to HP
 \subsection subsec_kppInterface KPP interfaces
 \htmlonly
 <ul>
-<li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface">Abstract KPP interface that manages main notifications.</a></li>
-<li><a href="@KPPINTERFACEWALK_PREFIX@/share/doc/kppInterfaceWalk/main.html">KPP interface for hppWalkPlanner.</a></li>
-<li><a href="@KPPINTERFACEHRP_PREFIX@/share/doc/kppInterfaceHRP/main.html">kppInterfaceHRP: KPP interface for functions specific to HRP2 robot.</a></li>
-<li><a href="@KPPINTERFACECMP_PREFIX@/share/doc/kppInterfaceCmp/main.html">kppInterfaceCmp: KPP interface for contact motion planning.</a></li>
+  <li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface">Abstract KPP interface that manages main notifications.</a></li>
+  <li><a href="@KPPINTERFACEWALK_PREFIX@/share/doc/kppInterfaceWalk/main.html">kppInterfaceWalk: KPP interface for hppWalkPlanner.</a></li>
+  <li><a href="@KPPINTERFACEHRP_PREFIX@/share/doc/kppInterfaceHRP/main.html">kppInterfaceHRP: KPP interface for functions specific to HRP2 robot.</a></li>
+  <li><a href="@KPPINTERFACECMP_PREFIX@/share/doc/kppInterfaceCmp/main.html">kppInterfaceCmp: KPP interface for contact motion planning.</a></li>
+  <li><a href="@KPPINTERFACETUTORIAL_PREFIX@/share/doc/kppInterfaceTutorial/main.html">kppInterfaceTutorial: KPP interface to learn how to make and use a KPP interface.</a></li>
 </ul>
 \endhtmlonly
 These packages implement interfaces with Kineo Path Planner GUI.

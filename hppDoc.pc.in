@@ -6,4 +6,4 @@ includedir=@includedir@
 Name: @PACKAGE@
 Description: 
 Version: @VERSION@
-Requires: kwsIO, kwsPlus, hppCore, hppCorbaServer, hppWalkPlanner, hppHRPPlanner, hppCmpPlanner, kppInterface, kppInterfaceWalk, kppInterfaceHRP, kppInterfaceCmp
+Requires: kwsIO, kwsPlus, hppCore, hppCorbaServer, hppWalkPlanner, hppHRPPlanner, hppCmpPlanner, kppInterface, kppInterfaceWalk, kppInterfaceHRP, kppInterfaceCmp, hppTutorial, kppInterfaceTutorial
