@@ -34,7 +34,7 @@ These packages implement path planning algorithms using KineoWorks. They are ind
 These packages implement a Corba server to build objects and send requests to HPP packages.
 \htmlonly
 <ul>
-<li><a href="@HPPCORBASERVER_PREFIX@/share/doc/hppCorbaServer">hppCorbaServer</a>: Corba server.</li>
+<li><a href="@HPPCORBASERVER_PREFIX@/share/doc/hppCorbaServer/main.html">hppCorbaServer</a>: Corba server.</li>
 </ul>
 \endhtmlonly
 
