@@ -26,7 +26,7 @@ These packages implement path planning algorithms using KineoWorks. They are ind
   <li><a href="@HPPHRPPLANNER_PREFIX@/share/doc/hppHRPPlanner/main.html">hppHRPPlanner: functions specific to HRP2 robot.</a></li>
   <li><a href="@HPPCMPPLANNER_PREFIX@/share/doc/hppCmpPlanner/main.html">hppCmpPlanner: Contact motion planning</a></li>
   <li><a href="@HPPWALKPLANNER_PREFIX@/share/doc/hppWalkPlanner/main.html">hppWalkPlanner: walk planning for a humanoid robot among obstacles.</a></li>
-  <li><a href="@HPPTUTORIALLANNER_PREFIX@/share/doc/hppTutorialPlanner/main.html">hppTutorialPlanner: a simple planner to learn how to make and use a planner .</a></li>
+  <li><a href="@HPPTUTORIALPLANNER_PREFIX@/share/doc/hppTutorialPlanner/main.html">hppTutorialPlanner: a simple planner to learn how to make and use a planner .</a></li>
 </ul>
 \endhtmlonly
 
