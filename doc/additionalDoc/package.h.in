@@ -22,7 +22,7 @@ These packages implement path planning algorithms using KineoWorks. They are ind
 <ul>
   <li><a href="@KWSPLUS_PREFIX@/share/doc/kwsPlus/main.html">kwsPlus: extension to KineoWorks (cartlike steerinng method).</a></li>
   <li><a href="@HPPCORE_PREFIX@/share/doc/hppCore/main.html">hppCore: definition of basic classes.</a></li>
-  <li><a href="@WALKGENJRL_PREFIX@/share/doc/walkGenJrl/main.html">walkGenJrl: JRL Walk Pattern Generator</a></li>
+  <li><a href="@WALKGENJRL_PREFIX@/share/doc/walkGenJRL/main.html">walkGenJrl: JRL Walk Pattern Generator</a></li>
   <li><a href="@HPPHRPPLANNER_PREFIX@/share/doc/hppHRPPlanner/main.html">hppHRPPlanner: functions specific to HRP2 robot.</a></li>
   <li><a href="@HPPCMPPLANNER_PREFIX@/share/doc/hppCmpPlanner/main.html">hppCmpPlanner: Contact motion planning</a></li>
   <li><a href="@HPPWALKPLANNER_PREFIX@/share/doc/hppWalkPlanner/main.html">hppWalkPlanner: walk planning for a humanoid robot among obstacles.</a></li>
@@ -42,7 +42,7 @@ These packages implement a Corba server to build objects and send requests to HP
 \subsection subsec_kppInterface KPP interfaces
 \htmlonly
 <ul>
-  <li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface">Abstract KPP interface that manages main notifications.</a></li>
+  <li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface/main.html">Abstract KPP interface that manages main notifications.</a></li>
   <li><a href="@KPPINTERFACEWALK_PREFIX@/share/doc/kppInterfaceWalk/main.html">kppInterfaceWalk: KPP interface for hppWalkPlanner.</a></li>
   <li><a href="@KPPINTERFACEHRP_PREFIX@/share/doc/kppInterfaceHRP/main.html">kppInterfaceHRP: KPP interface for functions specific to HRP2 robot.</a></li>
   <li><a href="@KPPINTERFACECMP_PREFIX@/share/doc/kppInterfaceCmp/main.html">kppInterfaceCmp: KPP interface for contact motion planning.</a></li>
