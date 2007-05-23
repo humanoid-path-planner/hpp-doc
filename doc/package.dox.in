@@ -177,7 +177,7 @@ SEARCHENGINE           = NO
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "Humanoid Path Planner Documentation"
+PROJECT_NAME           = "Humanoid Path Planner"
 PROJECT_NUMBER         = @VERSION@
 
 #---------------------------------------------------------------------------
