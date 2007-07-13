@@ -17,15 +17,27 @@ It can be extended to path planning for other types of robots like digital actor
 The code relative to the HPP is distributed into several software packages listed in the following sections:
 
 \subsection subsec_algo Algorithms
+\subsubsection subsubsec_witout_kineo Independent from KineoWorks
+\htmlonly
+<ul>
+  <li><a href="@ABSTRACTROBOTDYNAMICS_PREFIX@/share/doc/abstractRobotDynamics/main.html">abstractRobotDynamics</a>: abstract interface for robot dynamic model</li>
+  <li><a href="@DYNAMICSJRLJAPAN_PREFIX@/share/doc/jrlCIRdynamicsJRLJapan/main.html">dynamicsJRLJapan</a>: JRL Implementation of robot dynamic model</li>
+  <li><a href="@WALKGENJRL_PREFIX@/share/doc/walkGenJRL/main.html">walkGenJRL</a>: JRL Walk Pattern Generator</li>
+  <li><a href="@ABSTRACTGIKTASK_PREFIX@/share/doc/abstractGikTask/main.html">abstractGikTask</a>: Abstract interface for whole body motion planning.</li>
+  <li><a href="@HPPGIK_PREFIX@/share/doc/hppGik/main.html">hppGik</a>: Implementation of whole body motion planning.</li>
+</ul>
+
+
+\subsubsection subsubsec_with_kineo Using KineoWorks
 These packages implement path planning algorithms using KineoWorks. They are independent of any interface.
 \htmlonly
 <ul>
   <li><a href="@KWSPLUS_PREFIX@/share/doc/kwsPlus/main.html">kwsPlus</a>: extension to KineoWorks (cart-like steering method).</li>
   <li><a href="@HPPCORE_PREFIX@/share/doc/hppCore/main.html">hppCore</a>: definition of basic classes.</li>
-  <li><a href="@WALKGENJRL_PREFIX@/share/doc/walkGenJRL/main.html">walkGenJRL</a>: JRL Walk Pattern Generator</li>
   <li><a href="@HPPHRPPLANNER_PREFIX@/share/doc/hppHRPPlanner/main.html">hppHRPPlanner</a>: functions specific to HRP2 robot.</li>
   <li><a href="@HPPCMPPLANNER_PREFIX@/share/doc/hppCmpPlanner/main.html">hppCmpPlanner</a>: contact motion planning</li>
   <li><a href="@HPPWALKPLANNER_PREFIX@/share/doc/hppWalkPlanner/main.html">hppWalkPlanner</a>: walk planning for a humanoid robot among obstacles.</li>
+  <li><a href="@HPPLOA_PREFIX@/share/doc/hppLoa/main.html">hppLoa</a>: Whole body motion planning with local obstacle avoidance.</li>
 </ul>
 \endhtmlonly
 
