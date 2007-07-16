@@ -207,7 +207,8 @@ SHOW_DIRECTORIES       = NO
 #---------------------------------------------------------------------------
 FILE_PATTERNS          = *.h *.idl
 EXCLUDE_PATTERNS       = 
-INPUT                  = @builddir@/additionalDoc
+INPUT                  = @builddir@/additionalDoc \
+	@srcdir@/additionalDoc
 
 #---------------------------------------------------------------------------
 # configuration options related to inserting images
