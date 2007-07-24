@@ -32,6 +32,11 @@ Note that from now on, <tt> [git|softs] </tt> should be replaced by
 \li \c softs if you are working on a LAAS account,
 \li \c git if you are working from a distant site.
 
+   Set the following environment variable:
+\code
+[openrobots] setenv ROBOTPKG_BASE ${HOME}/openrobots
+\endcode
+   Install  \c robotpkg:
 \code
 [openrobots] cd robotpkg
 [robotpkg] ./bootstrap/bootstrap --prefix=${HOME}/openrobots
