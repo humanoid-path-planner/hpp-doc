@@ -10,6 +10,8 @@ EXTRA_DIST = \
 	footer.html \
 	package.css \
 	pictures/footer.jpg \
+	figures/archi.png  \
+	figures/kppInterfaceWalk.png \
 	additionalDoc/package.h 
 
 all: html-doc 
