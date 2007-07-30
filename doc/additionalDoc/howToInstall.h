@@ -60,7 +60,18 @@ For instance
 [robotpkg] cd path/hpp-core
 [hpp-core] make update
 \endcode
-All dependencies are automatically installed. For some packages, you will need to follow instructions to accept license agreement.
+All dependencies are automatically installed. For some packages, you will need to follow instructions to accept license agreement. For instance KineoWorks installation will output the following message:
+\code
+ERROR: kineo-pp-2.04.301r3 has an unacceptable license: kineocam-license.
+ERROR:     To view the license, enter "make show-license".
+ERROR:     To indicate acceptance, add this line to
+ERROR:        ${HOME}/openrobots/etc/robotpkg.conf:
+ERROR:     ACCEPTABLE_LICENSES+=kineocam-license
+\endcode
+Follow the instruction and type again:
+\code
+[hpp-core] make update
+\endcode
 
 Once modules managed by \c robotpkg have been installed, you can download working versions of packages under development or create your own package.
 
