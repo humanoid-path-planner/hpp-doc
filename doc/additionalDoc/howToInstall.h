@@ -77,7 +77,7 @@ Once modules managed by \c robotpkg have been installed, you can download workin
 
 \subsection hppDoc_other_packages Packages under development or new packages.
 
-To download, compile and install packages not managed by \c robotpkg, create a development directory as follows:
+To download, compile and install packages not managed by \c robotpkg, or packages that you want to modify or debug, create a development directory as follows:
 \code
 [~] mkdir ${HOME}/devel
 [~] cd ${HOME}/devel
@@ -163,27 +163,8 @@ setenv OMNINAMES_LOGDIR ${HOME}/omniORB/log
 
 \subsection hppDoc_install_example_subsec Installing necessary packages
 
-First download and install <tt>robotpkg</tt> and type <tt>make update</tt> in <tt>path/hpp-core</tt>.
+Download, install <tt>robotpkg</tt> and type <tt>make update</tt> in <tt>graphics/kpp-interfacewalk</tt> on a machine with a Kineo license.
 
-To install the walk planner package and the corresponding kppInterface, do the following:
-\code
-[devel] cg-clone git+ssh://[git|softs].laas.fr/git/jrl/hppOpenHRP
-[devel] cg-clone git+ssh://[git|softs].laas.fr/git/jrl/hppCorbaServer
-[devel] cg-clone git+ssh://[git|softs].laas.fr/git/jrl/hppWalkPlanner
-[devel] cg-clone git+ssh://[git|softs].laas.fr/git/jrl/kppInterface
-[devel] cg-clone git+ssh://[git|softs].laas.fr/git/jrl/kppInterfaceWalk
-\endcode
-
-Then compile and install each of these packages as explained above. Note that configuration of hppOpenhRP and hppCorbaServer requires an option:
-\li in hppOpenHRP: 
-\code 
-[build] ../configure --prefix=${HOME}/devel --with-openhrp=${HOME}/openrobots/OpenHRP
-\endcode
-
-\li in hppCorbaServer: 
-\code
-[build] ../configure --prefix=${HOME}/devel --with-openhrp
-\endcode
 
 \subsection hppDoc_subsec_openhrp Starting OpenHRP
 
@@ -212,7 +193,7 @@ ready
 
    You can now run KineoPathPlanner and load kppInterfaceWalk module:
 \code
-   ${HOME}/openrobots/bin/KineoPathPlanner -ModulePath ${HOME}/devel/lib/modules/${HOST}/libkppInterfaceWalk.so
+   ${HOME}/openrobots/bin/KineoPathPlanner -ModulePath ${HOME}/openrobots/lib/modules/${HOST}/libkppInterfaceWalk.so
 \endcode
    where <tt>${HOST}</tt> is the name of your machine (or localhost.localdomain).
 
