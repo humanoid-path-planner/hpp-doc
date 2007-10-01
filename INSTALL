@@ -1,5 +1,5 @@
 #
-#  Copyright
+#  Copyright 2007 LAAS-CNRS
 #
 
 Installation instructions for library hppDoc
@@ -11,3 +11,4 @@ cd build
 ../configure [OPTIONS]
 make 
 make install
+

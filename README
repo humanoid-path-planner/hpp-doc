@@ -1,1 +1,33 @@
-See INSTALL for installation instruction.
+#
+#  Copyright 2007 LAAS-CNRS
+#
+
+This package implements a documentation of most HPP software packages. 
+It includes:
+  -1. information about how to install HPP software,
+  -2. information about how to develop in HPP
+  -3. a front page with links to the packages constituting HPP.
+
+Item 3 implies that this documentation depends on all the documented packages.
+To make possible the installation of this documentation without primarily
+installing all the necessary packages, all the dependencies have been 
+commented out in the configure.ac file:
+
+dnl if PKG_CHECK_MODULES(XXX, xxx); then
+dnl 	XXX_PREFIX=`$PKG_CONFIG xxx --variable=prefix`
+dnl 	AC_SUBST(XXX_PREFIX)
+dnl fi
+
+It is recommended to do the following operations:
+  1. install documentation as such (see INSTALL)
+  2. install HPP packages you need (Related Pages->How to install HPP)
+  3. uncomment in configure.ac the packages you have installed and of 
+     which you want to access the documentation (remove dnl 
+     at the beginning of the selected lines
+  4. reinstall the documentation.
+
+
+
+
+
+

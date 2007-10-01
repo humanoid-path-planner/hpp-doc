@@ -158,7 +158,9 @@ SKIP_FUNCTION_MACROS   = YES
 #---------------------------------------------------------------------------
 # Configuration::additions related to external references   
 #---------------------------------------------------------------------------
-TAGFILES               = 
+TAGFILES               = @HPPCORBASERVER_PREFIX@/share/doc/doxytag/hppCorbaServer.doxytag=@HPPCORBASERVER_PREFIX@/share/doc/hppCorbaServer \
+			@ABSTRACTROBOTDYNAMICS_PREFIX@/share/doc/doxytag/abstractRobotDynamics.doxytag=@ABSTRACTROBOTDYNAMICS_PREFIX@/share/doc/abstractRobotDynamics \
+			@HPPCORE_PREFIX@/share/doc/doxytag/hppCore.doxytag=@HPPCORE_PREFIX@/share/doc/hppCore
 GENERATE_TAGFILE       = hppDoc.doxytag
 ALLEXTERNALS           = NO
 EXTERNAL_GROUPS        = YES

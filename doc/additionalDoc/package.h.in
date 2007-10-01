@@ -48,7 +48,9 @@ The following packages implements a Corba communication functionalities
 \htmlonly
 <ul>
 <li><a href="@HPPCORBASERVER_PREFIX@/share/doc/hppCorbaServer/main.html">hppCorbaServer</a>: Corba server to implementing a ChppPlanner object.</li>
+<li><a href="@HPPPYTHON_PREFIX@/share/doc/hppPython/main.html">hppPython</a>: Script python to communicate with hppCorbaServer.</li>
 <li><a href="@HPPOPENHRP_PREFIX@/share/doc/hppOpenHRP/main.html">hppOpenHRP</a>: Corba server that implements the model of HRP2.</li>
+
 </ul>
 \endhtmlonly
 
@@ -66,7 +68,5 @@ These packages implement interfaces with Kineo Path Planner GUI.
 </ul>
 \endhtmlonly
 
-\image html archi.png "Architecture of HPP: the functionalities are distributed into separate software packages. The architecture is composed of Three types of packages: algorithms, CORBA interfaces and KPP-SDK interfaces."
-\image latex archi.pdf "Architecture of HPP: the functionalities are distributed into separate software packages. The architecture is composed of Three types of packages: algorithms, CORBA interfaces and KPP-SDK interfaces."
 
 */

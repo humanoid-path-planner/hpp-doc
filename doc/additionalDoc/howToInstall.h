@@ -111,11 +111,11 @@ Compile and install the packages in your development directory
 \subsection hppDoc_omniORB Configuring CORBA and using hppCorbaServer
 
 \c hppCorbaServer is a package that enables developers to run their algorithms from external application like python scripts for instance.
-This package instanciates a Corba server that can handle requests trigerring actions in HPP. The main actions consist in
-\li defining robots,
-\li defining obstacles,
-\li defining and solving path planning problems.
-The package also implements an OpenHRP client that enables the user to download HRP2 model by a Corba request. 
+   This package instanciates a 3 CORBA objects that can handle requests trigerring actions in HPP. The CORBA objects correspond to the following interfaces:
+\li <tt>ChppciRobot</tt> to define and build robots,
+\li <tt>ChppciObstacle</tt> to define obstacles,
+\li <tt>ChppciProblem</tt> to define and solve path planning problems.
+The package also optionally implements an OpenHRP client (configuration option --with-openhrp) that enables the user to download HRP2 model by a Corba request. 
 
    \c hppCorbaServer is based on omniORB4 (installed by robotpkg), an implementation of Corba. We will explain now how to configure omniORB4 in order to be able 
 \li to load HRP2 model from OpenHRP
@@ -159,6 +159,40 @@ setenv OMNIORB_CONFIG ${HOME}/omniORB/omniORB.cfg
 setenv OMNINAMES_LOGDIR ${HOME}/omniORB/log
 \endcode
 
+\subsubsection hppDoc_python Controlling an application using python scripts
+
+   To send request to hppCorbaServer using python, you need to install packages 
+   \li <tt>omniORBpy</tt> through robotpkg (<tt>cd ${HOME}/openrobots/robotpkg/devel/omniORBpy; make update</tt>) and
+\li <tt>hppPython</tt> (either through <tt>robotpkg</tt> or through <tt>git</tt>).
+
+Installation of \c hppPython is similar to other packages, except that command
+\code
+[package] libtoolize -c
+\endcode
+should be omitted.
+
+   <tt>hppPython</tt> installs a python script \c hppInit.py that initializes 3 CORBA clients, one to each the 3 CORBA objects instanciated by <tt>hppCorbaServer</tt> and described at the beginning of this section (\ref hppDoc_omniORB).
+
+\c hppInit.py is installed in <tt>${HOME}/devel/share/script/python</tt>. Tu use this script, you need to set the following environment variables.
+\code
+setenv PYTHONPATH ${HOME}/devel/share/script/python:${HOME}/openrobots/lib/pythonx.y/site-packages:${PYTHONPATH}
+   setenv LD_LIBRARY_PATH ${HOME}/openrobots/lib:${LD_LIBRARY_PATH}
+\endcode
+where \c x.y is the version number of python installed by \c robotpkg.
+
+Then open a python shell and call the initialization script
+\code
+[~] python
+Python 2.4.3 (#1, Oct 23 2006, 14:19:47)
+[GCC 4.1.1 20060525 (Red Hat 4.1.1-1)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from hppInit import *
+>>>
+\endcode
+Three variables \c robotClient, \c obstacleClient and \c problemClient are defined and can be used to send requests to \c hppCorbaServer.
+
+For an example, see <tt>hppPython/src/example.py</tt>.
+
 \section hppDoc_install_example Example: Intalling and running walk planner package and corresponding kpp Interface
 
 \subsection hppDoc_install_example_subsec Installing necessary packages
@@ -201,6 +235,8 @@ ready
 
 \image html "kppInterfaceWalk.png" KineoPathPlanner with module kppInterfaceWalk.
 
+\subsubsection hppDoc_solve_GUI Defining and solving a problem using menu "HPP/WALK"
+
    To solve a simple problem without obstacles, do the following step:
 \li Click in menu "HPP/WALK -> Load HRP2"
 
@@ -223,6 +259,24 @@ ready
 \li Play the path in the path player that has appeared.
 
 
+\subsubsection hppDoc_solve_python Defining and solving a problem using python scripts
+
+\li Click in menu "HPP/WALK -> Start CORBA Server"
+\li Open a python interpreter and type the commands below.
+\code
+[~] python
+Python 2.4.3 (#1, Oct 23 2006, 14:19:47)
+[GCC 4.1.1 20060525 (Red Hat 4.1.1-1)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from hppWalkInit import *
+>>> initWalkPlanner(-8, -8, 0, 8, 8, 0)
+>>> problemClient.solve()
+\endcode
+
+\li In the "Scene" tree, in the "Paths" node, select the last path
+
+\li Play the path in the path player that has appeared.
 
 
+  You can of course add obstacles using Corba Client obstacleClient
 */
