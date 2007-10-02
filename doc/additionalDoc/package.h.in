@@ -1,7 +1,7 @@
 /**
 \mainpage
 
-\section sec_intro Introduction
+\section hppDoc_sec_intro Introduction
 
 HPP (Humanoid Path Planner) is a collection of software packages
 implementing path planning functionalities for a humanoid robot.
@@ -13,7 +13,7 @@ It can be extended to path planning for other types of robots like digital actor
 
 The code relative to the HPP is distributed into several software packages listed in the following sections:
 
-\subsection subsec_algo Algorithms
+\subsection hppDoc_subsec_algo Algorithms
 
 \subsubsection subsubsec_witout_kineo Independent from KineoWorks
 
