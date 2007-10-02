@@ -20,7 +20,7 @@ The code relative to the HPP is distributed into several software packages liste
 \htmlonly
 <ul>
   <li><a href="@ABSTRACTROBOTDYNAMICS_PREFIX@/share/doc/abstractRobotDynamics/main.html">abstractRobotDynamics</a>: abstract interface for robot dynamic model</li>
-  <li><a href="@DYNAMICSJRLJAPAN_PREFIX@/share/doc/jrlCIRdynamicsJRLJapan/main.html">dynamicsJRLJapan</a>: JRL Implementation of robot dynamic model</li>
+  <li><a href="@DYNAMICSJRLJAPAN_PREFIX@/share/doc/dynamicsJRLJapan/main.html">dynamicsJRLJapan</a>: JRL Implementation of robot dynamic model</li>
   <li><a href="@WALKGENJRL_PREFIX@/share/doc/walkGenJRL/main.html">walkGenJRL</a>: JRL Walk Pattern Generator</li>
   <li><a href="@ABSTRACTGIKTASK_PREFIX@/share/doc/abstractGikTask/main.html">abstractGikTask</a>: Abstract interface for whole body motion planning.</li>
   <li><a href="@HPPGIK_PREFIX@/share/doc/hppGik/main.html">hppGik</a>: Implementation of whole body motion planning.</li>
