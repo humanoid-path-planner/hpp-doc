@@ -30,7 +30,7 @@ dnl 	AC_SUBST(HPPCORBASERVER_PREFIX)
 dnl fi
 
 dnl if PKG_CHECK_MODULES(HPPPYTHON, hppPython); then
-dnl 	HPPCORBASERVER_PREFIX=`$PKG_CONFIG hppPython --variable=prefix`
+dnl 	HPPPYTHON_PREFIX=`$PKG_CONFIG hppPython --variable=prefix`
 dnl 	AC_SUBST(HPPPYTHON_PREFIX)
 dnl fi
 
