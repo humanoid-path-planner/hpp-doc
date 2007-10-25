@@ -60,7 +60,7 @@ These packages implement interfaces with Kineo Path Planner GUI.
 
 \htmlonly
 <ul>
-  <li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface/main.html">Abstract KPP interface that manages main notifications.</a></li>
+  <li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface/main.html">Basic KPP interface.</a></li>
   <li><a href="@KPPINTERFACEWALK_PREFIX@/share/doc/kppInterfaceWalk/main.html">kppInterfaceWalk: KPP interface for hppWalkPlanner.</a></li>
   <li><a href="@KPPINTERFACEHRP_PREFIX@/share/doc/kppInterfaceHRP/main.html">kppInterfaceHRP: KPP interface for functions specific to HRP2 robot.</a></li>
   <li><a href="@KPPINTERFACECMP_PREFIX@/share/doc/kppInterfaceCmp/main.html">kppInterfaceCmp: KPP interface for contact motion planning.</a></li>

@@ -9,30 +9,30 @@ AC_PREREQ(2.59)
 AM_INIT_AUTOMAKE
 AC_PROG_INSTALL
 
-dnl if PKG_CHECK_MODULES(KWSPLUS, kwsPlus); then
-dnl 	KWSPLUS_PREFIX=`$PKG_CONFIG kwsPlus --variable=prefix`
-dnl 	AC_SUBST(KWSPLUS_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(KWSPLUS, kwsPlus); then
+	KWSPLUS_PREFIX=`$PKG_CONFIG kwsPlus --variable=prefix`
+	AC_SUBST(KWSPLUS_PREFIX)
+fi
 
-dnl if PKG_CHECK_MODULES(HPPCORE, hppCore); then
-dnl 	HPPCORE_PREFIX=`$PKG_CONFIG hppCore --variable=prefix`
-dnl 	AC_SUBST(HPPCORE_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(HPPCORE, hppCore); then
+	HPPCORE_PREFIX=`$PKG_CONFIG hppCore --variable=prefix`
+	AC_SUBST(HPPCORE_PREFIX)
+fi
 
 dnl if PKG_CHECK_MODULES(WALKGENJRL, walkGenJrl); then
 dnl 	WALKGENJRL_PREFIX=`$PKG_CONFIG walkGenJrl --variable=prefix`
 dnl 	AC_SUBST(WALKGENJRL_PREFIX)
 dnl fi
 
-dnl if PKG_CHECK_MODULES(HPPCORBASERVER, hppCorbaServer); then
-dnl 	HPPCORBASERVER_PREFIX=`$PKG_CONFIG hppCorbaServer --variable=prefix`
-dnl 	AC_SUBST(HPPCORBASERVER_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(HPPCORBASERVER, hppCorbaServer); then
+	HPPCORBASERVER_PREFIX=`$PKG_CONFIG hppCorbaServer --variable=prefix`
+	AC_SUBST(HPPCORBASERVER_PREFIX)
+fi
 
-dnl if PKG_CHECK_MODULES(HPPPYTHON, hppPython); then
-dnl 	HPPPYTHON_PREFIX=`$PKG_CONFIG hppPython --variable=prefix`
-dnl 	AC_SUBST(HPPPYTHON_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(HPPPYTHON, hppPython); then
+	HPPPYTHON_PREFIX=`$PKG_CONFIG hppPython --variable=prefix`
+	AC_SUBST(HPPPYTHON_PREFIX)
+fi
 
 dnl if PKG_CHECK_MODULES(HPPWALKPLANNER, hppWalkPlanner); then
 dnl 	HPPWALKPLANNER_PREFIX=`$PKG_CONFIG hppWalkPlanner --variable=prefix`
@@ -54,10 +54,10 @@ dnl 	HPPTUTORIALPLANNER_PREFIX=`$PKG_CONFIG hppTutorialPlanner --variable=prefix
 dnl 	AC_SUBST(HPPTUTORIALPLANNER_PREFIX)
 dnl fi
 
-dnl if PKG_CHECK_MODULES(KPPINTERFACE, kppInterface); then
-dnl 	KPPINTERFACE_PREFIX=`$PKG_CONFIG kppInterface --variable=prefix`
-dnl 	AC_SUBST(KPPINTERFACE_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(KPPINTERFACE, kppInterface); then
+	KPPINTERFACE_PREFIX=`$PKG_CONFIG kppInterface --variable=prefix`
+	AC_SUBST(KPPINTERFACE_PREFIX)
+fi
 
 dnl if PKG_CHECK_MODULES(KPPINTERFACEWALK, kppInterfaceWalk); then
 dnl 	KPPINTERFACEWALK_PREFIX=`$PKG_CONFIG kppInterfaceWalk --variable=prefix`
@@ -74,30 +74,30 @@ dnl 	KPPINTERFACECMP_PREFIX=`$PKG_CONFIG kppInterfaceCmp --variable=prefix`
 dnl 	AC_SUBST(KPPINTERFACECMP_PREFIX)
 dnl fi
 
-dnl if PKG_CHECK_MODULES(HPPGIK, hppGik); then
-dnl 	HPPGIK_PREFIX=`$PKG_CONFIG hppGik --variable=prefix`
-dnl 	AC_SUBST(HPPGIK_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(HPPGIK, hppGik); then
+	HPPGIK_PREFIX=`$PKG_CONFIG hppGik --variable=prefix`
+	AC_SUBST(HPPGIK_PREFIX)
+fi
 
 dnl if PKG_CHECK_MODULES(HPPLOA, hppLoa); then
 dnl 	HPPLOA_PREFIX=`$PKG_CONFIG hppLoa --variable=prefix`
 dnl 	AC_SUBST(HPPLOA_PREFIX)
 dnl fi
 
-dnl if PKG_CHECK_MODULES(DYNAMICSJRLJAPAN, dynamicsJRLJapan); then
-dnl 	DYNAMICSJRLJAPAN_PREFIX=`$PKG_CONFIG dynamicsJRLJapan --variable=prefix`
-dnl 	AC_SUBST(DYNAMICSJRLJAPAN_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(DYNAMICSJRLJAPAN, dynamicsJRLJapan); then
+	DYNAMICSJRLJAPAN_PREFIX=`$PKG_CONFIG dynamicsJRLJapan --variable=prefix`
+	AC_SUBST(DYNAMICSJRLJAPAN_PREFIX)
+fi
 
-dnl if PKG_CHECK_MODULES(ABSTRACTROBOTDYNAMICS, abstractRobotDynamics); then
-dnl 	ABSTRACTROBOTDYNAMICS_PREFIX=`$PKG_CONFIG abstractRobotDynamics --variable=prefix`
-dnl 	AC_SUBST(ABSTRACTROBOTDYNAMICS_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(ABSTRACTROBOTDYNAMICS, abstractRobotDynamics); then
+	ABSTRACTROBOTDYNAMICS_PREFIX=`$PKG_CONFIG abstractRobotDynamics --variable=prefix`
+	AC_SUBST(ABSTRACTROBOTDYNAMICS_PREFIX)
+fi
 
-dnl if PKG_CHECK_MODULES(ABSTRACTGIKTASK, abstractGikTask); then
-dnl 	ABSTRACTGIKTASK_PREFIX=`$PKG_CONFIG abstractGikTask --variable=prefix`
-dnl 	AC_SUBST(ABSTRACTGIKTASK_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(ABSTRACTGIKTASK, abstractGikTask); then
+	ABSTRACTGIKTASK_PREFIX=`$PKG_CONFIG abstractGikTask --variable=prefix`
+	AC_SUBST(ABSTRACTGIKTASK_PREFIX)
+fi
 
 dnl if PKG_CHECK_MODULES(KPPINTERFACETUTORIAL, kppInterfaceTutorial); then
 dnl 	KPPINTERFACETUTORIAL_PREFIX=`$PKG_CONFIG kppInterfaceTutorial --variable=prefix`
