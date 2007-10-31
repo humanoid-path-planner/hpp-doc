@@ -11,11 +11,29 @@ It can be extended to path planning for other types of robots like digital actor
 
 \section sec_organization Organization of the packages
 
-The code relative to the HPP is distributed into several software packages listed in the following sections:
+The code relative to the HPP is distributed into several software packages. The packages are distributed into several 
+\htmlonly
+<a href="@prefix@/share/doc/hppDoc/modules.html">
+\endhtmlonly
+groups 
+\htmlonly
+</a>
+\endhtmlonly
+:
+\li Algorithms implementing path planning functionalities
+\li Corba communication facilities to control the algorithms
+\li Add-on to KineoPathPlanner GUI interface.
 
-\subsection hppDoc_subsec_algo Algorithms
 
-\subsubsection subsubsec_witout_kineo Independent from KineoWorks
+*/
+
+/**
+  \defgroup hppDoc_algo Algorithms
+  @{
+
+<b>Invisible text</b>
+
+<b>Packages independent from KineoWorks</b>
 
 \htmlonly
 <ul>
@@ -27,12 +45,13 @@ The code relative to the HPP is distributed into several software packages liste
 </ul>
 \endhtmlonly
 
-\subsubsection subsubsec_with_kineo Using KineoWorks
+<b>Packages using KineoWorks</b>
 
 These packages implement path planning algorithms using KineoWorks. They are independent of any interface.
 \htmlonly
 <ul>
   <li><a href="@KWSPLUS_PREFIX@/share/doc/kwsPlus/main.html">kwsPlus</a>: extension to KineoWorks (cart-like steering method).</li>
+  <li><a href="@HPPMODEL_PREFIX@/share/doc/hppModel/main.html">hppModel</a>: implementation of hybrid geometric and dynamic robot.</li>
   <li><a href="@HPPCORE_PREFIX@/share/doc/hppCore/main.html">hppCore</a>: definition of basic classes.</li>
   <li><a href="@HPPHRPPLANNER_PREFIX@/share/doc/hppHRPPlanner/main.html">hppHRPPlanner</a>: functions specific to HRP2 robot.</li>
   <li><a href="@HPPCMPPLANNER_PREFIX@/share/doc/hppCmpPlanner/main.html">hppCmpPlanner</a>: contact motion planning</li>
@@ -42,9 +61,13 @@ These packages implement path planning algorithms using KineoWorks. They are ind
 </ul>
 \endhtmlonly
 
-\subsection subsec_corba Corba server
+@}	
+*/
+/**
+  \defgroup hppDoc_corba Corba interface
+  @{
 
-The following packages implements a Corba communication functionalities
+The following packages implement Corba communication functionalities
 \htmlonly
 <ul>
 <li><a href="@HPPCORBASERVER_PREFIX@/share/doc/hppCorbaServer/main.html">hppCorbaServer</a>: Corba server to implementing a ChppPlanner object.</li>
@@ -54,19 +77,21 @@ The following packages implements a Corba communication functionalities
 </ul>
 \endhtmlonly
 
-\subsection subsec_kppInterface KPP interfaces
+@}
+*/
 
-These packages implement interfaces with Kineo Path Planner GUI.
-
+/**
+  \defgroup hppDoc_kpp KineoPathPlanner GUI modules
+  @{
 \htmlonly
 <ul>
-  <li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface/main.html">Basic KPP interface.</a></li>
-  <li><a href="@KPPINTERFACEWALK_PREFIX@/share/doc/kppInterfaceWalk/main.html">kppInterfaceWalk: KPP interface for hppWalkPlanner.</a></li>
-  <li><a href="@KPPINTERFACEHRP_PREFIX@/share/doc/kppInterfaceHRP/main.html">kppInterfaceHRP: KPP interface for functions specific to HRP2 robot.</a></li>
-  <li><a href="@KPPINTERFACECMP_PREFIX@/share/doc/kppInterfaceCmp/main.html">kppInterfaceCmp: KPP interface for contact motion planning.</a></li>
-  <li><a href="@KPPINTERFACETUTORIAL_PREFIX@/share/doc/kppInterfaceTutorial/main.html">kppInterfaceTutorial: KPP interface to learn how to make and use a KPP interface.</a></li>
+  <li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface/main.html">kppInterface</a>: basic KPP interface.</li>
+  <li><a href="@KPPINTERFACEWALK_PREFIX@/share/doc/kppInterfaceWalk/main.html">kppInterfaceWalk</a>: KPP interface for hppWalkPlanner.</li>
+  <li><a href="@KPPINTERFACEHRP_PREFIX@/share/doc/kppInterfaceHRP/main.html">kppInterfaceHRP</a>: KPP interface for functions specific to HRP2 robot.</li>
+  <li><a href="@KPPINTERFACECMP_PREFIX@/share/doc/kppInterfaceCmp/main.html">kppInterfaceCmp</a>: KPP interface for contact motion planning.</li>
+  <li><a href="@KPPINTERFACETUTORIAL_PREFIX@/share/doc/kppInterfaceTutorial/main.html">kppInterfaceTutorial</a>: KPP interface to learn how to make and use a KPP interface.</li>
 </ul>
 \endhtmlonly
 
-
+@}
 */

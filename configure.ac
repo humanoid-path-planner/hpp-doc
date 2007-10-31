@@ -14,15 +14,20 @@ if PKG_CHECK_MODULES(KWSPLUS, kwsPlus); then
 	AC_SUBST(KWSPLUS_PREFIX)
 fi
 
+if PKG_CHECK_MODULES(HPPMODEL, hppCore); then
+	HPPMODEL_PREFIX=`$PKG_CONFIG hppModel --variable=prefix`
+	AC_SUBST(HPPMODEL_PREFIX)
+fi
+
 if PKG_CHECK_MODULES(HPPCORE, hppCore); then
 	HPPCORE_PREFIX=`$PKG_CONFIG hppCore --variable=prefix`
 	AC_SUBST(HPPCORE_PREFIX)
 fi
 
-dnl if PKG_CHECK_MODULES(WALKGENJRL, walkGenJrl); then
-dnl 	WALKGENJRL_PREFIX=`$PKG_CONFIG walkGenJrl --variable=prefix`
-dnl 	AC_SUBST(WALKGENJRL_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(WALKGENJRL, walkGenJrl); then
+	WALKGENJRL_PREFIX=`$PKG_CONFIG walkGenJrl --variable=prefix`
+	AC_SUBST(WALKGENJRL_PREFIX)
+fi
 
 if PKG_CHECK_MODULES(HPPCORBASERVER, hppCorbaServer); then
 	HPPCORBASERVER_PREFIX=`$PKG_CONFIG hppCorbaServer --variable=prefix`
@@ -34,10 +39,10 @@ if PKG_CHECK_MODULES(HPPPYTHON, hppPython); then
 	AC_SUBST(HPPPYTHON_PREFIX)
 fi
 
-dnl if PKG_CHECK_MODULES(HPPWALKPLANNER, hppWalkPlanner); then
-dnl 	HPPWALKPLANNER_PREFIX=`$PKG_CONFIG hppWalkPlanner --variable=prefix`
-dnl 	AC_SUBST(HPPWALKPLANNER_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(HPPWALKPLANNER, hppWalkPlanner); then
+	HPPWALKPLANNER_PREFIX=`$PKG_CONFIG hppWalkPlanner --variable=prefix`
+	AC_SUBST(HPPWALKPLANNER_PREFIX)
+fi
 
 dnl if PKG_CHECK_MODULES(HPPHRPPLANNER, hppHRPPlanner); then
 dnl 	HPPHRPPLANNER_PREFIX=`$PKG_CONFIG hppHRPPlanner --variable=prefix`
@@ -59,10 +64,10 @@ if PKG_CHECK_MODULES(KPPINTERFACE, kppInterface); then
 	AC_SUBST(KPPINTERFACE_PREFIX)
 fi
 
-dnl if PKG_CHECK_MODULES(KPPINTERFACEWALK, kppInterfaceWalk); then
-dnl 	KPPINTERFACEWALK_PREFIX=`$PKG_CONFIG kppInterfaceWalk --variable=prefix`
-dnl 	AC_SUBST(KPPINTERFACEWALK_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(KPPINTERFACEWALK, kppInterfaceWalk); then
+	KPPINTERFACEWALK_PREFIX=`$PKG_CONFIG kppInterfaceWalk --variable=prefix`
+	AC_SUBST(KPPINTERFACEWALK_PREFIX)
+fi
 
 dnl if PKG_CHECK_MODULES(KPPINTERFACEHRP, kppInterfaceHRP); then
 dnl 	KPPINTERFACEHRP_PREFIX=`$PKG_CONFIG kppInterfaceHRP --variable=prefix`
@@ -104,10 +109,10 @@ dnl 	KPPINTERFACETUTORIAL_PREFIX=`$PKG_CONFIG kppInterfaceTutorial --variable=pr
 dnl 	AC_SUBST(KPPINTERFACETUTORIAL_PREFIX)
 dnl fi
 
-dnl if PKG_CHECK_MODULES(HPPOPENHRP, hppOpenHRP); then
-dnl 	HPPOPENHRP_PREFIX=`$PKG_CONFIG hppOpenHRP --variable=prefix`
-dnl 	AC_SUBST(HPPOPENHRP_PREFIX)
-dnl fi
+if PKG_CHECK_MODULES(HPPOPENHRP, hppOpenHRP); then
+	HPPOPENHRP_PREFIX=`$PKG_CONFIG hppOpenHRP --variable=prefix`
+	AC_SUBST(HPPOPENHRP_PREFIX)
+fi
 
 AC_OUTPUT(
 	hppDoc.pc
