@@ -159,6 +159,16 @@ setenv OMNIORB_CONFIG ${HOME}/omniORB/omniORB.cfg
 setenv OMNINAMES_LOGDIR ${HOME}/omniORB/log
 \endcode
 
+   You can eventually launch the name server:
+\code
+omniNames -start port-id
+\endcode
+the fisrt time and 
+\code
+omniNames
+\endcode
+the following times.
+
 \subsubsection hppDoc_python Controlling an application using python scripts
 
    To send request to hppCorbaServer using python, you need to install packages 
