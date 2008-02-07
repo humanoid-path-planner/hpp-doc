@@ -14,35 +14,35 @@ if PKG_CHECK_MODULES(KWSPLUS, kwsPlus); then
 	AC_SUBST(KWSPLUS_PREFIX)
 fi
 
-if PKG_CHECK_MODULES(HPPMODEL, hppModel); then
-	HPPMODEL_PREFIX=`$PKG_CONFIG hppModel --variable=prefix`
-	AC_SUBST(HPPMODEL_PREFIX)
-fi
+dnl if PKG_CHECK_MODULES(HPPMODEL, hppModel); then
+dnl 	HPPMODEL_PREFIX=`$PKG_CONFIG hppModel --variable=prefix`
+dnl 	AC_SUBST(HPPMODEL_PREFIX)
+dnl fi
 
 if PKG_CHECK_MODULES(HPPCORE, hppCore); then
 	HPPCORE_PREFIX=`$PKG_CONFIG hppCore --variable=prefix`
 	AC_SUBST(HPPCORE_PREFIX)
 fi
 
-if PKG_CHECK_MODULES(WALKGENJRL, walkGenJrl); then
-	WALKGENJRL_PREFIX=`$PKG_CONFIG walkGenJrl --variable=prefix`
-	AC_SUBST(WALKGENJRL_PREFIX)
-fi
+dnl if PKG_CHECK_MODULES(WALKGENJRL, walkGenJrl); then
+dnl 	WALKGENJRL_PREFIX=`$PKG_CONFIG walkGenJrl --variable=prefix`
+dnl 	AC_SUBST(WALKGENJRL_PREFIX)
+dnl fi
 
 if PKG_CHECK_MODULES(HPPCORBASERVER, hppCorbaServer); then
 	HPPCORBASERVER_PREFIX=`$PKG_CONFIG hppCorbaServer --variable=prefix`
 	AC_SUBST(HPPCORBASERVER_PREFIX)
 fi
 
-if PKG_CHECK_MODULES(HPPPYTHON, hppPython); then
-	HPPPYTHON_PREFIX=`$PKG_CONFIG hppPython --variable=prefix`
-	AC_SUBST(HPPPYTHON_PREFIX)
-fi
+dnl dnl if PKG_CHECK_MODULES(HPPPYTHON, hppPython); then
+dnl dnl 	HPPPYTHON_PREFIX=`$PKG_CONFIG hppPython --variable=prefix`
+dnl dnl 	AC_SUBST(HPPPYTHON_PREFIX)
+dnl dnl fi
 
-if PKG_CHECK_MODULES(HPPWALKPLANNER, hppWalkPlanner); then
-	HPPWALKPLANNER_PREFIX=`$PKG_CONFIG hppWalkPlanner --variable=prefix`
-	AC_SUBST(HPPWALKPLANNER_PREFIX)
-fi
+dnl if PKG_CHECK_MODULES(HPPWALKPLANNER, hppWalkPlanner); then
+dnl 	HPPWALKPLANNER_PREFIX=`$PKG_CONFIG hppWalkPlanner --variable=prefix`
+dnl 	AC_SUBST(HPPWALKPLANNER_PREFIX)
+dnl fi
 
 dnl if PKG_CHECK_MODULES(HPPHRPPLANNER, hppHRPPlanner); then
 dnl 	HPPHRPPLANNER_PREFIX=`$PKG_CONFIG hppHRPPlanner --variable=prefix`
@@ -64,10 +64,10 @@ if PKG_CHECK_MODULES(KPPINTERFACE, kppInterface); then
 	AC_SUBST(KPPINTERFACE_PREFIX)
 fi
 
-if PKG_CHECK_MODULES(KPPINTERFACEWALK, kppInterfaceWalk); then
-	KPPINTERFACEWALK_PREFIX=`$PKG_CONFIG kppInterfaceWalk --variable=prefix`
-	AC_SUBST(KPPINTERFACEWALK_PREFIX)
-fi
+dnl if PKG_CHECK_MODULES(KPPINTERFACEWALK, kppInterfaceWalk); then
+dnl 	KPPINTERFACEWALK_PREFIX=`$PKG_CONFIG kppInterfaceWalk --variable=prefix`
+dnl 	AC_SUBST(KPPINTERFACEWALK_PREFIX)
+dnl fi
 
 dnl if PKG_CHECK_MODULES(KPPINTERFACEHRP, kppInterfaceHRP); then
 dnl 	KPPINTERFACEHRP_PREFIX=`$PKG_CONFIG kppInterfaceHRP --variable=prefix`
@@ -79,45 +79,56 @@ dnl 	KPPINTERFACECMP_PREFIX=`$PKG_CONFIG kppInterfaceCmp --variable=prefix`
 dnl 	AC_SUBST(KPPINTERFACECMP_PREFIX)
 dnl fi
 
-if PKG_CHECK_MODULES(HPPGIK, hppGik); then
-	HPPGIK_PREFIX=`$PKG_CONFIG hppGik --variable=prefix`
-	AC_SUBST(HPPGIK_PREFIX)
-fi
+dnl if PKG_CHECK_MODULES(HPPGIK, hppGik); then
+dnl 	HPPGIK_PREFIX=`$PKG_CONFIG hppGik --variable=prefix`
+dnl 	AC_SUBST(HPPGIK_PREFIX)
+dnl fi
 
 dnl if PKG_CHECK_MODULES(HPPLOA, hppLoa); then
 dnl 	HPPLOA_PREFIX=`$PKG_CONFIG hppLoa --variable=prefix`
 dnl 	AC_SUBST(HPPLOA_PREFIX)
 dnl fi
 
-if PKG_CHECK_MODULES(DYNAMICSJRLJAPAN, dynamicsJRLJapan); then
-	DYNAMICSJRLJAPAN_PREFIX=`$PKG_CONFIG dynamicsJRLJapan --variable=prefix`
-	AC_SUBST(DYNAMICSJRLJAPAN_PREFIX)
-fi
+dnl if PKG_CHECK_MODULES(DYNAMICSJRLJAPAN, dynamicsJRLJapan); then
+dnl 	DYNAMICSJRLJAPAN_PREFIX=`$PKG_CONFIG dynamicsJRLJapan --variable=prefix`
+dnl 	AC_SUBST(DYNAMICSJRLJAPAN_PREFIX)
+dnl fi
 
-if PKG_CHECK_MODULES(ABSTRACTROBOTDYNAMICS, abstractRobotDynamics); then
-	ABSTRACTROBOTDYNAMICS_PREFIX=`$PKG_CONFIG abstractRobotDynamics --variable=prefix`
-	AC_SUBST(ABSTRACTROBOTDYNAMICS_PREFIX)
-fi
+dnl if PKG_CHECK_MODULES(ABSTRACTROBOTDYNAMICS, abstractRobotDynamics); then
+dnl 	ABSTRACTROBOTDYNAMICS_PREFIX=`$PKG_CONFIG abstractRobotDynamics --variable=prefix`
+dnl 	AC_SUBST(ABSTRACTROBOTDYNAMICS_PREFIX)
+dnl fi
 
-if PKG_CHECK_MODULES(ABSTRACTGIKTASK, abstractGikTask); then
-	ABSTRACTGIKTASK_PREFIX=`$PKG_CONFIG abstractGikTask --variable=prefix`
-	AC_SUBST(ABSTRACTGIKTASK_PREFIX)
-fi
+dnl if PKG_CHECK_MODULES(ABSTRACTGIKTASK, abstractGikTask); then
+dnl 	ABSTRACTGIKTASK_PREFIX=`$PKG_CONFIG abstractGikTask --variable=prefix`
+dnl 	AC_SUBST(ABSTRACTGIKTASK_PREFIX)
+dnl fi
 
 dnl if PKG_CHECK_MODULES(KPPINTERFACETUTORIAL, kppInterfaceTutorial); then
 dnl 	KPPINTERFACETUTORIAL_PREFIX=`$PKG_CONFIG kppInterfaceTutorial --variable=prefix`
 dnl 	AC_SUBST(KPPINTERFACETUTORIAL_PREFIX)
 dnl fi
 
-if PKG_CHECK_MODULES(HPPOPENHRP, hppOpenHRP); then
-	HPPOPENHRP_PREFIX=`$PKG_CONFIG hppOpenHRP --variable=prefix`
-	AC_SUBST(HPPOPENHRP_PREFIX)
-fi
+dnl if PKG_CHECK_MODULES(HPPOPENHRP, hppOpenHRP); then
+dnl 	HPPOPENHRP_PREFIX=`$PKG_CONFIG hppOpenHRP --variable=prefix`
+dnl 	AC_SUBST(HPPOPENHRP_PREFIX)
+dnl fi
+
+dnl if PKG_CHECK_MODULES(HPPVISUALIZEMOVEPLANNER, hppVisualizeMovePlanner); then
+dnl 	HPPVISUALIZEMOVEPLANNER_PREFIX=`$PKG_CONFIG hppVisualizeMovePlanner --variable=prefix`
+dnl 	AC_SUBST(HPPVISUALIZEMOVEPLANNER_PREFIX)
+dnl fi
+
 
 AC_OUTPUT(
-	hppDoc.pc
 	Makefile
 	doc/Makefile
-	doc/package.dox
-	doc/additionalDoc/package.h
+	doc/html/corba.html
+	doc/html/algorithm.html
+	doc/html/kppInterface.html
+	doc/html/main.html
+	doc/html/index.html
+	doc/html/tree.html
+	doc/html/hppdoc_development.html
+	doc/html/hppdoc_howtoinstall.html
 	)

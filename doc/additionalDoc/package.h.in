@@ -5,93 +5,22 @@
 
 HPP (Humanoid Path Planner) is a collection of software packages
 implementing path planning functionalities for a humanoid robot.
-HPP KineoWorks (KWS) and KineoPathPlanner-SDK (KPP-SDK). 
+HPP is built upon KineoWorks (KWS) and KineoPathPlanner-SDK (KPP-SDK). 
 
 It can be extended to path planning for other types of robots like digital actors for instance.
 
 \section sec_organization Organization of the packages
 
-The code relative to the HPP is distributed into several software packages. The packages are distributed into several 
+The code relative to the HPP is distributed into several software packages. The packages are distributed into three 
+categories:
 \htmlonly
-<a href="@prefix@/share/doc/hppDoc/modules.html">
-\endhtmlonly
-groups 
-\htmlonly
-</a>
-\endhtmlonly
-:
-\li Algorithms implementing path planning functionalities
-\li Corba communication facilities to control the algorithms
-\li Add-on to KineoPathPlanner GUI interface.
+<ul>
+<li> <a href="algorithms.html">Algorithms</a> implementing path planning functionalities </li>
+<li> <a href=corba.html"Corba</a> communication facilities to control the algorithms </li>
+<li> <a href="kppInterface.html">Add-on</a> to KineoPathPlanner GUI interface. </li>
+</ul>
 
 
 */
 
-/**
-  \defgroup hppDoc_algo Algorithms
-  @{
 
-<b>Invisible text</b>
-
-<b>Packages independent from KineoWorks</b>
-
-\htmlonly
-<ul>
-  <li><a href="@ABSTRACTROBOTDYNAMICS_PREFIX@/share/doc/abstractRobotDynamics/main.html">abstractRobotDynamics</a>: abstract interface for robot dynamic model</li>
-  <li><a href="@DYNAMICSJRLJAPAN_PREFIX@/share/doc/dynamicsJRLJapan/main.html">dynamicsJRLJapan</a>: JRL Implementation of robot dynamic model</li>
-  <li><a href="@WALKGENJRL_PREFIX@/share/doc/walkGenJRL/main.html">walkGenJRL</a>: JRL Walk Pattern Generator</li>
-  <li><a href="@ABSTRACTGIKTASK_PREFIX@/share/doc/abstractGikTask/main.html">abstractGikTask</a>: Abstract interface for whole body motion planning.</li>
-  <li><a href="@HPPGIK_PREFIX@/share/doc/hppGik/main.html">hppGik</a>: Implementation of whole body motion planning.</li>
-</ul>
-\endhtmlonly
-
-<b>Packages using KineoWorks</b>
-
-These packages implement path planning algorithms using KineoWorks. They are independent of any interface.
-\htmlonly
-<ul>
-  <li><a href="@KWSPLUS_PREFIX@/share/doc/kwsPlus/main.html">kwsPlus</a>: extension to KineoWorks (cart-like steering method).</li>
-  <li><a href="@HPPMODEL_PREFIX@/share/doc/hppModel/main.html">hppModel</a>: implementation of hybrid geometric and dynamic robot.</li>
-  <li><a href="@HPPCORE_PREFIX@/share/doc/hppCore/main.html">hppCore</a>: definition of basic classes.</li>
-  <li><a href="@HPPHRPPLANNER_PREFIX@/share/doc/hppHRPPlanner/main.html">hppHRPPlanner</a>: functions specific to HRP2 robot.</li>
-  <li><a href="@HPPCMPPLANNER_PREFIX@/share/doc/hppCmpPlanner/main.html">hppCmpPlanner</a>: contact motion planning</li>
-  <li><a href="@HPPWALKPLANNER_PREFIX@/share/doc/hppWalkPlanner/main.html">hppWalkPlanner</a>: walk planning for a humanoid robot among obstacles.</li>
-  <li><a href="@HPPLOA_PREFIX@/share/doc/hppLoa/main.html">hppLoa</a>: Whole body motion planning with local obstacle avoidance.</li>
-  <li><a href="@HPPTUTORIALPLANNER_PREFIX@/share/doc/hppTutorialPlanner/main.html">hppTutorialPlanner: a simple planner to learn how to make and use a planner .</a></li>
-</ul>
-\endhtmlonly
-
-@}	
-*/
-/**
-  \defgroup hppDoc_corba Corba interface
-  @{
-
-The following packages implement Corba communication functionalities
-\htmlonly
-<ul>
-<li><a href="@HPPCORBASERVER_PREFIX@/share/doc/hppCorbaServer/main.html">hppCorbaServer</a>: Corba server to implementing a ChppPlanner object.</li>
-<li><a href="@HPPPYTHON_PREFIX@/share/doc/hppPython/main.html">hppPython</a>: Script python to communicate with hppCorbaServer.</li>
-<li><a href="@HPPOPENHRP_PREFIX@/share/doc/hppOpenHRP/main.html">hppOpenHRP</a>: Corba server that implements the model of HRP2.</li>
-
-</ul>
-\endhtmlonly
-
-@}
-*/
-
-/**
-  \defgroup hppDoc_kpp KineoPathPlanner GUI modules
-  @{
-\htmlonly
-<ul>
-  <li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface/main.html">kppInterface</a>: basic KPP interface.</li>
-  <li><a href="@KPPINTERFACEWALK_PREFIX@/share/doc/kppInterfaceWalk/main.html">kppInterfaceWalk</a>: KPP interface for hppWalkPlanner.</li>
-  <li><a href="@KPPINTERFACEHRP_PREFIX@/share/doc/kppInterfaceHRP/main.html">kppInterfaceHRP</a>: KPP interface for functions specific to HRP2 robot.</li>
-  <li><a href="@KPPINTERFACECMP_PREFIX@/share/doc/kppInterfaceCmp/main.html">kppInterfaceCmp</a>: KPP interface for contact motion planning.</li>
-  <li><a href="@KPPINTERFACETUTORIAL_PREFIX@/share/doc/kppInterfaceTutorial/main.html">kppInterfaceTutorial</a>: KPP interface to learn how to make and use a KPP interface.</li>
-</ul>
-\endhtmlonly
-
-@}
-*/
