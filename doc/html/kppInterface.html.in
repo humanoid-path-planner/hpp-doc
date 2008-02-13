@@ -1,0 +1,37 @@
+<HTML>
+    <HEAD>
+      <TITLE>Humanoid Path Planner Documentation</TITLE>
+      <LINK HREF="package.css" REL="stylesheet" TYPE="text/css">
+    </HEAD>
+    <BODY>
+
+<div class="tabs">
+  <ul>
+    <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
+    <li><a href="modules.html"><span>Modules</span></a></li>
+  </ul>
+</div>
+<h1>Packages implementing KineoPathPlanner Ads-on</h1>
+<p>
+<ul>
+  <li><a href="@KPPINTERFACE_PREFIX@/share/doc/kppInterface/main.html">kppInterface</a>: basic KPP interface.</li>
+  <li><a href="@KPPINTERFACEWALK_PREFIX@/share/doc/kppInterfaceWalk/main.html">kppInterfaceWalk</a>: KPP interface for hppWalkPlanner.</li>
+  <li><a href="@KPPINTERFACEHRP_PREFIX@/share/doc/kppInterfaceHRP/main.html">kppInterfaceHRP</a>: KPP interface for functions specific to HRP2 robot.</li>
+  <li><a href="@KPPINTERFACECMP_PREFIX@/share/doc/kppInterfaceCmp/main.html">kppInterfaceCmp</a>: KPP interface for contact motion planning.</li>
+  <li><a href="@KPPINTERFACETUTORIAL_PREFIX@/share/doc/kppInterfaceTutorial/main.html">kppInterfaceTutorial</a>: KPP interface to learn how to make and use a KPP interface.</li>
+</ul>
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+</table>
+ <br><br>
+ <hr>
+ <center>
+ <img src="./pictures/footer.jpg" Height=100>
+ <br>Humanoid Path Planner documentation</br>
+ </center>
+ <hr>
+ </center>
+ </body>
+ </head>
+

@@ -1,0 +1,73 @@
+<HTML>
+    <HEAD>
+      <TITLE>Humanoid Path Planner Documentation</TITLE>
+      <LINK HREF="package.css" REL="stylesheet" TYPE="text/css">
+    </HEAD>
+    <BODY>
+
+<div class="tabs">
+  <ul>
+    <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
+    <li><a href="modules.html"><span>Modules</span></a></li>
+  </ul>
+</div>
+<h1>Package implementing algorithms</h1>
+
+<h3>Algorithms dealing with dynamics</h3>
+
+<ul>
+  <li><a href="@ABSTRACTROBOTDYNAMICS_PREFIX@/share/doc/abstractRobotDynamics/main.html">abstractRobotDynamics</a>: abstract interface for robot dynamic model</li>
+  <li><a href="@DYNAMICSJRLJAPAN_PREFIX@/share/doc/dynamicsJRLJapan/main.html">dynamicsJRLJapan</a>: JRL Implementation of robot dynamic model</li>
+  <li><a href="@WALKGENJRL_PREFIX@/share/doc/walkGenJRL/main.html">walkGenJRL</a>: JRL Walk Pattern Generator</li>
+  <li><a href="@ABSTRACTGIKTASK_PREFIX@/share/doc/abstractGikTask/main.html">abstractGikTask</a>: Abstract interface for whole body motion planning.</li>
+  <li><a href="@HPPGIK_PREFIX@/share/doc/hppGik/main.html">hppGik</a>: Implementation of whole body motion planning.</li>
+</ul>
+
+<h3>Motion planning for humanoid systems algorithms</h3>
+
+These packages are build upon KineoPathPlanner-SDK. 
+<ul>
+  <li><b>General functionalities</b></li>
+  <ul>
+    <li><a href="@KWSPLUS_PREFIX@/share/doc/kwsPlus/main.html">kwsPlus</a>: extension to KineoWorks (cart-like steering method).</li>
+    <li><a href="@HPPMODEL_PREFIX@/share/doc/hppModel/main.html">hppModel</a>: implementation of hybrid geometric and dynamic robot.</li>
+    <li><a href="@HPPCORE_PREFIX@/share/doc/hppCore/main.html">hppCore</a>: definition of basic classes.</li>
+  </ul>
+  <li><b>Path Planning for humanoid robots</b></li>
+  <ul>
+    <li><a href="@HPPHRPPLANNER_PREFIX@/share/doc/hppHRPPlanner/main.html">hppHRPPlanner</a>: functions specific to HRP2 robot.</li>
+    <li><a href="@HPPCMPPLANNER_PREFIX@/share/doc/hppCmpPlanner/main.html">hppCmpPlanner</a>: contact motion planning</li>
+    <li><a href="@HPPWALKPLANNER_PREFIX@/share/doc/hppWalkPlanner/main.html">hppWalkPlanner</a>: walk planning for a humanoid robot among obstacles.</li>
+    <li><a href="@HPPLOA_PREFIX@/share/doc/hppLoa/main.html">hppLoa</a>: Whole body motion planning with local obstacle avoidance.</li>
+  </ul>
+  <li><b>Path Planning and perception</b></li>
+  <ul>
+    <li><a href="@SLAM3DPLANNER_PREFIX@/share/doc/slam3DPlanner/main.html">slam3DPlanner</a>: path planning in environments modelled by vision</li>
+    <li><a href="@HPPENVGENERATOR_PREFIX@/share/doc/hppEnvGenerator/main.html">hppEnvGenerator</a>:</li>
+  </ul> 
+  <li><b>Digital actors</b></li>
+  <ul>
+    <li><a href="@HPPVISUALIZEMOVEPLANNER_PREFIX@/share/doc/hppVisualizeMovePlanner/main.html">hppVisualizeMovePlanner</a>: Visualization of trajectories</li>
+  </ul> 
+  <li><b>Tutorial</b></li>
+  <ul>
+  <li><a href="@HPPTUTORIALPLANNER_PREFIX@/share/doc/hppTutorialPlanner/main.html">hppTutorialPlanner</a>: a simple planner to learn how to make and use a planner.</li>
+  </ul> 
+</ul>
+
+
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+</table>
+ <br><br>
+ <hr>
+ <center>
+ <img src="./pictures/footer.jpg" Height=100>
+ <br>Humanoid Path Planner documentation</br>
+ </center>
+ <hr>
+ </center>
+ </body>
+ </head>
+
