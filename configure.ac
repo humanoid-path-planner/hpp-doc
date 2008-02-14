@@ -122,6 +122,7 @@ dnl fi
 
 AC_OUTPUT(
 	Makefile
+	hppDoc.pc
 	doc/Makefile
 	doc/html/corba.html
 	doc/html/algorithm.html

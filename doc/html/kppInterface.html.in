@@ -5,12 +5,6 @@
     </HEAD>
     <BODY>
 
-<div class="tabs">
-  <ul>
-    <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
-    <li><a href="modules.html"><span>Modules</span></a></li>
-  </ul>
-</div>
 <h1>Packages implementing KineoPathPlanner Ads-on</h1>
 <p>
 <ul>
