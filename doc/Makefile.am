@@ -33,6 +33,7 @@ EXTRA_DIST = \
 install:
 	mkdir -p $(hppDocdir)
 	$(INSTALL_DATA) html/* $(hppDocdir)
+	$(INSTALL_DATA) $(srcdir)/html/hppdoc_autotools.html $(hppDocdir)
 	$(INSTALL_DATA) $(srcdir)/package.css $(hppDocdir)
 	mkdir -p $(hppDocdir)/pictures
 	$(INSTALL_DATA) $(srcdir)/pictures/* $(hppDocdir)/pictures

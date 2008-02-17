@@ -74,6 +74,7 @@
         <div id="folder3">
           <p><img src="pictures/ftv2blank.png" alt="&nbsp;" width=16 height=22 /><img src="pictures/ftv2node.png" alt="o" width=16 height=22 /><img src="pictures/ftv2doc.png" alt="*" width=24 height=22 /><a class="el" href="hppdoc_development.html" target="basefrm">Developing in Hpp</a></p>
           <p><img src="pictures/ftv2blank.png" alt="&nbsp;" width=16 height=22 /><img src="pictures/ftv2lastnode.png" alt="\" width=16 height=22 /><img src="pictures/ftv2doc.png" alt="*" width=24 height=22 /><a class="el" href="hppdoc_howtoinstall.html" target="basefrm">How to install HPP</a></p>
+          <p><img src="pictures/ftv2blank.png" alt="&nbsp;" width=16 height=22 /><img src="pictures/ftv2lastnode.png" alt="\" width=16 height=22 /><img src="pictures/ftv2doc.png" alt="*" width=24 height=22 /><a class="el" href="hppdoc_autotools.html" target="basefrm">About autotools</a></p>
         </div>
       </div>
     </div>
