@@ -1,11 +1,11 @@
-# 
-#  Copyright 
-# 
+#
+#  Copyright
+#
 
 
 hppDocdir = $(datadir)/doc/hppDoc
 
-EXTRA_DIST = \
+nobase_dist_hppDoc_DATA= \
 	header.html \
 	footer.html \
 	package.css \
@@ -27,16 +27,17 @@ EXTRA_DIST = \
 	pictures/graph_legend.png \
 	pictures/tab_b.gif \
 	pictures/tab_l.gif \
-	pictures/tab_r.gif 
+	pictures/tab_r.gif
 
+dist_hppDoc_DATA= \
+	html/hppdoc_autotools.html
 
-install:
-	mkdir -p $(hppDocdir)
-	$(INSTALL_DATA) html/* $(hppDocdir)
-	$(INSTALL_DATA) $(srcdir)/html/hppdoc_autotools.html $(hppDocdir)
-	$(INSTALL_DATA) $(srcdir)/package.css $(hppDocdir)
-	mkdir -p $(hppDocdir)/pictures
-	$(INSTALL_DATA) $(srcdir)/pictures/* $(hppDocdir)/pictures
-	$(INSTALL_DATA) $(srcdir)/figures/kppInterfaceWalk.png $(hppDocdir)/pictures
-	$(INSTALL_DATA) $(srcdir)/figures/archi.png $(hppDocdir)/pictures
-
+hppDoc_DATA=\
+	html/hppdoc_development.html	\
+	html/main.html			\
+	html/algorithm.html		\
+	html/hppdoc_howtoinstall.html	\
+	html/tree.html			\
+	html/corba.html			\
+	html/index.html			\
+	html/kppInterface.html
