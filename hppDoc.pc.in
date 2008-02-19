@@ -4,6 +4,6 @@ libdir=@libdir@
 includedir=@includedir@
 
 Name: @PACKAGE@
-Description: 
+Description: Documentation suite of the HPP project.
 Version: @VERSION@
-Requires: kwsIO, kwsPlus, hppCore, hppCorbaServer, hppWalkPlanner, hppHRPPlanner, hppCmpPlanner, kppInterface, kppInterfaceWalk, kppInterfaceHRP, kppInterfaceCmp, hppTutorial, kppInterfaceTutorial
+Requires: @pkg_list@
