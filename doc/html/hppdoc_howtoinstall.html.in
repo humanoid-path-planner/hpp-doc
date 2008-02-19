@@ -20,11 +20,10 @@ Preliminary remarks</a></h3>
 Environment variables</a></h4>
 Along the installation procedure, some environment variables are defined. It is recommended to include these definitions into an initialization file like <code>.tcshrc</code> or <code>.bashrc</code> so that they will be defined at each new session.<h4><a class="anchor" name="hppDoc_subsubsec_kineo">
 About KineoWorks</a></h4>
-To install KineoWorks, you will be asked for two archives: <ul>
-<li>KPPSDK_2.04.300.tgz and </li>
-<li>KPPSDK_2.04.301.tgz</li>
+To install KineoWorks, you will be asked for one archive: <ul>
+<li>KPPSDK_x.yy.zzz.tgz and </li>
 </ul>
-You need to ask these archives to <a href="mailto:anthony.mallet@laas.fr">Anthony Mallet</a>.<h3><a class="anchor" name="hppDoc_robotpkg">
+You need to ask this archives to <a href="mailto:anthony.mallet@laas.fr">Anthony Mallet</a>.<h3><a class="anchor" name="hppDoc_robotpkg">
 Robotpkg</a></h3>
 The first step consists in installing <code>robotpkg</code> on your account. For that, you need to create a directory where <code>robotpkg</code> will install all necessary packages: <div class="fragment"><pre class="fragment">[~] mkdir ${HOME}/openrobots
 [~] cd ${HOME}/openrobots
