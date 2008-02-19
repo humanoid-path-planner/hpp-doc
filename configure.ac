@@ -3,122 +3,62 @@ dnl
 dnl configure.ac file for package hppDoc 
 dnl
 
-AC_INIT([hppDoc], [1.0], [support@company.com])
+AC_INIT([hppDoc], [1.0], [hpp@laas.fr])
 AC_PREREQ(2.59)
 
 AM_INIT_AUTOMAKE
 AC_PROG_INSTALL
+PKG_PROG_PKG_CONFIG
 
-if PKG_CHECK_MODULES(KWSPLUS, kwsPlus); then
-	KWSPLUS_PREFIX=`$PKG_CONFIG kwsPlus --variable=prefix`
-	AC_SUBST(KWSPLUS_PREFIX)
-fi
+AC_SUBST(pkg_list,[])
 
-dnl if PKG_CHECK_MODULES(HPPMODEL, hppModel); then
-dnl 	HPPMODEL_PREFIX=`$PKG_CONFIG hppModel --variable=prefix`
-dnl 	AC_SUBST(HPPMODEL_PREFIX)
-dnl fi
+# --- PKG_CHKADDDPD([VARIABLE], [MODULE]) ----------------------------
+#
+# do you love consonants?
 
-if PKG_CHECK_MODULES(HPPCORE, hppCore); then
-	HPPCORE_PREFIX=`$PKG_CONFIG hppCore --variable=prefix`
-	AC_SUBST(HPPCORE_PREFIX)
-fi
+m4_define([PKG_CHKADDDPD],[
+  AC_MSG_CHECKING([for $2])
+  pkg_failed=no
+  PKG_CHECK_EXISTS([$2],
+                   [pkgprefix_[]$1=`$PKG_CONFIG --[]variable=prefix "$2" 2>/dev/null`],
+	           [pkg_failed=yes])
+  if test $pkg_failed = yes; then
+    AC_MSG_RESULT([no])
+  else
+    AC_SUBST($1[]_PREFIX,$pkgprefix_[]$1)
+    if test -n "$pkg_list"; then pkg_list="$pkg_list, $2"; else pkg_list="$2"; fi
+    AC_MSG_RESULT([yes])
+  fi[]dnl
+])
 
-dnl if PKG_CHECK_MODULES(WALKGENJRL, walkGenJrl); then
-dnl 	WALKGENJRL_PREFIX=`$PKG_CONFIG walkGenJrl --variable=prefix`
-dnl 	AC_SUBST(WALKGENJRL_PREFIX)
-dnl fi
 
-if PKG_CHECK_MODULES(HPPCORBASERVER, hppCorbaServer); then
-	HPPCORBASERVER_PREFIX=`$PKG_CONFIG hppCorbaServer --variable=prefix`
-	AC_SUBST(HPPCORBASERVER_PREFIX)
-fi
+# --- Look for installed packages ------------------------------------
 
-dnl dnl if PKG_CHECK_MODULES(HPPPYTHON, hppPython); then
-dnl dnl 	HPPPYTHON_PREFIX=`$PKG_CONFIG hppPython --variable=prefix`
-dnl dnl 	AC_SUBST(HPPPYTHON_PREFIX)
-dnl dnl fi
+PKG_CHKADDDPD(KWSPLUS,			kwsPlus)
+PKG_CHKADDDPD(HPPMODEL,			hppModel)
+PKG_CHKADDDPD(HPPCORE,			hppCore)
+PKG_CHKADDDPD(WALKGENJRL,		walkGenJrl)
+PKG_CHKADDDPD(HPPCORBASERVER,		hppCorbaServer)
+PKG_CHKADDDPD(HPPPYTHON,		hppPython)
+PKG_CHKADDDPD(HPPWALKPLANNER,		hppWalkPlanner)
+PKG_CHKADDDPD(HPPHRPPLANNER, 		hppHRPPlanner)
+PKG_CHKADDDPD(HPPCMPPLANNER, 		hppCmpPlanner)
+PKG_CHKADDDPD(HPPTUTORIALPLANNER, 	hppTutorialPlanner)
+PKG_CHKADDDPD(KPPINTERFACE, 		kppInterface)
+PKG_CHKADDDPD(KPPINTERFACEWALK, 	kppInterfaceWalk)
+PKG_CHKADDDPD(KPPINTERFACEHRP, 		kppInterfaceHRP)
+PKG_CHKADDDPD(KPPINTERFACECMP, 		kppInterfaceCmp)
+PKG_CHKADDDPD(HPPGIK, 			hppGik)
+PKG_CHKADDDPD(HPPLOA, 			hppLoa)
+PKG_CHKADDDPD(DYNAMICSJRLJAPAN,		dynamicsJRLJapan)
+PKG_CHKADDDPD(ABSTRACTROBOTDYNAMICS, 	abstractRobotDynamics)
+PKG_CHKADDDPD(ABSTRACTGIKTASK, 		abstractGikTask)
+PKG_CHKADDDPD(KPPINTERFACETUTORIAL, 	kppInterfaceTutorial)
+PKG_CHKADDDPD(HPPOPENHRP, 		hppOpenHRP)
+PKG_CHKADDDPD(HPPVISUALIZEMOVEPLANNER,	hppVisualizeMovePlanner)
 
-dnl if PKG_CHECK_MODULES(HPPWALKPLANNER, hppWalkPlanner); then
-dnl 	HPPWALKPLANNER_PREFIX=`$PKG_CONFIG hppWalkPlanner --variable=prefix`
-dnl 	AC_SUBST(HPPWALKPLANNER_PREFIX)
-dnl fi
 
-dnl if PKG_CHECK_MODULES(HPPHRPPLANNER, hppHRPPlanner); then
-dnl 	HPPHRPPLANNER_PREFIX=`$PKG_CONFIG hppHRPPlanner --variable=prefix`
-dnl 	AC_SUBST(HPPHRPPLANNER_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(HPPCMPPLANNER, hppCmpPlanner); then
-dnl 	HPPCMPPLANNER_PREFIX=`$PKG_CONFIG hppCmpPlanner --variable=prefix`
-dnl 	AC_SUBST(HPPCMPPLANNER_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(HPPTUTORIALPLANNER, hppTutorialPlanner); then
-dnl 	HPPTUTORIALPLANNER_PREFIX=`$PKG_CONFIG hppTutorialPlanner --variable=prefix`
-dnl 	AC_SUBST(HPPTUTORIALPLANNER_PREFIX)
-dnl fi
-
-if PKG_CHECK_MODULES(KPPINTERFACE, kppInterface); then
-	KPPINTERFACE_PREFIX=`$PKG_CONFIG kppInterface --variable=prefix`
-	AC_SUBST(KPPINTERFACE_PREFIX)
-fi
-
-dnl if PKG_CHECK_MODULES(KPPINTERFACEWALK, kppInterfaceWalk); then
-dnl 	KPPINTERFACEWALK_PREFIX=`$PKG_CONFIG kppInterfaceWalk --variable=prefix`
-dnl 	AC_SUBST(KPPINTERFACEWALK_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(KPPINTERFACEHRP, kppInterfaceHRP); then
-dnl 	KPPINTERFACEHRP_PREFIX=`$PKG_CONFIG kppInterfaceHRP --variable=prefix`
-dnl 	AC_SUBST(KPPINTERFACEHRP_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(KPPINTERFACECMP, kppInterfaceCmp); then
-dnl 	KPPINTERFACECMP_PREFIX=`$PKG_CONFIG kppInterfaceCmp --variable=prefix`
-dnl 	AC_SUBST(KPPINTERFACECMP_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(HPPGIK, hppGik); then
-dnl 	HPPGIK_PREFIX=`$PKG_CONFIG hppGik --variable=prefix`
-dnl 	AC_SUBST(HPPGIK_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(HPPLOA, hppLoa); then
-dnl 	HPPLOA_PREFIX=`$PKG_CONFIG hppLoa --variable=prefix`
-dnl 	AC_SUBST(HPPLOA_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(DYNAMICSJRLJAPAN, dynamicsJRLJapan); then
-dnl 	DYNAMICSJRLJAPAN_PREFIX=`$PKG_CONFIG dynamicsJRLJapan --variable=prefix`
-dnl 	AC_SUBST(DYNAMICSJRLJAPAN_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(ABSTRACTROBOTDYNAMICS, abstractRobotDynamics); then
-dnl 	ABSTRACTROBOTDYNAMICS_PREFIX=`$PKG_CONFIG abstractRobotDynamics --variable=prefix`
-dnl 	AC_SUBST(ABSTRACTROBOTDYNAMICS_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(ABSTRACTGIKTASK, abstractGikTask); then
-dnl 	ABSTRACTGIKTASK_PREFIX=`$PKG_CONFIG abstractGikTask --variable=prefix`
-dnl 	AC_SUBST(ABSTRACTGIKTASK_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(KPPINTERFACETUTORIAL, kppInterfaceTutorial); then
-dnl 	KPPINTERFACETUTORIAL_PREFIX=`$PKG_CONFIG kppInterfaceTutorial --variable=prefix`
-dnl 	AC_SUBST(KPPINTERFACETUTORIAL_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(HPPOPENHRP, hppOpenHRP); then
-dnl 	HPPOPENHRP_PREFIX=`$PKG_CONFIG hppOpenHRP --variable=prefix`
-dnl 	AC_SUBST(HPPOPENHRP_PREFIX)
-dnl fi
-
-dnl if PKG_CHECK_MODULES(HPPVISUALIZEMOVEPLANNER, hppVisualizeMovePlanner); then
-dnl 	HPPVISUALIZEMOVEPLANNER_PREFIX=`$PKG_CONFIG hppVisualizeMovePlanner --variable=prefix`
-dnl 	AC_SUBST(HPPVISUALIZEMOVEPLANNER_PREFIX)
-dnl fi
-
+# --- generate files -------------------------------------------------
 
 AC_OUTPUT(
 	Makefile
@@ -132,4 +72,4 @@ AC_OUTPUT(
 	doc/html/tree.html
 	doc/html/hppdoc_development.html
 	doc/html/hppdoc_howtoinstall.html
-	)
+)
