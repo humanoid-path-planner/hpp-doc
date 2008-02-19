@@ -103,10 +103,24 @@ To send request to hppCorbaServer using python, you need to install packages <ul
 </ul>
 Installation of <code>hppPython</code> is similar to other packages, except that command <div class="fragment"><pre class="fragment">[package] libtoolize -c
 </pre></div> should be omitted.<p>
-<code>hppPython</code> installs a python script <code>hppInit.py</code> that initializes 3 CORBA clients, one to each the 3 CORBA objects instanciated by <code>hppCorbaServer</code> and described at the beginning of this section (<a class="el" href="hppdoc_howtoinstall.html#hppDoc_omniORB">Configuring CORBA and using hppCorbaServer</a>).<p>
-<code>hppInit.py</code> is installed in <code>${HOME}/devel/share/script/python</code>. Tu use this script, you need to set the following environment variables. <div class="fragment"><pre class="fragment">setenv PYTHONPATH ${HOME}/devel/share/script/python:${HOME}/openrobots/lib/pythonx.y/site-packages:${PYTHONPATH}
-   setenv LD_LIBRARY_PATH ${HOME}/openrobots/lib:${LD_LIBRARY_PATH}
-</pre></div> where <code>x.y</code> is the version number of python installed by <code>robotpkg</code>.<p>
+<code>hppPython</code> installs a python script <code>hppInit.py</code> that initializes 3 CORBA clients, one to each the 3 CORBA objects instanciated by <code>hppCorbaServer</code> and described at the beginning of this section (<a class="el" href="hppdoc_howtoinstall.html#hppDoc_omniORB">Configuring CORBA and using hppCorbaServer</a>).
+<p>
+<code>hppInit.py</code> is installed in 
+<ul>
+  <li><code>${HOME}/devel/share/script/python</code> if installed through <code>git</code></li> 
+  <li><code>${HOME}/openrobots/share/script/python</code> if installed through <code>robotpkg</code></li> 
+</ul>
+To use this script, you need to set the following environment variables. 
+
+<div class="fragment"><pre class="fragment">setenv PYTHONPATH @HPPPYTHON_PREFIX@/share/script/python:${HOME}/openrobots/lib/pythonx.y/site-packages:${PYTHONPATH}
+setenv LD_LIBRARY_PATH ${HOME}/openrobots/lib:${LD_LIBRARY_PATH}
+</pre></div> 
+where 
+<ul>
+  <li><code>@HPPPYTHON_PREFIX@</code> is the installation prefix of <code>hppPython</code> and depends on the way ou installed it (<code>git</code> or <code>robotpkg</code>),
+  <li><code>x.y</code> is the version number of python installed by <code>robotpkg</code>.</li>
+</ul>
+<p>
 Then open a python shell and call the initialization script <div class="fragment"><pre class="fragment">[~] python
 Python 2.4.3 (#1, Oct 23 2006, 14:19:47)
 [GCC 4.1.1 20060525 (Red Hat 4.1.1-1)] on linux2
