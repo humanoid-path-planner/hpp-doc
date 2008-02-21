@@ -23,9 +23,11 @@ m4_define([PKG_CHKADDDPD],[
                    [pkgprefix_[]$1=`$PKG_CONFIG --[]variable=prefix "$2" 2>/dev/null`],
 	           [pkg_failed=yes])
   if test $pkg_failed = yes; then
+    AC_SUBST($1[]_DOCDIR,$prefix/share/doc/hppDoc/$2)
     AC_MSG_RESULT([no])
   else
     AC_SUBST($1[]_PREFIX,$pkgprefix_[]$1)
+    AC_SUBST($1[]_DOCDIR,$$1[]_PREFIX/share/doc/$2)
     if test -n "$pkg_list"; then pkg_list="$pkg_list, $2"; else pkg_list="$2"; fi
     AC_MSG_RESULT([yes])
   fi[]dnl
