@@ -20,13 +20,15 @@ m4_define([PKG_CHKADDDPD],[
   AC_MSG_CHECKING([for $2])
   pkg_failed=no
   PKG_CHECK_EXISTS([$2],
-                   [pkgprefix_[]$1=`$PKG_CONFIG --[]variable=prefix "$2" 2>/dev/null`],
+                   [pkgprefix_[]$1=`$PKG_CONFIG --variable=prefix "$2" 2>/dev/null`],
 	           [pkg_failed=yes])
   if test $pkg_failed = yes; then
     AC_SUBST($1[]_DOCDIR,$prefix/share/doc/hppDoc/$2)
     AC_MSG_RESULT([no])
   else
     AC_SUBST($1[]_PREFIX,$pkgprefix_[]$1)
+# once all packages will export their docdir in pkgconfig:
+#   AC_SUBST($1[]_DOCDIR,`$PKG_CONFIG --variable=docdir "$2" 2>/dev/null`)
     AC_SUBST($1[]_DOCDIR,$$1[]_PREFIX/share/doc/$2)
     if test -n "$pkg_list"; then pkg_list="$pkg_list, $2"; else pkg_list="$2"; fi
     AC_MSG_RESULT([yes])
