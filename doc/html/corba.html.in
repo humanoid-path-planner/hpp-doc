@@ -9,9 +9,9 @@
 <p>
 The following packages implement Corba communication functionalities
 <ul>
-<li><a href="@HPPCORBASERVER_PREFIX@/share/doc/hppCorbaServer/main.html">hppCorbaServer</a>: Corba server to implementing a ChppPlanner object.</li>
-<li><a href="@HPPPYTHON_PREFIX@/share/doc/hppPython/main.html">hppPython</a>: Script python to communicate with hppCorbaServer.</li>
-<li><a href="@HPPOPENHRP_PREFIX@/share/doc/hppOpenHRP/main.html">hppOpenHRP</a>: Corba server that implements the model of HRP2.</li>
+<li><a href="@HPPCORBASERVER_DOCDIR@/main.html">hppCorbaServer</a>: Corba server to implementing a ChppPlanner object.</li>
+<li><a href="@HPPPYTHON_DOCDIR@/main.html">hppPython</a>: Script python to communicate with hppCorbaServer.</li>
+<li><a href="@HPPOPENHRP_DOCDIR@/main.html">hppOpenHRP</a>: Corba server that implements the model of HRP2.</li>
 </ul>
 <p>
 <table border="0" cellpadding="0" cellspacing="0">

@@ -58,6 +58,7 @@ PKG_CHKADDDPD(ABSTRACTGIKTASK, 		abstractGikTask)
 PKG_CHKADDDPD(KPPINTERFACETUTORIAL, 	kppInterfaceTutorial)
 PKG_CHKADDDPD(HPPOPENHRP, 		hppOpenHRP)
 PKG_CHKADDDPD(HPPVISUALIZEMOVEPLANNER,	hppVisualizeMovePlanner)
+PKG_CHKADDDPD(SLAM3DPLANNER,		slam3DPlanner)
 
 
 # --- generate files -------------------------------------------------
