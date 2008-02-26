@@ -106,7 +106,12 @@ make update
 </ul>
 <code>hppPython</code> installs a python script <code>hppInit.py</code> that initializes 3 CORBA clients, one to each the 3 CORBA objects instanciated by <code>hppCorbaServer</code> and described at the beginning of this section (<a class="el" href="hppdoc_howtoinstall.html#hppDoc_omniORB">Configuring CORBA and using hppCorbaServer</a>).
 <p>
-After installing <code>hppPython</code>, you need to set environment variables. Reconfigure and reinstall this documentation and follow <a href="@HPPPYTHON_PREFIX@/share/doc/hppPython/main.html">this link</a>.
+After installing <code>hppPython</code>, you need to reinstall this documentation 
+<ul>
+  <li>either by doing <code>../configure --prefix=... ; make; make install</code> in <code>hppDoc/build</code>,</li>
+  <li>or by doing <code>make update</code> in <code>robotpkg/doc/hpp-doc</code>.
+</ul>
+and to set environment variables. For that, follow <a href="@HPPPYTHON_DOCDIR@/main.html">this link</a>.
 <p>
 Then open a python shell and call the initialization script <div class="fragment"><pre class="fragment">[~] python
 Python 2.4.3 (#1, Oct 23 2006, 14:19:47)
