@@ -11,7 +11,7 @@ General rules to be followed in HPP developement</a></h2>
 <h3><a class="anchor" name="hppDoc_separate_algo_middleware">
 Make clear distinction between algorithms, middleware and graphical interface</a></h3>
 <div align="center">
-<img src="pictures/archi.png" alt="archi.png">
+<img src="figures/archi.png" alt="archi.png">
 <p><strong>Architecture of HPP: the functionalities are distributed into separate software packages. The architecture is composed of Three types of packages: algorithms, CORBA interfaces and KPP-SDK interfaces.</strong></p></div>
  HPP is composed of several software packages divided into three groups as explained in the above figure: <ul>
 <li>algorithms, </li>

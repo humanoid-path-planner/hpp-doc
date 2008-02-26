@@ -135,7 +135,7 @@ You can now run KineoPathPlanner and load kppInterfaceWalk module: <div class="f
 </pre></div> where <code>${HOST}</code> is the name of your machine (or localhost.localdomain).<p>
 You should get the following interface:<p>
 <div align="center">
-<img src="pictures/kppInterfaceWalk.png" alt="kppInterfaceWalk.png">
+<img src="figures/kppInterfaceWalk.png" alt="kppInterfaceWalk.png">
 <p><strong>KineoPathPlanner with module kppInterfaceWalk.</strong></p></div>
 <h4><a class="anchor" name="hppDoc_solve_GUI">
 Defining and solving a problem using menu "HPP/WALK"</a></h4>
