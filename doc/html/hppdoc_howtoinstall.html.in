@@ -83,11 +83,6 @@ Type then <div class="fragment"><pre class="fragment">[~] <span class="keywordty
 </pre></div> in a terminal and you get your user id on your machine. Add 1024 to this number, you get your port id. Then create a directory to store omniORB information <div class="fragment"><pre class="fragment">[~] mkdir ${HOME}/omniORB
 [~] cd ${HOME}/omniORB
 </pre></div> In this directory, create a file <code>omniORG.cfg</code> and copy the following line in this file: <div class="fragment"><pre class="fragment"><span class="preprocessor"># Configuration file for omniOrb</span>
-<span class="preprocessor"></span><span class="preprocessor"># environment variable OMNIORB_CONFIG must be set to name of the directory</span>
-<span class="preprocessor"></span><span class="preprocessor"># containing this file.</span>
-<span class="preprocessor"></span>
-<span class="preprocessor">#   Alternatively, and more cleanly, specify the Naming service with a</span>
-<span class="preprocessor"></span><span class="preprocessor">#   corbaname URI:</span>
 <span class="preprocessor">InitRef = NameService=corbaloc:iiop:localhost:port-id/NameService</span>
 </pre></div> replacing <code>port-id</code> by your port id computed above.<p>
 File <code>omniORG.cfg</code> contains the address of the name server. The name server and each Corba object you launch thus needs to access to this file. For that, define the following environment variable: <div class="fragment"><pre class="fragment">setenv OMNIORB_CONFIG ${HOME}/omniORB/omniORB.cfg
