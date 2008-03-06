@@ -68,6 +68,7 @@ nobase_dist_hppDoc_DATA+= \
 	hppCmpPlanner/main.html			\
 	hppWalkPlanner/main.html		\
 	hppLoa/main.html			\
+	hppTimingPlanner/main.html		\
 	hppEnvGenerator/main.html		\
 	hppVisualizeMovePlanner/main.html	\
 	hppTutorialPlanner/main.html		\

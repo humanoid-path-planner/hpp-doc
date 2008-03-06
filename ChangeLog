@@ -1,3 +1,7 @@
+2008/03/06
+	11. Added link to hppTimingPlanner.
+	10. Changed message when package is not installed.
+	
 2008/02/22
 	9. When package referenced in the documentation is not installed, the link 
 	to this package is redirected to a page explaining how to install the package.

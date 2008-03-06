@@ -33,6 +33,7 @@ Packages marked by (<--kpp-sdk) are build upon KineoPathPlanner-SDK.
     <tr><td width="20"></td><td><a href="@HPPCMPPLANNER_DOCDIR@/main.html">hppCmpPlanner</a>: </td><td> Contact motion planning. </td><td> (<--kpp-sdk)</td></tr>
     <tr><td width="20"></td><td><a href="@HPPWALKPLANNER_DOCDIR@/main.html">hppWalkPlanner</a>: </td><td> Walk planning for a humanoid robot among obstacles. </td><td> (<--kpp-sdk)</td></tr>
     <tr><td width="20"></td><td><a href="@HPPLOA_DOCDIR@/main.html">hppLoa</a>: </td><td> Whole body motion planning with local obstacle avoidance. </td><td>(<--kpp-sdk) </td></tr>
+    <tr><td width="20"></td><td><a href="@HPPTIMINGPLANNER_DOCDIR@/main.html">hppTimingPlanner</a>: </td><td> Dynamic time parameterization of quasi-static paths. </td><td>(<--kpp-sdk) </td></tr>
   </table>
   <li><b>Path Planning and perception</b></li>
   <table>
