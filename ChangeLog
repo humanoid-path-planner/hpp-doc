@@ -1,3 +1,6 @@
+2008/05/28
+	13 renamed directory doc/abstractRobotsDynamics to doc/abstractRobotDynamics.
+	12. Added link to hrp2Dynamics
 2008/03/06
 	11. Added link to hppTimingPlanner.
 	10. Changed message when package is not installed.

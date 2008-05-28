@@ -64,7 +64,7 @@ PKG_CHKADDDPD(HPPVISUALIZEMOVEPLANNER,	hppVisualizeMovePlanner)
 PKG_CHKADDDPD(SLAM3DPLANNER,		slam3DPlanner)
 PKG_CHKADDDPD(HPPENVGENERATOR,		hppEnvGenerator)
 PKG_CHKADDDPD(WORLDMODELGRID3D,		worldModelGrid3D)
-
+PKG_CHKADDDPD(HRP2DYNAMICS,		hrp2Dynamics)
 
 # --- generate files -------------------------------------------------
 

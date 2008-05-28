@@ -15,6 +15,7 @@
   <tr><td width="20"></td><td><a href="@WALKGENJRL_DOCDIR@/main.html">walkGenJRL</a>: </td><td> JRL Walk Pattern Generator</td></tr>
   <tr><td width="20"></td><td><a href="@ABSTRACTGIKTASK_DOCDIR@/main.html">abstractGikTask</a>: </td><td> Abstract interface for whole body motion planning.</td></tr>
   <tr><td width="20"></td><td><a href="@HPPGIK_DOCDIR@/main.html">hppGik</a>: </td><td> Implementation of whole body motion planning.</td></tr>
+  <tr><td width="20"></td><td><a href="@HRP2DYNAMICS_DOCDIR@/main.html">hrp2Dynamics</a>: </td><td> Optimized dynamic model for HRP2.</td></tr>
 </table>
 
 <h3>Motion planning for humanoid systems algorithms</h3>

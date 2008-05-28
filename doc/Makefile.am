@@ -70,10 +70,12 @@ nobase_dist_hppDoc_DATA+= \
 	hppLoa/main.html			\
 	hppTimingPlanner/main.html		\
 	hppEnvGenerator/main.html		\
+	worldModelGrid3D/main.html		\
 	hppVisualizeMovePlanner/main.html	\
 	hppTutorialPlanner/main.html		\
-	abstractRobotsDynamics/main.html	\
+	abstractRobotDynamics/main.html	\
 	dynamicsJRLJapan/main.html		\
+	hrp2Dynamics/main.html			\
 	walkGenJrl/main.html			\
 	abstractGikTask/main.html		\
 	hppGik/main.html			\
