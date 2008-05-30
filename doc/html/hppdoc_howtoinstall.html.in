@@ -7,7 +7,7 @@
 
 <h1><a class="anchor" name="hppDoc_howToInstall">How to install HPP</a></h1><h2><a class="anchor" name="hppDoc_install_intro">
 Introduction</a></h2>
-HPP (Humanoid Path Planner) is composed of several software modules packaged by autotools. These software modules are stored in a git repositories on git.laas.fr (or softs.laas.fr) for people working at LAAS.<p>
+HPP (Humanoid Path Planner) is composed of several software modules packaged by autotools. These software modules are stored in a git repositories on git.laas.fr (or softs.laas.fr for people working at LAAS).<p>
 There are mainly two types of packages in HPP: <ul>
 <li>packages under development that are not stable yet: each developer needs to download his own version using git and commit his modifications. </li>
 <li>packages that are more stable and for which versions have already been released: these packages are automatically installed using a tool called <code>robotpkg</code>.</li>
@@ -27,7 +27,7 @@ You need to ask this archives to <a href="mailto:anthony.mallet@laas.fr">Anthony
 Robotpkg</a></h3>
 The first step consists in installing <code>robotpkg</code> on your account. For that, you need to create a directory where <code>robotpkg</code> will install all necessary packages: <div class="fragment"><pre class="fragment">[~] mkdir ${HOME}/openrobots
 [~] cd ${HOME}/openrobots
-</pre></div> Then download a working version of <code>robotpkg</code> <div class="fragment"><pre class="fragment">[openrobots] cg-clone git+ssh:<span class="comment">//[git|softs].laas.fr/git/robots/robotpkg</span>
+</pre></div> Then download a working version of <code>robotpkg</code> <div class="fragment"><pre class="fragment">[openrobots] git-clone git+ssh:<span class="comment">//[git|softs].laas.fr/git/robots/robotpkg</span>
 </pre></div> Note that from now on, <code> [git|softs] </code> should be replaced by <ul>
 <li><code>softs</code> if you are working on a LAAS account, </li>
 <li><code>git</code> if you are working from a distant site.</li>
@@ -50,11 +50,13 @@ Once modules managed by <code>robotpkg</code> have been installed, you can downl
 Packages under development or new packages.</a></h3>
 To download, compile and install packages not managed by <code>robotpkg</code>, or packages that you want to modify or debug, create a development directory as follows: <div class="fragment"><pre class="fragment">[~] mkdir ${HOME}/devel
 [~] cd ${HOME}/devel
-</pre></div> Then download the packages you need <div class="fragment"><pre class="fragment">[devel] cg-clone git+ssh:<span class="comment">//[git|softs].laas.fr/git/jrl/name-of-package</span>
+[devel] mkdir src
+[devel] cd src
+</pre></div> Then download the packages you need <div class="fragment"><pre class="fragment">[src] git-clone git+ssh:<span class="comment">//[git|softs].laas.fr/git/jrl/name-of-package</span>
 </pre></div><p>
 Each package (managed by <code>robotpkg</code> or not) installs a file with extension <code>.pc</code> in <code>prefix/lib/pkgconfig</code> where <code>prefix</code> is the installation prefix of the package. This file stores information about the package and its dependencies. This information is retrieved by <code>pkg-config</code> executable. <code>pkg-config</code> searches for <code>.pc</code> files in paths encoded in <code>PKG_CONFIG_PATH</code> environment variable. You need therefore to set this variable correctly, for instance: <div class="fragment"><pre class="fragment">[devel] setenv PKG_CONFIG_PATH ${HOME}/devel/lib/pkgconfig:${HOME}/openrobots/lib/pkgconfig:/usr/local/lib/pkgconfig
 </pre></div><p>
-Compile and install the packages in your development directory <div class="fragment"><pre class="fragment">[devel] cd <span class="keyword">package</span>
+Compile and install the packages in your development directory <div class="fragment"><pre class="fragment">[src] cd <span class="keyword">package</span>
 <span class="keyword"></span>[package] aclocal
 [package] libtoolize -c
 [package] autoconf
@@ -64,7 +66,9 @@ Compile and install the packages in your development directory <div class="fragm
 [build] ../configure --prefix=${HOME}/devel
 [build] make 
 [build] make install
-</pre></div><h3><a class="anchor" name="hppDoc_omniORB">
+</pre></div>
+Notice that in most packages, a local script <code>autogen.sh</code> performs <code>libtoolize</code> to <code>automake</code> above commands.
+<h3><a class="anchor" name="hppDoc_omniORB">
 Configuring CORBA and using hppCorbaServer</a></h3>
 <code>hppCorbaServer</code> is a package that enables developers to run their algorithms from external application like python scripts for instance. This package instanciates a 3 CORBA objects that can handle requests trigerring actions in HPP. The CORBA objects correspond to the following interfaces: <ul>
 <li><code><a class="elRef" doxygen="hppCorbaServer.doxytag:/home/florent/devel/share/doc/hppCorbaServer/" href="/home/florent/devel/share/doc/hppCorbaServer/interface_chppci_robot.html">ChppciRobot</a></code> to define and build robots, </li>
