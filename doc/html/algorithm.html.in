@@ -5,7 +5,7 @@
     </HEAD>
     <BODY>
 
-<h1>Package implementing algorithms</h1>
+<h1>Packages implementing algorithms</h1>
 
 <h3>Algorithms dealing with dynamics</h3>
 
@@ -18,7 +18,7 @@
   <tr><td width="20"></td><td><a href="@HRP2DYNAMICS_DOCDIR@/main.html">hrp2Dynamics</a>: </td><td> Optimized dynamic model for HRP2.</td></tr>
 </table>
 
-<h3>Motion planning for humanoid systems algorithms</h3>
+<h3>Motion planning for humanoid system algorithms</h3>
 
 Packages marked by (<--kpp-sdk) are build upon KineoPathPlanner-SDK.
 <table>
