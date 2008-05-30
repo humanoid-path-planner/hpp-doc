@@ -194,3 +194,14 @@ DIV.groupHeader
     color:#0066CC
 }
 
+SPAN.keyword       { color: #008000 }
+
+SPAN.keywordtype   { color: #604020 }
+
+SPAN.keywordflow   { color: #e00000 }
+
+pre.keyword       { color: #008000 }
+
+pre.keywordtype   { color: #604020 }
+
+pre.keywordflow   { color: #1010e0 }
