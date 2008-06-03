@@ -65,6 +65,9 @@ PKG_CHKADDDPD(SLAM3DPLANNER,		slam3DPlanner)
 PKG_CHKADDDPD(HPPENVGENERATOR,		hppEnvGenerator)
 PKG_CHKADDDPD(WORLDMODELGRID3D,		worldModelGrid3D)
 PKG_CHKADDDPD(HRP2DYNAMICS,		hrp2Dynamics)
+PKG_CHKADDDPD(HPPWALKPLANNERCOMPSPEC,	hppWalkPlannerCompSpec)
+PKG_CHKADDDPD(WALKPLANNERORTM,		walkPlannerOrtm)
+PKG_CHKADDDPD(WALKPLANNERORTMCLIENT,	walkPlannerOrtmClient)
 
 # --- generate files -------------------------------------------------
 
@@ -75,6 +78,7 @@ AC_OUTPUT(
 	doc/html/corba.html
 	doc/html/algorithm.html
 	doc/html/kppInterface.html
+	doc/html/roboticComponent.html
 	doc/html/main.html
 	doc/html/index.html
 	doc/html/tree.html

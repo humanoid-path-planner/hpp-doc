@@ -20,9 +20,10 @@ It can be extended to path planning for other types of robots like digital actor
 The code relative to the HPP is distributed into several software packages. The packages are distributed into three 
 categories:
 <ul>
-<li> <a href="@prefix@/share/doc/hppDoc/algorithm.html">Algorithms</a> implementing path planning functionalities </li>
-<li> <a href="@prefix@/share/doc/hppDoc/corba.html">Corba</a> communication facilities to control the algorithms </li>
-<li> <a href="@prefix@/share/doc/hppDoc/kppInterface.html">Add-on</a> to KineoPathPlanner GUI interface. </li>
+<li> <a href="algorithm.html">Algorithms</a> implementing path planning functionalities </li>
+<li> <a href="corba.html">Corba</a> communication facilities to control the algorithms </li>
+<li> <a href="kppInterface.html">Add-on</a> to KineoPathPlanner GUI interface. </li>
+<li> <a href="roboticComponent.html">Robotic components</a> including HPP algorithms</li>
 </ul>
 
  <hr>

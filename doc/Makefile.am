@@ -48,7 +48,8 @@ hppDoc_DATA=\
 	html/tree.html			\
 	html/corba.html			\
 	html/index.html			\
-	html/kppInterface.html
+	html/kppInterface.html		\
+	html/roboticComponent.html
 
 # the list of pages that explain how to install a package if it is not
 # installed yet. These pages are replaced (in the above templates) by a

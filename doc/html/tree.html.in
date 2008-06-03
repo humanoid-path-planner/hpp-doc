@@ -69,6 +69,7 @@
           <p><img src="pictures/ftv2blank.png" alt="&nbsp;" width=16 height=22 /><img src="pictures/ftv2node.png" alt="o" width=16 height=22 /><img src="pictures/ftv2doc.png" alt="*" width=24 height=22 /><a class="el" href="@prefix@/share/doc/hppDoc/algorithm.html" target="basefrm">Algorithms</a></p>
           <p><img src="pictures/ftv2blank.png" alt="&nbsp;" width=16 height=22 /><img src="pictures/ftv2lastnode.png" alt="\" width=16 height=22 /><img src="pictures/ftv2doc.png" alt="*" width=24 height=22 /><a class="el" href="@prefix@/share/doc/hppDoc/corba.html" target="basefrm">Corba interfaces</a></p>
           <p><img src="pictures/ftv2blank.png" alt="&nbsp;" width=16 height=22 /><img src="pictures/ftv2lastnode.png" alt="\" width=16 height=22 /><img src="pictures/ftv2doc.png" alt="*" width=24 height=22 /><a class="el" href="@prefix@/share/doc/hppDoc/kppInterface.html" target="basefrm">KPP Add-on</a></p>
+          <p><img src="pictures/ftv2blank.png" alt="&nbsp;" width=16 height=22 /><img src="pictures/ftv2node.png" alt="o" width=16 height=22 /><img src="pictures/ftv2doc.png" alt="*" width=24 height=22 /><a class="el" href="@prefix@/share/doc/hppDoc/roboticComponent.html" target="basefrm">Robotic components</a></p>
         </div>
         <p><img src="pictures/ftv2plastnode.png" alt="\" width=16 height=22 onclick="toggleFolder('folder3', this)"/><img src="pictures/ftv2folderclosed.png" alt="+" width=24 height=22 onclick="toggleFolder('folder3', this)"/>How to</p>
         <div id="folder3">
