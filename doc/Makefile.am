@@ -30,7 +30,10 @@ nobase_dist_hppDoc_DATA= \
 	pictures/graph_legend.png \
 	pictures/tab_b.gif \
 	pictures/tab_l.gif \
-	pictures/tab_r.gif
+	pictures/tab_r.gif \
+	pictures/film.png \
+	movies/whole-body.mpg \
+	movies/passing-under.mpg
 
 # these files are installed in the root document directory.
 #
