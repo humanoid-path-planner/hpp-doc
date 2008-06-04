@@ -33,7 +33,9 @@ nobase_dist_hppDoc_DATA= \
 	pictures/tab_r.gif \
 	pictures/film.png \
 	movies/whole-body.mpg \
-	movies/passing-under.mpg
+	movies/passing-under.mpg \
+	pictures/whole-body.png \
+	pictures/passing-under.jpg
 
 # these files are installed in the root document directory.
 #

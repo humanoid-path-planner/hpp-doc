@@ -44,7 +44,7 @@ in order to perform specified geometric tasks like moving the right hand at a gi
 position, looking in a given direction for instance.
 <p>
 <center>
-<a href="movies/whole-body.mpg"><img src="pictures/film.png" width="40%"> </a>
+<a href="movies/whole-body.mpg"><img src="pictures/whole-body.png" height=200> </a>
 </center>
 
 <h3>Passing under obstacles</h3>
@@ -55,7 +55,7 @@ balance.
 
 <p>
 <center>
-<a href="movies/passing-under.mpg"><img src="pictures/film.png" width="40%"> </a>
+<a href="movies/passing-under.mpg"><img src="pictures/passing-under.jpg" height=200> </a>
 </center>
 
 <h3>Walk planning</h3>
