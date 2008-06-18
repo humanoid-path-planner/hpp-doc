@@ -37,6 +37,15 @@ The packages are distributed into the following categories:
 
 Here are a few examples of problems solved by HPP packages.
 
+<h3>Walk planning</h3>
+
+To move on a flat ground cluttered with obstacles, the best strategy is to walk. To solve this problem, we plan a motion for the bounding box of the robot with cart-like kinematics and then animate the path of the box using a walk pattern generator.
+
+<p>
+<center>
+<img src="pictures/walk.png" width="40%">
+</center>
+
 <h3>Whole-body motion generation</h3>
 
 This problem consists in computing a dynamically stable motion a humanoid robot 
@@ -56,15 +65,6 @@ balance.
 <p>
 <center>
 <a href="movies/passing-under.mp4"><img src="pictures/passing-under.jpg" height=200> </a>
-</center>
-
-<h3>Walk planning</h3>
-
-To move on a flat ground cluttered with obstacles, the best strategy is to walk. In this example, we plan a motion for the bounding box of the robot with cart-like kinematics and then animate the path of the box using a walk pattern generator.
-
-<p>
-<center>
-<img src="pictures/film.png" width="40%">
 </center>
 
  <hr>
