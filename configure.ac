@@ -19,8 +19,9 @@ AC_SUBST(pkg_list,[])
 m4_define([PKG_CHKADDDPD],[
   AC_MSG_CHECKING([for $2])
   pkg_failed=no
-  PKG_CHECK_EXISTS([$2],
-                   [pkgprefix_[]$1=`$PKG_CONFIG --variable=prefix "$2" 2>/dev/null`],
+  if test "$3" = ""; then pname=$2; else pname=$3; fi
+  PKG_CHECK_EXISTS([$pname],
+                   [pkgprefix_[]$1=`$PKG_CONFIG --variable=prefix "$pname" 2>/dev/null`],
 	           [pkg_failed=yes])
   if test $pkg_failed = yes; then
     AC_SUBST($1[]_DOCDIR,$prefix/share/doc/hppDoc/$2)
@@ -68,6 +69,8 @@ PKG_CHKADDDPD(HRP2DYNAMICS,		hrp2Dynamics)
 PKG_CHKADDDPD(HPPWALKPLANNERCOMPSPEC,	hppWalkPlannerCompSpec)
 PKG_CHKADDDPD(WALKPLANNERORTM,		walkPlannerOrtm)
 PKG_CHKADDDPD(WALKPLANNERORTMCLIENT,	walkPlannerOrtmClient)
+
+PKG_CHKADDDPD(WALKGENOM,		walk-genom, walk)
 
 # --- generate files -------------------------------------------------
 
