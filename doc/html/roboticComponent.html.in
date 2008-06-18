@@ -16,7 +16,7 @@
 <h3>GenoM components</h3>
 
 <table>
-  <tr><td width="20"></td><td>walk-genom:</td><td>humanoid walk planning component</td></tr>
+  <tr><td width="20"></td><td><a href="@WALKGENOM_DOCDIR@/main.html">walk-genom</a>:</td><td>humanoid walk planning component</td></tr>
 </table>
 
 <h3>OpenRTM-AIST components</h3>
