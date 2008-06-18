@@ -32,8 +32,8 @@ nobase_dist_hppDoc_DATA= \
 	pictures/tab_l.gif \
 	pictures/tab_r.gif \
 	pictures/film.png \
-	movies/whole-body.mpg \
-	movies/passing-under.mpg \
+	movies/whole-body.mp4 \
+	movies/passing-under.mp4 \
 	pictures/whole-body.png \
 	pictures/passing-under.jpg
 
