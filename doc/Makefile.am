@@ -92,4 +92,8 @@ nobase_dist_hppDoc_DATA+= \
 	kppInterfaceWalk/main.html		\
 	kppInterfaceHRP/main.html		\
 	kppInterfaceCmp/main.html		\
-	kppInterfaceTutorial/main.html
+	kppInterfaceTutorial/main.html		\
+	walk-genom/main.html			\
+	hppWalkPlannerCompSpec/main.html	\
+	walkPlannerOrtm/main.html		\
+	walkPlannerOrtmClient/main.html
