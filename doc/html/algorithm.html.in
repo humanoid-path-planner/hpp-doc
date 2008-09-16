@@ -41,7 +41,7 @@ Packages marked by (<--kpp-sdk) are build upon KineoPathPlanner-SDK.
   <table>
     <tr><td width="20"></td><td><a href="@WORLDMODELGRID3D_DOCDIR@/main.html">worldModelGrid3D</a>: </td><td> Occupancy-grid built by vision.</td><td></td></tr>
     <tr><td width="20"></td><td><a href="@SLAM3DPLANNER_DOCDIR@/main.html">slam3DPlanner</a>: </td><td> path planning in environments modelled by vision </td><td> (<--kpp-sdk)</td></tr>
-    <tr><td width="20"></td><td><a href="@HPPENVGENERATOR_DOCDIR@/main.html">hppEnvGenerator</a>:</td><td> Handle map built by vision </td><td> (<--kpp-sdk)</td></tr>
+    <tr><td width="20"></td><td><a href="@HPPDYNAMICOBSTACLE_DOCDIR@/main.html">hppDynamicObstacle</a>:</td><td> Handle dynamic obstacles in the environment. </td><td> (<--kpp-sdk)</td></tr>
   </table> 
   <li><b>Digital actors</b></li>
   <table>

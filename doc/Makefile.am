@@ -76,7 +76,7 @@ nobase_dist_hppDoc_DATA+= \
 	hppWalkPlanner/main.html		\
 	hppLoa/main.html			\
 	hppTimingPlanner/main.html		\
-	hppEnvGenerator/main.html		\
+	hppDynamicObstacle/main.html		\
 	worldModelGrid3D/main.html		\
 	hppVisualizeMovePlanner/main.html	\
 	hppTutorialPlanner/main.html		\
