@@ -1,0 +1,60 @@
+digraph CD  {
+        size = "12,15"
+        rankdir = BT
+        compound=true
+        
+        slam3DPlannerGenom [shape = box]
+        slam3DPlanner [shape = box]
+        hppCorbaServer [shape = box]
+        worldModelGrid3D [shape = box]
+
+        hppCorbaServer -> slam3DPlannerGenom
+        slam3DPlanner -> slam3DPlannerGenom
+        worldModelGrid3D -> slam3DPlannerGenom
+
+        hrp2_14 [shape = box]
+        hrp2Dynamics [shape = box]
+        kwsplus [shape = box]
+        hppModel [shape=box]
+        hppCore [shape = box]
+        hppOpenHRP [shape = box]
+        OpenHRP [shape = box]
+
+	jrlMathTools [shape = box]
+	MatrixAbstractLayer [shape = box]
+
+        hrp2_14 -> hppCorbaServer
+        hrp2Dynamics -> hppCorbaServer
+        kwsplus -> hppCorbaServer
+        hppCore -> hppCorbaServer
+        hppOpenHRP -> hppCorbaServer
+        OpenHRP -> hppCorbaServer
+
+        hppDynamicObstacles [shape = box]
+        hppWalkPlanner [shape = box]
+
+        hppDynamicObstacles -> slam3DPlanner
+        hppWalkPlanner -> slam3DPlanner
+
+        kwsplus -> hppDynamicObstacles
+        hppCore -> hppDynamicObstacles
+
+        hppWalkFootPlanner [shape = box]
+        walkGenJRL [shape = box]
+
+        kwsplus -> hppWalkPlanner
+        hppCore -> hppWalkPlanner
+        hppWalkFootPlanner -> hppWalkPlanner
+        walkGenJRL -> hppWalkPlanner
+        hppOpenHRP -> hppWalkPlanner
+
+        kwsplus -> hppCore
+        hppModel -> hppCore
+
+        hppCore -> hppWalkFootPlanner
+        kwsplus -> hppWalkFootPlanner
+
+	jrlMathTools -> MatrixAbstractLayer
+	jrlMathTools -> hppWalkFootPlanner
+
+}
