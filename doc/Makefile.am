@@ -67,6 +67,7 @@ hppDoc_DATA=\
 #
 nobase_dist_hppDoc_DATA+= \
 	slam3DPlanner/main.html			\
+	hppHybridRobot/main.html		\
 	hppHRPPlanner/main.html			\
 	hppPython/main.html			\
 	kwsPlus/main.html			\
@@ -75,6 +76,7 @@ nobase_dist_hppDoc_DATA+= \
 	hppCmpPlanner/main.html			\
 	hppWalkPlanner/main.html		\
 	hppLoa/main.html			\
+	hppLoaPlanner/main.html			\
 	hppTimingPlanner/main.html		\
 	hppDynamicObstacle/main.html		\
 	worldModelGrid3D/main.html		\

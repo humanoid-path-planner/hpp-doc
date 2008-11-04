@@ -30,11 +30,13 @@ Packages marked by (<--kpp-sdk) are build upon KineoPathPlanner-SDK.
 	</table>
   <li><b>Path Planning for humanoid robots</b></li>
   <table>
+    <tr><td width="20"></td><td><a href="@HPPHYBRIDROBOT_DOCDIR@/main.html">hppHybridRobot</a>: </td><td> Hybrid model of robot to integrate various type of motions in roadmap based path planning. </td><td> (<--kpp-sdk)</td></tr>
     <tr><td width="20"></td><td><a href="@HPPHRPPLANNER_DOCDIR@/main.html">hppHRPPlanner</a>: </td><td> Algorithms to plan motion going under an obstacle. </td><td> (<--kpp-sdk)</td></tr>
     <tr><td width="20"></td><td><a href="@HPPCMPPLANNER_DOCDIR@/main.html">hppCmpPlanner</a>: </td><td> Contact motion planning. </td><td> (<--kpp-sdk)</td></tr>
     <tr><td width="20"></td><td><a href="@HPPWALKFOOTPLANNER_DOCDIR@/main.html">hppWalkFootPlanner</a>: </td><td>Foot step planning along a bounding box trajectory. </td><td> (<--kpp-sdk)</td></tr>
     <tr><td width="20"></td><td><a href="@HPPWALKPLANNER_DOCDIR@/main.html">hppWalkPlanner</a>: </td><td> Walk planning for a humanoid robot among obstacles. </td><td> (<--kpp-sdk)</td></tr>
     <tr><td width="20"></td><td><a href="@HPPLOA_DOCDIR@/main.html">hppLoa</a>: </td><td> Whole body motion planning with local obstacle avoidance. </td><td>(<--kpp-sdk) </td></tr>
+    <tr><td width="20"></td><td><a href="@HPPLOAPLANNER_DOCDIR@/main.html">hppLoaPlanner</a>: </td><td> Global motion planning based on local obstacle avoidance. </td><td>(<--kpp-sdk) </td></tr>
     <tr><td width="20"></td><td><a href="@HPPTIMINGPLANNER_DOCDIR@/main.html">hppTimingPlanner</a>: </td><td> Dynamic time parameterization of quasi-static paths. </td><td>(<--kpp-sdk) </td></tr>
   </table>
   <li><b>Path Planning and perception</b></li>
