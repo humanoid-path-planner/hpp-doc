@@ -24,7 +24,7 @@ It can be extended to path planning for other types of robots like digital actor
 <h2> Organization of the packages </h2>
 
 The code relative to HPP is distributed into several software packages handled by 
-<a href="http://www.gnu.org/software/autoconf">autotools</a>. 
+<a href="http://www.gnu.org/software/autoconf">autotools</a> or <a href="http://www.cmake.org">cmake</a>. 
 The packages are distributed into the following categories:
 <ul>
 <li> <a href="algorithm.html">Algorithms</a> implementing path planning functionalities </li>
