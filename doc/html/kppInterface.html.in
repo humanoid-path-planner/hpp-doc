@@ -8,8 +8,8 @@
 <h1>Packages implementing KineoPathPlanner Ads-on</h1>
 <p>
 <ul>
-  <li><a href="@KPPINTERFACE_DOCDIR@/main.html">kppInterface</a>: basic KPP interface.</li>
-  <li><a href="@KPPINTERFACEWALK_DOCDIR@/main.html">kppInterfaceWalk</a>: KPP interface for hppWalkPlanner.</li>
+  <li><a href="@KPPINTERFACE_DOCDIR@/html/main.html">kppInterface</a>: basic KPP interface.</li>
+  <li><a href="@KPPINTERFACEWALK_DOCDIR@/html/main.html">kppInterfaceWalk</a>: KPP interface for hppWalkPlanner.</li>
   <li><a href="@KPPINTERFACEHRP_DOCDIR@/main.html">kppInterfaceHRP</a>: KPP interface for functions specific to HRP2 robot.</li>
   <li><a href="@KPPINTERFACECMP_DOCDIR@/main.html">kppInterfaceCmp</a>: KPP interface for contact motion planning.</li>
   <li><a href="@KPPINTERFACETUTORIAL_DOCDIR@/main.html">kppInterfaceTutorial</a>: KPP interface to learn how to make and use a KPP interface.</li>

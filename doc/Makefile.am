@@ -71,10 +71,11 @@ nobase_dist_hppDoc_DATA+= \
 	hppHRPPlanner/main.html			\
 	hppPython/main.html			\
 	kwsPlus/main.html			\
-	hppCore/main.html			\
-	hppModel/main.html			\
+	hppCore/html/main.html			\
+	hppModel/html/main.html			\
 	hppCmpPlanner/main.html			\
-	hppWalkPlanner/main.html		\
+	hppWalkFootPlanner/html/main.html		\
+	hppWalkPlanner/html/main.html		\
 	hppLoa/main.html			\
 	hppLoaPlanner/main.html			\
 	hppTimingPlanner/main.html		\
@@ -82,16 +83,16 @@ nobase_dist_hppDoc_DATA+= \
 	worldModelGrid3D/main.html		\
 	hppVisualizeMovePlanner/main.html	\
 	hppTutorialPlanner/main.html		\
-	abstractRobotDynamics/main.html	\
-	dynamicsJRLJapan/main.html		\
-	hrp2Dynamics/main.html			\
-	walkGenJrl/main.html			\
-	abstractGikTask/main.html		\
-	hppGik/main.html			\
-	hppCorbaServer/main.html		\
-	hppOpenHRP/main.html			\
-	kppInterface/main.html			\
-	kppInterfaceWalk/main.html		\
+	abstractRobotDynamics/html/main.html	\
+	dynamicsJRLJapan/html/main.html		\
+	hrp2Dynamics/html/main.html			\
+	walkGenJrl/html/main.html			\
+	abstractGikTask/html/main.html		\
+	hppGik/html/main.html			\
+	hppCorbaServer/html/main.html		\
+	hppOpenHRP/html/main.html			\
+	kppInterface/html/main.html			\
+	kppInterfaceWalk/html/main.html		\
 	kppInterfaceHRP/main.html		\
 	kppInterfaceCmp/main.html		\
 	kppInterfaceTutorial/main.html		\
