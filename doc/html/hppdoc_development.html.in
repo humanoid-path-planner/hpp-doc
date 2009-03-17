@@ -173,33 +173,33 @@ This operation creates a template of software package with all necessary files t
 <li><code>src</code> contains source code files </li>
 <li><code>unitTesting</code> contains files used to test the algorithm developed in the package.</li>
 </ul>
-Define in <code>include/hppNewAlgo.h</code> a class that derives from <a class="elRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="/home/florent/devel/share/doc/hppCore/class_chpp_planner.html">ChppPlanner</a>. <div class="fragment"><pre class="fragment"><span class="preprocessor">#include "<a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="/home/florent/devel/share/doc/hppCore/hpp_planner_8h.html">hppPlanner.h</a>"</span>
+Define in <code>include/hppNewAlgo.h</code> a class that derives from <a class="elRef" href="@HPPCORE_DOCDIR@/html/main.html">ChppPlanner</a>. <div class="fragment"><pre class="fragment"><span class="preprocessor">#include "<a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="@HPPCORE_DOCDIR@/html/main.html">hppPlanner.h</a>"</span>
 
-<span class="keyword">class </span>ChppNewAlgo : <span class="keyword">public</span> <a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="/home/florent/devel/share/doc/hppCore/class_chpp_planner.html">ChppPlanner</a> {
+<span class="keyword">class </span>ChppNewAlgo : <span class="keyword">public</span> <a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="@HPPCORE_DOCDIR@/html/main.html">ChppPlanner</a> {
 <span class="keyword">public</span>:
 ...
 ktStatus solve();
 };
-</pre></div> Class <a class="elRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="/home/florent/devel/share/doc/hppCore/class_chpp_planner.html">ChppPlanner</a> proposes an interface function to insert a robot: <div class="fragment"><pre class="fragment">ktStatus <a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="/home/florent/devel/share/doc/hppCore/class_chpp_planner.html#ae97b965a558adbb67f533af99b5684b">ChppPlanner::addHppProblem</a>(CkppDeviceComponentShPtr robot); 
-</pre></div> Independently from how the robot is inserted into the object, you can use it as the input of your algorithm in your class ChppNewAlgo: <div class="fragment"><pre class="fragment">CkppDeviceComponentShPtr robot = robotIthProblem(0);
+</pre></div> Class <a class="elRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="@HPPCORE_DOCDIR@/html/main.html">ChppPlanner</a> proposes an interface functions to insert a robot and obstacles: 
+<div class="fragment"><pre class="fragment">ktStatus <a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="@HPPCORE_DOCDIR@/html/main.html">ChppPlanner::addHppProblem</a>(CkppDeviceComponentShPtr robot); 
+</pre></div> 
+<div class="fragment"><pre class="fragment">ktStatus <a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="@HPPCORE_DOCDIR@/html/main.html">ChppPlanner::addObstacle</a>(CkcdObjectShPtr object); 
+</pre></div> 
+Independently from how the robot and obstacles are inserted, you can use them as the input of your algorithm in your class ChppNewAlgo: 
+<div class="fragment"><pre class="fragment">CkppDeviceComponentShPtr robot = robotIthProblem(0);
 </pre></div><p>
-Write in <code>src/hppNewAlgo.cpp</code> function <div class="fragment"><pre class="fragment">ktStatus <a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="/home/florent/devel/share/doc/hppCore/class_chpp_planner.html#28677849b078e3d3034c6d4d4fd9f21b">ChppNewAlgo::solve</a>()
+Write in <code>src/hppNewAlgo.cpp</code> function <div class="fragment"><pre class="fragment">ktStatus <a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="@HPPCORE_DOCDIR@/html/main.html">ChppNewAlgo::solve</a>()
 {
   CkwsPath path = resultOfNewAlgo();
 
-  <a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="/home/florent/devel/share/doc/hppCore/class_chpp_problem.html">ChppProblem</a>&amp; hppProblem = hppProblemVector[problemId];
-  hppProblem.<a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="/home/florent/devel/share/doc/hppCore/class_chpp_problem.html#de3c360a44cad80c2650c69cd80c9c82">addPath</a>(kwsPath);
+  <a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="@HPPCORE_DOCDIR@/html/main.html">ChppProblem</a>&amp; hppProblem = hppProblemVector[problemId];
+  hppProblem.<a class="codeRef" doxygen="hppCore.doxytag:/home/florent/devel/share/doc/hppCore/" href="@HPPCORE_DOCDIR@/html/main.html">addPath</a>(kwsPath);
 }
 </pre></div> that runs your algorithm. The two last lines insert the result of your path in KPP interface if the interface is running.<p>
 To compile and install your package do the following step: <div class="fragment"><pre class="fragment">[~] cd devel/src/hppNewAlgo
-[hppNewAlgo] aclocal
-[hppNewAlgo] libtoolize -c
-[hppNewAlgo] autoconf
-[hppNewAlgo] automake -ac
 [hppNewAlgo] mkdir build
 [hppNewAlgo] cd build
-[hppNewAlgo] ../configure --prefix=${HOME}/devel
-[hppNewAlgo] make
+[hppNewAlgo] cmake -DCMAKE_INSTALL_PREFIX=${HOME}/devel ..
 [hppNewAlgo] make install
 </pre></div>
 

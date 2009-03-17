@@ -71,9 +71,9 @@ Notice that in most packages, a local script <code>autogen.sh</code> performs <c
 <h3><a class="anchor" name="hppDoc_omniORB">
 Configuring CORBA and using hppCorbaServer</a></h3>
 <code>hppCorbaServer</code> is a package that enables developers to run their algorithms from external application like python scripts for instance. This package instanciates a 3 CORBA objects that can handle requests trigerring actions in HPP. The CORBA objects correspond to the following interfaces: <ul>
-<li><code><a class="elRef" doxygen="hppCorbaServer.doxytag:/home/florent/devel/share/doc/hppCorbaServer/" href="/home/florent/devel/share/doc/hppCorbaServer/interface_chppci_robot.html">ChppciRobot</a></code> to define and build robots, </li>
-<li><code><a class="elRef" doxygen="hppCorbaServer.doxytag:/home/florent/devel/share/doc/hppCorbaServer/" href="/home/florent/devel/share/doc/hppCorbaServer/interface_chppci_obstacle.html">ChppciObstacle</a></code> to define obstacles, </li>
-<li><code><a class="elRef" doxygen="hppCorbaServer.doxytag:/home/florent/devel/share/doc/hppCorbaServer/" href="/home/florent/devel/share/doc/hppCorbaServer/interface_chppci_problem.html">ChppciProblem</a></code> to define and solve path planning problems. The package also optionally implements an OpenHRP client (configuration option --with-openhrp) that enables the user to download HRP2 model by a Corba request.</li>
+<li><code><a class="elRef" doxygen="hppCorbaServer.doxytag:/home/florent/devel/share/doc/hppCorbaServer/" href="@HPPCORBASERVER_DOCDIR@/html/main.html">ChppciRobot</a></code> to define and build robots, </li>
+<li><code><a class="elRef" doxygen="hppCorbaServer.doxytag:/home/florent/devel/share/doc/hppCorbaServer/" href="@HPPCORBASERVER_DOCDIR@/html/main.html">ChppciObstacle</a></code> to define obstacles, </li>
+<li><code><a class="elRef" doxygen="hppCorbaServer.doxytag:/home/florent/devel/share/doc/hppCorbaServer/" href="@HPPCORBASERVER_DOCDIR@/html/main.html">ChppciProblem</a></code> to define and solve path planning problems. The package also optionally implements an OpenHRP client (configuration option --with-openhrp) that enables the user to download HRP2 model by a Corba request.</li>
 </ul>
 <code>hppCorbaServer</code> is based on omniORB4 (installed by robotpkg), an implementation of Corba. We will explain now how to configure omniORB4 in order to be able <ul>
 <li>to load HRP2 model from OpenHRP </li>
