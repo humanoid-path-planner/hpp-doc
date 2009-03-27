@@ -73,7 +73,7 @@ nobase_dist_hppDoc_DATA+= \
 	kwsPlus/main.html			\
 	hppCore/html/main.html			\
 	hppModel/html/main.html			\
-	hppCmpPlanner/main.html			\
+	hppCmpPlanner/html/main.html			\
 	hppWalkFootPlanner/html/main.html		\
 	hppWalkPlanner/html/main.html		\
 	hppLoa/main.html			\
