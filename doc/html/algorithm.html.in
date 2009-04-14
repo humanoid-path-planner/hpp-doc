@@ -7,7 +7,7 @@
 
 <h1>Packages implementing algorithms</h1>
 
-<h3>Algorithms dealing with dynamics</h3>
+<h3>Dynamics</h3>
 
 <table>
   <tr><td width="20"></td><td><a href="@ABSTRACTROBOTDYNAMICS_DOCDIR@/html/main.html">abstractRobotDynamics</a>: </td><td> abstract interface for robot dynamic model</td></tr>
@@ -18,7 +18,12 @@
   <tr><td width="20"></td><td><a href="@HRP2DYNAMICS_DOCDIR@/html/main.html">hrp2Dynamics</a>: </td><td> Optimized dynamic model for HRP2.</td></tr>
 </table>
 
-<h3>Motion planning for humanoid system algorithms</h3>
+<h3>Optimization</h3>
+<table>
+  <tr><td width="20"></td><td><a href="@LIBOPTIMIZATION_DOCDIR@/html/main.html">liboptimization</a>: </td><td> Common API for several numerical optimization packages</td></tr>
+</table>
+
+<h3>Motion planning for humanoid systems</h3>
 
 Packages marked by (<--kpp-sdk) are build upon KineoPathPlanner-SDK.
 <table>
