@@ -31,7 +31,7 @@ m4_define([PKG_CHKADDDPD],[
 # once all packages will export their docdir in pkgconfig:
 #   AC_SUBST($1[]_DOCDIR,`$PKG_CONFIG --variable=docdir "$2" 2>/dev/null`)
     AC_SUBST($1[]_DOCDIR,$$1[]_PREFIX/share/doc/$2)
-    if test -n "$pkg_list"; then pkg_list="$pkg_list, $2"; else pkg_list="$2"; fi
+    if test -n "$pkg_list"; then pkg_list="$pkg_list $2"; else pkg_list="$2"; fi
     AC_MSG_RESULT([yes])
   fi[]dnl
 ])

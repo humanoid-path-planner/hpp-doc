@@ -6,4 +6,4 @@ includedir=@includedir@
 Name: @PACKAGE@
 Description: Documentation suite of the HPP project.
 Version: @VERSION@
-Requires: @pkg_list@
+Requires: 

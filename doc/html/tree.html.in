@@ -77,6 +77,11 @@
           <p><img src="pictures/ftv2blank.png" alt="&nbsp;" width=16 height=22 /><img src="pictures/ftv2lastnode.png" alt="\" width=16 height=22 /><img src="pictures/ftv2doc.png" alt="*" width=24 height=22 /><a class="el" href="hppdoc_howtoinstall.html" target="basefrm">How to install HPP</a></p>
           <p><img src="pictures/ftv2blank.png" alt="&nbsp;" width=16 height=22 /><img src="pictures/ftv2lastnode.png" alt="\" width=16 height=22 /><img src="pictures/ftv2doc.png" alt="*" width=24 height=22 /><a class="el" href="hppdoc_autotools.html" target="basefrm">About autotools</a></p>
         </div>
+
+        <p><img src="pictures/ftv2plastnode.png" alt="\" width=16 height=22 onclick="toggleFolder('folder4', this)"/><img src="pictures/ftv2folderclosed.png" alt="+" width=24 height=22 onclick="toggleFolder('folder4', this)"/>Dependencies</p>
+        <div id="folder4">
+          <p><img src="pictures/ftv2blank.png" alt="&nbsp;" width=16 height=22 /><img src="pictures/ftv2node.png" alt="o" width=16 height=22 /><img src="pictures/ftv2doc.png" alt="*" width=24 height=22 /><a class="el" href="graph-dependency.html" target="basefrm">Graph</a></p>
+        </div>
       </div>
     </div>
   </body>
