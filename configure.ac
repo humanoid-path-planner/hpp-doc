@@ -3,7 +3,7 @@ dnl
 dnl configure.ac file for package hppDoc 
 dnl
 
-AC_INIT([hppDoc], [1.2], [hpp@laas.fr])
+AC_INIT([hppDoc], [1.3], [hpp@laas.fr])
 AC_PREREQ(2.59)
 
 AM_INIT_AUTOMAKE
