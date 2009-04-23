@@ -18,9 +18,11 @@
   <tr><td width="20"></td><td><a href="@HRP2DYNAMICS_DOCDIR@/html/main.html">hrp2Dynamics</a>: </td><td> Optimized dynamic model for HRP2.</td></tr>
 </table>
 
-<h3>Optimization</h3>
+<h3>roboptim: optimization for robotics</h3>
 <table>
-  <tr><td width="20"></td><td><a href="@LIBOPTIMIZATION_DOCDIR@/html/main.html">liboptimization</a>: </td><td> Common API for several numerical optimization packages</td></tr>
+  <tr><td width="20"></td><td><a href="@ROBOPTIMCORE_DOCDIR@/html/main.html">core</a>: </td><td>Common API for several numerical optimization packages</td></tr>
+  <tr><td width="20"></td><td><a href="@ROBOPTIMPOSTURE_DOCDIR@/html/main.html">posture</a>: </td><td>Cost and constraints relative to (humanoid) robots</td></tr>
+  <tr><td width="20"></td><td><a href="@ROBOPTIMTRAJECTORY_DOCDIR@/html/main.html">trajectory</a>: </td><td>Trajectory optimization</td></tr>
 </table>
 
 <h3>Motion planning for humanoid systems</h3>

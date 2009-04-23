@@ -7,6 +7,9 @@
 #
 # Generate graph of dependencies between packages
 #
+clean-local:
+	rm -f html/pictures/dependencies.png
+
 EXTRA_DIST = \
 	$(top_srcdir)/scripts/packageDep
 
@@ -111,7 +114,10 @@ nobase_dist_hppDoc_DATA+= \
 	walk-genom/main.html			\
 	hppWalkPlannerCompSpec/main.html	\
 	walkPlannerOrtm/main.html		\
-	walkPlannerOrtmClient/main.html
+	walkPlannerOrtmClient/main.html		\
+	roboptim-core/html/main.html		\
+	roboptim-posture/html/main.html		\
+	roboptim-trajectory/html/main.html			
 
 hppDocPictdir = $(datadir)/doc/hppDoc/pictures
 
