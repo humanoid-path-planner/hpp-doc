@@ -57,17 +57,14 @@ To download, compile and install packages not managed by <code>robotpkg</code>, 
 Each package (managed by <code>robotpkg</code> or not) installs a file with extension <code>.pc</code> in <code>prefix/lib/pkgconfig</code> where <code>prefix</code> is the installation prefix of the package. This file stores information about the package and its dependencies. This information is retrieved by <code>pkg-config</code> executable. <code>pkg-config</code> searches for <code>.pc</code> files in paths encoded in <code>PKG_CONFIG_PATH</code> environment variable. You need therefore to set this variable correctly, for instance: <div class="fragment"><pre class="fragment">[devel] setenv PKG_CONFIG_PATH ${HOME}/devel/lib/pkgconfig:${HOME}/openrobots/lib/pkgconfig:/usr/local/lib/pkgconfig
 </pre></div><p>
 Compile and install the packages in your development directory <div class="fragment"><pre class="fragment">[src] cd <span class="keyword">package</span>
-<span class="keyword"></span>[package] aclocal
-[package] libtoolize -c
-[package] autoconf
-[package] automake -ac
-[package] mkdir build
-[package] cd build
+<span class="keyword"></span>[package] ./bootstrap (or ./autogen.sh)
+[package] mkdir _build
+[package] cd _build
 [build] ../configure --prefix=${HOME}/devel
 [build] make 
 [build] make install
 </pre></div>
-Notice that in most packages, a local script <code>autogen.sh</code> performs <code>libtoolize</code> to <code>automake</code> above commands.
+Notice that in most packages, a local script (or <code>autogen.sh</code>) performs <code>libtoolize</code> to <code>automake</code> above commands.
 <h3><a class="anchor" name="hppDoc_omniORB">
 Configuring CORBA and using hppCorbaServer</a></h3>
 <code>hppCorbaServer</code> is a package that enables developers to run their algorithms from external application like python scripts for instance. This package instanciates a 3 CORBA objects that can handle requests trigerring actions in HPP. The CORBA objects correspond to the following interfaces: <ul>
