@@ -1,3 +1,10 @@
+2009-04-30  Florent Lamiraux  <florent@laas.fr>
+
+	Replace autogen.sh by bootstrap.
+	* autogen.sh: Remove.
+	* bootstrap: New.
+	* build-aux/bootstrap: New.
+
 2009/04/30 Florent Lamiraux <florent@laas.fr>	
 
 	* Fix link to kwsPlus
