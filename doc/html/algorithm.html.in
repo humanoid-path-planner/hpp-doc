@@ -31,7 +31,7 @@ Packages marked by (<--kpp-sdk) are build upon KineoPathPlanner-SDK.
 <table>
   <li><b>General functionalities</b></li>
       <table>
-	  <tr><td width="20"></td><td><a href="@KWSPLUS_DOCDIR@/main.html">kwsPlus</a>: </td><td> extension to KineoWorks (cart-like steering method) </td><td> (<--kpp-sdk).</td></tr>
+	  <tr><td width="20"></td><td><a href="@KWSPLUS_DOCDIR@/html/main.html">kwsPlus</a>: </td><td> extension to KineoWorks (cart-like steering method) </td><td> (<--kpp-sdk).</td></tr>
 	<tr><td width="20"></td><td><a href="@HPPMODEL_DOCDIR@/html/main.html">hppModel</a>: </td><td> implementation of hybrid geometric and dynamic robot. </td><td> (<--kpp-sdk)</td></tr>
 	<tr><td width="20"></td><td><a href="@HPPCORE_DOCDIR@/html/main.html">hppCore</a>: </td><td> definition of basic classes. </td><td> (<--kpp-sdk) </td></tr>
 	</table>
