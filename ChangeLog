@@ -1,5 +1,11 @@
 2009-05-27  Florent Lamiraux  <florent@laas.fr>
 
+	Add instruction for installing through robotpkg.
+	* doc/roboptim-core/html/main.html: here
+* doc/roboptim-trajectory/html/main.html: and here.
+
+2009-05-27  Florent Lamiraux  <florent@laas.fr>
+
 	Add link to StackOfTasks.
 	* configure.ac: get docdir through pkg-config
 	* doc/html/algorithm.html.in: add html link
