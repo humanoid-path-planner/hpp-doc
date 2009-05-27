@@ -1,3 +1,10 @@
+2009-05-27  Florent Lamiraux  <florent@laas.fr>
+
+	Add link to StackOfTasks.
+	* configure.ac: get docdir through pkg-config
+	* doc/html/algorithm.html.in: add html link
+	* doc/stackoftasks/html/main.html: New. Instruction for intalling
+
 2009-04-30  Florent Lamiraux  <florent@laas.fr>
 
 	Replace autogen.sh by bootstrap.
