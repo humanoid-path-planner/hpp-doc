@@ -1,2 +1,16 @@
 #! /bin/sh
+
+# Print an error message and exit.
+die ()
+{
+    echo >&2 "fatal: $1"
+    exit 2
+}
+
+# Make sure that the submodule are retrieved.
+if test -d ".git"; then
+    git submodule init
+    git submodule update
+fi
+
 exec build-aux/bootstrap
