@@ -219,7 +219,12 @@ pkg-config package --modversion
       <div class="fragment"><pre class="fragment">
 pkg-config package --variable=var
 	</pre></div>
-      returns the string after <code>var=</code> in <code>package.pc</code>.
+      returns the string after <code>var=</code> in <code>package.pc</code>. For instance,
+      
+      <div class="fragment"><pre class="fragment">
+pkg-config package --variable=prefix
+	</pre></div>
+      returns the installation prefix of the package.
       
     <hr>
     <center>
