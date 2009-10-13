@@ -1,5 +1,11 @@
 2009-10-13  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Clean properly generated dot file.
+	* doc/Makefile.am: Add graphDep.dot to CLEANFILES so
+	that ``make distcheck'' does not fail.
+
+2009-10-13  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Ignore more generated files.
 	* .gitignore: Here.
 
