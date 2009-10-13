@@ -1,13 +1,30 @@
-
-dnl 
-dnl configure.ac file for package hppDoc 
-dnl
-
-AC_INIT([hppDoc], [1.3], [hpp@laas.fr])
+# Require at least Autoconf >=2.59.
 AC_PREREQ(2.59)
 
-AM_INIT_AUTOMAKE
+## --------------------- ##
+## Package configuration ##
+## --------------------- ##
+AC_INIT([hppDoc],
+        [1.3],
+        [hpp@laas.fr])
+
+# Auxiliary files.
+AC_CONFIG_AUX_DIR([build-aux])
+
+# Automake.
+AM_INIT_AUTOMAKE([1.9.6 dist-bzip2 -Wall nostdinc])
+
+# Macros are stored in build-aux.
+AC_CONFIG_MACRO_DIR([build-aux])
+
+## ------------------- ##
+## Additionnal tools.  ##
+## ------------------- ##
+
+# Search for install.
 AC_PROG_INSTALL
+
+# Search for pkg-config.
 PKG_PROG_PKG_CONFIG
 
 AC_SUBST(pkg_list,[])
@@ -81,7 +98,8 @@ PKG_CHKADDDPD(WALKGENOM,		walk-genom, walk)
 
 # --- generate files -------------------------------------------------
 
-AC_OUTPUT(
+# Create Makefiles.
+AC_CONFIG_FILES([
 	Makefile
 	hppDoc.pc
 	doc/Makefile
@@ -94,4 +112,7 @@ AC_OUTPUT(
 	doc/html/tree.html
 	doc/html/hppdoc_development.html
 	doc/html/hppdoc_howtoinstall.html
-)
+])
+
+# Write files.
+AC_OUTPUT
