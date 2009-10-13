@@ -1,5 +1,10 @@
 2009-10-13  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Ignore more generated files.
+	* .gitignore: Here.
+
+2009-10-13  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Package pkg.m4 macro file to enhance package robustness.
 	* Makefile.am: Search for macro in build-aux, fix copyright year.
 	* build-aux/pkg.m4: New.
