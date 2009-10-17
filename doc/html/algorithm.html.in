@@ -15,6 +15,8 @@
   <tr><td width="20"></td><td><a href="@WALKGENJRL_DOCDIR@/html/main.html">walkGenJRL</a>: </td><td> JRL Walk Pattern Generator</td></tr>
   <tr><td width="20"></td><td><a href="@ABSTRACTGIKTASK_DOCDIR@/html/main.html">abstractGikTask</a>: </td><td> Abstract interface for whole body motion planning.</td></tr>
   <tr><td width="20"></td><td><a href="@HPPGIK_DOCDIR@/html/main.html">hppGik</a>: </td><td> Implementation of whole body motion planning.</td></tr>
+  <tr><td width="20"></td><td><a href="@HPPHIK_DOCDIR@/html/main.html">hpphik</a>: </td><td> Inequality constraints for whole-body motion planning.</td></tr>
+  <tr><td width="20"></td><td><a href="@HPPLOCALSTEPPER_DOCDIR@/html/main.html">hpplocalstepper</a>: </td><td> Whole body motion planning by stepping.</td></tr>
   <tr><td width="20"></td><td><a href="@HRP2DYNAMICS_DOCDIR@/html/main.html">hrp2Dynamics</a>: </td><td> Optimized dynamic model for HRP2.</td></tr>
   <tr><td width="20"></td><td><a href="@SOT_DOCDIR@/html/main.html">StackOfTasks</a>: </td><td> Humanoid motion control through prioritized tasks.</td></tr>
 
