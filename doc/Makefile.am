@@ -115,9 +115,9 @@ nobase_dist_hppDoc_DATA+= \
 	hppWalkPlannerCompSpec/main.html	\
 	walkPlannerOrtm/main.html		\
 	walkPlannerOrtmClient/main.html		\
-	roboptim-core/html/main.html		\
-	roboptim-posture/html/main.html		\
-	roboptim-trajectory/html/main.html	\
+	roboptim-core/doxygen-html/main.html		\
+	roboptim-posture/doxygen-html/main.html		\
+	roboptim-trajectory/doxygen-html/main.html	\
 	stackoftasks/html/main.html
 
 hppDocPictdir = $(datadir)/doc/hppDoc/pictures
