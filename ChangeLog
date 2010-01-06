@@ -1,3 +1,89 @@
+2010-01-06  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Clean project.
+
+	doc/packages.sh now generate pages for modules which
+	are missing.
+	Html menu has been repaired.
+	Html pages has been cleaned and partially fixed.
+	New stylesheet is used.
+
+	* .gitignore: Ignore more files.
+	* .gitmodules: Use build-aux submodule.
+	* Makefile.am: Use factorized rules.
+	* build-aux/bootstrap: Remove.
+	* build-aux/pkg.m4: Remove.
+	* build-aux: New.
+	* configure.ac: Simplify.
+	* doc/Makefile.am: Rewrite.
+	* doc/abstractGikTask/html/main.html: Remove.
+	* doc/abstractRobotDynamics/html/main.html: Remove.
+	* doc/algorithm.html.in: New.
+	* doc/autotools.html.in: Rename from doc/html/hppdoc_autotools.html.
+	* doc/corba.html.in: New.
+	* doc/custom.css: New.
+	* doc/develop.html.in: Rename from doc/html/hppdoc_development.html.in.
+	* doc/doxygen.css: New.
+	* doc/dynamicsJRLJapan/html/main.html: Remove.
+	* doc/footer.html: Remove.
+	* doc/graph-dependency.html: New.
+	* doc/header.html: Remove.
+	* doc/hppCmpPlanner/html/main.html: Remove.
+	* doc/hppCorbaServer/html/main.html: Remove.
+	* doc/hppCore/html/main.html: Remove.
+	* doc/hppDynamicObstacle/main.html: Remove.
+	* doc/hppGik/html/main.html: Remove.
+	* doc/hppHRPPlanner/main.html: Remove.
+	* doc/hppHybridRobot/main.html: Remove.
+	* doc/hppLoa/main.html: Remove.
+	* doc/hppLoaPlanner/main.html: Remove.
+	* doc/hppModel/html/main.html: Remove.
+	* doc/hppOpenHRP/html/main.html: Remove.
+	* doc/hppPython/main.html: Remove.
+	* doc/hppTimingPlanner/main.html: Remove.
+	* doc/hppTutorialPlanner/main.html: Remove.
+	* doc/hppVisualizeMovePlanner/main.html: Remove.
+	* doc/hppWalkFootPlanner/html/main.html: Remove.
+	* doc/hppWalkPlanner/html/main.html: Remove.
+	* doc/hppWalkPlannerCompSpec/main.html: Remove.
+	* doc/hpphik/html/main.html: Remove.
+	* doc/hpplocalstepper/html/main.html: Remove.
+	* doc/hrp2Dynamics/html/main.html: Remove.
+	* doc/html/algorithm.html.in: Remove.
+	* doc/html/corba.html.in: Remove.
+	* doc/html/graph-dependency.html: Remove.
+	* doc/html/index.html.in: Remove.
+	* doc/html/kppInterface.html.in: Remove.
+	* doc/html/roboticComponent.html.in: Remove.
+	* doc/html/tree.html.in: Remove.
+	* doc/index.html.in: New.
+	* doc/install.html.in: Rename from doc/html/hppdoc_howtoinstall.html.in.
+	* doc/kpp-interface.html.in: New.
+	* doc/kppInterface/html/main.html: Remove.
+	* doc/kppInterfaceCmp/main.html: Remove.
+	* doc/kppInterfaceHRP/main.html: Remove.
+	* doc/kppInterfaceTutorial/main.html: Remove.
+	* doc/kppInterfaceWalk/html/main.html: Remove.
+	* doc/kwsPlus/main.html: Remove.
+	* doc/main.html.in: Rename from doc/html/main.html.in.
+	* doc/missing.html.in: New.
+	* doc/package.css: Remove.
+	* doc/packages.sh: New.
+	* doc/pictures/kineo.jpg: New.
+	* doc/roboptim-core/doxygen-html/main.html: Remove.
+	* doc/roboptim-posture/doxygen-html/main.html: Remove.
+	* doc/roboptim-trajectory/doxygen-html/main.html: Remove.
+	* doc/robotic-component.html.in: New.
+	* doc/slam3DPlanner/main.html: Remove.
+	* doc/stackoftasks/html/main.html: Remove.
+	* doc/tabs.css: New.
+	* doc/tree.html.in: New.
+	* doc/walk-genom/main.html: Remove.
+	* doc/walkGenJrl/html/main.html: Remove.
+	* doc/walkPlannerOrtm/main.html: Remove.
+	* doc/walkPlannerOrtmClient/main.html: Remove.
+	* doc/worldModelGrid3D/main.html: Remove.
+
 2009-10-13  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Clean properly generated dot file.

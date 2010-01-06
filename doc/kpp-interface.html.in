@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link href="doxygen.css" rel="stylesheet" type="text/css">
+    <link href="tabs.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+    <title>Humanoid Path Planner documentation</title>
+  </head>
+
+  <h1>Packages implementing KineoPathPlanner Ads-on</h1>
+  <p>
+    <ul>
+      <li><a href="@KPPINTERFACE_LINK@">kppInterface</a>: basic KPP interface.</li>
+      <li><a href="@KPPINTERFACEWALK_LINK@">kppInterfaceWalk</a>: KPP interface for hppWalkPlanner.</li>
+      <li><a href="@KPPINTERFACEHRP_LINK@">kppInterfaceHRP</a>: KPP interface for functions specific to HRP2 robot.</li>
+      <li><a href="@KPPINTERFACECMP_LINK@">kppInterfaceCmp</a>: KPP interface for contact motion planning.</li>
+      <li><a href="@KPPINTERFACETUTORIAL_LINK@">kppInterfaceTutorial</a>: KPP interface to learn how to make and use a KPP interface.</li>
+    </ul>
+  </p>
+
+  <br><br>
+  <hr>
+  <center>
+    <img src="pictures/footer.jpg" height="100" alt="footer"><br>
+    Humanoid Path Planner documentation<br>
+  </center>
+</body>
+</html>

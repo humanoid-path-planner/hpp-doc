@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link href="doxygen.css" rel="stylesheet" type="text/css">
+    <link href="tabs.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+    <title>Humanoid Path Planner documentation</title>
+  </head>
+  <body>
+
+    <h1>Robotic components</h1>
+
+    <h3>RTM Component specifications</h3>
+
+    <table>
+      <tr>
+	<td>
+	  <a href="@HPPWALKPLANNERCOMPSPEC_LINK@">hppWalkPlannerCompSpec</a></td>
+	<td> Services provided by humanoid walk planning component</td>
+      </tr>
+    </table>
+
+    <h3>GenoM components</h3>
+
+    <table>
+      <tr>
+	<td><a href="@WALKGENOM_LINK@">walk-genom</a></td>
+	<td>humanoid walk planning component</td>
+      </tr>
+    </table>
+
+    <h3>OpenRTM-AIST components</h3>
+
+    <table>
+      <tr>
+	<td><a href="@WALKPLANNERORTM_LINK@">walkPlannerOrtm</a></td>
+	<td>humanoid walk planning component</td>
+      </tr>
+    </table>
+
+    <h3>RTM Component clients</h3>
+
+    <table>
+      <tr>
+	<td><a href="@WALKPLANNERORTMCLIENT_LINK@">walkPlannerOrtClient</a></td>
+	<td> Python client for hppWalkPlannerCompSpec</td>
+      </tr>
+    </table>
+
+
+    <br><br>
+    <hr>
+    <center>
+      <img src="pictures/footer.jpg" height="100" alt="footer"><br>
+      Humanoid Path Planner documentation<br>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link href="doxygen.css" rel="stylesheet" type="text/css">
+    <link href="tabs.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+    <title>Humanoid Path Planner documentation</title>
+  </head>
+  <body>
+    <h1>Packages implementing CORBA interfaces</h1>
+
+    <p>
+      The following packages implement Corba communication functionalities
+      <ul>
+	<li><a href="@HPPCORBASERVER_LINK@">hppCorbaServer</a> Corba server to implementing a ChppPlanner object.</li>
+	<li><a href="@HPPPYTHON_LINK@">hppPython</a> Script python to communicate with hppCorbaServer.</li>
+	<li><a href="@HPPOPENHRP_LINK@/html">hppOpenHRP</a> Corba server that implements the model of HRP2.</li>
+      </ul>
+    </p>
+
+    <br><br>
+    <hr>
+    <center>
+      <img src="pictures/footer.jpg" height="100" alt="footer"><br>
+      Humanoid Path Planner documentation<br>
+    </center>
+  </body>
+</html>

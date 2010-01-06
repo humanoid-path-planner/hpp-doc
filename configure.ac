@@ -1,12 +1,14 @@
-# Require at least Autoconf >=2.59.
-AC_PREREQ(2.59)
+# Don't expend macros beginning by JRL_.
+m4_pattern_forbid([^JRL_])
+AC_PREREQ([2.63])
 
 ## --------------------- ##
 ## Package configuration ##
 ## --------------------- ##
-AC_INIT([hppDoc],
-        [1.3],
-        [hpp@laas.fr])
+AC_INIT([hpp-doc],
+        [m4_esyscmd(build-aux/git-version-gen .tarball-version)],
+	[hpp@laas.fr],
+	[hpp-doc])
 
 # Auxiliary files.
 AC_CONFIG_AUX_DIR([build-aux])
@@ -27,93 +29,103 @@ AC_PROG_INSTALL
 # Search for pkg-config.
 PKG_PROG_PKG_CONFIG
 
-AC_SUBST(pkg_list,[])
 
-# --- PKG_CHKADDDPD([VARIABLE], [MODULE]) ----------------------------
-#
-# do you love consonants?
 
-m4_define([PKG_CHKADDDPD],[
-  AC_MSG_CHECKING([for $2])
-  pkg_failed=no
-  if test "$3" = ""; then pname=$2; else pname=$3; fi
-  PKG_CHECK_EXISTS([$pname],
-                   [pkgprefix_[]$1=`$PKG_CONFIG --variable=prefix "$pname" 2>/dev/null`],
-	           [pkg_failed=yes])
-  if test $pkg_failed = yes; then
-    AC_SUBST($1[]_DOCDIR,$prefix/share/doc/hppDoc/$2)
-    AC_MSG_RESULT([no])
-  else
-    AC_SUBST($1[]_PREFIX,$pkgprefix_[]$1)
-# once all packages will export their docdir in pkgconfig:
-    AC_SUBST($1[]_DOCDIR,`$PKG_CONFIG --variable=docdir "$2" 2>/dev/null`)
-#   AC_SUBST($1[]_DOCDIR,$$1[]_PREFIX/share/doc/$2)
-    if test -n "$pkg_list"; then pkg_list="$pkg_list $2"; else pkg_list="$2"; fi
-    AC_MSG_RESULT([yes])
-  fi[]dnl
+# Macro that search for a package's documentation and
+# generate the corresponding link to the ``main.html'' file
+# of the Doxygen documentation.
+pkg_list=""
+
+AC_DEFUN([JRL_GENERATELINK],
+[PKGNAME=`echo "$2 " | cut -d' ' -f1`
+
+AC_MSG_CHECKING([for $2])
+pkg_failed=yes
+PKG_CHECK_EXISTS([$PKGNAME], [pkg_failed=no])
+
+if test $pkg_failed = yes; then
+   AC_SUBST([$1_LINK], [$prefix/share/doc/hpp-doc/$2-missing.html])
+   AC_MSG_RESULT([no])
+else
+   if test x`$PKG_CONFIG $PKGNAME --variable=doxygendocdir` = x; then
+      docPrefix=`$PKG_CONFIG $PKGNAME --variable=docdir`/html
+   else
+      docPrefix=`$PKG_CONFIG $PKGNAME --variable=doxygendocdir`
+   fi
+   AC_SUBST([$1_LINK], [$docPrefix/main.html])
+   AC_MSG_RESULT([yes])
+fi
+
+pkg_list="$pkg_list $2"
 ])
 
+# List packages.
+JRL_GENERATELINK([KWSPLUS], [kwsPlus])
+JRL_GENERATELINK([HPPMODEL], [hppModel])
+JRL_GENERATELINK([HPPCORE], [hppCore])
+JRL_GENERATELINK([WALKGENJRL], [walkGenJrl])
+JRL_GENERATELINK([HPPCORBASERVER], [hppCorbaServer])
+JRL_GENERATELINK([HPPPYTHON], [hppPython])
+JRL_GENERATELINK([HPPWALKFOOTPLANNER], [hpp-walkfootplanner])
+JRL_GENERATELINK([HPPWALKPLANNER], [hpp-walkplanner])
+JRL_GENERATELINK([HPPHYBRIDROBOT], [hppHybridRobot])
+JRL_GENERATELINK([HPPHRPPLANNER], [hppHRPPlanner])
+JRL_GENERATELINK([HPPCMPPLANNER], [hppCmpPlanner])
+JRL_GENERATELINK([HPPTUTORIALPLANNER], [hppTutorialPlanner])
+JRL_GENERATELINK([KPPINTERFACE], [kppInterface])
+JRL_GENERATELINK([KPPINTERFACEWALK], [kpp-interfacewalk])
+JRL_GENERATELINK([KPPINTERFACEHRP], [kppInterfaceHRP])
+JRL_GENERATELINK([KPPINTERFACECMP], [kppInterfaceCmp])
+JRL_GENERATELINK([HPPGIK], [hppGik])
+JRL_GENERATELINK([HPPHIK], [hpphik])
+JRL_GENERATELINK([HPPLOA], [hppLoa])
+JRL_GENERATELINK([HPPLOCALSTEPPER], [hpplocalstepper])
+JRL_GENERATELINK([HPPLOAPLANNER], [hppLoaPlanner])
+JRL_GENERATELINK([HPPTIMINGPLANNER], [hppTimingPlanner])
+JRL_GENERATELINK([DYNAMICSJRLJAPAN], [dynamicsJRLJapan])
+JRL_GENERATELINK([ABSTRACTROBOTDYNAMICS], [abstractRobotDynamics])
+JRL_GENERATELINK([ABSTRACTGIKTASK], [abstractGikTask])
+JRL_GENERATELINK([KPPINTERFACETUTORIAL], [kppInterfaceTutorial])
+JRL_GENERATELINK([HPPOPENHRP], [hppOpenHRP])
+JRL_GENERATELINK([HPPVISUALIZEMOVEPLANNER], [hppVisualizeMovePlanner])
+JRL_GENERATELINK([SLAM3DPLANNER], [slam3DPlanner])
+JRL_GENERATELINK([HPPDYNAMICOBSTACLE], [hppDynamicObstacle])
+JRL_GENERATELINK([WORLDMODELGRID3D], [worldModelGrid3D])
+JRL_GENERATELINK([HRP2DYNAMICS], [hrp2Dynamics])
+JRL_GENERATELINK([HPPWALKPLANNERCOMPSPEC], [hppWalkPlannerCompSpec])
+JRL_GENERATELINK([WALKPLANNERORTM], [walkPlannerOrtm])
+JRL_GENERATELINK([WALKPLANNERORTMCLIENT], [walkPlannerOrtmClient])
+JRL_GENERATELINK([ROBOPTIMCORE], [roboptim-core])
+JRL_GENERATELINK([ROBOPTIMPOSTURE], [roboptim-posture])
+JRL_GENERATELINK([ROBOPTIMTRAJECTORY], [roboptim-trajectory])
+JRL_GENERATELINK([SOT], [stackoftasks])
 
-# --- Look for installed packages ------------------------------------
+JRL_GENERATELINK([WALKGENOM], [walk-genom])
 
-PKG_CHKADDDPD(KWSPLUS,			kwsPlus)
-PKG_CHKADDDPD(HPPMODEL,			hppModel)
-PKG_CHKADDDPD(HPPCORE,			hppCore)
-PKG_CHKADDDPD(WALKGENJRL,		walkGenJrl)
-PKG_CHKADDDPD(HPPCORBASERVER,		hppCorbaServer)
-PKG_CHKADDDPD(HPPPYTHON,		hppPython)
-PKG_CHKADDDPD(HPPWALKFOOTPLANNER,	hppWalkFootPlanner)
-PKG_CHKADDDPD(HPPWALKPLANNER,		hppWalkPlanner)
-PKG_CHKADDDPD(HPPHYBRIDROBOT, 		hppHybridRobot)
-PKG_CHKADDDPD(HPPHRPPLANNER, 		hppHRPPlanner)
-PKG_CHKADDDPD(HPPCMPPLANNER, 		hppCmpPlanner)
-PKG_CHKADDDPD(HPPTUTORIALPLANNER, 	hppTutorialPlanner)
-PKG_CHKADDDPD(KPPINTERFACE, 		kppInterface)
-PKG_CHKADDDPD(KPPINTERFACEWALK, 	kppInterfaceWalk)
-PKG_CHKADDDPD(KPPINTERFACEHRP, 		kppInterfaceHRP)
-PKG_CHKADDDPD(KPPINTERFACECMP, 		kppInterfaceCmp)
-PKG_CHKADDDPD(HPPGIK, 			hppGik)
-PKG_CHKADDDPD(HPPHIK, 			hpphik)
-PKG_CHKADDDPD(HPPLOA, 			hppLoa)
-PKG_CHKADDDPD(HPPLOCALSTEPPER, 		hpplocalstepper)
-PKG_CHKADDDPD(HPPLOAPLANNER,		hppLoaPlanner)
-PKG_CHKADDDPD(HPPTIMINGPLANNER, 	hppTimingPlanner)
-PKG_CHKADDDPD(DYNAMICSJRLJAPAN,		dynamicsJRLJapan)
-PKG_CHKADDDPD(ABSTRACTROBOTDYNAMICS, 	abstractRobotDynamics)
-PKG_CHKADDDPD(ABSTRACTGIKTASK, 		abstractGikTask)
-PKG_CHKADDDPD(KPPINTERFACETUTORIAL, 	kppInterfaceTutorial)
-PKG_CHKADDDPD(HPPOPENHRP, 		hppOpenHRP)
-PKG_CHKADDDPD(HPPVISUALIZEMOVEPLANNER,	hppVisualizeMovePlanner)
-PKG_CHKADDDPD(SLAM3DPLANNER,		slam3DPlanner)
-PKG_CHKADDDPD(HPPDYNAMICOBSTACLE,	hppDynamicObstacle)
-PKG_CHKADDDPD(WORLDMODELGRID3D,		worldModelGrid3D)
-PKG_CHKADDDPD(HRP2DYNAMICS,		hrp2Dynamics)
-PKG_CHKADDDPD(HPPWALKPLANNERCOMPSPEC,	hppWalkPlannerCompSpec)
-PKG_CHKADDDPD(WALKPLANNERORTM,		walkPlannerOrtm)
-PKG_CHKADDDPD(WALKPLANNERORTMCLIENT,	walkPlannerOrtmClient)
-PKG_CHKADDDPD(ROBOPTIMCORE,		roboptim-core)
-PKG_CHKADDDPD(ROBOPTIMPOSTURE,		roboptim-posture)
-PKG_CHKADDDPD(ROBOPTIMTRAJECTORY,	roboptim-trajectory)
-PKG_CHKADDDPD(SOT,			stackoftasks)
 
-PKG_CHKADDDPD(WALKGENOM,		walk-genom, walk)
+# Generate the list of html stub pages for missing packages that
+# will be generated.
+AC_SUBST([MISSING_FILES],
+         [`for i in $pkg_list; do echo -n "$i-missing.html "; done`])
 
-# --- generate files -------------------------------------------------
+# Generate packages list for packageDep.
+AC_SUBST([PKG_LIST], [$pkg_list])
+
 
 # Create Makefiles.
 AC_CONFIG_FILES([
 	Makefile
-	hppDoc.pc
-	doc/Makefile
-	doc/html/corba.html
-	doc/html/algorithm.html
-	doc/html/kppInterface.html
-	doc/html/roboticComponent.html
-	doc/html/main.html
-	doc/html/index.html
-	doc/html/tree.html
-	doc/html/hppdoc_development.html
-	doc/html/hppdoc_howtoinstall.html
+	 doc/Makefile
+	 doc/corba.html
+	 doc/algorithm.html
+	 doc/kpp-interface.html
+	 doc/robotic-component.html
+	 doc/main.html
+	 doc/index.html
+	 doc/tree.html
+	 doc/develop.html
+	 doc/autotools.html
+	 doc/install.html
 ])
 
 # Write files.
