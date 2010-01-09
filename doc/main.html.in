@@ -6,6 +6,16 @@
     <link href="tabs.css" rel="stylesheet" type="text/css">
     <link href="custom.css" rel="stylesheet" type="text/css">
     <title>Humanoid Path Planner documentation</title>
+
+    <script type='text/javascript'
+	    src='http://homepages.laas.fr/tmoulard/video/swfobject.js'>
+    </script>
+    <style type="text/css">
+      .video {
+      text-align:center;
+      margin: 1em;
+      }
+    </style>
   </head>
   <body>
 
@@ -58,10 +68,19 @@ To move on a flat ground cluttered with obstacles, the best strategy is to walk.
 This problem consists in computing a dynamically stable motion a humanoid robot
 in order to perform specified geometric tasks like moving the right hand at a given
 position, looking in a given direction for instance.
-<p>
-<center>
-<a href="movies/whole-body.mp4"><img src="pictures/whole-body.png" height=200> </a>
-</center>
+
+<div id='whole-body' class='video'>This text will be replaced</div>
+<script type='text/javascript'>
+  var so = new SWFObject('http://homepages.laas.fr/tmoulard/video/player.swf','mpl','470','320','9');
+  so.addParam('allowfullscreen','true');
+  so.addParam('allowscriptaccess','always');
+  so.addParam('wmode','opaque');
+  so.addVariable('author','CNRS-LAAS');
+  so.addVariable('file','http://homepages.laas.fr/tmoulard/video/whole-body.flv');
+  so.addVariable('image','http://homepages.laas.fr/tmoulard/video/whole-body.jpg');
+  so.write('whole-body');
+</script>
+
 
 <h3>Passing under obstacles</h3>
 
@@ -69,10 +88,18 @@ Passing under a low obstacle is a difficult task for a humanoid robot.
 The robot should use all degrees-of-freedom while keeping quasi-static
 balance.
 
-<p>
-<center>
-<a href="movies/passing-under.mp4"><img src="pictures/passing-under.jpg" height=200> </a>
-</center>
+
+<div id='passing-under' class='video'>This text will be replaced</div>
+<script type='text/javascript'>
+  var so = new SWFObject('http://homepages.laas.fr/tmoulard/video/player.swf','mpl','470','320','9');
+  so.addParam('allowfullscreen','true');
+  so.addParam('allowscriptaccess','always');
+  so.addParam('wmode','opaque');
+  so.addVariable('author','CNRS-LAAS');
+  so.addVariable('file','http://homepages.laas.fr/tmoulard/video/passing-under.flv');
+  so.addVariable('image','http://homepages.laas.fr/tmoulard/video/passing-under.jpg');
+  so.write('passing-under');
+</script>
 
 <hr>
  <center>
