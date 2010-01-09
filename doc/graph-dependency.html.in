@@ -18,7 +18,7 @@
 
     <p>Below is the graph of dependencies between packages.</p>
 
-    <img src="pictures/dependencies.png"
+    <img src="images/dependencies.png"
 	 alt="packages dependencies"
 	 usemap="#CD"
 	 style="border:0">
@@ -27,7 +27,7 @@
 
     <hr>
     <center>
-      <img src="pictures/footer.jpg" height="100" alt="footer"><br>
+      <img src="images/footer.jpg" height="100" alt="footer"><br>
       Humanoid Path Planner documentation<br>
     </center>
     <hr>

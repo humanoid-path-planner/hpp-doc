@@ -1,5 +1,90 @@
 2010-01-09  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add Asciidoc support.
+
+	Asciidoc is a very simple markup language that supports source
+	highlighting and can embed mathematical formula.
+	It also generates much more beautiful documents than
+	manually-written HTML pages.
+	On Fedora, install it using: yum install -y asciidoc source-highlight
+
+	* configure.ac: Do not generate autotools.html anymore.
+	* doc/Makefile.am: Add Asciidoc compilation rule, fix filename lists.
+	* doc/algorithm.html.in: Use images instead of pictures.
+	* doc/autotools.html.in: Remove.
+	* doc/autotools.txt: New.
+	* doc/corba.html.in: Use images instead of pictures.
+	* doc/develop.html.in: Use images instead of pictures.
+	* doc/graph-dependency.html.in: Use images instead of pictures.
+	* doc/images/archi.png: Rename from doc/pictures/archi.png.
+	* doc/images/doxygen.png: Rename from doc/pictures/doxygen.png.
+	* doc/images/film.png: Rename from doc/pictures/film.png.
+	* doc/images/footer.jpg: Rename from doc/pictures/footer.jpg.
+	* doc/images/ftv2blank.png: Rename from doc/pictures/ftv2blank.png.
+	* doc/images/ftv2doc.png: Rename from doc/pictures/ftv2doc.png.
+	* doc/images/ftv2folderclosed.png:
+	Rename from doc/pictures/ftv2folderclosed.png.
+	* doc/images/ftv2folderopen.png:
+	Rename from doc/pictures/ftv2folderopen.png.
+	* doc/images/ftv2lastnode.png:
+	Rename from doc/pictures/ftv2lastnode.png.
+	* doc/images/ftv2link.png: Rename from doc/pictures/ftv2link.png.
+	* doc/images/ftv2mlastnode.png:
+	Rename from doc/pictures/ftv2mlastnode.png.
+	* doc/images/ftv2mnode.png: Rename from doc/pictures/ftv2mnode.png.
+	* doc/images/ftv2node.png: Rename from doc/pictures/ftv2node.png.
+	* doc/images/ftv2plastnode.png:
+	Rename from doc/pictures/ftv2plastnode.png.
+	* doc/images/ftv2pnode.png: Rename from doc/pictures/ftv2pnode.png.
+	* doc/images/ftv2vertline.png:
+	Rename from doc/pictures/ftv2vertline.png.
+	* doc/images/graph_legend.png:
+	Rename from doc/pictures/graph_legend.png.
+	* doc/images/icons/README: New.
+	* doc/images/icons/callouts/1.png: New.
+	* doc/images/icons/callouts/10.png: New.
+	* doc/images/icons/callouts/11.png: New.
+	* doc/images/icons/callouts/12.png: New.
+	* doc/images/icons/callouts/13.png: New.
+	* doc/images/icons/callouts/14.png: New.
+	* doc/images/icons/callouts/15.png: New.
+	* doc/images/icons/callouts/2.png: New.
+	* doc/images/icons/callouts/3.png: New.
+	* doc/images/icons/callouts/4.png: New.
+	* doc/images/icons/callouts/5.png: New.
+	* doc/images/icons/callouts/6.png: New.
+	* doc/images/icons/callouts/7.png: New.
+	* doc/images/icons/callouts/8.png: New.
+	* doc/images/icons/callouts/9.png: New.
+	* doc/images/icons/caution.png: New.
+	* doc/images/icons/example.png: New.
+	* doc/images/icons/home.png: New.
+	* doc/images/icons/important.png: New.
+	* doc/images/icons/next.png: New.
+	* doc/images/icons/note.png: New.
+	* doc/images/icons/prev.png: New.
+	* doc/images/icons/tip.png: New.
+	* doc/images/icons/up.png: New.
+	* doc/images/icons/warning.png: New.
+	* doc/images/kineo.jpg: Rename from doc/pictures/kineo.jpg.
+	* doc/images/kppInterfaceWalk.png:
+	Rename from doc/pictures/kppInterfaceWalk.png.
+	* doc/images/passing-under.jpg:
+	Rename from doc/pictures/passing-under.jpg.
+	* doc/images/tab_b.gif: Rename from doc/pictures/tab_b.gif.
+	* doc/images/tab_l.gif: Rename from doc/pictures/tab_l.gif.
+	* doc/images/tab_r.gif: Rename from doc/pictures/tab_r.gif.
+	* doc/images/walk.png: Rename from doc/pictures/walk.png.
+	* doc/images/whole-body.png: Rename from doc/pictures/whole-body.png.
+	* doc/install.html.in: Use images instead of pictures.
+	* doc/kpp-interface.html.in: Use images instead of pictures.
+	* doc/main.html.in: Use images instead of pictures.
+	* doc/missing.html.in: Use images instead of pictures.
+	* doc/robotic-component.html.in: Use images instead of pictures.
+	* doc/tree.html.in: Use images instead of pictures.
+
+2010-01-09  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Use flash video player.
 
 	Note: Videos are currently hosted on

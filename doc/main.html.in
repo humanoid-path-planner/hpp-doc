@@ -60,7 +60,7 @@ To move on a flat ground cluttered with obstacles, the best strategy is to walk.
 
 <p>
 <center>
-<img src="pictures/walk.png" width="40%">
+<img src="images/walk.png" width="40%">
 </center>
 
 <h3>Whole-body motion generation</h3>
@@ -103,7 +103,7 @@ balance.
 
 <hr>
  <center>
-   <img src="./pictures/footer.jpg" Height=100>
+   <img src="./images/footer.jpg" Height=100>
  <br>Humanoid Path Planner documentation</br>
  </center>
  <hr>

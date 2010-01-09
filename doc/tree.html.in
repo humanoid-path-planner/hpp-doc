@@ -13,8 +13,8 @@
     {
       var folder = document.getElementById(id);
       var l = imageNode.src.length;
-      if (imageNode.src.substring(l-29,l)=="pictures/ftv2folderclosed.png" ||
-          imageNode.src.substring(l-27,l)=="pictures/ftv2folderopen.png")
+      if (imageNode.src.substring(l-29,l)=="images/ftv2folderclosed.png" ||
+          imageNode.src.substring(l-27,l)=="images/ftv2folderopen.png")
       {
         imageNode = imageNode.previousSibling;
         l = imageNode.src.length;
@@ -26,14 +26,14 @@
       {
         if (imageNode != null)
         {
-          imageNode.nextSibling.src = "pictures/ftv2folderclosed.png";
-          if (imageNode.src.substring(l-22,l) == "pictures/ftv2mnode.png")
+          imageNode.nextSibling.src = "images/ftv2folderclosed.png";
+          if (imageNode.src.substring(l-22,l) == "images/ftv2mnode.png")
           {
-            imageNode.src = "pictures/ftv2pnode.png";
+            imageNode.src = "images/ftv2pnode.png";
           }
-          else if (imageNode.src.substring(l-26,l) == "pictures/ftv2mlastnode.png")
+          else if (imageNode.src.substring(l-26,l) == "images/ftv2mlastnode.png")
           {
-            imageNode.src = "pictures/ftv2plastnode.png";
+            imageNode.src = "images/ftv2plastnode.png";
           }
         }
         folder.style.display = "none";
@@ -42,14 +42,14 @@
       {
         if (imageNode != null)
         {
-          imageNode.nextSibling.src = "pictures/ftv2folderopen.png";
-          if (imageNode.src.substring(l-22,l) == "pictures/ftv2pnode.png")
+          imageNode.nextSibling.src = "images/ftv2folderopen.png";
+          if (imageNode.src.substring(l-22,l) == "images/ftv2pnode.png")
           {
-            imageNode.src = "pictures/ftv2mnode.png";
+            imageNode.src = "images/ftv2mnode.png";
           }
-          else if (imageNode.src.substring(l-26,l) == "pictures/ftv2plastnode.png")
+          else if (imageNode.src.substring(l-26,l) == "images/ftv2plastnode.png")
           {
-            imageNode.src = "pictures/ftv2mlastnode.png";
+            imageNode.src = "images/ftv2mlastnode.png";
           }
         }
         folder.style.display = "block";
@@ -65,26 +65,26 @@
     <div class="directory">
       <h3>Humanoid Path Planner</h3>
       <div style="display: block;">
-	<p><img src="pictures/ftv2node.png" alt="o" width="16" height="22" /><img src="pictures/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="main.html" target="basefrm">Home</a></p>
+	<p><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="main.html" target="basefrm">Home</a></p>
 
-        <p><img src="pictures/ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder2', this)"/><img src="pictures/ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder2', this)"/>Packages type</p>
+        <p><img src="images/ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder2', this)"/><img src="images/ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder2', this)"/>Packages type</p>
 
         <div id="folder2">
-          <p><img src="pictures/ftv2vertline.png" alt="|" width="16" height="22" /><img src="pictures/ftv2node.png" alt="o" width="16" height="22" /><img src="pictures/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="algorithm.html" target="basefrm">Algorithms</a></p>
-          <p><img src="pictures/ftv2vertline.png" alt="|" width="16" height="22" /><img src="pictures/ftv2node.png" alt="o" width="16" height="22" /><img src="pictures/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="corba.html" target="basefrm">Corba interfaces</a></p>
-          <p><img src="pictures/ftv2vertline.png" alt="|" width="16" height="22" /><img src="pictures/ftv2node.png" alt="o" width="16" height="22" /><img src="pictures/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="kpp-interface.html" target="basefrm">KPP Add-on</a></p>
-          <p><img src="pictures/ftv2vertline.png" alt="|" width="16" height="22" /><img src="pictures/ftv2lastnode.png" alt="\" width="16" height="22" /><img src="pictures/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="robotic-component.html" target="basefrm">Robotics components</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="algorithm.html" target="basefrm">Algorithms</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="corba.html" target="basefrm">Corba interfaces</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="kpp-interface.html" target="basefrm">KPP Add-on</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2lastnode.png" alt="\" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="robotic-component.html" target="basefrm">Robotics components</a></p>
         </div>
 
-        <p><img src="pictures/ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder3', this)"/><img src="pictures/ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder3', this)"/>How to</p>
+        <p><img src="images/ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder3', this)"/><img src="images/ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder3', this)"/>How to</p>
 
         <div id="folder3">
-          <p><img src="pictures/ftv2vertline.png" alt="|" width="16" height="22" /><img src="pictures/ftv2node.png" alt="o" width="16" height="22" /><img src="pictures/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="develop.html" target="basefrm">Develop</a></p>
-          <p><img src="pictures/ftv2vertline.png" alt="|" width="16" height="22" /><img src="pictures/ftv2node.png" alt="o" width="16" height="22" /><img src="pictures/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="install.html" target="basefrm">Install</a></p>
-          <p><img src="pictures/ftv2vertline.png" alt="|" width="16" height="22" /><img src="pictures/ftv2lastnode.png" alt="\" width="16" height="22" /><img src="pictures/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="autotools.html" target="basefrm">Use the Autotools</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="develop.html" target="basefrm">Develop</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="install.html" target="basefrm">Install</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2lastnode.png" alt="\" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="autotools.html" target="basefrm">Use the Autotools</a></p>
         </div>
 
-	<p><img src="pictures/ftv2lastnode.png" alt="\" width="16" height="22" /><img src="pictures/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="graph-dependency.html" target="basefrm">Dependencies</a></p>
+	<p><img src="images/ftv2lastnode.png" alt="\" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="graph-dependency.html" target="basefrm">Dependencies</a></p>
 
   </body>
 </html>

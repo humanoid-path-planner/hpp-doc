@@ -79,7 +79,7 @@
     <h3>Motion planning for humanoid systems</h3>
 
     <p>
-      Packages marked by <img src="pictures/kineo.jpg" alt="require Kineo
+      Packages marked by <img src="images/kineo.jpg" alt="require Kineo
 							    SDK"> depend on <a href="http://www.kineocam.com/">KineoWorks SDK</a>.
     </p>
 
@@ -89,21 +89,21 @@
 	<tr>
 	  <td>
 	    <a href="@KWSPLUS_LINK@">kwsPlus</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>extension to KineoWorks (cart-like steering method) </td>
 	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPMODEL_LINK@">hppModel</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>implementation of hybrid geometric and dynamic robot.</td>
 	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPCORE_LINK@">hppCore</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>definition of basic classes. </td>
 	</tr>
@@ -114,7 +114,7 @@
 	<tr>
 	  <td>
 	    <a href="@HPPHYBRIDROBOT_LINK@">hppHybridRobot</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>
 	    Hybrid model of robot to combine various types of motions in
@@ -124,49 +124,49 @@
 	<tr>
 	  <td>
 	    <a href="@HPPHRPPLANNER_LINK@">hppHRPPlanner</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>Algorithms to plan motion going under an obstacle. </td>
 	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPCMPPLANNER_LINK@">hppCmpPlanner</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>Contact motion planning. </td>
 	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPWALKFOOTPLANNER_LINK@">hppWalkFootPlanner</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>Foot step planning along a bounding box trajectory. </td>
 	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPWALKPLANNER_LINK@">hppWalkPlanner</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>Walk planning for a humanoid robot among obstacles. </td>
 	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPLOA_LINK@">hppLoa</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>Whole body motion planning with local obstacle avoidance. </td>
 	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPLOAPLANNER_LINK@">hppLoaPlanner</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>Global motion planning based on local obstacle avoidance. </td>
 	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPTIMINGPLANNER_LINK@">hppTimingPlanner</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>Dynamic time parameterization of quasi-static paths. </td>
 	</tr>
@@ -183,14 +183,14 @@
 	<tr>
 	  <td>
 	    <a href="@SLAM3DPLANNER_LINK@">slam3DPlanner</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>path planning in environments modelled by vision </td>
 	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPDYNAMICOBSTACLE_LINK@">hppDynamicObstacle</a>
-	    <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 </td>
 <td>Handle dynamic obstacles in the environment. </td>
@@ -201,7 +201,7 @@
   <tr>
     <td>
       <a href="@HPPVISUALIZEMOVEPLANNER_LINK@">hppVisualizeMovePlanner</a>
-      <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+      <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
     </td>
 </td>
 <td>Visualization of trajectories. </td>
@@ -212,7 +212,7 @@
   <tr>
     <td>
       <a href="@HPPTUTORIALPLANNER_LINK@">hppTutorialPlanner</a>
-      <img src="pictures/kineo.jpg" alt="require Kineo SDK" style="kineo">
+      <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
     </td>
     <td>a simple planner to learn how to make and use a planner. </td>
   </tr>
@@ -222,7 +222,7 @@
 <br><br>
 <hr>
 <center>
-  <img src="pictures/footer.jpg" height="100" alt="footer"><br>
+  <img src="images/footer.jpg" height="100" alt="footer"><br>
   Humanoid Path Planner documentation<br>
 </center>
 </body>

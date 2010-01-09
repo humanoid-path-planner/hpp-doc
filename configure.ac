@@ -124,7 +124,6 @@ AC_CONFIG_FILES([
 	 doc/index.html
 	 doc/tree.html
 	 doc/develop.html
-	 doc/autotools.html
 	 doc/install.html
 ])
 
