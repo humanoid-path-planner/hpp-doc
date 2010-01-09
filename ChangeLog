@@ -1,3 +1,11 @@
+2010-01-09  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Make package dependencies image click-able.
+	* doc/Makefile.am: Generate and install click-able image
+	for package dependencies.
+	* doc/graph-dependency.html.in: Rename from doc/graph-dependency.html.
+	* scripts: Update to new version of packageDep.
+
 2010-01-06  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Clean project.

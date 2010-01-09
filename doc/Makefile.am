@@ -34,7 +34,6 @@ DOC_EXTRA =				\
 	doxygen.css			\
 	figures/archi.png		\
 	figures/kppInterfaceWalk.png	\
-	graph-dependency.html		\
 	movies/passing-under.mp4	\
 	movies/whole-body.mp4		\
 	pictures/dependencies.png	\
@@ -76,4 +75,17 @@ nobase_html_DATA =			\
 
 nobase_html_DATA += $(MISSING_FILES) $(DOC_EXTRA)
 
-EXTRA_DIST += $(DOC_EXTRA)
+EXTRA_DIST += $(DOC_EXTRA)		\
+	graph-dependency.html.in
+
+# Graph dependency.
+# Replace the special tag ``@MAP@'' by the dot generated map.
+graphDep.html: graphDep.dot
+	dot -o graphDep.html -Tcmapx graphDep.dot
+
+graph-dependency.html: graph-dependency.html.in graphDep.html
+	MAP=`tr -d '\n' < graphDep.html`; \
+	sed "s|@MAP@|$$MAP|" "$<" > $@
+
+CLEANFILES +=				\
+	cmaxp.html

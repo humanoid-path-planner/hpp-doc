@@ -19,7 +19,11 @@
     <p>Below is the graph of dependencies between packages.</p>
 
     <img src="pictures/dependencies.png"
-	 alt="packages dependencies">
+	 alt="packages dependencies"
+	 usemap="#CD"
+	 style="border:0">
+
+@MAP@
 
     <hr>
     <center>
