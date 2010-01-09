@@ -1,5 +1,14 @@
 2010-01-09  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Convert full HTML pages to Asciidoc.
+	* configure.ac: Do not generate HTML pages anymore.
+	* doc/develop.html.in: Remove.
+	* doc/develop.txt: New.
+	* doc/install.html.in: Remove.
+	* doc/install.txt: New.
+
+2010-01-09  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add Asciidoc support.
 
 	Asciidoc is a very simple markup language that supports source

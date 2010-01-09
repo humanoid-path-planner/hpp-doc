@@ -123,8 +123,6 @@ AC_CONFIG_FILES([
 	 doc/main.html
 	 doc/index.html
 	 doc/tree.html
-	 doc/develop.html
-	 doc/install.html
 ])
 
 # Write files.
