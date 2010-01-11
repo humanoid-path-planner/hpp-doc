@@ -96,6 +96,7 @@ DOC_EXTRA =				\
 	images/icons/tip.png		\
 	images/icons/up.png		\
 	images/icons/warning.png	\
+	images/kineo.jpg		\
 	images/passing-under.jpg	\
 	images/tab_b.gif		\
 	images/tab_l.gif		\
@@ -110,6 +111,7 @@ nobase_html_DATA =			\
 	corba.html			\
 	develop.html			\
 	doxygen.css			\
+	graph-dependency.html		\
 	index.html			\
 	install.html			\
 	kpp-interface.html		\
