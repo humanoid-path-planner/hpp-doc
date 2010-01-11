@@ -227,21 +227,6 @@ To run your interface into KineoPathPlanner, do the following:
 Programming conventions
 -----------------------
 
-Naming conventions
-~~~~~~~~~~~~~~~~~~
-
-[options="header"]
-|=======================
-| Type			| Convention			| Example
-| Class			| CclassName or ChppClassName	| ChppDevice
-| Enum			| EEnum				| ERsCurveType
-| Namespace		| Nnamespace			| NglobalApprox
-| Typedef		| Ttype				| TflatConfig
-| Private attribute	| attNameOfAttribute		| attMaxCurvature
-| Function input argument  | inParameter | bool setMaxcurvature(double inDouble)
-| Function output argument | outParameter | void getBounds(double& outMinBound, double& outMaxBound)
-|=======================
-
 
 Programming rules
 ~~~~~~~~~~~~~~~~~
