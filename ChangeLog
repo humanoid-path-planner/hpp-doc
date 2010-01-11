@@ -1,5 +1,18 @@
 2010-01-11  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Factorize asciidoc rules.
+
+	Search for asciidoc, source-highlight.
+	Asciidoc syntax does not seem to be retrocompatible, so
+	for now check that version is at least 8.2.5 (Fedora 11).
+
+	* bootstrap: Check submodule sanity.
+	* build-aux: Synchronize.
+	* configure.ac: Search for asciidoc manually.
+	* doc/Makefile.am: Use factorized asciidoc rules.
+
+2010-01-11  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Distribute and install missing files.
 	* doc/Makefile.am: Distribute ``doc/images/kineo.jpg''
 	and install ``docc/graph-dependency.html''.

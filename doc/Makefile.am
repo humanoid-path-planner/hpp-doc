@@ -1,4 +1,5 @@
 include $(top_srcdir)/build-aux/init.mk
+include $(top_srcdir)/build-aux/asciidoc.mk
 
 EXTRA_DIST +=						\
 		$(top_srcdir)/scripts/packageDep	\
@@ -40,12 +41,6 @@ graph-dependency.html: graph-dependency.html.in graphDep.html
 EXTRA_DIST += $(DOC_EXTRA)		\
 	graph-dependency.html.in	\
 	cmaxp.html
-
-
-# Asciidoc pages.
-SUFFIXES += .html
-.txt.html:
-	asciidoc -a icons -o $@ $<
 
 # Distribute all files (HTML, images, videos...).
 DOC_EXTRA =				\
@@ -120,4 +115,3 @@ nobase_html_DATA =			\
 	tree.html
 
 nobase_html_DATA += $(MISSING_FILES) $(DOC_EXTRA)
-

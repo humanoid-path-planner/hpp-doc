@@ -26,9 +26,11 @@ AC_CONFIG_MACRO_DIR([build-aux])
 # Search for install.
 AC_PROG_INSTALL
 
+# Check for asciidoc.
+JRL_PROG_ASCIIDOC([ASCIIDOC], [8.2.5])
+
 # Search for pkg-config.
 PKG_PROG_PKG_CONFIG
-
 
 
 # Macro that search for a package's documentation and
