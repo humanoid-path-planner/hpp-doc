@@ -23,6 +23,21 @@ die_noroboptimalias ()
  die "no \`\`roboptim:'' alias in your git configuration."
 }
 
+# Properly explain how to set up a scripts working directory and exit.
+die_nogitlaasmalias ()
+{
+ echo >&2 "To properly finish setting up your working directory,"
+ echo >&2 "you need to define how submodule \"scripts\" should should be"
+ echo >&2 "downloaded."
+ echo >&2 ""
+ echo >&2 "If you only need read-access (which is usually what one wants):"
+ echo >&2 "echo '[url \"git://[softs|git].laas.fr/git\"]"
+ echo >&2 "        insteadOf = git-laas:' >> ~/.gitconfig"
+ echo >&2 ""
+
+ die "no \`\`git-laas:'' alias in your git configuration."
+}
+
 # Check that git version is newer enough.
 check_git_version ()
 {
@@ -52,6 +67,10 @@ if test -d ".git"; then
 
     if test x`git config -l | grep 'url\..*\.insteadof=roboptim:'` = x; then
 	die_noroboptimalias
+    fi
+
+    if test x`git config -l | grep 'url\..*\.insteadof=git-laas:'` = x; then
+	die_nogitlaasmalias
     fi
 
     git submodule init
