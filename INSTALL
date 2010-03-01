@@ -12,3 +12,14 @@ cd build
 make 
 make install
 
+If you install from git, you need to access two submodules. To do so, add the
+following lines in your ~/.gitconfig:
+
+[url "git://roboptim.git.sourceforge.net/gitroot/roboptim/"
+     insteadOf = roboptim:
+[url "ssh://[softs|git].laas.fr/git/"] 
+     insteadOf = git-laas:
+
+where [softs|git] means
+  - git if you are an external user,
+  - softs if you are a member of CNRS-LAAS.
