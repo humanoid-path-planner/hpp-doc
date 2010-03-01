@@ -1,3 +1,9 @@
+2010-03-01  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Remove spurious EXTRA_FILES.
+	* doc/Makefile.am: Remove cmaxp.html from EXTRA_DIST
+	as this generated file should not be distributed.
+
 2010-01-11  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Factorize asciidoc rules.

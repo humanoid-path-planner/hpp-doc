@@ -39,8 +39,7 @@ graph-dependency.html: graph-dependency.html.in graphDep.html
 	sed "s|@MAP@|$$MAP|" "$<" > $@
 
 EXTRA_DIST += $(DOC_EXTRA)		\
-	graph-dependency.html.in	\
-	cmaxp.html
+	graph-dependency.html.in
 
 # Distribute all files (HTML, images, videos...).
 DOC_EXTRA =				\
