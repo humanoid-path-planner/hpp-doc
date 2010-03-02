@@ -1,1 +1,5 @@
-Write in this file the news related to package hppDoc.
+                                                                -*- outline -*-
+
+New in 2.0, 2010-03-02:
+* Make graph clickable.
+* Use Asciidoc to format documentation.
