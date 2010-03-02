@@ -1,5 +1,10 @@
 2010-03-02  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix buildchain.
+	* doc/Makefile.am: Make sure all files are distributed and cleaned.
+
+2010-03-02  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Update NEWS file.
 	* NEWS: Update for release 2.0.
 
