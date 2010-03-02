@@ -31,7 +31,7 @@ die_nogitlaasmalias ()
  echo >&2 "downloaded."
  echo >&2 ""
  echo >&2 "If you only need read-access (which is usually what one wants):"
- echo >&2 "echo '[url \"git://[softs|git].laas.fr/git\"]"
+ echo >&2 "echo '[url \"ssh://[softs|git].laas.fr/git/\"]"
  echo >&2 "        insteadOf = git-laas:' >> ~/.gitconfig"
  echo >&2 ""
 
