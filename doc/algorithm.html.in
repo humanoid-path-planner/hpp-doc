@@ -34,17 +34,17 @@
       </tr>
 
       <tr>
-	<td><a href="@HPPGIK_LINK@">hppGik</a></td>
+	<td><a href="@HPPGIK_LINK@">hpp-gik</a></td>
 	<td>Implementation of whole body motion planning.</td>
       </tr>
 
       <tr>
-	<td><a href="@HPPHIK_LINK@">hpphik</a></td>
+	<td><a href="@HPPHIK_LINK@">hpp-hik</a></td>
 	<td>Inequality constraints for whole-body motion planning.</td>
       </tr>
 
       <tr>
-	<td><a href="@HPPLOCALSTEPPER_LINK@">hpplocalstepper</a></td>
+	<td><a href="@HPPLOCALSTEPPER_LINK@">hpp-localstepper</a></td>
 	<td>Whole body motion planning by stepping.</td>
       </tr>
 
@@ -137,7 +137,7 @@
 	</tr>
 	<tr>
 	  <td>
-	    <a href="@HPPWALKFOOTPLANNER_LINK@">hppWalkFootPlanner</a>
+	    <a href="@HPPWALKFOOTPLANNER_LINK@">hpp-walkfootplanner</a>
 	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>Foot step planning along a bounding box trajectory. </td>
