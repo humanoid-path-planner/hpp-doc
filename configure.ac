@@ -32,6 +32,12 @@ JRL_PROG_ASCIIDOC([ASCIIDOC], [8.2.5])
 # Search for pkg-config.
 PKG_PROG_PKG_CONFIG
 
+# Check that executable dot is installed
+AC_CHECK_PROG([dot_found], [dot], [true], [false])
+if test $dot_found = false; then
+   echo 'dot not found, install package graphviz and try to run configure again'
+   exit -1
+fi
 
 # Macro that search for a package's documentation and
 # generate the corresponding link to the ``main.html'' file
