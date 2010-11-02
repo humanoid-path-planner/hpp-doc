@@ -1,6 +1,6 @@
 [submodule "scripts"]
 	path = scripts
-	url = git-laas:robots/scripts
+	url = git://github.com/laas/dev-tools.git
 [submodule "build-aux"]
 	path = build-aux
-	url = roboptim:build-aux.git
+	url = git://github.com/laas/shared-build-aux.git
