@@ -110,7 +110,6 @@ nobase_html_DATA =			\
 	autotools.html			\
 	corba.html			\
 	develop.html			\
-	doxygen.css			\
 	graph-dependency.html		\
 	index.html			\
 	install.html			\
