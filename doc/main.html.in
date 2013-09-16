@@ -46,8 +46,8 @@ or <a href="http://www.cmake.org">CMake</a>.</p>
 <ul>
 <li><a href="algorithm.html">Algorithms</a> implementing path planning functionalities</li>
 <li><a href="corba.html">Corba</a> communication facilities to control algorithms</li>
-<li><a href="kppInterface.html">Add-on</a> to KineoPathPlanner GUI interface</li>
-<li><a href="roboticComponent.html">Robotic components</a> encapsulating HPP algorithms</li>
+<li><a href="kpp-interface.html">Add-on</a> to KineoPathPlanner GUI interface</li>
+<li>Robotic components encapsulating HPP algorithms</li>
 </ul>
 
 <h2>A few examples</h2>
