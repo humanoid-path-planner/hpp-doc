@@ -180,15 +180,15 @@ steps=""
 
 if ! test "x$git_url" = x; then
     steps=`echo "$steps <li>"					\
-	"get the source code through <code>git</code>:"		\
+	"to get the source code through <code>git</code>: "		\
 	"<code>git clone $git_url</code>,"			\
 	"then configure, compile and install the package.</code></li>"`
 fi
 
 if ! test "x$robotpkg_package" = x; then
     steps=`echo "$steps <li>"					\
-	"install it through <code>robotpkg</code>:"		\
-	"<code>cd ${ROBOTPKG_BASE}/robotpkg/$robotpkg_package;" \
+	"install it through <code>robotpkg</code>: "		\
+	"<code>cd robotpkg/$robotpkg_package;" \
 	" make update</code></li>"`
 fi
 
