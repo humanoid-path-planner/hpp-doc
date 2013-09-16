@@ -63,44 +63,6 @@ To move on a flat ground cluttered with obstacles, the best strategy is to walk.
 <img src="images/walk.png" width="40%">
 </center>
 
-<h3>Whole-body motion generation</h3>
-
-This problem consists in computing a dynamically stable motion a humanoid robot
-in order to perform specified geometric tasks like moving the right hand at a given
-position, looking in a given direction for instance.
-
-<div id='whole-body' class='video'>This text will be replaced</div>
-<script type='text/javascript'>
-  var so = new SWFObject('http://homepages.laas.fr/tmoulard/video/player.swf','mpl','470','320','9');
-  so.addParam('allowfullscreen','true');
-  so.addParam('allowscriptaccess','always');
-  so.addParam('wmode','opaque');
-  so.addVariable('author','CNRS-LAAS');
-  so.addVariable('file','http://homepages.laas.fr/tmoulard/video/whole-body.flv');
-  so.addVariable('image','http://homepages.laas.fr/tmoulard/video/whole-body.jpg');
-  so.write('whole-body');
-</script>
-
-
-<h3>Passing under obstacles</h3>
-
-Passing under a low obstacle is a difficult task for a humanoid robot.
-The robot should use all degrees-of-freedom while keeping quasi-static
-balance.
-
-
-<div id='passing-under' class='video'>This text will be replaced</div>
-<script type='text/javascript'>
-  var so = new SWFObject('http://homepages.laas.fr/tmoulard/video/player.swf','mpl','470','320','9');
-  so.addParam('allowfullscreen','true');
-  so.addParam('allowscriptaccess','always');
-  so.addParam('wmode','opaque');
-  so.addVariable('author','CNRS-LAAS');
-  so.addVariable('file','http://homepages.laas.fr/tmoulard/video/passing-under.flv');
-  so.addVariable('image','http://homepages.laas.fr/tmoulard/video/passing-under.jpg');
-  so.write('passing-under');
-</script>
-
 <hr>
  <center>
    <img src="./images/footer.jpg" Height=100>
