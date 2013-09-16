@@ -14,22 +14,22 @@
 
     <table class="pkglist">
       <tr>
-	<td><a href="@ABSTRACTROBOTDYNAMICS_LINK@">abstractRobotDynamics</a></td>
+	<td><a href="@ABSTRACTROBOTDYNAMICS_LINK@">abstract-robot-dynamics</a></td>
 	<td>abstract interface for robot dynamic model</td>
       </tr>
 
       <tr>
-	<td><a href="@DYNAMICSJRLJAPAN_LINK@">dynamicsJRLJapan</a></td>
+	<td><a href="@DYNAMICSJRLJAPAN_LINK@">jrl-dynamics</a></td>
 	<td>JRL Implementation of robot dynamic model</td>
       </tr>
 
       <tr>
-	<td><a href="@WALKGENJRL_LINK@">walkGenJRL</a></td>
+	<td><a href="@WALKGENJRL_LINK@">jrl-walkgen</a></td>
 	<td>JRL Walk Pattern Generator</td>
       </tr>
 
       <tr>
-	<td><a href="@ABSTRACTGIKTASK_LINK@">abstractGikTask</a></td>
+	<td><a href="@ABSTRACTGIKTASK_LINK@">abstract-gik-task</a></td>
 	<td>Abstract interface for whole body motion planning.</td>
       </tr>
 
@@ -39,23 +39,8 @@
       </tr>
 
       <tr>
-	<td><a href="@HPPHIK_LINK@">hpp-hik</a></td>
-	<td>Inequality constraints for whole-body motion planning.</td>
-      </tr>
-
-      <tr>
-	<td><a href="@HPPLOCALSTEPPER_LINK@">hpp-localstepper</a></td>
-	<td>Whole body motion planning by stepping.</td>
-      </tr>
-
-      <tr>
-	<td><a href="@HRP2DYNAMICS_LINK@">hrp2Dynamics</a></td>
+	<td><a href="@HRP2DYNAMICS_LINK@">hrp2-dynamics</a></td>
 	<td>Optimized dynamic model for HRP2.</td>
-      </tr>
-
-      <tr>
-	<td><a href="@SOT_LINK@">StackOfTasks</a></td>
-	<td>Humanoid motion control through prioritized tasks.</td>
       </tr>
 
     </table>
@@ -65,10 +50,6 @@
       <tr>
 	<td><a href="@ROBOPTIMCORE_LINK@">core</a></td>
 	<td>Common API for several numerical optimization packages</td>
-      </tr>
-      <tr>
-	<td><a href="@ROBOPTIMPOSTURE_LINK@">posture</a></td>
-	<td>Cost and constraints relative to (humanoid) robots</td>
       </tr>
       <tr>
 	<td><a href="@ROBOPTIMTRAJECTORY_LINK@">trajectory</a></td>
@@ -95,46 +76,47 @@
 	</tr>
 	<tr>
 	  <td>
-	    <a href="@HPPMODEL_LINK@">hppModel</a>
+	    <a href="@HPPMODEL_LINK@">hpp-model</a>
 	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>implementation of hybrid geometric and dynamic robot.</td>
 	</tr>
 	<tr>
 	  <td>
-	    <a href="@HPPCORE_LINK@">hppCore</a>
+	    <a href="@HPPCORE_LINK@">hpp-core</a>
 	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>definition of basic classes. </td>
+	</tr>
+	<tr>
+	  <td>
+	    <a href="@HPPROBOPTIM_LINK@">hpp-roboptim</a>
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	  </td>
+	  <td>Bridge between roboptim and hpp.</td>
+	</tr>
+      </table>
+
+      <li><b>Path Planning with non-linear constraints</b></li>
+      <table class="pkglist">
+	<tr>
+	  <td>
+	    <a href="@HPPCONSTRAINED_LINK@">hpp-constrained</a>
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	  </td>
+	  <td>Motion planning for systems subject to nonlinear constraints</td>
+	</tr>
+	<tr>
+	  <td>
+	    <a href="@HPPCONSTRAINEDPLANNER_LINK@">hpp-constrained-planner</a>
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	  </td>
+	  <td>Planner for systems subject to nonlinear constraints</td>
 	</tr>
       </table>
 
       <li><b>Path Planning for humanoid robots</b></li>
       <table class="pkglist">
-	<tr>
-	  <td>
-	    <a href="@HPPHYBRIDROBOT_LINK@">hppHybridRobot</a>
-	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
-	  </td>
-	  <td>
-	    Hybrid model of robot to combine various types of motions in
-	    roadmap based path planning.
-	  </td>
-	</tr>
-	<tr>
-	  <td>
-	    <a href="@HPPHRPPLANNER_LINK@">hppHRPPlanner</a>
-	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
-	  </td>
-	  <td>Algorithms to plan motion going under an obstacle. </td>
-	</tr>
-	<tr>
-	  <td>
-	    <a href="@HPPCMPPLANNER_LINK@">hppCmpPlanner</a>
-	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
-	  </td>
-	  <td>Contact motion planning. </td>
-	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPWALKFOOTPLANNER_LINK@">hpp-walkfootplanner</a>
@@ -144,79 +126,19 @@
 	</tr>
 	<tr>
 	  <td>
-	    <a href="@HPPWALKPLANNER_LINK@">hppWalkPlanner</a>
+	    <a href="@HPPWALKPLANNER_LINK@">hpp-walkplanner</a>
 	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>Walk planning for a humanoid robot among obstacles. </td>
 	</tr>
 	<tr>
 	  <td>
-	    <a href="@HPPLOA_LINK@">hppLoa</a>
+	    <a href="@HPPWHOLEBODYSTEPPLANNER_LINK@">hpp-wholebody-step-planner</a>
 	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
-	  <td>Whole body motion planning with local obstacle avoidance. </td>
-	</tr>
-	<tr>
-	  <td>
-	    <a href="@HPPLOAPLANNER_LINK@">hppLoaPlanner</a>
-	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
-	  </td>
-	  <td>Global motion planning based on local obstacle avoidance. </td>
-	</tr>
-	<tr>
-	  <td>
-	    <a href="@HPPTIMINGPLANNER_LINK@">hppTimingPlanner</a>
-	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
-	  </td>
-	  <td>Dynamic time parameterization of quasi-static paths. </td>
+	  <td>Whole-body and walk planning using sliding path approximation.</td>
 	</tr>
       </table>
-
-      <li><b>Path Planning and perception</b></li>
-      <table class="pkglist">
-	<tr>
-	  <td>
-	    <a href="@WORLDMODELGRID3D_LINK@">worldModelGrid3D</a>
-	  </td>
-	  <td>Occupancy-grid built by vision.</td>
-	</tr>
-	<tr>
-	  <td>
-	    <a href="@SLAM3DPLANNER_LINK@">slam3DPlanner</a>
-	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
-	  </td>
-	  <td>path planning in environments modelled by vision </td>
-	</tr>
-	<tr>
-	  <td>
-	    <a href="@HPPDYNAMICOBSTACLE_LINK@">hppDynamicObstacle</a>
-	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
-	  </td>
-</td>
-<td>Handle dynamic obstacles in the environment. </td>
-</tr>
-</table>
-<li><b>Digital actors</b></li>
-<table class="pkglist">
-  <tr>
-    <td>
-      <a href="@HPPVISUALIZEMOVEPLANNER_LINK@">hppVisualizeMovePlanner</a>
-      <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
-    </td>
-</td>
-<td>Visualization of trajectories. </td>
-</tr>
-</table>
-<li><b>Tutorial</b></li>
-<table class="pkglist">
-  <tr>
-    <td>
-      <a href="@HPPTUTORIALPLANNER_LINK@">hppTutorialPlanner</a>
-      <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
-    </td>
-    <td>a simple planner to learn how to make and use a planner. </td>
-  </tr>
-</table>
 </ul>
 
 <br><br>

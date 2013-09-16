@@ -13,9 +13,8 @@
     <p>
       The following packages implement Corba communication functionalities
       <ul>
-	<li><a href="@HPPCORBASERVER_LINK@">hppCorbaServer</a> Corba server to implementing a ChppPlanner object.</li>
-	<li><a href="@HPPPYTHON_LINK@">hppPython</a> Script python to communicate with hppCorbaServer.</li>
-	<li><a href="@HPPOPENHRP_LINK@/html">hppOpenHRP</a> Corba server that implements the model of HRP2.</li>
+	<li><a href="@HPPCORBASERVER_LINK@">hpp-corbaserver</a> Corba server to implementing a ChppPlanner object.</li>
+	<li><a href="@HPPWHOLEBODYSTEPCORBA_LINK@">hpp-wholebody-step-corba</a> Corba server for <a href="@HPPWHOLEBODYSTEPPLANNER_LINK@">hpp-wholebody-step-planner</a>.</li>
       </ul>
     </p>
 

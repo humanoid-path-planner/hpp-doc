@@ -45,95 +45,40 @@ fi
 
 
 # Package database.
-pkg "abstractGikTask" \
-    "abstractGikTask" \
-    "ssh://[softs|git].laas.fr/git/jrl/abstractGikTask" \
+pkg "abstract-gik-task" \
+    "abstract-gik-task" \
+    "ssh://[softs|git].laas.fr/git/jrl/algo/abstract-gik-task" \
     "interfaces/jrl-interface-giktask"
 
-pkg "abstractRobotsDynamics" \
-    "abstractRobotsDynamics" \
-    "ssh://[softs|git].laas.fr/git/jrl/abstractRobotsDynamics" \
+pkg "abstract-robots-dynamics" \
+    "abstract-robots-dynamics" \
+    "git@github.com:laas/abstract-robot-dynamics" \
     "interfaces/jrl-interface-dynamics"
 
-pkg "dynamicsJRLJapan" \
-    "dynamicsJRLJapan" \
-    "ssh://[softs|git].laas.fr/git/jrl/dynamicsJRLJapan" \
+pkg "jrl-dynamics" \
+    "jrl-dynamics" \
+    "git@github.com:jrl-umi3218/jrl-dynamics" \
     "math/jrl-dynamics"
 
-pkg "hppCmpPlanner" \
-    "hppCmpPlanner" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppCmpPlanner" \
-    "" # no RobotPkg package.
-
-pkg "hppCorbaServer" \
-    "hppCorbaServer" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppCmpPlanner" \
+pkg "hpp-corbaserver" \
+    "hpp-corbaserver" \
+    "git@github.com:laas/hpp-corbaserver" \
     "devel/hpp-corbaserver"
 
-pkg "hppCore" \
-    "hppCore" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppCore" \
+pkg "hpp-core" \
+    "hpp-core" \
+    "git@github.com:laas/hpp-core" \
     "path/hpp-core"
 
-pkg "hppDynamicObstacle" \
-    "hppDynamicObstacle" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppDynamicObstacle" \
-    "" # no RobotPkg package.
-
-pkg "hppGik" \
-    "hppGik" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppGik" \
+pkg "hpp-gik" \
+    "hpp-gik" \
+    "git@github.com:laas/hpp-gik" \
     "path/hpp-gik"
 
-pkg "hppHRPPlanner" \
-    "hppHRPPlanner" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppHRPPlanner" \
-    "" # no RobotPkg package.
-
-pkg "hppHybridRobot" \
-    "hppHybridRobot" \
-    "ssh://[softs|git].laas.fr/git/jrl/algo/hppHybridRobot" \
-    "" # no RobotPkg package.
-
-pkg "hppLoa" \
-    "hppLoa" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppLoa" \
-    "" # no RobotPkg package.
-
-pkg "hppLoaPlanner" \
-    "hppLoaPlanner" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppLoaPlanner" \
-    "" # no RobotPkg package.
-
-pkg "hppModel" \
-    "hppModel" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppModel" \
+pkg "hpp-model" \
+    "hpp-model" \
+    "git@github.com:laas/hpp-model" \
     "devel/hpp-model"
-
-pkg "hppOpenHRP" \
-    "hppOpenHRP" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppOpenHRP" \
-    "path/hpp-openhrp"
-
-pkg "hppPython" \
-    "hppPython" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppPython" \
-    "scripts/hpp-python"
-
-pkg "hppTimingPlanner" \
-    "hppTimingPlanner" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppTimingPlanner" \
-    "" # no RobotPkg package.
-
-pkg "hppTutorialPlanner" \
-    "hppTutorialPlanner" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppTutorialPlanner" \
-    "" # no RobotPkg package.
-
-pkg "hppVisualizeMovePlanner" \
-    "hppVisualizeMovePlanner" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppVisualizeMovePlanner" \
-    "" # no RobotPkg package.
 
 pkg "hpp-walkfootplanner" \
     "HPP walkfoot planner" \
@@ -142,108 +87,73 @@ pkg "hpp-walkfootplanner" \
 
 pkg "hpp-walkplanner" \
     "HPP walk planner" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppWalkPlanner" \
+    "ssh://[softs|git].laas.fr/git/jrl/algo/hpp-walkplanner" \
     "path/hpp-walkplanner"
 
-pkg "hppWalkPlannerCompSpec" \
-    "hppWalkPlannerCompSpec" \
-    "ssh://[softs|git].laas.fr/git/jrl/hppWalkPlannerCompSpec" \
-    "" # no RobotPkg package.
+pkg "hrp2-dynamics" \
+    "hrp2-dynamics" \
+    "git@github.com:thomas-moulard/hrp2-dynamics" \
+    "math/hrp2-dynamics"
 
-pkg "hpphik" \
-    "hpphik" \
-    "ssh://[softs|git].laas.fr/git/jrl/algo/hpphik" \
-    "path/hpp-hik"
-
-pkg "hpplocalstepper" \
-    "hpplocalstepper" \
-    "ssh://[softs|git].laas.fr/git/jrl/algo/hpphik" \
-    "path/hpp-localstepper"
-
-pkg "hrp2Dynamics" \
-    "hrp2Dynamics" \
-    "ssh://[softs|git].laas.fr/git/jrl/hrp2Dynamics" \
-    "" # no RobotPkg package.
-
-pkg "kppInterface" \
-    "kppInterface" \
-    "ssh://[softs|git].laas.fr/git/jrl/kppInterface" \
+pkg "kpp-interface" \
+    "kpp-interface" \
+    "git@github.com:laas/kpp-interface" \
     "graphics/kpp-interface"
-
-pkg "kppInterfaceCmp" \
-    "kppInterfaceCmp" \
-    "ssh://[softs|git].laas.fr/git/jrl/kppInterfaceCmp" \
-    "" # no RobotPkg package.
-
-pkg "kppInterfaceHRP" \
-    "kppInterfaceHRP" \
-    "ssh://[softs|git].laas.fr/git/jrl/kppInterfaceHRP" \
-    "" # no RobotPkg package.
-
-pkg "kppInterfaceTutorial" \
-    "kppInterfaceTutorial" \
-    "ssh://[softs|git].laas.fr/git/jrl/kppInterfaceTutorial" \
-    "" # no RobotPkg package.
 
 pkg "kpp-interfacewalk" \
     "KPP interface walk" \
-    "ssh://[softs|git].laas.fr/git/jrl/kppInterface" \
+    "ssh://[git|trac].laas.fr/git/jrl/kpp/kpp-interfacewalk" \
     "graphics/kpp-interfacewalk"
 
 pkg "kwsPlus" \
     "kwsPlus" \
-    "ssh://[softs|git].laas.fr/git/jrl/kwsPlus" \
+    "ssh://[git|trac].laas.fr/git/jrl/algo/kwsPlus" \
     "devel/hpp-kwsplus"
 
 pkg "roboptim-core" \
     "RobOptim core" \
-    "ssh://[softs|git].laas.fr/git/jrl/roboptim/core" \
+    "git@github.com:roboptim/roboptim-core" \
     "optimization/roboptim-core"
-
-pkg "roboptim-posture" \
-    "RobOptim posture" \
-    "ssh://[softs|git].laas.fr/git/jrl/roboptim/posture" \
-    "" # no RobotPkg package.
 
 pkg "roboptim-trajectory" \
     "RobOptim trajectory" \
-    "ssh://[softs|git].laas.fr/git/jrl/roboptim/trajectory" \
+    "git@github.com:roboptim/roboptim-trajectory" \
     "optimization/roboptim-trajectory"
 
-pkg "slam3DPlanner" \
-    "slam3DPlanner" \
-    "ssh://[softs|git].laas.fr/git/jrl/slam3DPlanner" \
-    "" # no RobotPkg package.
-
-pkg "stackoftasks" \
-    "stackoftasks" \
-    "ssh://[softs|git].laas.fr/git/jrl/StackOfTasks" \
-    "" # no RobotPkg package.
-
-pkg "walk-genom" \
-    "walk-genom" \
-    "ssh://[softs|git].laas.fr/git/jrl/StackOfTasks" \
-    "path/walk-genom"
-
-pkg "walkGenJrl" \
-    "walkGenJrl" \
-    "ssh://[softs|git].laas.fr/git/jrl/walkGenJRL" \
+pkg "jrl-walkgen" \
+    "jrl-walkgen" \
+    "git@github.com:jrl-umi3218/jrl-walkgen" \
     "path/jrl-walkgen"
 
-pkg "walkPlannerOrtm" \
-    "walkPlannerOrtm" \
-    "ssh://[softs|git].laas.fr/git/jrl/walkPlannerOrtm" \
-    "" # no RobotPkg package.
+pkg "hpp-roboptim" \
+    "hpp-roboptim" \
+    "git@github.com:laas/hpp-roboptim" \
+    "path/hpp-roboptim"
 
-pkg "walkPlannerOrtmClient" \
-    "walkPlannerOrtmClient" \
-    "ssh://[softs|git].laas.fr/git/jrl/walkPlannerOrtmClient" \
-    "" # no RobotPkg package.
+pkg "hpp-constrained" \
+    "hpp-constrained" \
+    "git@github.com:laas/hpp-constrained" \
+    "path/hpp-constrained"
 
-pkg "worldModelGrid3D" \
-    "worldModelGrid3D" \
-    "ssh://[softs|git].laas.fr/git/jrl/worldModelGrid3D" \
-    "" # no RobotPkg package.
+pkg "hpp-constrained-planner" \
+    "hpp-constrained-planner" \
+    "git@github.com:laas/hpp-constrained-planner" \
+    "path/hpp-constrained-planner"
+
+pkg "hpp-wholebody-step-planner" \
+    "hpp-wholebody-step-planner" \
+    "git@github.com:laas/hpp-wholebody-step-planner" \
+    "path/hpp-wholebody-step-planner"
+
+pkg "hpp-wholebody-step-corba" \
+    "hpp-wholebody-step-corba" \
+    "git@github.com:laas/hpp-wholebody-step-corba" \
+    "path/hpp-wholebody-step-corba"
+
+pkg "kpp-interfacestep" \
+    "kpp-interfacestep" \
+    "git@github.com:laas/kpp-interfacestep" \
+    "path/kpp-interfacestep"
 
 # Retrieve information about wanted package.
 key=`echo "$package" | sed 's/-/_/g'`

@@ -12,10 +12,8 @@
   <p>
     <ul>
       <li><a href="@KPPINTERFACE_LINK@">kppInterface</a>: basic KPP interface.</li>
-      <li><a href="@KPPINTERFACEWALK_LINK@">kpp-interfacewalk</a>: KPP interface for hppWalkPlanner.</li>
-      <li><a href="@KPPINTERFACEHRP_LINK@">kppInterfaceHRP</a>: KPP interface for functions specific to HRP2 robot.</li>
-      <li><a href="@KPPINTERFACECMP_LINK@">kppInterfaceCmp</a>: KPP interface for contact motion planning.</li>
-      <li><a href="@KPPINTERFACETUTORIAL_LINK@">kppInterfaceTutorial</a>: KPP interface to learn how to make and use a KPP interface.</li>
+      <li><a href="@KPPINTERFACEWALK_LINK@">kpp-interfacewalk</a>: KPP interface for <a href="@HPPWALKPLANNER_LINK@">hpp-walkplanner</a>.</li>
+      <li><a href="@KPPINTERFACESTEP_LINK@">kpp-interfacestep</a>: KPP interface for <a href="@HPPWHOLEBODYSTEPPLANNER_LINK@">hpp-wholebody-step-planner</a>.</li>
     </ul>
   </p>
 
