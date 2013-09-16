@@ -60,7 +60,11 @@ else
    else
       docPrefix=`$PKG_CONFIG $PKGNAME --variable=doxygendocdir`
    fi
-   AC_SUBST([$1_LINK], [$docPrefix/main.html])
+   if [[ -f $docPrefix/main.html ]]; then
+      AC_SUBST([$1_LINK], [$docPrefix/main.html])
+   else
+      AC_SUBST([$1_LINK], [$docPrefix/index.html])
+   fi
    AC_MSG_RESULT([yes])
 fi
 
