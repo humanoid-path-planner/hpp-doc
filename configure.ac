@@ -73,6 +73,7 @@ pkg_list="$pkg_list $2"
 
 # List packages.
 JRL_GENERATELINK([KWSPLUS], [kwsPlus])
+JRL_GENERATELINK([HPPGEOMETRY], [hpp-geometry])
 JRL_GENERATELINK([HPPMODEL], [hpp-model])
 JRL_GENERATELINK([HPPCORE], [hpp-core])
 JRL_GENERATELINK([WALKGENJRL], [jrl-walkgen])

@@ -63,7 +63,7 @@ pkg "jrl-dynamics" \
 pkg "hpp-corbaserver" \
     "hpp-corbaserver" \
     "git@github.com:laas/hpp-corbaserver" \
-    "devel/hpp-corbaserver"
+    "path/hpp-corbaserver"
 
 pkg "hpp-core" \
     "hpp-core" \
@@ -78,7 +78,12 @@ pkg "hpp-gik" \
 pkg "hpp-model" \
     "hpp-model" \
     "git@github.com:laas/hpp-model" \
-    "devel/hpp-model"
+    "path/hpp-model"
+
+pkg "hpp-geometry" \
+    "hpp-geometry" \
+    "git@github.com:laas/hpp-geometry" \
+    "math/hpp-geometry"
 
 pkg "hpp-walkfootplanner" \
     "HPP walkfoot planner" \
@@ -108,7 +113,7 @@ pkg "kpp-interfacewalk" \
 pkg "kwsPlus" \
     "kwsPlus" \
     "ssh://[git|trac].laas.fr/git/jrl/algo/kwsPlus" \
-    "devel/hpp-kwsplus"
+    "path/hpp-kwsplus"
 
 pkg "roboptim-core" \
     "RobOptim core" \

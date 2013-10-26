@@ -76,6 +76,13 @@
 	</tr>
 	<tr>
 	  <td>
+	    <a href="@HPPGEOMETRY_LINK@">hpp-geometry</a>
+	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
+	  </td>
+	  <td>Extension of KCD: implements capsule geometry.</td>
+	</tr>
+	<tr>
+	  <td>
 	    <a href="@HPPMODEL_LINK@">hpp-model</a>
 	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
