@@ -45,21 +45,6 @@ fi
 
 
 # Package database.
-pkg "abstract-gik-task" \
-    "abstract-gik-task" \
-    "ssh://[softs|git].laas.fr/git/jrl/algo/abstract-gik-task" \
-    "interfaces/jrl-interface-giktask"
-
-pkg "abstract-robots-dynamics" \
-    "abstract-robots-dynamics" \
-    "git@github.com:laas/abstract-robot-dynamics" \
-    "interfaces/jrl-interface-dynamics"
-
-pkg "jrl-dynamics" \
-    "jrl-dynamics" \
-    "git@github.com:jrl-umi3218/jrl-dynamics" \
-    "math/jrl-dynamics"
-
 pkg "hpp-corbaserver" \
     "hpp-corbaserver" \
     "git@github.com:laas/hpp-corbaserver" \
@@ -70,50 +55,11 @@ pkg "hpp-core" \
     "git@github.com:laas/hpp-core" \
     "path/hpp-core"
 
-pkg "hpp-gik" \
-    "hpp-gik" \
-    "git@github.com:laas/hpp-gik" \
-    "path/hpp-gik"
-
 pkg "hpp-model" \
     "hpp-model" \
     "git@github.com:laas/hpp-model" \
     "path/hpp-model"
 
-pkg "hpp-geometry" \
-    "hpp-geometry" \
-    "git@github.com:laas/hpp-geometry" \
-    "math/hpp-geometry"
-
-pkg "hpp-walkfootplanner" \
-    "HPP walkfoot planner" \
-    "ssh://[softs|git].laas.fr/git/jrl/algo/hppWalkFootPlanner" \
-    "path/hpp-walkfootplanner"
-
-pkg "hpp-walkplanner" \
-    "HPP walk planner" \
-    "ssh://[softs|git].laas.fr/git/jrl/algo/hpp-walkplanner" \
-    "path/hpp-walkplanner"
-
-pkg "hrp2-dynamics" \
-    "hrp2-dynamics" \
-    "git@github.com:thomas-moulard/hrp2-dynamics" \
-    "math/hrp2-dynamics"
-
-pkg "kpp-interface" \
-    "kpp-interface" \
-    "git@github.com:laas/kpp-interface" \
-    "graphics/kpp-interface"
-
-pkg "kpp-interfacewalk" \
-    "KPP interface walk" \
-    "ssh://[git|trac].laas.fr/git/jrl/kpp/kpp-interfacewalk" \
-    "graphics/kpp-interfacewalk"
-
-pkg "kwsPlus" \
-    "kwsPlus" \
-    "ssh://[git|trac].laas.fr/git/jrl/algo/kwsPlus" \
-    "path/hpp-kwsplus"
 
 pkg "roboptim-core" \
     "RobOptim core" \
@@ -125,40 +71,20 @@ pkg "roboptim-trajectory" \
     "git@github.com:roboptim/roboptim-trajectory" \
     "optimization/roboptim-trajectory"
 
-pkg "jrl-walkgen" \
-    "jrl-walkgen" \
-    "git@github.com:jrl-umi3218/jrl-walkgen" \
-    "path/jrl-walkgen"
+pkg "hpp-constraints" \
+    "hpp-constraints" \
+    "git@github.com:laas/hpp-constraints" \
+    "path/hpp-constraints"
 
-pkg "hpp-roboptim" \
-    "hpp-roboptim" \
-    "git@github.com:laas/hpp-roboptim" \
-    "path/hpp-roboptim"
-
-pkg "hpp-constrained" \
-    "hpp-constrained" \
-    "git@github.com:laas/hpp-constrained" \
-    "path/hpp-constrained"
-
-pkg "hpp-constrained-planner" \
-    "hpp-constrained-planner" \
-    "git@github.com:laas/hpp-constrained-planner" \
-    "path/hpp-constrained-planner"
-
-pkg "hpp-wholebody-step-planner" \
-    "hpp-wholebody-step-planner" \
-    "git@github.com:laas/hpp-wholebody-step-planner" \
-    "path/hpp-wholebody-step-planner"
+pkg "hpp-wholebody-step" \
+    "hpp-wholebody-step" \
+    "git@github.com:laas/hpp-wholebody-step" \
+    "path/hpp-wholebody-step"
 
 pkg "hpp-wholebody-step-corba" \
     "hpp-wholebody-step-corba" \
     "git@github.com:laas/hpp-wholebody-step-corba" \
     "path/hpp-wholebody-step-corba"
-
-pkg "kpp-interfacestep" \
-    "kpp-interfacestep" \
-    "git@github.com:laas/kpp-interfacestep" \
-    "path/kpp-interfacestep"
 
 # Retrieve information about wanted package.
 key=`echo "$package" | sed 's/-/_/g'`

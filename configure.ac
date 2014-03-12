@@ -72,29 +72,14 @@ pkg_list="$pkg_list $2"
 ])
 
 # List packages.
-JRL_GENERATELINK([KWSPLUS], [kwsPlus])
-JRL_GENERATELINK([HPPGEOMETRY], [hpp-geometry])
 JRL_GENERATELINK([HPPMODEL], [hpp-model])
 JRL_GENERATELINK([HPPCORE], [hpp-core])
-JRL_GENERATELINK([WALKGENJRL], [jrl-walkgen])
 JRL_GENERATELINK([HPPCORBASERVER], [hpp-corbaserver])
-JRL_GENERATELINK([HPPWALKFOOTPLANNER], [hpp-walkfootplanner])
-JRL_GENERATELINK([HPPWALKPLANNER], [hpp-walkplanner])
-JRL_GENERATELINK([KPPINTERFACE], [kpp-interface])
-JRL_GENERATELINK([KPPINTERFACEWALK], [kpp-interfacewalk])
-JRL_GENERATELINK([HPPGIK], [hpp-gik])
-JRL_GENERATELINK([DYNAMICSJRLJAPAN], [jrl-dynamics])
-JRL_GENERATELINK([ABSTRACTROBOTDYNAMICS], [abstract-robot-dynamics])
-JRL_GENERATELINK([ABSTRACTGIKTASK], [abstract-gik-task])
-JRL_GENERATELINK([HRP2DYNAMICS], [hrp2-dynamics])
 JRL_GENERATELINK([ROBOPTIMCORE], [roboptim-core])
 JRL_GENERATELINK([ROBOPTIMTRAJECTORY], [roboptim-trajectory])
-JRL_GENERATELINK([HPPROBOPTIM], [hpp-roboptim])
-JRL_GENERATELINK([HPPCONSTRAINED], [hpp-constrained])
-JRL_GENERATELINK([HPPCONSTRAINEDPLANNER], [hpp-constrained-planner])
-JRL_GENERATELINK([HPPWHOLEBODYSTEPPLANNER], [hpp-wholebody-step-planner])
+JRL_GENERATELINK([HPPCONSTRAINTS], [hpp-constraints])
+JRL_GENERATELINK([HPPWHOLEBODYSTEP], [hpp-wholebody-step])
 JRL_GENERATELINK([HPPWHOLEBODYSTEPCORBA], [hpp-wholebody-step-corba])
-JRL_GENERATELINK([KPPINTERFACESTEP], [kpp-interfacestep])
 
 # Generate the list of html stub pages for missing packages that
 # will be generated.
