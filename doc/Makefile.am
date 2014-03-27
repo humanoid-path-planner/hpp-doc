@@ -47,8 +47,6 @@ DOC_EXTRA =				\
 	doxygen.css			\
 	figures/archi.png		\
 	figures/kppInterfaceWalk.png	\
-	movies/passing-under.mp4	\
-	movies/whole-body.mp4		\
 	images/dependencies.png		\
 	images/film.png			\
 	images/footer.jpg		\
