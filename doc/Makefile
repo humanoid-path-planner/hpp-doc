@@ -97,7 +97,7 @@ all: ${install_all}
 
 %.checkout:
 	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out." \
+		echo "$(@:.checkout=) already checkout out."; \
 	else \
 		git clone --recursive -b ${$(@:.checkout=)_branch} ${$(@:.checkout=)_repository}/$(@:.checkout=); \
 	fi \

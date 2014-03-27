@@ -1,5 +1,5 @@
 export PATH=$DEVEL_DIR/install/sbin:$DEVEL_DIR/install/bin:$PATH
-export PKG_CONFIG_PATH=$DEVEL_DIR/install/lib/pkgconfig/:/opt/grx/lib/pkgconfig
+export PKG_CONFIG_PATH=$DEVEL_DIR/install/lib/pkgconfig/:/opt/ros/groovy/lib/pkgconfig
 
 export PYTHONPATH=$DEVEL_DIR/install/lib/python2.7/site-packages:$DEVEL_DIR/install/lib/python2.7/dist-packages:/opt/ros/groovy/lib/python2.7/dist-packages:$PYTHONPATH
 
