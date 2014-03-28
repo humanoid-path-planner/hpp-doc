@@ -57,7 +57,7 @@ test-hpp_branch=master
 test-hpp_repository=${HPP_REPO}
 
 hrp2_branch=groovy
-hrp2_repository=${FLORENT_REPO}
+hrp2_repository=${JRL_REPO}
 
 robot_capsule_urdf_branch=groovy
 robot_capsule_urdf_repository=${LAAS_REPO}
@@ -86,9 +86,18 @@ packages= \
 	hpp_ros \
 	hpp-doc
 
+# source $DEVEL_DIR/install/setup.bash before installing hrp2.
+hrp2_packages= \
+	robot_model_py \
+	robot_capsule_urdf \
+	hrp2 \
+	test-hpp
+
 install_all=$(packages:=.all)
+install_hrp2=$(hrp2_packages:=.all)
 
 all: ${install_all}
+hrp2: ${install_hrp2}
 
 %.all: %.checkout %.configure %.install
 	@echo "\n ***********************************************************\n" \
@@ -169,3 +178,9 @@ robot_model_py.configure:
 	mkdir -p build; \
 	cd build; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+
+robot_model_py.install:
+	cd ${SRC_DIR}/$(@:.install=)/xml_reflection/build; \
+	make install; \
+	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/build; \
+	make install;
