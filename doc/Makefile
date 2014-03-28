@@ -15,7 +15,7 @@ fcl_branch=master
 fcl_repository=${FCL_REPO}
 
 jrl-mathtools_branch=master
-jrl-mathtools_repository=${JRL_REPO}
+jrl-mathtools_repository=${HPP_REPO}
 
 hpp-util_branch=master
 hpp-util_repository=${HPP_REPO}
@@ -69,6 +69,7 @@ hpp-doc_branch=master
 hpp-doc_repository=${HPP_REPO}
 
 packages= \
+	eigen3 \
 	fcl \
 	jrl-mathtools \
 	hpp-util \
@@ -83,7 +84,6 @@ packages= \
 	hpp-wholebody-step \
 	hpp-wholebody-step-corba \
 	hpp_ros \
-	test-hpp \
 	hpp-doc
 
 install_all=$(packages:=.all)
@@ -141,9 +141,14 @@ hpp-doc.configure:
 	../configure --prefix=${DEVEL_DIR}/install
 
 eigen3.checkout:
-	wget -O eigen3.tar.bz2 http://bitbucket.org/eigen/eigen/get/3.2.1.tar.bz2;\
-	cd ${SRC_DIR}; bunzip2 eigen3.tar.bz2; tar xvf eigen3.tar;\
-	rm -f eigen3.tar; mv eigen-eigen-6b38706d90a9 eigen3
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget -O eigen3.tar.bz2 \
+		http://bitbucket.org/eigen/eigen/get/3.2.1.tar.bz2;\
+		cd ${SRC_DIR}; bunzip2 eigen3.tar.bz2; tar xvf eigen3.tar;\
+		rm -f eigen3.tar; mv eigen-eigen-6b38706d90a9 eigen3;\
+	fi
 
 hrp2.configure:
 	cd ${SRC_DIR}/hrp2/hrp2_14_description;\

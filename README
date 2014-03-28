@@ -17,7 +17,11 @@ steps:
     - ros-groovy-libccd,
     - asciidoc,
     - source-highlight,
-    - git
+    - git,
+    - libomniorb4-dev,
+    - omniorb-nameserver,
+    - omniidl,
+    - omniidl-python
 
   2. Choose a directory on you file system and define the environment
      variable DEVEL_DIR with the full path to this directory.

@@ -7,4 +7,6 @@ export LD_LIBRARY_PATH=$DEVEL_DIR/install/lib:/opt/ros/groovy/lib:$LD_LIBRARY_PA
 
 if [ -f $DEVEL_DIR/install/setup.bash ]; then
     source $DEVEL_DIR/install/setup.bash
+else
+    source /opt/ros/groovy/setup.bash
 fi
