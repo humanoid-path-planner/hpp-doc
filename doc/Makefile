@@ -155,7 +155,7 @@ eigen3.configure: eigen3.checkout
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
 
 hrp2.configure: hrp2.checkout
-	. ${DEVEL_DIR}/install/setup.sh \
+	. ${DEVEL_DIR}/install/setup.sh; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
 	mkdir -p build; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description/build; \
