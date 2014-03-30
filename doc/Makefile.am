@@ -98,29 +98,18 @@ DOC_EXTRA =				\
 	tabs.css
 
 # Distribute all files (HTML, images, videos...).
-DOC_EXTRA +=				\
-	autotools.txt			\
-	develop.txt			\
-	install.txt
+DOC_EXTRA +=
 
 nobase_html_DATA =			\
 	algorithm.html			\
-	autotools.html			\
 	corba.html			\
-	develop.html			\
 	graph-dependency.html		\
 	index.html			\
-	install.html			\
-	kpp-interface.html		\
 	main.html			\
-	robotic-component.html		\
 	tree.html
 
 nobase_html_DATA += $(MISSING_FILES) $(DOC_EXTRA)
 
 CLEANFILES +=				\
 	graphDep.html			\
-	install.html			\
-	graph-dependency.html		\
-	autotools.html			\
-	develop.html
+	graph-dependency.html

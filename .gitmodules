@@ -1,6 +1,3 @@
 [submodule "scripts"]
 	path = scripts
 	url = git://github.com/laas/dev-tools.git
-[submodule "build-aux"]
-	path = build-aux
-	url = git://github.com/laas/shared-build-aux.git

@@ -11,7 +11,6 @@ SUBDIRS = 		\
 EXTRA_DIST +=	bootstrap			\
 		build-aux/bootstrap
 
-
 # Nothing to do in this directory.
 all:
 
