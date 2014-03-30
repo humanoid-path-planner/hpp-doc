@@ -68,41 +68,30 @@ robot_model_py_repository=${LAAS_REPO}
 hpp-doc_branch=master
 hpp-doc_repository=${HPP_REPO}
 
-packages= \
-	eigen3 \
-	fcl \
-	jrl-mathtools \
-	hpp-util \
-	roboptim-core \
-	roboptim-trajectory \
-	hpp-model \
-	hpp-model-urdf \
-	hpp-core \
-	hpp-template-corba \
-	hpp-corbaserver \
-	hpp-constraints \
-	hpp-wholebody-step \
-	hpp-wholebody-step-corba \
-	hpp_ros \
-	hpp-doc
+all:
+	make eigen3.install; \
+	make fcl.install; \
+	make jrl-mathtools.install; \
+	make hpp-util.install; \
+	make roboptim-core.install; \
+	make roboptim-trajectory.install; \
+	make hpp-model.install; \
+	make hpp-model-urdf.install; \
+	make hpp-core.install; \
+	make hpp-template-corba.install; \
+	make hpp-corbaserver.install; \
+	make hpp-constraints.install; \
+	make hpp-wholebody-step.install; \
+	make hpp-wholebody-step-corba.install; \
+	make hpp_ros.install; \
+	make hpp-doc.install;
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
-hrp2_packages= \
-	robot_model_py \
-	robot_capsule_urdf \
-	hrp2 \
-	test-hpp
-
-install_all=$(packages:=.all)
-install_hrp2=$(hrp2_packages:=.all)
-
-all: ${install_all}
-hrp2: ${install_hrp2}
-
-%.all: %.checkout %.configure %.install
-	@echo "\n ***********************************************************\n" \
-	"*** finished installing $(@:.all=)\n" \
-	"************************************************************\n"
+hrp2:
+	make robot_model_py.install; \
+	make robot_capsule_urdf.install; \
+	make hrp2.install; \
+	make test-hpp.install;
 
 %.checkout:
 	if [ -d $(@:.checkout=) ]; then \
@@ -121,13 +110,13 @@ hrp2: ${install_hrp2}
 	git branch -D bce46g;\
 	git submodule update
 
-%.configure:
+%.configure:%.checkout
 	cd ${SRC_DIR}/$(@:.configure=);\
 	mkdir -p build; \
 	cd ${SRC_DIR}/$(@:.configure=)/build; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
-%.install:
+%.install:%.configure
 	cd ${SRC_DIR}/$(@:.install=)/build;\
 	make install
 
@@ -142,7 +131,7 @@ hrp2: ${install_hrp2}
 %.status:
 	cd ${SRC_DIR}/$(@:.status=); git status
 
-hpp-doc.configure:
+hpp-doc.configure: hpp-doc.checkout
 	cd ${SRC_DIR}/$(@:.configure=);\
 	./bootstrap;\
 	mkdir -p build; \
@@ -159,17 +148,24 @@ eigen3.checkout:
 		rm -f eigen3.tar; mv eigen-eigen-6b38706d90a9 eigen3;\
 	fi
 
-hrp2.configure:
+eigen3.configure: eigen3.checkout
+	cd ${SRC_DIR}/eigen3;\
+	mkdir -p build; \
+	cd ${SRC_DIR}/eigen3/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
+
+hrp2.configure: hrp2.checkout
+	. ${DEVEL_DIR}/install/setup.sh \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
 	mkdir -p build; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description/build; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
-hrp2.install:
+hrp2.install: hrp2.configure
 	cd ${SRC_DIR}/hrp2/hrp2_14_description/build;\
 	make install
 
-robot_model_py.configure:
+robot_model_py.configure: robot_model_py.checkout
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
 	mkdir -p build; \
 	cd build; \
@@ -179,7 +175,7 @@ robot_model_py.configure:
 	cd build; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
-robot_model_py.install:
+robot_model_py.install: robot_model_py.configure
 	cd ${SRC_DIR}/$(@:.install=)/xml_reflection/build; \
 	make install; \
 	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/build; \
