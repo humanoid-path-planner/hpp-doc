@@ -59,6 +59,9 @@ test-hpp_repository=${HPP_REPO}
 hrp2_branch=groovy
 hrp2_repository=${JRL_REPO}
 
+hpp-hrp2_branch=master
+hpp-hrp2_repository=${HPP_REPO}
+
 robot_capsule_urdf_branch=groovy
 robot_capsule_urdf_repository=${LAAS_REPO}
 
@@ -91,6 +94,7 @@ hrp2:
 	make robot_model_py.install; \
 	make robot_capsule_urdf.install; \
 	make hrp2.install; \
+	make hpp-hrp2.install \
 	make test-hpp.install;
 
 %.checkout:
