@@ -86,6 +86,16 @@ pkg "hpp-wholebody-step-corba" \
     "git@github.com:laas/hpp-wholebody-step-corba" \
     "path/hpp-wholebody-step-corba"
 
+pkg "hpp-manipulation" \
+    "hpp-manipulation" \
+    "git@github.com:laas/hpp-manipulation" \
+    "path/hpp-manipulation"
+
+pkg "hpp-manipulation-corba" \
+    "hpp-manipulation-corba" \
+    "git@github.com:laas/hpp-manipulation-corba" \
+    "path/hpp-manipulation-corba"
+
 # Retrieve information about wanted package.
 key=`echo "$package" | sed 's/-/_/g'`
 name=$(eval echo "\$name__$key")

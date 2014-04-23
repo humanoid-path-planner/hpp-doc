@@ -67,6 +67,15 @@
 	  <td>Whole-body and walk planning using sliding path approximation.</td>
 	</tr>
       </table>
+      <li><b>Manipulation Planning</b></li>
+      <table class="pkglist">
+	<tr>
+	  <td>
+	    <a href="@HPPMANIPULATION_LINK@">hpp-manipulation</a>
+	  </td>
+	  <td>Manipulation planning.</td>
+	</tr>
+      </table>
 </ul>
 
 <br><br>

@@ -80,6 +80,8 @@ JRL_GENERATELINK([ROBOPTIMTRAJECTORY], [roboptim-trajectory])
 JRL_GENERATELINK([HPPCONSTRAINTS], [hpp-constraints])
 JRL_GENERATELINK([HPPWHOLEBODYSTEP], [hpp-wholebody-step])
 JRL_GENERATELINK([HPPWHOLEBODYSTEPCORBA], [hpp-wholebody-step-corba])
+JRL_GENERATELINK([HPPMANIPULATION], [hpp-manipulation])
+JRL_GENERATELINK([HPPMANIPULATIONCORBA], [hpp-manipulation-corba])
 
 # Generate the list of html stub pages for missing packages that
 # will be generated.
