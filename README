@@ -40,3 +40,8 @@ steps:
 
     make all.
 
+Documentation
+=============
+
+  Open $DEVEL_DIR/install/share/doc/hpp-doc/index.html in a web brower and you
+  will have access to the documentation of most packages.
