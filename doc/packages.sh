@@ -60,6 +60,10 @@ pkg "hpp-model" \
     "git@github.com:laas/hpp-model" \
     "path/hpp-model"
 
+pkg "hpp-model-urdf" \
+    "hpp-model-urdf" \
+    "git@github.com:humanoid-path-planner/hpp-model" \
+    "path/hpp-model"
 
 pkg "roboptim-core" \
     "RobOptim core" \

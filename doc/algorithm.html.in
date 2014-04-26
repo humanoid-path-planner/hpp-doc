@@ -31,9 +31,15 @@
 	<tr>
 	  <td>
 	    <a href="@HPPMODEL_LINK@">hpp-model</a>
-	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>implementation of hybrid geometric and dynamic robot.</td>
+	</tr>
+	<tr>
+	  <td>
+	    <a href="@HPPMODELURDF_LINK@">hpp-model-urdf</a>
+	  </td>
+	  <td>Construction of robots and objects by parsing urdf/srdf files.
+	  </td>
 	</tr>
       </table>
 
@@ -42,7 +48,6 @@
 	<tr>
 	  <td>
 	    <a href="@HPPCORE_LINK@">hpp-core</a>
-	    <img src="images/kineo.jpg" alt="require Kineo SDK" style="kineo">
 	  </td>
 	  <td>definition of basic classes. </td>
 	</tr>
