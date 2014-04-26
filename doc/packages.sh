@@ -47,17 +47,17 @@ fi
 # Package database.
 pkg "hpp-corbaserver" \
     "hpp-corbaserver" \
-    "git@github.com:laas/hpp-corbaserver" \
+    "git@github.com:humanoid-path-planner/hpp-corbaserver" \
     "path/hpp-corbaserver"
 
 pkg "hpp-core" \
     "hpp-core" \
-    "git@github.com:laas/hpp-core" \
+    "git@github.com:humanoid-path-planner/hpp-core" \
     "path/hpp-core"
 
 pkg "hpp-model" \
     "hpp-model" \
-    "git@github.com:laas/hpp-model" \
+    "git@github.com:humanoid-path-planner/hpp-model" \
     "path/hpp-model"
 
 pkg "hpp-model-urdf" \
@@ -77,27 +77,27 @@ pkg "roboptim-trajectory" \
 
 pkg "hpp-constraints" \
     "hpp-constraints" \
-    "git@github.com:laas/hpp-constraints" \
+    "git@github.com:humanoid-path-planner/hpp-constraints" \
     "path/hpp-constraints"
 
 pkg "hpp-wholebody-step" \
     "hpp-wholebody-step" \
-    "git@github.com:laas/hpp-wholebody-step" \
+    "git@github.com:humanoid-path-planner/hpp-wholebody-step" \
     "path/hpp-wholebody-step"
 
 pkg "hpp-wholebody-step-corba" \
     "hpp-wholebody-step-corba" \
-    "git@github.com:laas/hpp-wholebody-step-corba" \
+    "git@github.com:humanoid-path-planner/hpp-wholebody-step-corba" \
     "path/hpp-wholebody-step-corba"
 
 pkg "hpp-manipulation" \
     "hpp-manipulation" \
-    "git@github.com:laas/hpp-manipulation" \
+    "ssh://trac.laas.fr/git/jrl/algo/hpp-manipulation" \
     "path/hpp-manipulation"
 
 pkg "hpp-manipulation-corba" \
     "hpp-manipulation-corba" \
-    "git@github.com:laas/hpp-manipulation-corba" \
+    "ssh://trac.laas.fr/git./jrl/corba/hpp-manipulation-corba" \
     "path/hpp-manipulation-corba"
 
 # Retrieve information about wanted package.
