@@ -97,7 +97,7 @@ pkg "hpp-manipulation" \
 
 pkg "hpp-manipulation-corba" \
     "hpp-manipulation-corba" \
-    "ssh://trac.laas.fr/git./jrl/corba/hpp-manipulation-corba" \
+    "ssh://trac.laas.fr/git/jrl/corba/hpp-manipulation-corba" \
     "path/hpp-manipulation-corba"
 
 # Retrieve information about wanted package.
