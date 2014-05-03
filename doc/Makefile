@@ -94,7 +94,7 @@ hrp2:
 	make robot_model_py.install; \
 	make robot_capsule_urdf.install; \
 	make hrp2.install; \
-	make hpp-hrp2.install \
+	make hpp-hrp2.install; \
 	make test-hpp.install;
 
 %.checkout:
