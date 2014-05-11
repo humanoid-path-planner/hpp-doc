@@ -18,7 +18,7 @@ humanoid) path planning problems.
     
 2. Choose a directory on you file system and define the environment variable DEVEL_DIR with the full path to this directory. The packages will be cloned into $DEVEL_DIR/src, and installed to $DEVEL_DIR/install. Example:
 
-      echo 'export DEVEL_DIR=/home/flamiraux/devel/hpp-stable/' >> ~/.bashrc
+      echo 'export DEVEL_DIR=/home/USERNAME/devel/hpp-stable/' >> ~/.bashrc
 
 3. Copy Config and Makefile
         
@@ -31,5 +31,6 @@ humanoid) path planning problems.
 5. compile the project
 
       cd $DEVEL_DIR/src
+      
       make all
 
