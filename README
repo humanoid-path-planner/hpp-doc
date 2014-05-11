@@ -22,7 +22,9 @@ steps:
     - omniorb-nameserver,
     - omniidl,
     - omniidl-python
-
+    
+        sudo apt-get install ros-groovy-desktop-full ros-groovy-libccd asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python
+    
   2. Choose a directory on you file system and define the environment
      variable DEVEL_DIR with the full path to this directory.
      - the packages will be cloned into $DEVEL_DIR/src,
@@ -30,7 +32,10 @@ steps:
 
   3. Copy
    - https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config.sh in $DEVEL_DIR, and
-   -https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile in $DEVEL_DIR/src 
+   - https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile in $DEVEL_DIR/src 
+   
+        wget https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config.sh $DEVEL_DIR
+        wget https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile $DEVEL_DIR/src
   
   4. cd into $DEVEL_DIR and type
 
