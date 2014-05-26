@@ -16,6 +16,7 @@ steps:
 
   1. install by apt-get (see http://wiki.ros.org/groovy/Installation/Ubuntu)
     - ros-groovy-desktop-full,
+    - ros-groovy-pr2-robot,
     - ros-groovy-libccd,
     - asciidoc,
     - source-highlight,
@@ -26,7 +27,7 @@ steps:
     - omniidl-python
 
 
-        sudo apt-get install ros-groovy-desktop-full ros-groovy-libccd asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python
+        sudo apt-get install ros-groovy-desktop-full ros-groovy-pr2-robot ros-groovy-libccd asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python
 
   2. Choose a directory on you file system and define the environment
      variable DEVEL_DIR with the full path to this directory.

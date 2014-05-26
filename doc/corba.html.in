@@ -13,7 +13,7 @@
     <p>
       The following packages implement Corba communication functionalities
       <ul>
-	<li><a href="@HPPCORBASERVER_LINK@">hpp-corbaserver</a> Corba server to implementing a ChppPlanner object.</li>
+	<li><a href="@HPPCORBASERVER_LINK@">hpp-corbaserver</a> Corba server embedding a hpp::core::ProblemSolver instance.</li>
 	<li><a href="@HPPWHOLEBODYSTEPCORBA_LINK@">hpp-wholebody-step-corba</a> Corba server for <a href="@HPPWHOLEBODYSTEPPLANNER_LINK@">hpp-wholebody-step</a>.</li>
 	<li><a href="@HPPMANIPULATIONCORBA_LINK@">hpp-manipulation-corba</a> Corba server for <a href="@HPPMANIPULATION_LINK@">hpp-manipulation</a>.</li>
       </ul>
