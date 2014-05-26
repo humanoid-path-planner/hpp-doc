@@ -83,7 +83,7 @@ airbus_ros_repository=ssh://trac.laas.fr/git/jrl/ros
 airbus_environment_branch=master
 airbus_environment_repository=ssh://trac.laas.fr/git/jrl/data
 
-all: hpp_ros.install hpp-wholebody-step-corba
+all: hpp_ros.install hpp-wholebody-step-corba.install
 	${MAKE} hpp-doc.install
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
 hrp2: test-hpp.install
