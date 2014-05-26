@@ -4,9 +4,9 @@
 #
 
 FCL_REPO=https://github.com/flexible-collision-library
-JRL_REPO=https://github.com/jrl-umi3218
-LAAS_REPO=https://github.com/laas
-HPP_REPO=https://github.com/humanoid-path-planner
+JRL_REPO=git@github.com:jrl-umi3218
+LAAS_REPO=git@github.com:laas
+HPP_REPO=git@github.com:humanoid-path-planner
 
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
@@ -71,31 +71,74 @@ robot_model_py_repository=${LAAS_REPO}
 hpp-doc_branch=master
 hpp-doc_repository=${HPP_REPO}
 
-all:
-	make eigen3.install; \
-	make fcl.install; \
-	make jrl-mathtools.install; \
-	make hpp-util.install; \
-	make roboptim-core.install; \
-	make roboptim-trajectory.install; \
-	make hpp-model.install; \
-	make hpp-model-urdf.install; \
-	make hpp-core.install; \
-	make hpp-template-corba.install; \
-	make hpp-corbaserver.install; \
-	make hpp-constraints.install; \
-	make hpp-wholebody-step.install; \
-	make hpp-wholebody-step-corba.install; \
-	make hpp_ros.install; \
-	make hpp-doc.install;
+hpp-manipulation_branch=master
+hpp-manipulation_repository=ssh://trac.laas.fr/git/jrl/algo
 
+hpp-manipulation-corba_branch=master
+hpp-manipulation-corba_repository=ssh://trac.laas.fr/git/jrl/corba
+
+airbus_ros_branch=master
+airbus_ros_repository=ssh://trac.laas.fr/git/jrl/ros
+
+airbus_environment_branch=master
+airbus_environment_repository=ssh://trac.laas.fr/git/jrl/data
+
+all: hpp_ros.install hpp-wholebody-step-corba
+	${MAKE} hpp-doc.install
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
-hrp2:
-	make robot_model_py.install; \
-	make robot_capsule_urdf.install; \
-	make hrp2.install; \
-	make hpp-hrp2.install; \
-	make test-hpp.install;
+hrp2: test-hpp.install
+
+fcl.configure.dep: fcl.checkout
+eigen3.configure.dep: eigen3.checkout
+jrl-mathtools.configure.dep: jrl-mathtools.checkout
+hpp-util.configure.dep: hpp-util.checkout
+roboptim-core.configure.dep: eigen3.install roboptim-core.checkout
+roboptim-trajectory.configure.dep: roboptim-core.install \
+	roboptim-trajectory.checkout
+hpp-model.configure.dep: jrl-mathtools.install hpp-util.install fcl.install \
+	eigen3.install hpp-model.checkout
+hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
+hpp-core.configure.dep: hpp-model.install roboptim-trajectory.install \
+	hpp-core.checkout
+hpp-constraints.configure.dep: hpp-core.install hpp-constraints.checkout
+hpp-wholebody-step.configure.dep: hpp-constraints.install \
+	hpp-wholebody-step.checkout
+hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
+	hpp-manipulation.checkout
+hpp-corbaserver.configure.dep: hpp-model-urdf.install hpp-core.install \
+	hpp-constraints.install hpp-corbaserver.checkout
+hpp-wholebody-step-corba.configure.dep: hpp-corbaserver.install \
+	hpp-wholebody-step.install hpp-template-corba.install \
+	hpp-wholebody-step-corba.checkout
+hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
+hpp-manipulation-corba.configure.dep: hpp-manipulation.install \
+	hpp-wholebody-step-corba.install hpp-manipulation.install \
+	hpp-manipulation-corba.checkout
+robot_model_py.configure.dep: robot_model_py.checkout
+robot_capsule_urdf.configure.dep: robot_model_py.install \
+	robot_capsule_urdf.checkout
+hpp-hrp2.configure.dep: hrp2.install hpp-corbaserver.install hpp-hrp2.checkout
+hrp2.configure.dep: robot_capsule_urdf.install robot_model_py.install \
+	hrp2.checkout
+hpp_ros.configure.dep: hpp-corbaserver.install hpp_ros.checkout
+test-hpp.configure.dep: hpp-wholebody-step-corba.install \
+	hpp_ros.install hpp-hrp2.install test-hpp.checkout
+airbus_ros.configure.dep: airbus_environment.install \
+	hpp-manipulation-corba.install airbus_ros.checkout
+airbus_environment.configure.dep: hpp_ros.install airbus_environment.checkout
+
+status:
+	for d in eigen3 fcl jrl-mathtools hpp-util roboptim-core roboptim-trajectory hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp_ros hpp-manipulation hpp-manipulation-corba airbus_ros airbus_environment hpp-doc ; do \
+	cd ${SRC_DIR}/$$d;\
+	echo "---------------------------------------------------------------";\
+	echo $$d;\
+	echo "---------------------------------------------------------------";\
+	git status; done
+
+update:
+	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp_ros hpp-manipulation hpp-manipulation-corba airbus_ros airbus_environment hpp-doc ; do \
+	echo "Updating $$d";\
+	make $$d.update; done
 
 %.checkout:
 	if [ -d $(@:.checkout=) ]; then \
@@ -114,7 +157,7 @@ hrp2:
 	git branch -D bce46g;\
 	git submodule update
 
-%.configure:%.checkout
+%.configure:%.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=);\
 	mkdir -p build; \
 	cd ${SRC_DIR}/$(@:.configure=)/build; \
@@ -152,13 +195,13 @@ eigen3.checkout:
 		rm -f eigen3.tar; mv eigen-eigen-6b38706d90a9 eigen3;\
 	fi
 
-eigen3.configure: eigen3.checkout
+eigen3.configure: eigen3.configure.dep
 	cd ${SRC_DIR}/eigen3;\
 	mkdir -p build; \
 	cd ${SRC_DIR}/eigen3/build; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
 
-hrp2.configure: hrp2.checkout
+hrp2.configure: hrp2.configure.dep
 	. ${DEVEL_DIR}/install/setup.sh; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
 	mkdir -p build; \
@@ -169,7 +212,7 @@ hrp2.install: hrp2.configure
 	cd ${SRC_DIR}/hrp2/hrp2_14_description/build;\
 	make install
 
-robot_model_py.configure: robot_model_py.checkout
+robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
 	mkdir -p build; \
 	cd build; \
