@@ -83,6 +83,12 @@ airbus_ros_repository=ssh://trac.laas.fr/git/jrl/ros
 airbus_environment_branch=master
 airbus_environment_repository=ssh://trac.laas.fr/git/jrl/data
 
+robot_state_chain_publisher_branch=master
+robot_state_chain_publisher_repository=${HPP_REPO}
+
+iai_maps_branch=master
+iai_maps_repository=${HPP_REPO}
+
 all: hpp_ros.install hpp-wholebody-step-corba.install
 	${MAKE} hpp-doc.install
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
@@ -126,6 +132,8 @@ test-hpp.configure.dep: hpp-wholebody-step-corba.install \
 airbus_ros.configure.dep: airbus_environment.install \
 	hpp-manipulation-corba.install airbus_ros.checkout
 airbus_environment.configure.dep: hpp_ros.install airbus_environment.checkout
+robot_state_chain_publisher.configure.dep: robot_state_chain_publisher.checkout
+iai_maps.configure.dep: robot_state_chain_publisher.install iai_maps.checkout
 
 status:
 	for d in eigen3 fcl jrl-mathtools hpp-util roboptim-core roboptim-trajectory hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp_ros hpp-manipulation hpp-manipulation-corba airbus_ros airbus_environment hpp-doc ; do \
