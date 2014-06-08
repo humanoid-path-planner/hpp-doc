@@ -14,10 +14,11 @@ humanoid) path planning problems.
 To install all the packages under ubuntu 12.04 LTS, you should do the following
 steps:
 
-  1. install by apt-get (see http://wiki.ros.org/groovy/Installation/Ubuntu)
-    - ros-groovy-desktop-full,
-    - ros-groovy-pr2-robot,
-    - ros-groovy-libccd,
+  1. install by apt-get (see http://wiki.ros.org/hydro/Installation/Ubuntu)
+    - ros-hydro-desktop-full,
+    - ros-hydro-pr2-robot,
+    - ros-hydro-libccd,
+    - ros-hydro-srdfdom,
     - asciidoc,
     - source-highlight,
     - git,
@@ -27,7 +28,7 @@ steps:
     - omniidl-python
 
 
-        sudo apt-get install ros-groovy-desktop-full ros-groovy-pr2-robot ros-groovy-libccd asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python
+        sudo apt-get install ros-hydro-desktop-full ros-hydro-pr2-robot ros-hydro-libccd ros-hydro-srdfdom asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python
 
   2. Choose a directory on you file system and define the environment
      variable DEVEL_DIR with the full path to this directory.
