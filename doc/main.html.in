@@ -20,8 +20,8 @@
   <body>
 
 <h1>Humanoid Path Planner Documentation</h1>
-<p>
-<h2> Introduction </h2>
+<p></p>
+<h2>Introduction</h2>
 
 HPP (Humanoid Path Planner) is a collection of software packages
 implementing path planning functionalities for a humanoid robot.
@@ -31,16 +31,55 @@ The core functionalities are well suited to solve classical path planning proble
 It can be extended to path planning for other types of robots like digital actors for instance.
 
 
-<h2> Organization of the packages </h2>
+<h2>Installation</h2>
+
+<p>Installation instructions can be found on
+<a href="https://github.com/humanoid-path-planner/hpp-doc">github</a>.
+Select branch
+<a href="https://github.com/humanoid-path-planner/hpp-doc/tree/ros-hydro"> ros-hydro</a> or
+<a href="https://github.com/humanoid-path-planner/hpp-doc/tree/ros-groovy">
+ros-groovy</a> and follow the instructions provided at the bottom of the page.
+</p>
+
+<h2>Overview of the architecture</h2>
 
 <p>The code relative to HPP is distributed into several software
-packages handled by <a href="http://www.cmake.org">CMake</a>.</p>
+packages. See <a href="graph-dependency.html">dependency graph</a> for a quick
+  view of the package hierarchy.</p>
 
 <p>The packages are distributed into the following categories:</p>
 <ul>
 <li><a href="algorithm.html">Algorithms</a> implementing path planning functionalities</li>
 <li><a href="corba.html">Corba</a> communication facilities to control algorithms</li>
+<li><a href="ros.html">Ros</a> connection with ros for loading models and displaying in rviz.
 </ul>
+<p></p>
+<table>
+  <tr><td width="50%">
+      <a href="figures/archi.png"><image src="figures/archi.png" width="100%"/></a>
+  </td><td width="5%">
+  </td><td width="30%">
+    The algorithmic part, built on <a href="@HPPCORE_LINK@">hpp-core</a> is
+    embedded in corba servers implemented by
+    <a href="@HPPCORBASERVER_LINK@">hpp-corbaserver</a> or extensions like
+    <a href="@HPPWHOLEBODYSTEPCORBA_LINK@">hpp-wholebody-step-corba</a>.
+    The corba servers are linked to executable <code>hppcorbaserver</code>.
+    <p></p>
+    From a python terminal, clients to the corba servers can be created in order
+    to control the executable. The control of the application is performed via
+    idl interfaces and python classes available in <a href="corba.html">corba
+    </a> packages.
+    <p></p>
+    Results of path planning requests as well as individual configurations can
+    be displayed in rviz via a ros node implemented by package <code>hpp_ros
+    </code>.
+  </td></tr>
+</table>
+
+<h2>Getting started</h2>
+
+Package <a href="@HPPTUTORIAL_LINK@">hpp-tutorial</a> provide some examples of
+how to use this project.
 
 </body>
 </html>

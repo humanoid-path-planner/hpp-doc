@@ -92,8 +92,9 @@ iai_maps_repository=${HPP_REPO}
 hpp_tutorial_branch=master
 hpp_tutorial_repository=${HPP_REPO}
 
-all: hpp_ros.install hpp-wholebody-step-corba.install
+all: hpp_tutorial.install hpp-wholebody-step-corba.install
 	${MAKE} hpp-doc.install
+
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
 hrp2: test-hpp.install
 

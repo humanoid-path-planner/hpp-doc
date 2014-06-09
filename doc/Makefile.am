@@ -46,7 +46,8 @@ DOC_EXTRA =				\
 	custom.css			\
 	doxygen.css			\
 	figures/archi.png		\
-	figures/kppInterfaceWalk.png	\
+	figures/python.png		\
+	figures/rviz.png		\
 	images/dependencies.png		\
 	images/film.png			\
 	images/footer.jpg		\
@@ -103,6 +104,7 @@ DOC_EXTRA +=
 nobase_html_DATA =			\
 	algorithm.html			\
 	corba.html			\
+	ros.html			\
 	graph-dependency.html		\
 	index.html			\
 	main.html			\

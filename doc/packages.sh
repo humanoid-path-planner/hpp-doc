@@ -100,6 +100,11 @@ pkg "hpp-manipulation-corba" \
     "ssh://trac.laas.fr/git/jrl/corba/hpp-manipulation-corba" \
     "path/hpp-manipulation-corba"
 
+pkg "hpp_ros" \
+    "hpp_ros" \
+    "git@github.com:humanoid-path-planner/hpp_ros" \
+    "path/hpp_ros"
+
 # Retrieve information about wanted package.
 key=`echo "$package" | sed 's/-/_/g'`
 name=$(eval echo "\$name__$key")

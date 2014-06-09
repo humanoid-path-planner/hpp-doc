@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link href="doxygen.css" rel="stylesheet" type="text/css">
+    <link href="tabs.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+    <title>Humanoid Path Planner documentation</title>
+  </head>
+  <body>
+    <h1>Packages implementing ROS interfaces</h1>
+
+    <p>
+      The following packages implement Corba communication functionalities
+      <ul>
+	<li><b>hpp_ros</b> display of robot configurations,
+	  obstacles and paths in rviz</li>
+	<li><a href="@HPPMODELURDF_LINK@">hpp-model-urdf</a> Construction of
+	  robots and objects by parsing urdf/srdf files.</li>
+    </p>
+
+    <br><br>
+    <hr>
+    <center>
+      <img src="images/footer.jpg" height="100" alt="footer"><br>
+      Humanoid Path Planner documentation<br>
+    </center>
+  </body>
+</html>

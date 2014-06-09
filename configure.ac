@@ -56,7 +56,11 @@ if test $pkg_failed = yes; then
    AC_MSG_RESULT([no])
 else
    if test x`$PKG_CONFIG $PKGNAME --variable=doxygendocdir` = x; then
-      docPrefix=`$PKG_CONFIG $PKGNAME --variable=docdir`/html
+      if test x`$PKG_CONFIG $PKGNAME --variable=docdir` = x; then
+        docPrefix=`$PKG_CONFIG $PKGNAME --variable=prefix`/share/doc/$PKGNAME/doxygen-html
+      else
+        docPrefix=docPrefix=`$PKG_CONFIG $PKGNAME --variable=docdir`
+      fi
    else
       docPrefix=`$PKG_CONFIG $PKGNAME --variable=doxygendocdir`
    fi
@@ -83,6 +87,8 @@ JRL_GENERATELINK([HPPWHOLEBODYSTEP], [hpp-wholebody-step])
 JRL_GENERATELINK([HPPWHOLEBODYSTEPCORBA], [hpp-wholebody-step-corba])
 JRL_GENERATELINK([HPPMANIPULATION], [hpp-manipulation])
 JRL_GENERATELINK([HPPMANIPULATIONCORBA], [hpp-manipulation-corba])
+JRL_GENERATELINK([HPPROS], [hpp_ros])
+JRL_GENERATELINK([HPPTUTORIAL], [hpp_tutorial])
 
 # Generate the list of html stub pages for missing packages that
 # will be generated.
@@ -100,7 +106,7 @@ AC_CONFIG_FILES([
 	 doc/corba.html
 	 doc/algorithm.html
 	 doc/kpp-interface.html
-	 doc/robotic-component.html
+	 doc/ros.html
 	 doc/main.html
 	 doc/index.html
 	 doc/tree.html

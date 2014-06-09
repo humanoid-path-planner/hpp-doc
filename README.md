@@ -9,9 +9,12 @@ Humanoid Path Planner is a software platform aimed at solving motion planning
 problems for humanoid robots. It is also designed to solve classical (non
 humanoid) path planning problems.
 
-##Installation
+##Installation on ubuntu-12.04 with ros-hydro
 
-To install all the packages under ubuntu 12.04 LTS, you should do the following
+Installation with ros-groovy can be found by checking out branch ros-groovy
+of this package.
+
+To install all the packages on ubuntu 12.04 LTS, you should do the following
 steps:
 
   1. install by apt-get (see http://wiki.ros.org/hydro/Installation/Ubuntu)

@@ -72,6 +72,7 @@
         <div id="folder2">
           <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="algorithm.html" target="basefrm">Algorithms</a></p>
           <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="corba.html" target="basefrm">Corba interfaces</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="ros.html" target="basefrm">Ros</a></p>
         </div>
 
 	<p><img src="images/ftv2lastnode.png" alt="\" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="graph-dependency.html" target="basefrm">Dependencies</a></p>
