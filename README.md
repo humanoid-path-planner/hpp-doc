@@ -11,7 +11,7 @@ humanoid) path planning problems.
 
 ##Installation on ubuntu-12.04 with ros-hydro
 
-Installation with ros-groovy can be found by checking out branch ros-groovy
+Installation instructions with ros-groovy can be found by checking out branch ros-groovy
 of this package.
 
 To install all the packages on ubuntu 12.04 LTS, you should do the following
@@ -41,7 +41,8 @@ steps:
 
   3. Copy Config and Makefile
         
-        wget https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config.sh $DEVEL_DIR && wget https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile $DEVEL_DIR/src
+        wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config.sh
+	wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile
   
   4. cd into $DEVEL_DIR and type
 
