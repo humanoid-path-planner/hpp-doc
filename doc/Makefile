@@ -12,7 +12,7 @@ SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
 
 fcl_branch=master
-fcl_repository=${FCL_REPO}
+fcl_repository=${HPP_REPO}
 
 jrl-mathtools_branch=master
 jrl-mathtools_repository=${HPP_REPO}
