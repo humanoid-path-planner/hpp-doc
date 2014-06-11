@@ -59,6 +59,7 @@ packages. See <a href="graph-dependency.html">dependency graph</a> for a quick
       <a href="figures/archi.png"><image src="figures/archi.png" width="100%"/></a>
   </td><td width="5%">
   </td><td width="30%">
+    <b>Click on the picture to enlarge it.</b>
     The algorithmic part, built on <a href="@HPPCORE_LINK@">hpp-core</a> is
     embedded in corba servers implemented by
     <a href="@HPPCORBASERVER_LINK@">hpp-corbaserver</a> or extensions like

@@ -13,7 +13,7 @@
     <p>
       The following packages implement Corba communication functionalities
       <ul>
-	<li><b>hpp_ros</b> display of robot configurations,
+	<li><a href="@HPPROS_LINK@">hpp_ros</a> display of robot configurations,
 	  obstacles and paths in rviz</li>
 	<li><a href="@HPPMODELURDF_LINK@">hpp-model-urdf</a> Construction of
 	  robots and objects by parsing urdf/srdf files.</li>
