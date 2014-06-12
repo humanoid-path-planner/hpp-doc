@@ -72,8 +72,8 @@ packages. See <a href="graph-dependency.html">dependency graph</a> for a quick
     </a> packages.
     <p></p>
     Results of path planning requests as well as individual configurations can
-    be displayed in rviz via a ros node implemented by package <code>hpp_ros
-    </code>.
+    be displayed in rviz via a ros node implemented by package
+    <code><a href="@HPPROS_LINK@">hpp_ros</a></code>.
   </td></tr>
 </table>
 
@@ -81,6 +81,11 @@ packages. See <a href="graph-dependency.html">dependency graph</a> for a quick
 
 Package <a href="@HPPTUTORIAL_LINK@">hpp-tutorial</a> provide some examples of
 how to use this project.
+<p></p>
+<table>
+  <tr><td width="100">
+  </td></tr>
+</table>
 
 </body>
 </html>
