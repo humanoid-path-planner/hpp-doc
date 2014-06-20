@@ -32,13 +32,13 @@
 	  <td>
 	    <a href="@HPPMODEL_LINK@">hpp-model</a>
 	  </td>
-	  <td>implementation of hybrid geometric and dynamic robot.</td>
+	  <td>implementation of kinematic chain with dynamic computations,</td>
 	</tr>
 	<tr>
 	  <td>
 	    <a href="@HPPMODELURDF_LINK@">hpp-model-urdf</a>
 	  </td>
-	  <td>Construction of robots and objects by parsing urdf/srdf files.
+	  <td>construction of robots and objects by parsing urdf/srdf files,
 	  </td>
 	</tr>
       </table>
@@ -49,7 +49,7 @@
 	  <td>
 	    <a href="@HPPCORE_LINK@">hpp-core</a>
 	  </td>
-	  <td>definition of basic classes. </td>
+	  <td>definition of basic classes, path planning problems and solvers,</td>
 	</tr>
       </table>
 
@@ -59,7 +59,7 @@
 	  <td>
 	    <a href="@HPPCONSTRAINTS_LINK@">hpp-constraints</a>
 	  </td>
-	  <td>Motion planning for systems subject to nonlinear constraints</td>
+	  <td>definition of some nonlinear constraints,</td>
 	</tr>
       </table>
 
@@ -69,7 +69,7 @@
 	  <td>
 	    <a href="@HPPWHOLEBODYSTEP_LINK@">hpp-wholebody-step</a>
 	  </td>
-	  <td>Whole-body and walk planning using sliding path approximation.</td>
+	  <td>whole-body and walk planning using sliding path approximation.</td>
 	</tr>
       </table>
       <li><b>Manipulation Planning</b></li>
