@@ -51,6 +51,8 @@ steps:
 
   5. cd into $DEVEL_DIR/src and type
 
+    make robot_state_chain_publisher.install
+    source ../config.sh
     make all.
 
 ##Documentation
