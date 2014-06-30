@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# install-remote-doc $DEVEL_DIR/install/share/doc http://homepages.laas.fr/florent/hpp
+# then copy /tmp/hpp.tar.gz on server and inflate archive.
+
+usage="usage: $0 directory server\n"
+
+if [ -d $1 ]; then
+   rm -rf /tmp/hpp
+   cp -r $1 /tmp/hpp
+   files=`find /tmp/hpp -type f | xargs echo`
+   echo "\"s|$1|$2|g\""
+   for f in $files; do
+       echo "$f"
+       sed "s|$1|$2|g" $f > $f.tmp
+       mv $f.tmp $f
+   done
+   cd /tmp; tar czf hpp.tar.gz hpp
+   rm -rf hpp
+   exit 0
+else
+	echo $usage;
+	exit 1;
+fi
