@@ -65,9 +65,9 @@
     <div class="directory">
       <h3>Humanoid Path Planner</h3>
       <div style="display: block;">
-	<p><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="main.html" target="basefrm">Home</a></p>
+	<p><img id="togglebuttonminus" src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="main.html" target="basefrm">Home</a></p>
 
-        <p><img src="images/ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder2', this)"/><img src="images/ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder2', this)"/>Packages type</p>
+        <p><img id="togglebuttonplus" src="images/ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder2', this)"/><img src="images/ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder2', this)"/>Packages type</p>
 
         <div id="folder2">
           <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="algorithm.html" target="basefrm">Algorithms</a></p>
@@ -77,6 +77,10 @@
         </div>
 
 	<p><img src="images/ftv2lastnode.png" alt="\" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="graph-dependency.html" target="basefrm">Dependencies</a></p>
+
+  <script type="text/javascript">
+    toggleFolder('folder2', document.getElementById('togglebuttonplus'));
+  </script>
 
   </body>
 </html>
