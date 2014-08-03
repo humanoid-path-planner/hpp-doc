@@ -30,6 +30,12 @@
       <table class="pkglist">
 	<tr>
 	  <td>
+	    <a href="@FCL_LINK@">Flexible collision library</a>
+	  </td>
+	  <td>Collision detection and distance computation,</td>
+	</tr>
+	<tr>
+	  <td>
 	    <a href="@HPPMODEL_LINK@">hpp-model</a>
 	  </td>
 	  <td>implementation of kinematic chain with dynamic computations,</td>
