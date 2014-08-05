@@ -142,12 +142,15 @@ hpp_tutorial.configure.dep: iai_maps.install hpp-corbaserver.install \
 	hpp_ros.install hpp_tutorial.checkout
 
 status:
-	for d in eigen3 fcl jrl-mathtools hpp-util roboptim-core roboptim-trajectory hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp_ros hpp-manipulation hpp-manipulation-corba airbus_ros airbus_environment hpp-doc ; do \
-	cd ${SRC_DIR}/$$d;\
-	echo "---------------------------------------------------------------";\
-	echo $$d;\
-	echo "---------------------------------------------------------------";\
-	git status; done
+	@for child_dir in $$(ls ${SRC_DIR}); do \
+		test -d "$$child_dir" || continue; \
+		test -d "$$child_dir/.git" || continue; \
+		cd "$$child_dir";\
+		echo \
+		"\033[1;36m------- Folder $$child_dir ---------------\033[0m"; \
+		git --no-pager -c status.showUntrackedFiles=no status; \
+		cd ..; \
+	done
 
 update:
 	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp_ros hpp-manipulation hpp-manipulation-corba airbus_ros airbus_environment hpp-doc ; do \
@@ -188,6 +191,9 @@ update:
 %.clean:
 	cd ${SRC_DIR}/$(@:.clean=)/build;\
 	make clean
+
+%.very-clean:
+	rm -rf ${SRC_DIR}/$(@:.very-clean=)/build/*
 
 %.status:
 	cd ${SRC_DIR}/$(@:.status=); git status
