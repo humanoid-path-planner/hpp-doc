@@ -10,6 +10,16 @@
   <body>
     <h1>Packages implementing algorithms</h1>
 
+      <h3>Technical tools</h3>
+      <table class="pkglist">
+	<tr>
+	  <td>
+	    <a href="@HPPUTIL_LINK@">hpp-util</a>
+	  </td>
+	  <td>technical tools for the HPP project (logging, benchmark, quality assurance tools),</td>
+	</tr>
+      </table>
+
     <h3>Motion planning for humanoid systems</h3>
 
     <table class="pkglist">
