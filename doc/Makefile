@@ -152,6 +152,13 @@ status:
 		cd ..; \
 	done
 
+log:
+	@for child_dir in $$(ls ${SRC_DIR}); do \
+		test -d "$$child_dir" || continue; \
+		test -d "$$child_dir/.git" || continue; \
+		${MAKE} "$$child_dir".log; \
+	done
+
 update:
 	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp_ros hpp-manipulation hpp-manipulation-corba airbus_ros airbus_environment hpp-doc ; do \
 	echo "Updating $$d";\
@@ -197,6 +204,14 @@ update:
 
 %.status:
 	cd ${SRC_DIR}/$(@:.status=); git status
+
+%.log:
+	@cd ${SRC_DIR}/$(@:.log=); \
+	if [ -f .git/refs/heads/${$(@:.log=)_branch} ]; then \
+		echo -n "$(@:.log=): "; \
+		cat .git/refs/heads/${$(@:.log=)_branch}; \
+	fi
+
 
 hpp-doc.configure: hpp-doc.checkout
 	cd ${SRC_DIR}/$(@:.configure=);\
