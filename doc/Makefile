@@ -148,7 +148,7 @@ status:
 		cd "$$child_dir";\
 		echo \
 		"\033[1;36m------- Folder $$child_dir ---------------\033[0m"; \
-		git --no-pager -c status.showUntrackedFiles=no status; \
+		git --no-pager -c status.showUntrackedFiles=no status --short --branch; \
 		cd ..; \
 	done
 
