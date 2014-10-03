@@ -14,9 +14,6 @@ BUILD_TYPE=Debug
 fcl_branch=master
 fcl_repository=${HPP_REPO}
 
-jrl-mathtools_branch=master
-jrl-mathtools_repository=${HPP_REPO}
-
 hpp-util_branch=master
 hpp-util_repository=${HPP_REPO}
 
@@ -100,12 +97,11 @@ hrp2: test-hpp.install
 
 fcl.configure.dep: fcl.checkout
 eigen3.configure.dep: eigen3.checkout
-jrl-mathtools.configure.dep: jrl-mathtools.checkout
 hpp-util.configure.dep: hpp-util.checkout
 roboptim-core.configure.dep: eigen3.install roboptim-core.checkout
 roboptim-trajectory.configure.dep: roboptim-core.install \
 	roboptim-trajectory.checkout
-hpp-model.configure.dep: jrl-mathtools.install hpp-util.install fcl.install \
+hpp-model.configure.dep: hpp-util.install fcl.install \
 	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 hpp-core.configure.dep: hpp-model.install roboptim-trajectory.install \
@@ -185,7 +181,7 @@ update:
 	cd ${SRC_DIR}/$(@:.configure=);\
 	mkdir -p build; \
 	cd ${SRC_DIR}/$(@:.configure=)/build; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ..
 
 %.install:%.configure
 	cd ${SRC_DIR}/$(@:.install=)/build;\
