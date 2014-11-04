@@ -30,7 +30,7 @@
       <table class="pkglist">
 	<tr>
 	  <td>
-	    <a href="@FCL_LINK@">Flexible collision library</a>
+	    <a href="@FCL_LINK@">Modified version of Flexible collision library</a>
 	  </td>
 	  <td>Collision detection and distance computation,</td>
 	</tr>

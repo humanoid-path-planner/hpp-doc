@@ -45,10 +45,10 @@ fi
 
 
 # Package database.
-pkg "fcl" \
-    "fcl" \
+pkg "hpp-fcl" \
+    "hpp-fcl" \
     "git@github.com:humanoid-path-planner/fcl" \
-    "path/fcl"
+    "path/hpp-fcl"
 
 pkg "hpp-corbaserver" \
     "hpp-corbaserver" \
