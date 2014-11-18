@@ -73,6 +73,12 @@
 	  </td>
 	  <td>Manipulation planning.</td>
 	</tr>
+	<tr>
+	  <td>
+	    <a href="@HPPMANIPULATIONURDF_LINK@">hpp-manipulation-urdf</a>
+	  </td>
+	  <td>Enhance hpp-model-urdf to support datas required by hpp-manipulation.</td>
+	</tr>
       </table>
 </ul>
 
