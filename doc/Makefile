@@ -11,8 +11,8 @@ HPP_REPO=https://github.com/humanoid-path-planner
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
 
-fcl_branch=master
-fcl_repository=${HPP_REPO}
+hpp-fcl_branch=master
+hpp-fcl_repository=${HPP_REPO}
 
 hpp-util_branch=master
 hpp-util_repository=${HPP_REPO}
@@ -95,13 +95,13 @@ all: hpp_tutorial.install hpp-wholebody-step-corba.install
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
 hrp2: test-hpp.install
 
-fcl.configure.dep: fcl.checkout
+hpp-fcl.configure.dep: hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
 hpp-util.configure.dep: hpp-util.checkout
 roboptim-core.configure.dep: eigen3.install roboptim-core.checkout
 roboptim-trajectory.configure.dep: roboptim-core.install \
 	roboptim-trajectory.checkout
-hpp-model.configure.dep: hpp-util.install fcl.install \
+hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 hpp-core.configure.dep: hpp-model.install roboptim-trajectory.install \
