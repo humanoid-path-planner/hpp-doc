@@ -17,12 +17,6 @@ hpp-fcl_repository=${HPP_REPO}
 hpp-util_branch=master
 hpp-util_repository=${HPP_REPO}
 
-roboptim-core_branch=master
-roboptim-core_repository=https://github.com/roboptim
-
-roboptim-trajectory_branch=master
-roboptim-trajectory_repository=https://github.com/roboptim
-
 hpp-model_branch=master
 hpp-model_repository=${HPP_REPO}
 
@@ -98,15 +92,11 @@ hrp2: test-hpp.install
 hpp-fcl.configure.dep: hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
 hpp-util.configure.dep: hpp-util.checkout
-roboptim-core.configure.dep: eigen3.install roboptim-core.checkout
-roboptim-trajectory.configure.dep: roboptim-core.install \
-	roboptim-trajectory.checkout
 hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
-hpp-core.configure.dep: hpp-model.install roboptim-trajectory.install \
-	hpp-core.checkout
-hpp-constraints.configure.dep: hpp-core.install hpp-constraints.checkout
+hpp-core.configure.dep: hpp-constraints.install hpp-core.checkout
+hpp-constraints.configure.dep: hpp-model.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
