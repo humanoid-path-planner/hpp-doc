@@ -49,16 +49,6 @@
 	</tr>
       </table>
 
-      <li><b>Path planning</b></li>
-      <table class="pkglist">
-	<tr>
-	  <td>
-	    <a href="@HPPCORE_LINK@">hpp-core</a>
-	  </td>
-	  <td>definition of basic classes, path planning problems and solvers,</td>
-	</tr>
-      </table>
-
       <li><b>Non linear constraints</b></li>
       <table class="pkglist">
 	<tr>
@@ -66,6 +56,16 @@
 	    <a href="@HPPCONSTRAINTS_LINK@">hpp-constraints</a>
 	  </td>
 	  <td>definition of some nonlinear constraints,</td>
+	</tr>
+      </table>
+
+      <li><b>Path planning</b></li>
+      <table class="pkglist">
+	<tr>
+	  <td>
+	    <a href="@HPPCORE_LINK@">hpp-core</a>
+	  </td>
+	  <td>definition of basic classes, path planning problems and solvers,</td>
 	</tr>
       </table>
 
