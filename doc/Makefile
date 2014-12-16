@@ -99,7 +99,7 @@ hpp_tutorial_repository=${TRAC_REPO}
 hpp_benchmark_branch=master
 hpp_benchmark_repository=${HPP_REPO}
 
-all: hpp_tutorial.install hpp-wholebody-step-corba.install
+all: hpp_tutorial.install hpp-manipulation-corba.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
