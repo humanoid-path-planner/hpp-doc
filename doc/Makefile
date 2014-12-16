@@ -5,8 +5,12 @@
 
 FCL_REPO=https://github.com/flexible-collision-library
 JRL_REPO=https://github.com/jrl-umi3218
-LAAS_REPO=https://github.com/laas
-HPP_REPO=https://github.com/humanoid-path-planner
+LAAS_REPO=git@github.com:laas
+HPP_REPO=git@github.com:humanoid-path-planner
+FLORENT_REPO=git@github.com:florent-lamiraux
+TRAC_REPO=ssh://trac.laas.fr/git/jrl
+JOSEPH_REPO=git@github.com:billx09
+TINYXML2_REPO=git@github.com:leethomason
 
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
@@ -23,17 +27,20 @@ hpp-model_repository=${HPP_REPO}
 hpp-model-urdf_branch=master
 hpp-model-urdf_repository=${HPP_REPO}
 
+hpp-statistics_branch=master
+hpp-statistics_repository=${TRAC_REPO}/algo
+
 hpp-core_branch=master
-hpp-core_repository=${HPP_REPO}
+hpp-core_repository=${TRAC_REPO}/algo
 
 hpp-template-corba_branch=master
 hpp-template-corba_repository=${LAAS_REPO}
 
 hpp-corbaserver_branch=master
-hpp-corbaserver_repository=${HPP_REPO}
+hpp-corbaserver_repository=${TRAC_REPO}/corba
 
 hpp-constraints_branch=master
-hpp-constraints_repository=${HPP_REPO}
+hpp-constraints_repository=${TRAC_REPO}/algo
 
 hpp-wholebody-step_branch=master
 hpp-wholebody-step_repository=${HPP_REPO}
@@ -42,16 +49,16 @@ hpp-wholebody-step-corba_branch=master
 hpp-wholebody-step-corba_repository=${HPP_REPO}
 
 hpp_ros_branch=master
-hpp_ros_repository=${HPP_REPO}
+hpp_ros_repository=${TRAC_REPO}/ros
 
 test-hpp_branch=master
-test-hpp_repository=${HPP_REPO}
+test-hpp_repository=${TRAC_REPO}/test
 
 hrp2_branch=groovy
 hrp2_repository=${JRL_REPO}
 
 hpp-hrp2_branch=master
-hpp-hrp2_repository=${HPP_REPO}
+hpp-hrp2_repository=${TRAC_REPO}/algo
 
 robot_capsule_urdf_branch=groovy
 robot_capsule_urdf_repository=${LAAS_REPO}
@@ -60,19 +67,25 @@ robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
 hpp-doc_branch=master
-hpp-doc_repository=${HPP_REPO}
+hpp-doc_repository=${TRAC_REPO}/doc
 
 hpp-manipulation_branch=master
-hpp-manipulation_repository=ssh://trac.laas.fr/git/jrl/algo
+hpp-manipulation_repository=${TRAC_REPO}/algo
+
+tinyxml2_branch=master
+tinyxml2_repository=${TINYXML2_REPO}
+
+hpp-manipulation-urdf_branch=master
+hpp-manipulation-urdf_repository=${TRAC_REPO}/algo
 
 hpp-manipulation-corba_branch=master
-hpp-manipulation-corba_repository=ssh://trac.laas.fr/git/jrl/corba
+hpp-manipulation-corba_repository=${TRAC_REPO}/corba
 
 airbus_ros_branch=master
-airbus_ros_repository=ssh://trac.laas.fr/git/jrl/ros
+airbus_ros_repository=${TRAC_REPO}/ros
 
 airbus_environment_branch=master
-airbus_environment_repository=ssh://trac.laas.fr/git/jrl/data
+airbus_environment_repository=${TRAC_REPO}/data
 
 robot_state_chain_publisher_branch=master
 robot_state_chain_publisher_repository=${HPP_REPO}
@@ -81,7 +94,10 @@ iai_maps_branch=master
 iai_maps_repository=${HPP_REPO}
 
 hpp_tutorial_branch=master
-hpp_tutorial_repository=${HPP_REPO}
+hpp_tutorial_repository=${TRAC_REPO}
+
+hpp_benchmark_branch=master
+hpp_benchmark_repository=${HPP_REPO}
 
 all: hpp_tutorial.install hpp-wholebody-step-corba.install
 	${MAKE} hpp-doc.install
@@ -95,19 +111,24 @@ hpp-util.configure.dep: hpp-util.checkout
 hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
-hpp-core.configure.dep: hpp-constraints.install hpp-core.checkout
+hpp-statistics.configure.dep: hpp-statistics.checkout
+hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
+	hpp-core.checkout
 hpp-constraints.configure.dep: hpp-model.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
+tinyxml2.configure.dep: 
+hpp-manipulation-urdf.configure.dep:hpp-manipulation.install tinyxml2.install \
+	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-model-urdf.install hpp-core.install \
 	hpp-constraints.install hpp-corbaserver.checkout
 hpp-wholebody-step-corba.configure.dep: hpp-corbaserver.install \
 	hpp-wholebody-step.install hpp-template-corba.install \
 	hpp-wholebody-step-corba.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
-hpp-manipulation-corba.configure.dep: hpp-manipulation.install \
+hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
 	hpp-wholebody-step-corba.install hpp-manipulation.install \
 	hpp-manipulation-corba.checkout
 robot_model_py.configure.dep: robot_model_py.checkout
@@ -126,6 +147,7 @@ robot_state_chain_publisher.configure.dep: robot_state_chain_publisher.checkout
 iai_maps.configure.dep: robot_state_chain_publisher.install iai_maps.checkout
 hpp_tutorial.configure.dep: iai_maps.install hpp-corbaserver.install \
 	hpp_ros.install hpp_tutorial.checkout
+hpp_benchmark.configure.dep: hpp_benchmark.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
