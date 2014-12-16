@@ -94,7 +94,7 @@ iai_maps_branch=master
 iai_maps_repository=${HPP_REPO}
 
 hpp_tutorial_branch=master
-hpp_tutorial_repository=${TRAC_REPO}
+hpp_tutorial_repository=${TRAC_REPO}/algo
 
 hpp_benchmark_branch=master
 hpp_benchmark_repository=${HPP_REPO}
@@ -119,7 +119,7 @@ hpp-wholebody-step.configure.dep: hpp-constraints.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
-tinyxml2.configure.dep: 
+tinyxml2.configure.dep: tinyxml2.checkout
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install tinyxml2.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-model-urdf.install hpp-core.install \
