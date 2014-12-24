@@ -18,6 +18,7 @@ To install all the packages on ubuntu 12.04 LTS, you should do the following
 steps:
 
   1. install by apt-get (see http://wiki.ros.org/hydro/Installation/Ubuntu)
+    - autotools-dev,
     - ros-hydro-desktop-full,
     - ros-hydro-pr2-robot,
     - ros-hydro-libccd,
@@ -28,10 +29,11 @@ steps:
     - libomniorb4-dev,
     - omniorb-nameserver,
     - omniidl,
-    - omniidl-python
+    - omniidl-python,
+    - nvidia-cg-toolkit
 
 
-        sudo apt-get install ros-hydro-desktop-full ros-hydro-pr2-robot ros-hydro-libccd ros-hydro-srdfdom asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python
+        sudo apt-get install autotools-dev ros-hydro-desktop-full ros-hydro-pr2-robot ros-hydro-libccd ros-hydro-srdfdom asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python nvidia-cg-toolkit
 
   2. Choose a directory on you file system and define the environment
      variable DEVEL_DIR with the full path to this directory.
