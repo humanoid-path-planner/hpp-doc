@@ -10,20 +10,7 @@
   <body>
     <h1>Packages implementing algorithms</h1>
 
-    <h3>RobOptim: optimization for robotics</h3>
-    <table class="pkglist">
-      <tr>
-	<td><a href="@ROBOPTIMCORE_LINK@">core</a></td>
-	<td>Common API for several numerical optimization packages</td>
-      </tr>
-      <tr>
-	<td><a href="@ROBOPTIMTRAJECTORY_LINK@">trajectory</a></td>
-	<td>Trajectory optimization</td>
-      </tr>
-    </table>
-
     <h3>Motion planning for humanoid systems</h3>
-
 
     <table class="pkglist">
       <li><b>Kinematic chain with geometry</b></li>
