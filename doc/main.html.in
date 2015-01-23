@@ -35,10 +35,6 @@ It can be extended to path planning for other types of robots like digital actor
 
 <p>Installation instructions can be found on
 <a href="https://github.com/humanoid-path-planner/hpp-doc">github</a>.
-Select branch
-<a href="https://github.com/humanoid-path-planner/hpp-doc/tree/ros-hydro"> ros-hydro</a> or
-<a href="https://github.com/humanoid-path-planner/hpp-doc/tree/ros-groovy">
-ros-groovy</a> and follow the instructions provided at the bottom of the page.
 </p>
 
 <h2>Overview of the architecture</h2>
@@ -51,7 +47,7 @@ packages. See <a href="graph-dependency.html">dependency graph</a> for a quick
 <ul>
 <li><a href="algorithm.html">Algorithms</a> implementing path planning functionalities</li>
 <li><a href="corba.html">Corba</a> communication facilities to control algorithms</li>
-<li><a href="gui.html">Ros</a> Graphical user interface to display configurations and paths.
+<li><a href="gui.html">Gui</a> Graphical user interface to display configurations and paths.
 </ul>
 <p></p>
 <table>
