@@ -99,7 +99,22 @@ hpp_tutorial_repository=${TRAC_REPO}/algo
 hpp_benchmark_branch=master
 hpp_benchmark_repository=${HPP_REPO}
 
-all: hpp_tutorial.install hpp-manipulation-corba.install
+collada-dom_branch=master
+collada-dom_repository=${HPP_REPO}
+
+gepetto-viewer_branch=master
+gepetto-viewer_repository=${HPP_REPO}
+
+gepetto-viewer-corba_branch=master
+gepetto-viewer-corba_repository=${HPP_REPO}
+
+hpp-gepetto-viewer_branch=fakeViewer
+hpp-gepetto-viewer_repository=${JOSEPH_REPO}
+
+OpenSceneGraph-3.2.1_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom
+
+all: hpp_tutorial.install hpp-manipulation-corba.install \
+	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
@@ -140,14 +155,20 @@ hrp2.configure.dep: robot_capsule_urdf.install robot_model_py.install \
 hpp_ros.configure.dep: hpp-corbaserver.install hpp_ros.checkout
 test-hpp.configure.dep: hpp-wholebody-step-corba.install \
 	hpp_ros.install hpp-hrp2.install test-hpp.checkout
-airbus_ros.configure.dep: airbus_environment.install \
-	hpp-manipulation-corba.install airbus_ros.checkout
-airbus_environment.configure.dep: hpp_ros.install airbus_environment.checkout
 robot_state_chain_publisher.configure.dep: robot_state_chain_publisher.checkout
 iai_maps.configure.dep: robot_state_chain_publisher.install iai_maps.checkout
-hpp_tutorial.configure.dep: iai_maps.install hpp-corbaserver.install \
-	hpp_ros.install hpp_tutorial.checkout
+hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
+	hpp-corbaserver.install hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_benchmark.checkout
+collada-dom.configure.dep: collada-dom.checkout
+OpenSceneGraph-3.2.1.configure.dep: collada-dom.install \
+	OpenSceneGraph-3.2.1.checkout
+gepetto-viewer.configure.dep: OpenSceneGraph-3.2.1.install \
+	gepetto-viewer.checkout
+gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
+	gepetto-viewer-corba.checkout
+hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
+	hpp-gepetto-viewer.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
@@ -181,7 +202,8 @@ update:
 
 %.update:
 	cd ${SRC_DIR}/$(@:.update=);\
-	git remote set-url origin ${$(@:.update=)_repository}/$(@:.update=);\
+	git remote rm origin;\
+	git remote add origin ${$(@:.update=)_repository}/$(@:.update=);\
 	git fetch origin;\
 	git checkout -b bce46g origin/${$(@:.update=)_branch};\
 	git branch -D ${$(@:.update=)_branch};\
@@ -193,7 +215,7 @@ update:
 	cd ${SRC_DIR}/$(@:.configure=);\
 	mkdir -p build; \
 	cd ${SRC_DIR}/$(@:.configure=)/build; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ..
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure=)_extra_flags} ..
 
 %.install:%.configure
 	cd ${SRC_DIR}/$(@:.install=)/build;\
@@ -270,3 +292,12 @@ robot_model_py.install: robot_model_py.configure
 	make install; \
 	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/build; \
 	make install;
+
+OpenSceneGraph-3.2.1.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget http://www.openscenegraph.org/downloads/developer_releases/OpenSceneGraph-3.2.1.zip;\
+		cd ${SRC_DIR}; unzip OpenSceneGraph-3.2.1.zip;\
+		rm -f OpenSceneGraph-3.2.1.zip;\
+	fi

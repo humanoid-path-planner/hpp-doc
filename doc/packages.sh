@@ -110,6 +110,21 @@ pkg "hpp_ros" \
     "git@github.com:humanoid-path-planner/hpp_ros" \
     "path/hpp_ros"
 
+pkg "gepetto-viewer" \
+    "gepetto-viewer" \
+    "git@github.com:humanoid-path-planner/gepetto-viewer" \
+    "graphics/gepetto-viewer"
+
+pkg "gepetto-viewer-corba" \
+    "gepetto-viewer-corba" \
+    "git@github.com:humanoid-path-planner/gepetto-viewer-corba" \
+    "graphics/gepetto-viewer-corba"
+
+pkg "hpp-gepetto-viewer" \
+    "hpp-gepetto-viewer" \
+    "git@github.com:humanoid-path-planner/hpp-gepetto-viewer" \
+    "graphics/hpp-gepetto-viewer"
+
 # Retrieve information about wanted package.
 key=`echo "$package" | sed 's/-/_/g'`
 name=$(eval echo "\$name__$key")

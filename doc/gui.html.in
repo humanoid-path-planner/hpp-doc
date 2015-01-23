@@ -8,15 +8,15 @@
     <title>Humanoid Path Planner documentation</title>
   </head>
   <body>
-    <h1>Packages implementing ROS interfaces</h1>
+    <h1>Packages implementing graphical user interface</h1>
 
     <p>
-      The following packages implement Corba communication functionalities
+      The following packages implement a corba connection with a graphical
+      display
       <ul>
-	<li><a href="@HPPROS_LINK@">hpp_ros</a> display of robot configurations,
-	  obstacles and paths in rviz</li>
-	<li><a href="@HPPMODELURDF_LINK@">hpp-model-urdf</a> Construction of
-	  robots and objects by parsing urdf/srdf files.</li>
+	<li><a href="@GEPETTOVIEWER_LINK@">gepetto-viewer</a>Graphical window based on OpenSceneGraph</li>
+	<li><a href="@GEPETTOVIEWERCORBA_LINK@">gepetto-viewer-corba</a>Corba interface to gepetto-viewer</li>
+	<li><a href="@HPPGEPETTOVIEWER_LINK@">hpp-gepetto-viewer</a>Link between hpp and gepetto-viewer-corba</li>
     </p>
 
     <br><br>

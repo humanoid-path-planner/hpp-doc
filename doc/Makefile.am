@@ -104,7 +104,7 @@ DOC_EXTRA +=
 nobase_html_DATA =			\
 	algorithm.html			\
 	corba.html			\
-	ros.html			\
+	gui.html			\
 	graph-dependency.html		\
 	index.html			\
 	main.html			\

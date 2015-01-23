@@ -51,7 +51,7 @@ packages. See <a href="graph-dependency.html">dependency graph</a> for a quick
 <ul>
 <li><a href="algorithm.html">Algorithms</a> implementing path planning functionalities</li>
 <li><a href="corba.html">Corba</a> communication facilities to control algorithms</li>
-<li><a href="ros.html">Ros</a> connection with ros for loading models and displaying in rviz.
+<li><a href="gui.html">Ros</a> Graphical user interface to display configurations and paths.
 </ul>
 <p></p>
 <table>
@@ -72,14 +72,14 @@ packages. See <a href="graph-dependency.html">dependency graph</a> for a quick
     </a> packages.
     <p></p>
     Results of path planning requests as well as individual configurations can
-    be displayed in rviz via a ros node implemented by package
-    <code><a href="@HPPROS_LINK@">hpp_ros</a></code>.
+    be displayed in <code>gepetto-viewer</code> via package
+    <code><a href="@HPPGEPETTOVIEWER_LINK@">hpp-gepetto-viewer</a></code>.
   </td></tr>
 </table>
 
 <h2>Getting started</h2>
 
-Package <a href="@HPPTUTORIAL_LINK@">hpp-tutorial</a> provide some examples of
+Package <a href="@HPPTUTORIAL_LINK@">hpp-tutorial</a> provides some examples of
 how to use this project.
 <p></p>
 <table>

@@ -88,7 +88,9 @@ JRL_GENERATELINK([HPPWHOLEBODYSTEPCORBA], [hpp-wholebody-step-corba])
 JRL_GENERATELINK([HPPMANIPULATION], [hpp-manipulation])
 JRL_GENERATELINK([HPPMANIPULATIONURDF], [hpp-manipulation-urdf])
 JRL_GENERATELINK([HPPMANIPULATIONCORBA], [hpp-manipulation-corba])
-JRL_GENERATELINK([HPPROS], [hpp_ros])
+JRL_GENERATELINK([GEPETTOVIEWER], [gepetto-viewer])
+JRL_GENERATELINK([GEPETTOVIEWERCORBA], [gepetto-viewer-corba])
+JRL_GENERATELINK([HPPGEPETTOVIEWER], [hpp-gepetto-viewer])
 JRL_GENERATELINK([HPPTUTORIAL], [hpp_tutorial])
 
 # Generate the list of html stub pages for missing packages that
@@ -107,7 +109,7 @@ AC_CONFIG_FILES([
 	 doc/corba.html
 	 doc/algorithm.html
 	 doc/kpp-interface.html
-	 doc/ros.html
+	 doc/gui.html
 	 doc/main.html
 	 doc/index.html
 	 doc/tree.html
