@@ -155,6 +155,7 @@ gepetto-viewer.configure.dep: OpenSceneGraph-3.2.1.install \
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 	gepetto-viewer-corba.checkout
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
+	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
 
 status:
