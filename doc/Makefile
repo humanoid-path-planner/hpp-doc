@@ -179,7 +179,7 @@ log:
 	done
 
 update:
-	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp_ros hpp-manipulation hpp-manipulation-corba hpp-doc ; do \
+	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp-manipulation hpp-manipulation-corba hpp-doc ; do \
 	echo "Updating $$d";\
 	make $$d.update; done
 
