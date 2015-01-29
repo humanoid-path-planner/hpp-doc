@@ -101,7 +101,7 @@ hpp-gepetto-viewer_repository=${HPP_REPO}
 
 OpenSceneGraph-3.2.1_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom
 
-all: hpp_tutorial.install hpp-manipulation-corba.install \
+all: hpp_tutorial.install \
 	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
@@ -176,7 +176,7 @@ log:
 	done
 
 update:
-	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp-manipulation hpp-manipulation-corba hpp-doc ; do \
+	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp-doc ; do \
 	echo "Updating $$d";\
 	make $$d.update; done
 
