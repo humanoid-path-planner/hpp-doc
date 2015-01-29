@@ -7,9 +7,6 @@ FCL_REPO=https://github.com/flexible-collision-library
 JRL_REPO=https://github.com/jrl-umi3218
 LAAS_REPO=git@github.com:laas
 HPP_REPO=git@github.com:humanoid-path-planner
-FLORENT_REPO=git@github.com:florent-lamiraux
-TRAC_REPO=ssh://trac.laas.fr/git/jrl
-JOSEPH_REPO=git@github.com:billx09
 TINYXML2_REPO=git@github.com:leethomason
 
 SRC_DIR=${DEVEL_DIR}/src
