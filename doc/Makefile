@@ -28,19 +28,19 @@ hpp-model-urdf_branch=master
 hpp-model-urdf_repository=${HPP_REPO}
 
 hpp-statistics_branch=master
-hpp-statistics_repository=${TRAC_REPO}/algo
+hpp-statistics_repository=${HPP_REPO}
 
 hpp-core_branch=master
-hpp-core_repository=${TRAC_REPO}/algo
+hpp-core_repository=${HPP_REPO}
 
 hpp-template-corba_branch=master
 hpp-template-corba_repository=${LAAS_REPO}
 
 hpp-corbaserver_branch=master
-hpp-corbaserver_repository=${TRAC_REPO}/corba
+hpp-corbaserver_repository=${HPP_REPO}
 
 hpp-constraints_branch=master
-hpp-constraints_repository=${TRAC_REPO}/algo
+hpp-constraints_repository=${HPP_REPO}
 
 hpp-wholebody-step_branch=master
 hpp-wholebody-step_repository=${HPP_REPO}
@@ -48,17 +48,14 @@ hpp-wholebody-step_repository=${HPP_REPO}
 hpp-wholebody-step-corba_branch=master
 hpp-wholebody-step-corba_repository=${HPP_REPO}
 
-hpp_ros_branch=master
-hpp_ros_repository=${TRAC_REPO}/ros
-
 test-hpp_branch=master
-test-hpp_repository=${TRAC_REPO}/test
+test-hpp_repository=${HPP_REPO}
 
 hrp2_branch=groovy
 hrp2_repository=${JRL_REPO}
 
 hpp-hrp2_branch=master
-hpp-hrp2_repository=${TRAC_REPO}/algo
+hpp-hrp2_repository=${HPP_REPO}
 
 robot_capsule_urdf_branch=groovy
 robot_capsule_urdf_repository=${LAAS_REPO}
@@ -67,25 +64,19 @@ robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
 hpp-doc_branch=master
-hpp-doc_repository=${TRAC_REPO}/doc
+hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=master
-hpp-manipulation_repository=${TRAC_REPO}/algo
+hpp-manipulation_repository=${HPP_REPO}
 
 tinyxml2_branch=master
 tinyxml2_repository=${TINYXML2_REPO}
 
 hpp-manipulation-urdf_branch=master
-hpp-manipulation-urdf_repository=${TRAC_REPO}/algo
+hpp-manipulation-urdf_repository=${HPP_REPO}
 
 hpp-manipulation-corba_branch=master
-hpp-manipulation-corba_repository=${TRAC_REPO}/corba
-
-airbus_ros_branch=master
-airbus_ros_repository=${TRAC_REPO}/ros
-
-airbus_environment_branch=master
-airbus_environment_repository=${TRAC_REPO}/data
+hpp-manipulation-corba_repository=${HPP_REPO}
 
 robot_state_chain_publisher_branch=master
 robot_state_chain_publisher_repository=${HPP_REPO}
@@ -94,7 +85,7 @@ iai_maps_branch=master
 iai_maps_repository=${HPP_REPO}
 
 hpp_tutorial_branch=master
-hpp_tutorial_repository=${TRAC_REPO}/algo
+hpp_tutorial_repository=${HPP_REPO}
 
 hpp_benchmark_branch=master
 hpp_benchmark_repository=${HPP_REPO}
@@ -108,8 +99,8 @@ gepetto-viewer_repository=${HPP_REPO}
 gepetto-viewer-corba_branch=master
 gepetto-viewer-corba_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=fakeViewer
-hpp-gepetto-viewer_repository=${JOSEPH_REPO}
+hpp-gepetto-viewer_branch=master
+hpp-gepetto-viewer_repository=${HPP_REPO}
 
 OpenSceneGraph-3.2.1_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom
 
@@ -152,9 +143,8 @@ robot_capsule_urdf.configure.dep: robot_model_py.install \
 hpp-hrp2.configure.dep: hrp2.install hpp-corbaserver.install hpp-hrp2.checkout
 hrp2.configure.dep: robot_capsule_urdf.install robot_model_py.install \
 	hrp2.checkout
-hpp_ros.configure.dep: hpp-corbaserver.install hpp_ros.checkout
 test-hpp.configure.dep: hpp-wholebody-step-corba.install \
-	hpp_ros.install hpp-hrp2.install test-hpp.checkout
+	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
 robot_state_chain_publisher.configure.dep: robot_state_chain_publisher.checkout
 iai_maps.configure.dep: robot_state_chain_publisher.install iai_maps.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
@@ -189,7 +179,7 @@ log:
 	done
 
 update:
-	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp_ros hpp-manipulation hpp-manipulation-corba airbus_ros airbus_environment hpp-doc ; do \
+	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp_ros hpp-manipulation hpp-manipulation-corba hpp-doc ; do \
 	echo "Updating $$d";\
 	make $$d.update; done
 
