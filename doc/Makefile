@@ -18,13 +18,13 @@ hpp-fcl_repository=${HPP_REPO}
 hpp-util_branch=master
 hpp-util_repository=${HPP_REPO}
 
-hpp-model_branch=master
+hpp-model_branch=ubuntu-14.04
 hpp-model_repository=${HPP_REPO}
 
-hpp-model-urdf_branch=master
+hpp-model-urdf_branch=ubuntu-14.04
 hpp-model-urdf_repository=${HPP_REPO}
 
-hpp-statistics_branch=master
+hpp-statistics_branch=ubuntu-14.04
 hpp-statistics_repository=${HPP_REPO}
 
 hpp-core_branch=master
@@ -36,7 +36,7 @@ hpp-template-corba_repository=${LAAS_REPO}
 hpp-corbaserver_branch=master
 hpp-corbaserver_repository=${HPP_REPO}
 
-hpp-constraints_branch=master
+hpp-constraints_branch=ubuntu-14.04
 hpp-constraints_repository=${HPP_REPO}
 
 hpp-wholebody-step_branch=master
@@ -63,7 +63,7 @@ robot_model_py_repository=${LAAS_REPO}
 hpp-doc_branch=master
 hpp-doc_repository=${HPP_REPO}
 
-hpp-manipulation_branch=master
+hpp-manipulation_branch=ubuntu-14.04
 hpp-manipulation_repository=${HPP_REPO}
 
 tinyxml2_branch=master
