@@ -15,6 +15,7 @@ To install all the packages on ubuntu 14.04 LTS, you should do the following
 steps:
 
   1. install by apt-get
+    - autoconf
     - g++
     - cmake
     - libboost-dev
@@ -42,7 +43,7 @@ steps:
     - omniidl-python
     - libltdl-dev
 
-        sudo apt-get install g++ cmake libboost-dev liburdfdom-dev libassimp-dev ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap ros-indigo-resource-retriever ros-indigo-srdfdom flex bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python libltdl-dev
+        sudo apt-get install autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap ros-indigo-resource-retriever ros-indigo-srdfdom flex bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python libltdl-dev
 
   2. install dependencies of openscenegraph:
 
