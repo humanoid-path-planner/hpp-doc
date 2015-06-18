@@ -41,9 +41,9 @@ steps:
 
   3. Copy Config and Makefile
         
-        wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config.sh
+        wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/ros-hydro/doc/config.sh
 
-	wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile
+	wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/ros-hydro/doc/Makefile
   
   4. cd into $DEVEL_DIR and type
 
