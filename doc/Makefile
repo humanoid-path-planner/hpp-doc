@@ -69,7 +69,7 @@ hpp-manipulation_repository=${HPP_REPO}
 tinyxml2_branch=master
 tinyxml2_repository=${TINYXML2_REPO}
 
-hpp-manipulation-urdf_branch=master
+hpp-manipulation-urdf_branch=devel
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
 hpp-manipulation-corba_branch=devel
