@@ -12,10 +12,10 @@ TINYXML2_REPO=https://github.com/leethomason
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
 
-hpp-fcl_branch=master
+hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
 
-hpp-util_branch=master
+hpp-util_branch=devel
 hpp-util_repository=${HPP_REPO}
 
 hpp-model_branch=devel
@@ -39,7 +39,7 @@ hpp-corbaserver_repository=${HPP_REPO}
 hpp-constraints_branch=devel
 hpp-constraints_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=master
+hpp-wholebody-step_branch=devel
 hpp-wholebody-step_repository=${HPP_REPO}
 
 hpp-wholebody-step-corba_branch=devel
@@ -51,7 +51,7 @@ test-hpp_repository=${HPP_REPO}
 hrp2_branch=groovy
 hrp2_repository=${JRL_REPO}
 
-hpp-hrp2_branch=master
+hpp-hrp2_branch=devel
 hpp-hrp2_repository=${HPP_REPO}
 
 robot_capsule_urdf_branch=groovy
@@ -90,10 +90,10 @@ hpp_benchmark_repository=${HPP_REPO}
 collada-dom_branch=master
 collada-dom_repository=${HPP_REPO}
 
-gepetto-viewer_branch=master
+gepetto-viewer_branch=devel
 gepetto-viewer_repository=${HPP_REPO}
 
-gepetto-viewer-corba_branch=master
+gepetto-viewer-corba_branch=devel
 gepetto-viewer-corba_repository=${HPP_REPO}
 
 hpp-gepetto-viewer_branch=devel
