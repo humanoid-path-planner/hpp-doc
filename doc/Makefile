@@ -7,7 +7,6 @@ FCL_REPO=https://github.com/flexible-collision-library
 JRL_REPO=https://github.com/jrl-umi3218
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
-TINYXML2_REPO=https://github.com/leethomason
 
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
@@ -66,8 +65,6 @@ hpp-doc_repository=${HPP_REPO}
 hpp-manipulation_branch=master
 hpp-manipulation_repository=${HPP_REPO}
 
-tinyxml2_branch=master
-tinyxml2_repository=${TINYXML2_REPO}
 
 hpp-manipulation-urdf_branch=master
 hpp-manipulation-urdf_repository=${HPP_REPO}
@@ -122,8 +119,7 @@ hpp-wholebody-step.configure.dep: hpp-constraints.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
-tinyxml2.configure.dep: tinyxml2.checkout
-hpp-manipulation-urdf.configure.dep:hpp-manipulation.install tinyxml2.install \
+hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-model-urdf.install hpp-core.install \
 	hpp-constraints.install hpp-corbaserver.checkout
