@@ -99,7 +99,7 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=master
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-OpenSceneGraph-3.2.1_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom
+OpenSceneGraph-3.2.1_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
 
 all: hpp_tutorial.install \
 	hpp-gepetto-viewer.install
