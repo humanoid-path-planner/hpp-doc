@@ -120,7 +120,7 @@ hpp-wholebody-step.configure.dep: hpp-constraints.install \
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
-	hpp-manipulation-urdf.checkout
+	hpp-model-urdf.install hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-model-urdf.install hpp-core.install \
 	hpp-constraints.install hpp-corbaserver.checkout
 hpp-wholebody-step-corba.configure.dep: hpp-corbaserver.install \
