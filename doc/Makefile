@@ -96,7 +96,7 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=master
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-OpenSceneGraph-3.2.1_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
+OpenSceneGraph-3.4.0_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
 
 all: hpp_tutorial.install \
 	hpp-gepetto-viewer.install
@@ -144,9 +144,9 @@ hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
 	hpp-corbaserver.install hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_benchmark.checkout
 collada-dom.configure.dep: collada-dom.checkout
-OpenSceneGraph-3.2.1.configure.dep: collada-dom.install \
-	OpenSceneGraph-3.2.1.checkout
-gepetto-viewer.configure.dep: OpenSceneGraph-3.2.1.install \
+OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
+	OpenSceneGraph-3.4.0.checkout
+gepetto-viewer.configure.dep: OpenSceneGraph-3.4.0.install \
 	gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 	gepetto-viewer-corba.checkout
@@ -277,11 +277,11 @@ robot_model_py.install: robot_model_py.configure
 	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/build; \
 	make install;
 
-OpenSceneGraph-3.2.1.checkout:
+OpenSceneGraph-3.4.0.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget http://www.openscenegraph.org/downloads/developer_releases/OpenSceneGraph-3.2.1.zip;\
-		cd ${SRC_DIR}; unzip OpenSceneGraph-3.2.1.zip;\
-		rm -f OpenSceneGraph-3.2.1.zip;\
+		wget http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
+		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
+		rm -f OpenSceneGraph-3.4.0.zip;\
 	fi
