@@ -13,7 +13,10 @@ humanoid) path planning problems.
 
 To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the following steps:
 
-  1. install by apt-get
+  1. install ROS-indigo
+    - see http://wiki.ros.org/indigo/Installation/Ubuntu.
+
+  2. install by apt-get
     - autoconf
     - g++
     - cmake
@@ -46,27 +49,27 @@ To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the follow
 
         sudo apt-get install autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-robot flex bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python libltdl-dev python-matplotlib libtinyxml2-dev
 
-  2. install dependencies of openscenegraph:
+  3. install dependencies of openscenegraph:
 
 	sudo apt-get build-dep openscenegraph
 
-  3. Choose a directory on you file system and define the environment
+  4. Choose a directory on you file system and define the environment
      variable DEVEL_DIR with the full path to this directory.
      - the packages will be cloned into $DEVEL_DIR/src,
      - the packages will be installed in $DEVEL_DIR/install.
      It is recommanded to set variable DEVEL_DIR in your .bashrc for future use.
 
-  4. Copy Config and Makefile
+  5. Copy Config and Makefile
         
         wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/config.sh
 
 	wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/Makefile
   
-  5. cd into $DEVEL_DIR and type
+  6. cd into $DEVEL_DIR and type
 
     source config.sh
 
-  6. cd into $DEVEL_DIR/src and type
+  7. cd into $DEVEL_DIR/src and type
 
     make robot_state_chain_publisher.install;
     source ../config.sh;
