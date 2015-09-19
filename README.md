@@ -61,9 +61,9 @@ To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the follow
 
   5. Copy Config and Makefile
         
-        wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/config.sh
+        wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/euroc/doc/config.sh
 
-	wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/Makefile
+	wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/euroc/doc/Makefile
 
   6. edit $DEVEL_DIR/src/Makefile and fill in lines
 
