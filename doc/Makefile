@@ -1,57 +1,53 @@
 #
-# Copyright (c) 2014 CNRS-LAAS
+# Copyright (c) 2014, 2015 CNRS-LAAS
 # Author: Florent Lamiraux
 #
 
-FCL_REPO=https://github.com/flexible-collision-library
+SVN_USERNAME=
+SVN_PASSWORD=
+
 JRL_REPO=https://github.com/jrl-umi3218
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
-
+DLR_REPO=https://svn.dlr.de/euroc_c2
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
 
-hpp-fcl_branch=devel
+hpp-fcl_branch=euroc
 hpp-fcl_repository=${HPP_REPO}
 
-hpp-util_branch=devel
+hpp-util_branch=euroc
 hpp-util_repository=${HPP_REPO}
 
-hpp-model_branch=devel
+hpp-model_branch=euroc
 hpp-model_repository=${HPP_REPO}
 
-hpp-model-urdf_branch=devel
+hpp-model-urdf_branch=euroc
 hpp-model-urdf_repository=${HPP_REPO}
 
-hpp-statistics_branch=devel
+hpp-statistics_branch=euroc
 hpp-statistics_repository=${HPP_REPO}
 
-hpp-core_branch=devel
+hpp-core_branch=euroc
 hpp-core_repository=${HPP_REPO}
 
 hpp-template-corba_branch=master
 hpp-template-corba_repository=${LAAS_REPO}
 
-hpp-corbaserver_branch=devel
+hpp-corbaserver_branch=euroc
 hpp-corbaserver_repository=${HPP_REPO}
 
-hpp-constraints_branch=devel
+hpp-constraints_branch=euroc
 hpp-constraints_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=devel
+hpp-wholebody-step_branch=euroc
 hpp-wholebody-step_repository=${HPP_REPO}
 
-hpp-wholebody-step-corba_branch=devel
+hpp-wholebody-step-corba_branch=euroc
 hpp-wholebody-step-corba_repository=${HPP_REPO}
 
 test-hpp_branch=devel
 test-hpp_repository=${HPP_REPO}
-
-hrp2_branch=groovy
-hrp2_repository=${JRL_REPO}
-
-hpp-hrp2_branch=devel
-hpp-hrp2_repository=${HPP_REPO}
 
 robot_capsule_urdf_branch=groovy
 robot_capsule_urdf_repository=${LAAS_REPO}
@@ -62,48 +58,60 @@ robot_model_py_repository=${LAAS_REPO}
 hpp-doc_branch=devel
 hpp-doc_repository=${HPP_REPO}
 
-hpp-manipulation_branch=devel
+hpp-manipulation_branch=euroc
 hpp-manipulation_repository=${HPP_REPO}
 
-
-hpp-manipulation-urdf_branch=devel
+hpp-manipulation-urdf_branch=euroc
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
-hpp-manipulation-corba_branch=devel
+hpp-manipulation-corba_branch=euroc
 hpp-manipulation-corba_repository=${HPP_REPO}
 
-robot_state_chain_publisher_branch=master
+robot_state_chain_publisher_branch=euroc
 robot_state_chain_publisher_repository=${HPP_REPO}
 
-iai_maps_branch=master
+iai_maps_branch=euroc
 iai_maps_repository=${HPP_REPO}
 
-hpp_tutorial_branch=devel
+hpp_tutorial_branch=euroc
 hpp_tutorial_repository=${HPP_REPO}
 
 hpp_benchmark_branch=master
 hpp_benchmark_repository=${HPP_REPO}
 
-collada-dom_branch=master
+collada-dom_branch=euroc
 collada-dom_repository=${HPP_REPO}
 
-gepetto-viewer_branch=devel
+gepetto-viewer_branch=euroc
 gepetto-viewer_repository=${HPP_REPO}
 
-gepetto-viewer-corba_branch=devel
+gepetto-viewer-corba_branch=euroc
 gepetto-viewer-corba_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=devel
+hpp-gepetto-viewer_branch=euroc
 hpp-gepetto-viewer_repository=${HPP_REPO}
+
+hpp-plot_branch=euroc
+hpp-plot_repository=${HPP_REPO}
+
+qgv_branch=euroc
+qgv_repository=${HPP_REPO}
+
+hpp-dlr-miiwa_branch=euroc
+hpp-dlr-miiwa_repository=${HPP_REPO}
+
+dlr-miiwa-version=0_1_0
+dlr_miiwa_urdf_model_branch=devel
+dlr_miiwa_urdf_model_repository=${TRAC_REPO}
 
 OpenSceneGraph-3.4.0_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
 
-all: hpp_tutorial.install \
-	hpp-gepetto-viewer.install
-	${MAKE} hpp-doc.install
+hpp-plot_extra_flags= -DQGV_INCLUDE_DIR=${DEVEL_DIR}/install/include/qgv
 
-# source $DEVEL_DIR/install/setup.bash before installing hrp2.
-hrp2: test-hpp.install
+all: hpp_tutorial.install hpp-manipulation-corba.install \
+	hpp-dlr-miiwa.install hpp-gepetto-viewer.install \
+	hpp-plot.install
+	${MAKE} hpp-doc.install
 
 hpp-fcl.configure.dep: hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
@@ -133,11 +141,6 @@ hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
-hpp-hrp2.configure.dep: hrp2.install hpp-corbaserver.install hpp-hrp2.checkout
-hrp2.configure.dep: robot_capsule_urdf.install robot_model_py.install \
-	hrp2.checkout
-test-hpp.configure.dep: hpp-wholebody-step-corba.install \
-	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
 robot_state_chain_publisher.configure.dep: robot_state_chain_publisher.checkout
 iai_maps.configure.dep: robot_state_chain_publisher.install iai_maps.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
@@ -153,6 +156,11 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
+hpp-plot.configure.dep: hpp-manipulation-corba.install qgv.install \
+	hpp-plot.checkout
+qgv.configure.dep: qgv.checkout
+dlr-miiwa-model.configure.dep: dlr-miiwa-model.checkout
+hpp-dlr-miiwa.configure.dep: dlr-miiwa-model.install hpp-dlr-miiwa.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
@@ -250,17 +258,6 @@ eigen3.configure: eigen3.configure.dep
 	cd ${SRC_DIR}/eigen3/build; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
 
-hrp2.configure: hrp2.configure.dep
-	. ${DEVEL_DIR}/install/setup.sh; \
-	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
-	mkdir -p build; \
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/build; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-
-hrp2.install: hrp2.configure
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/build;\
-	make install
-
 robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
 	mkdir -p build; \
@@ -285,3 +282,104 @@ OpenSceneGraph-3.4.0.checkout:
 		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
 		rm -f OpenSceneGraph-3.4.0.zip;\
 	fi
+
+dlr-miiwa-model.checkout:
+	if [ -d euroc_c2 ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		svn checkout --username=${SVN_USERNAME} \
+		--password=${SVN_PASSWORD} ${DLR_REPO}; \
+	fi
+
+dlr-miiwa-model.configure: dlr-miiwa-model.checkout
+	. ${DEVEL_DIR}/install/setup.sh; \
+	echo "configuring for miiwa"
+	cd ${SRC_DIR}/euroc_c2/models/miiwa; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/miiwa/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ; \
+	echo "configuring for schunk_adapter"
+	cd ${SRC_DIR}/euroc_c2/models/schunk_adapter; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/schunk_adapter/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ; \
+	echo "configuring for schunk_pw70"
+	cd ${SRC_DIR}/euroc_c2/models/schunk_pw70; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/schunk_pw70/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ; \
+	echo "configuring for schunk_wsg50"
+	cd ${SRC_DIR}/euroc_c2/models/schunk_wsg50; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/schunk_wsg50/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ; \
+	echo "configuring for dlr_miiwa"
+	cd ${SRC_DIR}/euroc_c2/models/dlr_miiwa; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/dlr_miiwa/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ; \
+	echo "configuring for mako_3d"
+	cd ${SRC_DIR}/euroc_c2/models/mako_3d; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/mako_3d/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ; \
+	echo "configuring for lbr_iiwa_launch"
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_launch; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_launch/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ; \
+	echo "configuring for lbr_iiwa_gazebo"
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_gazebo; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_gazebo/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ; \
+	echo "configuring for lbr_iiwa_description"
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_description; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_description/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ; \
+	echo "configuring for lbr_iiwa_control"
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_control; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_control/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ;
+	echo "configuring for manta"
+	cd ${SRC_DIR}/euroc_c2/models/manta; \
+	mkdir -p build; \
+	cd ${SRC_DIR}/euroc_c2/models/manta/build; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_BUILD_TYPE=${BUILD_TYPE} .. ;
+
+dlr-miiwa-model.install: dlr-miiwa-model.configure
+	echo "making for miiwa"; \
+	cd ${SRC_DIR}/euroc_c2/models/miiwa/build; \
+	${MAKE} install; \
+	echo "making for schunk_adapter" ; \
+	cd ${SRC_DIR}/euroc_c2/models/schunk_adapter/build; \
+	${MAKE} install; \
+	echo "making for schunk_pw70" ; \
+	cd ${SRC_DIR}/euroc_c2/models/schunk_pw70/build; \
+	${MAKE} install; \
+	echo "making for schunk_wsg50" ; \
+	cd ${SRC_DIR}/euroc_c2/models/schunk_wsg50/build; \
+	${MAKE} install; \
+	echo "making for dlr_miiwa" ; \
+	cd ${SRC_DIR}/euroc_c2/models/dlr_miiwa/build; \
+	${MAKE} install; \
+	echo "making for mako_3d" ; \
+	cd ${SRC_DIR}/euroc_c2/models/mako_3d/build; \
+	${MAKE} install; \
+	echo "making for lbr_iiwa_launch" ; \
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_launch/build; \
+	${MAKE} install; \
+	echo "making for lbr_iiwa_gazebo" ; \
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_gazebo/build; \
+	${MAKE} install; \
+	echo "making for lbr_iiwa_description" ; \
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_description/build; \
+	${MAKE} install; \
+	echo "making for lbr_iiwa_control" ; \
+	cd ${SRC_DIR}/euroc_c2/models/lbr_iiwa/lbr_iiwa_control/build; \
+	${MAKE} install;
+	echo "making for manta" ; \
+	cd ${SRC_DIR}/euroc_c2/models/manta/build; \
+	${MAKE} install;

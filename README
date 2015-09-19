@@ -64,12 +64,19 @@ To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the follow
         wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/config.sh
 
 	wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/Makefile
-  
-  6. cd into $DEVEL_DIR and type
+
+  6. edit $DEVEL_DIR/src/Makefile and fill in lines
+
+    SVN_USERNAME=
+    SVN_PASSWORD=
+
+    with the appropriate information to access svn repository of dlr.
+
+  7. cd into $DEVEL_DIR and type
 
     source config.sh
 
-  7. cd into $DEVEL_DIR/src and type
+  8. cd into $DEVEL_DIR/src and type
 
     make robot_state_chain_publisher.install;
     source ../config.sh;
@@ -79,3 +86,5 @@ To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the follow
 
   Open $DEVEL_DIR/install/share/doc/hpp-doc/index.html in a web brower and you
   will have access to the documentation of most packages.
+
+  Click on tutotial in the left panel to start learning about the software.
