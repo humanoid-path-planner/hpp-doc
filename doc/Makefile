@@ -55,7 +55,7 @@ robot_capsule_urdf_repository=${LAAS_REPO}
 robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
-hpp-doc_branch=devel
+hpp-doc_branch=euroc
 hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=euroc
@@ -144,7 +144,8 @@ robot_capsule_urdf.configure.dep: robot_model_py.install \
 robot_state_chain_publisher.configure.dep: robot_state_chain_publisher.checkout
 iai_maps.configure.dep: robot_state_chain_publisher.install iai_maps.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
-	hpp-corbaserver.install hpp_tutorial.checkout
+	hpp-manipulation-corba.install dlr-miiwa-model.install \
+	hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_benchmark.checkout
 collada-dom.configure.dep: collada-dom.checkout
 OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
