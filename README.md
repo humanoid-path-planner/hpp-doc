@@ -67,8 +67,8 @@ To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the follow
 
   6. edit $DEVEL_DIR/src/Makefile and fill in lines
 
-    SVN_USERNAME=
-    SVN_PASSWORD=
+    - SVN_USERNAME=
+    - SVN_PASSWORD=
 
     with the appropriate information to access svn repository of dlr.
 
