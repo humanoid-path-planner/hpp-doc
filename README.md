@@ -13,7 +13,10 @@ humanoid) path planning problems.
 
 To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the following steps:
 
-  1. install by apt-get
+  1. install ROS-indigo (steps 1.1 - 1.3)
+    - see http://wiki.ros.org/indigo/Installation/Ubuntu.
+
+  2. install by apt-get
     - autoconf
     - g++
     - cmake
