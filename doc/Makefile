@@ -245,10 +245,8 @@ eigen3.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget -O eigen3.tar.bz2 \
-		http://bitbucket.org/eigen/eigen/get/3.2.4.tar.bz2;\
-		cd ${SRC_DIR}; bunzip2 eigen3.tar.bz2; tar xvf eigen3.tar;\
-		rm -f eigen3.tar; mv eigen-eigen-10219c95fe65 eigen3;\
+		wget -O - "http://bitbucket.org/eigen/eigen/get/3.2.4.tar.bz2" | tar -xj; \
+		mv eigen-eigen-10219c95fe65 eigen3;\
 	fi
 
 eigen3.configure: eigen3.configure.dep
