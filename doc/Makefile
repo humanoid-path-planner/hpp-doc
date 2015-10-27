@@ -38,6 +38,9 @@ hpp-corbaserver_repository=${HPP_REPO}
 hpp-constraints_branch=devel
 hpp-constraints_repository=${HPP_REPO}
 
+hpp-walkgen_branch=devel
+hpp-walkgen_repository=${HPP_REPO}
+
 hpp-wholebody-step_branch=devel
 hpp-wholebody-step_repository=${HPP_REPO}
 
@@ -64,7 +67,6 @@ hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=devel
 hpp-manipulation_repository=${HPP_REPO}
-
 
 hpp-manipulation-urdf_branch=devel
 hpp-manipulation-urdf_repository=${HPP_REPO}
@@ -107,6 +109,11 @@ hrp2: test-hpp.install
 
 hpp-fcl.configure.dep: hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
+roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
+roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
+       	roboptim-trajectory-3.1.checkout
+hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
+        roboptim-trajectory-3.1.install hpp-walkgen.checkout
 hpp-util.configure.dep: hpp-util.checkout
 hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
@@ -115,7 +122,7 @@ hpp-statistics.configure.dep: hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
 hpp-constraints.configure.dep: hpp-model.install hpp-constraints.checkout
-hpp-wholebody-step.configure.dep: hpp-constraints.install \
+hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
@@ -249,6 +256,20 @@ eigen3.configure: eigen3.configure.dep
 	mkdir -p build; \
 	cd ${SRC_DIR}/eigen3/build; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
+
+roboptim-core-3.1.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+ 		wget -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | tar -xj; \
+	fi
+
+roboptim-trajectory-3.1.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+	        wget -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | tar -xj; \
+	fi
 
 hrp2.configure: hrp2.configure.dep
 	. ${DEVEL_DIR}/install/setup.sh; \
