@@ -35,6 +35,9 @@ hpp-template-corba_repository=${LAAS_REPO}
 hpp-corbaserver_branch=devel
 hpp-corbaserver_repository=${HPP_REPO}
 
+qpOASES_branch=master
+qpOASES_repository=${HPP_REPO}
+
 hpp-constraints_branch=devel
 hpp-constraints_repository=${HPP_REPO}
 
@@ -121,8 +124,8 @@ hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 hpp-statistics.configure.dep: hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
-qpOASES-3.2.0.configure.dep: qpOASES-3.2.0.checkout
-hpp-constraints.configure.dep: qpOASES-3.2.0.install hpp-model.install hpp-constraints.checkout
+qpOASES.configure.dep: qpOASES.checkout
+hpp-constraints.configure.dep: qpOASES.install hpp-model.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
@@ -304,11 +307,4 @@ OpenSceneGraph-3.4.0.checkout:
 		wget http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
 		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
 		rm -f OpenSceneGraph-3.4.0.zip;\
-	fi
-
-qpOASES-3.2.0.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-	  wget -O - "http://www.coin-or.org/download/source/qpOASES/qpOASES-3.2.0.tgz" | tar xz;\
 	fi
