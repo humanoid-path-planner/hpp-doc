@@ -101,6 +101,9 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=devel
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
+hpp-gui_branch=devel
+hpp-gui_repository=${HPP_REPO}
+
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
 
 all: hpp_tutorial.install \
@@ -164,6 +167,8 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
+hpp-gui.configure.dep: gepetto-viewer-corba.install \
+	hpp-corbaserver.install hpp-gui.configure
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
