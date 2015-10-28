@@ -106,7 +106,9 @@ hpp-gui_repository=${HPP_REPO}
 
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
 
-all: hpp_tutorial.install \
+doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
+all: doxygen-Release_1_8_10.install hpp_tutorial.install \
 	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
@@ -115,6 +117,7 @@ hrp2: test-hpp.install
 
 hpp-fcl.configure.dep: hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
+doxygen-Release_1_8_10.configure.dep: doxygen-Release_1_8_10.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
 roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
        	roboptim-trajectory-3.1.checkout
@@ -276,6 +279,13 @@ roboptim-trajectory-3.1.checkout:
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
 	        wget -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | tar -xj; \
+	fi
+
+doxygen-Release_1_8_10.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget -O - "https://github.com/doxygen/doxygen/archive/Release_1_8_10.tar.gz" | tar -xz;\
 	fi
 
 hrp2.configure: hrp2.configure.dep
