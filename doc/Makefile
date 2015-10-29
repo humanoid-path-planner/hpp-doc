@@ -171,7 +171,7 @@ hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
 hpp-gui.configure.dep: gepetto-viewer-corba.install \
-	hpp-corbaserver.install hpp-gui.configure
+	hpp-corbaserver.install hpp-gui.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
