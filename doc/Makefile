@@ -100,6 +100,8 @@ qgv_repository=${HPP_REPO}
 hpp-dlr-miiwa_branch=euroc
 hpp-dlr-miiwa_repository=${HPP_REPO}
 
+doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
 dlr-miiwa-version=0_1_0
 dlr_miiwa_urdf_model_branch=devel
 dlr_miiwa_urdf_model_repository=${TRAC_REPO}
@@ -113,17 +115,24 @@ all: hpp_tutorial.install hpp-manipulation-corba.install \
 	hpp-plot.install
 	${MAKE} hpp-doc.install
 
-hpp-fcl.configure.dep: hpp-fcl.checkout
+hpp-fcl.configure.dep: doxygen-Release_1_8_10.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
-hpp-util.configure.dep: hpp-util.checkout
+doxygen-Release_1_8_10.configure.dep: doxygen-Release_1_8_10.checkout
+roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
+roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
+	roboptim-trajectory-3.1.checkout
+hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
+	roboptim-trajectory-3.1.install hpp-walkgen.checkout
+hpp-util.configure.dep: doxygen-Release_1_8_10.install hpp-util.checkout
 hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
-hpp-statistics.configure.dep: hpp-statistics.checkout
+hpp-statistics.configure.dep: doxygen-Release_1_8_10.install hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
-hpp-constraints.configure.dep: hpp-model.install hpp-constraints.checkout
-hpp-wholebody-step.configure.dep: hpp-constraints.install \
+qpOASES.configure.dep: qpOASES.checkout
+hpp-constraints.configure.dep: qpOASES.install hpp-model.install hpp-constraints.checkout
+hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
@@ -247,10 +256,8 @@ eigen3.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget -O eigen3.tar.bz2 \
-		http://bitbucket.org/eigen/eigen/get/3.2.4.tar.bz2;\
-		cd ${SRC_DIR}; bunzip2 eigen3.tar.bz2; tar xvf eigen3.tar;\
-		rm -f eigen3.tar; mv eigen-eigen-10219c95fe65 eigen3;\
+		wget -O - "http://bitbucket.org/eigen/eigen/get/3.2.4.tar.bz2" | tar -xj; \
+		mv eigen-eigen-10219c95fe65 eigen3;\
 	fi
 
 eigen3.configure: eigen3.configure.dep
@@ -258,6 +265,27 @@ eigen3.configure: eigen3.configure.dep
 	mkdir -p build; \
 	cd ${SRC_DIR}/eigen3/build; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
+
+roboptim-core-3.1.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | tar -xj; \
+	fi
+
+roboptim-trajectory-3.1.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+	        wget -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | tar -xj; \
+	fi
+
+doxygen-Release_1_8_10.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget -O - "https://github.com/doxygen/doxygen/archive/Release_1_8_10.tar.gz" | tar -xz;\
+	fi
 
 robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
