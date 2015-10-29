@@ -4,7 +4,7 @@ DISTRIBUTION=trusty
 
 ## Check whether we are inside LAAS.
 DOMAINNAME=`hostname -d`
-if [ ${DOMAINNAME} = "laas.fr" ]; then
+if [ "${DOMAINNAME}" = "laas.fr" ]; then
   # Use mirror from LAAS
   MIRROR="http://kiev.laas.fr/UBUNTU-MIRROR/"
 else
