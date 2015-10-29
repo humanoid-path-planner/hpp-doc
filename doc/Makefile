@@ -35,8 +35,14 @@ hpp-template-corba_repository=${LAAS_REPO}
 hpp-corbaserver_branch=master
 hpp-corbaserver_repository=${HPP_REPO}
 
+qpOASES_branch=master
+qpOASES_repository=${HPP_REPO}
+
 hpp-constraints_branch=master
 hpp-constraints_repository=${HPP_REPO}
+
+hpp-walkgen_branch=master
+hpp-walkgen_repository=${HPP_REPO}
 
 hpp-wholebody-step_branch=master
 hpp-wholebody-step_repository=${HPP_REPO}
@@ -96,9 +102,14 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=master
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-OpenSceneGraph-3.4.0_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
+hpp-gui_branch=master
+hpp-gui_repository=${HPP_REPO}
 
-all: hpp_tutorial.install \
+OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
+
+doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
+all: doxygen-Release_1_8_10.install hpp_tutorial.install \
 	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
@@ -107,6 +118,12 @@ hrp2: test-hpp.install
 
 hpp-fcl.configure.dep: hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
+doxygen-Release_1_8_10.configure.dep: doxygen-Release_1_8_10.checkout
+roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
+roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
+	roboptim-trajectory-3.1.checkout
+hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
+	roboptim-trajectory-3.1.install hpp-walkgen.checkout
 hpp-util.configure.dep: hpp-util.checkout
 hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
@@ -114,8 +131,9 @@ hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 hpp-statistics.configure.dep: hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
-hpp-constraints.configure.dep: hpp-model.install hpp-constraints.checkout
-hpp-wholebody-step.configure.dep: hpp-constraints.install \
+qpOASES.configure.dep: qpOASES.checkout
+hpp-constraints.configure.dep: qpOASES.install hpp-model.install hpp-constraints.checkout
+hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
@@ -153,6 +171,8 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
+hpp-gui.configure.dep: gepetto-viewer-corba.install \
+	hpp-corbaserver.install hpp-gui.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
@@ -238,10 +258,8 @@ eigen3.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget -O eigen3.tar.bz2 \
-		http://bitbucket.org/eigen/eigen/get/3.2.1.tar.bz2;\
-		cd ${SRC_DIR}; bunzip2 eigen3.tar.bz2; tar xvf eigen3.tar;\
-		rm -f eigen3.tar; mv eigen-eigen-6b38706d90a9 eigen3;\
+		wget -O - "http://bitbucket.org/eigen/eigen/get/3.2.4.tar.bz2" | tar -xj; \
+		mv eigen-eigen-10219c95fe65 eigen3;\
 	fi
 
 eigen3.configure: eigen3.configure.dep
@@ -249,6 +267,27 @@ eigen3.configure: eigen3.configure.dep
 	mkdir -p build; \
 	cd ${SRC_DIR}/eigen3/build; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
+
+roboptim-core-3.1.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | tar -xj; \
+	fi
+
+roboptim-trajectory-3.1.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+	        wget -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | tar -xj; \
+	fi
+
+doxygen-Release_1_8_10.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget -O - "https://github.com/doxygen/doxygen/archive/Release_1_8_10.tar.gz" | tar -xz;\
+	fi
 
 hrp2.configure: hrp2.configure.dep
 	. ${DEVEL_DIR}/install/setup.sh; \
