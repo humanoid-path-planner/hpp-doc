@@ -37,8 +37,14 @@ hpp-template-corba_repository=${LAAS_REPO}
 hpp-corbaserver_branch=euroc
 hpp-corbaserver_repository=${HPP_REPO}
 
+qpOASES_branch=euroc
+qpOASES_repository=${HPP_REPO}
+
 hpp-constraints_branch=euroc
 hpp-constraints_repository=${HPP_REPO}
+
+hpp-walkgen_branch=euroc
+hpp-walkgen_repository=${HPP_REPO}
 
 hpp-wholebody-step_branch=euroc
 hpp-wholebody-step_repository=${HPP_REPO}
@@ -67,7 +73,7 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 hpp-manipulation-corba_branch=euroc
 hpp-manipulation-corba_repository=${HPP_REPO}
 
-robot_state_chain_publisher_branch=euroc
+robot_state_chain_publisher_branch=master
 robot_state_chain_publisher_repository=${HPP_REPO}
 
 iai_maps_branch=euroc
@@ -76,10 +82,10 @@ iai_maps_repository=${HPP_REPO}
 hpp_tutorial_branch=euroc
 hpp_tutorial_repository=${HPP_REPO}
 
-hpp_benchmark_branch=master
+hpp_benchmark_branch=euroc
 hpp_benchmark_repository=${HPP_REPO}
 
-collada-dom_branch=euroc
+collada-dom_branch=master
 collada-dom_repository=${HPP_REPO}
 
 gepetto-viewer_branch=euroc

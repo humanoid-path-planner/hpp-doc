@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BRANCH=euroc
+BRANCH=euroc-devel
 if [ -z ${DEVEL_DIR} ]; then
   export DEVEL_DIR=/local/devel/hpp
 fi
@@ -12,11 +12,11 @@ sudo apt-get --assume-yes install autoconf g++ cmake libboost-dev \
   ros-indigo-octomap ros-indigo-resource-retriever ros-indigo-srdfdom \
   ros-indigo-pr2-robot flex bison asciidoc source-highlight git libomniorb4-dev \
   omniorb-nameserver omniidl omniidl-python libltdl-dev python-matplotlib \
-  libtinyxml2-dev liblog4cxx10-dev libltdl-dev
+  libtinyxml2-dev liblog4cxx10-dev libltdl-dev subversion
 sudo apt-get --assume-yes build-dep openscenegraph
 
 # hpp-gui dependencies
-sudo apt-get --assume-yes install qt4-dev-tools libqt4-opengl-dev libqtgui4 oxygen-icon-theme
+sudo apt-get --assume-yes install qt4-dev-tools libqt4-opengl-dev libqtgui4 oxygen-icon-theme graphviz
 
 # Setup environment
 mkdir --parents $DEVEL_DIR
