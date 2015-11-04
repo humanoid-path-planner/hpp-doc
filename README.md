@@ -95,3 +95,23 @@ To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the follow
   will have access to the documentation of most packages.
 
   Click on tutotial in the left panel to start learning about the software.
+
+##Trouble Shooting
+
+  Here are a few common issues and solutions to solve them
+
+  1. At configuration, the following message appears:
+
+    CMake Error at CMakeLists.txt:25 (INCLUDE):
+
+    include could not find load file:
+
+      cmake/base.cmake
+
+    Solution: each package comes with a git submodule checked out in a directory
+    called "cmake" at the root of the package. the --recursive directive of
+    git clone is meant to check out this submodule. For some network
+    configurations however, the cmake module is not checked out. One solution
+    is to request git to use https protocol by typing the following command:
+
+      git config --global url."https://".insteadOf git://
