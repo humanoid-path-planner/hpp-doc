@@ -16,7 +16,7 @@ sudo apt-get --assume-yes install autoconf g++ cmake libboost-dev \
 sudo apt-get --assume-yes build-dep openscenegraph
 
 # hpp-gui dependencies
-sudo apt-get --assume-yes install qt4-dev-tools libqt4-opengl-dev libqtgui4 oxygen-icon-theme graphviz
+sudo apt-get --assume-yes install qt4-dev-tools libqt4-opengl-dev libqtgui4 oxygen-icon-theme graphviz-dev
 
 # Setup environment
 mkdir --parents $DEVEL_DIR
