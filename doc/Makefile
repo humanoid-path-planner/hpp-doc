@@ -120,7 +120,7 @@ eigen3.configure.dep: eigen3.checkout
 doxygen-Release_1_8_10.configure.dep: doxygen-Release_1_8_10.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
 roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
-       	roboptim-trajectory-3.1.checkout
+	roboptim-trajectory-3.1.checkout
 hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
         roboptim-trajectory-3.1.install hpp-walkgen.checkout
 hpp-util.configure.dep: hpp-util.checkout
@@ -271,7 +271,7 @@ roboptim-core-3.1.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
- 		wget -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | tar -xj; \
+		wget -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | tar -xj; \
 	fi
 
 roboptim-trajectory-3.1.checkout:
