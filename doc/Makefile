@@ -10,6 +10,11 @@ HPP_REPO=https://github.com/humanoid-path-planner
 
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
+ifeq (${BUILD_TYPE},Debug)
+  BUILD_FOLDER=build
+else
+  BUILD_FOLDER=build-rel
+endif
 
 hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
@@ -107,6 +112,12 @@ hpp-gui_repository=${HPP_REPO}
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
 
 doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
+roboptim-core-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
+roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
+qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 all: doxygen-Release_1_8_10.install hpp_tutorial.install \
 	hpp-gepetto-viewer.install
@@ -215,25 +226,24 @@ update:
 	git submodule update
 
 %.configure:%.configure.dep
-	cd ${SRC_DIR}/$(@:.configure=);\
-	mkdir -p build; \
-	cd ${SRC_DIR}/$(@:.configure=)/build; \
+	mkdir -p ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure=)_extra_flags} ..
 
 %.install:%.configure
-	cd ${SRC_DIR}/$(@:.install=)/build;\
+	cd ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER};\
 	make install
 
 %.uninstall:
-	cd ${SRC_DIR}/$(@:.uninstall=)/build;\
+	cd ${SRC_DIR}/$(@:.uninstall=)/${BUILD_FOLDER};\
 	make uninstall
 
 %.clean:
-	cd ${SRC_DIR}/$(@:.clean=)/build;\
+	cd ${SRC_DIR}/$(@:.clean=)/${BUILD_FOLDER};\
 	make clean
 
 %.very-clean:
-	rm -rf ${SRC_DIR}/$(@:.very-clean=)/build/*
+	rm -rf ${SRC_DIR}/$(@:.very-clean=)/${BUILD_FOLDER}/*
 
 %.status:
 	cd ${SRC_DIR}/$(@:.status=); git status
@@ -249,8 +259,8 @@ update:
 hpp-doc.configure: hpp-doc.checkout
 	cd ${SRC_DIR}/$(@:.configure=);\
 	./bootstrap;\
-	mkdir -p build; \
-	cd ${SRC_DIR}/$(@:.configure=)/build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
 	../configure --prefix=${DEVEL_DIR}/install
 
 eigen3.checkout:
@@ -263,8 +273,8 @@ eigen3.checkout:
 
 eigen3.configure: eigen3.configure.dep
 	cd ${SRC_DIR}/eigen3;\
-	mkdir -p build; \
-	cd ${SRC_DIR}/eigen3/build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/eigen3/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
 
 roboptim-core-3.1.checkout:
@@ -291,28 +301,28 @@ doxygen-Release_1_8_10.checkout:
 hrp2.configure: hrp2.configure.dep
 	. ${DEVEL_DIR}/install/setup.sh; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
-	mkdir -p build; \
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 hrp2.install: hrp2.configure
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/build;\
+	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER};\
 	make install
 
 robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
-	mkdir -p build; \
-	cd build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 	cd ${SRC_DIR}/$(@:.configure=)/urdf_parser_py;\
-	mkdir -p build; \
-	cd build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 robot_model_py.install: robot_model_py.configure
-	cd ${SRC_DIR}/$(@:.install=)/xml_reflection/build; \
+	cd ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER}; \
 	make install; \
-	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/build; \
+	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER}; \
 	make install;
 
 OpenSceneGraph-3.4.0.checkout:
