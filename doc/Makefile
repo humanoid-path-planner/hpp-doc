@@ -10,6 +10,7 @@ JRL_REPO=https://github.com/jrl-umi3218
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 DLR_REPO=https://svn.dlr.de/euroc_c2
+ANNA_REPO=https://github.com/anna-seppala
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
 
@@ -79,8 +80,8 @@ robot_state_chain_publisher_repository=${HPP_REPO}
 iai_maps_branch=euroc
 iai_maps_repository=${HPP_REPO}
 
-hpp_tutorial_branch=euroc
-hpp_tutorial_repository=${HPP_REPO}
+hpp_tutorial_branch=euroc-c2
+hpp_tutorial_repository=${ANNA_REPO}
 
 hpp_benchmark_branch=euroc
 hpp_benchmark_repository=${HPP_REPO}
