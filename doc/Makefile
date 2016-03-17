@@ -104,7 +104,7 @@ hpp-dlr-ipa_branch=master
 hpp-dlr-ipa_repository=${ANNA_REPO}
 
 ur_description_branch=master
-ur_description_repsitory=${ANNA_REPO}
+ur_description_repository=${ANNA_REPO}
 
 doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
