@@ -65,6 +65,7 @@ To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the follow
      variable DEVEL_DIR with the full path to this directory.
      - the packages will be cloned into $DEVEL_DIR/src,
      - the packages will be installed in $DEVEL_DIR/install.
+     You will need to create the src and install directories by hand before continuing the installation.
      It is recommanded to set variable DEVEL_DIR in your .bashrc for future use.
 
   4. Copy Config and Makefile
