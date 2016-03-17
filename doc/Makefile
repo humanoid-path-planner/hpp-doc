@@ -19,7 +19,7 @@ hpp-util_repository=${ANNA_REPO}
 hpp-model_branch=euroc-devel
 hpp-model_repository=${ANNA_REPO}
 
-hpp-model-urdf_branch=euroc-c2
+hpp-model-urdf_branch=euroc-c1
 hpp-model-urdf_repository=${HPP_REPO}
 
 hpp-statistics_branch=euroc-devel
@@ -34,16 +34,16 @@ hpp-template-corba_repository=${LAAS_REPO}
 hpp-corbaserver_branch=euroc-devel
 hpp-corbaserver_repository=${ANNA_REPO}
 
-qpOASES_branch=euroc-c2
+qpOASES_branch=euroc-c1
 qpOASES_repository=${HPP_REPO}
 
 hpp-constraints_branch=euroc-devel
 hpp-constraints_repository=${ANNA_REPO}
 
-hpp-walkgen_branch=euroc-c2
+hpp-walkgen_branch=euroc-c1
 hpp-walkgen_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=euroc-c2
+hpp-wholebody-step_branch=euroc-c1
 hpp-wholebody-step_repository=${HPP_REPO}
 
 hpp-wholebody-step-corba_branch=euroc-devel
@@ -70,10 +70,10 @@ hpp-manipulation-urdf_repository=${ANNA_REPO}
 hpp-manipulation-corba_branch=euroc-devel
 hpp-manipulation-corba_repository=${ANNA_REPO}
 
-robot_state_chain_publisher_branch=euroc-c2
+robot_state_chain_publisher_branch=euroc-c1
 robot_state_chain_publisher_repository=${HPP_REPO}
 
-iai_maps_branch=euroc-c2
+iai_maps_branch=euroc-c1
 iai_maps_repository=${HPP_REPO}
 
 hpp_tutorial_branch=euroc-devel
@@ -91,7 +91,7 @@ gepetto-viewer_repository=${ANNA_REPO}
 gepetto-viewer-corba_branch=euroc-devel
 gepetto-viewer-corba_repository=${ANNA_REPO}
 
-hpp-gepetto-viewer_branch=euroc-c2
+hpp-gepetto-viewer_branch=euroc-c1
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
 hpp-plot_branch=euroc-devel
