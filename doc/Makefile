@@ -10,34 +10,34 @@ ANNA_REPO=https://github.com/anna-seppala
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
 
-hpp-fcl_branch=euroc-devel
+hpp-fcl_branch=euroc-c1
 hpp-fcl_repository=${ANNA_REPO}
 
-hpp-util_branch=euroc-devel
+hpp-util_branch=euroc-c1
 hpp-util_repository=${ANNA_REPO}
 
-hpp-model_branch=euroc-devel
+hpp-model_branch=euroc-c1
 hpp-model_repository=${ANNA_REPO}
 
 hpp-model-urdf_branch=euroc-c1
 hpp-model-urdf_repository=${HPP_REPO}
 
-hpp-statistics_branch=euroc-devel
+hpp-statistics_branch=euroc-c1
 hpp-statistics_repository=${ANNA_REPO}
 
-hpp-core_branch=euroc-devel
+hpp-core_branch=euroc-c1
 hpp-core_repository=${ANNA_REPO}
 
 hpp-template-corba_branch=devel
 hpp-template-corba_repository=${LAAS_REPO}
 
-hpp-corbaserver_branch=euroc-devel
+hpp-corbaserver_branch=euroc-c1
 hpp-corbaserver_repository=${ANNA_REPO}
 
 qpOASES_branch=euroc-c1
 qpOASES_repository=${HPP_REPO}
 
-hpp-constraints_branch=euroc-devel
+hpp-constraints_branch=euroc-c1
 hpp-constraints_repository=${ANNA_REPO}
 
 hpp-walkgen_branch=euroc-c1
@@ -46,7 +46,7 @@ hpp-walkgen_repository=${HPP_REPO}
 hpp-wholebody-step_branch=euroc-c1
 hpp-wholebody-step_repository=${HPP_REPO}
 
-hpp-wholebody-step-corba_branch=euroc-devel
+hpp-wholebody-step-corba_branch=euroc-c1
 hpp-wholebody-step-corba_repository=${ANNA_REPO}
 
 test-hpp_branch=devel
@@ -58,16 +58,16 @@ robot_capsule_urdf_repository=${LAAS_REPO}
 robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
-hpp-doc_branch=euroc-devel
+hpp-doc_branch=euroc-c1
 hpp-doc_repository=${ANNA_REPO}
 
-hpp-manipulation_branch=euroc-devel
+hpp-manipulation_branch=euroc-c1
 hpp-manipulation_repository=${ANNA_REPO}
 
-hpp-manipulation-urdf_branch=euroc-devel
+hpp-manipulation-urdf_branch=euroc-c1
 hpp-manipulation-urdf_repository=${ANNA_REPO}
 
-hpp-manipulation-corba_branch=euroc-devel
+hpp-manipulation-corba_branch=euroc-c1
 hpp-manipulation-corba_repository=${ANNA_REPO}
 
 robot_state_chain_publisher_branch=euroc-c1
@@ -76,7 +76,7 @@ robot_state_chain_publisher_repository=${HPP_REPO}
 iai_maps_branch=euroc-c1
 iai_maps_repository=${HPP_REPO}
 
-hpp_tutorial_branch=euroc-devel
+hpp_tutorial_branch=euroc-c1
 hpp_tutorial_repository=${ANNA_REPO}
 
 hpp_benchmark_branch=master
@@ -85,26 +85,26 @@ hpp_benchmark_repository=${HPP_REPO}
 collada-dom_branch=master
 collada-dom_repository=${HPP_REPO}
 
-gepetto-viewer_branch=euroc-devel
+gepetto-viewer_branch=euroc-c1
 gepetto-viewer_repository=${ANNA_REPO}
 
-gepetto-viewer-corba_branch=euroc-devel
+gepetto-viewer-corba_branch=euroc-c1
 gepetto-viewer-corba_repository=${ANNA_REPO}
 
 hpp-gepetto-viewer_branch=euroc-c1
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-hpp-plot_branch=euroc-devel
+hpp-plot_branch=euroc-c1
 hpp-plot_repository=${ANNA_REPO}
 
-qgv_branch=euroc-devel
+qgv_branch=euroc-c1
 qgv_repository=${ANNA_REPO}
 
 hpp-dlr-ipa_branch=master
 hpp-dlr-ipa_repository=${ANNA_REPO}
 
 ur_description_branch=master
-ur_description_repository=${ANNA_REPO}
+ur_description_repository=${HPP_REPO}
 
 doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
