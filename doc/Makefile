@@ -172,7 +172,7 @@ hpp-plot.configure.dep: hpp-manipulation-corba.install qgv.install \
 	hpp-plot.checkout
 qgv.configure.dep: qgv.checkout
 hpp-dlr-ipa.configure.dep: ur_description.install hpp-dlr-ipa.checkout
-ur_description.configure.dep: ur_description.checkout
+ur_description.configure.dep: hpp-corbaserver.install ur_description.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
