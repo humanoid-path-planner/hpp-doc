@@ -65,26 +65,20 @@ To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the follow
      variable DEVEL_DIR with the full path to this directory.
      - the packages will be cloned into $DEVEL_DIR/src,
      - the packages will be installed in $DEVEL_DIR/install.
+     You will need to create the src and install directories by hand before continuing the installation.
      It is recommanded to set variable DEVEL_DIR in your .bashrc for future use.
 
   4. Copy Config and Makefile
-        
-        wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/euroc/doc/config.sh
 
-	wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/euroc/doc/Makefile
+        wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/euroc-c1/doc/config.sh
 
-  5. edit $DEVEL_DIR/src/Makefile and fill in lines
+	wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/euroc-c1/doc/Makefile
 
-    - SVN_USERNAME=
-    - SVN_PASSWORD=
-
-    with the appropriate information to access svn repository of dlr.
-
-  6. cd into $DEVEL_DIR and type
+  5. cd into $DEVEL_DIR and type
 
     source config.sh
 
-  7. cd into $DEVEL_DIR/src and type
+  6. cd into $DEVEL_DIR/src and type
 
     make robot_state_chain_publisher.install;
     source ../config.sh;
