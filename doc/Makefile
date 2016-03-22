@@ -7,7 +7,7 @@ JRL_REPO=https://github.com/jrl-umi3218
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 SRC_DIR=${DEVEL_DIR}/src
-BUILD_TYPE=Debug
+BUILD_TYPE=Release
 
 hpp-fcl_branch=euroc-c1
 hpp-fcl_repository=${HPP_REPO}
