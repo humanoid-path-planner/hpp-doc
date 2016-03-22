@@ -84,6 +84,16 @@ To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the follow
     source ../config.sh;
     make all
 
+  Note that all packages are built in RELEASE mode as default. In order to efficiently 
+  debug individual packages, go into the build/ directory of any given package and type 
+ 
+    ccmake ..
+
+  Change the CMAKE_BUILD_TYPE flag from RELEASE to DEBUG, and configure the change.
+  Building the package will now be done in DEBUG mode. Please note that running
+  packages that have been built in DEBUG mode may drastically increase computational
+  time.
+
 ##Documentation
 
   Open $DEVEL_DIR/install/share/doc/hpp-doc/index.html in a web brower and you
