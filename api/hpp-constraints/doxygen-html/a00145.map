@@ -1,0 +1,6 @@
+<map id="hpp::constraints::JointFrame" name="hpp::constraints::JointFrame">
+<area shape="rect" id="node2" href="$a00002.html" title="hpp::constraints::Calculus\lBase\&lt; JointFrame, Eigen\l::Matrix\&lt; value_type, 6,\l 1 \&gt;, Eigen::Matrix\&lt; value\l_type, 6, Eigen::Dynamic \&gt; \&gt;" alt="" coords="339,5,533,91"/>
+<area shape="rect" id="node3" href="$a00003.html" title="hpp::constraints::Calculus\lBaseAbstract\&lt; Eigen::Matrix\l\&lt; value_type, 6, 1 \&gt;, Eigen\l::Matrix\&lt; value_type, 6, Eigen\l::Dynamic \&gt; \&gt;" alt="" coords="7,5,204,91"/>
+<area shape="rect" id="node4" href="https://jmirabel.github.io/hpp-doc/api/hpp-model/doxygen-html/hpp-model.doxytag$a00013.html" title="hpp::model::Joint" alt="" coords="375,115,497,141"/>
+<area shape="rect" id="node5" href="https://jmirabel.github.io/hpp-doc/api/hpp-model/doxygen-html/hpp-model.doxytag$a00015.html" title="hpp::model::JointConfiguration" alt="" coords="6,115,205,141"/>
+</map>

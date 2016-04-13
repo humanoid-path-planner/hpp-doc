@@ -1,0 +1,11 @@
+digraph "wholebody-step" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_b4d1a845b7d187eff587f84b36cf4f45 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="corbaserver" fontname="FreeSans", fontsize="10", URL="dir_b4d1a845b7d187eff587f84b36cf4f45.html"]
+  dir_8b456e0baa22d6d2d0c5fa75c2e77425 [shape=box, label="wholebody-step", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_8b456e0baa22d6d2d0c5fa75c2e77425.html"];
+  }
+  dir_4fef79e7177ba769987a8da36c892c5f [shape=box label="build" fillcolor="white" style="filled" color="red" URL="dir_4fef79e7177ba769987a8da36c892c5f.html"];
+  dir_8b456e0baa22d6d2d0c5fa75c2e77425->dir_4fef79e7177ba769987a8da36c892c5f [headlabel="1", labeldistance=1.5 headhref="dir_000008_000000.html"];
+}

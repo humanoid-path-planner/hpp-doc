@@ -1,0 +1,1643 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>contact.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/include/hpp/manipulation/srdf/factories/</path>
+    <filename>a00012</filename>
+    <includes id="a00017" name="parser.hh" local="yes" imported="no">hpp/manipulation/parser/parser.hh</includes>
+    <includes id="a00020" name="sequence.hh" local="yes" imported="no">hpp/manipulation/parser/factories/sequence.hh</includes>
+    <class kind="class">hpp::manipulation::srdf::ContactFactory</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::srdf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>factories.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/include/hpp/manipulation/srdf/</path>
+    <filename>a00013</filename>
+    <includes id="a00001" name="handle.hh" local="yes" imported="no">hpp/manipulation/srdf/factories/handle.hh</includes>
+    <includes id="a00014" name="gripper.hh" local="yes" imported="no">hpp/manipulation/srdf/factories/gripper.hh</includes>
+    <includes id="a00018" name="position.hh" local="yes" imported="no">hpp/manipulation/srdf/factories/position.hh</includes>
+    <includes id="a00020" name="sequence.hh" local="yes" imported="no">hpp/manipulation/parser/factories/sequence.hh</includes>
+    <includes id="a00015" name="ignoretag.hh" local="yes" imported="no">hpp/manipulation/parser/factories/ignoretag.hh</includes>
+    <includes id="a00019" name="robot.hh" local="yes" imported="no">hpp/manipulation/srdf/factories/robot.hh</includes>
+    <includes id="a00012" name="contact.hh" local="yes" imported="no">hpp/manipulation/srdf/factories/contact.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>gripper.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/include/hpp/manipulation/srdf/factories/</path>
+    <filename>a00014</filename>
+    <includes id="a00017" name="parser.hh" local="yes" imported="no">hpp/manipulation/parser/parser.hh</includes>
+    <class kind="class">hpp::manipulation::srdf::GripperFactory</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::srdf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>handle.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/include/hpp/manipulation/srdf/factories/</path>
+    <filename>a00001</filename>
+    <includes id="a00017" name="parser.hh" local="yes" imported="no">hpp/manipulation/parser/parser.hh</includes>
+    <class kind="class">hpp::manipulation::srdf::HandleFactory</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::srdf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ignoretag.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/include/hpp/manipulation/parser/factories/</path>
+    <filename>a00015</filename>
+    <includes id="a00017" name="parser.hh" local="yes" imported="no">hpp/manipulation/parser/parser.hh</includes>
+    <class kind="class">hpp::manipulation::parser::IgnoreTagFactory</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::parser</namespace>
+  </compound>
+  <compound kind="file">
+    <name>package.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/doc/main-page/</path>
+    <filename>a00016</filename>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::srdf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>parser.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/include/hpp/manipulation/parser/</path>
+    <filename>a00017</filename>
+    <class kind="class">hpp::manipulation::parser::ObjectFactory</class>
+    <class kind="class">hpp::manipulation::parser::RootFactory</class>
+    <class kind="class">hpp::manipulation::parser::Parser</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::parser</namespace>
+    <member kind="typedef">
+      <type>TiXmlElement</type>
+      <name>XMLElement</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>ae91631c3b26c8d9af50af6b134d004d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlDocument</type>
+      <name>XMLDocument</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a2193554800c30fea6d97d4b8e8eedae0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlAttribute</type>
+      <name>XMLAttribute</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>aaa0cdad68cda7e9050dcf4c7c07fca12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlNode</type>
+      <name>XMLNode</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a941877867794d55099e39f62e6d7abb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlText</type>
+      <name>XMLText</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a28ac11674a0cfc91a1a72c64c839465d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectFactory *</type>
+      <name>create</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a3f5ef3fc22b091d6d6c6469e048d7b13</anchor>
+      <arglist>(ObjectFactory *parent=NULL, const XMLElement *element=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a039bc2b306f2b30c79da233a1d43ea42</anchor>
+      <arglist>(std::ostream &amp;, const ObjectFactory &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>ab4cc47b35792bd8bb20747c2a4a46c78</anchor>
+      <arglist>(std::ostream &amp;, const Parser &amp;)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>position.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/include/hpp/manipulation/srdf/factories/</path>
+    <filename>a00018</filename>
+    <includes id="a00020" name="sequence.hh" local="yes" imported="no">hpp/manipulation/parser/factories/sequence.hh</includes>
+    <class kind="class">hpp::manipulation::srdf::PositionFactory</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::srdf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>robot.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/include/hpp/manipulation/srdf/factories/</path>
+    <filename>a00019</filename>
+    <includes id="a00017" name="parser.hh" local="yes" imported="no">hpp/manipulation/parser/parser.hh</includes>
+    <class kind="class">hpp::manipulation::srdf::RobotFactory</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::srdf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>sequence.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/include/hpp/manipulation/parser/factories/</path>
+    <filename>a00020</filename>
+    <includes id="a00017" name="parser.hh" local="yes" imported="no">hpp/manipulation/parser/parser.hh</includes>
+    <class kind="class">hpp::manipulation::parser::SequenceFactory</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::parser</namespace>
+  </compound>
+  <compound kind="file">
+    <name>util.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-urdf/include/hpp/manipulation/srdf/</path>
+    <filename>a00021</filename>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::srdf</namespace>
+    <member kind="function">
+      <type>void</type>
+      <name>loadEnvironmentModel</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a45ff3e26a3ba738d653414f7887cc61b</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadObjectModel</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a2a9c078215a67d8054bb86d59774e3a3</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const model::JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadHumanoidModel</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ae1281a50a0a6df7959e4979c3dc6dd92</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const model::JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadRobotModel</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a08d01037d8cd3f0357a84c800819355e</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const model::JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addRobotSRDFModel</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a26db68726afa11b06b749fac8e5b1a2a</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const std::string &amp;prefix, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::srdf::ContactFactory</name>
+    <filename>a00002.html</filename>
+    <base>hpp::manipulation::parser::ObjectFactory</base>
+    <member kind="typedef">
+      <type>parser::SequenceFactory&lt; value_type &gt;</type>
+      <name>PointFactory</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aba7e691083ec38e1ea93ed0302930797</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>parser::SequenceFactory&lt; unsigned int &gt;</type>
+      <name>TriangleFactory</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a607fd1e192bdd5bc7be935262927cd9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>parser::SequenceFactory&lt; unsigned int &gt;</type>
+      <name>ShapeFactory</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aebd232a930b23ee325a5b884bd5abf19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ContactFactory</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a3b42c55ba83fd6423c948916a4b5501f</anchor>
+      <arglist>(ObjectFactory *parent, const parser::XMLElement *element)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishTags</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a6577401f58c4e222c6347f160fbef02d</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::srdf::GripperFactory</name>
+    <filename>a00003.html</filename>
+    <base>hpp::manipulation::parser::ObjectFactory</base>
+    <member kind="function">
+      <type></type>
+      <name>GripperFactory</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>ac42a195f31d6687d9f89ce72fe973302</anchor>
+      <arglist>(ObjectFactory *parent, const parser::XMLElement *element)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishTags</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a806100dcdca460fb0b7882daa01891dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>GripperPtr_t</type>
+      <name>gripper</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a4d2def6570f0f3bb93c53ec3d8850422</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>GripperPtr_t</type>
+      <name>gripper_</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a93ec1c7b663c0a4b4b006b51900e7050</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Transform3f</type>
+      <name>localPosition_</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a0ef7d99d2cd1d76d077a16679d3f407c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>linkName_</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>aa74aa2400f33ee758fa13acf0bcbd356</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::list&lt; std::string &gt;</type>
+      <name>collisionLinks_</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a69a806c8f2395264266637f3a4e629af</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::srdf::HandleFactory</name>
+    <filename>a00004.html</filename>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; HandleType &gt;</type>
+      <name>HandleTypePtr_t</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>ac766cde0419ebd60f5477c7cf4f0c9d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HandleFactory</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>af94c04c9a14cd0c666303f28bb96b8eb</anchor>
+      <arglist>(ObjectFactory *parent, const XMLElement *element)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishTags</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a31a2f737ac9f5fa801ee22d94a013b41</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>HandleTypePtr_t</type>
+      <name>handle</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>ae02d4f104d68410883540a851bfd90e6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>HandleTypePtr_t</type>
+      <name>handle_</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a7e974f0be4b5e4b81727976a7acb230d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Transform3f</type>
+      <name>localPosition_</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a98b67e9d6eeac7e3e34820a74452a656</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>linkName_</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a8926379321294fc2be08298035d6e024</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::parser::IgnoreTagFactory</name>
+    <filename>a00005.html</filename>
+    <base>hpp::manipulation::parser::ObjectFactory</base>
+    <member kind="function">
+      <type></type>
+      <name>IgnoreTagFactory</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a1286e92ea94bcc45ecdaf6418165fa26</anchor>
+      <arglist>(ObjectFactory *parent, const XMLElement *element)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>init</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a318ff5b1d8288764d764dc93c46432f5</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::parser::ObjectFactory</name>
+    <filename>a00006.html</filename>
+    <member kind="typedef">
+      <type>std::list&lt; ObjectFactory * &gt;</type>
+      <name>ObjectFactoryList</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a0894b396c9618ff1ceb292ce6d5225eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ObjectFactory</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aaff372e1559b133357185cc7ddb7bed6</anchor>
+      <arglist>(ObjectFactory *parent=NULL, const XMLElement *element=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ObjectFactory</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a1184b7bcfca89215923d5e0637c618b4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>name</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a31426213cdc684ae339d874abb773176</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>name</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a9a124dbce4ec65695eb0c840487d7b44</anchor>
+      <arglist>(const char *n)</arglist>
+    </member>
+    <member kind="function">
+      <type>T *</type>
+      <name>as</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a8b85ef04250b74b718bb44ba1e9e2817</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>init</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a2f6bc1d4e1dd83db747b9463c5d99fff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setAttribute</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a49a043fd34a83cf33b70d0603102e1a5</anchor>
+      <arglist>(const XMLAttribute *attr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addTextChild</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aff6ba4da30dedfcd6f56c99cf6eb7f33</anchor>
+      <arglist>(const XMLText *text)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>finishAttributes</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a241dd955c326320f5f665016caf59277</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishTags</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a9d154c60c2d548c8890e9381d2275696</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishFile</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a2914f9e72a62f954d9519344bd3fff1c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>tagName</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a4d295f3b2b65ec08406911d942bb1836</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>name</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ac6c1b1c33d9f309b0edf8944f41a60d7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasAttribute</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a15f7428975e3c75d43765f9b1f78f25e</anchor>
+      <arglist>(const std::string &amp;attr) const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>getAttribute</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a424e4e922425fedcc49647d19b83f53a</anchor>
+      <arglist>(const std::string &amp;attr) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectFactoryList</type>
+      <name>getChildrenOfType</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a709ef93b924901002c85b176b88d6371</anchor>
+      <arglist>(std::string type)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>getChildOfType</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae92e044881955aa97cc0005396c9dfd4</anchor>
+      <arglist>(std::string type, ObjectFactory *&amp;o)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>ObjectFactory</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>abb34907b7f02a21b1fcfc1f32b05ae21</anchor>
+      <arglist>(RootFactory *root)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>ObjectFactory *</type>
+      <name>parent</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a72dfea7d40f64e9f0e6cf39180a1a899</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>RootFactory *</type>
+      <name>root</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a643fbdcc9c8040e7cf74e3c8d9933802</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>hasParent</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aa67236782790872ac4229eb45898333e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const XMLElement *</type>
+      <name>XMLelement</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>af9964eb54d3f8e7e1309a1d52cd25cb2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>impl_setAttribute</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aa260d7e3d78c916e7446ee8f88aea6c5</anchor>
+      <arglist>(const XMLAttribute *attr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>addChild</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a637a30080dcafd9363d190462a96293a</anchor>
+      <arglist>(ObjectFactory *child)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a195ed4292877c727a3e4b2db1839e09a</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a0d23f6b882db4d41c8792f6f66048638</anchor>
+      <arglist>(std::ostream &amp;, const ObjectFactory &amp;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>init</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a2f6bc1d4e1dd83db747b9463c5d99fff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setAttribute</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a49a043fd34a83cf33b70d0603102e1a5</anchor>
+      <arglist>(const XMLAttribute *attr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addTextChild</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aff6ba4da30dedfcd6f56c99cf6eb7f33</anchor>
+      <arglist>(const XMLText *text)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>finishAttributes</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a241dd955c326320f5f665016caf59277</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishTags</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a9d154c60c2d548c8890e9381d2275696</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishFile</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a2914f9e72a62f954d9519344bd3fff1c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>tagName</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a4d295f3b2b65ec08406911d942bb1836</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>name</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ac6c1b1c33d9f309b0edf8944f41a60d7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasAttribute</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a15f7428975e3c75d43765f9b1f78f25e</anchor>
+      <arglist>(const std::string &amp;attr) const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>getAttribute</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a424e4e922425fedcc49647d19b83f53a</anchor>
+      <arglist>(const std::string &amp;attr) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectFactoryList</type>
+      <name>getChildrenOfType</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a709ef93b924901002c85b176b88d6371</anchor>
+      <arglist>(std::string type)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>getChildOfType</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae92e044881955aa97cc0005396c9dfd4</anchor>
+      <arglist>(std::string type, ObjectFactory *&amp;o)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::parser::Parser</name>
+    <filename>a00007.html</filename>
+    <member kind="typedef">
+      <type>ObjectFactory *(*</type>
+      <name>FactoryType</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a9bbcd07dc59751a3ee6790355663f197</anchor>
+      <arglist>)(ObjectFactory *, const XMLElement *)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Parser</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a1667b620b35279592cf954b179d3f47f</anchor>
+      <arglist>(bool fillWithDefaultFactories=true, FactoryType defaultFactory=create&lt; ObjectFactory &gt;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Parser</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ad50f2d6e78a200020699ecd89cad3127</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parse</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a9b0ca9a24bf51bc23966af6d4e525ced</anchor>
+      <arglist>(const std::string &amp;semanticResourceName, DevicePtr_t robot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addObjectFactory</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a9a74587b79449811f85317c3e249a6e0</anchor>
+      <arglist>(const std::string &amp;tagname, FactoryType factory)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parseFile</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a9670e4fe1cd5afe3009f001165a76717</anchor>
+      <arglist>(const char *filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>prefix</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a472e3266e5320b0e17903022659a0787</anchor>
+      <arglist>(const std::string &amp;prefix)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a8c5d192d977156a6b468db0e0045cc90</anchor>
+      <arglist>(std::ostream &amp;, const Parser &amp;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::srdf::PositionFactory</name>
+    <filename>a00008.html</filename>
+    <base>SequenceFactory&lt; float &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>PositionFactory</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>af0d445f9f91d568e94e86b98840d792c</anchor>
+      <arglist>(ObjectFactory *parent, const parser::XMLElement *element)</arglist>
+    </member>
+    <member kind="function">
+      <type>Transform3f</type>
+      <name>position</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a05a07e942a9e883d6aee2d53f19f3422</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::srdf::RobotFactory</name>
+    <filename>a00009.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>RobotFactory</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>af476a9e23a44a5fcb3254279118e2aa9</anchor>
+      <arglist>(ObjectFactory *parent, const XMLElement *element)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>finishAttributes</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a455608f23169d809057d47c7da450257</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::parser::RootFactory</name>
+    <filename>a00010.html</filename>
+    <base>hpp::manipulation::parser::ObjectFactory</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~RootFactory</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a2c6e8b2c22c72670749566051aa30565</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RootFactory</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a93ec4f476025fed3dccd23318b964ce8</anchor>
+      <arglist>(const DevicePtr_t dev=DevicePtr_t())</arglist>
+    </member>
+    <member kind="function">
+      <type>DevicePtr_t</type>
+      <name>device</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a66019a0b32db6a082615c3e7b291157c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>prependPrefix</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a32797af32e59c5ed35dd1f0dd949954f</anchor>
+      <arglist>(const std::string &amp;in) const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>removePrefix</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>aea29cf175e0c830ccbf9e727bf5951ee</anchor>
+      <arglist>(const std::string &amp;in) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>prefix</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ab8cb4f7654deb2a8c9a3e5cc64885dfe</anchor>
+      <arglist>(const std::string &amp;prefix)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::parser::SequenceFactory</name>
+    <filename>a00011.html</filename>
+    <templarg>ValueType</templarg>
+    <base>hpp::manipulation::parser::ObjectFactory</base>
+    <member kind="typedef">
+      <type>std::vector&lt; ValueType &gt;</type>
+      <name>OutType</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a2c101a33256abd423e163544a2704435</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SequenceFactory</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a5f4c62e067e0a8319b41fe06ecf6eacf</anchor>
+      <arglist>(ObjectFactory *parent, const XMLElement *element, const unsigned int nbValue=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addTextChild</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a6e26e0cf994bcaff47645d2c85fd64b4</anchor>
+      <arglist>(const XMLText *text)</arglist>
+    </member>
+    <member kind="function">
+      <type>const OutType &amp;</type>
+      <name>values</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>af497b59549a3eef67e545d706ac66642</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>SequenceFactory&lt; float &gt;</name>
+    <filename>a00011.html</filename>
+    <base>hpp::manipulation::parser::ObjectFactory</base>
+    <member kind="typedef">
+      <type>std::vector&lt; float &gt;</type>
+      <name>OutType</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a2c101a33256abd423e163544a2704435</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SequenceFactory</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a5f4c62e067e0a8319b41fe06ecf6eacf</anchor>
+      <arglist>(ObjectFactory *parent, const XMLElement *element, const unsigned int nbValue=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addTextChild</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a6e26e0cf994bcaff47645d2c85fd64b4</anchor>
+      <arglist>(const XMLText *text)</arglist>
+    </member>
+    <member kind="function">
+      <type>const OutType &amp;</type>
+      <name>values</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>af497b59549a3eef67e545d706ac66642</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00022.html</filename>
+    <namespace>hpp::manipulation</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::manipulation</name>
+    <filename>a00023.html</filename>
+    <namespace>hpp::manipulation::parser</namespace>
+    <namespace>hpp::manipulation::srdf</namespace>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Device &gt;</type>
+      <name>DevicePtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ad782ecbe33604e227e8d8ffaa3614906</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const Device &gt;</type>
+      <name>DeviceConstPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a69f5e0fb94ffdc8334ba82cbb0d56b50</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Joint</type>
+      <name>Joint</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>adfd76d64a37c6e59aa9d95f0dcf05200</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::JointPtr_t</type>
+      <name>JointPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a94e9b444a71f0850deaf5f27cce8a124</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::JointConstPtr_t</type>
+      <name>JointConstPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a756c0f8872bd09102d59eab2b7681b96</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Transform3f</type>
+      <name>Transform3f</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>af6f585b882e9733cf0d34dcbc59ad401</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Configuration_t</type>
+      <name>Configuration_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ae74e9ea4efeac19fa2174c3905aaf81c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ConfigurationIn_t</type>
+      <name>ConfigurationIn_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a07dc0a18fd3808047e49374198062aaa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ConfigurationOut_t</type>
+      <name>ConfigurationOut_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a503c26e02402f7769e8a391cddc69bbc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; model::Configuration_t &gt;</type>
+      <name>ConfigurationPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aba7e2b59f78904ae8093b14b97296786</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::GripperPtr_t</type>
+      <name>GripperPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a4a95e108e33773d5e8bcb890f6b51151</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; AxialHandle &gt;</type>
+      <name>AxialHandlePtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a0684e45fa926cbb65b9df8272bb24a8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Handle &gt;</type>
+      <name>HandlePtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a92732c6c727613b61716ad124a6a9d0b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Object &gt;</type>
+      <name>ObjectPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>abb0c5d5ccdb621475b2797eef462c4bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const Object &gt;</type>
+      <name>ObjectConstPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a50bc6e8ea2712047a6805e69e930e0ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ProblemSolver *</type>
+      <name>ProblemSolverPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a608debc446da69af3feadf4c39f78246</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Problem *</type>
+      <name>ProblemPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a745399f6356393fc73d1a2515c4cc44b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Roadmap &gt;</type>
+      <name>RoadmapPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a0c28dd700f352653af9666049279d3e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>RoadmapNode *</type>
+      <name>RoadmapNodePtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>adaf8da46b37f1942734d58b272a952fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; ConnectedComponent &gt;</type>
+      <name>ConnectedComponentPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a8e9ef6a3200682acf79c032b0dd4bf1c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; WeighedDistance &gt;</type>
+      <name>WeighedDistancePtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a9a7b15d5a7f059a2ab41f9a933a543d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativeOrientation</type>
+      <name>RelativeOrientation</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a23228c696526a79a6c6f6f0514cda71f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativePosition</type>
+      <name>RelativePosition</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aa1fe652c389244e999ea148b04ec52de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativeOrientationPtr_t</type>
+      <name>RelativeOrientationPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a83d1833e1da6222d4c203ad837356e13</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativePositionPtr_t</type>
+      <name>RelativePositionPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a81ad9eeab8f2c2632c2e52bbf7843502</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativeTransformation</type>
+      <name>RelativeTransformation</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>abc2663e5c21b5802d547fdd11f53941c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativeTransformationPtr_t</type>
+      <name>RelativeTransformationPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a8e62be0d61f84f3c67b5106da63db983</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::value_type</type>
+      <name>value_type</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ac007ccc56320eb7b5748ad259fe4a9f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::size_type</type>
+      <name>size_type</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a86f423dcee19dfc5cb8769273d2d09a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vector_t</type>
+      <name>vector_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a981b6bc4a319231c72aa078711053900</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vectorIn_t</type>
+      <name>vectorIn_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a2e9e8f926af13b5b319bca19b011dff9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vectorOut_t</type>
+      <name>vectorOut_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a92c205e63302341d85a47befb66b1217</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; ManipulationPlanner &gt;</type>
+      <name>ManipulationPlannerPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a3180586c1bd5703bbb8d5d386215b9c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; GraphPathValidation &gt;</type>
+      <name>GraphPathValidationPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a06e1192f8e68967eb7102d1eb38efc2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; GraphSteeringMethod &gt;</type>
+      <name>GraphSteeringMethodPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aca63475b1fea174dc09dbbe444963a20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathOptimizer</type>
+      <name>PathOptimizer</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a5636b04594dffd6bfad225b069c0c0b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathOptimizerPtr_t</type>
+      <name>PathOptimizerPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a5e1c635c1a0881ccbc2229d049c7f02b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; GraphOptimizer &gt;</type>
+      <name>GraphOptimizerPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ab48442b4dadade45ec31c70bd7a7f2b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; GraphNodeOptimizer &gt;</type>
+      <name>GraphNodeOptimizerPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a7e55377231d6e301b9208c5335ff62c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathProjectorPtr_t</type>
+      <name>PathProjectorPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a111ec48114fff48949b1661a563ed992</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; model::DevicePtr_t &gt;</type>
+      <name>Devices_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ae11a367622c7f98ade7fed0a587cdca0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; ObjectPtr_t &gt;</type>
+      <name>Objects_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a25076831a140495234778ddf75ce8441</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; JointConstPtr_t, JointPtr_t &gt;</type>
+      <name>JointMap_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a2f2fa7d5da88707b333401181ccdfcef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::Constraint</type>
+      <name>Constraint</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aba6f9feb2949e5da227f8fa4aa9a7209</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConstraintPtr_t</type>
+      <name>ConstraintPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>afc4cdb920936f0196fe98045485da1e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::LockedJoint</type>
+      <name>LockedJoint</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>acb11a66b22d4dc255f83c0ed4a5a44a3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::LockedJointPtr_t</type>
+      <name>LockedJointPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a7b473b5114c7a50f9652c3a41b819a08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::NumericalConstraint</type>
+      <name>NumericalConstraint</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a644a28b0909469ca38c4500c861e07d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::NumericalConstraintPtr_t</type>
+      <name>NumericalConstraintPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a89578b7df5c82795ff27003ae5e73e09</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjector</type>
+      <name>ConfigProjector</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a1dcc36804edf6d230dc7d25e99d6ccdd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjectorPtr_t</type>
+      <name>ConfigProjectorPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a7fe50e8ceaee83f3c26bac0019fe8a9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; ConstraintSet &gt;</type>
+      <name>ConstraintSetPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>afeac6b2dff035785fcf8901c13bfb916</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::DifferentiableFunctionPtr_t</type>
+      <name>DifferentiableFunctionPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a09b7c812dd9f9d7cce1d6c705e758ac7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigurationShooter</type>
+      <name>ConfigurationShooter</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aedc4023cf0088c70cd97134ceb174fa7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigurationShooterPtr_t</type>
+      <name>ConfigurationShooterPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ac43851bbd27162488b16452412e7d62b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ValidationReport</type>
+      <name>ValidationReport</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a659be0f00813e134c888ac1473d8e612</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathValidationReportPtr_t</type>
+      <name>PathValidationReportPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a99f3a6bb901058f0d5a131c4ec5fe6ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::matrix_t</type>
+      <name>matrix_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ad0909318f61ecc99e11c76cf15b7d5fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::matrixIn_t</type>
+      <name>matrixIn_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a63539e7146401f235bce0818b9c5c7b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::matrixOut_t</type>
+      <name>matrixOut_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a5b57fec16e81aa95544067a9d955b266</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::vector3_t</type>
+      <name>vector3_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a24c129a3bd161824758d2ca4fa5d8de9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>NumericalConstraints_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a9cacffc969c8a64c6e0df0df903ab53a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::pair&lt; GripperPtr_t, HandlePtr_t &gt;</type>
+      <name>Grasp_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a67c5d401beeaed1bcff5145efc085293</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Grasp_t &gt;</type>
+      <name>GraspPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a7a34f9feb11f5bb2e3c41f6a53dd99f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; NumericalConstraintPtr_t, GraspPtr_t &gt;</type>
+      <name>GraspsMap_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ad3a279f3e18a786b8e57a88361917caa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; core::vector3_t &gt;</type>
+      <name>Shape_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a934372c499338274e49da83c318016cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::pair&lt; JointPtr_t, Shape_t &gt;</type>
+      <name>JointAndShape_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a898a66f15f9c304a4448c4398b46c825</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; JointAndShape_t &gt;</type>
+      <name>JointAndShapes_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a4828846d9c914bf6bb05b8c80a5a7b9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; std::string &gt;</type>
+      <name>StringList_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a8cccc2c73f80a309b4eb35824c05984e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>HPP_MANIPULATION_DEPRECATED Shape_t</type>
+      <name>Triangle</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a3a4b09cb5230750f8ea302b4980797ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>HPP_MANIPULATION_DEPRECATED JointAndShape_t</type>
+      <name>JointAndTriangle_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a1784f506eeceddbc9ead32b29b5356d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>HPP_MANIPULATION_DEPRECATED JointAndShapes_t</type>
+      <name>JointAndTriangles_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a69ce36d45552e440af51ca30ffeb0245</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>af4699e4830401075367c8905798c0c0f</anchor>
+      <arglist>(Device)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a69828fdc6347a6a64ede6faefe5675fb</anchor>
+      <arglist>(AxialHandle)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a2501eb4647dda7ee50714bca99bd46a2</anchor>
+      <arglist>(Handle)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a9e798463bb2770a7606de13815f9c489</anchor>
+      <arglist>(Object)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a8de0acc9a402e5584de79595d31d256f</anchor>
+      <arglist>(ProblemSolver)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ab0a488840c517e5b6ec45ef7044c72c7</anchor>
+      <arglist>(Problem)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a42f3996e834f4c74e87e3f6cce12a895</anchor>
+      <arglist>(Roadmap)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a8fc81d1898468dd479a2c8d11e6ddb01</anchor>
+      <arglist>(RoadmapNode)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>afb1d58021ff588ec2bb9446327424ea7</anchor>
+      <arglist>(ConnectedComponent)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a662d5d4e06314436f51f277f86a61b0c</anchor>
+      <arglist>(WeighedDistance)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a6ea0b209a0e13971d352a276bfc414f8</anchor>
+      <arglist>(ManipulationPlanner)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ab5076cf1c1f42bea2d843d91b23b5196</anchor>
+      <arglist>(GraphPathValidation)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a29c03ec6f561219a696086681a24ab80</anchor>
+      <arglist>(GraphSteeringMethod)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a3e1d04a56375b80dbc77768cabbe8100</anchor>
+      <arglist>(GraphOptimizer)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>acae5af5babe429a887c70aa30ddbe4d5</anchor>
+      <arglist>(GraphNodeOptimizer)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a753c71e72904db352d7dbf5bcbdc452e</anchor>
+      <arglist>(ConstraintSet)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aadf512ba33cbe149b0b4823dd674c4ad</anchor>
+      <arglist>(std::ostream &amp;os, const Handle &amp;handle)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::manipulation::parser</name>
+    <filename>a00024.html</filename>
+    <class kind="class">hpp::manipulation::parser::IgnoreTagFactory</class>
+    <class kind="class">hpp::manipulation::parser::ObjectFactory</class>
+    <class kind="class">hpp::manipulation::parser::Parser</class>
+    <class kind="class">hpp::manipulation::parser::RootFactory</class>
+    <class kind="class">hpp::manipulation::parser::SequenceFactory</class>
+    <member kind="typedef">
+      <type>TiXmlElement</type>
+      <name>XMLElement</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>ae91631c3b26c8d9af50af6b134d004d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlDocument</type>
+      <name>XMLDocument</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a2193554800c30fea6d97d4b8e8eedae0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlAttribute</type>
+      <name>XMLAttribute</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>aaa0cdad68cda7e9050dcf4c7c07fca12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlNode</type>
+      <name>XMLNode</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a941877867794d55099e39f62e6d7abb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlText</type>
+      <name>XMLText</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a28ac11674a0cfc91a1a72c64c839465d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectFactory *</type>
+      <name>create</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a3f5ef3fc22b091d6d6c6469e048d7b13</anchor>
+      <arglist>(ObjectFactory *parent=NULL, const XMLElement *element=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a039bc2b306f2b30c79da233a1d43ea42</anchor>
+      <arglist>(std::ostream &amp;, const ObjectFactory &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>ab4cc47b35792bd8bb20747c2a4a46c78</anchor>
+      <arglist>(std::ostream &amp;, const Parser &amp;)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::manipulation::srdf</name>
+    <filename>a00025.html</filename>
+    <class kind="class">hpp::manipulation::srdf::ContactFactory</class>
+    <class kind="class">hpp::manipulation::srdf::GripperFactory</class>
+    <class kind="class">hpp::manipulation::srdf::HandleFactory</class>
+    <class kind="class">hpp::manipulation::srdf::PositionFactory</class>
+    <class kind="class">hpp::manipulation::srdf::RobotFactory</class>
+    <member kind="function">
+      <type>void</type>
+      <name>loadEnvironmentModel</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a45ff3e26a3ba738d653414f7887cc61b</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadObjectModel</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a2a9c078215a67d8054bb86d59774e3a3</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const model::JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadHumanoidModel</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ae1281a50a0a6df7959e4979c3dc6dd92</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const model::JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadRobotModel</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a08d01037d8cd3f0357a84c800819355e</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const model::JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addRobotSRDFModel</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a26db68726afa11b06b749fac8e5b1a2a</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const std::string &amp;prefix, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>Factories</name>
+    <title>Factories</title>
+    <filename>a00027.html</filename>
+    <class kind="class">hpp::manipulation::parser::IgnoreTagFactory</class>
+    <class kind="class">hpp::manipulation::parser::SequenceFactory</class>
+    <class kind="class">hpp::manipulation::parser::ObjectFactory</class>
+    <class kind="class">hpp::manipulation::parser::RootFactory</class>
+    <class kind="class">hpp::manipulation::srdf::ContactFactory</class>
+    <class kind="class">hpp::manipulation::srdf::GripperFactory</class>
+    <class kind="class">hpp::manipulation::srdf::HandleFactory</class>
+    <class kind="class">hpp::manipulation::srdf::PositionFactory</class>
+    <class kind="class">hpp::manipulation::srdf::RobotFactory</class>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+    <docanchor file="index">hpp_manipulation_urdf</docanchor>
+    <docanchor file="index" title="Basic use">intro_sec</docanchor>
+    <docanchor file="index" title="SRDF syntax">hpp_manipulation_urdf_srdf_syntax</docanchor>
+    <docanchor file="index">Handle</docanchor>
+    <docanchor file="index">Gripper</docanchor>
+    <docanchor file="index">Contact</docanchor>
+    <docanchor file="index" title="Extend the parser">hpp_manipulation_urdf_extend_sec</docanchor>
+    <docanchor file="index" title="Introduction">sec_intro_hpp_model</docanchor>
+    <docanchor file="index" title="Main classes">sec_hpp_model_main_classes</docanchor>
+    <docanchor file="index" title="Joints">subsec_hpp_model_joint</docanchor>
+    <docanchor file="index" title="Joint configuration">hpp_model_joint_configuration</docanchor>
+    <docanchor file="index" title="Device">subsec_hpp_model_device</docanchor>
+    <docanchor file="index">Configuration</docanchor>
+    <docanchor file="index">Velocity</docanchor>
+    <docanchor file="index" title="Operations between configurations and velocities">hpp_model_operation_between_configurations_and_velocities</docanchor>
+    <docanchor file="index" title="Introduction">sec_intro_hpp_manipulation</docanchor>
+    <docanchor file="index" title="Constraint graph">sec_graph_hpp_manipulation</docanchor>
+    <docanchor file="index" title="Manipulation planner">sec_solver_hpp_manipulation</docanchor>
+    <docanchor file="index" title="Introduction">hpp_core_sec_intro</docanchor>
+    <docanchor file="index" title="Embedding hpp-core into an application">hpp_core_sec_embedding</docanchor>
+    <docanchor file="index" title="Introduction">fcl_introduction</docanchor>
+    <docanchor file="index" title="Using fcl">fcl_howto</docanchor>
+  </compound>
+</tagfile>

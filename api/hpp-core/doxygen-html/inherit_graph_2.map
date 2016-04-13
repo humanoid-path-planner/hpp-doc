@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$a00010.html" title="Abstract class defining the comparison for a function value and doing a saturation, necessary for inequality constraint. " alt="" coords="6,107,189,133"/>
+<area shape="rect" id="node2" href="$a00011.html" title="Implementation of various equation types. " alt="" coords="238,5,429,32"/>
+<area shape="rect" id="node3" href="$a00030.html" title="Implementation of double inequality. " alt="" coords="243,56,424,83"/>
+<area shape="rect" id="node4" href="$a00032.html" title="Implementation of equality. " alt="" coords="268,107,399,133"/>
+<area shape="rect" id="node5" href="$a00033.html" title="Implementation of equality to zero. " alt="" coords="254,157,413,184"/>
+<area shape="rect" id="node6" href="$a00040.html" title="Implementation of inequality. " alt="" coords="247,208,419,235"/>
+</map>

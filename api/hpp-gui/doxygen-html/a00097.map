@@ -1,0 +1,16 @@
+<map id="mainwindow.cc" name="mainwindow.cc">
+<area shape="rect" id="node2" href="$a00054.html" title="hpp/gui/mainwindow.hh" alt="" coords="700,88,857,115"/>
+<area shape="rect" id="node13" href="$a00049.html" title="hpp/gui/dialog/dialogloadrobot.hh" alt="" coords="4,427,213,453"/>
+<area shape="rect" id="node16" href="$a00047.html" title="hpp/gui/dialog/dialogloadenvironment.hh" alt="" coords="239,427,491,453"/>
+<area shape="rect" id="node19" href="$a00062.html" title="hpp/gui/plugin&#45;interface.hh" alt="" coords="488,352,661,379"/>
+<area shape="rect" id="node26" href="$a00075.html" title="hpp/gui/windows&#45;manager.hh" alt="" coords="1259,179,1449,205"/>
+<area shape="rect" id="node28" href="$a00055.html" title="hpp/gui/meta.hh" alt="" coords="1071,269,1185,296"/>
+<area shape="rect" id="node31" href="$a00059.html" title="hpp/gui/osgwidget.hh" alt="" coords="1872,88,2016,115"/>
+<area shape="rect" id="node37" href="$a00072.html" title="hpp/gui/tree&#45;item.hh" alt="" coords="2581,179,2716,205"/>
+<area shape="rect" id="node45" href="$a00066.html" title="hpp/gui/pythonwidget.hh" alt="" coords="3081,179,3241,205"/>
+<area shape="rect" id="node7" href="$a00050.html" title="hpp/gui/fwd.hh" alt="" coords="1676,269,1783,296"/>
+<area shape="rect" id="node9" href="$a00052.html" title="hpp/gui/ledindicator.hh" alt="" coords="686,352,836,379"/>
+<area shape="rect" id="node11" href="$a00057.html" title="hpp/gui/omniorb/omniorbthread.hh" alt="" coords="1474,179,1691,205"/>
+<area shape="rect" id="node17" href="$a00064.html" title="hpp/gui/dialog/pluginmanagerdialog.hh" alt="" coords="754,269,995,296"/>
+<area shape="rect" id="node22" href="$a00070.html" title="hpp/gui/settings.hh" alt="" coords="883,179,1012,205"/>
+</map>

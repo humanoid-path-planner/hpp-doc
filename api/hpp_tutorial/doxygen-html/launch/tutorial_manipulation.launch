@@ -1,0 +1,32 @@
+<launch>
+  <param name="kitchen_description"
+    textfile="$(find iai_maps)/urdf/kitchen_area.urdf"/>
+  <param name="robot_description"
+    textfile="$(find hpp_tutorial)/urdf/pr2.urdf"/>
+  <param name="box_description"
+    textfile="$(find hpp_tutorial)/urdf/box.urdf"/>
+  <node
+    pkg="tf" type="static_transform_publisher" name="odom_broadcaster"
+    args="0 0 0 0 0 0 1 /map /odom 1000" />
+  <node name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="state_publisher"
+    respawn="true">
+    <param name="tf_prefix" value="pr2" />
+    <remap from="joint_states" to="pr2/joint_states"/>
+  </node>
+
+  <node pkg="tf" type="static_transform_publisher"
+    name="kitchen_link_broadcaster"
+    args="0 0 0 0 0 0 /map /iai_kitchen/kitchen_link 200">
+  </node>
+  <node pkg="robot_state_chain_publisher" type="state_chain_publisher"
+    name="kitchen_state_publisher" output="screen">
+    <param name="tf_prefix" value="/iai_kitchen"/>
+    <param name="publish_frequency" value="2"/>
+    <remap from="robot_description" to="kitchen_description" />
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false"
+    args="-d $(find hpp_tutorial)/rviz/config_manipulation.rviz">
+  </node>
+</launch>

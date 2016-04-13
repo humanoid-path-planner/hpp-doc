@@ -1,0 +1,1654 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>functors.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step/src/small-steps/</path>
+    <filename>a00016</filename>
+    <includes id="a00001" name="fwd.hh" local="no" imported="no">hpp/wholebody-step/fwd.hh</includes>
+    <includes id="a00023" name="time-dependant.hh" local="no" imported="no">hpp/wholebody-step/time-dependant.hh</includes>
+    <includes id="a00018" name="small-steps.hh" local="no" imported="no">hpp/wholebody-step/small-steps.hh</includes>
+    <class kind="struct">hpp::wholebodyStep::CubicBSplineToCom</class>
+    <class kind="struct">hpp::wholebodyStep::FootPathToFootPos</class>
+    <class kind="struct">hpp::wholebodyStep::ReproducePath</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+  </compound>
+  <compound kind="file">
+    <name>fwd.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step/include/hpp/wholebody-step/</path>
+    <filename>a00001</filename>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+    <member kind="typedef">
+      <type>model::JointPtr_t</type>
+      <name>JointPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a09cbc4407fb28be87577b1b2ba4b33c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::EquationPtr_t</type>
+      <name>EquationPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>adb86c0108bf4d8c9ab7fa3b738286f67</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::NumericalConstraint</type>
+      <name>NumericalConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a310a1c4b521466fc4a882a75b181879c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::NumericalConstraintPtr_t</type>
+      <name>NumericalConstraintPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ab74372b477e9adfb13b680d186fe9656</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConstraintSet</type>
+      <name>ConstraintSet</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a497092c51ac92550f7d2592165431a8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConstraintSetPtr_t</type>
+      <name>ConstraintSetPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a460bf97d2cb8ce952688c0422415aeaf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjector</type>
+      <name>ConfigProjector</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a246da633e83bdd78a08437fa80508659</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjectorPtr_t</type>
+      <name>ConfigProjectorPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a9ac0a2701eaeff3980c3e2da0865405f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::DifferentiableFunctionPtr_t</type>
+      <name>DifferentiableFunctionPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>af90e1af0a792ad637766808d6fec983f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::DifferentiableFunction</type>
+      <name>DifferentiableFunction</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a8de6cdfcf94a49bdb02256b2d4b39ae7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::JointFrame</type>
+      <name>JointFrame</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a735e44622c51b9df8b799a3f17a35272</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::Traits&lt; constraints::JointFrame &gt;::Ptr_t</type>
+      <name>JointFramePtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aeacf3c734c49ab7c45a1fef520934d08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::SymbolicFunction&lt; JointFrame &gt;</type>
+      <name>JointFrameFunction</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a9ad04c78017671b89da9cd34a7d2ef82</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::SymbolicFunction&lt; JointFrame &gt;::Ptr_t</type>
+      <name>JointFrameFunctionPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a987e99adbaee3d337504933578a7365c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::PointInJoint</type>
+      <name>PointInJoint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ac26fac3063ddf02f8c03bdc39ded42d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::SymbolicFunction&lt; PointInJoint &gt;</type>
+      <name>PointInJointFunction</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>abfa2d1b216eef2b8398f1ec935dbcacf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::PointCom</type>
+      <name>PointCom</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a5c0529b17d7e0f32356e30c43f2b6e72</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::SymbolicFunction&lt; PointCom &gt;</type>
+      <name>PointComFunction</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a607e0ec9fa54419c5ed5c1652c2b4123</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::SymbolicFunction&lt; PointCom &gt;::Ptr_t</type>
+      <name>PointComFunctionPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a09909188e1dedc9bd9dd5c01dc2ea3ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::Problem</type>
+      <name>Problem</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a0f28c9fec81de90bd3d214d089925406</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathOptimizerPtr_t</type>
+      <name>PathOptimizerPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a335e8ee5635aa45668d65730b6fec1e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::Path</type>
+      <name>Path</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a0b89a712fed33c3bfbc9e33b7ccb7260</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathPtr_t</type>
+      <name>PathPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aae01c78ba51f6355432228edc474f1cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathVector</type>
+      <name>PathVector</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>acc19afd387ff35419ae6ae9951ce84fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathVectorPtr_t</type>
+      <name>PathVectorPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a175719ac67b2eaeb2fd302d6e9cb156b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::StraightPath</type>
+      <name>StraightPath</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a7a55cb597b0b075d1330805288f6beb5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::StraightPathPtr_t</type>
+      <name>StraightPathPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a4c47e95873c14f31476639fb093dff88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::CenterOfMassComputationPtr_t</type>
+      <name>CenterOfMassComputationPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a9fa90bf9cea0be20ec204c03574c4b2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::DevicePtr_t</type>
+      <name>DevicePtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a25b18d0b59a04828896df1c6fa12d717</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::HumanoidRobotPtr_t</type>
+      <name>HumanoidRobotPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a55427a43097f1cde25152902bbf4dd8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::HumanoidRobot</type>
+      <name>HumanoidRobot</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ab0ee3d33f0f0046186788d48b3662717</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Configuration_t</type>
+      <name>Configuration_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a07dd258797ba97cc6a22ea46186117fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ConfigurationIn_t</type>
+      <name>ConfigurationIn_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a33cb48e6c15b5138cebd0a0f1eeefbdd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ConfigurationOut_t</type>
+      <name>ConfigurationOut_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ae049934cd2371de621bc53823cd53329</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Transform3f</type>
+      <name>Transform3f</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aad0b3799770cb953a46b94c2869901a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::matrix3_t</type>
+      <name>matrix3_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ae8df7d474e30761cda52ad44b81e22ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vector3_t</type>
+      <name>vector3_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ab574e32fc99a87d68f7c2682919eccba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vector_t</type>
+      <name>vector_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a71e5c261958e8dac8aee07ed3bb4f435</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vectorOut_t</type>
+      <name>vectorOut_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a685d21aae206145cd78413d90c24611c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::value_type</type>
+      <name>value_type</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ad3210cc78ab2e855c4cad8992f1fc119</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::size_type</type>
+      <name>size_type</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>adafb1f7f52f9474f30e6d8f8d92156f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>walkgen::FootPrint</type>
+      <name>FootPrint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a49d111aae72b9c21e37c40132f1cd8a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>walkgen::SplineBasedPtr_t</type>
+      <name>SplineBasedPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aa2273fbabe63386a3ca07ce6750448ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>walkgen::SplineBased</type>
+      <name>SplineBased</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a877a1b317394eb473d39895a8982604e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>walkgen::CubicBSplinePtr_t</type>
+      <name>CubicBSplinePtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a231fba614e5bc16f7e5806ba70ae8148</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; SmallSteps &gt;</type>
+      <name>SmallStepsPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a0bf9824b4f4bea9405723c0391100af0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; TimeDependantPath &gt;</type>
+      <name>TimeDependantPathPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a1186910ffbaa95575b933dfcdcdf22a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a57629c20c08aa457475000497649d2c0</anchor>
+      <arglist>(SmallSteps)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a6786e842b2ca2b0bc26cfe507c4deb9a</anchor>
+      <arglist>(TimeDependantPath)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>small-steps.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step/src/</path>
+    <filename>a00017</filename>
+    <includes id="a00018" name="small-steps.hh" local="no" imported="no">hpp/wholebody-step/small-steps.hh</includes>
+    <includes id="a00023" name="time-dependant.hh" local="no" imported="no">hpp/wholebody-step/time-dependant.hh</includes>
+    <includes id="a00022" name="time-dependant-path.hh" local="no" imported="no">hpp/wholebody-step/time-dependant-path.hh</includes>
+    <includes id="a00020" name="static-stability-constraint.hh" local="no" imported="no">hpp/wholebody-step/static-stability-constraint.hh</includes>
+    <includes id="a00016" name="functors.hh" local="no" imported="no">small-steps/functors.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+    <member kind="variable">
+      <type>SmallSteps::HandConstraint &amp;</type>
+      <name>model</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>aa7e68687c10085f9f7a587443552149b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>DifferentiableFunctionPtr_t</type>
+      <name>func</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a3067824145a928a8f58694d99fd50b21</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>NumericalConstraintPtr_t</type>
+      <name>eq</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>aec33934a057b6e1c26c3327e5994a9e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>TimeDependant</type>
+      <name>TD</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a0a2a291d09442054bd5fe1462a276f92</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>small-steps.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step/include/hpp/wholebody-step/</path>
+    <filename>a00018</filename>
+    <includes id="a00001" name="fwd.hh" local="no" imported="no">hpp/wholebody-step/fwd.hh</includes>
+    <includes id="a00023" name="time-dependant.hh" local="no" imported="no">hpp/wholebody-step/time-dependant.hh</includes>
+    <class kind="class">hpp::wholebodyStep::SmallSteps</class>
+    <class kind="struct">hpp::wholebodyStep::SmallSteps::PiecewiseAffine</class>
+    <class kind="struct">hpp::wholebodyStep::SmallSteps::HandConstraint</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+  </compound>
+  <compound kind="file">
+    <name>static-stability-constraint.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step/src/</path>
+    <filename>a00019</filename>
+    <includes id="a00020" name="static-stability-constraint.hh" local="no" imported="no">hpp/wholebody-step/static-stability-constraint.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createSlidingStabilityConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>afb19bf1c70db347cfb43831937d3cb14</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const JointPtr_t &amp;leftAnkle, const JointPtr_t &amp;rightAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createSlidingStabilityConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a9e97f671ba1be9455b94315e05979cda</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const CenterOfMassComputationPtr_t &amp;comc, const JointPtr_t &amp;leftAnkle, const JointPtr_t &amp;rightAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createSlidingStabilityConstraintComplement</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>afb471867bd849ac1287d12e2f18502b1</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const JointPtr_t &amp;leftAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createAlignedCOMStabilityConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a298d2a967b1ec9c9756ce739981d2dc4</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const CenterOfMassComputationPtr_t &amp;comc, const JointPtr_t &amp;leftAnkle, const JointPtr_t &amp;rightAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>static-stability-constraint.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step/include/hpp/wholebody-step/</path>
+    <filename>a00020</filename>
+    <includes id="a00001" name="fwd.hh" local="no" imported="no">hpp/wholebody-step/fwd.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createSlidingStabilityConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a9e97f671ba1be9455b94315e05979cda</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const CenterOfMassComputationPtr_t &amp;comc, const JointPtr_t &amp;leftAnkle, const JointPtr_t &amp;rightAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createSlidingStabilityConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>afb19bf1c70db347cfb43831937d3cb14</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const JointPtr_t &amp;leftAnkle, const JointPtr_t &amp;rightAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createSlidingStabilityConstraintComplement</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>afb471867bd849ac1287d12e2f18502b1</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const JointPtr_t &amp;leftAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createAlignedCOMStabilityConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a298d2a967b1ec9c9756ce739981d2dc4</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const CenterOfMassComputationPtr_t &amp;comc, const JointPtr_t &amp;leftAnkle, const JointPtr_t &amp;rightAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="variable">
+      <type>const std::string</type>
+      <name>STABILITY_CONTEXT</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>af9ffdf0b448cddefac50a4401b7948f7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>stepper.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step/src/small-steps/</path>
+    <filename>a00021</filename>
+    <includes id="a00001" name="fwd.hh" local="no" imported="no">hpp/wholebody-step/fwd.hh</includes>
+    <includes id="a00018" name="small-steps.hh" local="no" imported="no">hpp/wholebody-step/small-steps.hh</includes>
+    <class kind="struct">hpp::wholebodyStep::Step</class>
+    <class kind="struct">hpp::wholebodyStep::InitBoundary</class>
+    <class kind="struct">hpp::wholebodyStep::EndBoundary</class>
+    <class kind="struct">hpp::wholebodyStep::Support</class>
+    <class kind="struct">hpp::wholebodyStep::Steps</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+  </compound>
+  <compound kind="file">
+    <name>time-dependant-path.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step/include/hpp/wholebody-step/</path>
+    <filename>a00022</filename>
+    <includes id="a00023" name="time-dependant.hh" local="no" imported="no">hpp/wholebody-step/time-dependant.hh</includes>
+    <class kind="class">hpp::wholebodyStep::TimeDependantPath</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+  </compound>
+  <compound kind="file">
+    <name>time-dependant.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step/include/hpp/wholebody-step/</path>
+    <filename>a00023</filename>
+    <includes id="a00001" name="fwd.hh" local="no" imported="no">hpp/wholebody-step/fwd.hh</includes>
+    <class kind="struct">hpp::wholebodyStep::RightHandSideFunctor</class>
+    <class kind="struct">hpp::wholebodyStep::TimeDependant</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const RightHandSideFunctor &gt;</type>
+      <name>RightHandSideFunctorPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aa8376fe507533ebf709c6f629053f3dd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::CubicBSplineToCom</name>
+    <filename>a00002.html</filename>
+    <base>hpp::wholebodyStep::RightHandSideFunctor</base>
+    <member kind="function">
+      <type></type>
+      <name>CubicBSplineToCom</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>abc3c7b8599a35d474e63efd50000a732</anchor>
+      <arglist>(CubicBSplinePtr_t cubic, value_type height)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator()</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a6087314033d2ebbb8ea7eb839a37ad34</anchor>
+      <arglist>(vectorOut_t result, const value_type &amp;input) const </arglist>
+    </member>
+    <member kind="variable">
+      <type>CubicBSplinePtr_t</type>
+      <name>cubic_</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a600e20e2391d093aa290787109503d94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>h_</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a54e99f97fb8cf34d18fa6e1b56804e87</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::EndBoundary</name>
+    <filename>a00003.html</filename>
+    <base>hpp::wholebodyStep::Step</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>timing</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>aa0d218aee82aaea25c336ad75bd0c586</anchor>
+      <arglist>(value_type &amp;start, PiecewiseAffine &amp;pwc) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::FootPathToFootPos</name>
+    <filename>a00004.html</filename>
+    <base>hpp::wholebodyStep::RightHandSideFunctor</base>
+    <member kind="function">
+      <type></type>
+      <name>FootPathToFootPos</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>af88cd96f41c02df41040669742c473af</anchor>
+      <arglist>(DevicePtr_t dev, PathPtr_t p, value_type height_shift)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator()</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a70e7d5809588a39e94bf83fdf654c43b</anchor>
+      <arglist>(vectorOut_t result, const value_type &amp;input) const </arglist>
+    </member>
+    <member kind="variable">
+      <type>PathPtr_t</type>
+      <name>path_</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a3ca03c5c2e984a4cf07aa58d784fa2b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>shiftH_</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>adf966bd758aa056325ba3e002c5925cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>JointFrameFunctionPtr_t</type>
+      <name>sf_</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a7383596d170d8aff9a223b014348da92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Configuration_t</type>
+      <name>tmp</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>ae35b0ba34e91d8e46c4bb8d13bfa6cfa</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::SmallSteps::HandConstraint</name>
+    <filename>a00005.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>HandConstraint</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>aa3d56588efa9792edbe2cfafd7d2908c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>active</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ae0d8f29bf5345c4400ed3d783445e8db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>optional</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ad6a76b20d01e22a6d20292a33ba4fbf8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>HandConstraintType</type>
+      <name>type</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac816565868e7934c0d0666054e923358</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>abscissa</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac709cc90755dd2a0dca164cfd593f35b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::InitBoundary</name>
+    <filename>a00006.html</filename>
+    <base>hpp::wholebodyStep::Step</base>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::SmallSteps::PiecewiseAffine</name>
+    <filename>a00007.html</filename>
+    <member kind="typedef">
+      <type>SmallSteps::TimeToParameterMap_t</type>
+      <name>Pairs_t</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a1b3f3125f4de455e61e83b3553c0acd4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>operator()</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>af62ce8445f9466b49a67daf5a1605841</anchor>
+      <arglist>(const value_type &amp;t) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addPair</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a808ae66dd8bc1d2cdb0d7eda8eedb18d</anchor>
+      <arglist>(const value_type &amp;t, const value_type value)</arglist>
+    </member>
+    <member kind="variable">
+      <type>Pairs_t</type>
+      <name>pairs_</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a5e33aa89b9aa8f311a8586915b8e4852</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::ReproducePath</name>
+    <filename>a00008.html</filename>
+    <base>hpp::wholebodyStep::RightHandSideFunctor</base>
+    <member kind="function">
+      <type></type>
+      <name>ReproducePath</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a00b62e322ffad57ab0a35949a0a729f1</anchor>
+      <arglist>(const DifferentiableFunctionPtr_t &amp;func, const PathPtr_t &amp;p, const SmallSteps::PiecewiseAffine &amp;newToOld)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator()</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a78a4f7b8139b9bb4d897ac42fbb2310f</anchor>
+      <arglist>(vectorOut_t result, const value_type &amp;input) const </arglist>
+    </member>
+    <member kind="variable">
+      <type>PathPtr_t</type>
+      <name>path_</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1667ccf131452e6867df914fcd9412d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>DifferentiableFunctionPtr_t</type>
+      <name>func_</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a266cf1569bd9d9e9552ba6fe3c2aa214</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>SmallSteps::PiecewiseAffine</type>
+      <name>newToOld_</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a39c3c8b4669be589e277015c6c53eade</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Configuration_t</type>
+      <name>tmp</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a86f1063a38ab8dd26a0be1b11b596459</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::RightHandSideFunctor</name>
+    <filename>a00009.html</filename>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>operator()</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>afd263418b165e11b0dc470ddbce12974</anchor>
+      <arglist>(vectorOut_t output, const value_type &amp;input) const  =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::wholebodyStep::SmallSteps</name>
+    <filename>a00010.html</filename>
+    <base>hpp::core::PathOptimizer</base>
+    <class kind="struct">hpp::wholebodyStep::SmallSteps::HandConstraint</class>
+    <class kind="struct">hpp::wholebodyStep::SmallSteps::PiecewiseAffine</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>HandConstraintType</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a40676998a16d093e7ed3fa7e47c5e9d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FromStart</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a40676998a16d093e7ed3fa7e47c5e9d3a79949c7bc7075c8ee3daba95c2b4e85a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UntilEnd</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a40676998a16d093e7ed3fa7e47c5e9d3a02ac716c7fe64146c1a67028d1dcce64</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>All</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a40676998a16d093e7ed3fa7e47c5e9d3af515ca8562342c401cae2fba47518a95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>walkgen::FootPrints_t</type>
+      <name>FootPrints_t</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a8afe0d04b17ba80480f8acb919c1f656</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>walkgen::Times_t</type>
+      <name>Times_t</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a08bf4cdeeb83327a9372ee1cedbf2ef9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; value_type, value_type &gt;</type>
+      <name>TimeToParameterMap_t</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a4b281694f3ec7d970f9dc9005b5ed261</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FromStart</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a40676998a16d093e7ed3fa7e47c5e9d3a79949c7bc7075c8ee3daba95c2b4e85a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UntilEnd</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a40676998a16d093e7ed3fa7e47c5e9d3a02ac716c7fe64146c1a67028d1dcce64</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>All</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a40676998a16d093e7ed3fa7e47c5e9d3af515ca8562342c401cae2fba47518a95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual PathVectorPtr_t</type>
+      <name>optimize</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ad13bfe02e09982f2bf6c153e94e00961</anchor>
+      <arglist>(const PathVectorPtr_t &amp;path)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static SmallStepsPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a976abd93f2a2d5185bd4065ccc0405df</anchor>
+      <arglist>(const Problem &amp;problem)</arglist>
+    </member>
+    <member kind="variable">
+      <type>HandConstraint</type>
+      <name>leftHand_</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a3f9eff1f8708f37c82344883c9fae586</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>HandConstraint</type>
+      <name>rightHand_</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a7d03dd8eb98b348ce26706c357642adf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>SmallSteps</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a9eaec407e77fe317ac79194fb8bf9c99</anchor>
+      <arglist>(const Problem &amp;problem)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>aa1c1c0b35efebbf1dd69707aa1118328</anchor>
+      <arglist>(const SmallStepsWkPtr_t &amp;weak)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::Step</name>
+    <filename>a00011.html</filename>
+    <member kind="typedef">
+      <type>SmallSteps::PiecewiseAffine</type>
+      <name>PiecewiseAffine</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ada50fe3ce9daa432d112aeff814d23a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>timing</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a74bd03e6064c53f7b7b853a8a8656a82</anchor>
+      <arglist>(value_type &amp;start, PiecewiseAffine &amp;pwc) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>timeInThisStep</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ab489fe7b0c2917bfd33d0a8209ed6a96</anchor>
+      <arglist>(value_type &amp;t) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Support *</type>
+      <name>createAfter</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>abad9d2f70606f1092b723d6c1b10210b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Support *</type>
+      <name>createBefore</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ab5d1e597a2f9e814e65bec34a5b9a15f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>param</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ae1748c4786f6ef51134cbafce42d62d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>leftSupport</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a251cd72f12ea178d9b1bd1b8408e7c43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>DStime</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a84a791851d3477b598af423fa0bd5bcb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>SStime</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a764dad01587672199a8ccae85e66429c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::Steps</name>
+    <filename>a00012.html</filename>
+    <member kind="typedef">
+      <type>std::vector&lt; Step * &gt;</type>
+      <name>Vector</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a143a159c4f3c104755ffd024115d1a7d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Vector::iterator</type>
+      <name>iterator</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a45dc8a160c6c4c569864ded6d7173353</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Vector::const_iterator</type>
+      <name>const_iterator</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a219413be7ba80477b585d24421bc0ecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::size_t</type>
+      <name>index_t</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a23aad5465e2dd50110a81198d41bf599</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>narrow</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a83df463dd5be688567f256ea8ac1fc20</anchor>
+      <arglist>(const value_type &amp;invalid_time)</arglist>
+    </member>
+    <member kind="function">
+      <type>SmallSteps::PiecewiseAffine</type>
+      <name>timing</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a12eed787452440afc0249081b3a69814</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initPhase</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a314b1c82c7bcf8857d9f0e2c06f829c2</anchor>
+      <arglist>(const value_type &amp;duration, const value_type &amp;param, const bool toLeftSupport)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>appendStep</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>ac7ffc804b5037556cfb18d3621407f23</anchor>
+      <arglist>(const value_type &amp;SStime, const value_type &amp;DDtime, const value_type &amp;param)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>endPhase</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a07d54c1f3eb71fa6dd39a6528bc8d7db</anchor>
+      <arglist>(const value_type &amp;SStime, const value_type &amp;duration, const value_type &amp;param)</arglist>
+    </member>
+    <member kind="variable">
+      <type>Vector</type>
+      <name>steps_</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a019bbf192d7d6d53eff000ff961ff98c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>InitBoundary *</type>
+      <name>init_</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>aec9731e28a744e0a080626cf9975eb53</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>EndBoundary *</type>
+      <name>end_</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a0ba88f19800be607af136fe9da6e0ad7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>t0</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a6681b40fa9216aa0fea5a9686caf6265</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initPhase</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a314b1c82c7bcf8857d9f0e2c06f829c2</anchor>
+      <arglist>(const value_type &amp;duration, const value_type &amp;param, const bool toLeftSupport)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>appendStep</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>ac7ffc804b5037556cfb18d3621407f23</anchor>
+      <arglist>(const value_type &amp;SStime, const value_type &amp;DDtime, const value_type &amp;param)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>endPhase</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a07d54c1f3eb71fa6dd39a6528bc8d7db</anchor>
+      <arglist>(const value_type &amp;SStime, const value_type &amp;duration, const value_type &amp;param)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::Support</name>
+    <filename>a00013.html</filename>
+    <base>hpp::wholebodyStep::Step</base>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::wholebodyStep::TimeDependant</name>
+    <filename>a00014.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>rhsAbscissa</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a510d248da0949100be66abb3b09f9966</anchor>
+      <arglist>(const value_type s) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TimeDependant</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a1cd8d022089b88a7fb0799a48e5dac7f</anchor>
+      <arglist>(const EquationPtr_t &amp;eq, const RightHandSideFunctorPtr_t rhs)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TimeDependant</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a320f214258ac77bbd845e0154a9f7848</anchor>
+      <arglist>(const TimeDependant &amp;other)</arglist>
+    </member>
+    <member kind="variable">
+      <type>EquationPtr_t</type>
+      <name>eq_</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a7fcb91d459dfd85747a301fb7c82b9fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>RightHandSideFunctorPtr_t</type>
+      <name>rhsFunc_</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aceb18dc37923920cd827785c93fa2771</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::wholebodyStep::TimeDependantPath</name>
+    <filename>a00015.html</filename>
+    <base>hpp::core::Path</base>
+    <member kind="function">
+      <type>void</type>
+      <name>add</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac8cff266ec451aa97792322473cc4b27</anchor>
+      <arglist>(const TimeDependant &amp;td)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~TimeDependantPath</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a58539c49e0753993be41b8821d96a41d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Configuration_t</type>
+      <name>initial</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a8dae9c45c8d0f35527ded606223b2a58</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>Configuration_t</type>
+      <name>end</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>adcca8683fbe88b546c8e2971ff129d19</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>core::PathPtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>affec556f108020493a4b04aa1c83d623</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>core::PathPtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a6e46295739efdef75d0f162b7bb615f1</anchor>
+      <arglist>(const ConstraintSetPtr_t &amp;c) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setAffineTransform</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>af4e5734b66710965970a1a1b0741f5cc</anchor>
+      <arglist>(const value_type &amp;a, const value_type &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>updateAbscissa</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a7e3871289523b29d03f47cda8639f9eb</anchor>
+      <arglist>(value_type t) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static TimeDependantPathPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>aa2faae179376b20b6e5c273adedb20eb</anchor>
+      <arglist>(const core::PathPtr_t path)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static TimeDependantPathPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a339e38e105b9a2a10a927066233a9ca3</anchor>
+      <arglist>(const core::PathPtr_t path, const ConstraintSetPtr_t &amp;c)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static TimeDependantPathPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>afc53551126f32ef700d70dd1359cef07</anchor>
+      <arglist>(const TimeDependantPath &amp;other)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static TimeDependantPathPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>aa923f204b64ce57d167faf7189685d43</anchor>
+      <arglist>(const TimeDependantPath &amp;other, const ConstraintSetPtr_t &amp;c)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>TimeDependantPath</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a6017a9c5751a38b5c9801abc8c7285a2</anchor>
+      <arglist>(const core::PathPtr_t path)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>TimeDependantPath</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a7b7499c6ec1b4ef310f54b3621f14db7</anchor>
+      <arglist>(const core::PathPtr_t path, const ConstraintSetPtr_t &amp;c)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>TimeDependantPath</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a755ba5fb97d2cdc1daf4b2e5b6fa2dc2</anchor>
+      <arglist>(const TimeDependantPath &amp;other)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>TimeDependantPath</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a40274b0d61e81378e86473fd3f27a9e6</anchor>
+      <arglist>(const TimeDependantPath &amp;other, const ConstraintSetPtr_t &amp;c)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>impl_compute</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a6df8b974a8ddbe40a8661676c95cf931</anchor>
+      <arglist>(ConfigurationOut_t config, value_type t) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a5dce3f692b32572748ed70b6c3cb7023</anchor>
+      <arglist>(const TimeDependantPathPtr_t &amp;self)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>initCopy</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a3fc76f894498dfeda6de047327afceb4</anchor>
+      <arglist>(const TimeDependantPathPtr_t &amp;self)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a7c4650d10f54532bd09e6eac7a386feb</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00024.html</filename>
+    <namespace>hpp::wholebodyStep</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::wholebodyStep</name>
+    <filename>a00025.html</filename>
+    <class kind="struct">hpp::wholebodyStep::CubicBSplineToCom</class>
+    <class kind="struct">hpp::wholebodyStep::EndBoundary</class>
+    <class kind="struct">hpp::wholebodyStep::FootPathToFootPos</class>
+    <class kind="struct">hpp::wholebodyStep::InitBoundary</class>
+    <class kind="struct">hpp::wholebodyStep::ReproducePath</class>
+    <class kind="struct">hpp::wholebodyStep::RightHandSideFunctor</class>
+    <class kind="class">hpp::wholebodyStep::SmallSteps</class>
+    <class kind="struct">hpp::wholebodyStep::Step</class>
+    <class kind="struct">hpp::wholebodyStep::Steps</class>
+    <class kind="struct">hpp::wholebodyStep::Support</class>
+    <class kind="struct">hpp::wholebodyStep::TimeDependant</class>
+    <class kind="class">hpp::wholebodyStep::TimeDependantPath</class>
+    <member kind="typedef">
+      <type>model::JointPtr_t</type>
+      <name>JointPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a09cbc4407fb28be87577b1b2ba4b33c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::EquationPtr_t</type>
+      <name>EquationPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>adb86c0108bf4d8c9ab7fa3b738286f67</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::NumericalConstraint</type>
+      <name>NumericalConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a310a1c4b521466fc4a882a75b181879c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::NumericalConstraintPtr_t</type>
+      <name>NumericalConstraintPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ab74372b477e9adfb13b680d186fe9656</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConstraintSet</type>
+      <name>ConstraintSet</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a497092c51ac92550f7d2592165431a8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConstraintSetPtr_t</type>
+      <name>ConstraintSetPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a460bf97d2cb8ce952688c0422415aeaf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjector</type>
+      <name>ConfigProjector</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a246da633e83bdd78a08437fa80508659</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjectorPtr_t</type>
+      <name>ConfigProjectorPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a9ac0a2701eaeff3980c3e2da0865405f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::DifferentiableFunctionPtr_t</type>
+      <name>DifferentiableFunctionPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>af90e1af0a792ad637766808d6fec983f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::DifferentiableFunction</type>
+      <name>DifferentiableFunction</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a8de6cdfcf94a49bdb02256b2d4b39ae7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::JointFrame</type>
+      <name>JointFrame</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a735e44622c51b9df8b799a3f17a35272</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::Traits&lt; constraints::JointFrame &gt;::Ptr_t</type>
+      <name>JointFramePtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aeacf3c734c49ab7c45a1fef520934d08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::SymbolicFunction&lt; JointFrame &gt;</type>
+      <name>JointFrameFunction</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a9ad04c78017671b89da9cd34a7d2ef82</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::SymbolicFunction&lt; JointFrame &gt;::Ptr_t</type>
+      <name>JointFrameFunctionPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a987e99adbaee3d337504933578a7365c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::PointInJoint</type>
+      <name>PointInJoint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ac26fac3063ddf02f8c03bdc39ded42d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::SymbolicFunction&lt; PointInJoint &gt;</type>
+      <name>PointInJointFunction</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>abfa2d1b216eef2b8398f1ec935dbcacf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::PointCom</type>
+      <name>PointCom</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a5c0529b17d7e0f32356e30c43f2b6e72</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::SymbolicFunction&lt; PointCom &gt;</type>
+      <name>PointComFunction</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a607e0ec9fa54419c5ed5c1652c2b4123</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::SymbolicFunction&lt; PointCom &gt;::Ptr_t</type>
+      <name>PointComFunctionPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a09909188e1dedc9bd9dd5c01dc2ea3ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::Problem</type>
+      <name>Problem</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a0f28c9fec81de90bd3d214d089925406</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathOptimizerPtr_t</type>
+      <name>PathOptimizerPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a335e8ee5635aa45668d65730b6fec1e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::Path</type>
+      <name>Path</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a0b89a712fed33c3bfbc9e33b7ccb7260</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathPtr_t</type>
+      <name>PathPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aae01c78ba51f6355432228edc474f1cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathVector</type>
+      <name>PathVector</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>acc19afd387ff35419ae6ae9951ce84fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathVectorPtr_t</type>
+      <name>PathVectorPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a175719ac67b2eaeb2fd302d6e9cb156b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::StraightPath</type>
+      <name>StraightPath</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a7a55cb597b0b075d1330805288f6beb5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::StraightPathPtr_t</type>
+      <name>StraightPathPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a4c47e95873c14f31476639fb093dff88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::CenterOfMassComputationPtr_t</type>
+      <name>CenterOfMassComputationPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a9fa90bf9cea0be20ec204c03574c4b2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::DevicePtr_t</type>
+      <name>DevicePtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a25b18d0b59a04828896df1c6fa12d717</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::HumanoidRobotPtr_t</type>
+      <name>HumanoidRobotPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a55427a43097f1cde25152902bbf4dd8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::HumanoidRobot</type>
+      <name>HumanoidRobot</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ab0ee3d33f0f0046186788d48b3662717</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Configuration_t</type>
+      <name>Configuration_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a07dd258797ba97cc6a22ea46186117fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ConfigurationIn_t</type>
+      <name>ConfigurationIn_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a33cb48e6c15b5138cebd0a0f1eeefbdd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ConfigurationOut_t</type>
+      <name>ConfigurationOut_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ae049934cd2371de621bc53823cd53329</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Transform3f</type>
+      <name>Transform3f</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aad0b3799770cb953a46b94c2869901a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::matrix3_t</type>
+      <name>matrix3_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ae8df7d474e30761cda52ad44b81e22ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vector3_t</type>
+      <name>vector3_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ab574e32fc99a87d68f7c2682919eccba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vector_t</type>
+      <name>vector_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a71e5c261958e8dac8aee07ed3bb4f435</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vectorOut_t</type>
+      <name>vectorOut_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a685d21aae206145cd78413d90c24611c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::value_type</type>
+      <name>value_type</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ad3210cc78ab2e855c4cad8992f1fc119</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::size_type</type>
+      <name>size_type</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>adafb1f7f52f9474f30e6d8f8d92156f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>walkgen::FootPrint</type>
+      <name>FootPrint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a49d111aae72b9c21e37c40132f1cd8a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>walkgen::SplineBasedPtr_t</type>
+      <name>SplineBasedPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aa2273fbabe63386a3ca07ce6750448ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>walkgen::SplineBased</type>
+      <name>SplineBased</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a877a1b317394eb473d39895a8982604e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>walkgen::CubicBSplinePtr_t</type>
+      <name>CubicBSplinePtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a231fba614e5bc16f7e5806ba70ae8148</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; SmallSteps &gt;</type>
+      <name>SmallStepsPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a0bf9824b4f4bea9405723c0391100af0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; TimeDependantPath &gt;</type>
+      <name>TimeDependantPathPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a1186910ffbaa95575b933dfcdcdf22a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const RightHandSideFunctor &gt;</type>
+      <name>RightHandSideFunctorPtr_t</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aa8376fe507533ebf709c6f629053f3dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a57629c20c08aa457475000497649d2c0</anchor>
+      <arglist>(SmallSteps)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a6786e842b2ca2b0bc26cfe507c4deb9a</anchor>
+      <arglist>(TimeDependantPath)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createSlidingStabilityConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a9e97f671ba1be9455b94315e05979cda</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const CenterOfMassComputationPtr_t &amp;comc, const JointPtr_t &amp;leftAnkle, const JointPtr_t &amp;rightAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createSlidingStabilityConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>afb19bf1c70db347cfb43831937d3cb14</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const JointPtr_t &amp;leftAnkle, const JointPtr_t &amp;rightAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createSlidingStabilityConstraintComplement</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>afb471867bd849ac1287d12e2f18502b1</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const JointPtr_t &amp;leftAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>createAlignedCOMStabilityConstraint</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a298d2a967b1ec9c9756ce739981d2dc4</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const CenterOfMassComputationPtr_t &amp;comc, const JointPtr_t &amp;leftAnkle, const JointPtr_t &amp;rightAnkle, ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="variable">
+      <type>const std::string</type>
+      <name>STABILITY_CONTEXT</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>af9ffdf0b448cddefac50a4401b7948f7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+</tagfile>

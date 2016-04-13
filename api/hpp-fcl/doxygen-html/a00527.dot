@@ -1,0 +1,39 @@
+digraph "fcl::IntervalTreeCollisionManager"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="fcl::IntervalTreeCollision\lManager",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="fcl::BroadPhaseCollision\lManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00006.html",tooltip="Base class for broad phase collision. It helps to accelerate the collision/distance between N objects..."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tested_set" ,fontname="FreeSans"];
+  Node3 [label="std::set\< std::pair\l\< fcl::CollisionObject\l *, fcl::CollisionObject * \> \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" interval_trees" ,fontname="FreeSans"];
+  Node4 [label="fcl::IntervalTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00075.html",tooltip="Interval tree. "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" root\nnil" ,fontname="FreeSans"];
+  Node5 [label="fcl::IntervalTreeNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00077.html",tooltip="The node for interval tree. "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" stored_interval" ,fontname="FreeSans"];
+  Node6 [label="fcl::SimpleInterval",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00194.html",tooltip="Interval trees implemented using red-black-trees as described in the book Introduction_To_Algorithms_..."];
+  Node5 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" right\nleft\nparent" ,fontname="FreeSans"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" endpoints" ,fontname="FreeSans"];
+  Node7 [label="std::vector\< fcl::Interval\lTreeCollisionManager::EndPoint \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="FreeSans"];
+  Node8 [label="fcl::IntervalTreeCollision\lManager::EndPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00050.html",tooltip="SAP end point. "];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" obj" ,fontname="FreeSans"];
+  Node9 [label="fcl::CollisionObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00029.html",tooltip="the object for collision or distance computation, contains the geometry and the transform information..."];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" aabb" ,fontname="FreeSans"];
+  Node10 [label="fcl::AABB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00003.html",tooltip="A class describing the AABB collision structure, which is a box in 3D space determined by two diagona..."];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" max_\nmin_" ,fontname="FreeSans"];
+  Node11 [label="fcl::Vec3fX\< details\l::Vec3Data\< FCL_REAL \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00223.html"];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="FreeSans"];
+  Node12 [label="fcl::details::Vec3Data\l\< FCL_REAL \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00222.html"];
+  Node13 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" t" ,fontname="FreeSans"];
+  Node13 [label="fcl::Transform3f",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00212.html",tooltip="Simple transform class used locally by InterpMotion. "];
+  Node14 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" obj_interval_maps" ,fontname="FreeSans"];
+  Node14 [label="std::map\< fcl::Collision\lObject *, fcl::IntervalTreeCollision\lManager::SAPInterval * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" keys" ,fontname="FreeSans"];
+  Node15 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="FreeSans"];
+  Node15 [label="fcl::IntervalTreeCollision\lManager::SAPInterval",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00167.html",tooltip="Extention interval tree&#39;s interval to SAP interval, adding more information. "];
+  Node6 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" obj" ,fontname="FreeSans"];
+}

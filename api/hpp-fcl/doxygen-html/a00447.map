@@ -1,0 +1,8 @@
+<map id="intersect.h" name="intersect.h">
+<area shape="rect" id="node2" href="$a00324.html" title="motion.h" alt="" coords="244,80,316,107"/>
+<area shape="rect" id="node3" href="$a00351.html" title="traversal_node_bvhs.h" alt="" coords="130,155,283,181"/>
+<area shape="rect" id="node7" href="$a00354.html" title="traversal_node_shapes.h" alt="" coords="307,155,473,181"/>
+<area shape="rect" id="node4" href="$a00279.html" title="collision_node.h" alt="" coords="5,229,120,256"/>
+<area shape="rect" id="node5" href="$a00353.html" title="traversal_node_setup.h" alt="" coords="305,229,463,256"/>
+<area shape="rect" id="node6" href="$a00355.html" title="traversal_recurse.h" alt="" coords="144,229,277,256"/>
+</map>

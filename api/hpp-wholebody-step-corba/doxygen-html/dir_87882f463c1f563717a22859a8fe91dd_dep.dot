@@ -1,0 +1,13 @@
+digraph "hpp" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_ab113501f3cf98af3d6be72808912d76 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="idl" fontname="FreeSans", fontsize="10", URL="dir_ab113501f3cf98af3d6be72808912d76.html"]
+  subgraph clusterdir_87882f463c1f563717a22859a8fe91dd {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_87882f463c1f563717a22859a8fe91dd.html"];
+    dir_87882f463c1f563717a22859a8fe91dd [shape=plaintext label="hpp"];
+    dir_19301abaccadef14b656ac5321bb1bd7 [shape=box label="corbaserver" color="red" fillcolor="white" style="filled" URL="dir_19301abaccadef14b656ac5321bb1bd7.html"];
+  }
+  }
+}

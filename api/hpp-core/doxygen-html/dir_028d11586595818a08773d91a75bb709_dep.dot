@@ -1,0 +1,9 @@
+digraph "path-projector" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ec650033a5a388847ed11d275b2baf5d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="core" fontname="Helvetica", fontsize="10", URL="dir_ec650033a5a388847ed11d275b2baf5d.html"]
+  dir_028d11586595818a08773d91a75bb709 [shape=box, label="path-projector", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_028d11586595818a08773d91a75bb709.html"];
+  }
+}

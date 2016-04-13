@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>breakpad-plugin.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui-breakpad/include/hpp/gui/plugin/</path>
+    <filename>a00002</filename>
+    <class kind="class">BreakPadPlugin</class>
+  </compound>
+  <compound kind="class">
+    <name>BreakPadPlugin</name>
+    <filename>a00001.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>BreakPadPlugin</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a993b61f7b9779dd4f0bf6d68cbdc5196</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~BreakPadPlugin</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ae4de3ea0d11da964db1187e90cf196cc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a156c904c62657d84b691d64c0693fbba</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>name</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>afc2e64d44406288ee1da21f1d743aece</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>dumpCallback</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ace4ca5314c0b496266970c4fc145b819</anchor>
+      <arglist>(const google_breakpad::MinidumpDescriptor &amp;descriptor, void *context, bool succeeded)</arglist>
+    </member>
+  </compound>
+  <compound kind="dir">
+    <name>gui</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui-breakpad/include/hpp/gui/</path>
+    <filename>dir_e6aa154c6da4bd208cfcb53ea97ce2ea.html</filename>
+    <dir>plugin</dir>
+  </compound>
+  <compound kind="dir">
+    <name>hpp</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui-breakpad/include/hpp/</path>
+    <filename>dir_766a2b2ecef16448f861b8cf84e3a157.html</filename>
+    <dir>gui</dir>
+  </compound>
+  <compound kind="dir">
+    <name>include</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui-breakpad/include/</path>
+    <filename>dir_d44c64559bbebec7f509842c48db8b23.html</filename>
+    <dir>hpp</dir>
+  </compound>
+  <compound kind="dir">
+    <name>plugin</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui-breakpad/include/hpp/gui/plugin/</path>
+    <filename>dir_8d0ef920644108f33f81efa26076a0c9.html</filename>
+    <file>breakpad-plugin.hh</file>
+  </compound>
+</tagfile>

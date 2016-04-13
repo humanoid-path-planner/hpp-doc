@@ -1,0 +1,4 @@
+var a00020 =
+[
+    [ "HPP_MANIPULATION_CORBA_DEPRECATED", "a00020.html#aa2975ddd679f83b7425d6363d5f196a2", null ]
+];

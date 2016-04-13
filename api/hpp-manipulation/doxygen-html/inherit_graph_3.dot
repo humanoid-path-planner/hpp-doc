@@ -1,0 +1,23 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="hpp::manipulation::\lContainer\< HandlePtr_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00007.html"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="hpp::manipulation::\lDevice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00008.html",tooltip="Device with handles. "];
+  Node3 [label="hpp::manipulation::\lContainer\< LockedJointPtr_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00007.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="hpp::manipulation::\lProblemSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00027.html"];
+  Node5 [label="hpp::manipulation::\lContainer\< model::GripperPtr_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00007.html"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="hpp::manipulation::\lContainer\< TriangleList \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00007.html"];
+  Node6 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="hpp::model::Device",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="https://jmirabel.github.io/hpp-doc/api/hpp-model/doxygen-html/hpp-model.doxytag$a00008.html"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="hpp::model::HumanoidRobot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="https://jmirabel.github.io/hpp-doc/api/hpp-model/doxygen-html/hpp-model.doxytag$a00012.html"];
+  Node8 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="hpp::core::ProblemSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00045.html"];
+  Node9 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

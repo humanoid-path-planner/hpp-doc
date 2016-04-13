@@ -1,0 +1,10 @@
+digraph "idl" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ab113501f3cf98af3d6be72808912d76 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_ab113501f3cf98af3d6be72808912d76.html"];
+    dir_ab113501f3cf98af3d6be72808912d76 [shape=plaintext label="idl"];
+    dir_87882f463c1f563717a22859a8fe91dd [shape=box label="hpp" color="red" fillcolor="white" style="filled" URL="dir_87882f463c1f563717a22859a8fe91dd.html"];
+  }
+}

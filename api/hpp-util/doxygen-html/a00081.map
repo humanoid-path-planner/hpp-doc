@@ -1,0 +1,6 @@
+<map id="hpp::debug::Logging" name="hpp::debug::Logging">
+<area shape="rect" id="node2" href="$a00002.html" title="Logging in console (std::cerr). " alt="" coords="5,83,187,109"/>
+<area shape="rect" id="node3" href="$a00008.html" title="Debugging output. " alt="" coords="151,5,284,32"/>
+<area shape="rect" id="node4" href="$a00005.html" title="Logging in journal file in the logging directory. " alt="" coords="211,83,385,109"/>
+<area shape="rect" id="node5" href="$a00001.html" title="Receive debugging information. " alt="" coords="410,83,552,109"/>
+</map>

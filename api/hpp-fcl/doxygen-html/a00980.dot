@@ -1,0 +1,25 @@
+digraph "fcl::details::EPA"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="fcl::details::EPA",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hull\nstock" ,fontname="FreeSans"];
+  Node2 [label="fcl::details::EPA::\lSimplexList",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" root" ,fontname="FreeSans"];
+  Node3 [label="fcl::details::EPA::\lSimplexF",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" n" ,fontname="FreeSans"];
+  Node4 [label="fcl::Vec3fX\< details\l::Vec3Data\< FCL_REAL \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00223.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="FreeSans"];
+  Node5 [label="fcl::details::Vec3Data\l\< FCL_REAL \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00222.html"];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" f\nl" ,fontname="FreeSans"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" c" ,fontname="FreeSans"];
+  Node6 [label="fcl::details::GJK::\lSimplexV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00196.html"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" w\nd" ,fontname="FreeSans"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" normal" ,fontname="FreeSans"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" result" ,fontname="FreeSans"];
+  Node7 [label="fcl::details::GJK::\lSimplex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00195.html"];
+  Node6 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" c" ,fontname="FreeSans"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fc_store" ,fontname="FreeSans"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sv_store" ,fontname="FreeSans"];
+}

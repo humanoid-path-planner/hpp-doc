@@ -1,0 +1,567 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>graph-widget.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-plot/src/</path>
+    <filename>a00054</filename>
+    <includes id="a00055" name="graph-widget.hh" local="yes" imported="no">hpp/plot/graph-widget.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::plot</namespace>
+  </compound>
+  <compound kind="file">
+    <name>graph-widget.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-plot/include/hpp/plot/</path>
+    <filename>a00055</filename>
+    <class kind="class">hpp::plot::GraphView</class>
+    <class kind="class">hpp::plot::GraphWidget</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::plot</namespace>
+  </compound>
+  <compound kind="file">
+    <name>histogram-widget.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-plot/src/</path>
+    <filename>a00056</filename>
+    <includes id="a00057" name="histogram-widget.hh" local="yes" imported="no">hpp/plot/histogram-widget.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::plot</namespace>
+  </compound>
+  <compound kind="file">
+    <name>histogram-widget.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-plot/include/hpp/plot/</path>
+    <filename>a00057</filename>
+    <class kind="class">hpp::plot::HistogramWidget</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::plot</namespace>
+  </compound>
+  <compound kind="file">
+    <name>hpp-manipulation-graph.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-plot/src/</path>
+    <filename>a00058</filename>
+    <includes id="a00059" name="hpp-manipulation-graph.hh" local="yes" imported="no">hpp/plot/hpp-manipulation-graph.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::plot</namespace>
+  </compound>
+  <compound kind="file">
+    <name>hpp-manipulation-graph.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-plot/include/hpp/plot/</path>
+    <filename>a00059</filename>
+    <includes id="a00055" name="graph-widget.hh" local="no" imported="no">hpp/plot/graph-widget.hh</includes>
+    <class kind="class">hpp::plot::GraphAction</class>
+    <class kind="class">hpp::plot::HppManipulationGraphWidget</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::corbaServer</namespace>
+    <namespace>hpp::corbaServer::manipulation</namespace>
+    <namespace>hpp::plot</namespace>
+  </compound>
+  <compound kind="file">
+    <name>qcustomplot.cpp</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-plot/src/</path>
+    <filename>a00060</filename>
+  </compound>
+  <compound kind="class">
+    <name>hpp::plot::GraphAction</name>
+    <filename>a00001.html</filename>
+    <member kind="signal">
+      <type>void</type>
+      <name>activated</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ae80f2df2531f8d18757068b3e705d6fc</anchor>
+      <arglist>(hpp::ID id)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GraphAction</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a9e4bca5303f507ef9bd9b9fd697ecdb7</anchor>
+      <arglist>(HppManipulationGraphWidget *parent)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::plot::GraphView</name>
+    <filename>a00002.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>GraphView</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a447b46e9533d454312a28d23d33ab52c</anchor>
+      <arglist>(QWidget *parent=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>wheelEvent</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a36e0319047cf3bd890bd79cb4c464419</anchor>
+      <arglist>(QWheelEvent *)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::plot::GraphWidget</name>
+    <filename>a00003.html</filename>
+    <member kind="slot">
+      <type>void</type>
+      <name>updateGraph</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a4e5c40bd8a9ce919f48ccbe175469341</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>updateEdges</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>af66f60e31eaff12aab0383d5448a070b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GraphWidget</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a1a412a3d16587be1b389e2518c125616</anchor>
+      <arglist>(QString name=QString(), QWidget *parent=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~GraphWidget</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a963c80267208b685b7db368c520ea7e3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>nodeContextMenu</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>abfaafa60e892205ea8576e32234f036d</anchor>
+      <arglist>(QGVNode *node)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>nodeDoubleClick</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a388d9641ac4af7e2f30e8f3f4a75dcf6</anchor>
+      <arglist>(QGVNode *node)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>edgeContextMenu</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a00991c90085310dcb679048e292cf393</anchor>
+      <arglist>(QGVEdge *edge)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>edgeDoubleClick</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>afae2fe77f16e72087f3ed8d64fc5a0c7</anchor>
+      <arglist>(QGVEdge *edge)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>fillScene</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a62f7f885556b605448d83ce290b80a89</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QGVScene *</type>
+      <name>scene_</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a35b21d41a3071a45a1bc6225c3994a27</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QWidget *</type>
+      <name>buttonBox_</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a12b8a60de53c78813bebdacea332d370</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QTextEdit *</type>
+      <name>elmtInfo_</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a18cd14ce1614e8de0d86015e32eb78ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QTextEdit *</type>
+      <name>loggingInfo_</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>aac61eb0955b214335bb7d2ba7d293432</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::plot::HistogramWidget</name>
+    <filename>a00004.html</filename>
+    <member kind="slot">
+      <type>void</type>
+      <name>recomputeSources</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a3a0ad732f5b8d0439cbc91d8f8254344</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>recomputeData</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a19347dbc442f66d348f097eecadc5556</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>zoomAuto</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a7075a55a39c209104e66bf9e1e3407d1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HistogramWidget</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a6b94e88aaddf23af55d54731f76a53bd</anchor>
+      <arglist>(QWidget *parent=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a77f18486f9b6d3e3662d9f38a3ee2e7c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>connectCorba</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a13734f14b0d99694f3d4f03e958484ff</anchor>
+      <arglist>(const char *iiop=&quot;corbaloc:rir:/NameService&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::plot::HppManipulationGraphWidget</name>
+    <filename>a00005.html</filename>
+    <base>hpp::plot::GraphWidget</base>
+    <member kind="slot">
+      <type>void</type>
+      <name>updateStatistics</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>adfae318030d6cfce91c4e41ab8cea25b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HppManipulationGraphWidget</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ab6779c02954453331be69edd43fc6b0d</anchor>
+      <arglist>(corbaServer::manipulation::Client *hpp_, QWidget *parent)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~HppManipulationGraphWidget</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a1ff10343117233ef371f823a4464a424</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addNodeContextMenuAction</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a801d97a5c7a606e27f8c4a65fed9451f</anchor>
+      <arglist>(GraphAction *action)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addEdgeContextMenuAction</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ade4ac5171335b9cdd574859edc686506</anchor>
+      <arglist>(GraphAction *action)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>client</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a83d224a9656b6ae7eeab46b03db106c3</anchor>
+      <arglist>(corbaServer::manipulation::Client *hpp)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>selectionID</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a5a330eea0ae547e8cb854af6e5232bd5</anchor>
+      <arglist>(hpp::ID &amp;id)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>nodeContextMenu</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a1e351528ac9c59633aab1536cfcb0a43</anchor>
+      <arglist>(QGVNode *node)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>nodeDoubleClick</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a20d0ff29c27f34fb20fe8eaa9d761b18</anchor>
+      <arglist>(QGVNode *node)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>edgeContextMenu</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a5b64e7dbd9d1a421167340efe24a16f7</anchor>
+      <arglist>(QGVEdge *edge)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>edgeDoubleClick</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a64c1e0ed28501e0bdff472db5e41a441</anchor>
+      <arglist>(QGVEdge *edge)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>selectionChanged</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a70b444ec89ca64548328f6d5dee28828</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>fillScene</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a431c0bc29791cbf54e20f08506a3774a</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>QCPAbstractItem</name>
+    <filename>a00006.html</filename>
+    <docanchor file="a00006" title="Clipping">items-clipping</docanchor>
+    <docanchor file="a00006" title="Using items">items-using</docanchor>
+    <docanchor file="a00006" title="Creating own items">items-subclassing</docanchor>
+    <docanchor file="a00006" title="Allowing the item to be positioned">items-positioning</docanchor>
+    <docanchor file="a00006" title="The draw function">items-drawing</docanchor>
+    <docanchor file="a00006" title="The selectTest function">items-selection</docanchor>
+    <docanchor file="a00006" title="Providing anchors">anchors</docanchor>
+  </compound>
+  <compound kind="class">
+    <name>QCPAbstractLegendItem</name>
+    <filename>a00007.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPAbstractPlottable</name>
+    <filename>a00008.html</filename>
+    <docanchor file="a00008" title="Creating own plottables">plottables-subclassing</docanchor>
+  </compound>
+  <compound kind="class">
+    <name>QCPAxis</name>
+    <filename>a00009.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPAxisPainterPrivate</name>
+    <filename>a00010.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPAxisRect</name>
+    <filename>a00011.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPBarData</name>
+    <filename>a00012.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPBars</name>
+    <filename>a00013.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPBarsGroup</name>
+    <filename>a00014.html</filename>
+    <docanchor file="a00014" title="Usage">qcpbarsgroup-usage</docanchor>
+    <docanchor file="a00014" title="Example">qcpbarsgroup-example</docanchor>
+  </compound>
+  <compound kind="class">
+    <name>QCPColorGradient</name>
+    <filename>a00015.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPColorMap</name>
+    <filename>a00016.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPColorMapData</name>
+    <filename>a00017.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPColorScale</name>
+    <filename>a00018.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPColorScaleAxisRectPrivate</name>
+    <filename>a00019.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPCurve</name>
+    <filename>a00020.html</filename>
+    <docanchor file="a00052" title="Usage">usage</docanchor>
+  </compound>
+  <compound kind="class">
+    <name>QCPCurveData</name>
+    <filename>a00021.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPData</name>
+    <filename>a00022.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPFinancial</name>
+    <filename>a00023.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPFinancialData</name>
+    <filename>a00024.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPGraph</name>
+    <filename>a00025.html</filename>
+    <docanchor file="a00052" title="Changing the appearance">appearance</docanchor>
+    <docanchor file="a00025" title="Filling under or between graphs">filling</docanchor>
+  </compound>
+  <compound kind="class">
+    <name>QCPGrid</name>
+    <filename>a00026.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemAnchor</name>
+    <filename>a00027.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemBracket</name>
+    <filename>a00028.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemCurve</name>
+    <filename>a00029.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemEllipse</name>
+    <filename>a00030.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemLine</name>
+    <filename>a00031.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemPixmap</name>
+    <filename>a00032.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemPosition</name>
+    <filename>a00033.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemRect</name>
+    <filename>a00034.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemStraightLine</name>
+    <filename>a00035.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemText</name>
+    <filename>a00036.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPItemTracer</name>
+    <filename>a00037.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPLayer</name>
+    <filename>a00038.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPLayerable</name>
+    <filename>a00039.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPLayout</name>
+    <filename>a00040.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPLayoutElement</name>
+    <filename>a00041.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPLayoutGrid</name>
+    <filename>a00042.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPLayoutInset</name>
+    <filename>a00043.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPLegend</name>
+    <filename>a00044.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPLineEnding</name>
+    <filename>a00045.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPMarginGroup</name>
+    <filename>a00046.html</filename>
+    <docanchor file="a00046" title="Example">QCPMarginGroup-example</docanchor>
+  </compound>
+  <compound kind="class">
+    <name>QCPPainter</name>
+    <filename>a00047.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPPlottableLegendItem</name>
+    <filename>a00048.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPPlotTitle</name>
+    <filename>a00049.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPRange</name>
+    <filename>a00050.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCPScatterStyle</name>
+    <filename>a00051.html</filename>
+    <docanchor file="a00051" title="Specifying a scatter style">QCPScatterStyle-defining</docanchor>
+    <docanchor file="a00051" title="Leaving the color/pen up to the plottable">QCPScatterStyle-undefinedpen</docanchor>
+    <docanchor file="a00051" title="Custom shapes and pixmaps">QCPScatterStyle-custompath-and-pixmap</docanchor>
+  </compound>
+  <compound kind="class">
+    <name>QCPStatisticalBox</name>
+    <filename>a00052.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>QCustomPlot</name>
+    <filename>a00053.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00061.html</filename>
+    <namespace>hpp::corbaServer</namespace>
+    <namespace>hpp::plot</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::corbaServer</name>
+    <filename>a00062.html</filename>
+    <namespace>hpp::corbaServer::manipulation</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::corbaServer::manipulation</name>
+    <filename>a00063.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::plot</name>
+    <filename>a00064.html</filename>
+    <class kind="class">hpp::plot::GraphAction</class>
+    <class kind="class">hpp::plot::GraphView</class>
+    <class kind="class">hpp::plot::GraphWidget</class>
+    <class kind="class">hpp::plot::HistogramWidget</class>
+    <class kind="class">hpp::plot::HppManipulationGraphWidget</class>
+  </compound>
+</tagfile>

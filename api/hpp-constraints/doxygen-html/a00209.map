@@ -1,0 +1,6 @@
+<map id="hpp::constraints::VectorInJoint" name="hpp::constraints::VectorInJoint">
+<area shape="rect" id="node2" href="$a00002.html" title="hpp::constraints::Calculus\lBase\&lt; VectorInJoint \&gt;" alt="" coords="339,14,514,55"/>
+<area shape="rect" id="node3" href="$a00003.html" title="hpp::constraints::Calculus\lBaseAbstract\&lt; eigen::vector3\l_t, JacobianMatrix \&gt;" alt="" coords="8,4,203,60"/>
+<area shape="rect" id="node4" href="https://jmirabel.github.io/hpp-doc/api/hpp-model/doxygen-html/hpp-model.doxytag$a00013.html" title="hpp::model::Joint" alt="" coords="365,81,488,108"/>
+<area shape="rect" id="node5" href="https://jmirabel.github.io/hpp-doc/api/hpp-model/doxygen-html/hpp-model.doxytag$a00015.html" title="hpp::model::JointConfiguration" alt="" coords="6,84,205,111"/>
+</map>

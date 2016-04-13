@@ -1,0 +1,19 @@
+digraph "hpp::model::JointConfiguration"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="hpp::model::JointConfiguration",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="hpp::model::AnchorJointConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00001.html",tooltip="Configuration of a JointAnchor. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="hpp::model::RotationJoint\lConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00021.html",tooltip="Configuration of a JointRotation. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="hpp::model::rotationJoint\lConfig::Bounded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00003.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="hpp::model::rotationJoint\lConfig::UnBounded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00024.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="hpp::model::SO3JointConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00022.html",tooltip="Configuration of a JointSO3. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="hpp::model::TranslationJoint\lConfig\< dimension \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00023.html",tooltip="Configuration of a JointTranslation. "];
+}

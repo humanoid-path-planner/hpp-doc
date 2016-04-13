@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$a00034.html" title="This class represents an equation with the following format . " alt="" coords="6,31,141,57"/>
+<area shape="rect" id="node2" href="$a00046.html" title="Implementation of Equation specific to locked joint. " alt="" coords="213,5,368,32"/>
+<area shape="rect" id="node3" href="$a00049.html" title="With the same notation as in Equation, this class represents equation: " alt="" coords="189,56,392,83"/>
+<area shape="rect" id="node4" href="$a00035.html" title="Explicit numerical constraint. " alt="" coords="440,49,627,90"/>
+<area shape="rect" id="node5" href="$a00036.html" title="Relative transformation as an explicit constraint. " alt="" coords="675,49,850,90"/>
+</map>

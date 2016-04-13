@@ -1,0 +1,13 @@
+digraph "hpp::core::PathPlanner"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="hpp::core::PathPlanner",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="hpp::core::DiffusingPlanner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00018.html",tooltip="Generic implementation of RRT algorithm. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="hpp::core::PlanAndOptimize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00043.html",tooltip="Path planner and optimizer. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="hpp::core::VisibilityPrm\lPlanner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00054.html",tooltip="Generic implementation of visibility-PRM algorithm, based on guard nodes (which cannot see each other..."];
+}

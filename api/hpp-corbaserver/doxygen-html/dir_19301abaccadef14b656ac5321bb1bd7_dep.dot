@@ -1,0 +1,9 @@
+digraph "corbaserver" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_87882f463c1f563717a22859a8fe91dd {
+    graph [ bgcolor="#ddddee", pencolor="black", label="hpp" fontname="Helvetica", fontsize="10", URL="dir_87882f463c1f563717a22859a8fe91dd.html"]
+  dir_19301abaccadef14b656ac5321bb1bd7 [shape=box, label="corbaserver", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_19301abaccadef14b656ac5321bb1bd7.html"];
+  }
+}

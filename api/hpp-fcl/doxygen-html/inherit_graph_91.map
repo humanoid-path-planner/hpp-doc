@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$a00102.html" title="Base Joint. " alt="" coords="5,56,77,83"/>
+<area shape="rect" id="node2" href="$a00007.html" title="fcl::BallEulerJoint" alt="" coords="127,5,251,32"/>
+<area shape="rect" id="node3" href="$a00169.html" title="fcl::PrismaticJoint" alt="" coords="126,56,253,83"/>
+<area shape="rect" id="node4" href="$a00179.html" title="fcl::RevoluteJoint" alt="" coords="127,107,251,133"/>
+</map>

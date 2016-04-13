@@ -1,0 +1,7 @@
+<map id="hpp::core::ProblemSolver" name="hpp::core::ProblemSolver">
+<area shape="rect" id="node2" href="$a00021.html" title="hpp::core::Containers\l\&lt; boost::mpl::vector\l\&lt; PathPlannerBuilder_t,\l PathOptimizerBuilder_t,\l PathValidationBuilder_t,\l PathProjectorBuilder_t,\l ConfigurationShooterBuilder\l_t, NumericalConstraintPtr_t,\l SteeringMethodBuilder_t \&gt; \&gt;" alt="" coords="581,5,773,149"/>
+<area shape="rect" id="node5" href="$a00067.html" title="Defines a path planning problem for one robot. " alt="" coords="611,224,743,251"/>
+<area shape="rect" id="node6" href="$a00021.html" title="hpp::core::Containers\l\&lt; boost::mpl::vector\l\&lt; boost::any \&gt; \&gt;" alt="" coords="288,200,435,256"/>
+<area shape="rect" id="node8" title="STL class. " alt="" coords="637,283,717,309"/>
+<area shape="rect" id="node9" title="STL class. " alt="" coords="298,279,425,321"/>
+</map>

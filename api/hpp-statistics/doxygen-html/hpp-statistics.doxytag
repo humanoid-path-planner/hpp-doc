@@ -1,0 +1,1041 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>bin.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-statistics/include/hpp/statistics/</path>
+    <filename>a00009</filename>
+    <includes id="a00011" name="fwd.hh" local="yes" imported="no">hpp/statistics/fwd.hh</includes>
+    <class kind="class">hpp::statistics::Bin</class>
+    <class kind="class">hpp::statistics::Statistics</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::statistics</namespace>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a7a2eac24fb0dd9f129bf9e0e8b76bd0a</anchor>
+      <arglist>(std::ostream &amp;os, const hpp::statistics::Bin &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a9c6d13d0ef91093d00e36f480135a7e2</anchor>
+      <arglist>(std::ostream &amp;os, const hpp::statistics::Statistics&lt; T &gt; &amp;ss)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>distribution.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-statistics/include/hpp/statistics/</path>
+    <filename>a00010</filename>
+    <includes id="a00011" name="fwd.hh" local="yes" imported="no">hpp/statistics/fwd.hh</includes>
+    <class kind="class">hpp::statistics::DiscreteDistribution</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::statistics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>fwd.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-statistics/include/hpp/statistics/</path>
+    <filename>a00011</filename>
+    <class kind="class">hpp::statistics::Statistics</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::statistics</namespace>
+    <member kind="typedef">
+      <type>double</type>
+      <name>Proba_t</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a042b832a011d051cd524c19940a423ed</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-statistics/doc/</path>
+    <filename>a00012</filename>
+    <namespace>hpp</namespace>
+    <namespace>hpp::statistics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>success-bin.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-statistics/include/hpp/statistics/</path>
+    <filename>a00013</filename>
+    <includes id="a00009" name="bin.hh" local="yes" imported="no">hpp/statistics/bin.hh</includes>
+    <includes id="a00011" name="fwd.hh" local="yes" imported="no">hpp/statistics/fwd.hh</includes>
+    <class kind="class">hpp::statistics::SuccessBin</class>
+    <class kind="struct">hpp::statistics::SuccessBin::Reason</class>
+    <class kind="class">hpp::statistics::SuccessStatistics</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::statistics</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_DEFINE_REASON_FAILURE</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a16fbca216cae4882d34db91b1706e12e</anchor>
+      <arglist>(ID, STRING)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>success-failure-count.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-statistics/include/hpp/statistics/</path>
+    <filename>a00014</filename>
+    <includes id="a00009" name="bin.hh" local="yes" imported="no">hpp/statistics/bin.hh</includes>
+    <includes id="a00011" name="fwd.hh" local="yes" imported="no">hpp/statistics/fwd.hh</includes>
+    <class kind="class">hpp::statistics::Reason</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::statistics</namespace>
+    <member kind="typedef">
+      <type>Statistics&lt; Reason &gt;</type>
+      <name>Container</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a6a116d4a3a5a242fa63a3fde567dce02</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SuccessFailureCount</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>aaffde1300eafe713550ff2c87c0f7334</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addSuccess</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a3e815980b23f8c924f5cd330f3d6b199</anchor>
+      <arglist>(const Reason &amp;r=REASON_UNKNOWN)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addFailure</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a2166f98251a158eee4be3dc5faa4d576</anchor>
+      <arglist>(const Reason &amp;r=REASON_UNKNOWN)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>nbSuccess</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>aadb767e3759dac0449e7efe034209497</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>nbSuccess</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad82af46ac85ef155533195b68332e598</anchor>
+      <arglist>(const SuccessBin::Reason &amp;r) const </arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>nbFailure</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ab29bce79573fab0a64875b42344a0608</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>nbFailure</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ac19652ce094003f8f3d0f0d42e914770</anchor>
+      <arglist>(const SuccessBin::Reason &amp;r) const </arglist>
+    </member>
+    <member kind="variable">
+      <type>hpp::statistics::Reason</type>
+      <name>REASON_UNKNOWN</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a39fb4d4b755a67241d0d5d220ec77047</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Container</type>
+      <name>success_</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a90fb7734b16feeb2f025bb7a7cb9761f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Container</type>
+      <name>failure_</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a619407fe5c5a33fa839927d828547a67</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>time-counter.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-statistics/include/hpp/statistics/</path>
+    <filename>a00015</filename>
+    <includes id="a00011" name="fwd.hh" local="yes" imported="no">hpp/statistics/fwd.hh</includes>
+    <class kind="class">hpp::statistics::TimeCounter</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::statistics</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_DEFINE_TIMECOUNTER</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>aa8bff56a102797e985e4ca011b1b45a5</anchor>
+      <arglist>(name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_START_TIMECOUNTER</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>aa35c14cda3730bcdc72c3b787da0bbb9</anchor>
+      <arglist>(name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_STOP_TIMECOUNTER</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a1eb277744231f4235fbb9cc101d70c28</anchor>
+      <arglist>(name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_DISPLAY_TIMECOUNTER</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a1c9a2844f4fb21a9d191586b34ffb1d0</anchor>
+      <arglist>(where, name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_STREAM_TIMECOUNTER</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a93fc5e8829ace5679d0094ea1f9f1a47</anchor>
+      <arglist>(os, name)                                                </arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>abb7bce517c185ba8a07d7ac3c7e2f252</anchor>
+      <arglist>(std::ostream &amp;os, const TimeCounter &amp;tc)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::statistics::Bin</name>
+    <filename>a00001.html</filename>
+    <member kind="function">
+      <type>const std::size_t &amp;</type>
+      <name>freq</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a86b0bde6a1850bb5212605eaa32d0ee0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>operator++</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a11a53d26aac81b129643c6dfeb041ce4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>operator++</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a3cafcb555938fb571c815a91338f41ee</anchor>
+      <arglist>(int)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a90bb0d381becb63b9b13018d4d33ecb8</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual std::ostream &amp;</type>
+      <name>printValue</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a70b518c060afd76cf74932b0aaeee839</anchor>
+      <arglist>(std::ostream &amp;os) const  =0</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Bin</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a65f063987a30279e1673729d1ecae595</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::statistics::DiscreteDistribution</name>
+    <filename>a00002.html</filename>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>std::size_t</type>
+      <name>Weight_t</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a507903d51ef199f4f383d1f294a877ff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::pair&lt; Weight_t, Value_t &gt;</type>
+      <name>ProbaTPair</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>af75402daa3d4de515e2ef39d3be19a89</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; ProbaTPair &gt;::iterator</type>
+      <name>iterator</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ad7f7a2d789f30cab49dfd5b6594e0a23</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; ProbaTPair &gt;::const_iterator</type>
+      <name>const_iterator</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a3bd8d04b7b8dabdfa4d90c33f49fc87c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>DiscreteDistribution</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a4005402cf3edcf77a6657e1796c48a43</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Value_t</type>
+      <name>operator()</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ac80a326c3bedc01affac26d9f346b9fd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>Value_t</type>
+      <name>operator()</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a7701d7228ee1c04c6f148795529f647c</anchor>
+      <arglist>(const Proba_t &amp;p) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Value_t</type>
+      <name>operator()</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a984fac4616900f41ea62b2a103de727a</anchor>
+      <arglist>(const Weight_t &amp;w) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>insert</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>abc1622abbf179607f87c53a67ca54d74</anchor>
+      <arglist>(Value_t v, Weight_t w=1)</arglist>
+    </member>
+    <member kind="function">
+      <type>Weight_t</type>
+      <name>get</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aee3dcba64f6dee186bb63293fb205823</anchor>
+      <arglist>(const Value_t &amp;v) const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>size</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a486e9c92ff6146b37ace9eb081c8d7ae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; Proba_t &gt;</type>
+      <name>probabilities</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a13fc4c373ffab303d08d4ed31b9e2447</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>Weight_t</type>
+      <name>totalWeight</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ac092bf839d44a97dbd4959ecf9e3caf5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>iterator</type>
+      <name>begin</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a428f1ed60edf25dff241691d59908a94</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>begin</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aa0526753b27b371ad8b3f17750643bda</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>iterator</type>
+      <name>end</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a3a9fc6c15348024c8065987484cd674c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>end</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aa3a2fa54b99e3bd3feac26edde791ef6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>iterator</type>
+      <name>begin</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a428f1ed60edf25dff241691d59908a94</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>begin</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aa0526753b27b371ad8b3f17750643bda</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>iterator</type>
+      <name>end</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a3a9fc6c15348024c8065987484cd674c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>end</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aa3a2fa54b99e3bd3feac26edde791ef6</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::statistics::Reason</name>
+    <filename>a00003.html</filename>
+    <base>hpp::statistics::Bin</base>
+    <member kind="function">
+      <type></type>
+      <name>Reason</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a39bd1d705b54dcc1c8d153347f98c1ff</anchor>
+      <arglist>(const std::string &amp;r)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>afc06e3471af1daae2cc7063303524ae8</anchor>
+      <arglist>(const Reason &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator&lt;</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a54e5b0aff4eb7ca590447be926e2cd37</anchor>
+      <arglist>(const Reason &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const unsigned int &amp;</type>
+      <name>id</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a6c97dc2007a881c77a9be0564820443b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>what</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a93328a07857cca3b11df42119339a49f</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::statistics::SuccessBin::Reason</name>
+    <filename>a00004.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Reason</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>ac16d2e6f40d627890f479e9d5eb28d10</anchor>
+      <arglist>(std::size_t a_id, std::string a_what)</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>id</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>ad5666dfd69074d8d56b0a010e7bedce5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>what</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>aa1958de5278414a8755d4ad6be1216bb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::statistics::Statistics</name>
+    <filename>a00005.html</filename>
+    <templarg>T</templarg>
+    <member kind="typedef">
+      <type>std::list&lt; T &gt;</type>
+      <name>Container</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a7f3a234b5a600894671c26c90d0a75b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Container::iterator</type>
+      <name>iterator</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a78f888f7107db8e5f7345698e2a67c0e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Container::const_iterator</type>
+      <name>const_iterator</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a77885707bb8a7f42bcd8f133c5202428</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::size_t</type>
+      <name>freq</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac1ee98507a003a154439bd320926f765</anchor>
+      <arglist>(const T &amp;bin) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Proba_t</type>
+      <name>relativeFreq</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>af4f734c80955192bcf960d078cf7d5d9</anchor>
+      <arglist>(const T &amp;bin) const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>numberOfObservations</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac072747eca2f572e7f7530ef4979153b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>numberOfBins</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a9808e892f73b736a5faaf6e68b6f9d8c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ab15b611c8a3dbc031e5bdd6bae30856d</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>find</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a978c3e853a308588cccc8344619e4a3a</anchor>
+      <arglist>(const T &amp;bin) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>find</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>afbd7d7131c79fbe78fa23b8c26427fe7</anchor>
+      <arglist>(const U &amp;value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>begin</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a7a9dda19fbef0a6aaca5ddb0d0151c44</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>end</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ae4cceb5b2a063592a120e1a31bfb3574</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a388c94c04590d8cec984b3e398796986</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Statistics</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac75017c9aee38939c58dd78b888ee01e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual T &amp;</type>
+      <name>increment</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a5d42ca021f89a44d6d095b7353dfc9a3</anchor>
+      <arglist>(const T &amp;bin) __attribute__((deprecated))</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iterator</type>
+      <name>insert</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a1e2a8bd50fcadf4a63f07cec4e39f2cd</anchor>
+      <arglist>(const T &amp;bin)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Statistics&lt; SuccessBin &gt;</name>
+    <filename>a00005.html</filename>
+    <member kind="typedef">
+      <type>std::list&lt; SuccessBin &gt;</type>
+      <name>Container</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a7f3a234b5a600894671c26c90d0a75b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Container::iterator</type>
+      <name>iterator</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a78f888f7107db8e5f7345698e2a67c0e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Container::const_iterator</type>
+      <name>const_iterator</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a77885707bb8a7f42bcd8f133c5202428</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::size_t</type>
+      <name>freq</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac1ee98507a003a154439bd320926f765</anchor>
+      <arglist>(const SuccessBin &amp;bin) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Proba_t</type>
+      <name>relativeFreq</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>af4f734c80955192bcf960d078cf7d5d9</anchor>
+      <arglist>(const SuccessBin &amp;bin) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>numberOfObservations</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac072747eca2f572e7f7530ef4979153b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>numberOfBins</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a9808e892f73b736a5faaf6e68b6f9d8c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ab15b611c8a3dbc031e5bdd6bae30856d</anchor>
+      <arglist>(std::ostream &amp;os) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>find</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a978c3e853a308588cccc8344619e4a3a</anchor>
+      <arglist>(const SuccessBin &amp;bin) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>find</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>afbd7d7131c79fbe78fa23b8c26427fe7</anchor>
+      <arglist>(const U &amp;value) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>begin</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a7a9dda19fbef0a6aaca5ddb0d0151c44</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const_iterator</type>
+      <name>end</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ae4cceb5b2a063592a120e1a31bfb3574</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a388c94c04590d8cec984b3e398796986</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Statistics</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac75017c9aee38939c58dd78b888ee01e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual SuccessBin &amp;</type>
+      <name>increment</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a5d42ca021f89a44d6d095b7353dfc9a3</anchor>
+      <arglist>(const SuccessBin &amp;bin) __attribute__((deprecated))</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iterator</type>
+      <name>insert</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a1e2a8bd50fcadf4a63f07cec4e39f2cd</anchor>
+      <arglist>(const SuccessBin &amp;bin)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::statistics::SuccessBin</name>
+    <filename>a00006.html</filename>
+    <base>hpp::statistics::Bin</base>
+    <class kind="struct">hpp::statistics::SuccessBin::Reason</class>
+    <member kind="function">
+      <type></type>
+      <name>SuccessBin</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a42dd020b718ccbb896782370c32e278b</anchor>
+      <arglist>(const bool success, const Reason &amp;r=REASON_UNKNOWN)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isSuccess</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a6435d5fa28b79b1798c360dc633f0224</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const Reason &amp;</type>
+      <name>reason</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aedb491219d709f411675411a16c45710</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>reasonString</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a8ff5cdef0dcdc1fd8c37a0d8df1775f0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a834b5335c5d7c408f758912790244a4f</anchor>
+      <arglist>(const SuccessBin &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator&lt;</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aab0efeb84c7f797e2037990cc7f709e4</anchor>
+      <arglist>(const SuccessBin &amp;other) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Reason</type>
+      <name>createReason</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a8b6d41aff8e0b46cc855cea250316f32</anchor>
+      <arglist>(const std::string &amp;what)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const Reason</type>
+      <name>REASON_UNKNOWN</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a4cb39b00f164a1e85e57d1d92ecc1df2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::statistics::SuccessStatistics</name>
+    <filename>a00007.html</filename>
+    <base>Statistics&lt; SuccessBin &gt;</base>
+    <member kind="typedef">
+      <type>Statistics&lt; SuccessBin &gt;</type>
+      <name>Parent</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a26713d799a6dc8ecc753b34828ef4aa3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SuccessStatistics</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a286a72a7c5a4c304ab2ddc8f7257a9af</anchor>
+      <arglist>(const std::string name=&quot;&quot;, const std::size_t &amp;logRatio=2)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SuccessStatistics</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>af26df2569d1b5b71d004b099f040b995</anchor>
+      <arglist>(const SuccessStatistics &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addSuccess</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a50e49ef83fc6ce2215f0fc563516690b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addFailure</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac04ff66e7621cff7c5dbac11eb652faa</anchor>
+      <arglist>(const SuccessBin::Reason &amp;r=SuccessBin::REASON_UNKNOWN)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isLowRatio</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a09758c54c32356d8e7f8dc812d6db5d8</anchor>
+      <arglist>(const bool autoPrint=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>nbSuccess</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a1678684f78b9f01ec5d9e18f123dedc5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>nbFailure</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ab349aeed9696545affafae2197e1b67a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>nbFailure</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a9b80eee598d74d07766608a30a6b7d31</anchor>
+      <arglist>(const SuccessBin::Reason &amp;r) const </arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>name_</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac87dfe2eb77b2c929cf5d8159a0e0905</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>logRatio_</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a1a8292bc9d1e3f8bf224acf7a6cc79da</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::statistics::TimeCounter</name>
+    <filename>a00008.html</filename>
+    <member kind="typedef">
+      <type>boost::posix_time::ptime</type>
+      <name>ptime</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a52899fb387d1ee0edbc99ba28d872c5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::posix_time::time_duration</type>
+      <name>time_duration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a6ae87f03959db9b375442b03da362d70</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TimeCounter</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a2b22af4b5ea727b0818a582669948f11</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>start</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a036823f72bd9814fa144c2495edc376e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>stop</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aed0ea499798c7698cfb1d516cc3974ed</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>time_duration</type>
+      <name>mean</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a0c72b39a831cd2a84b29b4b5d70950ca</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>time_duration</type>
+      <name>totalTime</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a61ba690dce45b5eb285393881be0c7a2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>af538e3a80ce3ac19455d02e8c9caa233</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00016.html</filename>
+    <namespace>hpp::statistics</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::statistics</name>
+    <filename>a00017.html</filename>
+    <class kind="class">hpp::statistics::Bin</class>
+    <class kind="class">hpp::statistics::DiscreteDistribution</class>
+    <class kind="class">hpp::statistics::Reason</class>
+    <class kind="class">hpp::statistics::Statistics</class>
+    <class kind="class">hpp::statistics::SuccessBin</class>
+    <class kind="class">hpp::statistics::SuccessStatistics</class>
+    <class kind="class">hpp::statistics::TimeCounter</class>
+    <member kind="typedef">
+      <type>double</type>
+      <name>Proba_t</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a042b832a011d051cd524c19940a423ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Statistics&lt; Reason &gt;</type>
+      <name>Container</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a6a116d4a3a5a242fa63a3fde567dce02</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a7a2eac24fb0dd9f129bf9e0e8b76bd0a</anchor>
+      <arglist>(std::ostream &amp;os, const hpp::statistics::Bin &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a9c6d13d0ef91093d00e36f480135a7e2</anchor>
+      <arglist>(std::ostream &amp;os, const hpp::statistics::Statistics&lt; T &gt; &amp;ss)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SuccessFailureCount</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>aaffde1300eafe713550ff2c87c0f7334</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addSuccess</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a3e815980b23f8c924f5cd330f3d6b199</anchor>
+      <arglist>(const Reason &amp;r=REASON_UNKNOWN)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addFailure</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a2166f98251a158eee4be3dc5faa4d576</anchor>
+      <arglist>(const Reason &amp;r=REASON_UNKNOWN)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>nbSuccess</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>aadb767e3759dac0449e7efe034209497</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>nbSuccess</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad82af46ac85ef155533195b68332e598</anchor>
+      <arglist>(const SuccessBin::Reason &amp;r) const </arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>nbFailure</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ab29bce79573fab0a64875b42344a0608</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>nbFailure</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ac19652ce094003f8f3d0f0d42e914770</anchor>
+      <arglist>(const SuccessBin::Reason &amp;r) const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>abb7bce517c185ba8a07d7ac3c7e2f252</anchor>
+      <arglist>(std::ostream &amp;os, const TimeCounter &amp;tc)</arglist>
+    </member>
+    <member kind="variable">
+      <type>hpp::statistics::Reason</type>
+      <name>REASON_UNKNOWN</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a39fb4d4b755a67241d0d5d220ec77047</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Container</type>
+      <name>success_</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a90fb7734b16feeb2f025bb7a7cb9761f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Container</type>
+      <name>failure_</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a619407fe5c5a33fa839927d828547a67</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+  </compound>
+</tagfile>

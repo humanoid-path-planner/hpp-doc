@@ -1,0 +1,16 @@
+digraph "fcl::SamplerSE2"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="fcl::SamplerSE2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="fcl::SamplerBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00157.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rng" ,fontname="FreeSans"];
+  Node3 [label="fcl::RNG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00155.html",tooltip="Random number generation. "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" upper_bound\nlower_bound" ,fontname="FreeSans"];
+  Node4 [label="fcl::Vecnf\< 2 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00225.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="fcl::Vec_n\< FCL_REAL, N \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00224.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="FreeSans"];
+  Node6 [label="std::vector\< FCL_REAL \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

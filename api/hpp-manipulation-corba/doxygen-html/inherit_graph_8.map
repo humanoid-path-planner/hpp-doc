@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$a00004.html" title="Association of a numerical constraint with the associated passive joints. " alt="" coords="112,4,315,60"/>
+<area shape="rect" id="node3" href="$a00007.html" title="This class wraps the Corba client to the server implemented by libhpp&#45;manipulation&#45;corba.so. " alt="" coords="133,83,293,125"/>
+<area shape="rect" id="node4" href="$a00014.html" title="Definition of a manipulation planning problem. " alt="" coords="137,149,290,190"/>
+<area shape="rect" id="node5" href="$a00015.html" title="Load and handle a composite robot for manipulation planning. " alt="" coords="130,215,297,241"/>
+<area shape="rect" id="node6" href="$a00012.html" title="manipulation.robot.Humanoid\lRobot" alt="" coords="363,207,554,249"/>
+</map>

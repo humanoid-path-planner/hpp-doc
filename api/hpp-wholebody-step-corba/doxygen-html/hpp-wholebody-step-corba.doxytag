@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>config.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step-corba/build-rel/include/hpp/corbaserver/wholebody-step/</path>
+    <filename>a00005</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_WHOLEBODY_STEP_CORBA_VERSION</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ad80569a0face9cced66a25ad66692e59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_WHOLEBODY_STEP_CORBA_DLLIMPORT</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ad31f8253e313bf10d984eb267242eb23</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_WHOLEBODY_STEP_CORBA_DLLEXPORT</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ab3e15f0a33701d38060fce8ae37c901f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_WHOLEBODY_STEP_CORBA_DLLLOCAL</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>aecde4267368f9845e63962fe60285511</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_WHOLEBODY_STEP_CORBA_DLLAPI</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac7b45a3c479476c2f7d3301cb99b06d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_WHOLEBODY_STEP_CORBA_LOCAL</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ab61ce8c7c7ae7207fea015aff9a884e6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>deprecated.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step-corba/build-rel/include/hpp/corbaserver/wholebody-step/</path>
+    <filename>a00006</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_WHOLEBODY_STEP_CORBA_DEPRECATED</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a95bb8fa70dde9f5ffc5ec9b62d4d52d9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>doc.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step-corba/build-rel/include/hpp/corbaserver/wholebody-step/</path>
+    <filename>a00007</filename>
+  </compound>
+  <compound kind="file">
+    <name>fwd.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step-corba/include/hpp/corbaserver/wholebody-step/</path>
+    <filename>a00001</filename>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+    <member kind="typedef">
+      <type>core::ProblemSolver</type>
+      <name>ProblemSolver</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a173750d536b9546336d6b84f32305d18</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ProblemSolverPtr_t</type>
+      <name>ProblemSolverPtr_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a7737eda18d7bbc92bbf33ee957e23674</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjectorPtr_t</type>
+      <name>ConfigProjectorPtr_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a9ac0a2701eaeff3980c3e2da0865405f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::Configuration_t</type>
+      <name>Configuration_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ac00fa1aeb4811805aa8d4c618d779540</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigurationPtr_t</type>
+      <name>ConfigurationPtr_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a26ababb15632402ba39c620e2c52aa8a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::DevicePtr_t</type>
+      <name>DevicePtr_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a25b18d0b59a04828896df1c6fa12d717</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::HumanoidRobotPtr_t</type>
+      <name>HumanoidRobotPtr_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a55427a43097f1cde25152902bbf4dd8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::HumanoidRobot</type>
+      <name>HumanoidRobot</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ab0ee3d33f0f0046186788d48b3662717</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>problem.idl</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step-corba/idl/hpp/corbaserver/wholebody-step/</path>
+    <filename>a00008</filename>
+    <class kind="interface">hpp::corbaserver::wholebody_step::Problem</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::corbaserver</namespace>
+    <namespace>hpp::corbaserver::wholebody_step</namespace>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>dofSeq</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ac0155f186423eb78c1e5829d06b8afa6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; dofSeq &gt;</type>
+      <name>dofSeqSeq</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a46b52f4290d2ba30cb2647a4b0fc9d57</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>server.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step-corba/include/hpp/corbaserver/wholebody-step/</path>
+    <filename>a00002</filename>
+    <includes id="a00001" name="fwd.hh" local="no" imported="no">hpp/corbaserver/wholebody-step/fwd.hh</includes>
+    <includes id="a00005" name="config.hh" local="no" imported="no">hpp/corbaserver/wholebody-step/config.hh</includes>
+    <class kind="class">hpp::wholebodyStep::Server</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+    <namespace>hpp::wholebodyStep::impl</namespace>
+  </compound>
+  <compound kind="file">
+    <name>warning.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-wholebody-step-corba/build-rel/include/hpp/corbaserver/wholebody-step/</path>
+    <filename>a00009</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_WHOLEBODY_STEP_CORBA_WARN_STRINGISE_IMPL</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>abdebf4ac564a3e2ad8d9cbd839f7f01f</anchor>
+      <arglist>(x)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_WHOLEBODY_STEP_CORBA_WARN_STRINGISE</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ab4603cfe20a08d31b27ae3615b78931e</anchor>
+      <arglist>(x)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_WHOLEBODY_STEP_CORBA_WARN</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a77195835ae1655fa917bca8e69e1ef6e</anchor>
+      <arglist>(MSG)</arglist>
+    </member>
+  </compound>
+  <compound kind="interface">
+    <name>hpp::corbaserver::wholebody_step::Problem</name>
+    <filename>a00003.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>StaticStabilityType</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a6d57b245940848b012f31e4076a3070e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SLIDING</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a6d57b245940848b012f31e4076a3070ea4fe0026714ed22ca5d8114d51875ddac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALIGNED_COM</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a6d57b245940848b012f31e4076a3070ea6f7812ccd4b1107c8deab0f5ae4e1413</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SLIDING</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a6d57b245940848b012f31e4076a3070ea4fe0026714ed22ca5d8114d51875ddac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALIGNED_COM</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a6d57b245940848b012f31e4076a3070ea6f7812ccd4b1107c8deab0f5ae4e1413</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addStaticStabilityConstraints</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a4b18de3c335cfbc2c0b9dae2e5bb1425</anchor>
+      <arglist>(in string prefix, in dofSeq dofArray, in string leftAnkle, in string rightAnkle, in string comName, in StaticStabilityType type)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>generateGoalConfig</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a5ee16e57fca35282598a7bd9d7355c99</anchor>
+      <arglist>(in double x, in double y, in double z, in unsigned short nbConfig)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::wholebodyStep::Server</name>
+    <filename>a00004.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Server</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a4730c3ac233c7b5df5b30d8fba661feb</anchor>
+      <arglist>(int argc, const char *argv[], bool multiThread=false, const std::string &amp;poaName=&quot;child&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Server</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>aed0b0e59da7226d79e9ca63635ffb1b1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setProblemSolverMap</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>aabd701850d4f3e66f54b356833ed455f</anchor>
+      <arglist>(corbaServer::ProblemSolverMapPtr_t psMap)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>startCorbaServer</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a975aa7d89cc9608a56ca3739024a16d9</anchor>
+      <arglist>(const std::string &amp;contextId, const std::string &amp;contextKind, const std::string &amp;objectId, const std::string &amp;objectKind)</arglist>
+    </member>
+    <member kind="function">
+      <type>core::ProblemSolverPtr_t</type>
+      <name>problemSolver</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>ad84d20f80eaf0f24a2b27151753aa469</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>corbaServer::ProblemSolverMapPtr_t</type>
+      <name>problemSolverMap</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a87aa8f1f3c75cf08fa0d95f17d0402ae</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00010.html</filename>
+    <namespace>hpp::corbaserver</namespace>
+    <namespace>hpp::wholebodyStep</namespace>
+    <member kind="typedef">
+      <type>sequence&lt; string &gt;</type>
+      <name>Names_t</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>aaf2cd2058ca2b7078a44db27acdf759c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; boolean &gt;</type>
+      <name>boolSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a1ee11cb81c069fab362b221baf62d566</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; long &gt;</type>
+      <name>intSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>aed890abb35e052cae7cda98d7096022e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; intSeq &gt;</type>
+      <name>intSeqSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a67be5b661bd23439a11de55524616f01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>floatSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a45c0423291b61bc8cab2b86f44e7a5c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; floatSeq &gt;</type>
+      <name>floatSeqSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a8e52ca94e51aedffaf099d1d426cad95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double</type>
+      <name>Transform_</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a4b440e779d8fd13bf9cd136c7a2a2732</anchor>
+      <arglist>[7]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>double</type>
+      <name>Quaternion_</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a7383a9d3dcd6de57210b8da50eed409f</anchor>
+      <arglist>[4]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>dofSeq</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ac0155f186423eb78c1e5829d06b8afa6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; dofSeq &gt;</type>
+      <name>dofSeqSeq</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a46b52f4290d2ba30cb2647a4b0fc9d57</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::corbaserver</name>
+    <filename>a00011.html</filename>
+    <namespace>hpp::corbaserver::wholebody_step</namespace>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>dofSeq</name>
+      <anchorfile>a00030.html</anchorfile>
+      <anchor>a89f2c040cf9cbc23e8f6022fff8091bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>jointBoundSeq</name>
+      <anchorfile>a00030.html</anchorfile>
+      <anchor>a6c1b92a18728f5925684d7714634d16c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::corbaserver::wholebody_step</name>
+    <filename>a00012.html</filename>
+    <class kind="interface">hpp::corbaserver::wholebody_step::Problem</class>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::wholebodyStep</name>
+    <filename>a00013.html</filename>
+    <namespace>hpp::wholebodyStep::impl</namespace>
+    <class kind="class">hpp::wholebodyStep::Server</class>
+    <member kind="typedef">
+      <type>core::ProblemSolver</type>
+      <name>ProblemSolver</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a173750d536b9546336d6b84f32305d18</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ProblemSolverPtr_t</type>
+      <name>ProblemSolverPtr_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a7737eda18d7bbc92bbf33ee957e23674</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjectorPtr_t</type>
+      <name>ConfigProjectorPtr_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a9ac0a2701eaeff3980c3e2da0865405f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::Configuration_t</type>
+      <name>Configuration_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ac00fa1aeb4811805aa8d4c618d779540</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigurationPtr_t</type>
+      <name>ConfigurationPtr_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a26ababb15632402ba39c620e2c52aa8a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::DevicePtr_t</type>
+      <name>DevicePtr_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a25b18d0b59a04828896df1c6fa12d717</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::HumanoidRobotPtr_t</type>
+      <name>HumanoidRobotPtr_t</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a55427a43097f1cde25152902bbf4dd8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::HumanoidRobot</type>
+      <name>HumanoidRobot</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ab0ee3d33f0f0046186788d48b3662717</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::wholebodyStep::impl</name>
+    <filename>a00014.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+    <docanchor file="index" title="Introduction">hpp_wholebody_step_corba_intro</docanchor>
+    <docanchor file="index" title="How to communicate with the CORBA server">hpp_wholebody_step_corba_howto_communicate</docanchor>
+    <docanchor file="index" title="How to embed a server in an application">how_to_embed</docanchor>
+    <docanchor file="index" title="Introduction">hpp_core_sec_intro</docanchor>
+    <docanchor file="index" title="Embedding hpp-core into an application">hpp_core_sec_embedding</docanchor>
+    <docanchor file="index" title="Introduction">sec_intro_hpp_model</docanchor>
+    <docanchor file="index" title="Main classes">sec_hpp_model_main_classes</docanchor>
+    <docanchor file="index" title="Joints">subsec_hpp_model_joint</docanchor>
+    <docanchor file="index" title="Joint configuration">hpp_model_joint_configuration</docanchor>
+    <docanchor file="index" title="Device">subsec_hpp_model_device</docanchor>
+    <docanchor file="index">Configuration</docanchor>
+    <docanchor file="index">Velocity</docanchor>
+    <docanchor file="index" title="Operations between configurations and velocities">hpp_model_operation_between_configurations_and_velocities</docanchor>
+    <docanchor file="index" title="Introduction">hppCorbaServer_sec_intro</docanchor>
+    <docanchor file="index" title="How to communicate with the CORBA server">hppCorbaServer_sec_howto</docanchor>
+    <docanchor file="index" title="How to embed a server in an application">hppCorbaServer_sec_embedding</docanchor>
+  </compound>
+</tagfile>

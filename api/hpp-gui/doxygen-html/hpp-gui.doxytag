@@ -1,0 +1,2668 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>bodytreewidget.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00043</filename>
+    <includes id="a00044" name="bodytreewidget.hh" local="no" imported="no">hpp/gui/bodytreewidget.hh</includes>
+    <includes id="a00072" name="tree-item.hh" local="no" imported="no">hpp/gui/tree-item.hh</includes>
+    <includes id="a00054" name="mainwindow.hh" local="no" imported="no">hpp/gui/mainwindow.hh</includes>
+    <includes id="a00075" name="windows-manager.hh" local="no" imported="no">hpp/gui/windows-manager.hh</includes>
+    <includes id="a00059" name="osgwidget.hh" local="no" imported="no">hpp/gui/osgwidget.hh</includes>
+    <includes id="a00055" name="meta.hh" local="no" imported="no">hpp/gui/meta.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>addSelector</name>
+      <anchorfile>a00043.html</anchorfile>
+      <anchor>a9ff717602deed6df8596a294e5b19fa5</anchor>
+      <arglist>(QToolBox *tb, QString title, QStringList display, QStringList command, QObject *receiver, const char *slot)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>addColorSelector</name>
+      <anchorfile>a00043.html</anchorfile>
+      <anchor>ac197906002cba0b376b7b19105c71045</anchor>
+      <arglist>(QToolBox *tb, QString title, QObject *receiver, const char *slot)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>addSlider</name>
+      <anchorfile>a00043.html</anchorfile>
+      <anchor>aa69c5ac9a38415cca2b1d329674a7e31</anchor>
+      <arglist>(QToolBox *tb, QString title, QObject *receiver, const char *slot)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>bodytreewidget.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00044</filename>
+    <includes id="a00050" name="fwd.hh" local="no" imported="no">hpp/gui/fwd.hh</includes>
+    <class kind="class">hpp::gui::BodyTreeWidget</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_GUI_BODYTREE_DECL_FEATURE</name>
+      <anchorfile>a00044.html</anchorfile>
+      <anchor>a77060d8414d95d2a48d49aebc7582408</anchor>
+      <arglist>(func, ArgType)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_GUI_BODYTREE_IMPL_FEATURE</name>
+      <anchorfile>a00044.html</anchorfile>
+      <anchor>a86164c3af34ef597394599ef0fad8d19</anchor>
+      <arglist>(func, ArgType, CorbaType, WindowsManagerFunc)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>color-map.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00045</filename>
+    <class kind="class">hpp::gui::ColorMap</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>dialogloadenvironment.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/dialog/</path>
+    <filename>a00046</filename>
+    <includes id="a00047" name="dialogloadenvironment.hh" local="yes" imported="no">hpp/gui/dialog/dialogloadenvironment.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>dialogloadenvironment.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/dialog/</path>
+    <filename>a00047</filename>
+    <class kind="class">hpp::gui::DialogLoadEnvironment</class>
+    <class kind="struct">hpp::gui::DialogLoadEnvironment::EnvironmentDefinition</class>
+    <namespace>Ui</namespace>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>dialogloadrobot.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/dialog/</path>
+    <filename>a00048</filename>
+    <includes id="a00049" name="dialogloadrobot.hh" local="yes" imported="no">hpp/gui/dialog/dialogloadrobot.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>dialogloadrobot.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/dialog/</path>
+    <filename>a00049</filename>
+    <class kind="class">hpp::gui::DialogLoadRobot</class>
+    <class kind="struct">hpp::gui::DialogLoadRobot::RobotDefinition</class>
+    <namespace>Ui</namespace>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>fwd.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00050</filename>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; WindowsManager &gt;</type>
+      <name>WindowsManagerPtr_t</name>
+      <anchorfile>a00077.html</anchorfile>
+      <anchor>a9dd18f45fb4bb344d3b61c7c1953e007</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ledindicator.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00051</filename>
+    <includes id="a00052" name="ledindicator.hh" local="yes" imported="no">hpp/gui/ledindicator.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ledindicator.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00052</filename>
+    <class kind="class">hpp::gui::LedIndicator</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>mainwindow.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00053</filename>
+    <includes id="a00054" name="mainwindow.hh" local="yes" imported="no">hpp/gui/mainwindow.hh</includes>
+    <includes id="a00075" name="windows-manager.hh" local="yes" imported="no">hpp/gui/windows-manager.hh</includes>
+    <includes id="a00059" name="osgwidget.hh" local="yes" imported="no">hpp/gui/osgwidget.hh</includes>
+    <includes id="a00072" name="tree-item.hh" local="yes" imported="no">hpp/gui/tree-item.hh</includes>
+    <includes id="a00049" name="dialogloadrobot.hh" local="yes" imported="no">hpp/gui/dialog/dialogloadrobot.hh</includes>
+    <includes id="a00047" name="dialogloadenvironment.hh" local="yes" imported="no">hpp/gui/dialog/dialogloadenvironment.hh</includes>
+    <includes id="a00062" name="plugin-interface.hh" local="yes" imported="no">hpp/gui/plugin-interface.hh</includes>
+    <includes id="a00055" name="meta.hh" local="no" imported="no">hpp/gui/meta.hh</includes>
+    <includes id="a00066" name="pythonwidget.hh" local="no" imported="no">hpp/gui/pythonwidget.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>mainwindow.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00054</filename>
+    <includes id="a00050" name="fwd.hh" local="no" imported="no">hpp/gui/fwd.hh</includes>
+    <includes id="a00052" name="ledindicator.hh" local="no" imported="no">hpp/gui/ledindicator.hh</includes>
+    <includes id="a00057" name="omniorbthread.hh" local="no" imported="no">hpp/gui/omniorb/omniorbthread.hh</includes>
+    <includes id="a00049" name="dialogloadrobot.hh" local="no" imported="no">hpp/gui/dialog/dialogloadrobot.hh</includes>
+    <includes id="a00047" name="dialogloadenvironment.hh" local="no" imported="no">hpp/gui/dialog/dialogloadenvironment.hh</includes>
+    <includes id="a00064" name="pluginmanagerdialog.hh" local="no" imported="no">hpp/gui/dialog/pluginmanagerdialog.hh</includes>
+    <includes id="a00070" name="settings.hh" local="no" imported="no">hpp/gui/settings.hh</includes>
+    <class kind="class">hpp::gui::MainWindow</class>
+    <namespace>Ui</namespace>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>meta.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00055</filename>
+    <class kind="struct">hpp::gui::Traits</class>
+    <class kind="struct">hpp::gui::Traits&lt; CORBA::String_var &gt;</class>
+    <class kind="struct">hpp::gui::Traits&lt; QString &gt;</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+    <member kind="function">
+      <type>void</type>
+      <name>convertSequence</name>
+      <anchorfile>a00077.html</anchorfile>
+      <anchor>a7cbba33b1146acaa2008f892f18086f4</anchor>
+      <arglist>(const In *in, Out(&amp;out)[Size])</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>convertSequence</name>
+      <anchorfile>a00077.html</anchorfile>
+      <anchor>a36fca5dcd184bd7af86f51393ce6462f</anchor>
+      <arglist>(const In *in, Out *out, const std::size_t &amp;s)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>omniorbthread.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00056</filename>
+    <includes id="a00057" name="omniorbthread.hh" local="yes" imported="no">hpp/gui/omniorb/omniorbthread.hh</includes>
+    <includes id="a00054" name="mainwindow.hh" local="no" imported="no">hpp/gui/mainwindow.hh</includes>
+    <includes id="a00062" name="plugin-interface.hh" local="no" imported="no">hpp/gui/plugin-interface.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>omniorbthread.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/omniorb/</path>
+    <filename>a00057</filename>
+    <includes id="a00050" name="fwd.hh" local="yes" imported="no">hpp/gui/fwd.hh</includes>
+    <class kind="class">hpp::gui::WorkItem</class>
+    <class kind="class">hpp::gui::WorkItem_0</class>
+    <class kind="class">hpp::gui::WorkItem_1</class>
+    <class kind="class">hpp::gui::WorkItem_2</class>
+    <class kind="class">hpp::gui::WorkItem_3</class>
+    <class kind="class">hpp::gui::WorkItem_4</class>
+    <class kind="class">hpp::gui::WorkItem_5</class>
+    <class kind="class">hpp::gui::WorkItem_6</class>
+    <class kind="class">hpp::gui::ServerProcess</class>
+    <class kind="class">hpp::gui::ViewerServerProcess</class>
+    <class kind="class">hpp::gui::CorbaServer</class>
+    <class kind="class">hpp::gui::BackgroundQueue</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>osgwidget.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00058</filename>
+    <includes id="a00059" name="osgwidget.hh" local="yes" imported="no">hpp/gui/osgwidget.hh</includes>
+    <includes id="a00054" name="mainwindow.hh" local="yes" imported="no">hpp/gui/mainwindow.hh</includes>
+    <includes id="a00075" name="windows-manager.hh" local="no" imported="no">hpp/gui/windows-manager.hh</includes>
+    <includes id="a00044" name="bodytreewidget.hh" local="no" imported="no">hpp/gui/bodytreewidget.hh</includes>
+    <includes id="a00061" name="pick-handler.hh" local="no" imported="no">hpp/gui/pick-handler.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>osgwidget.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00059</filename>
+    <includes id="a00050" name="fwd.hh" local="no" imported="no">hpp/gui/fwd.hh</includes>
+    <includes id="a00075" name="windows-manager.hh" local="no" imported="no">hpp/gui/windows-manager.hh</includes>
+    <class kind="class">hpp::gui::RenderThread</class>
+    <class kind="class">hpp::gui::OSGWidget</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>pick-handler.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00060</filename>
+    <includes id="a00061" name="pick-handler.hh" local="yes" imported="no">hpp/gui/pick-handler.hh</includes>
+    <includes id="a00075" name="windows-manager.hh" local="no" imported="no">hpp/gui/windows-manager.hh</includes>
+    <includes id="a00059" name="osgwidget.hh" local="no" imported="no">hpp/gui/osgwidget.hh</includes>
+    <includes id="a00054" name="mainwindow.hh" local="no" imported="no">hpp/gui/mainwindow.hh</includes>
+    <includes id="a00044" name="bodytreewidget.hh" local="no" imported="no">hpp/gui/bodytreewidget.hh</includes>
+    <includes id="a00072" name="tree-item.hh" local="no" imported="no">hpp/gui/tree-item.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>pick-handler.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00061</filename>
+    <includes id="a00050" name="fwd.hh" local="no" imported="no">hpp/gui/fwd.hh</includes>
+    <class kind="class">hpp::gui::PickHandler</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>plugin-interface.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00062</filename>
+    <includes id="a00049" name="dialogloadrobot.hh" local="no" imported="no">hpp/gui/dialog/dialogloadrobot.hh</includes>
+    <includes id="a00047" name="dialogloadenvironment.hh" local="no" imported="no">hpp/gui/dialog/dialogloadenvironment.hh</includes>
+    <class kind="class">hpp::gui::PluginInterface</class>
+    <class kind="class">hpp::gui::JointAction</class>
+    <class kind="class">hpp::gui::JointModifierInterface</class>
+    <class kind="class">hpp::gui::ModelInterface</class>
+    <class kind="class">hpp::gui::CorbaInterface</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+    <member kind="variable">
+      <type>const int</type>
+      <name>DockKeyShortcutBase</name>
+      <anchorfile>a00077.html</anchorfile>
+      <anchor>a813ae02db966216eccb2d3a73b1aeb1d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>pluginmanagerdialog.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/dialog/</path>
+    <filename>a00063</filename>
+    <includes id="a00064" name="pluginmanagerdialog.hh" local="yes" imported="no">hpp/gui/dialog/pluginmanagerdialog.hh</includes>
+    <includes id="a00062" name="plugin-interface.hh" local="yes" imported="no">hpp/gui/plugin-interface.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>pluginmanagerdialog.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/dialog/</path>
+    <filename>a00064</filename>
+    <includes id="a00062" name="plugin-interface.hh" local="no" imported="no">hpp/gui/plugin-interface.hh</includes>
+    <class kind="class">hpp::gui::PluginManager</class>
+    <class kind="class">hpp::gui::PluginManagerDialog</class>
+    <namespace>Ui</namespace>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>pythonwidget.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00065</filename>
+    <includes id="a00066" name="pythonwidget.hh" local="yes" imported="no">hpp/gui/pythonwidget.hh</includes>
+    <includes id="a00059" name="osgwidget.hh" local="yes" imported="no">hpp/gui/osgwidget.hh</includes>
+    <includes id="a00054" name="mainwindow.hh" local="yes" imported="no">hpp/gui/mainwindow.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>pythonwidget.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00066</filename>
+    <class kind="class">hpp::gui::PythonWidget</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>safeapplication.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00067</filename>
+    <includes id="a00068" name="safeapplication.hh" local="yes" imported="no">hpp/gui/safeapplication.hh</includes>
+    <includes id="a00054" name="mainwindow.hh" local="no" imported="no">hpp/gui/mainwindow.hh</includes>
+    <includes id="a00062" name="plugin-interface.hh" local="no" imported="no">hpp/gui/plugin-interface.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>safeapplication.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00068</filename>
+    <class kind="class">hpp::gui::SafeApplication</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>settings.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00069</filename>
+    <includes id="a00070" name="settings.hh" local="no" imported="no">hpp/gui/settings.hh</includes>
+    <includes id="a00049" name="dialogloadrobot.hh" local="no" imported="no">hpp/gui/dialog/dialogloadrobot.hh</includes>
+    <includes id="a00047" name="dialogloadenvironment.hh" local="no" imported="no">hpp/gui/dialog/dialogloadenvironment.hh</includes>
+    <includes id="a00054" name="mainwindow.hh" local="no" imported="no">hpp/gui/mainwindow.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>settings.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00070</filename>
+    <includes id="a00064" name="pluginmanagerdialog.hh" local="no" imported="no">hpp/gui/dialog/pluginmanagerdialog.hh</includes>
+    <class kind="struct">hpp::gui::Settings</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>tree-item.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00071</filename>
+    <includes id="a00072" name="tree-item.hh" local="yes" imported="no">hpp/gui/tree-item.hh</includes>
+    <includes id="a00054" name="mainwindow.hh" local="yes" imported="no">hpp/gui/mainwindow.hh</includes>
+    <includes id="a00075" name="windows-manager.hh" local="yes" imported="no">hpp/gui/windows-manager.hh</includes>
+    <includes id="a00044" name="bodytreewidget.hh" local="no" imported="no">hpp/gui/bodytreewidget.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>tree-item.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00072</filename>
+    <includes id="a00050" name="fwd.hh" local="no" imported="no">hpp/gui/fwd.hh</includes>
+    <class kind="class">hpp::gui::BodyTreeItem</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>url.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/omniorb/</path>
+    <filename>a00073</filename>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+    <namespace>hpp::gui::omniOrb</namespace>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>IIOPurl</name>
+      <anchorfile>a00079.html</anchorfile>
+      <anchor>a63fe424d835ae5f8ec47bd5e0c4b4278</anchor>
+      <arglist>(const QString &amp;host, const QString &amp;port)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>windows-manager.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/src/</path>
+    <filename>a00074</filename>
+    <includes id="a00075" name="windows-manager.hh" local="yes" imported="no">hpp/gui/windows-manager.hh</includes>
+    <includes id="a00059" name="osgwidget.hh" local="yes" imported="no">hpp/gui/osgwidget.hh</includes>
+    <includes id="a00054" name="mainwindow.hh" local="yes" imported="no">hpp/gui/mainwindow.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>windows-manager.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-gui/include/hpp/gui/</path>
+    <filename>a00075</filename>
+    <includes id="a00050" name="fwd.hh" local="no" imported="no">hpp/gui/fwd.hh</includes>
+    <includes id="a00055" name="meta.hh" local="no" imported="no">hpp/gui/meta.hh</includes>
+    <class kind="struct">hpp::gui::Traits&lt; gepetto::corbaserver::Color_var &gt;</class>
+    <class kind="struct">hpp::gui::Traits&lt; gepetto::corbaserver::Position_var &gt;</class>
+    <class kind="struct">hpp::gui::Traits&lt; int &gt;</class>
+    <class kind="struct">hpp::gui::Traits&lt; int &gt;::type</class>
+    <class kind="class">hpp::gui::WindowsManager</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::BackgroundQueue</name>
+    <filename>a00001.html</filename>
+    <member kind="slot">
+      <type>void</type>
+      <name>perform</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a6826c95a62ac504755f74fd9d6721b23</anchor>
+      <arglist>(WorkItem *item)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>done</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a5173f63cac17d8873eac0ebfa95ee01f</anchor>
+      <arglist>(int workId)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>failed</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>aa408e6a06965731f8de5cb4a746f1a68</anchor>
+      <arglist>(int workId, const QString &amp;text)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>BackgroundQueue</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a0b44b656c8a93fd9d90229f1cf88f644</anchor>
+      <arglist>(QObject *parent=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::BodyTreeItem</name>
+    <filename>a00002.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>BodyTreeItem</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a4f838933071a9d9b437349442a949372</anchor>
+      <arglist>(QObject *parent, graphics::NodePtr_t node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStandardItem *</type>
+      <name>clone</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a976b83456dfadb61449aba33097209ab</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>type</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a7846ade8c9f95d7e2282f473d53aab78</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>graphics::NodePtr_t</type>
+      <name>node</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a009971865f7416ed3bf2883e358fc319</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>populateContextMenu</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a3fa810db05de7e02b9f1bbb1bfc85c12</anchor>
+      <arglist>(QMenu *menu)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setParentGroup</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a930d159be33dac5b14fddebc5001b76e</anchor>
+      <arglist>(const std::string &amp;parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>attachToWindow</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>af068d67c3b06874ddd267e3a31fb9d35</anchor>
+      <arglist>(unsigned int windowID)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>setViewingMode</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aedaba724ee2c65c24fa97aa6416e59d6</anchor>
+      <arglist>(QString mode)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>setVisibilityMode</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a9b7ef900663fd4635d1d2fdbdeeaf3f6</anchor>
+      <arglist>(QString mode)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>removeFromGroup</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ad4538a790f9b72d0175275d6b09b5b01</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>remove</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a8bcb380a251115635c02ba5214432461</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>removeAll</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aa8981557b4f5a3f9bb4163d13b999106</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>addLandmark</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a8bf1f719c6af5ab6af5053813dbb4872</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>deleteLandmark</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>adcc16c77f08e57bb54f1066b43cada5a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>af80d184b3721727b92ae41cb8ec2663c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>VisibilityItem</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aef99da3efc48f6e303e502c228b56f9b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::BodyTreeWidget</name>
+    <filename>a00003.html</filename>
+    <member kind="slot">
+      <type>void</type>
+      <name>selectBodyByName</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a75f62bd8a645c301c83131ee4193536a</anchor>
+      <arglist>(const QString bodyName)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>selectBodyByName</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a78eb58282a5f3b323e8f31f6c4b6b620</anchor>
+      <arglist>(const std::string &amp;bodyName)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>reloadBodyTree</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a28d519ed5c2287772d80e53508de518e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>setTransparency</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a6aa5a124851a31a0840d3b5960363cec</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>setVisibilityMode</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>af6df681e466f2eac9aea2e23571231a3</anchor>
+      <arglist>(QString arg)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>setWireFrameMode</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a680c852e73a99888bb2c5b74f2741c43</anchor>
+      <arglist>(QString arg)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a4e53e76490aab69f1328369e19940252</anchor>
+      <arglist>(QColor color)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>setScale</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a39c4c2672728017691aaf6f454d09c2f</anchor>
+      <arglist>(int scale)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>BodyTreeWidget</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>aa59d6cd923f40ea421b56b9fbaa5e366</anchor>
+      <arglist>(QWidget *parent=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>abf66fe765aaebce5668295dd19866dc7</anchor>
+      <arglist>(QTreeView *view, QToolBox *toolBox)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~BodyTreeWidget</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a8c4155998de83838f1295d884f634c7c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addBodyToTree</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a37f5bc95cd0c4de8955513bc50dcda49</anchor>
+      <arglist>(graphics::GroupNodePtr_t group)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>changeAlphaValue</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>afb24dcd72589ef6251b6fa0e1b87a01d</anchor>
+      <arglist>(const float &amp;alpha)</arglist>
+    </member>
+    <member kind="function">
+      <type>QTreeView *</type>
+      <name>view</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a6fa7b6b2569a9f5b3b61462635cf8796</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>customContextMenu</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>ad696fc2832f3fb58a685f3abc16b9de2</anchor>
+      <arglist>(const QPoint &amp;pos)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::ColorMap</name>
+    <filename>a00004.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ColorMap</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a0c2765ae81d4daf7cb25c0828b8e6379</anchor>
+      <arglist>(std::size_t nbColors)</arglist>
+    </member>
+    <member kind="function">
+      <type>QColor</type>
+      <name>getColor</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a8923e4ece3b89a32e6987f91efee196a</anchor>
+      <arglist>(std::size_t index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getColor</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a2d1d3106da146057fd252b1d52add4d4</anchor>
+      <arglist>(std::size_t index, float color[4]) const </arglist>
+    </member>
+    <member kind="function">
+      <type>QColor</type>
+      <name>nextColor</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a490d3cd1a900d1a111375d4fbfdb916f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>currentIndex</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>ad837c8201f69df57b54caa0f4cbd9fda</anchor>
+      <arglist>(std::size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>remap</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a3f9eb85839a4bb3a997ef3f404aceb6f</anchor>
+      <arglist>(const std::size_t &amp;index) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QColor</type>
+      <name>interpolate</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a7437535849d136d9a8848ac4a834e023</anchor>
+      <arglist>(std::size_t nbColors, std::size_t index)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::CorbaInterface</name>
+    <filename>a00005.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CorbaInterface</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>aff60a1a20361f3741b4aa506f9238d1a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>openConnection</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>aa0757047341b89e68aa5ebb39628b514</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>closeConnection</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a42cb2c165f4d2eabefff554f53be114f</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>corbaException</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a69b5d70cf92f4bca7a0b8dfb9acc9b30</anchor>
+      <arglist>(int jobId, const CORBA::Exception &amp;excep) const  =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::CorbaServer</name>
+    <filename>a00006.html</filename>
+    <member kind="signal">
+      <type>void</type>
+      <name>process</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a39a0abaf026338eae5c9424aa08c8c22</anchor>
+      <arglist>(bool)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CorbaServer</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a2b03c9db5fada360cc6ab5553f70f425</anchor>
+      <arglist>(ServerProcess *process)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CorbaServer</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a8c060da482bb0011044cf35271f337e3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>wait</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab416a4630d40be3a8611fd2bc5f11b10</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>waitForInitDone</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a38239690af0f55027db62e9fd1daa3bd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>start</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>adc6918593391525326332006c9bd29d2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>timerEvent</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a605f07ca1087a4f0621c908724548dee</anchor>
+      <arglist>(QTimerEvent *event)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>processed</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a90c868178db11f26bb03e7c5d943407a</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::DialogLoadEnvironment</name>
+    <filename>a00007.html</filename>
+    <class kind="struct">hpp::gui::DialogLoadEnvironment::EnvironmentDefinition</class>
+    <member kind="function">
+      <type></type>
+      <name>DialogLoadEnvironment</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a1738f312f9c93c3648d3c2189628361c</anchor>
+      <arglist>(QWidget *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~DialogLoadEnvironment</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a82e88982ead6d9611a8d60e4f58ffd53</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>EnvironmentDefinition</type>
+      <name>getSelectedDescription</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a49ea38d8760a84fd4870f290d2405edc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>addEnvironmentDefinition</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a6032ab31bfcf3c04c48878d5608486d2</anchor>
+      <arglist>(QString name, QString envName, QString package, QString packagePath, QString urdfFilename, QString urdfSuffix, QString srdfSuffix, QString meshDirectory)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QList&lt; EnvironmentDefinition &gt;</type>
+      <name>getEnvironmentDefinitions</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a8ade597c542127a8ef34accbe8117cb8</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::DialogLoadRobot</name>
+    <filename>a00008.html</filename>
+    <class kind="struct">hpp::gui::DialogLoadRobot::RobotDefinition</class>
+    <member kind="function">
+      <type></type>
+      <name>DialogLoadRobot</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a8921a18009c968a280e86f85e345c8ba</anchor>
+      <arglist>(QWidget *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~DialogLoadRobot</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a65e0c86c584e123a08f3259604d8d032</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>RobotDefinition</type>
+      <name>getSelectedRobotDescription</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a52eca7780b0cb1783f826025ef41b3c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>addRobotDefinition</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ab5cea17ed653df24f4b70147313eda1c</anchor>
+      <arglist>(QString name, QString robotName, QString rootJointType, QString modelName, QString package, QString packagePath, QString urdfSuffix, QString srdfSuffix, QString meshDirectory)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QList&lt; RobotDefinition &gt;</type>
+      <name>getRobotDefinitions</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a85a82aeca4ecc5107fa3615c746f8b6e</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::gui::DialogLoadEnvironment::EnvironmentDefinition</name>
+    <filename>a00009.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>EnvironmentDefinition</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ae76cdc3ca1ccd85bf0ac76a071565675</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>EnvironmentDefinition</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a9a54817dfe0e0c933b945f6f5b8bed0c</anchor>
+      <arglist>(QString name, QString envName, QString package, QString packagePath, QString urdfFilename, QString urdfSuffix, QString srdfSuffix, QString meshDirectory)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>name_</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>abfc3065c08154674c9af15eb54de8fc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>envName_</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a5ec1bbea109135533d853b842ace52e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>urdfFilename_</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a8890527f5b0c1281d9302f3da021dd66</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>mesh_</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a51aa8bcffa807a58fd25bd2ca12df1e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>package_</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>aad909ee29ef1748a2fd08def5311d50a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>packagePath_</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>aed22685229e1d3c4cb68fb80a42b4b81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>urdfSuf_</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a916f68b82a7be9e24606ed270c930fb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>srdfSuf_</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>aade940c20d225d43801ad31916a97262</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::JointAction</name>
+    <filename>a00010.html</filename>
+    <member kind="signal">
+      <type>void</type>
+      <name>triggered</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a3a6a33bc30ffd732831cbd513d004dc7</anchor>
+      <arglist>(const std::string jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>JointAction</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>afc45a51d2ff822ffa881650a91501bb6</anchor>
+      <arglist>(const QString &amp;actionName, const std::string &amp;jointName, QObject *parent)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::JointModifierInterface</name>
+    <filename>a00011.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~JointModifierInterface</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a09da6d285349abc6b3614dac4abf7fe0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual JointAction *</type>
+      <name>action</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a7197574fb9f8d0cd12ae3d2075c18163</anchor>
+      <arglist>(const std::string &amp;jointName) const  =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::LedIndicator</name>
+    <filename>a00012.html</filename>
+    <member kind="slot">
+      <type>void</type>
+      <name>switchLed</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>aeeb599535145c78af2ada25fc2844927</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>switchLed</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a0437d24ed9838e4ad9e9c6ae9ffd5204</anchor>
+      <arglist>(bool on)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>switched</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>acd34ada5b300ada5cb3d15fd0123a6c4</anchor>
+      <arglist>(bool on)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>mouseClickEvent</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a5e43ccf183aef87c9033040b0ddb15a5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>LedIndicator</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a392a0705e384eb4cfc9e44f90a9f1a97</anchor>
+      <arglist>(QWidget *parent=0)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>paintEvent</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a901e6d077c53aedab681394423355144</anchor>
+      <arglist>(QPaintEvent *)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>mouseReleaseEvent</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>acb97a8f4e6b4834f55dd25ca4170b45b</anchor>
+      <arglist>(QMouseEvent *event)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::MainWindow</name>
+    <filename>a00013.html</filename>
+    <member kind="slot">
+      <type>void</type>
+      <name>log</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a568dec4242244e99a78c2258a9a71c73</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>logError</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>afcca7d2f4546d28c94fcbc9137be084c</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>logJobStarted</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>afa8bb8d551b59e4511865f402903180a</anchor>
+      <arglist>(int id, const QString &amp;text)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>logJobDone</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>affacd1c8b258eca3c2cfab5126ec17f7</anchor>
+      <arglist>(int id, const QString &amp;text)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>logJobFailed</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a220244c34377549f1b06b0458251fc74</anchor>
+      <arglist>(int id, const QString &amp;text)</arglist>
+    </member>
+    <member kind="slot">
+      <type>OSGWidget *</type>
+      <name>delayedCreateView</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>aeadf73731674de4481e3b5221421ca1c</anchor>
+      <arglist>(QString name=&quot;&quot;)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>requestRefresh</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a21551d60c6c3841c8b74df56adbc944b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>requestApplyCurrentConfiguration</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>afc8239be24d497390b3c613217410cd4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>requestConfigurationValidation</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a3d078ac8cb068abc44d125ce00677c52</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>configurationValidationStatusChanged</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ad6fb635ade827171f7bbed575b23ae9a</anchor>
+      <arglist>(bool valid)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>configurationValidationStatusChanged</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a8f87547ddaeccfa1672cbdc7497b6e25</anchor>
+      <arglist>(QStringList bodiesInCollision)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>requestSelectJointFromBodyName</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a972869fdb9dec444422b3d18ee05dc25</anchor>
+      <arglist>(const QString bodyName)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>onOpenPluginManager</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>aa11fd4ff1bb1b4ed730e871efd1f9a0e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>sendToBackground</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a2d54f652ebb135f92bcc75047371d14f</anchor>
+      <arglist>(WorkItem *item)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>createView</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a399022d0b22c7dd5bcc5c6d42e92edbf</anchor>
+      <arglist>(QString name)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>refresh</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a37425ef537bab08a7908804ab034fe6a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>applyCurrentConfiguration</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a0e53171cac3bf3bf2d856813105a2cd5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>configurationValidation</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a728cea4938446f619d8779abbb325950</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>selectJointFromBodyName</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a36ba79819461f22cf27610df36802278</anchor>
+      <arglist>(const QString bodyName)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MainWindow</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af3eb9ed1c8130db2a683150ee7323854</anchor>
+      <arglist>(Settings *settings, QWidget *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~MainWindow</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a5507dd634af03c1ecf1d0fbe239f5259</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>insertDockWidget</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a0857374cc5d3b60dda2ab7cd3a3c4198</anchor>
+      <arglist>(QDockWidget *dock, Qt::DockWidgetArea area=Qt::AllDockWidgetAreas, Qt::Orientation orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removeDockWidget</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ab82d1897354f22da8d9e8d1a221a27ef</anchor>
+      <arglist>(QDockWidget *dock)</arglist>
+    </member>
+    <member kind="function">
+      <type>BackgroundQueue &amp;</type>
+      <name>worker</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a4b86cbecea1788ebf030ca74333aea68</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>WindowsManagerPtr_t</type>
+      <name>osg</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a2e2f91cfd5bb6bb38463b1c76dc5493d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>OSGWidget *</type>
+      <name>centralWidget</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a624fed7d8896776594e7d22e4817d9e0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QList&lt; OSGWidget * &gt;</type>
+      <name>osgWindows</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a53b0de9768a9b9ee2bf3bc39757dde4d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>BodyTreeWidget *</type>
+      <name>bodyTree</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a0eba881609a836677e1593f34984d21b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>PluginManager *</type>
+      <name>pluginManager</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ab2bc63a6678fb11f8120b6af70852256</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>emitSendToBackground</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a49cab31c4b9f049bad08c8254310c999</anchor>
+      <arglist>(WorkItem *item)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static MainWindow *</type>
+      <name>instance</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a51e6cc912d5775d0b6ee35ccfae872b6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>Settings *</type>
+      <name>settings_</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a8f22d8e816163da9dc4781557f06e11e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::ModelInterface</name>
+    <filename>a00014.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ModelInterface</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a959616d901913d225134b19a0b5bb3bd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>loadRobotModel</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a9e1b2402eddb10b8651026556cee2578</anchor>
+      <arglist>(DialogLoadRobot::RobotDefinition rd)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>loadEnvironmentModel</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ac94abc6eed46b448d8be4420cf8b7787</anchor>
+      <arglist>(DialogLoadEnvironment::EnvironmentDefinition ed)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual std::string</type>
+      <name>getBodyFromJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a16214ea08d563a2479906e5344d888fb</anchor>
+      <arglist>(const std::string &amp;jointName) const  =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::OSGWidget</name>
+    <filename>a00015.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>Mode</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac23e2ca26b4561de46ecbc39fe5e2277</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CAMERA_MANIPULATION</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac23e2ca26b4561de46ecbc39fe5e2277a494ff0753171c76120737318fdc6c4fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NODE_SELECTION</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac23e2ca26b4561de46ecbc39fe5e2277aee71bbc91fbd09a7e8eae42374aafc86</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NODE_MOTION</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac23e2ca26b4561de46ecbc39fe5e2277a3aeb3080c9ea5d8151f3a0c1d20d11f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; graphics::NodePtr_t &gt;</type>
+      <name>NodeList</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a68de80f214b3c5cd0bff562b4667d094</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CAMERA_MANIPULATION</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac23e2ca26b4561de46ecbc39fe5e2277a494ff0753171c76120737318fdc6c4fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NODE_SELECTION</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac23e2ca26b4561de46ecbc39fe5e2277aee71bbc91fbd09a7e8eae42374aafc86</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NODE_MOTION</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac23e2ca26b4561de46ecbc39fe5e2277a3aeb3080c9ea5d8151f3a0c1d20d11f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>loadURDF</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>adc5c1dbf907fd700c148e74e988484bc</anchor>
+      <arglist>(const QString robotName, const QString urdf_file_path, const QString meshDataRootDir)</arglist>
+    </member>
+    <member kind="slot" virtualness="virtual">
+      <type>virtual void</type>
+      <name>onHome</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ab3bd19ffd5cc231b11f46bb780a3085d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>changeMode</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a0b701220d5bc0742a379d8c140826bf8</anchor>
+      <arglist>(Mode mode)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>selectionMode</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a41d54106a8eb06becf6841dcbd9b15e0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>cameraManipulationMode</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a8328747797eaf3a4b9545b4b7b00b6ef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>addFloor</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a3247da28a6375f564df3fa73df503f0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>attachToWindow</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ab8208dabb4e96a84aae8effa3c95035e</anchor>
+      <arglist>(const std::string nodeName)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>selected</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>aad28be7810a33503d0018a748e8190aa</anchor>
+      <arglist>(QString name)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>requestMotion</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ae5c4338555252bbf8b141e9e2917e672</anchor>
+      <arglist>(graphics::NodePtr_t node, graphics::Node::Arrow direction, float speed)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>OSGWidget</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>af3ef91a1f16f6847ddad10d340c9d9e0</anchor>
+      <arglist>(WindowsManagerPtr_t wm, std::string name, MainWindow *parent=0, Qt::WindowFlags f=0, osgViewer::ViewerBase::ThreadingModel threadingModel=osgViewer::Viewer::SingleThreaded)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~OSGWidget</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ad18a09d138f9c5133665cf3f141fbd4c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>WindowsManager::WindowID</type>
+      <name>windowID</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a372dc3ea6f858f306cf0cc11c1526086</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>paintEvent</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a6f12edba9b98895a21f74fb9e0f30413</anchor>
+      <arglist>(QPaintEvent *paintEvent)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>PickHandler</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>af79a4892e98959fb7081d30842988d08</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::PickHandler</name>
+    <filename>a00016.html</filename>
+    <member kind="signal">
+      <type>void</type>
+      <name>selected</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a9abd618716f97f556ac634d62a4dc9fb</anchor>
+      <arglist>(QString name)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PickHandler</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>adc4db4000c2151b0b0590750b69bb006</anchor>
+      <arglist>(WindowsManagerPtr_t wsm)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~PickHandler</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>aa40f75320525b5cfe9b0ad7c71f7fbf9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>handle</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a11f678b94974a5fa2919b758edc74bae</anchor>
+      <arglist>(const osgGA::GUIEventAdapter &amp;ea, osgGA::GUIActionAdapter &amp;aa)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>select</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a7db433aff2cce907026a6447910817a8</anchor>
+      <arglist>(graphics::NodePtr_t node)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getUsage</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>aa81ee857dffbc6cd6a52d919075c9be4</anchor>
+      <arglist>(osg::ApplicationUsage &amp;usage)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::PluginInterface</name>
+    <filename>a00017.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>PluginInterface</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a956ee9f9e57484346f3b79e01e3d6f85</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~PluginInterface</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a88caca7dddc09eb7bf02c90ee6dbdf92</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>name</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a9d7065b422fcbe2fb86eb9d3c5a748e3</anchor>
+      <arglist>() const  =0</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>doInit</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a6465a93d755672e100f9649dc9db93d9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isInit</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a5e53028fda601fe6c3b1699a63bfd0b7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const QString &amp;</type>
+      <name>errorMsg</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a42306d0c0945efae4ea9cd9d153c46e8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>init</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad6c2518a11b921f6b0274c438b88f0e5</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::PluginManager</name>
+    <filename>a00018.html</filename>
+    <member kind="typedef">
+      <type>QPair&lt; QString, QPluginLoader * &gt;</type>
+      <name>Pair</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a9a5afd56f499a8c2fc03c3af28f17332</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QMap&lt; QString, QPluginLoader * &gt;</type>
+      <name>Map</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>ad68e7e2502d6f75f22adb84ea9751850</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~PluginManager</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>ac45c4a8cf30006a28e129750638a10cd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const QMap&lt; QString, QPluginLoader * &gt; &amp;</type>
+      <name>plugins</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a29bad1e1b55f4a67d2d367a9b88fe034</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>add</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>ad3064d49ce92909d79a199c8b8834989</anchor>
+      <arglist>(const QString &amp;name, QWidget *parent=NULL, bool load=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>Interface *</type>
+      <name>getFirstOf</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a5e39d13f7a6acf2aac3a4c1b8322c884</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QList&lt; Interface * &gt;</type>
+      <name>get</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a65ea45fc79e8b9ae94cc82684de7e957</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>initPlugin</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>acb05026fa01617ab4f8885a811309b48</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>unloadPlugin</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a3e177a38cfb755858d259e1553eda63a</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QIcon</type>
+      <name>icon</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a49bc38f935660780cf4f92e275cd3517</anchor>
+      <arglist>(const QPluginLoader *pl)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>status</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a910d79af1091ff6ce3663ea498dfb6a5</anchor>
+      <arglist>(const QPluginLoader *pl)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>addPluginDir</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a7aa43070ec3bfb128dc7401f2e5efad3</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::PluginManagerDialog</name>
+    <filename>a00019.html</filename>
+    <member kind="slot">
+      <type>void</type>
+      <name>onItemChanged</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>aa192741ee835f8ba3a56f1a82eb050e1</anchor>
+      <arglist>(QTableWidgetItem *current, QTableWidgetItem *previous)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>contextMenu</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a7775e52f79e1a987a423ec6d163e3295</anchor>
+      <arglist>(const QPoint &amp;pos)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>load</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a52a1c583132232433ae908cdd41edc55</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>unload</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a0df4ebe6e5cf95333f920abadcc31c2b</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PluginManagerDialog</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>abdfea7ab3f19b0c21d7ddee844ea973e</anchor>
+      <arglist>(PluginManager *pm, QWidget *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~PluginManagerDialog</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a8bef0ff1fd48939f59d9c2272fe208fd</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::PythonWidget</name>
+    <filename>a00020.html</filename>
+    <member kind="slot">
+      <type>void</type>
+      <name>browseFile</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a453c36a0dca80b5400510557426f8dca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PythonWidget</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>ae521d6f257e60e3436fa8c62f5bc1f10</anchor>
+      <arglist>(QWidget *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addToContext</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a80d2333464222a6da30ee01fb22277ed</anchor>
+      <arglist>(QString const &amp;name, QObject *obj)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~PythonWidget</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a50b8f281909dd3c00a700126c9b9ac92</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::RenderThread</name>
+    <filename>a00021.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>RenderThread</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>affa89a589234aae8abe92fbab82a82a2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~RenderThread</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>aa2c374769e834d24800038fc14b08242</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>osgViewer::ViewerRefPtr</type>
+      <name>viewerPtr</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a4853f6b6772516021297f1a4eccf3eb4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>WindowsManagerPtr_t</type>
+      <name>wsm_</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a13383a61c5f8464fb45dc2ae14dfd2e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>refreshRate</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a30504bf41e743e1c89e2c397f5c991cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>stop</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>ad8d8aff06e7d25cb2d42e6af176d5996</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>run</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>af78edf6e8a9a6148ec5fcd6b9901b922</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::gui::DialogLoadRobot::RobotDefinition</name>
+    <filename>a00022.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>RobotDefinition</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>ac951b9174c8e151b5ebb2dedd9a3246c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RobotDefinition</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a492756f15b3cfa1e86ff75bed29b5b69</anchor>
+      <arglist>(QString name, QString robotName, QString rootJointType, QString modelName, QString package, QString packagePath, QString urdfSuffix, QString srdfSuffix, QString meshDirectory)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>name_</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a3c21e1ab1ec15874b0ae2d3843551f2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>robotName_</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>ac5da666a08cb100a6666950d40f92a93</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>urdfSuf_</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a9ea0ec1b977cd79f235efe93d39dd1f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>srdfSuf_</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>af69c12969292e05add52ccbdebe62803</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>mesh_</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a032c4d8877211251571174cb3c0d2925</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>package_</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a5a24bb7da827ae050ef1267c8716a3b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>packagePath_</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a0dd7c4fc7a72a9f6dec59497cc669fc7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>modelName_</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a3e7051d59a952828b85eca42151ff1bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>rootJointType_</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>ada9992d869c3c869c4cdc155363f4e43</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::SafeApplication</name>
+    <filename>a00023.html</filename>
+    <member kind="signal">
+      <type>void</type>
+      <name>log</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>aa1d969c7f0e22201a03681b30024ae96</anchor>
+      <arglist>(QString text)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SafeApplication</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>ac7690f59b8cbac75a40f67b9347e9e80</anchor>
+      <arglist>(int &amp;argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>notify</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>af03eee3a934bb884243e14582d5de40b</anchor>
+      <arglist>(QObject *receiver, QEvent *e)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::ServerProcess</name>
+    <filename>a00024.html</filename>
+    <member kind="slot" virtualness="virtual">
+      <type>virtual void</type>
+      <name>init</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a5935781971f34e92efc955c37ce2872f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" virtualness="pure">
+      <type>virtual void</type>
+      <name>processRequest</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a1360786967d0e3a97c80412dfcb4c98a</anchor>
+      <arglist>(bool loop)=0</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>done</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a1f855661d44a82da7fc76264dfb4922b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ServerProcess</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a0499a2733365a232fb956b58f930759c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>waitForInitDone</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a7fae0536355caeeb2d6e47d44ece0ef4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QMutex</type>
+      <name>initDone_</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a1a14153b94adc6725f32fc74477712cd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::gui::Settings</name>
+    <filename>a00025.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Settings</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>abbfc3271b6b7b6f9a1343adf32e5f343</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>fromArgv</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ac549f2de5f88908daef9a80ee388416f</anchor>
+      <arglist>(const int argc, char *const argv[])</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fromFiles</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a4df5a2f92f5f8f87c267c9b37f7d4596</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeSettings</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a284db588fac7435667e92107a07ab735</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QVariant</type>
+      <name>getSetting</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a613ad145bc84c722d3e66983f1ca0e60</anchor>
+      <arglist>(const QString &amp;key, const QVariant &amp;defaultValue=QVariant())</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setMainWindow</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>af68ac3abb35207214d0af182a3d22983</anchor>
+      <arglist>(MainWindow *main)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initPlugins</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a5d5aa2d8629b3ad22f20b473a8036726</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a11222038399ed0cee2441993f05bfac9</anchor>
+      <arglist>(std::ostream &amp;os)</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>configurationFile</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a56d4f03782c96b0cc0d9801a5dbeafcb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>predifinedRobotConf</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>adb3eed0a153dfe1160e6a5114cbb9a1f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>predifinedEnvConf</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a0a1f03733420b5681c83c9fa8d972476</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>verbose</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ae134a070bdf06423e42e1ca249000d20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>noPlugin</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>abb4cea2d61a4af6792197b944e9934f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>autoWriteSettings</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a12acd02a323216509b892a0c265bd4da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>startGepettoCorbaServer</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a8383b96bb0d9f7529cab640ec69a9fec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>refreshRate</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a8a0a8c905b176492f56041430b6a6d96</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>captureDirectory</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a8e2fc67e492d5bbf74f4f78b1e7ef7dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>captureFilename</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a02b0c8ae49b0393709259c59078ca6c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>captureExtension</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a1a6227d60159c59e978a9a48e68c33c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>PluginManager</type>
+      <name>pluginManager_</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a57e11f5385e2aac4380e6c464c824f80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QStringList</type>
+      <name>pluginsToInit_</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a0a5aa43e135f6ae7f619557911c945cc</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::gui::Traits</name>
+    <filename>a00026.html</filename>
+    <templarg></templarg>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::gui::Traits&lt; CORBA::String_var &gt;</name>
+    <filename>a00027.html</filename>
+    <member kind="typedef">
+      <type>CORBA::String_var</type>
+      <name>type</name>
+      <anchorfile>a00027.html</anchorfile>
+      <anchor>ab17feac21b083271ef875f80ab8a4f9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static type</type>
+      <name>from</name>
+      <anchorfile>a00027.html</anchorfile>
+      <anchor>a4af3c14ba541e536b34f28314d417646</anchor>
+      <arglist>(const QString &amp;s)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static type</type>
+      <name>from</name>
+      <anchorfile>a00027.html</anchorfile>
+      <anchor>aeca14434d1aa2320a378f47db221d13c</anchor>
+      <arglist>(const std::string &amp;s)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::gui::Traits&lt; gepetto::corbaserver::Color_var &gt;</name>
+    <filename>a00028.html</filename>
+    <member kind="typedef">
+      <type>gepetto::corbaserver::Color_var</type>
+      <name>type</name>
+      <anchorfile>a00028.html</anchorfile>
+      <anchor>a409aa1ce1e9a09969711ec08aec579b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static type</type>
+      <name>from</name>
+      <anchorfile>a00028.html</anchorfile>
+      <anchor>a68111e064efaa306dcf7e0d0793bffbe</anchor>
+      <arglist>(const float *in)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static type</type>
+      <name>from</name>
+      <anchorfile>a00028.html</anchorfile>
+      <anchor>a34106174e85ff5018e2a716724375488</anchor>
+      <arglist>(const double *in)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static type</type>
+      <name>from</name>
+      <anchorfile>a00028.html</anchorfile>
+      <anchor>a49c6d4b9f7513b0cf305531f3eb391cd</anchor>
+      <arglist>(const QColor &amp;in)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::gui::Traits&lt; gepetto::corbaserver::Position_var &gt;</name>
+    <filename>a00029.html</filename>
+    <member kind="typedef">
+      <type>gepetto::corbaserver::Position_var</type>
+      <name>type</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>aa33cfefb9a9b0c3eb35ebb1ad8be08b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static type</type>
+      <name>from</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a527bec8ff48d1f7cd1d5b77ef8914eb7</anchor>
+      <arglist>(const float *in)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static type</type>
+      <name>from</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a5473c85016c3a2aa7b9e383c6cf64cb1</anchor>
+      <arglist>(const double *in)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static type</type>
+      <name>from</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a6a3d65181ccfe67700e9338fe54e5d22</anchor>
+      <arglist>(const QVector3D &amp;in)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static type</type>
+      <name>from</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a3d92f6c7e2682bee48dd36f78c71e3bc</anchor>
+      <arglist>(const int &amp;in)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::gui::Traits&lt; int &gt;</name>
+    <filename>a00030.html</filename>
+    <class kind="struct">hpp::gui::Traits&lt; int &gt;::type</class>
+    <member kind="function" static="yes">
+      <type>static type</type>
+      <name>from</name>
+      <anchorfile>a00030.html</anchorfile>
+      <anchor>a3bf3bd962d35db1198e588831a12d44d</anchor>
+      <arglist>(const int &amp;in)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::gui::Traits&lt; QString &gt;</name>
+    <filename>a00031.html</filename>
+    <member kind="typedef">
+      <type>CORBA::String_var</type>
+      <name>CORBA_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a6891886046edc9fb413a1dc85c92b59d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static CORBA_t</type>
+      <name>to_corba</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a883270c474f15e92f028e6b852605bbf</anchor>
+      <arglist>(const QString &amp;s)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::gui::Traits&lt; int &gt;::type</name>
+    <filename>a00032.html</filename>
+    <member kind="function">
+      <type>const float &amp;</type>
+      <name>in</name>
+      <anchorfile>a00032.html</anchorfile>
+      <anchor>abb85cb1a412fc6f4bca35916f12b73c3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>value</name>
+      <anchorfile>a00032.html</anchorfile>
+      <anchor>a4eaf12be470fb06ec6afe13b8dbefc8a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::ViewerServerProcess</name>
+    <filename>a00033.html</filename>
+    <base>hpp::gui::ServerProcess</base>
+    <member kind="slot">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>adcd4431430493154756e366f0e95b978</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>processRequest</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a21a03b2f755f4a616b92d03d38957c66</anchor>
+      <arglist>(bool loop)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ViewerServerProcess</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a7ecf6d1bd357ef9473b83bbc0ce67b14</anchor>
+      <arglist>(graphics::corbaServer::Server *server)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ViewerServerProcess</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a9d65826a0c1aea2d9b33f5d50e8f3e7d</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::WindowsManager</name>
+    <filename>a00034.html</filename>
+    <member kind="typedef">
+      <type>graphics::WindowsManager</type>
+      <name>Parent_t</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>ab381ba174b2d9cb45b93f446b4b4f2e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>WindowID</type>
+      <name>createWindow</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>a918503cba50607b7632174dec2d27192</anchor>
+      <arglist>(const char *windowNameCorba)</arglist>
+    </member>
+    <member kind="function">
+      <type>WindowID</type>
+      <name>createWindow</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>a952e5005d1a3b19bf33d2ec79a17ea60</anchor>
+      <arglist>(const char *windowNameCorba, osgViewer::Viewer *viewer, osg::GraphicsContext *gc)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static WindowsManagerPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>a0591551ce42a3336e43f0e4b7c396206</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>WindowsManager</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>acb963a12636c1e0898683f83b8064e3c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::WorkItem</name>
+    <filename>a00035.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>WorkItem</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>a93d6f71e9030b43359e8a4ed2be56ae7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~WorkItem</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>a65c8983c822ff7f1ecea1c84e4c8c8ea</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>performWork</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>aa35e0634d44c94e29597feacdf2da419</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>id</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>ac82698f2bb9f6df30034780109af9078</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>id</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>a0499a7887a080cc688e0b08d7b416fc3</anchor>
+      <arglist>(int i)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::WorkItem_0</name>
+    <filename>a00036.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>hpp::gui::WorkItem</base>
+    <member kind="typedef">
+      <type>ReturnType(Caller::*</type>
+      <name>Method</name>
+      <anchorfile>a00036.html</anchorfile>
+      <anchor>acfba9b7e4da427b7e6ebee7b172b18bf</anchor>
+      <arglist>)()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WorkItem_0</name>
+      <anchorfile>a00036.html</anchorfile>
+      <anchor>abfa5ef2729d9908c045b8b7fb9e62cf9</anchor>
+      <arglist>(Caller *c, Method m)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>performWork</name>
+      <anchorfile>a00036.html</anchorfile>
+      <anchor>a98a4f0ed26538020394687281435822c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::WorkItem_1</name>
+    <filename>a00037.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>hpp::gui::WorkItem</base>
+    <member kind="typedef">
+      <type>ReturnType(Caller::*</type>
+      <name>Method</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a94b5f82169c6319fcc5a1dc3928a2a26</anchor>
+      <arglist>)(Arg0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WorkItem_1</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>ab6ff1258b489a14702055c801e50c33b</anchor>
+      <arglist>(Caller *c, Method m, Arg0 a0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>performWork</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>aead6933587a7fb7511b21e4c196fc954</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::WorkItem_2</name>
+    <filename>a00038.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>hpp::gui::WorkItem</base>
+    <member kind="typedef">
+      <type>ReturnType(Caller::*</type>
+      <name>Method</name>
+      <anchorfile>a00038.html</anchorfile>
+      <anchor>a1aa3f9c0e511a73b1e9a925c2696681b</anchor>
+      <arglist>)(Arg0, Arg1)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WorkItem_2</name>
+      <anchorfile>a00038.html</anchorfile>
+      <anchor>aba32e058a452784cf3fbf0b882972a2c</anchor>
+      <arglist>(Caller *c, Method m, Arg0 a0, Arg1 a1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>performWork</name>
+      <anchorfile>a00038.html</anchorfile>
+      <anchor>a0d4c3c69daabf6149f973256dfb1a12d</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::WorkItem_3</name>
+    <filename>a00039.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>hpp::gui::WorkItem</base>
+    <member kind="typedef">
+      <type>ReturnType(Caller::*</type>
+      <name>Method</name>
+      <anchorfile>a00039.html</anchorfile>
+      <anchor>a983d1c331ce1faedd8746f9e6e0f2366</anchor>
+      <arglist>)(Arg0, Arg1, Arg2)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WorkItem_3</name>
+      <anchorfile>a00039.html</anchorfile>
+      <anchor>a1bbeaee27c7fb263b8b2a2c9accfb244</anchor>
+      <arglist>(Caller *c, Method m, Arg0 a0, Arg1 a1, Arg2 a2)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>performWork</name>
+      <anchorfile>a00039.html</anchorfile>
+      <anchor>a50f285754b9be32ee543b2787a208d8e</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::WorkItem_4</name>
+    <filename>a00040.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>hpp::gui::WorkItem</base>
+    <member kind="typedef">
+      <type>ReturnType(Caller::*</type>
+      <name>Method</name>
+      <anchorfile>a00040.html</anchorfile>
+      <anchor>a670d0745be7d09e8c706ee11c931a999</anchor>
+      <arglist>)(Arg0, Arg1, Arg2, Arg3)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WorkItem_4</name>
+      <anchorfile>a00040.html</anchorfile>
+      <anchor>a2a5e2fc3067004d23a411e1ee7cb83c2</anchor>
+      <arglist>(Caller *c, Method m, Arg0 a0, Arg1 a1, Arg2 a2, Arg3 a3)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>performWork</name>
+      <anchorfile>a00040.html</anchorfile>
+      <anchor>aeb97fa29b962b321b98f9d36d42667e9</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::WorkItem_5</name>
+    <filename>a00041.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>hpp::gui::WorkItem</base>
+    <member kind="typedef">
+      <type>ReturnType(Caller::*</type>
+      <name>Method</name>
+      <anchorfile>a00041.html</anchorfile>
+      <anchor>ae917739d57eba40c0ef98f9c7308ba30</anchor>
+      <arglist>)(Arg0, Arg1, Arg2, Arg3, Arg4)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WorkItem_5</name>
+      <anchorfile>a00041.html</anchorfile>
+      <anchor>a64565b13b5ac1742ac5759090f9d2bc6</anchor>
+      <arglist>(Caller *c, Method m, Arg0 a0, Arg1 a1, Arg2 a2, Arg3 a3, Arg4 a4)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>performWork</name>
+      <anchorfile>a00041.html</anchorfile>
+      <anchor>ae556f8598bd84fc3c9300a8f2ace80a1</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::gui::WorkItem_6</name>
+    <filename>a00042.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>hpp::gui::WorkItem</base>
+    <member kind="typedef">
+      <type>ReturnType(Caller::*</type>
+      <name>Method</name>
+      <anchorfile>a00042.html</anchorfile>
+      <anchor>addd6403d9f6603546de15e37c647a738</anchor>
+      <arglist>)(Arg0, Arg1, Arg2, Arg3, Arg4, Arg5)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WorkItem_6</name>
+      <anchorfile>a00042.html</anchorfile>
+      <anchor>a8468a732ea9d3eb4b5f84fc868b1d40f</anchor>
+      <arglist>(Caller *c, Method m, Arg0 a0, Arg1 a1, Arg2 a2, Arg3 a3, Arg4 a4, Arg5 a5)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>performWork</name>
+      <anchorfile>a00042.html</anchorfile>
+      <anchor>ae994c3c578e92555724d15366a1d7e87</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00076.html</filename>
+    <namespace>hpp::gui</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::gui</name>
+    <filename>a00077.html</filename>
+    <namespace>hpp::gui::omniOrb</namespace>
+    <class kind="class">hpp::gui::BackgroundQueue</class>
+    <class kind="class">hpp::gui::BodyTreeItem</class>
+    <class kind="class">hpp::gui::BodyTreeWidget</class>
+    <class kind="class">hpp::gui::ColorMap</class>
+    <class kind="class">hpp::gui::CorbaInterface</class>
+    <class kind="class">hpp::gui::CorbaServer</class>
+    <class kind="class">hpp::gui::DialogLoadEnvironment</class>
+    <class kind="class">hpp::gui::DialogLoadRobot</class>
+    <class kind="class">hpp::gui::JointAction</class>
+    <class kind="class">hpp::gui::JointModifierInterface</class>
+    <class kind="class">hpp::gui::LedIndicator</class>
+    <class kind="class">hpp::gui::MainWindow</class>
+    <class kind="class">hpp::gui::ModelInterface</class>
+    <class kind="class">hpp::gui::OSGWidget</class>
+    <class kind="class">hpp::gui::PickHandler</class>
+    <class kind="class">hpp::gui::PluginInterface</class>
+    <class kind="class">hpp::gui::PluginManager</class>
+    <class kind="class">hpp::gui::PluginManagerDialog</class>
+    <class kind="class">hpp::gui::PythonWidget</class>
+    <class kind="class">hpp::gui::RenderThread</class>
+    <class kind="class">hpp::gui::SafeApplication</class>
+    <class kind="class">hpp::gui::ServerProcess</class>
+    <class kind="struct">hpp::gui::Settings</class>
+    <class kind="struct">hpp::gui::Traits</class>
+    <class kind="struct">hpp::gui::Traits&lt; CORBA::String_var &gt;</class>
+    <class kind="struct">hpp::gui::Traits&lt; gepetto::corbaserver::Color_var &gt;</class>
+    <class kind="struct">hpp::gui::Traits&lt; gepetto::corbaserver::Position_var &gt;</class>
+    <class kind="struct">hpp::gui::Traits&lt; int &gt;</class>
+    <class kind="struct">hpp::gui::Traits&lt; QString &gt;</class>
+    <class kind="class">hpp::gui::ViewerServerProcess</class>
+    <class kind="class">hpp::gui::WindowsManager</class>
+    <class kind="class">hpp::gui::WorkItem</class>
+    <class kind="class">hpp::gui::WorkItem_0</class>
+    <class kind="class">hpp::gui::WorkItem_1</class>
+    <class kind="class">hpp::gui::WorkItem_2</class>
+    <class kind="class">hpp::gui::WorkItem_3</class>
+    <class kind="class">hpp::gui::WorkItem_4</class>
+    <class kind="class">hpp::gui::WorkItem_5</class>
+    <class kind="class">hpp::gui::WorkItem_6</class>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; WindowsManager &gt;</type>
+      <name>WindowsManagerPtr_t</name>
+      <anchorfile>a00077.html</anchorfile>
+      <anchor>a9dd18f45fb4bb344d3b61c7c1953e007</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>convertSequence</name>
+      <anchorfile>a00077.html</anchorfile>
+      <anchor>a7cbba33b1146acaa2008f892f18086f4</anchor>
+      <arglist>(const In *in, Out(&amp;out)[Size])</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>convertSequence</name>
+      <anchorfile>a00077.html</anchorfile>
+      <anchor>a36fca5dcd184bd7af86f51393ce6462f</anchor>
+      <arglist>(const In *in, Out *out, const std::size_t &amp;s)</arglist>
+    </member>
+    <member kind="variable">
+      <type>const int</type>
+      <name>DockKeyShortcutBase</name>
+      <anchorfile>a00077.html</anchorfile>
+      <anchor>a813ae02db966216eccb2d3a73b1aeb1d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::gui::omniOrb</name>
+    <filename>a00079.html</filename>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>IIOPurl</name>
+      <anchorfile>a00079.html</anchorfile>
+      <anchor>a63fe424d835ae5f8ec47bd5e0c4b4278</anchor>
+      <arglist>(const QString &amp;host, const QString &amp;port)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>Ui</name>
+    <filename>a00081.html</filename>
+  </compound>
+</tagfile>

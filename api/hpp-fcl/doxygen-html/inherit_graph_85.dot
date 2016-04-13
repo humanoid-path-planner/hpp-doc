@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="fcl::NearestNeighbors\l\< _T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00126.html",tooltip="Abstract representation of a container that can perform nearest neighbors queries. "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="fcl::NearestNeighborsGNAT\l\< _T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00127.html",tooltip="Geometric Near-neighbor Access Tree (GNAT), a data structure for nearest neighbor search..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="fcl::NearestNeighborsLinear\l\< _T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00128.html",tooltip="A nearest neighbors datastructure that uses linear search. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="fcl::NearestNeighborsSqrt\lApprox\< _T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00129.html",tooltip="A nearest neighbors datastructure that uses linear search. "];
+}

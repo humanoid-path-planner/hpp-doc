@@ -1,0 +1,9 @@
+digraph "corba" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_3986a5c53fafb98d1e2d1c68186f0854 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="viewer" fontname="FreeSans", fontsize="10", URL="dir_3986a5c53fafb98d1e2d1c68186f0854.html"]
+  dir_bc0687b1452c0fc96b61f5891299022b [shape=box, label="corba", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_bc0687b1452c0fc96b61f5891299022b.html"];
+  }
+}

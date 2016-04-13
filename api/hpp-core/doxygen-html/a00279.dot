@@ -1,0 +1,13 @@
+digraph "hpp::core::PathValidation"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="hpp::core::PathValidation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="hpp::core::continuousCollision\lChecking::Dichotomy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00016.html",tooltip="Continuous validation of a path for collision. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="hpp::core::continuousCollision\lChecking::Progressive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00046.html",tooltip="Continuous validation of a path for collision. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="hpp::core::DiscretizedCollision\lChecking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00019.html",tooltip="Validation of path by collision checking at discretized parameter values. "];
+}

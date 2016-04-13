@@ -1,0 +1,31 @@
+digraph "fcl::MeshOcTreeCollisionTraversalNode&lt; BV, NarrowPhaseSolver &gt;"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="fcl::MeshOcTreeCollision\lTraversalNode\< BV, NarrowPhase\lSolver \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="fcl::CollisionTraversalNodeBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00032.html",tooltip="Node structure encoding the information required for collision traversal. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="fcl::TraversalNodeBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00214.html",tooltip="Node structure encoding the information required for traversal. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tf1\ntf2" ,fontname="FreeSans"];
+  Node4 [label="fcl::Transform3f",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00212.html",tooltip="Simple transform class used locally by InterpMotion. "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" request" ,fontname="FreeSans"];
+  Node5 [label="fcl::CollisionRequest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00030.html",tooltip="request to the collision algorithm "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cached_gjk_guess" ,fontname="FreeSans"];
+  Node6 [label="fcl::Vec3fX\< details\l::Vec3Data\< FCL_REAL \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00223.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="FreeSans"];
+  Node7 [label="fcl::details::Vec3Data\l\< FCL_REAL \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00222.html"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" result" ,fontname="FreeSans"];
+  Node8 [label="fcl::CollisionResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00031.html",tooltip="collision result "];
+  Node6 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cached_gjk_guess" ,fontname="FreeSans"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" model2" ,fontname="FreeSans"];
+  Node9 [label="fcl::OcTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00136.html",tooltip="Octree is one type of collision geometry which can encode uncertainty information in the sensor data..."];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="fcl::CollisionGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00028.html",tooltip="The geometry for the object for collision or distance computation. "];
+  Node6 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" aabb_center" ,fontname="FreeSans"];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" aabb_local" ,fontname="FreeSans"];
+  Node11 [label="fcl::AABB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00003.html",tooltip="A class describing the AABB collision structure, which is a box in 3D space determined by two diagona..."];
+  Node6 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" max_\nmin_" ,fontname="FreeSans"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tf1\ntf2" ,fontname="FreeSans"];
+}

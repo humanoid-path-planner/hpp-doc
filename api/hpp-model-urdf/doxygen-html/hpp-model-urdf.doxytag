@@ -1,0 +1,1053 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>doc.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model-urdf/include/hpp/model/urdf/</path>
+    <filename>a00003</filename>
+  </compound>
+  <compound kind="file">
+    <name>srdf/parser.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model-urdf/include/hpp/model/srdf/</path>
+    <filename>a00004</filename>
+    <includes id="a00005" name="urdf/parser.hh" local="no" imported="no">hpp/model/urdf/parser.hh</includes>
+    <class kind="class">hpp::model::srdf::Parser</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <namespace>hpp::model::srdf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>urdf/parser.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model-urdf/include/hpp/model/urdf/</path>
+    <filename>a00005</filename>
+    <class kind="class">hpp::model::urdf::Parser</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <namespace>hpp::model::srdf</namespace>
+    <namespace>hpp::model::urdf</namespace>
+  </compound>
+  <compound kind="file">
+    <name>util.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model-urdf/include/hpp/model/urdf/</path>
+    <filename>a00006</filename>
+    <includes id="a00005" name="urdf/parser.hh" local="no" imported="no">hpp/model/urdf/parser.hh</includes>
+    <includes id="a00004" name="srdf/parser.hh" local="no" imported="no">hpp/model/srdf/parser.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <namespace>hpp::model::urdf</namespace>
+    <member kind="function">
+      <type>void</type>
+      <name>loadRobotModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a529d9c2bd39171df5081f918457ec545</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadRobotModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ac37b233d6f35630644b88ade6012a984</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadRobotModelFromParameter</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a2dedf0b30a6c4bfe5b2fcf5ff14486d2</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const std::string &amp;rootJointType, const std::string &amp;urdfParameter, const std::string &amp;srdfParameter)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadHumanoidModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a893279f31592b9a579c8917145b0556a</anchor>
+      <arglist>(const model::HumanoidRobotPtr_t &amp;robot, const JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadHumanoidModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a019f994b8e0db41f853d4eab5af0dd57</anchor>
+      <arglist>(const model::HumanoidRobotPtr_t &amp;robot, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadHumanoidModelFromParameter</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>aa656f2c7ef987f35cafdc4df39ac8af0</anchor>
+      <arglist>(const model::HumanoidRobotPtr_t &amp;robot, const std::string &amp;rootJointType, const std::string &amp;urdfParameter, const std::string &amp;srdfParameter)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadUrdfModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a65e2380f47ac98a4d7aca6cdd5eb453a</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadUrdfModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a6e6baba3af34dc7b17d8fa21bc57eef5</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;filename)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::urdf::Parser</name>
+    <filename>a00001.html</filename>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; ::urdf::Link &gt;</type>
+      <name>UrdfLinkPtrType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a9a0239dc91e6bc9276bdca98b97dd784</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; ::urdf::Joint &gt;</type>
+      <name>UrdfJointPtrType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a19151036e12da4ce13a160eaf09ec572</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; ::urdf::JointLimits &gt;</type>
+      <name>UrdfJointLimitsPtrType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>afa5530a78792c1a53461a8180d1614f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const ::urdf::Link &gt;</type>
+      <name>UrdfLinkConstPtrType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>afc4bdf3ff32f20e682ec2880ef8cd368</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const ::urdf::Joint &gt;</type>
+      <name>UrdfJointConstPtrType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ab1fd6b13cc62d179b0475351681be520</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>DevicePtr_t</type>
+      <name>RobotPtrType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ad7bf0bb2ea5a97edac11aba187c401bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Joint</type>
+      <name>JointType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a0e6858562f0293096636e5f8bbf0a582</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Body</type>
+      <name>BodyType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a0e16b64a125c29f399beb469d1a24143</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::BVHModel&lt; fcl::OBBRSS &gt;</type>
+      <name>PolyhedronType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>aa669410a86fc672dc0e0dd29e87c0e59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; PolyhedronType &gt;</type>
+      <name>PolyhedronPtrType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a66841d942c986b924e8a72f098af1c58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Transform3f</type>
+      <name>MatrixHomogeneousType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a8af73bb9c6a1f848d25a4048377f4181</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; const std::string, JointPtr_t &gt;</type>
+      <name>MapHppJointType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>aaa43f117ec953881f69c4940b3715060</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, UrdfJointPtrType &gt;</type>
+      <name>MapJointType</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ad94cf0b534c881e42a3b3ca90ef1c87c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Parser</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ad59973f90952669dab4e5923285f1141</anchor>
+      <arglist>(const std::string &amp;rootJointType, const RobotPtrType &amp;robot, const JointPtr_t &amp;baseJoint=JointPtr_t())</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Parser</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a3369dfe61330135e57acc649a55b0fa1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parse</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a123906771bd6041cf884bc8ac86a9f83</anchor>
+      <arglist>(const std::string &amp;resourceName)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parseFromParameter</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a10fdbeae06c51d0886da65ba8810a118</anchor>
+      <arglist>(const std::string &amp;parameterName)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>buildRobot</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>abcbfeaf35f3af0954c6d56ab5496f654</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setSpecialJoints</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>acb69cf49ec7a6a899f548ee0bdf5670c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fillGaze</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ac192ce525ee1a40ce5454c6ec3868319</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>prefix</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a53df735d9b7f03bcde1e56159a8d8207</anchor>
+      <arglist>(const std::string &amp;prefix)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>srdf::Parser</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a562366cb04564bbce554fecdf7a8c1a5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::srdf::Parser</name>
+    <filename>a00002.html</filename>
+    <member kind="typedef">
+      <type>::srdf::Model::DisabledCollision</type>
+      <name>CollisionPairType</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>adf190a0d64b34796a29b4829f8c3cefe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; CollisionPairType &gt;</type>
+      <name>CollisionPairsType</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ae095c36cc31e25cdc3c907c283cc40d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, std::vector&lt; double &gt; &gt;</type>
+      <name>ConfigurationType</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aa8a75fe2584a787253d1b0998b9e6390</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>::srdf::Model::GroupState</type>
+      <name>SRDFGroupStateType</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a175b0c9c73aae0893fc2d34a9ab86a18</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; SRDFGroupStateType &gt;</type>
+      <name>SRDFGroupStatesType</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a778530ac96337f17b385a02d718138eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>urdf::Parser::BodyType</type>
+      <name>BodyType</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a52af4f6e6ceea11c730571f7bb0db530</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>urdf::Parser::RobotPtrType</type>
+      <name>RobotPtrType</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aac862f457973651f1d5452e08a5b9ab1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Parser</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a20ff3b97c418e60c3462a5522045686f</anchor>
+      <arglist>(urdf::Parser *parser)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Parser</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ad6ac0564950242d0ea04c8fedbb33279</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>displayDisabledCollisionPairs</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a8e4e9a9407f588e7c61ca903a406ad54</anchor>
+      <arglist>(std::ostream &amp;os)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parse</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ac054a6690eb78f9dc8ad98c262ad98b9</anchor>
+      <arglist>(const std::string &amp;semanticResourceName, RobotPtrType robot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parseFromParameter</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aaf5544c94e2d6a55e28f3d55722d9c38</anchor>
+      <arglist>(const std::string &amp;srdfParameterName, RobotPtrType robot)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>processSemanticDescription</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a3d8865e3c7529753c562a259dc7725cc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>prefix</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a937ecb2844db8ebd43bb974e71b21598</anchor>
+      <arglist>(const std::string &amp;prefix)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>addCollisionPairs</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a041c93875a34c8718c98d70b06d4a96a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>addJointGroups</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a4735297aff5f2bbc4cb788793c0e2b4d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>isCollisionPairDisabled</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a9fb812383b6ed18842c5363787451b51</anchor>
+      <arglist>(const std::string &amp;bodyName_1, const std::string &amp;bodyName_2)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>areDofsInJoint</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a3676d1bda3f803abc18cd187eed56c3b</anchor>
+      <arglist>(const std::vector&lt; double &gt; &amp;dofs, const std::string &amp;jointName, std::string &amp;jointType)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00007.html</filename>
+    <namespace>hpp::model</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::model</name>
+    <filename>a00008.html</filename>
+    <namespace>hpp::model::srdf</namespace>
+    <namespace>hpp::model::urdf</namespace>
+    <member kind="typedef">
+      <type>std::vector&lt; Transform &gt;</type>
+      <name>ForwardGeometrys_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a8efcd6c471105adfbe4830c7dd5cd7e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double</type>
+      <name>value_type</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3029997890626e3c31b22dd1bf67cc4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, Eigen::Dynamic, 1 &gt;</type>
+      <name>vector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a869bf69abc62e43b97fab86848005991</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>vector_t</type>
+      <name>Configuration_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ad83a889e62fc1a8d0b4a50ceea926d6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; const Configuration_t &gt;</type>
+      <name>ConfigurationIn_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aa0f4294734f2cac439d576b47df1122e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; Configuration_t &gt;</type>
+      <name>ConfigurationOut_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a31eda249c934b79ef44be6f288aad486</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Configuration_t &gt;</type>
+      <name>ConfigurationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6e0dbf53ac7b79bf7af3a17241e4ea73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; const vector_t &gt;</type>
+      <name>vectorIn_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a52c4dc006f5265bf5430d3676cdf0638</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; vector_t &gt;</type>
+      <name>vectorOut_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ae3dfbcffe19f5c57eb01b27dbd4d95eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, Eigen::Dynamic, Eigen::Dynamic &gt;</type>
+      <name>matrix_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac6aa963bd3fa58e60c9c1903eb59b3be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; matrix_t &gt;</type>
+      <name>matrixOut_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aad20fc22a6d6f571ee3c859db44d5f97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>matrix_t::Index</type>
+      <name>size_type</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>afbe7922cd6bcd972f8440079e5c0c7f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::Matrix3f</type>
+      <name>matrix3_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a05f86d55af0c24f4fead4e82701e58a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::Vec3f</type>
+      <name>vector3_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a2461c5264f8fca4a787100ccddb02c9f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, 6, Eigen::Dynamic, Eigen::RowMajor &gt;</type>
+      <name>JointJacobian_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ab208c843d83173b002c51bec64331f69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, 3, Eigen::Dynamic, Eigen::RowMajor &gt;</type>
+      <name>ComJacobian_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a4b47d1efe6ecf8ee73aa17a1a3fc570b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Block&lt; JointJacobian_t, 3, Eigen::Dynamic &gt;</type>
+      <name>HalfJointJacobian_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a265d7968d9b39b2a2b0e975e81c799b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Body *</type>
+      <name>BodyPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6e753f7fc312022652aa6a7778f86493</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; Body * &gt;</type>
+      <name>BodyVector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a740b5bbafb27fce9cdddb3c72d6b28c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; CollisionObject &gt;</type>
+      <name>CollisionObjectPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>adfbbbf790e74618f8980835ddaae590d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; CollisionObjectPtr_t &gt;</type>
+      <name>ObjectVector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6c9567ad48538939a001e1cf7a209692</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Device &gt;</type>
+      <name>DevicePtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac36499719545c2ec81ce87980ce55ab5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const Device &gt;</type>
+      <name>DeviceConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a1621dd908c63ae674423801d239e7b10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; DistanceResult &gt;</type>
+      <name>DistanceResults_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ada8b9254be70c0e22d6ca62006a91029</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; HumanoidRobot &gt;</type>
+      <name>HumanoidRobotPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>adb7d3bffcccd688af3348be52ecc5248</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Joint *</type>
+      <name>JointPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac9ba227773702ebed5a0f08f72da5a7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointAnchor *</type>
+      <name>JointAnchorPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a2f3dbb7ce662427c1e59ecec44582bfb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointRotation *</type>
+      <name>JointRotationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aafa390086757e44475d6d540eec5479b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointSO3 *</type>
+      <name>JointSO3Ptr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a70b359dad5a16865ea40759458e22925</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointTranslation&lt; 1 &gt; *</type>
+      <name>JointTranslationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>af5135eff8cb801e3877c4c38b73a626c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointTranslation&lt; 2 &gt; *</type>
+      <name>JointTranslation2Ptr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a5602370009848f04f27c16be7295fb42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointTranslation&lt; 3 &gt; *</type>
+      <name>JointTranslation3Ptr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3965b6c45866fabf8bf1f8285dda26bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const Joint *</type>
+      <name>JointConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a151f539f12060e41d47eff04c33741f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointAnchor *</type>
+      <name>JointAnchorConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a236391f09da3ca9e4beda069dbc56593</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointRotation *</type>
+      <name>JointRotationConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a9e037f2f3bcbe836028769494d76fcce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointSO3 *</type>
+      <name>JointSO3ConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a4d5e3139d5c8be6419d43537c61fbccb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointTranslation&lt; 1 &gt; *</type>
+      <name>JointTranslationConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ab3cf51f571b213a2a5bbbb7bd4a24b16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointTranslation&lt; 2 &gt; *</type>
+      <name>JointTranslation2ConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aaf510ac5010c91b2e0931b079c8a80cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointTranslation&lt; 3 &gt; *</type>
+      <name>JointTranslation3ConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0736a73ff9eb41f68d90c328a6641848</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, JointPtr_t &gt;</type>
+      <name>JointByName_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a202cbc89cf4c4dbfb8bc060d099aedad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; JointPtr_t &gt;</type>
+      <name>JointVector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aef36b771ab7b808f9aa500592b703fff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointVector_t</type>
+      <name>JointGroup_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a51a665723f3b2e382da5588e3bdd64c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, JointGroup_t &gt;</type>
+      <name>JointGroups_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0d55e775c6e3af38c9a747f76a75cf2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Gripper &gt;</type>
+      <name>GripperPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ae53c3648a10d286e930c5f229b3d3faa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; GripperPtr_t &gt;</type>
+      <name>Grippers_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3b58381ba8c1d4b4f92d9e702a142a39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::Transform3f</type>
+      <name>Transform3f</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a825a050f91b7c51bd65573cdd9085049</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; CenterOfMassComputation &gt;</type>
+      <name>CenterOfMassComputationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aac2f8b903b0f2f13a022fc881f7b5e7d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>Request_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3ff1c77061395420aaa192a56fde37cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>integrate</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a84c18b57bfeb38fd993af01e4bd9399a</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t configuration, vectorIn_t velocity, ConfigurationOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>interpolate</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6a68bdd47f1be18a343761c95a55a019</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t q0, ConfigurationIn_t q1, const value_type &amp;u, ConfigurationOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>difference</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a520a491275555c9985272779096639f6</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t q1, ConfigurationIn_t q2, vectorOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>distance</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aa8c5eda61c9a10f08ae64acd46a0563f</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t q1, ConfigurationIn_t q2)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>normalize</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aa7173e67d43caf6ffb2bfaa3dbb244e0</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationOut_t q)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>displayConfig</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a8f0b9196cc6ac85c6791335ff92ac7f9</anchor>
+      <arglist>(ConfigurationIn_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ab520d10ce0df38d5fce8893db622c254</anchor>
+      <arglist>(DevicePtr_t device, ConfigurationIn_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aac5d52ca6841d789a30a64b484fb0944</anchor>
+      <arglist>(DevicePtr_t device, Configuration_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>abffe98327684e9eb34692d59ee56ded9</anchor>
+      <arglist>(DevicePtr_t device, ConfigurationOut_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ad9b1d4b34eb9eaad08d2a469395d7077</anchor>
+      <arglist>(HumanoidRobotPtr_t device, ConfigurationOut_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a5aa5b21fc07a154a8e7db78742eaac0c</anchor>
+      <arglist>(HumanoidRobotPtr_t device, ConfigurationIn_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a406a90636b14df14bf6b00eca7284457</anchor>
+      <arglist>(HumanoidRobotPtr_t device, Configuration_t q)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a311e35d458f88c95f2328407fc8b2ebd</anchor>
+      <arglist>(std::ostream &amp;os, const hpp::model::Device &amp;device)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>toEigen</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a4f70840ff4909d68b4364c1e7b61f5f3</anchor>
+      <arglist>(const hpp::model::vector3_t &amp;v, Eigen::Matrix&lt; value_type, 3, 1 &gt; &amp;res)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>toEigen</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>abd23ce21134353cf745b54f7b38e23c5</anchor>
+      <arglist>(const hpp::model::vector3_t &amp;v, hpp::model::vectorOut_t res)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>toEigen</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a237f962c69391533d3cd65e8700f635f</anchor>
+      <arglist>(const hpp::model::matrix3_t &amp;m, hpp::model::matrixOut_t res)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a1dcecaf44de1aefa2512276bdb10fde1</anchor>
+      <arglist>(Body)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a04fa383e7a9a23fe2410b5b6b8d2491d</anchor>
+      <arglist>(ChildrenIterator)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a44ccc0c6d0dfeee699158d5c5532a764</anchor>
+      <arglist>(CollisionObject)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a062cc4c8a5cf24f273d045122e3b0c1e</anchor>
+      <arglist>(Device)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6dca81efb8c6f844441900448c5a3471</anchor>
+      <arglist>(DistanceResult)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0462812d27d4e42aa7d82b86af549a9d</anchor>
+      <arglist>(HumanoidRobot)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>afa98b62124811366d63d65f9199b0dfe</anchor>
+      <arglist>(Joint)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0c344d13f029256690e20f96058d92cf</anchor>
+      <arglist>(JointAnchor)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>af3ce2c5fec1ffd8bb0afac1a155c9294</anchor>
+      <arglist>(JointRotation)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a45c7ef0952fdfabf8fd6663f6d70902c</anchor>
+      <arglist>(JointSO3)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac770bcab526c3f93e525579c1457be0f</anchor>
+      <arglist>(JointConfiguration)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a20bdd3170f16e40998945ec69d97f42b</anchor>
+      <arglist>(ObjectFactory)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a63e77618e2db25ea1464ee8fdae9a42a</anchor>
+      <arglist>(ObjectIterator)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a9cdcb61f94e0d5d95caeeb72ecb20733</anchor>
+      <arglist>(Gripper)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a54f243352706eba0122ae437d29d96af</anchor>
+      <arglist>(CenterOfMassComputation)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a538e59e17a3347866a3668de31dc0e8a</anchor>
+      <arglist>(std::ostream &amp;os, const Gripper &amp;gripper)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ae84240965828521f2c22456d5beff123</anchor>
+      <arglist>(std::ostream &amp;os, const hpp::model::Joint &amp;joint)</arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>COLLISION</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3ff1c77061395420aaa192a56fde37cba7ee45cf7f2b33c030138d72e96bd57cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>DISTANCE</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3ff1c77061395420aaa192a56fde37cba7cee72f60ee355def3eaeb5725ee9063</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::model::srdf</name>
+    <filename>a00009.html</filename>
+    <class kind="class">hpp::model::srdf::Parser</class>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::model::urdf</name>
+    <filename>a00010.html</filename>
+    <class kind="class">hpp::model::urdf::Parser</class>
+    <member kind="function">
+      <type>void</type>
+      <name>loadRobotModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a529d9c2bd39171df5081f918457ec545</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadRobotModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ac37b233d6f35630644b88ade6012a984</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadRobotModelFromParameter</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a2dedf0b30a6c4bfe5b2fcf5ff14486d2</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const std::string &amp;rootJointType, const std::string &amp;urdfParameter, const std::string &amp;srdfParameter)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadHumanoidModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a893279f31592b9a579c8917145b0556a</anchor>
+      <arglist>(const model::HumanoidRobotPtr_t &amp;robot, const JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadHumanoidModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a019f994b8e0db41f853d4eab5af0dd57</anchor>
+      <arglist>(const model::HumanoidRobotPtr_t &amp;robot, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;modelName, const std::string &amp;urdfSuffix, const std::string &amp;srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadHumanoidModelFromParameter</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>aa656f2c7ef987f35cafdc4df39ac8af0</anchor>
+      <arglist>(const model::HumanoidRobotPtr_t &amp;robot, const std::string &amp;rootJointType, const std::string &amp;urdfParameter, const std::string &amp;srdfParameter)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadUrdfModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a65e2380f47ac98a4d7aca6cdd5eb453a</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const JointPtr_t &amp;baseJoint, const std::string &amp;prefix, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadUrdfModel</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a6e6baba3af34dc7b17d8fa21bc57eef5</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, const std::string &amp;rootJointType, const std::string &amp;package, const std::string &amp;filename)</arglist>
+    </member>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+    <docanchor file="index" title="Introduction">sec_intro_hpp_model</docanchor>
+    <docanchor file="index" title="Main classes">sec_hpp_model_main_classes</docanchor>
+    <docanchor file="index" title="Joints">subsec_hpp_model_joint</docanchor>
+    <docanchor file="index" title="Joint configuration">hpp_model_joint_configuration</docanchor>
+    <docanchor file="index" title="Device">subsec_hpp_model_device</docanchor>
+    <docanchor file="index">Configuration</docanchor>
+    <docanchor file="index">Velocity</docanchor>
+    <docanchor file="index" title="Operations between configurations and velocities">hpp_model_operation_between_configurations_and_velocities</docanchor>
+  </compound>
+</tagfile>

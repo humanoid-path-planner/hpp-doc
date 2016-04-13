@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="object",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="hpp.corbaserver.problem\l_solver.ProblemSolver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00008.html",tooltip="Definition of a path planning problem. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="hpp.corbaserver.robot.Robot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00010.html",tooltip="Helper class to load a robot model in hpp::core::ProblemSolver instance. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="hpp.corbaserver.robot.Humanoid\lRobot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00005.html",tooltip="Humanoid robot. "];
+}

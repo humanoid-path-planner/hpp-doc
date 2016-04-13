@@ -1,0 +1,18 @@
+digraph "fcl::PrismaticJoint"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="fcl::PrismaticJoint",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="fcl::Joint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00082.html",tooltip="Base Joint. "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name_" ,fontname="FreeSans"];
+  Node3 [label="std::string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transform_to_parent_" ,fontname="FreeSans"];
+  Node5 [label="fcl::Transform3f",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00212.html",tooltip="Simple transform class used locally by InterpMotion. "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" axis_" ,fontname="FreeSans"];
+  Node6 [label="fcl::Vec3fX\< details\l::Vec3Data\< FCL_REAL \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00223.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="FreeSans"];
+  Node7 [label="fcl::details::Vec3Data\l\< FCL_REAL \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00222.html"];
+}

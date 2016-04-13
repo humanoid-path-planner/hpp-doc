@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>doc.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/include/hpp_tutorial/</path>
+    <filename>a00008</filename>
+  </compound>
+  <compound kind="file">
+    <name>robot.py</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/src/hpp/corbaserver/pr2/</path>
+    <filename>a00009</filename>
+    <class kind="class">pr2::robot::Robot</class>
+    <namespace>pr2::robot</namespace>
+  </compound>
+  <compound kind="file">
+    <name>script.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/include/hpp_tutorial/</path>
+    <filename>a00010</filename>
+  </compound>
+  <compound kind="file">
+    <name>tutorial_1.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/include/hpp_tutorial/</path>
+    <filename>a00011</filename>
+  </compound>
+  <compound kind="file">
+    <name>tutorial_2.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/include/hpp_tutorial/</path>
+    <filename>a00012</filename>
+  </compound>
+  <compound kind="page">
+    <name>hpp_tutorial_script</name>
+    <title>Explanation about script/tutorial_1.py</title>
+    <filename>a00002</filename>
+  </compound>
+  <compound kind="page">
+    <name>hpp_tutorial_tutorial_1</name>
+    <title>Tutorial 1</title>
+    <filename>a00004</filename>
+    <docanchor file="a00004" title="Starting \c gepetto-viewer-server">hpp_tutorial_starting_gui</docanchor>
+    <docanchor file="a00004" title="Starting hppcorbaserver">hpp_tutorial_starting_hppcorbaserver</docanchor>
+    <docanchor file="a00004" title="Controlling via a python terminal">hpp_tutorial_python</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>hpp_tutorial_tutorial_2</name>
+    <title>Implementing a new path planning algorithm</title>
+    <filename>a00006</filename>
+    <docanchor file="a00006" title="Implementation of class Planner">hpp_tutorial_tutorial_2_class_planner</docanchor>
+    <docanchor file="a00006" title="Implementation of executable hpp-tutorial-server">hpp_tutorial_tutorial_2_hpp_tutorial_server</docanchor>
+    <docanchor file="a00006" title="Compilation and installation">hpp_tutorial_tutorial_2_CMakeLists</docanchor>
+    <docanchor file="a00006" title="Running the server and solving a problem.">hpp_tutorial_tutorial_2_running</docanchor>
+    <docanchor file="a00006" title="Moving the code into an external package">hpp_tutorial_tutorial_2_external_package</docanchor>
+    <docanchor file="a00006" title="Installation">hpp_tutorial_tutorial_2_external_package_installation</docanchor>
+  </compound>
+  <compound kind="namespace">
+    <name>Containers&lt; boost::mpl::vector&lt; PathPlannerBuilder_t, PathOptimizerBuilder_t, PathValidationBuilder_t, PathProjectorBuilder_t, ConfigurationShooterBuilder_t, NumericalConstraintPtr_t, SteeringMethodBuilder_t &gt; &gt;</name>
+    <filename>a00013.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::core::pathOptimization::PartialShortcut</name>
+    <filename>a00014.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>pr2</name>
+    <filename>a00015.html</filename>
+    <namespace>pr2::robot</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>pr2::robot</name>
+    <filename>a00016.html</filename>
+    <class kind="class">pr2::robot::Robot</class>
+  </compound>
+  <compound kind="class">
+    <name>pr2::robot::Robot</name>
+    <filename>a00007.html</filename>
+    <member kind="function">
+      <type>def</type>
+      <name>__init__</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a095a083c2a8a4b719b62470f2c6a3278</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>tf_root</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ad706a4f4dc5a1e41f79392c01fdba03e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>string</type>
+      <name>packageName</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a0a43eb8c41751eabb2a6a563268c3f67</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>string</type>
+      <name>meshPackageName</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ae5a719ddbac8e968f844c1c4cf1b4a41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>string</type>
+      <name>rootJointType</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a71ddd6eacc9112fe00cc465a85ac3e69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>string</type>
+      <name>urdfName</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a71fbb67977490e58b1ea7a9f1e064c03</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>string</type>
+      <name>urdfSuffix</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a1b1a0428ae691a6d26deea64ca6c6040</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>string</type>
+      <name>srdfSuffix</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a42556dd64560430b1c278bcf61c3e1df</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="dir">
+    <name>corbaserver</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/src/hpp/corbaserver/</path>
+    <filename>dir_71f2207da27c7393a818834b424ab3cb.html</filename>
+    <dir>pr2</dir>
+  </compound>
+  <compound kind="dir">
+    <name>hpp</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/src/hpp/</path>
+    <filename>dir_561701c8e79d5dfd48e3536aae5218c5.html</filename>
+    <dir>corbaserver</dir>
+  </compound>
+  <compound kind="dir">
+    <name>hpp_tutorial</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/include/hpp_tutorial/</path>
+    <filename>dir_c65ddfbdee38eced690f7a87fe9d2ba8.html</filename>
+    <file>doc.hh</file>
+    <file>script.hh</file>
+    <file>tutorial_1.hh</file>
+    <file>tutorial_2.hh</file>
+  </compound>
+  <compound kind="dir">
+    <name>include</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/include/</path>
+    <filename>dir_d44c64559bbebec7f509842c48db8b23.html</filename>
+    <dir>hpp_tutorial</dir>
+  </compound>
+  <compound kind="dir">
+    <name>pr2</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/src/hpp/corbaserver/pr2/</path>
+    <filename>dir_8ca01a0938de69d7c27fa33a164c5b90.html</filename>
+    <file>robot.py</file>
+  </compound>
+  <compound kind="dir">
+    <name>src</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp_tutorial/src/</path>
+    <filename>dir_68267d1309a1af8e8297ef4c3efbcdba.html</filename>
+    <dir>hpp</dir>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+    <docanchor file="index" title="Introduction">hpp_tutorial_intro</docanchor>
+    <docanchor file="index" title="Setting up your environment">hpp_tutorial_setting_up_environment</docanchor>
+    <docanchor file="index" title="Tutorials">hpp_tutorial_tutorials</docanchor>
+  </compound>
+</tagfile>

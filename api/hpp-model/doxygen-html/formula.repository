@@ -1,0 +1,53 @@
+\form#0:$M = (R, \mathbf{T})$
+\form#1:$R\in SO(3)$
+\form#2:$\mathbf{T}\in\mathbf{R}^3$
+\form#3:$SE(3)$
+\form#4:$\mathbf{x}\in\mathbf{R}^3$
+\form#5:$(R, \mathbf{T})$
+\form#6:\begin{equation*} \mathbf{y} = R \mathbf{x} + \mathbf{T} \end{equation*}
+\form#7:$\mathbf{R}^d$
+\form#8:\begin{eqnarray*} (I_3, \left(\begin{array}{c}x_1 \\ 0 \\ 0\end{array}\right)) & \mbox{if}& d = 1 \\ (I_3, \left(\begin{array}{c}x_1 \\ x_2 \\ 0\end{array}\right)) & \mbox{if}& d = 2 \\ (I_3, \left(\begin{array}{c}x_1 \\ x_2 \\ x_3\end{array}\right)) & \mbox{if}& d = 3 \\ \end{eqnarray*}
+\form#9:$\theta$
+\form#10:\begin{eqnarray*} (\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & -\sin \theta \\ 0 & \sin \theta & \cos \theta\end{array}\right), \left(\begin{array}{c}0 \\ 0 \\ 0\end{array}\right)) & \mbox{if}& d = 1 \end{eqnarray*}
+\form#11:$(x_1,x_2)$
+\form#12:$S^1$
+\form#13:\begin{equation*} (\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & x_1 & -x_2 \\ 0 & x_2 & x_1\end{array}\right), \left(\begin{array}{c}0 \\ 0 \\ 0\end{array}\right))\end{equation*}
+\form#14:\begin{equation*} (I_3, 0) \end{equation*}
+\form#15:$\mathbf{x}\in S^3$
+\form#16:\begin{equation*} (\left(\begin{array}{ccc} 1 - 2(x_3^2 + x_4^2)& 2x_3x_2 - 2x_4x_1& 2x_4x_2 + 2x_3x_1\\ 2x_3x_2 + 2x_4x_1& 1 - 2(x_2^2 + x_4^2)& 2x_4x_3 - 2x_2x_1\\ 2x_4x_2 - 2x_3x_1& 2x_4x_3 + 2x_2x_1& 1 - 2(x_2^2 + 2x_3^2) \end{array}\right),0) \end{equation*}
+\form#17:$x_1 + x_2 i + x_3 j + x_4 k$
+\form#18:\begin{equation} P_{joint} = P_{parent} P_{joint/parent} M (\mathbf{x}_{joint}) \end{equation}
+\form#19:$ P_{joint} \in SE(3)$
+\form#20:$ P_{parent} \in SE(3)$
+\form#21:$ P_{joint/parent}$
+\form#22:$ \mathbf{x}_{joint}$
+\form#23:$ M $
+\form#24:$\mathbf{q}$
+\form#25:$\omega\in\mathbf{R}^3$
+\form#26:$R$
+\form#27:\begin{equation*} \dot{R} = \left[\omega\right]_{\times} R \end{equation*}
+\form#28:$\left[\omega\right]_{\times}$
+\form#29:$\omega$
+\form#30:$\alpha\in\mathbf{R}$
+\form#31:\begin{equation*} \omega = \left(\begin{array}{c}0 \\ 0 \\ \alpha\end{array}\right) \end{equation*}
+\form#32:$\dot{\theta}\in\mathbf{R}$
+\form#33:\begin{equation*} \omega = \left(\begin{array}{c} 0 \\ 0 \\ \dot{\theta}\end{array}\right) \end{equation*}
+\form#34:$q_i += v_i$
+\form#35:$q_i += v_i \mbox{ modulo } 2\pi$
+\form#36:$\textbf{v}$
+\form#37:$\textbf{v} = q_1 - q_2$
+\form#38:\[ \textbf{q}_1 [\texttt{index}:\texttt{index}+4] = \exp \left(\texttt{result}[\texttt{index}:\texttt{index}+3]_{\times} \right)\textbf{q}_2 [\texttt{index}:\texttt{index}+4] \]
+\form#39:\[ \texttt{result}[\texttt{index}] = \textbf{q}_1[\texttt{index}] - \textbf{q}_2[\texttt{index}] \]
+\form#40:\[ \texttt{result}[\texttt{index}] = \textbf{q}_1[\texttt{index}] - \textbf{q}_2[\texttt{index}] + 2k\pi \]
+\form#41:$k$
+\form#42:$\texttt{result}[\texttt{index}]$
+\form#43:$-\pi$
+\form#44:$\pi$
+\form#45:$\lambda$
+\form#46:\begin{equation*} \forall \mathbf{q}_{joint}\ \ \ \ \ \ \|\mathbf {v}\| \leq \lambda \|\mathbf{\dot{q}}_{joint}\| \end{equation*}
+\form#47:$\mathbf{q}_{joint}$
+\form#48:$\mathbf{\dot{q}}_{joint}$
+\form#49:$\mathbf{v}$
+\form#50:\begin{equation*} \forall \mathbf{q}_{joint}\ \ \ \ \ \ \|\omega\| \leq \lambda \|\mathbf{\dot{q}}_{joint}\| \end{equation*}
+\form#51:$(q_0, q_1)$
+\form#52:$q_0^2 + q_1^2=1$

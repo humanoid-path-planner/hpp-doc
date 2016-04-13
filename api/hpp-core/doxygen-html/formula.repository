@@ -1,0 +1,30 @@
+\form#0:\begin{eqnarray*} f (\mathbf{q}) = f^0 \in \mathbb{R}^m \end{eqnarray*}
+\form#1:\begin{eqnarray*} f (\mathbf{q}) = 0 \in \mathbb{R}^m \end{eqnarray*}
+\form#2:\begin{eqnarray*} f (\mathbf{q}) \leq 0 \in \mathbb{R}^m \end{eqnarray*}
+\form#3:\begin{eqnarray*} f (\mathbf{q}) \geq 0 \in \mathbb{R}^m \end{eqnarray*}
+\form#4:\begin{eqnarray*} -f^0/2 \leq f (\mathbf{q}) \leq f^0/2 \in \mathbb{R}^m \end{eqnarray*}
+\form#5:$f^0$
+\form#6:\begin{eqnarray*} f_1 (\mathbf{q}) & = \mbox{or} \leq & f_1^0 \\ & \vdots\\ f_m (\mathbf{q}) & = \mbox{or} \leq & f_m^0 \end{eqnarray*}
+\form#7:$f_i$
+\form#8:$f_i^0$
+\form#9:\[ \textbf{q}_{res} = \left(I_n - J^{+}J(\textbf{q}_{from})\right) (\textbf{v}) \]
+\form#10:\[ \textbf{q}_{res} = \textbf{q}_{from} + \left(I_n - J^{+}J(\textbf{q}_{from})\right) (\textbf{q}_{to} - \textbf{q}_{from}) \]
+\form#11:$ f(q) = \textbf{or} \le rhs $
+\form#12:$(ic_{1}, \cdots, ic_{n_{ic}})$
+\form#13:$(oc_{1}, \cdots, oc_{n_{oc}})$
+\form#14:$(iv_{1}, \cdots, iv_{n_{iv}})$
+\form#15:$(ov_{1}, \cdots, ov_{n_{ov}})$
+\form#16:$n_{ic} + n_{oc}$
+\form#17:$n_{iv} + n_{ov}$
+\form#18:\begin{equation*} \left(\begin{array}{c} q_{oc_{1}} \\ \vdots \\ q_{oc_{n_{oc}}} \end{array}\right) - f \left((q_{ic_{1}} \cdots q_{ic_{n_{ic}}})^T\right) \end{equation*}
+\form#19:\begin{align*} \left(\begin{array}{c} q_{oc_{1}} \\ \vdots \\ q_{oc_{n_{oc}}} \end{array}\right) &- f \left((q_{ic_{1}} \cdots q_{ic_{n_{ic}}})^T\right) = rhs \\ & \mbox {if and only if}\\ \left(\begin{array}{c} q_{oc_{1}} \\ \vdots \\ q_{oc_{n_{oc}}} \end{array}\right) &= f \left((q_{ic_{1}} \cdots q_{ic_{n_{ic}}})^T\right) + rhs \\ \end{align*}
+\form#20:$f$
+\form#21:$i$
+\form#22:$\dot{q}_i$
+\form#23:$\exists j\in n_{iv}$
+\form#24:$i=iv_{j}$
+\form#25:$\exists j\in n_{ov}$
+\form#26:$i=ov_{j}$
+\form#27:\begin{equation*} J = \left(\begin{array}{cccccccccccc} \cdots & ov_1 & \cdots & iv_{1} & \cdots & ov_2 & \cdots & iv_2 & \cdots & ov_{n_{ov}} & \cdots \\ & 1 & & & & 0 & & & & & \\ & 0 & & & & 1 & & & & & \\ & & & -\frac{\partial f}{q_1} & & & & -\frac{\partial f}{q_2} \\ &&&&&\\ & 0 & & & & 0 & & & & 1 \end{array}\right) \end{equation*}
+\form#28:$ q_i (q) = rhs $
+\form#29:$ f $

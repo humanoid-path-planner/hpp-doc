@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00001.html" title="Configuration of a JointAnchor." alt="" coords="315,5,520,35"/>
+<area shape="rect" id="node5" href="$a00020.html" title="Configuration of a JointRotation." alt="" coords="311,58,524,89"/>
+<area shape="rect" id="node7" href="$a00003.html" title="hpp::model::rotationJointConfig::Bounded" alt="" coords="283,111,552,142"/>
+<area shape="rect" id="node9" href="$a00024.html" title="hpp::model::rotationJointConfig::UnBounded" alt="" coords="275,165,560,195"/>
+<area shape="rect" id="node11" href="$a00021.html" title="Configuration of a JointSO3." alt="" coords="323,218,512,249"/>
+<area shape="rect" id="node13" href="$a00022.html" title="Configuration of a JointTranslation." alt="" coords="259,271,576,302"/>
+</map>

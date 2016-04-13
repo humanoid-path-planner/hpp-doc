@@ -1,0 +1,13 @@
+digraph "corbaserver" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_87882f463c1f563717a22859a8fe91dd {
+    graph [ bgcolor="#ddddee", pencolor="black", label="hpp" fontname="FreeSans", fontsize="10", URL="dir_87882f463c1f563717a22859a8fe91dd.html"]
+  subgraph clusterdir_19301abaccadef14b656ac5321bb1bd7 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_19301abaccadef14b656ac5321bb1bd7.html"];
+    dir_19301abaccadef14b656ac5321bb1bd7 [shape=plaintext label="corbaserver"];
+    dir_3f78f951b34b30af7ee1c1ea6b978fbf [shape=box label="wholebody-step" color="black" fillcolor="white" style="filled" URL="dir_3f78f951b34b30af7ee1c1ea6b978fbf.html"];
+  }
+  }
+}

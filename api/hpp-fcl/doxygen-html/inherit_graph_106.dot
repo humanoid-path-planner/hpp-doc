@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="fcl::SaPCollisionManager\l::SaPPair",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00168.html",tooltip="A pair of objects that are not culling away and should further check collision. "];
+}

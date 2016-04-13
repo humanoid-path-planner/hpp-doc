@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$a00006.html" title="Class that catch XML Parser events for a specific tag and build the corresponding Object..." alt="" coords="6,178,154,219"/>
+<area shape="rect" id="node2" href="$a00005.html" title="Class used to ignore a tag. " alt="" coords="203,5,371,46"/>
+<area shape="rect" id="node3" href="$a00010.html" title="Represent a XML document. " alt="" coords="217,70,356,111"/>
+<area shape="rect" id="node4" href="$a00011.html" title="Factory parsing sequence of values. " alt="" coords="203,135,371,191"/>
+<area shape="rect" id="node5" href="$a00002.html" title="Factory building contact surfaces. " alt="" coords="215,214,358,255"/>
+<area shape="rect" id="node6" href="$a00003.html" title="Build an object of type hpp::model::Gripper. " alt="" coords="217,279,356,321"/>
+<area shape="rect" id="node7" href="$a00011.html" title="hpp::manipulation::\lparser::SequenceFactory\l\&lt; float \&gt;" alt="" coords="203,344,371,400"/>
+<area shape="rect" id="node8" href="$a00008.html" title="Build a fcl::Transform. " alt="" coords="419,351,562,393"/>
+</map>

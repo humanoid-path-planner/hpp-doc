@@ -1,0 +1,11 @@
+digraph "simd" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_20fa1abcad33804f5539e29af8f8ee4c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="fcl" fontname="FreeSans", fontsize="10", URL="dir_20fa1abcad33804f5539e29af8f8ee4c.html"]
+  dir_5b25c1268a9c32407274d44ac456903e [shape=box, label="simd", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5b25c1268a9c32407274d44ac456903e.html"];
+  }
+  dir_2a3bc160f6192db30de205e670b0a725 [shape=box label="math" URL="dir_2a3bc160f6192db30de205e670b0a725.html"];
+  dir_5b25c1268a9c32407274d44ac456903e->dir_2a3bc160f6192db30de205e670b0a725 [headlabel="1", labeldistance=1.5 headhref="dir_000015_000014.html"];
+}

@@ -1,0 +1,27 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="hpp::constraints::Differentiable\lFunction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00007.html",tooltip="Differentiable function. "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="hpp::constraints::ComBetweenFeet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00004.html",tooltip="Constraint on the relative position of the center of mass. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="hpp::constraints::Distance\lBetweenBodies",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00008.html",tooltip="Distance between two sets of objects. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="hpp::constraints::Orientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00010.html",tooltip="Constraint on the orientation of a robot joint. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="hpp::constraints::Position",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00014.html",tooltip="Constraint on the position of a robot point. "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="hpp::constraints::RelativeCom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00015.html",tooltip="Constraint on the relative position of the center of mass. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="hpp::constraints::Relative\lOrientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00016.html",tooltip="Constraint on the relative orientation of two robot joints. "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="hpp::constraints::Relative\lPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00017.html",tooltip="Constraint on the relative position of two robot joints. "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="hpp::constraints::Relative\lTransformation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00018.html",tooltip="Constraint on the relative transformation of two robot joints. "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="hpp::constraints::Static\lStabilityGravity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00021.html"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="hpp::constraints::Transformation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00023.html",tooltip="Constraint on the transformation of one robot joint. "];
+}

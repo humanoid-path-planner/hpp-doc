@@ -1,0 +1,1824 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>assertion.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/</path>
+    <filename>a00013</filename>
+    <includes id="a00018" name="exception.hh" local="no" imported="no">hpp/util/exception.hh</includes>
+    <namespace>hpp</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_ASSERT</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ab6eb06719e569a3a14b178414a313f54</anchor>
+      <arglist>(CONDITION)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_PRECONDITION</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>aa02319fb75baf5a4b061acb9198d692b</anchor>
+      <arglist>(CONDITION)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_POSTCONDITION</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a8610387f5b3283903e68622817c68ec5</anchor>
+      <arglist>(CONDITION, CAPTURED_VARIABLES)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_MAKE_EXCEPTION</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a19f2d09243fdd6828b4d40953f4f413f</anchor>
+      <arglist>(HPP_UTIL_DLLAPI, AssertionError)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>debug.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/src/</path>
+    <filename>a00014</filename>
+    <includes id="a00021" name="indent.hh" local="yes" imported="no">hpp/util/indent.hh</includes>
+    <includes id="a00015" name="debug.hh" local="yes" imported="no">hpp/util/debug.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::debug</namespace>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>getpid</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a96abb3e623e15f594cf8c8d02af19bc4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::string</type>
+      <name>getPrefix</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>ac2d09361f8aa4aa6d8ac734760911552</anchor>
+      <arglist>(const std::string &amp;packageName)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::string</type>
+      <name>getFilename</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>a52bf99cd5a6c2c37f9c8ca344708fcf2</anchor>
+      <arglist>(const std::string &amp;filename, const std::string &amp;packageName)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const char *</type>
+      <name>ENV_LOGGINGDIR</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>ae6c81488bb3b0f9a088097be81dbf734</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>debug.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/</path>
+    <filename>a00015</filename>
+    <includes id="a00021" name="indent.hh" local="no" imported="no">hpp/util/indent.hh</includes>
+    <class kind="class">hpp::debug::Output</class>
+    <class kind="class">hpp::debug::Channel</class>
+    <class kind="class">hpp::debug::JournalOutput</class>
+    <class kind="class">hpp::debug::ConsoleOutput</class>
+    <class kind="class">hpp::debug::Logging</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::debug</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>hppDebug</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>af824896c5f19ed630615911f7e94af22</anchor>
+      <arglist>(statement)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>hppDebugStatement</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a513af38a4f48fca1a1c6cc21c0509987</anchor>
+      <arglist>(statement)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>hppDout</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a0c5ef76f36931f7975ad146543677ef5</anchor>
+      <arglist>(channel, data)                            </arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>hppDoutFatal</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a9bfb20b09f02ac49940d03ac4fdf3a92</anchor>
+      <arglist>(channel, data)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::string</type>
+      <name>getPrefix</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>ac2d09361f8aa4aa6d8ac734760911552</anchor>
+      <arglist>(const std::string &amp;packageName)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::string</type>
+      <name>getFilename</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>a52bf99cd5a6c2c37f9c8ca344708fcf2</anchor>
+      <arglist>(const std::string &amp;filename, const std::string &amp;packageName)</arglist>
+    </member>
+    <member kind="variable">
+      <type>HPP_UTIL_DLLAPI Logging</type>
+      <name>logging</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>a1ff9e20b1e5449c52e3008b5751a395d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>doc.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/</path>
+    <filename>a00016</filename>
+  </compound>
+  <compound kind="file">
+    <name>exception.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/src/</path>
+    <filename>a00017</filename>
+    <includes id="a00018" name="exception.hh" local="yes" imported="no">hpp/util/exception.hh</includes>
+    <namespace>hpp</namespace>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a0bcb296b7ca1dab3382f49953c92a853</anchor>
+      <arglist>(std::ostream &amp;o, const Exception &amp;exception)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>exception.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/</path>
+    <filename>a00018</filename>
+    <class kind="class">hpp::Exception</class>
+    <namespace>hpp</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_THROW_EXCEPTION_</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a7bff500f818d75fb8a28bf52f561bf5a</anchor>
+      <arglist>(MSG)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_THROW_EXCEPTION</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a3e5dad98daad46ca4defb174e71470a3</anchor>
+      <arglist>(TYPE, MSG)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MAKE_EXCEPTION</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>ad46b31f0930350f222eae004d82a5041</anchor>
+      <arglist>(EXTRA_QUALIFIER, TYPE)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MAKE_EXCEPTION_NO_QUALIFIER</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>aa427c6ae5e42c38ee118c778a09dbcfd</anchor>
+      <arglist>(TYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a0bcb296b7ca1dab3382f49953c92a853</anchor>
+      <arglist>(std::ostream &amp;o, const Exception &amp;exception)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ignoretag.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/factories/</path>
+    <filename>a00019</filename>
+    <includes id="a00023" name="parser.hh" local="yes" imported="no">hpp/util/parser.hh</includes>
+    <class kind="class">hpp::util::parser::IgnoreTagFactory</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::util</namespace>
+    <namespace>hpp::util::parser</namespace>
+  </compound>
+  <compound kind="file">
+    <name>indent.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/src/</path>
+    <filename>a00020</filename>
+    <includes id="a00021" name="indent.hh" local="yes" imported="no">hpp/util/indent.hh</includes>
+    <namespace>hpp</namespace>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI long &amp;</type>
+      <name>indent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a16259580a8f0a07bad42458aa65963f3</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>incindent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a669ea668296b2ed089b72c3a1dce688e</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>decindent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>afaf02e3dd1c3eaf21e287dc4c825cc89</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>resetindent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a011dc7bc6e7c975fdc993c5b7abbac56</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>iendl</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>ab2e087df519f97420058c160b8313be4</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>incendl</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a49bcbcf63c92e671f9aa3c737b8a2852</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>decendl</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a8d7bf72162e22331e54b3c387651ed95</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>indent.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/</path>
+    <filename>a00021</filename>
+    <namespace>hpp</namespace>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI long &amp;</type>
+      <name>indent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a16259580a8f0a07bad42458aa65963f3</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>incindent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a669ea668296b2ed089b72c3a1dce688e</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>decindent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>afaf02e3dd1c3eaf21e287dc4c825cc89</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>resetindent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a011dc7bc6e7c975fdc993c5b7abbac56</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>iendl</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>ab2e087df519f97420058c160b8313be4</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>incendl</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a49bcbcf63c92e671f9aa3c737b8a2852</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>decendl</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a8d7bf72162e22331e54b3c387651ed95</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>parser.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/src/</path>
+    <filename>a00022</filename>
+    <includes id="a00023" name="parser.hh" local="yes" imported="no">hpp/util/parser.hh</includes>
+    <includes id="a00015" name="debug.hh" local="yes" imported="no">hpp/util/debug.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::util</namespace>
+    <namespace>hpp::util::parser</namespace>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a4ee252b8cf9110a45ac4c2c075dc89c8</anchor>
+      <arglist>(std::ostream &amp;, const Parser &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>ae62f096835c12e7cf30da6cca1b721c6</anchor>
+      <arglist>(std::ostream &amp;, const ObjectFactory &amp;)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>parser.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/</path>
+    <filename>a00023</filename>
+    <class kind="class">hpp::util::parser::ObjectFactory</class>
+    <class kind="class">hpp::util::parser::Parser</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::util</namespace>
+    <namespace>hpp::util::parser</namespace>
+    <member kind="typedef">
+      <type>TiXmlElement</type>
+      <name>XMLElement</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>ab0dfa9650a28cc451e0f9a3b7622e8bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlDocument</type>
+      <name>XMLDocument</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>ad9e98a5cb4a899d8cd36c76afc609d29</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlDeclaration</type>
+      <name>XMLDeclaration</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a0126d99fdf416e0bc05e99fd85263f2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlAttribute</type>
+      <name>XMLAttribute</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a00734259f5d9b3d6cde4e62bba5e12e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlNode</type>
+      <name>XMLNode</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a29da1413371169bca24ac8e9f63d269f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlText</type>
+      <name>XMLText</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a72e8385d4f1a4e4146a51518563194da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlComment</type>
+      <name>XMLComment</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a177ac791c0e44a4327048804649e3245</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlPrinter</type>
+      <name>XMLPrinter</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a18387a794a687efeffb0d4b202d8531a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectFactory *</type>
+      <name>create</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a663f565dfe99e756b604215d98a8ec2f</anchor>
+      <arglist>(ObjectFactory *parent=NULL, const XMLElement *element=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>ae62f096835c12e7cf30da6cca1b721c6</anchor>
+      <arglist>(std::ostream &amp;, const ObjectFactory &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a4ee252b8cf9110a45ac4c2c075dc89c8</anchor>
+      <arglist>(std::ostream &amp;, const Parser &amp;)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>pointer.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/</path>
+    <filename>a00024</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_POINTER_DEFS</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>ac0d31a204c2c019c7805846d95f367bc</anchor>
+      <arglist>(t)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a65587d4ae1688c840dc1f11c8f78a638</anchor>
+      <arglist>(t)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_STATIC_PTR_CAST</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a6e15de86977f38f25614f404aca2b1b6</anchor>
+      <arglist>(t, x)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_DYNAMIC_PTR_CAST</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a3de5c225ab3adfeeeb5046b561bafe7b</anchor>
+      <arglist>(t, x)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_STATIC_CAST_REF_CHECK</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a346c166c0bf0411c76f111c6c7d00eb4</anchor>
+      <arglist>(t, x)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>portability.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/</path>
+    <filename>a00025</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_DLLIMPORT</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a0dba3445b02cf0134a9133e545a8ed9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_DLLEXPORT</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a820c00736daa6ca168d32324202b521c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_DLLLOCAL</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a4443b32e3bd584dde5be6ebdd715da7e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>sequence.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/src/factories/</path>
+    <filename>a00026</filename>
+    <includes id="a00027" name="sequence.hh" local="yes" imported="no">hpp/util/factories/sequence.hh</includes>
+    <includes id="a00015" name="debug.hh" local="yes" imported="no">hpp/util/debug.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::util</namespace>
+    <namespace>hpp::util::parser</namespace>
+  </compound>
+  <compound kind="file">
+    <name>sequence.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/factories/</path>
+    <filename>a00027</filename>
+    <includes id="a00023" name="parser.hh" local="yes" imported="no">hpp/util/parser.hh</includes>
+    <class kind="class">hpp::util::parser::SequenceFactory</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::util</namespace>
+    <namespace>hpp::util::parser</namespace>
+  </compound>
+  <compound kind="file">
+    <name>timer.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/src/</path>
+    <filename>a00028</filename>
+    <includes id="a00029" name="timer.hh" local="yes" imported="no">hpp/util/timer.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::debug</namespace>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>aa5cbd44bd08d19cfb3c0b35d8abf2271</anchor>
+      <arglist>(std::ostream &amp;os, const TimeCounter &amp;tc)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>timer.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/</path>
+    <filename>a00029</filename>
+    <includes id="a00015" name="debug.hh" local="no" imported="no">hpp/util/debug.hh</includes>
+    <class kind="class">hpp::debug::Timer</class>
+    <class kind="class">hpp::debug::TimeCounter</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::debug</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>hppStartBenchmark</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a874e31d4cf7f0df7665721804df12016</anchor>
+      <arglist>(ID)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>hppStopBenchmark</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>af840d172513c897c62ee56b0b0419905</anchor>
+      <arglist>(ID)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>hppDisplayBenchmark</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>ac7777e0bc375e21d6f582c7d27a687d8</anchor>
+      <arglist>(ID)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_DEFINE_TIMECOUNTER</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a858cca4fd50d69ac8bdf474ae140f041</anchor>
+      <arglist>(name)                                                        </arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_START_TIMECOUNTER</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>aa35c14cda3730bcdc72c3b787da0bbb9</anchor>
+      <arglist>(name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_STOP_TIMECOUNTER</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a1eb277744231f4235fbb9cc101d70c28</anchor>
+      <arglist>(name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_DISPLAY_LAST_TIMECOUNTER</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a71ce1235b9657309fbd3bed2bb1be01f</anchor>
+      <arglist>(name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_DISPLAY_TIMECOUNTER</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>ae4f7085bd72c631520c68831073c62ff</anchor>
+      <arglist>(name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_RESET_TIMECOUNTER</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a4fbc6e9f08fbb84ee3b9c9e8f22a0263</anchor>
+      <arglist>(name)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_STREAM_TIMECOUNTER</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a93fc5e8829ace5679d0094ea1f9f1a47</anchor>
+      <arglist>(os, name)                                                </arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_STOP_AND_DISPLAY_TIMECOUNTER</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a4fd050903d4c7f55f4bfdb06d866510f</anchor>
+      <arglist>(name)                                      </arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>aa5cbd44bd08d19cfb3c0b35d8abf2271</anchor>
+      <arglist>(std::ostream &amp;os, const TimeCounter &amp;tc)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>util.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/</path>
+    <filename>a00030</filename>
+    <includes id="a00015" name="debug.hh" local="no" imported="no">hpp/util/debug.hh</includes>
+    <includes id="a00021" name="indent.hh" local="no" imported="no">hpp/util/indent.hh</includes>
+    <includes id="a00025" name="portability.hh" local="no" imported="no">hpp/util/portability.hh</includes>
+    <includes id="a00029" name="timer.hh" local="no" imported="no">hpp/util/timer.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>version.cc</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/src/</path>
+    <filename>a00031</filename>
+    <includes id="a00032" name="version.hh" local="yes" imported="no">hpp/util/version.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::util</namespace>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI int</type>
+      <name>checkVersion</name>
+      <anchorfile>a00036.html</anchorfile>
+      <anchor>a75dd26c1abc94ba21b79bae373186e67</anchor>
+      <arglist>(const char *header_version)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>version.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-util/include/hpp/util/</path>
+    <filename>a00032</filename>
+    <namespace>hpp</namespace>
+    <namespace>hpp::util</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_UTIL_CHECK</name>
+      <anchorfile>a00032.html</anchorfile>
+      <anchor>ad18f1e7a3a5618f4c0648bb2e77983f9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI int</type>
+      <name>checkVersion</name>
+      <anchorfile>a00036.html</anchorfile>
+      <anchor>a75dd26c1abc94ba21b79bae373186e67</anchor>
+      <arglist>(const char *header_version)</arglist>
+    </member>
+    <member kind="variable">
+      <type>HPP_UTIL_DLLAPI const char *</type>
+      <name>version</name>
+      <anchorfile>a00036.html</anchorfile>
+      <anchor>a142645839475bc10af2c991fb750e2be</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::debug::Channel</name>
+    <filename>a00001.html</filename>
+    <member kind="typedef">
+      <type>std::vector&lt; Output * &gt;</type>
+      <name>subscribers_t</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a84a7e64bcac6521e05f24875b58812e8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Channel</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a01662cea1f745eb1a4e272df1ce8706d</anchor>
+      <arglist>(char const *label, const subscribers_t &amp;subscribers)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Channel</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a268b9f7338457093ec37deebfd9eeea9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>adca5846307fe33436243c311229c2ddb</anchor>
+      <arglist>(char const *file, int line, char const *function, const std::string &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a6dc51cf9441aacd71e16eb9b2bd5cbb4</anchor>
+      <arglist>(char const *file, int line, char const *function, const std::stringstream &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>label</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ab983753b3c86560416010c462599b528</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::debug::ConsoleOutput</name>
+    <filename>a00002.html</filename>
+    <base>hpp::debug::Output</base>
+    <member kind="function">
+      <type></type>
+      <name>ConsoleOutput</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a5b62155fb816881620c4d0bd9cb12224</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ConsoleOutput</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a74437e0d19ac74c1fe6215dfbb940277</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a541aad51bc7c5e523a6c6f348c27361e</anchor>
+      <arglist>(const Channel &amp;channel, char const *file, int line, char const *function, const std::string &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>afe4186997299487e614324caa4b2a7b5</anchor>
+      <arglist>(const Channel &amp;channel, char const *file, int line, char const *function, const std::stringstream &amp;data)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::Exception</name>
+    <filename>a00003.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Exception</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a28a97ac52fcecfa914e8ef8f1c34fd2a</anchor>
+      <arglist>(const std::string &amp;message, const std::string &amp;file, unsigned line)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Exception</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a9dc0fa363270f2e4e1e0e8c0d088b84b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Exception</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>ac26d12f650d4230f23cfb6a9d4296d3f</anchor>
+      <arglist>(const Exception &amp;exception)</arglist>
+    </member>
+    <member kind="function">
+      <type>Exception &amp;</type>
+      <name>operator=</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a315f850e4b5f1e0c9fedb3e92bf498a7</anchor>
+      <arglist>(const Exception &amp;exception)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const char *</type>
+      <name>what</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a2cb96f4c272e2a7993f9e01f7271ecd7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>abc4568f207df880def4ffdda07104c0c</anchor>
+      <arglist>(std::ostream &amp;o) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::util::parser::IgnoreTagFactory</name>
+    <filename>a00004.html</filename>
+    <base>hpp::util::parser::ObjectFactory</base>
+    <member kind="function">
+      <type></type>
+      <name>IgnoreTagFactory</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>afea25b75aa6136ddea73c8517cd80a58</anchor>
+      <arglist>(ObjectFactory *parent, const XMLElement *element)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>init</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a88af4510ac055cda5a4c580367fc0c8f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>impl_write</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a0cd6e6f252627bcf154f97a315374198</anchor>
+      <arglist>(XMLElement *element) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::debug::JournalOutput</name>
+    <filename>a00005.html</filename>
+    <base>hpp::debug::Output</base>
+    <member kind="function">
+      <type></type>
+      <name>JournalOutput</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a2453e2353009c6271a10f482d8f9853c</anchor>
+      <arglist>(std::string filename)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~JournalOutput</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a51d9d0e63524b69a9e162666dfc6e6da</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a79613177c1134a3cccc6d01a25e79b2a</anchor>
+      <arglist>(const Channel &amp;channel, char const *file, int line, char const *function, const std::string &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a3ba0fd7f6c378d2383719c39cf20aed4</anchor>
+      <arglist>(const Channel &amp;channel, char const *file, int line, char const *function, const std::stringstream &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>getFilename</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a29b96c04a13a8fde8509e54789d80428</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::debug::Logging</name>
+    <filename>a00006.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Logging</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a10ca8e4c609d054b3f71398b765f83eb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Logging</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a59994de9700e50eb94230fc7cee35473</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>ConsoleOutput</type>
+      <name>console</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab71cba93ad1f1482857f88cf20be2252</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>JournalOutput</type>
+      <name>journal</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>abbc271d9a84fe9b2f945a61e06b34d49</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>JournalOutput</type>
+      <name>benchmarkJournal</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>adaaa23ebc174ed82ba56d45012b59b25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Channel</type>
+      <name>error</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a625d8796499305428a9f62ec9ea34527</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Channel</type>
+      <name>warning</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a82dc04440a3beea6998b5613dd569cc7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Channel</type>
+      <name>notice</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a394e48670559d25ca5bf892bcc70839e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Channel</type>
+      <name>info</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a1978c54c44ace73aa42cb7db605807df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Channel</type>
+      <name>benchmark</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ade7226d82149dc1e85f7dd160a0cf399</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::util::parser::ObjectFactory</name>
+    <filename>a00007.html</filename>
+    <member kind="typedef">
+      <type>std::list&lt; ObjectFactory * &gt;</type>
+      <name>ObjectFactoryList</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a3914a85215139f0a1316f1470a1f9e33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ObjectFactory</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ae3a3edf814934c3620ef9b054f83fc8b</anchor>
+      <arglist>(ObjectFactory *parent=NULL, const XMLElement *element=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ObjectFactory</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a45282814471228ebd5322f4520a00d91</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>name</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a465eceae45cee72fdbe0507e9b715159</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>name</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ad7b7fe8f9f2368adbdf6b218f2bfbfa9</anchor>
+      <arglist>(const char *n)</arglist>
+    </member>
+    <member kind="function">
+      <type>T *</type>
+      <name>as</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a5216159424bf9a79f250126e4e87ac29</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>init</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a3300ea5a02e35c88a420aaac44373ef6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setAttribute</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a05c08387da78cf068476c6888b751c6a</anchor>
+      <arglist>(const XMLAttribute *attr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addTextChild</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>afcfd35a78ffe54a2eacc855ca3a97b96</anchor>
+      <arglist>(const XMLText *text)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>finishAttributes</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac7973f422d8ef756692192c7da9f829f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishTags</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a44fda126f5bf61a97111372ac60ae32d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishFile</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a7a5f119eccb97628ee4b7d6c7bc727fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ObjectFactory</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a3ca208bf92d25c659a845343cd8b4131</anchor>
+      <arglist>(const std::string &amp;tagName, ObjectFactory *parent=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addAttribute</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac5606423af538d7dd9ba9881e6a6a556</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>XMLNode *</type>
+      <name>write</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a1f19521d94579df09ade2039dc6b9d6d</anchor>
+      <arglist>(XMLNode *node) const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>tagName</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ad6c080f742f45b5fe53d0ed02de9fc4d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>name</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac9735cfff05792285643b61faee46197</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasAttribute</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ab49779017f56f96082baf5871ee43cb8</anchor>
+      <arglist>(const std::string &amp;attr) const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>getAttribute</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a246a25f869cd1f34edf56be12ec48ec2</anchor>
+      <arglist>(const std::string &amp;attr) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectFactoryList</type>
+      <name>getChildrenOfType</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a0f26b993669cf46ea4c74fe1aeabc1aa</anchor>
+      <arglist>(std::string type)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>getChildOfType</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>adbd2528d78fc707f9025279464633831</anchor>
+      <arglist>(std::string type, ObjectFactory *&amp;o)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>ObjectFactory</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>aa939883c18cc8bb3c1511d43eeed3758</anchor>
+      <arglist>(ObjectFactory *root)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>ObjectFactory *</type>
+      <name>parent</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a7635170b387ee009bf19d287123c89de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual ObjectFactory *</type>
+      <name>root</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>aae5e35ca4b50e550705ee03dc82fe98a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>hasParent</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a174358598ffcee0fffe052618d8461d0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const XMLElement *</type>
+      <name>XMLelement</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac30ab6122d53d3d21fe57134098ddf3e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>impl_setAttribute</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ad462585d3ff5258cb30de96388cd912a</anchor>
+      <arglist>(const XMLAttribute *attr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>impl_write</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a1ed32bea9ea8afb49e091ada5e40c6bc</anchor>
+      <arglist>(XMLElement *element) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>addChild</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a839c6281fddd16c0f19c2e3594a899b8</anchor>
+      <arglist>(ObjectFactory *child)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac8e2b01f21d52f8f015c76df620f1c51</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a0d23f6b882db4d41c8792f6f66048638</anchor>
+      <arglist>(std::ostream &amp;, const ObjectFactory &amp;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>init</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a3300ea5a02e35c88a420aaac44373ef6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setAttribute</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a05c08387da78cf068476c6888b751c6a</anchor>
+      <arglist>(const XMLAttribute *attr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addTextChild</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>afcfd35a78ffe54a2eacc855ca3a97b96</anchor>
+      <arglist>(const XMLText *text)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>finishAttributes</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac7973f422d8ef756692192c7da9f829f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishTags</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a44fda126f5bf61a97111372ac60ae32d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>finishFile</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a7a5f119eccb97628ee4b7d6c7bc727fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ObjectFactory</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a3ca208bf92d25c659a845343cd8b4131</anchor>
+      <arglist>(const std::string &amp;tagName, ObjectFactory *parent=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addAttribute</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac5606423af538d7dd9ba9881e6a6a556</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>XMLNode *</type>
+      <name>write</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a1f19521d94579df09ade2039dc6b9d6d</anchor>
+      <arglist>(XMLNode *node) const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>tagName</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ad6c080f742f45b5fe53d0ed02de9fc4d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>name</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac9735cfff05792285643b61faee46197</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasAttribute</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ab49779017f56f96082baf5871ee43cb8</anchor>
+      <arglist>(const std::string &amp;attr) const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>getAttribute</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a246a25f869cd1f34edf56be12ec48ec2</anchor>
+      <arglist>(const std::string &amp;attr) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectFactoryList</type>
+      <name>getChildrenOfType</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a0f26b993669cf46ea4c74fe1aeabc1aa</anchor>
+      <arglist>(std::string type)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>getChildOfType</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>adbd2528d78fc707f9025279464633831</anchor>
+      <arglist>(std::string type, ObjectFactory *&amp;o)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::debug::Output</name>
+    <filename>a00008.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Output</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a0061d41917f425ce57bc0c40ddd34e7f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Output</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ad290ffe4f5abd170a3c6ae2c3b5041d4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>write</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a25c41418a21d928315fe6ff3a6f4fdf3</anchor>
+      <arglist>(const Channel &amp;channel, char const *file, int line, char const *function, const std::string &amp;data)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>write</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a2d02572be4395cd2214f5470c6093c87</anchor>
+      <arglist>(const Channel &amp;channel, char const *file, int line, char const *function, const std::stringstream &amp;data)=0</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>std::ostream &amp;</type>
+      <name>writePrefix</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1c11bfa06450171c2f6081b9d29efcb4</anchor>
+      <arglist>(std::ostream &amp;stream, const Channel &amp;channel, char const *file, int line, char const *function)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::util::parser::Parser</name>
+    <filename>a00009.html</filename>
+    <member kind="typedef">
+      <type>boost::function&lt; ObjectFactory *(ObjectFactory *, const XMLElement *)&gt;</type>
+      <name>FactoryType</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a7e39a5e951de2606b0d7f9280adaec89</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Parser</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a1973e631f853e3116f27ee78d43f0482</anchor>
+      <arglist>(FactoryType defaultFactory=create&lt; ObjectFactory &gt;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Parser</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a7d7955a88c72711340cd3aa77c091c12</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addObjectFactory</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>adc6b68a25d9426399d2bb34ec3a3e271</anchor>
+      <arglist>(const std::string &amp;tagname, FactoryType factory)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>parse</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ad58ce77ccdeaa8a9412791954629eb1f</anchor>
+      <arglist>(const char *xmlString)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>parseFile</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a1f1e39b92f3fc59497b10ae28f069137</anchor>
+      <arglist>(const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectFactory *</type>
+      <name>root</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a845d6b73cc8bbd8af4e4f32b683a17a8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a8c5d192d977156a6b468db0e0045cc90</anchor>
+      <arglist>(std::ostream &amp;, const Parser &amp;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::util::parser::SequenceFactory</name>
+    <filename>a00010.html</filename>
+    <templarg></templarg>
+    <base>hpp::util::parser::ObjectFactory</base>
+    <member kind="typedef">
+      <type>std::vector&lt; ValueType &gt;</type>
+      <name>OutType</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ab84234712905ce81e4a41ca242a6ce2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SequenceFactory</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a7fb906ad4af0631b07072126bd6abddc</anchor>
+      <arglist>(ObjectFactory *parent, const XMLElement *element, const unsigned int nbValue=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addTextChild</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ac574c2512473f6cde15502bdca543599</anchor>
+      <arglist>(const XMLText *text)</arglist>
+    </member>
+    <member kind="function">
+      <type>const OutType &amp;</type>
+      <name>values</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a6c89135618d663113f91eec2017849bd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SequenceFactory</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a1e5ddd4f9f23ba61848486366a4bda19</anchor>
+      <arglist>(const std::string &amp;tagName, ObjectFactory *parent=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>values</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>af16865ba4a6e7d0ce445bb2e1ee6022d</anchor>
+      <arglist>(const OutType &amp;v)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>impl_write</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ab05124c323c6ed726d4b813c92eae539</anchor>
+      <arglist>(XMLElement *element) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::debug::TimeCounter</name>
+    <filename>a00011.html</filename>
+    <member kind="typedef">
+      <type>boost::posix_time::ptime</type>
+      <name>ptime</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aa5aec840ce7fcf34281e874e27ab8afe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::posix_time::time_duration</type>
+      <name>time_duration</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a09c3ec2328a2b8d9f61c8b86f0905c56</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TimeCounter</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a98ab4e3975145f3e5f22f4dd64460f2d</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>start</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>af6bf222fb153838c0ea15d5b876dd73a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>time_duration</type>
+      <name>stop</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a5d687e0526dab91a36e5807771e3e7f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>time_duration</type>
+      <name>last</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a53c1d0680009431a49d454a2878b71bc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reset</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a928623776dbbf47d35e800c17dbe84ec</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>time_duration</type>
+      <name>mean</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a60f51657669c3e10b67c7612492fc93c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>time_duration</type>
+      <name>totalTime</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a9c8d8500d2a7d1b44188117072f97253</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a3dd93cf348e396f6e0649a38b5900d9d</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::debug::Timer</name>
+    <filename>a00012.html</filename>
+    <member kind="typedef">
+      <type>boost::posix_time::ptime</type>
+      <name>ptime</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>aa4d4bde8fb23f6b3e5929bfcf47dd330</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::posix_time::time_duration</type>
+      <name>time_duration</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>adefd283da2b0c10a14cb31b0510a53da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::posix_time::time_period</type>
+      <name>time_period</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a152caf07d77dde1f4e480537f8d057cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Timer</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a2089a759caf91a33a5c71dec541ba344</anchor>
+      <arglist>(bool autoStart=false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Timer</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a7e9c991501133e0128ee6c6dd80d7d47</anchor>
+      <arglist>(const Timer &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>Timer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a1f528f6f8f3806088124dff2b48192c8</anchor>
+      <arglist>(const Timer &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Timer</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>aa3630523e24a788b9078f06fc9242e19</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const ptime &amp;</type>
+      <name>start</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>aac10ac2d56d148bb0915e6abc5d11128</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const ptime &amp;</type>
+      <name>stop</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a8d97dbefc94d7ec79edeb7449a32ab61</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>time_duration</type>
+      <name>duration</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>aac24e399dd244989a98da7d7880455e7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const ptime &amp;</type>
+      <name>getStart</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a734d8264667057f6d8779078212c62b5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const ptime &amp;</type>
+      <name>getStop</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a27d91101b7b7277cda5108fe151e0523</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>ac34728646345f583b132843adce25824</anchor>
+      <arglist>(std::ostream &amp;) const </arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00033.html</filename>
+    <namespace>hpp::debug</namespace>
+    <namespace>hpp::util</namespace>
+    <class kind="class">hpp::Exception</class>
+    <member kind="function">
+      <type></type>
+      <name>HPP_MAKE_EXCEPTION</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a19f2d09243fdd6828b4d40953f4f413f</anchor>
+      <arglist>(HPP_UTIL_DLLAPI, AssertionError)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a0bcb296b7ca1dab3382f49953c92a853</anchor>
+      <arglist>(std::ostream &amp;o, const Exception &amp;exception)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI long &amp;</type>
+      <name>indent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a16259580a8f0a07bad42458aa65963f3</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>incindent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a669ea668296b2ed089b72c3a1dce688e</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>decindent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>afaf02e3dd1c3eaf21e287dc4c825cc89</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>resetindent</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a011dc7bc6e7c975fdc993c5b7abbac56</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>iendl</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>ab2e087df519f97420058c160b8313be4</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>incendl</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a49bcbcf63c92e671f9aa3c737b8a2852</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::ostream &amp;</type>
+      <name>decendl</name>
+      <anchorfile>a00033.html</anchorfile>
+      <anchor>a8d7bf72162e22331e54b3c387651ed95</anchor>
+      <arglist>(std::ostream &amp;o)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::debug</name>
+    <filename>a00034.html</filename>
+    <class kind="class">hpp::debug::Channel</class>
+    <class kind="class">hpp::debug::ConsoleOutput</class>
+    <class kind="class">hpp::debug::JournalOutput</class>
+    <class kind="class">hpp::debug::Logging</class>
+    <class kind="class">hpp::debug::Output</class>
+    <class kind="class">hpp::debug::TimeCounter</class>
+    <class kind="class">hpp::debug::Timer</class>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::string</type>
+      <name>getPrefix</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>ac2d09361f8aa4aa6d8ac734760911552</anchor>
+      <arglist>(const std::string &amp;packageName)</arglist>
+    </member>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI std::string</type>
+      <name>getFilename</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>a52bf99cd5a6c2c37f9c8ca344708fcf2</anchor>
+      <arglist>(const std::string &amp;filename, const std::string &amp;packageName)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>aa5cbd44bd08d19cfb3c0b35d8abf2271</anchor>
+      <arglist>(std::ostream &amp;os, const TimeCounter &amp;tc)</arglist>
+    </member>
+    <member kind="variable">
+      <type>HPP_UTIL_DLLAPI Logging</type>
+      <name>logging</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>a1ff9e20b1e5449c52e3008b5751a395d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const char *</type>
+      <name>ENV_LOGGINGDIR</name>
+      <anchorfile>a00034.html</anchorfile>
+      <anchor>ae6c81488bb3b0f9a088097be81dbf734</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::util</name>
+    <filename>a00036.html</filename>
+    <namespace>hpp::util::parser</namespace>
+    <member kind="function">
+      <type>HPP_UTIL_DLLAPI int</type>
+      <name>checkVersion</name>
+      <anchorfile>a00036.html</anchorfile>
+      <anchor>a75dd26c1abc94ba21b79bae373186e67</anchor>
+      <arglist>(const char *header_version)</arglist>
+    </member>
+    <member kind="variable">
+      <type>HPP_UTIL_DLLAPI const char *</type>
+      <name>version</name>
+      <anchorfile>a00036.html</anchorfile>
+      <anchor>a142645839475bc10af2c991fb750e2be</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::util::parser</name>
+    <filename>a00037.html</filename>
+    <class kind="class">hpp::util::parser::IgnoreTagFactory</class>
+    <class kind="class">hpp::util::parser::ObjectFactory</class>
+    <class kind="class">hpp::util::parser::Parser</class>
+    <class kind="class">hpp::util::parser::SequenceFactory</class>
+    <member kind="typedef">
+      <type>TiXmlElement</type>
+      <name>XMLElement</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>ab0dfa9650a28cc451e0f9a3b7622e8bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlDocument</type>
+      <name>XMLDocument</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>ad9e98a5cb4a899d8cd36c76afc609d29</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlDeclaration</type>
+      <name>XMLDeclaration</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a0126d99fdf416e0bc05e99fd85263f2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlAttribute</type>
+      <name>XMLAttribute</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a00734259f5d9b3d6cde4e62bba5e12e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlNode</type>
+      <name>XMLNode</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a29da1413371169bca24ac8e9f63d269f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlText</type>
+      <name>XMLText</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a72e8385d4f1a4e4146a51518563194da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlComment</type>
+      <name>XMLComment</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a177ac791c0e44a4327048804649e3245</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TiXmlPrinter</type>
+      <name>XMLPrinter</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a18387a794a687efeffb0d4b202d8531a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectFactory *</type>
+      <name>create</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a663f565dfe99e756b604215d98a8ec2f</anchor>
+      <arglist>(ObjectFactory *parent=NULL, const XMLElement *element=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>ae62f096835c12e7cf30da6cca1b721c6</anchor>
+      <arglist>(std::ostream &amp;, const ObjectFactory &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00037.html</anchorfile>
+      <anchor>a4ee252b8cf9110a45ac4c2c075dc89c8</anchor>
+      <arglist>(std::ostream &amp;, const Parser &amp;)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>Factories</name>
+    <title>Factories</title>
+    <filename>a00040.html</filename>
+    <class kind="class">hpp::util::parser::IgnoreTagFactory</class>
+    <class kind="class">hpp::util::parser::SequenceFactory</class>
+    <class kind="class">hpp::util::parser::ObjectFactory</class>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+  </compound>
+</tagfile>

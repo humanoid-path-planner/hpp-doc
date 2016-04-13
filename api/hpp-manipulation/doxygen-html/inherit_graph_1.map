@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00021.html" title="hpp::core::Containers\l\&lt; boost::mpl::vector\l\&lt; LockedJointPtr_t, JointAnd\lShapes_t \&gt; \&gt;" alt="" coords="417,5,607,75"/>
+<area shape="rect" id="node2" href="$a00037.html" title="hpp::manipulation::\lProblemSolver" alt="" coords="657,57,789,98"/>
+<area shape="rect" id="node3" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00021.html" title="Containers\&lt; boost::\lmpl::vector\&lt; PathPlannerBuilder\l_t, PathOptimizerBuilder_t,\l PathValidationBuilder_t, PathProjector\lBuilder_t, ConfigurationShooterBuilder\l_t, NumericalConstraintPtr_t, SteeringMethodBuilder_t \&gt; \&gt;" alt="" coords="5,63,368,163"/>
+<area shape="rect" id="node4" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00068.html" title="hpp::core::ProblemSolver" alt="" coords="427,100,597,127"/>
+</map>

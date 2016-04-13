@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{epsfig}
+\usepackage{amssymb,amsmath}
+\pagestyle{empty}
+\begin{document}
+\begin{eqnarray*} \mathbf{f}(\mathbf{q}) &=& \left(\begin{array}{c} ( R^T e \wedge t ) \cdot u_z \\ ( x - x_R ) \cdot (x_L - x_R)\\ ( x - x_L ) \cdot (x_R - x_L)\\ \end{array}\right)\\ \mathbf{\dot{f}} &=& \left(\begin{array}{c} R^T \end{array}\right) J_{com} - \frac{J_L^{\mathbf{v}} + J_R^{\mathbf{v}}}{2} + [\mathbf{x}-\frac{x_L + x_R}{2}]_{\times}J_{ref}^{\omega} \right) \mathbf{\dot{q}} \end{eqnarray*}
+\pagebreak
+
+$ \left(\begin{array}{cc} R & \mathbf{t} \\ 0 & 1\end{array}\right) $
+\pagebreak
+
+$\mathbf{x}$
+\pagebreak
+
+$\mathbf{x_L}$
+\pagebreak
+
+$\mathbf{x_R}$
+\pagebreak
+
+$\mathbf{x}^{*}$
+\pagebreak
+
+\begin{eqnarray*} \mathbf{r} (\mathbf{q}) &=& \log \left(R(\mathbf{q})^TR^*)\right)\\ \mathbf{\dot{r}} &=& -J_{\log}(\left(R(\mathbf{q})^TR^*)\right)) R(\mathbf{q})^T J^{\omega}_{joint}(\mathbf{q}) \mathbf{\dot{q}}\\ \end{eqnarray*}
+\pagebreak
+
+\begin{eqnarray*} J_{\log} (R) &=& \frac{\|\mathbf{r}\|\sin\|\mathbf{r}\|} {2(1-\cos\|\mathbf{r}\|)}I_3 -\frac{1}{2}[\mathbf{r}]_{\times} + \left(\frac{1}{\|\mathbf{r}\|^2} - \frac{\sin\|\mathbf{r}\|}{2\|\mathbf{r}\| (1-\cos\|\mathbf{r}\|)}\right) \mathbf{r}\mathbf{r}^T \end{eqnarray*}
+\pagebreak
+
+\begin{eqnarray*} \mathbf{e} &=& S B^T \left(\mathbf{x}^* - M(\mathbf{q})\mathbf{x}\right) = S B^T \left(\mathbf{x}^* - R(\mathbf{q})\mathbf{x} - \mathbf{t}(\mathbf{q})\right)\\ \mathbf{\dot{e}} &=& S B^T \left( - \left[\omega\right]_{\times}R(\mathbf{q})\mathbf{x} - \mathbf{\dot{t}}\right)\\ &=& S B^T \left( \left[R(\mathbf{q})\mathbf{x}\right]_{\times}\omega - \mathbf{\dot{t}}\right)\\ &=& S B^T \left( \left[R(\mathbf{q})\mathbf{x}\right]_{\times} J_{joint}^{\omega} - J_{joint}^{\mathbf{v}}\right)\mathbf{\dot{q}} \end{eqnarray*}
+\pagebreak
+
+$S$
+\pagebreak
+
+$B$
+\pagebreak
+
+$\mathbf{x}^*$
+\pagebreak
+
+$M(\mathbf{q})$
+\pagebreak
+
+$R$
+\pagebreak
+
+\begin{eqnarray*} \mathbf{f}(\mathbf{q}) &=& R^T \left(\mathbf{x} - \mathbf{t}\right) - \mathbf{x}^{*}\\ \mathbf{\dot{f}} &=& R^T \left( J_{com} + [\mathbf{x}-\mathbf{t}]_{\times}J_{joint}^{\omega} - J_{joint}^{\mathbf{v}}\right)\mathbf{\dot{q}} \end{eqnarray*}
+\pagebreak
+
+\begin{eqnarray*} \mathbf{r} (\mathbf{q}) &=& \log \left((R_1(\mathbf{q})^T R_2(\mathbf{q}))^T R^*\right) = \log \left(R_2(\mathbf{q})^T R_1(\mathbf{q}) R^*\right)\\ \mathbf{\dot{r}} &=& J_{\log}\left(R_2(\mathbf{q})^T R_1(\mathbf{q}) R^*\right) R_2(\mathbf{q})^T \left(J_{joint\ 1}^{\omega}(\mathbf{q}) - J_{joint\ 2}^{\omega}(\mathbf{q})\right) \mathbf{\dot{q}}\ \ \end{eqnarray*}
+\pagebreak
+
+$R^*$
+\pagebreak
+
+$R_1(\mathbf{q})^T R_2(\mathbf{q})$
+\pagebreak
+
+\begin{eqnarray*} \mathbf{r} (\mathbf{q}) &=& \mathbf{x}_1 - M_1^{-1}(\mathbf{q}) M_2 (\mathbf{q})\mathbf{x}_2\\ &=& \mathbf{x}_1 + R_1^T (\mathbf{q}) (\mathbf{t}_1 (\mathbf{q}) - \mathbf{t}_2 (\mathbf{q})) - R_1^T (\mathbf{q}) R_2 (\mathbf{q}) \mathbf{x}_2 \\ \mathbf{\dot{e}} &=& R_1^T (\mathbf{q}) \left( \left[R_2 (\mathbf{q})\mathbf{x}_2\right]_{\times} (\omega_2 - \omega_1) + \left[\mathbf{t}_1 - \mathbf{t}_2\right]_{\times} \omega_1 + \mathbf{\dot{t}}_1 - \mathbf{\dot{t}}_2 \right)\\ &=& R_1^T (\mathbf{q}) \left( \left[R_2 (\mathbf{q})\mathbf{x}_2\right]_{\times} \omega_2 + \left[\mathbf{t}_1 - (R_2 (\mathbf{q})\mathbf{x}_2 + \mathbf{t}_2)\right]_{\times} \omega_1 + \mathbf{\dot{t}}_1 - \mathbf{\dot{t}}_2 \right)\\ &=& R_1^T (\mathbf{q}) \left( \left[R_2 (\mathbf{q})\mathbf{x}_2\right]_{\times} J_{joint\ 2}^{\omega}(\mathbf{q}) + \left[\mathbf{t}_1 - (R_2 (\mathbf{q})\mathbf{x}_2 + \mathbf{t}_2)\right]_{\times} J_{joint\ 1}^{\omega}(\mathbf{q}) + J_{joint\ 1}^{\mathbf{v}}(\mathbf{q}) - J_{joint\ 2}^{\mathbf{v}}(\mathbf{q}) \right) \mathbf{\dot{q}}\\ \end{eqnarray*}
+\pagebreak
+
+$\mathbf{x}_1$
+\pagebreak
+
+$\mathbf{x}_2$
+\pagebreak
+
+$T_1(\mathbf{q})^{-1} T_2(\mathbf{q})$
+\pagebreak
+
+\end{document}

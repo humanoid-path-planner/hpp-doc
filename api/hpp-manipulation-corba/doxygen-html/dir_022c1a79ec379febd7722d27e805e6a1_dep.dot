@@ -1,0 +1,9 @@
+digraph "manipulation" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_19301abaccadef14b656ac5321bb1bd7 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="corbaserver" fontname="FreeSans", fontsize="10", URL="dir_19301abaccadef14b656ac5321bb1bd7.html"]
+  dir_022c1a79ec379febd7722d27e805e6a1 [shape=box, label="manipulation", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_022c1a79ec379febd7722d27e805e6a1.html"];
+  }
+}

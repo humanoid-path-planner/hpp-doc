@@ -1,0 +1,14 @@
+<map id="windows&#45;manager.cc" name="windows&#45;manager.cc">
+<area shape="rect" id="node2" href="$a00075.html" title="hpp/gui/windows&#45;manager.hh" alt="" coords="2035,163,2225,189"/>
+<area shape="rect" id="node12" href="$a00059.html" title="hpp/gui/osgwidget.hh" alt="" coords="2327,80,2471,107"/>
+<area shape="rect" id="node18" href="$a00054.html" title="hpp/gui/mainwindow.hh" alt="" coords="785,80,943,107"/>
+<area shape="rect" id="node3" href="$a00050.html" title="hpp/gui/fwd.hh" alt="" coords="1812,253,1919,280"/>
+<area shape="rect" id="node7" href="$a00055.html" title="hpp/gui/meta.hh" alt="" coords="2313,253,2428,280"/>
+<area shape="rect" id="node23" href="$a00052.html" title="hpp/gui/ledindicator.hh" alt="" coords="5,336,155,363"/>
+<area shape="rect" id="node25" href="$a00057.html" title="hpp/gui/omniorb/omniorbthread.hh" alt="" coords="1345,163,1561,189"/>
+<area shape="rect" id="node31" href="$a00049.html" title="hpp/gui/dialog/dialogloadrobot.hh" alt="" coords="443,411,652,437"/>
+<area shape="rect" id="node34" href="$a00047.html" title="hpp/gui/dialog/dialogloadenvironment.hh" alt="" coords="678,411,929,437"/>
+<area shape="rect" id="node35" href="$a00064.html" title="hpp/gui/dialog/pluginmanagerdialog.hh" alt="" coords="689,253,929,280"/>
+<area shape="rect" id="node44" href="$a00070.html" title="hpp/gui/settings.hh" alt="" coords="747,163,876,189"/>
+<area shape="rect" id="node41" href="$a00062.html" title="hpp/gui/plugin&#45;interface.hh" alt="" coords="180,336,353,363"/>
+</map>

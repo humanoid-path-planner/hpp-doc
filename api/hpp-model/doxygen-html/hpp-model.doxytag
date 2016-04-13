@@ -1,0 +1,4843 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>body.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00027</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <includes id="a00033" name="device.hh" local="no" imported="no">hpp/model/device.hh</includes>
+    <class kind="class">hpp::model::Body</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+  </compound>
+  <compound kind="file">
+    <name>center-of-mass-computation.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00028</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <includes id="a00033" name="device.hh" local="no" imported="no">hpp/model/device.hh</includes>
+    <class kind="class">hpp::model::CenterOfMassComputation</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+  </compound>
+  <compound kind="file">
+    <name>children-iterator.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00029</filename>
+    <includes id="a00041" name="joint.hh" local="no" imported="no">hpp/model/joint.hh</includes>
+    <class kind="class">hpp::model::ChildrenIterator</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+  </compound>
+  <compound kind="file">
+    <name>collision-object.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00030</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <class kind="class">hpp::model::CollisionObject</class>
+    <namespace>fcl</namespace>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00045.html</anchorfile>
+      <anchor>abd78272eb300d9439c48497ca75207e7</anchor>
+      <arglist>(CollisionObject)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00045.html</anchorfile>
+      <anchor>ae865efb13d669ec9f2e2e533ce075908</anchor>
+      <arglist>(CollisionGeometry)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>configuration.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00031</filename>
+    <includes id="a00033" name="device.hh" local="no" imported="no">hpp/model/device.hh</includes>
+    <includes id="a00041" name="joint.hh" local="no" imported="no">hpp/model/joint.hh</includes>
+    <includes id="a00040" name="joint-configuration.hh" local="no" imported="no">hpp/model/joint-configuration.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <member kind="function">
+      <type>void</type>
+      <name>integrate</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a84c18b57bfeb38fd993af01e4bd9399a</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t configuration, vectorIn_t velocity, ConfigurationOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>interpolate</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6a68bdd47f1be18a343761c95a55a019</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t q0, ConfigurationIn_t q1, const value_type &amp;u, ConfigurationOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>difference</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a520a491275555c9985272779096639f6</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t q1, ConfigurationIn_t q2, vectorOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>distance</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aa8c5eda61c9a10f08ae64acd46a0563f</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t q1, ConfigurationIn_t q2)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>normalize</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aa7173e67d43caf6ffb2bfaa3dbb244e0</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationOut_t q)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>displayConfig</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a8f0b9196cc6ac85c6791335ff92ac7f9</anchor>
+      <arglist>(ConfigurationIn_t q)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>debug.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00032</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <class kind="struct">hpp::model::Transform</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <member kind="typedef">
+      <type>std::vector&lt; Transform &gt;</type>
+      <name>ForwardGeometrys_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a8efcd6c471105adfbe4830c7dd5cd7e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ab520d10ce0df38d5fce8893db622c254</anchor>
+      <arglist>(DevicePtr_t device, ConfigurationIn_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aac5d52ca6841d789a30a64b484fb0944</anchor>
+      <arglist>(DevicePtr_t device, Configuration_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>abffe98327684e9eb34692d59ee56ded9</anchor>
+      <arglist>(DevicePtr_t device, ConfigurationOut_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ad9b1d4b34eb9eaad08d2a469395d7077</anchor>
+      <arglist>(HumanoidRobotPtr_t device, ConfigurationOut_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a5aa5b21fc07a154a8e7db78742eaac0c</anchor>
+      <arglist>(HumanoidRobotPtr_t device, ConfigurationIn_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a406a90636b14df14bf6b00eca7284457</anchor>
+      <arglist>(HumanoidRobotPtr_t device, Configuration_t q)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>device.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00033</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <includes id="a00034" name="distance-result.hh" local="no" imported="no">hpp/model/distance-result.hh</includes>
+    <includes id="a00035" name="extra-config-space.hh" local="no" imported="no">hpp/model/extra-config-space.hh</includes>
+    <includes id="a00044" name="object-iterator.hh" local="no" imported="no">hpp/model/object-iterator.hh</includes>
+    <class kind="class">hpp::model::Device</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a311e35d458f88c95f2328407fc8b2ebd</anchor>
+      <arglist>(std::ostream &amp;os, const hpp::model::Device &amp;device)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>distance-result.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00034</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <class kind="struct">hpp::model::DistanceResult</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+  </compound>
+  <compound kind="file">
+    <name>extra-config-space.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00035</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <class kind="class">hpp::model::ExtraConfigSpace</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+  </compound>
+  <compound kind="file">
+    <name>fcl-to-eigen.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00036</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <member kind="function">
+      <type>hpp::model::matrix_t</type>
+      <name>operator*</name>
+      <anchorfile>a00036.html</anchorfile>
+      <anchor>acbf35314303265c4de2f39d8a8a32925</anchor>
+      <arglist>(const hpp::model::matrix_t &amp;m1, const fcl::Matrix3f &amp;m2)</arglist>
+    </member>
+    <member kind="function">
+      <type>hpp::model::matrix_t</type>
+      <name>operator*</name>
+      <anchorfile>a00036.html</anchorfile>
+      <anchor>aaff8eeed96ca0c6b5d60612d8d0f675f</anchor>
+      <arglist>(const fcl::Matrix3f &amp;m1, const hpp::model::matrix_t &amp;m2)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>toEigen</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a4f70840ff4909d68b4364c1e7b61f5f3</anchor>
+      <arglist>(const hpp::model::vector3_t &amp;v, Eigen::Matrix&lt; value_type, 3, 1 &gt; &amp;res)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>toEigen</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>abd23ce21134353cf745b54f7b38e23c5</anchor>
+      <arglist>(const hpp::model::vector3_t &amp;v, hpp::model::vectorOut_t res)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>toEigen</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a237f962c69391533d3cd65e8700f635f</anchor>
+      <arglist>(const hpp::model::matrix3_t &amp;m, hpp::model::matrixOut_t res)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>fwd.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00037</filename>
+    <class kind="class">hpp::model::JointTranslation</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <member kind="typedef">
+      <type>double</type>
+      <name>value_type</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3029997890626e3c31b22dd1bf67cc4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, Eigen::Dynamic, 1 &gt;</type>
+      <name>vector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a869bf69abc62e43b97fab86848005991</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>vector_t</type>
+      <name>Configuration_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ad83a889e62fc1a8d0b4a50ceea926d6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; const Configuration_t &gt;</type>
+      <name>ConfigurationIn_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aa0f4294734f2cac439d576b47df1122e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; Configuration_t &gt;</type>
+      <name>ConfigurationOut_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a31eda249c934b79ef44be6f288aad486</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Configuration_t &gt;</type>
+      <name>ConfigurationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6e0dbf53ac7b79bf7af3a17241e4ea73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; const vector_t &gt;</type>
+      <name>vectorIn_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a52c4dc006f5265bf5430d3676cdf0638</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; vector_t &gt;</type>
+      <name>vectorOut_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ae3dfbcffe19f5c57eb01b27dbd4d95eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, Eigen::Dynamic, Eigen::Dynamic &gt;</type>
+      <name>matrix_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac6aa963bd3fa58e60c9c1903eb59b3be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; matrix_t &gt;</type>
+      <name>matrixOut_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aad20fc22a6d6f571ee3c859db44d5f97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>matrix_t::Index</type>
+      <name>size_type</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>afbe7922cd6bcd972f8440079e5c0c7f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::Matrix3f</type>
+      <name>matrix3_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a05f86d55af0c24f4fead4e82701e58a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::Vec3f</type>
+      <name>vector3_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a2461c5264f8fca4a787100ccddb02c9f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, 6, Eigen::Dynamic, Eigen::RowMajor &gt;</type>
+      <name>JointJacobian_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ab208c843d83173b002c51bec64331f69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, 3, Eigen::Dynamic, Eigen::RowMajor &gt;</type>
+      <name>ComJacobian_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a4b47d1efe6ecf8ee73aa17a1a3fc570b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Block&lt; JointJacobian_t, 3, Eigen::Dynamic &gt;</type>
+      <name>HalfJointJacobian_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a265d7968d9b39b2a2b0e975e81c799b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Body *</type>
+      <name>BodyPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6e753f7fc312022652aa6a7778f86493</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; Body * &gt;</type>
+      <name>BodyVector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a740b5bbafb27fce9cdddb3c72d6b28c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; CollisionObject &gt;</type>
+      <name>CollisionObjectPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>adfbbbf790e74618f8980835ddaae590d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; CollisionObjectPtr_t &gt;</type>
+      <name>ObjectVector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6c9567ad48538939a001e1cf7a209692</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Device &gt;</type>
+      <name>DevicePtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac36499719545c2ec81ce87980ce55ab5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const Device &gt;</type>
+      <name>DeviceConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a1621dd908c63ae674423801d239e7b10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; DistanceResult &gt;</type>
+      <name>DistanceResults_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ada8b9254be70c0e22d6ca62006a91029</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; HumanoidRobot &gt;</type>
+      <name>HumanoidRobotPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>adb7d3bffcccd688af3348be52ecc5248</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Joint *</type>
+      <name>JointPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac9ba227773702ebed5a0f08f72da5a7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointAnchor *</type>
+      <name>JointAnchorPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a2f3dbb7ce662427c1e59ecec44582bfb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointRotation *</type>
+      <name>JointRotationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aafa390086757e44475d6d540eec5479b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointSO3 *</type>
+      <name>JointSO3Ptr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a70b359dad5a16865ea40759458e22925</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointTranslation&lt; 1 &gt; *</type>
+      <name>JointTranslationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>af5135eff8cb801e3877c4c38b73a626c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointTranslation&lt; 2 &gt; *</type>
+      <name>JointTranslation2Ptr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a5602370009848f04f27c16be7295fb42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointTranslation&lt; 3 &gt; *</type>
+      <name>JointTranslation3Ptr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3965b6c45866fabf8bf1f8285dda26bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const Joint *</type>
+      <name>JointConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a151f539f12060e41d47eff04c33741f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointAnchor *</type>
+      <name>JointAnchorConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a236391f09da3ca9e4beda069dbc56593</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointRotation *</type>
+      <name>JointRotationConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a9e037f2f3bcbe836028769494d76fcce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointSO3 *</type>
+      <name>JointSO3ConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a4d5e3139d5c8be6419d43537c61fbccb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointTranslation&lt; 1 &gt; *</type>
+      <name>JointTranslationConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ab3cf51f571b213a2a5bbbb7bd4a24b16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointTranslation&lt; 2 &gt; *</type>
+      <name>JointTranslation2ConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aaf510ac5010c91b2e0931b079c8a80cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointTranslation&lt; 3 &gt; *</type>
+      <name>JointTranslation3ConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0736a73ff9eb41f68d90c328a6641848</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, JointPtr_t &gt;</type>
+      <name>JointByName_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a202cbc89cf4c4dbfb8bc060d099aedad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; JointPtr_t &gt;</type>
+      <name>JointVector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aef36b771ab7b808f9aa500592b703fff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointVector_t</type>
+      <name>JointGroup_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a51a665723f3b2e382da5588e3bdd64c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, JointGroup_t &gt;</type>
+      <name>JointGroups_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0d55e775c6e3af38c9a747f76a75cf2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Gripper &gt;</type>
+      <name>GripperPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ae53c3648a10d286e930c5f229b3d3faa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; GripperPtr_t &gt;</type>
+      <name>Grippers_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3b58381ba8c1d4b4f92d9e702a142a39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::Transform3f</type>
+      <name>Transform3f</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a825a050f91b7c51bd65573cdd9085049</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; CenterOfMassComputation &gt;</type>
+      <name>CenterOfMassComputationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aac2f8b903b0f2f13a022fc881f7b5e7d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>Request_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3ff1c77061395420aaa192a56fde37cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>COLLISION</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3ff1c77061395420aaa192a56fde37cba7ee45cf7f2b33c030138d72e96bd57cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DISTANCE</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3ff1c77061395420aaa192a56fde37cba7cee72f60ee355def3eaeb5725ee9063</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a1dcecaf44de1aefa2512276bdb10fde1</anchor>
+      <arglist>(Body)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a04fa383e7a9a23fe2410b5b6b8d2491d</anchor>
+      <arglist>(ChildrenIterator)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a44ccc0c6d0dfeee699158d5c5532a764</anchor>
+      <arglist>(CollisionObject)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a062cc4c8a5cf24f273d045122e3b0c1e</anchor>
+      <arglist>(Device)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6dca81efb8c6f844441900448c5a3471</anchor>
+      <arglist>(DistanceResult)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0462812d27d4e42aa7d82b86af549a9d</anchor>
+      <arglist>(HumanoidRobot)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>afa98b62124811366d63d65f9199b0dfe</anchor>
+      <arglist>(Joint)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0c344d13f029256690e20f96058d92cf</anchor>
+      <arglist>(JointAnchor)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>af3ce2c5fec1ffd8bb0afac1a155c9294</anchor>
+      <arglist>(JointRotation)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a45c7ef0952fdfabf8fd6663f6d70902c</anchor>
+      <arglist>(JointSO3)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac770bcab526c3f93e525579c1457be0f</anchor>
+      <arglist>(JointConfiguration)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a20bdd3170f16e40998945ec69d97f42b</anchor>
+      <arglist>(ObjectFactory)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a63e77618e2db25ea1464ee8fdae9a42a</anchor>
+      <arglist>(ObjectIterator)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a9cdcb61f94e0d5d95caeeb72ecb20733</anchor>
+      <arglist>(Gripper)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a54f243352706eba0122ae437d29d96af</anchor>
+      <arglist>(CenterOfMassComputation)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>gripper.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00038</filename>
+    <includes id="a00041" name="joint.hh" local="no" imported="no">hpp/model/joint.hh</includes>
+    <class kind="class">hpp::model::Gripper</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a538e59e17a3347866a3668de31dc0e8a</anchor>
+      <arglist>(std::ostream &amp;os, const Gripper &amp;gripper)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>humanoid-robot.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00039</filename>
+    <includes id="a00033" name="device.hh" local="no" imported="no">hpp/model/device.hh</includes>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <class kind="class">hpp::model::HumanoidRobot</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+  </compound>
+  <compound kind="file">
+    <name>joint-configuration.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00040</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <class kind="class">hpp::model::JointConfiguration</class>
+    <class kind="class">hpp::model::AnchorJointConfig</class>
+    <class kind="class">hpp::model::SO3JointConfig</class>
+    <class kind="class">hpp::model::RotationJointConfig</class>
+    <class kind="class">hpp::model::rotationJointConfig::UnBounded</class>
+    <class kind="class">hpp::model::rotationJointConfig::Bounded</class>
+    <class kind="class">hpp::model::TranslationJointConfig</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <namespace>hpp::model::rotationJointConfig</namespace>
+  </compound>
+  <compound kind="file">
+    <name>joint.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00041</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <class kind="class">hpp::model::Joint</class>
+    <class kind="class">hpp::model::JointAnchor</class>
+    <class kind="class">hpp::model::JointSO3</class>
+    <class kind="class">hpp::model::JointRotation</class>
+    <class kind="class">hpp::model::jointRotation::UnBounded</class>
+    <class kind="class">hpp::model::jointRotation::Bounded</class>
+    <class kind="class">hpp::model::JointTranslation</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+    <namespace>hpp::model::jointRotation</namespace>
+    <namespace>fcl</namespace>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ae84240965828521f2c22456d5beff123</anchor>
+      <arglist>(std::ostream &amp;os, const hpp::model::Joint &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00045.html</anchorfile>
+      <anchor>aefc6411cea6a9416a18da897b5d2bdc7</anchor>
+      <arglist>(std::ostream &amp;os, const fcl::Transform3f &amp;trans)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/build-rel/doc/</path>
+    <filename>a00042</filename>
+  </compound>
+  <compound kind="file">
+    <name>object-factory.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00043</filename>
+    <includes id="a00027" name="body.hh" local="no" imported="no">hpp/model/body.hh</includes>
+    <includes id="a00039" name="humanoid-robot.hh" local="no" imported="no">hpp/model/humanoid-robot.hh</includes>
+    <includes id="a00041" name="joint.hh" local="no" imported="no">hpp/model/joint.hh</includes>
+    <class kind="class">hpp::model::ObjectFactory</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+  </compound>
+  <compound kind="file">
+    <name>object-iterator.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-model/include/hpp/model/</path>
+    <filename>a00044</filename>
+    <includes id="a00037" name="fwd.hh" local="no" imported="no">hpp/model/fwd.hh</includes>
+    <class kind="class">hpp::model::ObjectIterator</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::model</namespace>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::AnchorJointConfig</name>
+    <filename>a00001.html</filename>
+    <base>hpp::model::JointConfiguration</base>
+    <member kind="function">
+      <type></type>
+      <name>AnchorJointConfig</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ad36c8e8cc75cb57158de45dae43527a2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~AnchorJointConfig</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a26959c3679007ed9389e45d340dc06b9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>interpolate</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a91e6abb4c6e2cf8a9cf6d5b416df6e7f</anchor>
+      <arglist>(ConfigurationIn_t, ConfigurationIn_t, const value_type &amp;, const size_type &amp;, ConfigurationOut_t)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>distance</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a5ad3f245373ffb86b297d1465034fdd2</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>squaredDistance</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a6feb8751b9fedb39db844229480e4bdc</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>integrate</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a1d1e1aa79cf786980d21e583febd184a</anchor>
+      <arglist>(ConfigurationIn_t q, vectorIn_t v, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>difference</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>aef2016f5083afe1bd160d6243acdb5fc</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, vectorOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>normalize</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ac2f141f884a5a4ed478475ad0da1788c</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>uniformlySample</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a5c1cb915a67e8701629a5d6f4c3060cb</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::Body</name>
+    <filename>a00002.html</filename>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>joint</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a61589b88affbbf3d1883f27746fbf189</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>joint</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a2e25f93c9a895864fbca8bdad42c8470</anchor>
+      <arglist>(JointPtr_t joint)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Body</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a0ce68b433b59664eba9d970c59fe7260</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Body</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a69d56f20de0b522e3e5fdf1b46c17fb0</anchor>
+      <arglist>(const Body &amp;body)</arglist>
+    </member>
+    <member kind="function">
+      <type>BodyPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aacbb4598b4c47289301724a6fa55b862</anchor>
+      <arglist>(const JointPtr_t &amp;joint) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Body</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ae0a0f7bb5ad49f748d42099dc4b442f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>name</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a0a6a6f6e93df055c8bc3963ea6f494a9</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>name</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>abde0df439e557908ff4581cb5e8aef58</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addInnerObject</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>adb9a2e2e13749e508dfc0ec37a798b21</anchor>
+      <arglist>(const CollisionObjectPtr_t &amp;object, bool collision, bool distance)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeInnerObject</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a13e0275b769eba64c0d89e03acbff89f</anchor>
+      <arglist>(const CollisionObjectPtr_t &amp;object, bool collision, bool distance)</arglist>
+    </member>
+    <member kind="function">
+      <type>const ObjectVector_t &amp;</type>
+      <name>innerObjects</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a2d4348f5bcfd5c15888197e2b7a85e79</anchor>
+      <arglist>(Request_t type) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>radius</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ac43efae2134e859c9454cb09cee50461</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addOuterObject</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a63d36c38aa5959716b6f61352155e4d1</anchor>
+      <arglist>(const CollisionObjectPtr_t &amp;object, bool collision, bool distance)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeOuterObject</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a8cca058fef5f1f338555190b7638628f</anchor>
+      <arglist>(const CollisionObjectPtr_t &amp;object, bool collision, bool distance)</arglist>
+    </member>
+    <member kind="function">
+      <type>const ObjectVector_t &amp;</type>
+      <name>outerObjects</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a71590c8a6deffb1399d6b5941ec815a8</anchor>
+      <arglist>(Request_t type) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>collisionTest</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a4044f5f63fff30594260dc6b11a95de2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>computeDistances</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ab8b45c9235909484bf423723ed2dba3a</anchor>
+      <arglist>(DistanceResults_t &amp;results, DistanceResults_t::size_type &amp;offset)</arglist>
+    </member>
+    <member kind="function">
+      <type>const fcl::Vec3f &amp;</type>
+      <name>localCenterOfMass</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ac6ef96da1ca66ee093803780c4c9b822</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>localCenterOfMass</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ad586d3a9cfbcb472b6cd9af03b7e3374</anchor>
+      <arglist>(const fcl::Vec3f &amp;localCenterOfMass)</arglist>
+    </member>
+    <member kind="function">
+      <type>const matrix3_t &amp;</type>
+      <name>inertiaMatrix</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a7ce760f35779880d1e5e1a7aaa0abc25</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>inertiaMatrix</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>acc1780ad8a8a529e88293780f838dc83</anchor>
+      <arglist>(const matrix3_t &amp;inertiaMatrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>mass</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a10a219c75881b4b03180a7514bccbcf0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>mass</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aee8ba2e8c5a9774d02d29fb8cc7953f1</anchor>
+      <arglist>(value_type mass)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Body</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a0ce68b433b59664eba9d970c59fe7260</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Body</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a69d56f20de0b522e3e5fdf1b46c17fb0</anchor>
+      <arglist>(const Body &amp;body)</arglist>
+    </member>
+    <member kind="function">
+      <type>BodyPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aacbb4598b4c47289301724a6fa55b862</anchor>
+      <arglist>(const JointPtr_t &amp;joint) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Body</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ae0a0f7bb5ad49f748d42099dc4b442f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>name</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a0a6a6f6e93df055c8bc3963ea6f494a9</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>name</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>abde0df439e557908ff4581cb5e8aef58</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addInnerObject</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>adb9a2e2e13749e508dfc0ec37a798b21</anchor>
+      <arglist>(const CollisionObjectPtr_t &amp;object, bool collision, bool distance)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeInnerObject</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a13e0275b769eba64c0d89e03acbff89f</anchor>
+      <arglist>(const CollisionObjectPtr_t &amp;object, bool collision, bool distance)</arglist>
+    </member>
+    <member kind="function">
+      <type>const ObjectVector_t &amp;</type>
+      <name>innerObjects</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a2d4348f5bcfd5c15888197e2b7a85e79</anchor>
+      <arglist>(Request_t type) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>radius</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ac43efae2134e859c9454cb09cee50461</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addOuterObject</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a63d36c38aa5959716b6f61352155e4d1</anchor>
+      <arglist>(const CollisionObjectPtr_t &amp;object, bool collision, bool distance)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeOuterObject</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a8cca058fef5f1f338555190b7638628f</anchor>
+      <arglist>(const CollisionObjectPtr_t &amp;object, bool collision, bool distance)</arglist>
+    </member>
+    <member kind="function">
+      <type>const ObjectVector_t &amp;</type>
+      <name>outerObjects</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a71590c8a6deffb1399d6b5941ec815a8</anchor>
+      <arglist>(Request_t type) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>collisionTest</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a4044f5f63fff30594260dc6b11a95de2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>computeDistances</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ab8b45c9235909484bf423723ed2dba3a</anchor>
+      <arglist>(DistanceResults_t &amp;results, DistanceResults_t::size_type &amp;offset)</arglist>
+    </member>
+    <member kind="function">
+      <type>const fcl::Vec3f &amp;</type>
+      <name>localCenterOfMass</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ac6ef96da1ca66ee093803780c4c9b822</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>localCenterOfMass</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ad586d3a9cfbcb472b6cd9af03b7e3374</anchor>
+      <arglist>(const fcl::Vec3f &amp;localCenterOfMass)</arglist>
+    </member>
+    <member kind="function">
+      <type>const matrix3_t &amp;</type>
+      <name>inertiaMatrix</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a7ce760f35779880d1e5e1a7aaa0abc25</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>inertiaMatrix</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>acc1780ad8a8a529e88293780f838dc83</anchor>
+      <arglist>(const matrix3_t &amp;inertiaMatrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>mass</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a10a219c75881b4b03180a7514bccbcf0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>mass</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aee8ba2e8c5a9774d02d29fb8cc7953f1</anchor>
+      <arglist>(value_type mass)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::rotationJointConfig::Bounded</name>
+    <filename>a00003.html</filename>
+    <base>hpp::model::JointConfiguration</base>
+    <member kind="function">
+      <type></type>
+      <name>Bounded</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a67127db231976e0569742985e43c6de7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Bounded</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a6d8ffa4dc3499637f7d2b187576114e1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>interpolate</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a989d258b8c1dfa9cacb752661b6d5675</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const value_type &amp;u, const size_type &amp;index, ConfigurationOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>distance</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a8af80c2f3309de57cb8020f43afdd254</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>squaredDistance</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a6efab44d39e9344bf354633cf4de0063</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>integrate</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>aa76f0f1a9f1e192e76482b38d2b08451</anchor>
+      <arglist>(ConfigurationIn_t q, vectorIn_t v, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>difference</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a7812c97b8ae5ea267731da902b31fbe8</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, vectorOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>normalize</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>ae4dc9997b4f058043169da90e295f1e2</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>uniformlySample</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a22b6203d1619d5bd5d4390840671bd85</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::jointRotation::Bounded</name>
+    <filename>a00004.html</filename>
+    <base>hpp::model::JointRotation</base>
+    <member kind="function">
+      <type></type>
+      <name>Bounded</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a1a0630af19f59e09d9d9165dedabc805</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Bounded</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>ab9880a3dc6c3b2dee7776d537498895d</anchor>
+      <arglist>(const Bounded &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a3501cc255dc2afd47b3ecf672ddcb080</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computePosition</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a5b561ca736e391c6777d65fabd8767cc</anchor>
+      <arglist>(ConfigurationIn_t configuration, const Transform3f &amp;parentPosition, Transform3f &amp;position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Bounded</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a2f8cb4d7c4b60b1137d3ff5ee77638e8</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::CenterOfMassComputation</name>
+    <filename>a00005.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>add</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac8985a8eaa515ab03cb8ea40a7bae69a</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compute</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>aea41d21a157c0995fff076e2d6cd758f</anchor>
+      <arglist>(const Device::Computation_t &amp;flag=Device::ALL)</arglist>
+    </member>
+    <member kind="function">
+      <type>const fcl::Vec3f &amp;</type>
+      <name>com</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a697817296155124f46b15c51c92d0998</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const value_type &amp;</type>
+      <name>mass</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>af5ab4ca4a3779f70672a1af1d5508a57</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>computeMass</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a6de4f55098a5e0632d83573db69ec1ad</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const ComJacobian_t &amp;</type>
+      <name>jacobian</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>abc26584e8959b92d0bf65b7850c3cb71</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CenterOfMassComputation</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a0fe6e5f2d71bf4af170f37659e7792bb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static CenterOfMassComputationPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a48cb27aae822f55faedfe359723098e7</anchor>
+      <arglist>(const DevicePtr_t &amp;device)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>CenterOfMassComputation</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a8369a107c2899c5c57bc4e92be4dd720</anchor>
+      <arglist>(const DevicePtr_t &amp;device)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::ChildrenIterator</name>
+    <filename>a00006.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ChildrenIterator</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a8ec96f8660792f3e5baeed3dc53ee684</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>end</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a85e0b1c240c096f2169e6ccbc57004f2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator++</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a14a427a408c1cbdf9138924a6deae9c5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>operator*</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a5588c17511af7248a5aa94d10e6551fa</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::CollisionObject</name>
+    <filename>a00007.html</filename>
+    <member kind="function">
+      <type>CollisionObjectPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ae1a30bef245d4424fbf0e6d6b525d0d8</anchor>
+      <arglist>(const JointPtr_t &amp;joint) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>af11c1e6df3076ad58f0d7ed46da523a5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>fcl::CollisionObjectPtr_t</type>
+      <name>fcl</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a73a8c9a130dcc0e56cd334e74477797a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const JointPtr_t &amp;</type>
+      <name>joint</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a3eef4ac817a31100e290964d4e0ee405</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>joint</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a4fbab5b3b4b677404b8205c62ff78baa</anchor>
+      <arglist>(const JointPtr_t joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>const fcl::Transform3f &amp;</type>
+      <name>positionInJointFrame</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>acbe9a19c426eace31f4bb2a1d80928c4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const fcl::Transform3f &amp;</type>
+      <name>getTransform</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ae54a576a9b321765b9c6773d69b62291</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>move</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a3bb6d30580199523a1fa1fc636c461ea</anchor>
+      <arglist>(const Transform3f &amp;position)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static CollisionObjectPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a493946fcb8104d4fe78157a58e738063</anchor>
+      <arglist>(fcl::CollisionObjectPtr_t object, const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static CollisionObjectPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>aeff010507979478abf05d5005fd56821</anchor>
+      <arglist>(fcl::CollisionGeometryPtr_t geometry, const Transform3f &amp;position, const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a67e0a731efaf4cfa14123b37fb0034b6</anchor>
+      <arglist>(const CollisionObjectWkPtr_t &amp;self)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>CollisionObject</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a863ca4558bdd0f403a094ab4022e7e73</anchor>
+      <arglist>(fcl::CollisionObjectPtr_t object, const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>CollisionObject</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a78f3e6421d6106556ffe77409254b91e</anchor>
+      <arglist>(fcl::CollisionGeometryPtr_t geometry, const Transform3f &amp;position, const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>CollisionObject</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>abb84d64fe209f65380270ac371178e77</anchor>
+      <arglist>(const CollisionObject &amp;object)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>CollisionObject</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a863ca4558bdd0f403a094ab4022e7e73</anchor>
+      <arglist>(fcl::CollisionObjectPtr_t object, const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>CollisionObject</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a78f3e6421d6106556ffe77409254b91e</anchor>
+      <arglist>(fcl::CollisionGeometryPtr_t geometry, const Transform3f &amp;position, const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>CollisionObject</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>abb84d64fe209f65380270ac371178e77</anchor>
+      <arglist>(const CollisionObject &amp;object)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::Device</name>
+    <filename>a00008.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>Computation_t</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>JOINT_POSITION</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83caa27c131fbf2bc465c4ca8ac67fbfb922</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>JACOBIAN</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83caf55aa6dff3498ad855ecf2b07cc05c1a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VELOCITY</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83ca42695123f14e2f7d86055f3db7c775f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ACCELERATION</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83caa368b8a3e360d049a0202a651e04c49d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>COM</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83cacd93e7e9f2d6bae7e0e8cee867ebc062</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALL</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83ca8e16f9574f5251a45d4d118ecffc91e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::pair&lt; JointPtr_t, JointPtr_t &gt;</type>
+      <name>CollisionPair_t</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a95676e14a81ae7e06854e12fc6740d2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; CollisionPair_t &gt;</type>
+      <name>CollisionPairs_t</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>addc0ac0c11ce54293f9f96d284eb31c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>JOINT_POSITION</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83caa27c131fbf2bc465c4ca8ac67fbfb922</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>JACOBIAN</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83caf55aa6dff3498ad855ecf2b07cc05c1a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VELOCITY</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83ca42695123f14e2f7d86055f3db7c775f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ACCELERATION</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83caa368b8a3e360d049a0202a651e04c49d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>COM</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83cacd93e7e9f2d6bae7e0e8cee867ebc062</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALL</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aaa6ba8e97ccade6027b2eb7abde7a83ca8e16f9574f5251a45d4d118ecffc91e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>abe1f869203eee1d86f8eb118e96a7767</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aba2540287d8eb46696590cb2371133ab</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Device</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ad48a32df16d2fcdf8db1351a28421b9b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>DevicePtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afb16606736cca115aff6f90516e0bf0c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rootJoint</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>abc6ca7c8d593eb176769da6b94e147f1</anchor>
+      <arglist>(JointPtr_t joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rootJointPosition</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>adce3661a144da15c7a00a9fa17535bf9</anchor>
+      <arglist>(const Transform3f &amp;position)</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>rootJoint</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a89a1c6277c23d84dc86f0fa84b85334d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>registerJoint</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a5eae2145e41bed9ce0e474eff90ecbee</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>const JointVector_t &amp;</type>
+      <name>getJointVector</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ab8bd317b9fe6f98bcfec122415176ae2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addJointGroup</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afcfc05e7823f9627c922ab3fffa343e5</anchor>
+      <arglist>(const std::string &amp;name, const JointGroup_t &amp;group)</arglist>
+    </member>
+    <member kind="function">
+      <type>const JointGroup_t &amp;</type>
+      <name>jointGroup</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a2430cfa141e47f0201c01d1a7ec47504</anchor>
+      <arglist>(const std::string &amp;name) const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>getJointAtConfigRank</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a932cca1229090850bdeeecc837c0290f</anchor>
+      <arglist>(const size_type &amp;r) const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>getJointAtVelocityRank</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aa84796a00522974ee0166be78cb09e34</anchor>
+      <arglist>(const size_type &amp;r) const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>getJointByName</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a3be93b785bbffc47ceb453be4edefacb</anchor>
+      <arglist>(const std::string &amp;name) const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>getJointByBodyName</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a0b1691140ff6a12ca5e680fefc9f35d5</anchor>
+      <arglist>(const std::string &amp;name) const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>configSize</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a6b1328a2f2235b9c7a2e61c616ad4d66</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>numberDof</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afa90f9769f4de6961294f998fc1b03a1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>ExtraConfigSpace &amp;</type>
+      <name>extraConfigSpace</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a63e409c237531eb4d79d70d2a650f179</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const ExtraConfigSpace &amp;</type>
+      <name>extraConfigSpace</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a3c358e0f104a566df5dcd6424b857e7d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setDimensionExtraConfigSpace</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a280a41bf0ca3b95945c9c1804dfbba01</anchor>
+      <arglist>(const size_type &amp;dimension)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Configuration_t &amp;</type>
+      <name>currentConfiguration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>af7f51a19e5c42bb05fbaeb79595123b4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>currentConfiguration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afe63d7b84506f2e0df54e228a08e58a7</anchor>
+      <arglist>(ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>Configuration_t</type>
+      <name>neutralConfiguration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ad90bd1598880a4620b09e9330115f26d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const vector_t &amp;</type>
+      <name>currentVelocity</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a507a57b2f02a2e3bab19e4b05a50623c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>currentVelocity</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a4e92a044a95ca7787da073d705c7ad2c</anchor>
+      <arglist>(vectorIn_t velocity)</arglist>
+    </member>
+    <member kind="function">
+      <type>const vector_t &amp;</type>
+      <name>currentAcceleration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1207816e475f4ee3465d847da65c2324</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>currentAcceleration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a459885c1ea11602e2228520a2543f885</anchor>
+      <arglist>(vectorIn_t acceleration)</arglist>
+    </member>
+    <member kind="function">
+      <type>const value_type &amp;</type>
+      <name>mass</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1dd3f2627c70f7a46fc09c6936afb448</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const vector3_t &amp;</type>
+      <name>positionCenterOfMass</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a7fc94b832001879f68b9d3c0a71ab837</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const ComJacobian_t &amp;</type>
+      <name>jacobianCenterOfMass</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a29beced25ca180c4c3e08a098be3b1d0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addGripper</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a877b49978967dab92854dde945e7f34e</anchor>
+      <arglist>(const GripperPtr_t &amp;gripper)</arglist>
+    </member>
+    <member kind="function">
+      <type>Grippers_t &amp;</type>
+      <name>grippers</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a7b002b963cf0d4647401b977218db92a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Grippers_t &amp;</type>
+      <name>grippers</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a6fc834bdfe73f95c1e0920b2f50422b1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const ObjectVector_t &amp;</type>
+      <name>obstacles</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a53a0428e8a2f50c0f74f4c2d1b5cbec9</anchor>
+      <arglist>(Request_t type) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addCollisionPairs</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a483b53f7c2826f56e842e0bfa112db24</anchor>
+      <arglist>(const JointPtr_t &amp;joint1, const JointPtr_t &amp;joint2, Request_t type)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeCollisionPairs</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aa593097d7ac6f66353c9f8effd0348c5</anchor>
+      <arglist>(const JointPtr_t &amp;joint1, const JointPtr_t &amp;joint2, Request_t type)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CollisionPairs_t &amp;</type>
+      <name>collisionPairs</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a88b41f74cec2fbc4905c520b6f3dd633</anchor>
+      <arglist>(Request_t type) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectIterator</type>
+      <name>objectIterator</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a42f9c99520d94de76a52b247a0d5ad48</anchor>
+      <arglist>(Request_t type)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>collisionTest</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a58ff713b17c27a671ad5927d1946f8c5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>computeDistances</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a3426501911e55c676bcd0f36d6ad80ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const DistanceResults_t &amp;</type>
+      <name>distanceResults</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ae7dd91dbb7ca728f890f97ae414201c9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>controlComputation</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ae5e7ddcd430c2b644a3e3c468ffebefa</anchor>
+      <arglist>(const Computation_t &amp;flag)</arglist>
+    </member>
+    <member kind="function">
+      <type>Computation_t</type>
+      <name>computationFlag</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>abad4dee4d8c4034a04e980884200cb4e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computeForwardKinematics</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a31f9585fb8ca933512e06af079284654</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static DevicePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a2d7e7c2a1c118f31414025aabe078fdf</anchor>
+      <arglist>(std::string name)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static DevicePtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ae6d47713008e339302372532c13bb971</anchor>
+      <arglist>(const DevicePtr_t &amp;device)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Device</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a98871725e901983edd3ffa50045ecdda</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a44b845ca7a003f674e589f07600bb218</anchor>
+      <arglist>(const DeviceWkPtr_t &amp;weakPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>updateDistances</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>adda2a51aa5fc4426573fe41ad6f7c514</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Body</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a8858f397a273114ddc1443880bb5540e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Joint</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a2b27269e818d7b63995be0e0f812bf54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Device</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ad48a32df16d2fcdf8db1351a28421b9b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>DevicePtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afb16606736cca115aff6f90516e0bf0c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rootJoint</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>abc6ca7c8d593eb176769da6b94e147f1</anchor>
+      <arglist>(JointPtr_t joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rootJointPosition</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>adce3661a144da15c7a00a9fa17535bf9</anchor>
+      <arglist>(const Transform3f &amp;position)</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>rootJoint</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a89a1c6277c23d84dc86f0fa84b85334d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>registerJoint</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a5eae2145e41bed9ce0e474eff90ecbee</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>const JointVector_t &amp;</type>
+      <name>getJointVector</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ab8bd317b9fe6f98bcfec122415176ae2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addJointGroup</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afcfc05e7823f9627c922ab3fffa343e5</anchor>
+      <arglist>(const std::string &amp;name, const JointGroup_t &amp;group)</arglist>
+    </member>
+    <member kind="function">
+      <type>const JointGroup_t &amp;</type>
+      <name>jointGroup</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a2430cfa141e47f0201c01d1a7ec47504</anchor>
+      <arglist>(const std::string &amp;name) const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>getJointAtConfigRank</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a932cca1229090850bdeeecc837c0290f</anchor>
+      <arglist>(const size_type &amp;r) const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>getJointAtVelocityRank</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aa84796a00522974ee0166be78cb09e34</anchor>
+      <arglist>(const size_type &amp;r) const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>getJointByName</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a3be93b785bbffc47ceb453be4edefacb</anchor>
+      <arglist>(const std::string &amp;name) const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>getJointByBodyName</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a0b1691140ff6a12ca5e680fefc9f35d5</anchor>
+      <arglist>(const std::string &amp;name) const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>configSize</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a6b1328a2f2235b9c7a2e61c616ad4d66</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>numberDof</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afa90f9769f4de6961294f998fc1b03a1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>ExtraConfigSpace &amp;</type>
+      <name>extraConfigSpace</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a63e409c237531eb4d79d70d2a650f179</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const ExtraConfigSpace &amp;</type>
+      <name>extraConfigSpace</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a3c358e0f104a566df5dcd6424b857e7d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setDimensionExtraConfigSpace</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a280a41bf0ca3b95945c9c1804dfbba01</anchor>
+      <arglist>(const size_type &amp;dimension)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Configuration_t &amp;</type>
+      <name>currentConfiguration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>af7f51a19e5c42bb05fbaeb79595123b4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>currentConfiguration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afe63d7b84506f2e0df54e228a08e58a7</anchor>
+      <arglist>(ConfigurationIn_t configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>Configuration_t</type>
+      <name>neutralConfiguration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ad90bd1598880a4620b09e9330115f26d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const vector_t &amp;</type>
+      <name>currentVelocity</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a507a57b2f02a2e3bab19e4b05a50623c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>currentVelocity</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a4e92a044a95ca7787da073d705c7ad2c</anchor>
+      <arglist>(vectorIn_t velocity)</arglist>
+    </member>
+    <member kind="function">
+      <type>const vector_t &amp;</type>
+      <name>currentAcceleration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1207816e475f4ee3465d847da65c2324</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>currentAcceleration</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a459885c1ea11602e2228520a2543f885</anchor>
+      <arglist>(vectorIn_t acceleration)</arglist>
+    </member>
+    <member kind="function">
+      <type>const value_type &amp;</type>
+      <name>mass</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1dd3f2627c70f7a46fc09c6936afb448</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const vector3_t &amp;</type>
+      <name>positionCenterOfMass</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a7fc94b832001879f68b9d3c0a71ab837</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const ComJacobian_t &amp;</type>
+      <name>jacobianCenterOfMass</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a29beced25ca180c4c3e08a098be3b1d0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addGripper</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a877b49978967dab92854dde945e7f34e</anchor>
+      <arglist>(const GripperPtr_t &amp;gripper)</arglist>
+    </member>
+    <member kind="function">
+      <type>Grippers_t &amp;</type>
+      <name>grippers</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a7b002b963cf0d4647401b977218db92a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Grippers_t &amp;</type>
+      <name>grippers</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a6fc834bdfe73f95c1e0920b2f50422b1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const ObjectVector_t &amp;</type>
+      <name>obstacles</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a53a0428e8a2f50c0f74f4c2d1b5cbec9</anchor>
+      <arglist>(Request_t type) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addCollisionPairs</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a483b53f7c2826f56e842e0bfa112db24</anchor>
+      <arglist>(const JointPtr_t &amp;joint1, const JointPtr_t &amp;joint2, Request_t type)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeCollisionPairs</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aa593097d7ac6f66353c9f8effd0348c5</anchor>
+      <arglist>(const JointPtr_t &amp;joint1, const JointPtr_t &amp;joint2, Request_t type)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CollisionPairs_t &amp;</type>
+      <name>collisionPairs</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a88b41f74cec2fbc4905c520b6f3dd633</anchor>
+      <arglist>(Request_t type) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ObjectIterator</type>
+      <name>objectIterator</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a42f9c99520d94de76a52b247a0d5ad48</anchor>
+      <arglist>(Request_t type)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>collisionTest</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a58ff713b17c27a671ad5927d1946f8c5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>computeDistances</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a3426501911e55c676bcd0f36d6ad80ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const DistanceResults_t &amp;</type>
+      <name>distanceResults</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ae7dd91dbb7ca728f890f97ae414201c9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>controlComputation</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ae5e7ddcd430c2b644a3e3c468ffebefa</anchor>
+      <arglist>(const Computation_t &amp;flag)</arglist>
+    </member>
+    <member kind="function">
+      <type>Computation_t</type>
+      <name>computationFlag</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>abad4dee4d8c4034a04e980884200cb4e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computeForwardKinematics</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a31f9585fb8ca933512e06af079284654</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::model::DistanceResult</name>
+    <filename>a00009.html</filename>
+    <member kind="function">
+      <type>const value_type &amp;</type>
+      <name>distance</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a17fa8f67e76937d3f178fde6da18a31a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const fcl::Vec3f &amp;</type>
+      <name>closestPointInner</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ada897a67433fcd7bd46c7230a87805db</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const fcl::Vec3f &amp;</type>
+      <name>closestPointOuter</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ad318aa03d32e4ce1d3d74d14edef3274</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable">
+      <type>fcl::DistanceResult</type>
+      <name>fcl</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a602f853913db6029e4b74ffd26ea4507</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>CollisionObjectPtr_t</type>
+      <name>innerObject</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a0740ebeb63de0b266eb41e285ed8a80c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>CollisionObjectPtr_t</type>
+      <name>outerObject</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a648fa20d1af5e40151d8827a1e86a6d7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::ExtraConfigSpace</name>
+    <filename>a00010.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ExtraConfigSpace</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>af8ed8aec2ab1d0f9be47eacd16778bdc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type &amp;</type>
+      <name>lower</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a4d2c964314cee767fa1f977664027294</anchor>
+      <arglist>(const size_type &amp;index)</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type &amp;</type>
+      <name>upper</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>acc449a73522f312cddf93d65a1353e65</anchor>
+      <arglist>(const size_type &amp;index)</arglist>
+    </member>
+    <member kind="function">
+      <type>const value_type &amp;</type>
+      <name>lower</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>aa7ce7d94341be2c119fc4f9d2458e83b</anchor>
+      <arglist>(const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const value_type &amp;</type>
+      <name>upper</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a7d289e0a36e5baf1d0b0b0470fcbe3a8</anchor>
+      <arglist>(const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>dimension</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a1f7bcbd842e03ebbc22eae0ba4216fe1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Device</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a520fa05e0bf58785da428f7a0241eee2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::Gripper</name>
+    <filename>a00011.html</filename>
+    <member kind="function">
+      <type>const JointPtr_t &amp;</type>
+      <name>joint</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>afc14beb5cb6a6b1a3eddb5e1e7bbac74</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>joint</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a01770525dd2fa3d2041176882313307f</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Transform3f &amp;</type>
+      <name>objectPositionInJoint</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a6c48738706d303bfbba1b53b29c59503</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a75d7bbf03d6ec8a83f6f02d16276f5c7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>name</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ac359cfa06917cf94962b60c6df976427</anchor>
+      <arglist>(const std::string &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addDisabledCollision</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aadd4ab857babd5482aa5f87eaad303a8</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removeDisabledCollision</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>acc6b34764dd332b0d0c07b46bb8ef936</anchor>
+      <arglist>(JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>const JointVector_t &amp;</type>
+      <name>getDisabledCollisions</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a8ba90c9e3e3630812bdec7d1fbea0b79</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>removeAllDisabledCollisions</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a4d3340df9e5a051ce10b49073b37da40</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>clearance</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a15375b04cf367beae401500453071d55</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clearance</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aec40c1febc2b044e92f634e963deebe0</anchor>
+      <arglist>(const value_type &amp;clearance)</arglist>
+    </member>
+    <member kind="function">
+      <type>GripperPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aa2bbdfffd24f3d7d341c8065d4286df7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::ostream &amp;</type>
+      <name>print</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ad7bef6669950acf49d64c614c34f47ce</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static GripperPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a2017fe457df2871bd29cc85a55a4a34b</anchor>
+      <arglist>(const std::string &amp;name, const JointPtr_t &amp;joint, const Transform3f &amp;objectPositionInJoint, const JointVector_t disabledCollisions)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Gripper</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a29656f6d85c2174bb2b2d4143e37ba9d</anchor>
+      <arglist>(const std::string &amp;name, const JointPtr_t &amp;joint, const Transform3f &amp;objectPositionInJoint, const JointVector_t disabledCollisions)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ae220e4104562912445a12944c776a53c</anchor>
+      <arglist>(GripperWkPtr_t weakPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::HumanoidRobot</name>
+    <filename>a00012.html</filename>
+    <base>hpp::model::Device</base>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>waist</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>af3af9e6766a1578dc2a62286aac68984</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>waist</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a4b0b572eb2cfd4e24cc68dd5bfd6cf12</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>chest</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a2334d4364898d86582979d514e4cbb3f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>chest</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a25a6745d268cb0eb1ed3e4c369203535</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>leftWrist</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>ae6a4135b3beeb9399264f98f4e44e65d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>leftWrist</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>aff7778b0504608c55a2bba611877779a</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>rightWrist</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a6f40e67ed58d9c11d689b5afd26cdb9c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rightWrist</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>af9409e4e0f77180d92554798a5a9ce4d</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>leftAnkle</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a228015ac0c1d0575cc41c18ea9fc8e9d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>leftAnkle</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a8b5c1b47bed5a0605448e0bcb08d4fdd</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>rightAnkle</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a450afb161984fe3aa579d58ea358b751</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rightAnkle</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>aae5d0011826500eeb45118cbc4522348</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>gazeJoint</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a385edb3252d40c9f11a91cb2116af537</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>gazeJoint</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a9c86d94058b07e6f24cddf9219ddba4f</anchor>
+      <arglist>(const JointPtr_t &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>gaze</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>adeae858b7202a71a07eec4ba7007d2e5</anchor>
+      <arglist>(const vector3_t &amp;origin, const vector3_t &amp;dir)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~HumanoidRobot</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a7639d2964a0474fb831453afe25798fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>HumanoidRobotPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a388f30532bdf966c8486ad0154940a91</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static HumanoidRobotPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a642417e161e9ccf260495120183199dd</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>HumanoidRobot</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a6fdf48c136c3adf1b6e13d6f9e9998e9</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a04bb7a3903ccad1235dd8399fa2c95ad</anchor>
+      <arglist>(const HumanoidRobotWkPtr_t &amp;weakPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~HumanoidRobot</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a7639d2964a0474fb831453afe25798fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>HumanoidRobotPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a388f30532bdf966c8486ad0154940a91</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::Joint</name>
+    <filename>a00013.html</filename>
+    <member kind="function">
+      <type>const size_type &amp;</type>
+      <name>numberDof</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af6e82da22857ba201d454a5699768792</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const size_type &amp;</type>
+      <name>configSize</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a4f5b14ccd7a4306ae8630f92f63a23f3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const size_type &amp;</type>
+      <name>rankInConfiguration</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a1ed51e73c4d65ef934d9df1fa8f13b60</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>rankInVelocity</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>acbbc008338b6de1ae2ef04269c1754d7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointConfiguration *</type>
+      <name>configuration</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a2ff18ad922c78405f9d548b140109933</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>robot</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af8bb8fd18c0ed7dfbb6e48eee8f1de0d</anchor>
+      <arglist>(const DeviceWkPtr_t &amp;device)</arglist>
+    </member>
+    <member kind="function">
+      <type>DeviceConstPtr_t</type>
+      <name>robot</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a733bfb32d981f476fd65626527ea755d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>DevicePtr_t</type>
+      <name>robot</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>afdaee66be75117d4861438bc916bcbcb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::ostream &amp;</type>
+      <name>display</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a117a6785a8b0baf0339cbee844a842a4</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Joint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af0bfcde838c6b13735089cb6e242dceb</anchor>
+      <arglist>(const Transform3f &amp;initialPosition, size_type configSize, size_type numberDof)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Joint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a2fc82f2d676eee68a1f0e8f6ba180396</anchor>
+      <arglist>(const Joint &amp;joint)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual JointPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a3ffa7321445212849fb2eb27d81f7970</anchor>
+      <arglist>() const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Joint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ac5ce9301201a901295a03223f15da06b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>name</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>abde75aa36c1a54b4499997de7aa28674</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a60f9a5dca8e2b929c1a509cc6747f74a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const Transform3f &amp;</type>
+      <name>initialPosition</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a991f5e49e5adb1b21502e1e94549eb4b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const Transform3f &amp;</type>
+      <name>currentTransformation</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a0c2e645490a4de37cd6f644136cf9507</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>computePosition</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ab4d65c6db343c832788d78b24a825625</anchor>
+      <arglist>(ConfigurationIn_t configuration, const Transform3f &amp;parentPosition, Transform3f &amp;position) const  =0</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>recursiveComputePosition</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a89008d5f39b6bcb8d96fa758239bfe45</anchor>
+      <arglist>(ConfigurationIn_t configuration, const Transform3f &amp;parentPosition) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>computeJacobian</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a1b8cc1798005782ee8972e808b72731d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>vector_t</type>
+      <name>neutralConfiguration</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ae25544d2ee9a8b73767db90fa5649270</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>parentJoint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a9ef540c7d52755bd0bf188728b49390e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addChildJoint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ab2d83bed7141f6dd4756e085f970f60f</anchor>
+      <arglist>(JointPtr_t joint, bool computePositionInParent=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>numberChildJoints</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>abe777b7125be87cc01c24fca22d4c3d0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>childJoint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ad1440640a63a709680657134e6d0ca77</anchor>
+      <arglist>(std::size_t rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const Transform3f &amp;</type>
+      <name>positionInParentFrame</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a6adc37f3c336c6c09f3e09a70e5709cc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>positionInParentFrame</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af6637c094ab40b18017933ee029eaeb7</anchor>
+      <arglist>(const Transform3f &amp;p)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>isBounded</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>aeca22b020aab3123a1383716b52715a7</anchor>
+      <arglist>(size_type rank, bool bounded)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBounded</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ace644485b7cfb558f1dd1567d2aed4b2</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>lowerBound</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a66727456637702620b5307e066a0f74c</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>upperBound</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af0bc151d16d36b379284b3c3bd765072</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>lowerBound</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>aa6045bcd64af681f7dced95ea23fd620</anchor>
+      <arglist>(size_type rank, value_type lowerBound)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>upperBound</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af6da315dcf9b483ce251d93a546d4d59</anchor>
+      <arglist>(size_type rank, value_type upperBound)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual value_type</type>
+      <name>upperBoundLinearVelocity</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af97438501b7d8cda3cbbfdfdcd7ee911</anchor>
+      <arglist>() const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual value_type</type>
+      <name>upperBoundAngularVelocity</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a9155ff97343e025dd942341cd56a6ba5</anchor>
+      <arglist>() const  =0</arglist>
+    </member>
+    <member kind="function">
+      <type>const value_type &amp;</type>
+      <name>maximalDistanceToParent</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ade98e005b07b574a1383bd1bd120827f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const JointJacobian_t &amp;</type>
+      <name>jacobian</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ae98d7d2a17ca8456423d5052719cec44</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointJacobian_t &amp;</type>
+      <name>jacobian</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ac2b6059e274b8c00d7cfa0d9420bb5f6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>BodyPtr_t</type>
+      <name>linkedBody</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>acbc95eb3e32caa08cb1d170945f2a58c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setLinkedBody</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a26eba61b1e731fe0c44ae396709c72fa</anchor>
+      <arglist>(const BodyPtr_t &amp;body)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Transform3f &amp;</type>
+      <name>linkInJointFrame</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a2c19e02ccfbc95793496ba5f3ab8263a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>linkInJointFrame</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a107dd0838c48452d67758c7f2ec021fa</anchor>
+      <arglist>(const Transform3f &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>linkName</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ad0e6fdde9c5a0d3e2f40c5920f2f9f86</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>linkName</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a1b17edd49cb65475f56fdfd3685f7000</anchor>
+      <arglist>(const std::string &amp;linkName)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>computeMaximalDistanceToParent</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>aa5d8b4af1269a52698cfdc847a43416e</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>JointConfiguration *</type>
+      <name>configuration_</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>abd9d080e80e5b5e807db046b30cecc4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Transform3f</type>
+      <name>currentTransformation_</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a0ac44efe7e527bb2fd9c63f1cafad8d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Transform3f</type>
+      <name>positionInParentFrame_</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ab03e770cfde877c69e08ef9a808caa8e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Transform3f</type>
+      <name>linkInJointFrame_</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a50f4f40dc31fbe1531b66724ad2ea55e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Transform3f</type>
+      <name>T3f_</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a527af54abbf072596ce7e3e57d4ff06b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>value_type</type>
+      <name>mass_</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>aa2a918386991e8416d0d7bf0a6aa57c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>fcl::Vec3f</type>
+      <name>massCom_</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a0351ea47e278afdff6352b7d36c26ac9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>value_type</type>
+      <name>maximalDistanceToParent_</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a2c398ceb34342c81714fdd202b3e2a39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>vector_t</type>
+      <name>neutralConfiguration_</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a54f15c48731a58e8e202a8c8b5e87a03</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Device</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a520fa05e0bf58785da428f7a0241eee2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>ChildrenIterator</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ac28f31748f64e6f50841d0049f9f6972</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>CenterOfMassComputation</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ada6db1dc16ed1fecab51ef8ac9a5b688</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Joint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af0bfcde838c6b13735089cb6e242dceb</anchor>
+      <arglist>(const Transform3f &amp;initialPosition, size_type configSize, size_type numberDof)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Joint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a2fc82f2d676eee68a1f0e8f6ba180396</anchor>
+      <arglist>(const Joint &amp;joint)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual JointPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a3ffa7321445212849fb2eb27d81f7970</anchor>
+      <arglist>() const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Joint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ac5ce9301201a901295a03223f15da06b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>name</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>abde75aa36c1a54b4499997de7aa28674</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const std::string &amp;</type>
+      <name>name</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a60f9a5dca8e2b929c1a509cc6747f74a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const Transform3f &amp;</type>
+      <name>initialPosition</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a991f5e49e5adb1b21502e1e94549eb4b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const Transform3f &amp;</type>
+      <name>currentTransformation</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a0c2e645490a4de37cd6f644136cf9507</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>computePosition</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ab4d65c6db343c832788d78b24a825625</anchor>
+      <arglist>(ConfigurationIn_t configuration, const Transform3f &amp;parentPosition, Transform3f &amp;position) const  =0</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>recursiveComputePosition</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a89008d5f39b6bcb8d96fa758239bfe45</anchor>
+      <arglist>(ConfigurationIn_t configuration, const Transform3f &amp;parentPosition) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>computeJacobian</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a1b8cc1798005782ee8972e808b72731d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>vector_t</type>
+      <name>neutralConfiguration</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ae25544d2ee9a8b73767db90fa5649270</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>parentJoint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a9ef540c7d52755bd0bf188728b49390e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addChildJoint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ab2d83bed7141f6dd4756e085f970f60f</anchor>
+      <arglist>(JointPtr_t joint, bool computePositionInParent=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>numberChildJoints</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>abe777b7125be87cc01c24fca22d4c3d0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>childJoint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ad1440640a63a709680657134e6d0ca77</anchor>
+      <arglist>(std::size_t rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const Transform3f &amp;</type>
+      <name>positionInParentFrame</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a6adc37f3c336c6c09f3e09a70e5709cc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>positionInParentFrame</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af6637c094ab40b18017933ee029eaeb7</anchor>
+      <arglist>(const Transform3f &amp;p)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>isBounded</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>aeca22b020aab3123a1383716b52715a7</anchor>
+      <arglist>(size_type rank, bool bounded)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBounded</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ace644485b7cfb558f1dd1567d2aed4b2</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>lowerBound</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a66727456637702620b5307e066a0f74c</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>upperBound</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af0bc151d16d36b379284b3c3bd765072</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>lowerBound</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>aa6045bcd64af681f7dced95ea23fd620</anchor>
+      <arglist>(size_type rank, value_type lowerBound)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>upperBound</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af6da315dcf9b483ce251d93a546d4d59</anchor>
+      <arglist>(size_type rank, value_type upperBound)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual value_type</type>
+      <name>upperBoundLinearVelocity</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af97438501b7d8cda3cbbfdfdcd7ee911</anchor>
+      <arglist>() const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual value_type</type>
+      <name>upperBoundAngularVelocity</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a9155ff97343e025dd942341cd56a6ba5</anchor>
+      <arglist>() const  =0</arglist>
+    </member>
+    <member kind="function">
+      <type>const value_type &amp;</type>
+      <name>maximalDistanceToParent</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ade98e005b07b574a1383bd1bd120827f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const JointJacobian_t &amp;</type>
+      <name>jacobian</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ae98d7d2a17ca8456423d5052719cec44</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>JointJacobian_t &amp;</type>
+      <name>jacobian</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ac2b6059e274b8c00d7cfa0d9420bb5f6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>BodyPtr_t</type>
+      <name>linkedBody</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>acbc95eb3e32caa08cb1d170945f2a58c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setLinkedBody</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a26eba61b1e731fe0c44ae396709c72fa</anchor>
+      <arglist>(const BodyPtr_t &amp;body)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Transform3f &amp;</type>
+      <name>linkInJointFrame</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a2c19e02ccfbc95793496ba5f3ab8263a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>linkInJointFrame</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a107dd0838c48452d67758c7f2ec021fa</anchor>
+      <arglist>(const Transform3f &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>linkName</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ad0e6fdde9c5a0d3e2f40c5920f2f9f86</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>linkName</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a1b17edd49cb65475f56fdfd3685f7000</anchor>
+      <arglist>(const std::string &amp;linkName)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::JointAnchor</name>
+    <filename>a00014.html</filename>
+    <base>hpp::model::Joint</base>
+    <member kind="function">
+      <type></type>
+      <name>JointAnchor</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a7d6a43bd5a0a4580e136834933652cb4</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>JointAnchor</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a81e808f02fd306b2caebaf2937191540</anchor>
+      <arglist>(const JointAnchor &amp;joint)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual JointPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>affd64a4451aa16f107dfca9c437f8413</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~JointAnchor</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a6a9b9800c88aed7b89000c01eb2983c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computePosition</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aa1b2b1fc99ff48885e801456ef775028</anchor>
+      <arglist>(ConfigurationIn_t configuration, const Transform3f &amp;parentPosition, Transform3f &amp;position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>upperBoundLinearVelocity</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>af1915a7860e8fdd98b6f8bb62057c98c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>upperBoundAngularVelocity</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a2f0c0f3dd3c60f664c2bf6d7094df1e4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computeMaximalDistanceToParent</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aaca8db456ca2286da6d491ff6d0166af</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::JointConfiguration</name>
+    <filename>a00015.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>JointConfiguration</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a3e5db0ef79a160463e3e72cc4b2218de</anchor>
+      <arglist>(size_type configSize)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~JointConfiguration</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a05f4573e2568e5f07beb7c7022978a0c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>interpolate</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>aa987294aed0fd13c67485d50df1121d4</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const value_type &amp;u, const size_type &amp;index, ConfigurationOut_t result)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual value_type</type>
+      <name>squaredDistance</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a5e9b99d40719d1f610b3c8fa0fa53f20</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual value_type</type>
+      <name>distance</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a57393079dba3635549b2e5eb05b96708</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>integrate</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a057e0d74c69288f9a54eeb31e8f12475</anchor>
+      <arglist>(ConfigurationIn_t q, vectorIn_t v, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, ConfigurationOut_t result) const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>difference</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a91e66e87eb85b19046e8b661a7adcb10</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, vectorOut_t result) const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>normalize</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a5227030a1a9e6b3f678221ca6d40275f</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>uniformlySample</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>aee24fc29c02eaf675ee1055488cc4b78</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const  =0</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>isBounded</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a87a3f77b2a412192138471844e501b9a</anchor>
+      <arglist>(size_type rank, bool bounded)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBounded</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a7b6791ce28363caf9058b945cb8d9cd4</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>lowerBound</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a9ed054f313ae9195495568c60f776af1</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>upperBound</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a233ba31b9363484eecc56109bb08247d</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>lowerBound</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a32244de35f7de190d5eccf5e84040e75</anchor>
+      <arglist>(size_type rank, value_type lowerBound)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>upperBound</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ab8362af4092a35109697f70d4325875a</anchor>
+      <arglist>(size_type rank, value_type upperBound)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>isBounded</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a87a3f77b2a412192138471844e501b9a</anchor>
+      <arglist>(size_type rank, bool bounded)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isBounded</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a7b6791ce28363caf9058b945cb8d9cd4</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>lowerBound</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a9ed054f313ae9195495568c60f776af1</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>upperBound</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a233ba31b9363484eecc56109bb08247d</anchor>
+      <arglist>(size_type rank) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>lowerBound</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a32244de35f7de190d5eccf5e84040e75</anchor>
+      <arglist>(size_type rank, value_type lowerBound)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>upperBound</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ab8362af4092a35109697f70d4325875a</anchor>
+      <arglist>(size_type rank, value_type upperBound)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::JointRotation</name>
+    <filename>a00016.html</filename>
+    <base>hpp::model::Joint</base>
+    <member kind="function">
+      <type></type>
+      <name>JointRotation</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>ad1c7313241cc94b95cdb7b33cc20c7bd</anchor>
+      <arglist>(const Transform3f &amp;initialPosition, size_type configSize, size_type numberDof)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>JointRotation</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a74a6c6a71fa8fed49cebcbc5f9117c35</anchor>
+      <arglist>(const JointRotation &amp;joint)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual JointPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a42d3c6fe140a1665e1af37fc42a65d4c</anchor>
+      <arglist>() const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>computePosition</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a4909c720063b3b516cc18f245d7dd99f</anchor>
+      <arglist>(ConfigurationIn_t configuration, const Transform3f &amp;parentPosition, Transform3f &amp;position) const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~JointRotation</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a726fd3aa104b5c54778bff0ea7c2e950</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>upperBoundLinearVelocity</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a3fc7bdb455b7430288d0614a45655de1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>upperBoundAngularVelocity</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>aa3d2200e5bb9382b354f134054e58f88</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computeMaximalDistanceToParent</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a4bb82499644a8222aa572c88fc323daf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>fcl::Matrix3f</type>
+      <name>R_</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>acde5456b04c6aa41bf54e0fbe102ee45</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>fcl::Vec3f</type>
+      <name>axis_</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>ab9c8ce9c53b9c4d63445cc0e4f1cb0ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>fcl::Vec3f</type>
+      <name>O2O1_</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a19d172a7d15c0abe4b27b8c07baf3875</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>fcl::Vec3f</type>
+      <name>cross_</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a0b256a80bff032affdce8f5449841407</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>fcl::Vec3f</type>
+      <name>com_</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>af262e83c3cf35c48b6edce8de6c6378d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::JointSO3</name>
+    <filename>a00017.html</filename>
+    <base>hpp::model::Joint</base>
+    <member kind="function">
+      <type></type>
+      <name>JointSO3</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a374ce28d045ef3966df85267b27963ef</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>JointSO3</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a4f837d9a8d5c653dc075f6dbb0e41347</anchor>
+      <arglist>(const JointSO3 &amp;joint)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual JointPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a6569169123b2532fa0d5d5ba587dae3d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computePosition</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a2dd312975fb72d436f6ad1c019d007ca</anchor>
+      <arglist>(ConfigurationIn_t configuration, const Transform3f &amp;parentPosition, Transform3f &amp;position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~JointSO3</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>aa99f69ea4d6c20146427be14ea6d8d4d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>upperBoundLinearVelocity</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>af202ff8c100c38b08ebd23ef93423df2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>upperBoundAngularVelocity</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>acece8ae8d61b4b1e65a2555c2eac7833</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computeMaximalDistanceToParent</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ab30b71dbb7a4b341131cf88f74e5214e</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::JointTranslation</name>
+    <filename>a00018.html</filename>
+    <templarg>dimension</templarg>
+    <base>hpp::model::Joint</base>
+    <member kind="function">
+      <type></type>
+      <name>JointTranslation</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>ab6fbfb9598c80deb4efb91943ead2f42</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>JointTranslation</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a50e621b99034b0fb13f2fe8b5951980c</anchor>
+      <arglist>(const JointTranslation&lt; dimension &gt; &amp;joint)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual JointPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>aed8fb8a1cbbed81adf7890cac63a879d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computePosition</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a94881fb1945f269c0d5e5c218755ed98</anchor>
+      <arglist>(ConfigurationIn_t configuration, const Transform3f &amp;parentPosition, Transform3f &amp;position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~JointTranslation</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a67a46f078f06630c807f9f970092f23e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>upperBoundLinearVelocity</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>ac95de0273733f5efe0d5c067ff6b8dc5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>upperBoundAngularVelocity</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a20e6481982fabd0fcce5271b60b1f2fd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computeMaximalDistanceToParent</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>adf0b1961cc38b7dcb467b834f8061e61</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::ObjectFactory</name>
+    <filename>a00019.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ObjectFactory</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>ad63b34d2535132d9219363a0c2674cca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ObjectFactory</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a0c091712797d182814d529febe259daf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual DevicePtr_t</type>
+      <name>createRobot</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a78700d505002c84ade9ca34d621bd7a0</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual HumanoidRobotPtr_t</type>
+      <name>createHumanoidRobot</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a709bcf8e9127bb44533deaf269449e09</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual JointPtr_t</type>
+      <name>createJointSO3</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a07d75adbc8b66e3daf32902c764ee322</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual JointPtr_t</type>
+      <name>createJointAnchor</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a810cb252385cf6f85987030c3c669d3d</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual JointPtr_t</type>
+      <name>createBoundedJointRotation</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a36262eb35fbb8d44cae2dd74de383d06</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual JointPtr_t</type>
+      <name>createUnBoundedJointRotation</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>adffb553e86ea02ddf3ca1e5fc524e51d</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual JointPtr_t</type>
+      <name>createJointTranslation</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>ae986fc0340d21fb37dd256fe16d03280</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual JointPtr_t</type>
+      <name>createJointTranslation2</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a61be420c13deb6edfe8ad054c432264f</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual JointPtr_t</type>
+      <name>createJointTranslation3</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>aa4e972b9436fa647e9c60d8feda83be3</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual BodyPtr_t</type>
+      <name>createBody</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a58fb0e9de0709ad5fa7cb6c06c6fa82d</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::ObjectIterator</name>
+    <filename>a00020.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ObjectIterator</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a86f2a180f8724c1707bfb63240aa57b6</anchor>
+      <arglist>(Device &amp;device, Request_t type)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CollisionObjectPtr_t &amp;</type>
+      <name>operator*</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a3fab9b1f728e47b00d5e5c673f19d53c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a56d386cd1aa08237d519c2a0660f62a0</anchor>
+      <arglist>(const ObjectIterator &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a5a9f6ae6f5f73aa6b08f65f095242e2a</anchor>
+      <arglist>(const ObjectIterator &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator++</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a5bb28616572dccf6fe882f7ad72cb925</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setToEnd</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a30caae45f49314cba1d406978a53bd04</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEnd</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a6090a28f578c154ce495eb97cdea02df</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::RotationJointConfig</name>
+    <filename>a00021.html</filename>
+    <base>hpp::model::JointConfiguration</base>
+    <member kind="function">
+      <type></type>
+      <name>RotationJointConfig</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>acac5d808b0fa1622e575def1a74bd2f3</anchor>
+      <arglist>(size_type configSize)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~RotationJointConfig</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a2a18d3968291c23c074a8aea01231209</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>interpolate</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a143fcdb6284c26d320eb7f27a50a2f4e</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const value_type &amp;u, const size_type &amp;index, ConfigurationOut_t result)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual value_type</type>
+      <name>distance</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a6ab7a80cf1014e7a4d8b601cb463f4bd</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>integrate</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>af25ae5af46c94074d8da4c2e092e46cf</anchor>
+      <arglist>(ConfigurationIn_t q, vectorIn_t v, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, ConfigurationOut_t result) const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>difference</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a1e9fa9a9e96cd84e855e59d374e70cac</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, vectorOut_t result) const  =0</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>normalize</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a78b2b12a195f1dfc10ae062b61a250fa</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>uniformlySample</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a20e11488d01c51c00ea843b3b16199c5</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const  =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::SO3JointConfig</name>
+    <filename>a00022.html</filename>
+    <base>hpp::model::JointConfiguration</base>
+    <member kind="function">
+      <type></type>
+      <name>SO3JointConfig</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a54e00e1e0a42a0eb47592c7a5e65014e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SO3JointConfig</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a4808de54b4ad5195b65dd9837308e916</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>interpolate</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a4ba50dc6f48decca10f7f67fd8def781</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const value_type &amp;u, const size_type &amp;index, ConfigurationOut_t result)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>distance</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>adecbba6cdd1f85698f7e9c2d59f67156</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>squaredDistance</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>afb968e3251d70b885c50a0bcffb3707e</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>integrate</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a2fd70a51b265422fe922c40512b508bf</anchor>
+      <arglist>(ConfigurationIn_t q, vectorIn_t v, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>difference</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>ad575dcb269d1858cd58e61e5b014b165</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, vectorOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>normalize</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a12677611bde6838791381ea1a1b2fde5</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>uniformlySample</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a78543e8bcfdae571cf11640b67e06663</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::model::Transform</name>
+    <filename>a00023.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>name</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>abcb068c68c2f08e5e99b08d151a88d5a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>p</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>aa4c5a43605ea3d7e924c64f5072339ff</anchor>
+      <arglist>[3]</arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>q</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>a61b17c94f6df79c685df3420721a4054</anchor>
+      <arglist>[4]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::TranslationJointConfig</name>
+    <filename>a00024.html</filename>
+    <templarg>dimension</templarg>
+    <base>hpp::model::JointConfiguration</base>
+    <member kind="function">
+      <type></type>
+      <name>TranslationJointConfig</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a0cd38989afa2dbc43b89657302dc35bf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~TranslationJointConfig</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a5da2d6ad63ebe80ef26bd2abf12e4bb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>interpolate</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>acf92ada587a0c9878dbe92ccf076117d</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const value_type &amp;u, const size_type &amp;index, ConfigurationOut_t result)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_type</type>
+      <name>distance</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>af689554c96095eb6c6720755ea199fb7</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>squaredDistance</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>ad153cb934ef19997c725e4e98784d6ef</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>integrate</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a786fa0471084c8079ac6a95b6f62b3e1</anchor>
+      <arglist>(ConfigurationIn_t q, vectorIn_t v, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>difference</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>ad0acb9efdbd620e4263078863fa1f5c1</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, vectorOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>normalize</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>ab602504538b28c7067f78c6ecdc8dd5b</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>uniformlySample</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a6595bb7b4504d91a993a7fc3871a9593</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::jointRotation::UnBounded</name>
+    <filename>a00025.html</filename>
+    <base>hpp::model::JointRotation</base>
+    <member kind="function">
+      <type></type>
+      <name>UnBounded</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>adc2b3e4ea37ce014ef572d1c394d2232</anchor>
+      <arglist>(const Transform3f &amp;initialPosition)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>UnBounded</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a27f6fc273accd90bcb30e5987f85fbf8</anchor>
+      <arglist>(const UnBounded &amp;joint)</arglist>
+    </member>
+    <member kind="function">
+      <type>JointPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a8d87dc47b0da4e2c4e6d20f5f8100534</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>computePosition</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a23b32fa8fc0c8abc60a7437d353b198b</anchor>
+      <arglist>(ConfigurationIn_t configuration, const Transform3f &amp;parentPosition, Transform3f &amp;position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~UnBounded</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>aa8fab587d51b261a1093e26c377b7dc7</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::model::rotationJointConfig::UnBounded</name>
+    <filename>a00026.html</filename>
+    <base>hpp::model::JointConfiguration</base>
+    <member kind="function">
+      <type></type>
+      <name>UnBounded</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>a7e1756b62e86b7a4b983dcd51be67418</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~UnBounded</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>ae6e73577d2d757f5c749e4f74e257a4a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>interpolate</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>a63637e2c3c6cdc2b437d4aa01586f128</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const value_type &amp;u, const size_type &amp;index, ConfigurationOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>distance</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>af376d6ab537d7babbd2eb8978b7ca4be</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>squaredDistance</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>a0448769f7f35c091fd961c1d7b58d1d6</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>integrate</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>a5c5aee8392f61db9f035931b7c29970e</anchor>
+      <arglist>(ConfigurationIn_t q, vectorIn_t v, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>difference</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>a5426bdba164ebc508e2e3d7fce2e22d9</anchor>
+      <arglist>(ConfigurationIn_t q1, ConfigurationIn_t q2, const size_type &amp;indexConfig, const size_type &amp;indexVelocity, vectorOut_t result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>normalize</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>aefe36f6afe23f3c3c440249f48a3791c</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>uniformlySample</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>a08d798ddd2fc56e67969cd9d73deb386</anchor>
+      <arglist>(const size_type &amp;index, ConfigurationOut_t result) const </arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>fcl</name>
+    <filename>a00045.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00045.html</anchorfile>
+      <anchor>abd78272eb300d9439c48497ca75207e7</anchor>
+      <arglist>(CollisionObject)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00045.html</anchorfile>
+      <anchor>ae865efb13d669ec9f2e2e533ce075908</anchor>
+      <arglist>(CollisionGeometry)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00045.html</anchorfile>
+      <anchor>aefc6411cea6a9416a18da897b5d2bdc7</anchor>
+      <arglist>(std::ostream &amp;os, const fcl::Transform3f &amp;trans)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00046.html</filename>
+    <namespace>hpp::model</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::model</name>
+    <filename>a00047.html</filename>
+    <namespace>hpp::model::jointRotation</namespace>
+    <namespace>hpp::model::rotationJointConfig</namespace>
+    <class kind="class">hpp::model::AnchorJointConfig</class>
+    <class kind="class">hpp::model::Body</class>
+    <class kind="class">hpp::model::CenterOfMassComputation</class>
+    <class kind="class">hpp::model::ChildrenIterator</class>
+    <class kind="class">hpp::model::CollisionObject</class>
+    <class kind="class">hpp::model::Device</class>
+    <class kind="struct">hpp::model::DistanceResult</class>
+    <class kind="class">hpp::model::ExtraConfigSpace</class>
+    <class kind="class">hpp::model::Gripper</class>
+    <class kind="class">hpp::model::HumanoidRobot</class>
+    <class kind="class">hpp::model::Joint</class>
+    <class kind="class">hpp::model::JointAnchor</class>
+    <class kind="class">hpp::model::JointConfiguration</class>
+    <class kind="class">hpp::model::JointRotation</class>
+    <class kind="class">hpp::model::JointSO3</class>
+    <class kind="class">hpp::model::JointTranslation</class>
+    <class kind="class">hpp::model::ObjectFactory</class>
+    <class kind="class">hpp::model::ObjectIterator</class>
+    <class kind="class">hpp::model::RotationJointConfig</class>
+    <class kind="class">hpp::model::SO3JointConfig</class>
+    <class kind="struct">hpp::model::Transform</class>
+    <class kind="class">hpp::model::TranslationJointConfig</class>
+    <member kind="typedef">
+      <type>std::vector&lt; Transform &gt;</type>
+      <name>ForwardGeometrys_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a8efcd6c471105adfbe4830c7dd5cd7e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double</type>
+      <name>value_type</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3029997890626e3c31b22dd1bf67cc4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, Eigen::Dynamic, 1 &gt;</type>
+      <name>vector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a869bf69abc62e43b97fab86848005991</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>vector_t</type>
+      <name>Configuration_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ad83a889e62fc1a8d0b4a50ceea926d6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; const Configuration_t &gt;</type>
+      <name>ConfigurationIn_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aa0f4294734f2cac439d576b47df1122e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; Configuration_t &gt;</type>
+      <name>ConfigurationOut_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a31eda249c934b79ef44be6f288aad486</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Configuration_t &gt;</type>
+      <name>ConfigurationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6e0dbf53ac7b79bf7af3a17241e4ea73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; const vector_t &gt;</type>
+      <name>vectorIn_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a52c4dc006f5265bf5430d3676cdf0638</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; vector_t &gt;</type>
+      <name>vectorOut_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ae3dfbcffe19f5c57eb01b27dbd4d95eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, Eigen::Dynamic, Eigen::Dynamic &gt;</type>
+      <name>matrix_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac6aa963bd3fa58e60c9c1903eb59b3be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Ref&lt; matrix_t &gt;</type>
+      <name>matrixOut_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aad20fc22a6d6f571ee3c859db44d5f97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>matrix_t::Index</type>
+      <name>size_type</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>afbe7922cd6bcd972f8440079e5c0c7f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::Matrix3f</type>
+      <name>matrix3_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a05f86d55af0c24f4fead4e82701e58a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::Vec3f</type>
+      <name>vector3_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a2461c5264f8fca4a787100ccddb02c9f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, 6, Eigen::Dynamic, Eigen::RowMajor &gt;</type>
+      <name>JointJacobian_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ab208c843d83173b002c51bec64331f69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; value_type, 3, Eigen::Dynamic, Eigen::RowMajor &gt;</type>
+      <name>ComJacobian_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a4b47d1efe6ecf8ee73aa17a1a3fc570b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Block&lt; JointJacobian_t, 3, Eigen::Dynamic &gt;</type>
+      <name>HalfJointJacobian_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a265d7968d9b39b2a2b0e975e81c799b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Body *</type>
+      <name>BodyPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6e753f7fc312022652aa6a7778f86493</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; Body * &gt;</type>
+      <name>BodyVector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a740b5bbafb27fce9cdddb3c72d6b28c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; CollisionObject &gt;</type>
+      <name>CollisionObjectPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>adfbbbf790e74618f8980835ddaae590d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; CollisionObjectPtr_t &gt;</type>
+      <name>ObjectVector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6c9567ad48538939a001e1cf7a209692</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Device &gt;</type>
+      <name>DevicePtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac36499719545c2ec81ce87980ce55ab5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const Device &gt;</type>
+      <name>DeviceConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a1621dd908c63ae674423801d239e7b10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; DistanceResult &gt;</type>
+      <name>DistanceResults_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ada8b9254be70c0e22d6ca62006a91029</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; HumanoidRobot &gt;</type>
+      <name>HumanoidRobotPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>adb7d3bffcccd688af3348be52ecc5248</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Joint *</type>
+      <name>JointPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac9ba227773702ebed5a0f08f72da5a7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointAnchor *</type>
+      <name>JointAnchorPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a2f3dbb7ce662427c1e59ecec44582bfb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointRotation *</type>
+      <name>JointRotationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aafa390086757e44475d6d540eec5479b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointSO3 *</type>
+      <name>JointSO3Ptr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a70b359dad5a16865ea40759458e22925</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointTranslation&lt; 1 &gt; *</type>
+      <name>JointTranslationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>af5135eff8cb801e3877c4c38b73a626c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointTranslation&lt; 2 &gt; *</type>
+      <name>JointTranslation2Ptr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a5602370009848f04f27c16be7295fb42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointTranslation&lt; 3 &gt; *</type>
+      <name>JointTranslation3Ptr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3965b6c45866fabf8bf1f8285dda26bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const Joint *</type>
+      <name>JointConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a151f539f12060e41d47eff04c33741f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointAnchor *</type>
+      <name>JointAnchorConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a236391f09da3ca9e4beda069dbc56593</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointRotation *</type>
+      <name>JointRotationConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a9e037f2f3bcbe836028769494d76fcce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointSO3 *</type>
+      <name>JointSO3ConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a4d5e3139d5c8be6419d43537c61fbccb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointTranslation&lt; 1 &gt; *</type>
+      <name>JointTranslationConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ab3cf51f571b213a2a5bbbb7bd4a24b16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointTranslation&lt; 2 &gt; *</type>
+      <name>JointTranslation2ConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aaf510ac5010c91b2e0931b079c8a80cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>const JointTranslation&lt; 3 &gt; *</type>
+      <name>JointTranslation3ConstPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0736a73ff9eb41f68d90c328a6641848</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, JointPtr_t &gt;</type>
+      <name>JointByName_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a202cbc89cf4c4dbfb8bc060d099aedad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; JointPtr_t &gt;</type>
+      <name>JointVector_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aef36b771ab7b808f9aa500592b703fff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>JointVector_t</type>
+      <name>JointGroup_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a51a665723f3b2e382da5588e3bdd64c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, JointGroup_t &gt;</type>
+      <name>JointGroups_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0d55e775c6e3af38c9a747f76a75cf2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Gripper &gt;</type>
+      <name>GripperPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ae53c3648a10d286e930c5f229b3d3faa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; GripperPtr_t &gt;</type>
+      <name>Grippers_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3b58381ba8c1d4b4f92d9e702a142a39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::Transform3f</type>
+      <name>Transform3f</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a825a050f91b7c51bd65573cdd9085049</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; CenterOfMassComputation &gt;</type>
+      <name>CenterOfMassComputationPtr_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aac2f8b903b0f2f13a022fc881f7b5e7d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>Request_t</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3ff1c77061395420aaa192a56fde37cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>COLLISION</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3ff1c77061395420aaa192a56fde37cba7ee45cf7f2b33c030138d72e96bd57cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DISTANCE</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a3ff1c77061395420aaa192a56fde37cba7cee72f60ee355def3eaeb5725ee9063</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>integrate</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a84c18b57bfeb38fd993af01e4bd9399a</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t configuration, vectorIn_t velocity, ConfigurationOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>interpolate</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6a68bdd47f1be18a343761c95a55a019</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t q0, ConfigurationIn_t q1, const value_type &amp;u, ConfigurationOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>difference</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a520a491275555c9985272779096639f6</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t q1, ConfigurationIn_t q2, vectorOut_t result)</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>distance</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aa8c5eda61c9a10f08ae64acd46a0563f</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationIn_t q1, ConfigurationIn_t q2)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>normalize</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aa7173e67d43caf6ffb2bfaa3dbb244e0</anchor>
+      <arglist>(const DevicePtr_t &amp;robot, ConfigurationOut_t q)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>displayConfig</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a8f0b9196cc6ac85c6791335ff92ac7f9</anchor>
+      <arglist>(ConfigurationIn_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ab520d10ce0df38d5fce8893db622c254</anchor>
+      <arglist>(DevicePtr_t device, ConfigurationIn_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>aac5d52ca6841d789a30a64b484fb0944</anchor>
+      <arglist>(DevicePtr_t device, Configuration_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>abffe98327684e9eb34692d59ee56ded9</anchor>
+      <arglist>(DevicePtr_t device, ConfigurationOut_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ad9b1d4b34eb9eaad08d2a469395d7077</anchor>
+      <arglist>(HumanoidRobotPtr_t device, ConfigurationOut_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a5aa5b21fc07a154a8e7db78742eaac0c</anchor>
+      <arglist>(HumanoidRobotPtr_t device, ConfigurationIn_t q)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ForwardGeometrys_t</type>
+      <name>forwardGeometry</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a406a90636b14df14bf6b00eca7284457</anchor>
+      <arglist>(HumanoidRobotPtr_t device, Configuration_t q)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a311e35d458f88c95f2328407fc8b2ebd</anchor>
+      <arglist>(std::ostream &amp;os, const hpp::model::Device &amp;device)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>toEigen</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a4f70840ff4909d68b4364c1e7b61f5f3</anchor>
+      <arglist>(const hpp::model::vector3_t &amp;v, Eigen::Matrix&lt; value_type, 3, 1 &gt; &amp;res)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>toEigen</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>abd23ce21134353cf745b54f7b38e23c5</anchor>
+      <arglist>(const hpp::model::vector3_t &amp;v, hpp::model::vectorOut_t res)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>toEigen</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a237f962c69391533d3cd65e8700f635f</anchor>
+      <arglist>(const hpp::model::matrix3_t &amp;m, hpp::model::matrixOut_t res)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a1dcecaf44de1aefa2512276bdb10fde1</anchor>
+      <arglist>(Body)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a04fa383e7a9a23fe2410b5b6b8d2491d</anchor>
+      <arglist>(ChildrenIterator)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a44ccc0c6d0dfeee699158d5c5532a764</anchor>
+      <arglist>(CollisionObject)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a062cc4c8a5cf24f273d045122e3b0c1e</anchor>
+      <arglist>(Device)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a6dca81efb8c6f844441900448c5a3471</anchor>
+      <arglist>(DistanceResult)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0462812d27d4e42aa7d82b86af549a9d</anchor>
+      <arglist>(HumanoidRobot)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>afa98b62124811366d63d65f9199b0dfe</anchor>
+      <arglist>(Joint)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a0c344d13f029256690e20f96058d92cf</anchor>
+      <arglist>(JointAnchor)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>af3ce2c5fec1ffd8bb0afac1a155c9294</anchor>
+      <arglist>(JointRotation)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a45c7ef0952fdfabf8fd6663f6d70902c</anchor>
+      <arglist>(JointSO3)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ac770bcab526c3f93e525579c1457be0f</anchor>
+      <arglist>(JointConfiguration)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a20bdd3170f16e40998945ec69d97f42b</anchor>
+      <arglist>(ObjectFactory)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a63e77618e2db25ea1464ee8fdae9a42a</anchor>
+      <arglist>(ObjectIterator)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a9cdcb61f94e0d5d95caeeb72ecb20733</anchor>
+      <arglist>(Gripper)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a54f243352706eba0122ae437d29d96af</anchor>
+      <arglist>(CenterOfMassComputation)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>a538e59e17a3347866a3668de31dc0e8a</anchor>
+      <arglist>(std::ostream &amp;os, const Gripper &amp;gripper)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00047.html</anchorfile>
+      <anchor>ae84240965828521f2c22456d5beff123</anchor>
+      <arglist>(std::ostream &amp;os, const hpp::model::Joint &amp;joint)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::model::jointRotation</name>
+    <filename>a00048.html</filename>
+    <class kind="class">hpp::model::jointRotation::Bounded</class>
+    <class kind="class">hpp::model::jointRotation::UnBounded</class>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::model::rotationJointConfig</name>
+    <filename>a00049.html</filename>
+    <class kind="class">hpp::model::rotationJointConfig::Bounded</class>
+    <class kind="class">hpp::model::rotationJointConfig::UnBounded</class>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+    <docanchor file="index" title="Introduction">sec_intro_hpp_model</docanchor>
+    <docanchor file="index" title="Main classes">sec_hpp_model_main_classes</docanchor>
+    <docanchor file="index" title="Joints">subsec_hpp_model_joint</docanchor>
+    <docanchor file="index" title="Joint configuration">hpp_model_joint_configuration</docanchor>
+    <docanchor file="index" title="Device">subsec_hpp_model_device</docanchor>
+    <docanchor file="index">Configuration</docanchor>
+    <docanchor file="index">Velocity</docanchor>
+    <docanchor file="index" title="Operations between configurations and velocities">hpp_model_operation_between_configurations_and_velocities</docanchor>
+  </compound>
+</tagfile>

@@ -1,0 +1,16 @@
+digraph "fcl::Variance3f"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="fcl::Variance3f",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" axis" ,fontname="FreeSans"];
+  Node2 [label="fcl::Vec3fX\< details\l::Vec3Data\< FCL_REAL \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00223.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="FreeSans"];
+  Node3 [label="fcl::details::Vec3Data\l\< FCL_REAL \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00222.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Sigma" ,fontname="FreeSans"];
+  Node4 [label="fcl::Matrix3fX\< details\l::Matrix3Data\< FCL_REAL \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00088.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="FreeSans"];
+  Node5 [label="fcl::details::Matrix3Data\l\< FCL_REAL \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00087.html"];
+  Node3 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rs" ,fontname="FreeSans"];
+}

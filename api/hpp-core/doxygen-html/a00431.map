@@ -1,0 +1,6 @@
+<map id="hpp::core::ValidationReport" name="hpp::core::ValidationReport">
+<area shape="rect" id="node2" href="$a00009.html" title="Validate a configuration with respect to collision. " alt="" coords="243,5,434,46"/>
+<area shape="rect" id="node3" href="$a00045.html" title="Exception thrown when a configuration is not within the bounds. " alt="" coords="235,70,442,111"/>
+<area shape="rect" id="node4" href="$a00063.html" title="Abstraction of path validation report. " alt="" coords="255,135,423,177"/>
+<area shape="rect" id="node5" href="$a00007.html" title="Path validation report used for standard collision checking. " alt="" coords="491,135,653,177"/>
+</map>

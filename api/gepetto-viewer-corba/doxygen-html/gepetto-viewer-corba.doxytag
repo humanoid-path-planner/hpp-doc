@@ -1,0 +1,2180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>client.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer-corba/include/gepetto/viewer/corba/</path>
+    <filename>a00012</filename>
+    <class kind="class">graphics::corbaServer::Client</class>
+    <namespace>graphics</namespace>
+    <namespace>graphics::corbaServer</namespace>
+  </compound>
+  <compound kind="file">
+    <name>client.idl</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer-corba/idl/gepetto/viewer/corba/</path>
+    <filename>a00013</filename>
+    <class kind="interface">gepetto::corbaserver::Client</class>
+    <namespace>gepetto</namespace>
+    <namespace>gepetto::corbaserver</namespace>
+  </compound>
+  <compound kind="file">
+    <name>doc.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer-corba/include/gepetto/viewer/corba/</path>
+    <filename>a00014</filename>
+  </compound>
+  <compound kind="file">
+    <name>fwd.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer-corba/include/gepetto/viewer/corba/</path>
+    <filename>a00015</filename>
+    <namespace>graphics</namespace>
+    <namespace>graphics::corbaServer</namespace>
+    <namespace>graphics::corbaServer::impl</namespace>
+  </compound>
+  <compound kind="file">
+    <name>corba/graphical-interface.idl</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer-corba/idl/gepetto/viewer/corba/</path>
+    <filename>a00016</filename>
+    <includes id="a00013" name="client.idl" local="yes" imported="yes">gepetto/viewer/corba/client.idl</includes>
+    <class kind="exception">gepetto::Error</class>
+    <class kind="interface">gepetto::corbaserver::GraphicalInterface</class>
+    <namespace>gepetto</namespace>
+    <namespace>gepetto::corbaserver</namespace>
+    <member kind="typedef">
+      <type>sequence&lt; string &gt;</type>
+      <name>Names_t</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a2495b909eea476a19566e13db3eb3767</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>float</type>
+      <name>Transform</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a5c96fd8eba49d973d91fc96d44317846</anchor>
+      <arglist>[7]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>float</type>
+      <name>Position</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a519faa0e7234d4f794cee35bc5bae644</anchor>
+      <arglist>[3]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>float</type>
+      <name>Color</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a78ad80d679401af8a1effa336bee67ac</anchor>
+      <arglist>[4]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>unsigned long</type>
+      <name>WindowID</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a54f4db3a9bd02d06d42eaedccc6e5993</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; string &gt;</type>
+      <name>Names_t</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a56613acaa6c144fa124d96f1fa9cc5c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; float &gt;</type>
+      <name>floatSeq</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>ad37b781b359d1b35ee32a2dcc9d9676b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; Position &gt;</type>
+      <name>PositionSeq</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>aed852d4897b1f171c927ed4777489f99</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>graphical-interface.idl</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer-corba/idl/gepetto/viewer/</path>
+    <filename>a00017</filename>
+    <class kind="exception">gepetto::Error</class>
+    <class kind="interface">gepetto::corbaserver::GraphicalInterface</class>
+    <namespace>gepetto</namespace>
+    <namespace>gepetto::corbaserver</namespace>
+  </compound>
+  <compound kind="file">
+    <name>se3.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer-corba/include/gepetto/viewer/corba/</path>
+    <filename>a00018</filename>
+    <class kind="struct">se3::internal::ActionReturn</class>
+    <class kind="class">se3::SE3Tpl</class>
+    <namespace>se3</namespace>
+    <namespace>se3::internal</namespace>
+    <member kind="typedef">
+      <type>SE3Tpl&lt; float, 0 &gt;</type>
+      <name>SE3</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>a11cdc2b80eaa04c1e88715c630b932bd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>server.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer-corba/include/gepetto/viewer/corba/</path>
+    <filename>a00019</filename>
+    <includes id="a00015" name="fwd.hh" local="yes" imported="no">gepetto/viewer/corba/fwd.hh</includes>
+    <includes id="a00020" name="windows-manager.hh" local="no" imported="no">gepetto/viewer/corba/windows-manager.hh</includes>
+    <class kind="class">graphics::corbaServer::Server</class>
+    <namespace>graphics</namespace>
+    <namespace>graphics::corbaServer</namespace>
+  </compound>
+  <compound kind="file">
+    <name>windows-manager.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer-corba/include/gepetto/viewer/corba/</path>
+    <filename>a00020</filename>
+    <class kind="struct">graphics::NodeConfiguration</class>
+    <class kind="struct">graphics::BlenderFrameCapture</class>
+    <class kind="struct">graphics::UrdfFile</class>
+    <class kind="class">graphics::WindowsManager</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="struct">
+    <name>se3::internal::ActionReturn</name>
+    <filename>a00001.html</filename>
+    <templarg>D</templarg>
+    <member kind="typedef">
+      <type>D</type>
+      <name>Type</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ad312568b250492d547bbfcfffd638873</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>graphics::BlenderFrameCapture</name>
+    <filename>a00002.html</filename>
+    <member kind="typedef">
+      <type>std::vector&lt; NodePtr_t &gt;</type>
+      <name>Nodes_t</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ae8db8cae7906d24b7616f43eb5f7599b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>BlenderFrameCapture</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a1041a9008b14da105e0363a4275c1f5f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>captureFrame</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a7575bb61805249f662a00d8a967dcffc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>osg::ref_ptr&lt; TransformWriterVisitor &gt;</type>
+      <name>writer_visitor_</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a55de32eac4cb8a7f5932a7fb06d5eea3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Nodes_t</type>
+      <name>nodes_</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a876c116a453300077e19767a13d1958f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::corbaServer::Client</name>
+    <filename>a00003.html</filename>
+    <member kind="typedef">
+      <type>CORBA::ULong</type>
+      <name>WindowID</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a743f631bc8558a2b455bc915c01dfd8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Client</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>ab33013903f65a3eb161f184f099f3efc</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Client</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>aeff4a8e893cdb045a4144a31c146f986</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>connect</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a2d7df09e8a2d5cfd118405b55936aace</anchor>
+      <arglist>(const char *iiop=&quot;corbaloc:rir:/NameService&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>gepetto::corbaserver::GraphicalInterface_var &amp;</type>
+      <name>gui</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a79e0f8306901bc4cd13aa2a6da2dc292</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="interface">
+    <name>gepetto::corbaserver::Client</name>
+    <filename>a00004.html</filename>
+    <member kind="function">
+      <type>wstring</type>
+      <name>callback</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>afb2155159aef87ba33cb1427e2d26a7a</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="exception">
+    <name>gepetto::Error</name>
+    <filename>a00005.html</filename>
+    <member kind="variable">
+      <type>string</type>
+      <name>msg</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a43aff40dbfccfa12eff437239f75e81c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="interface">
+    <name>gepetto::corbaserver::GraphicalInterface</name>
+    <filename>a00006.html</filename>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setRate</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a2e7c8146b9169ce894bde88c071ff0f9</anchor>
+      <arglist>(in long rate)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>refresh</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a534c8914c184d6a66012e3b492f18f46</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned long</type>
+      <name>createWindow</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a34cfc52cf5e9336d83ef97c12a6a8946</anchor>
+      <arglist>(in string name)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned long</type>
+      <name>getWindowID</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a00a770041b74a9b84af5d33b7506bb64</anchor>
+      <arglist>(in string name)</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getNodeList</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aadba4f06372e42a6ff564dad6faa7f2a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getGroupNodeList</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>afc513f5961a634a709b51860a97d3325</anchor>
+      <arglist>(in string group)</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getWindowList</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a75af5d42d2d07b0576e82460145d5717</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createScene</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab70959d36090f6b57b426a7f783bfe19</anchor>
+      <arglist>(in string sceneName)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createSceneWithFloor</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae5e78924db60b5415399ff6fe74e9f32</anchor>
+      <arglist>(in string sceneName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addSceneToWindow</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a41ffa661e7a78153754499aadaea20ed</anchor>
+      <arglist>(in string sceneName, in unsigned long windowId)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addFloor</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ad048ab645ddde94779bc8f05f620ea04</anchor>
+      <arglist>(in string floorName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addBox</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>abae443d43bd01f602f50323424c29052</anchor>
+      <arglist>(in string boxName, in float boxSize1, in float boxSize2, in float boxSize3, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addCapsule</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aeb849a14dadb9fdfb0f8f91090af31ef</anchor>
+      <arglist>(in string capsuleName, in float radius, in float height, in Color RGBAcolorid)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addArrow</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a409b8375d59f1252bcc91bb036d6561e</anchor>
+      <arglist>(in string arrowName, in float radius, in float length, in Color RGBAcolorid)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addRod</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>abc62b7c9bd4bb245f9860695e02b19e2</anchor>
+      <arglist>(in string rodName, in Color RGBAcolorid, in float radius, in float totalLength, in short maxCapsule)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>resizeCapsule</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a6032d32899278bc41f617b50c0480f02</anchor>
+      <arglist>(in string capsuleName, in float height)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>resizeArrow</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a92f60bcde7ca6a5848f3770332322079</anchor>
+      <arglist>(in string capsuleName, in float radius, in float length)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addMesh</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a218a2bca9733b9779c4e7bf89858deae</anchor>
+      <arglist>(in string meshName, in string meshPath)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addCone</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aea54d13ba1aa8595e604800c06b0e8db</anchor>
+      <arglist>(in string coneName, in float radius, in float height, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addCylinder</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a6d2f44232de8ed30785597de05c47f0e</anchor>
+      <arglist>(in string cylinderName, in float radius, in float height, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addSphere</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae5cd956a878d65a57b4c030c0986a24d</anchor>
+      <arglist>(in string sphereName, in float radius, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addLight</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab658c1e96f13b780b0ed5a83f664623a</anchor>
+      <arglist>(in string lightName, in WindowID wid, in float radius, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addLine</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab21aec868ec0876dbd3439e4e7c6ab01</anchor>
+      <arglist>(in string lineName, in Position pos1, in Position pos2, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addCurve</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a41e24e124b83295ca1d315af893ab6a5</anchor>
+      <arglist>(in string curveName, in PositionSeq pos, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setCurveMode</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a4896bb5ee9dd57796f20343b8956dc40</anchor>
+      <arglist>(in string curveName, in string mode)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addSquareFace</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>acd312cda9e2b81d02c0b45e2b6067068</anchor>
+      <arglist>(in string faceName, in Position pos1, in Position pos2, in Position pos3, in Position pos4, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addTriangleFace</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ad86e0f51381846412cb1f4f365421603</anchor>
+      <arglist>(in string faceName, in Position pos1, in Position pos2, in Position pos3, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addXYZaxis</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ac9fa8d343ef8b899f321abfe486bf5c3</anchor>
+      <arglist>(in string nodeName, in Color RGBAcolor, in float radius, in float sizeAxis)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>createRoadmap</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a346c9f0c560ed1feb6e40637042c9a65</anchor>
+      <arglist>(in string nameCorba, in Color RGBAcolorNode, in float radius, in float sizeAxis, in Color RGBAcolorEdge)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addEdgeToRoadmap</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ababb0cce47d10d12917037c367324c4a</anchor>
+      <arglist>(in string nameRoadmap, in Position posFrom, in Position posTo)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addNodeToRoadmap</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae5f7a9a50b3d4c4afda738a9a90544d3</anchor>
+      <arglist>(in string nameRoadmap, in Transform configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addURDF</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aa00a4dd80454d17c6316a1bb056dd8a6</anchor>
+      <arglist>(in string robotName, in string urdfFilePath, in string meshDataRootDir)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addUrdfCollision</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a17be15f1a9c340a862da23b0ce7af9a1</anchor>
+      <arglist>(in string robotName, in string urdfFilePath, in string meshDataRootDir)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUrdfObjects</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a4bc79b63f41816e2a28f3412086b70a7</anchor>
+      <arglist>(in string nodeName, in string urdfFilePath, in string meshDataRootDir, in boolean visual)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>createGroup</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>af0ced49a729b9cb14a22e939e7abff98</anchor>
+      <arglist>(in string groupName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addToGroup</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a140cd960c6a57ae6e9d443177626c5d7</anchor>
+      <arglist>(in string nodeName, in string groupName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>removeFromGroup</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aa34c4fbd2adece029786854a38019a90</anchor>
+      <arglist>(in string nodeName, in string groupName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>applyConfiguration</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a006469b5d26fdb6e42c9a84f19662789</anchor>
+      <arglist>(in string nodeName, in Transform configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addLandmark</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ac128883acc3e05ea52b6651c2d8391b2</anchor>
+      <arglist>(in string nodeName, in float size)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>deleteLandmark</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a7b376b97f268598c039ce7d045e4f723</anchor>
+      <arglist>(in string nodeName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>getStaticTransform</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>af64607ff1171f698e932e07710529cda</anchor>
+      <arglist>(in string nodeName, out Transform configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setVisibility</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aa38f3e30914cbd5242239ba02db6d0c9</anchor>
+      <arglist>(in string nodeName, in string visibilityMode)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setScale</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a46dfc416dca269e0fce05cc8d306e8de</anchor>
+      <arglist>(in string nodeName, in Position scale)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setColor</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a2cfe6046375edd6b565794ab24c625d0</anchor>
+      <arglist>(in string nodeName, in Color scale)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setWireFrameMode</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aa8e74483f8e54abcddf6cb17b0fb9199</anchor>
+      <arglist>(in string nodeName, in string wireFrameMode)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setLightingMode</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab31494d59e7f9f61e854afa8a02641ab</anchor>
+      <arglist>(in string nodeName, in string lightingMode)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setHighlight</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>abf9a59bad9a1752e05415d16e0f8bc60</anchor>
+      <arglist>(in string nodeName, in long state)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>startCapture</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a0d7980b165c2a9f0c9ae1ad4c3b6211d</anchor>
+      <arglist>(in unsigned long windowId, in string filename, in string extension)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>stopCapture</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab3eac35d0bbe28c60fe1a76d297ec59f</anchor>
+      <arglist>(in unsigned long windowId)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setCaptureTransform</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a242e4f1bf0fecf04d14818485ff8a7be</anchor>
+      <arglist>(in string filename, in Names_t nodeNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>captureTransformOnRefresh</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ad8c3b56c3e148b992613067571e3f141</anchor>
+      <arglist>(in boolean autoCapture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>captureTransform</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>addf3873a3eb4ebcf368b08cd3c014c2b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>writeNodeFile</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae5851e517073846d19f35111037e768d</anchor>
+      <arglist>(in string nodeName, in string filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>writeWindowFile</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a3cabbe0705f8c6ed00e1a3085fedda08</anchor>
+      <arglist>(in unsigned long windowId, in string filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>floatSeq</type>
+      <name>getNodeGlobalTransform</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a3d1dce52b62b3c3eff2773e61f8b177a</anchor>
+      <arglist>(in string nodeName)</arglist>
+    </member>
+    <member kind="function">
+      <type>wstring</type>
+      <name>test</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae232d4258d4557faa43d87b24aecc21a</anchor>
+      <arglist>(in Client obj)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setRate</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a2e7c8146b9169ce894bde88c071ff0f9</anchor>
+      <arglist>(in long rate)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>refresh</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a534c8914c184d6a66012e3b492f18f46</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned long</type>
+      <name>createWindow</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a34cfc52cf5e9336d83ef97c12a6a8946</anchor>
+      <arglist>(in string name)</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned long</type>
+      <name>getWindowID</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a00a770041b74a9b84af5d33b7506bb64</anchor>
+      <arglist>(in string name)</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getNodeList</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aadba4f06372e42a6ff564dad6faa7f2a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getGroupNodeList</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>afc513f5961a634a709b51860a97d3325</anchor>
+      <arglist>(in string group)</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getWindowList</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a75af5d42d2d07b0576e82460145d5717</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createScene</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab70959d36090f6b57b426a7f783bfe19</anchor>
+      <arglist>(in string sceneName)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createSceneWithFloor</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae5e78924db60b5415399ff6fe74e9f32</anchor>
+      <arglist>(in string sceneName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addSceneToWindow</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a41ffa661e7a78153754499aadaea20ed</anchor>
+      <arglist>(in string sceneName, in unsigned long windowId)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addFloor</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ad048ab645ddde94779bc8f05f620ea04</anchor>
+      <arglist>(in string floorName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addBox</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>abae443d43bd01f602f50323424c29052</anchor>
+      <arglist>(in string boxName, in float boxSize1, in float boxSize2, in float boxSize3, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addCapsule</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aeb849a14dadb9fdfb0f8f91090af31ef</anchor>
+      <arglist>(in string capsuleName, in float radius, in float height, in Color RGBAcolorid)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addArrow</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a409b8375d59f1252bcc91bb036d6561e</anchor>
+      <arglist>(in string arrowName, in float radius, in float length, in Color RGBAcolorid)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addRod</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>abc62b7c9bd4bb245f9860695e02b19e2</anchor>
+      <arglist>(in string rodName, in Color RGBAcolorid, in float radius, in float totalLength, in short maxCapsule)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>resizeCapsule</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a6032d32899278bc41f617b50c0480f02</anchor>
+      <arglist>(in string capsuleName, in float height)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>resizeArrow</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a92f60bcde7ca6a5848f3770332322079</anchor>
+      <arglist>(in string capsuleName, in float radius, in float length)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addMesh</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a218a2bca9733b9779c4e7bf89858deae</anchor>
+      <arglist>(in string meshName, in string meshPath)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addCone</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aea54d13ba1aa8595e604800c06b0e8db</anchor>
+      <arglist>(in string coneName, in float radius, in float height, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addCylinder</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a6d2f44232de8ed30785597de05c47f0e</anchor>
+      <arglist>(in string cylinderName, in float radius, in float height, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addSphere</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae5cd956a878d65a57b4c030c0986a24d</anchor>
+      <arglist>(in string sphereName, in float radius, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addLight</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab658c1e96f13b780b0ed5a83f664623a</anchor>
+      <arglist>(in string lightName, in WindowID wid, in float radius, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addLine</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab21aec868ec0876dbd3439e4e7c6ab01</anchor>
+      <arglist>(in string lineName, in Position pos1, in Position pos2, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addCurve</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a41e24e124b83295ca1d315af893ab6a5</anchor>
+      <arglist>(in string curveName, in PositionSeq pos, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setCurveMode</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a4896bb5ee9dd57796f20343b8956dc40</anchor>
+      <arglist>(in string curveName, in string mode)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addSquareFace</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>acd312cda9e2b81d02c0b45e2b6067068</anchor>
+      <arglist>(in string faceName, in Position pos1, in Position pos2, in Position pos3, in Position pos4, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addTriangleFace</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ad86e0f51381846412cb1f4f365421603</anchor>
+      <arglist>(in string faceName, in Position pos1, in Position pos2, in Position pos3, in Color RGBAcolor)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addXYZaxis</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ac9fa8d343ef8b899f321abfe486bf5c3</anchor>
+      <arglist>(in string nodeName, in Color RGBAcolor, in float radius, in float sizeAxis)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>createRoadmap</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a346c9f0c560ed1feb6e40637042c9a65</anchor>
+      <arglist>(in string nameCorba, in Color RGBAcolorNode, in float radius, in float sizeAxis, in Color RGBAcolorEdge)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addEdgeToRoadmap</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ababb0cce47d10d12917037c367324c4a</anchor>
+      <arglist>(in string nameRoadmap, in Position posFrom, in Position posTo)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addNodeToRoadmap</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae5f7a9a50b3d4c4afda738a9a90544d3</anchor>
+      <arglist>(in string nameRoadmap, in Transform configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addURDF</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aa00a4dd80454d17c6316a1bb056dd8a6</anchor>
+      <arglist>(in string robotName, in string urdfFilePath, in string meshDataRootDir)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addUrdfCollision</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a17be15f1a9c340a862da23b0ce7af9a1</anchor>
+      <arglist>(in string robotName, in string urdfFilePath, in string meshDataRootDir)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addUrdfObjects</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a4bc79b63f41816e2a28f3412086b70a7</anchor>
+      <arglist>(in string nodeName, in string urdfFilePath, in string meshDataRootDir, in boolean visual)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>createGroup</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>af0ced49a729b9cb14a22e939e7abff98</anchor>
+      <arglist>(in string groupName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addToGroup</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a140cd960c6a57ae6e9d443177626c5d7</anchor>
+      <arglist>(in string nodeName, in string groupName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>removeFromGroup</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aa34c4fbd2adece029786854a38019a90</anchor>
+      <arglist>(in string nodeName, in string groupName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>applyConfiguration</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a006469b5d26fdb6e42c9a84f19662789</anchor>
+      <arglist>(in string nodeName, in Transform configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>addLandmark</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ac128883acc3e05ea52b6651c2d8391b2</anchor>
+      <arglist>(in string nodeName, in float size)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>deleteLandmark</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a7b376b97f268598c039ce7d045e4f723</anchor>
+      <arglist>(in string nodeName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>getStaticTransform</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>af64607ff1171f698e932e07710529cda</anchor>
+      <arglist>(in string nodeName, out Transform configuration)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setVisibility</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aa38f3e30914cbd5242239ba02db6d0c9</anchor>
+      <arglist>(in string nodeName, in string visibilityMode)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setScale</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a46dfc416dca269e0fce05cc8d306e8de</anchor>
+      <arglist>(in string nodeName, in Position scale)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setColor</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a2cfe6046375edd6b565794ab24c625d0</anchor>
+      <arglist>(in string nodeName, in Color scale)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setWireFrameMode</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aa8e74483f8e54abcddf6cb17b0fb9199</anchor>
+      <arglist>(in string nodeName, in string wireFrameMode)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setLightingMode</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab31494d59e7f9f61e854afa8a02641ab</anchor>
+      <arglist>(in string nodeName, in string lightingMode)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setHighlight</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>abf9a59bad9a1752e05415d16e0f8bc60</anchor>
+      <arglist>(in string nodeName, in long state)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>startCapture</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a0d7980b165c2a9f0c9ae1ad4c3b6211d</anchor>
+      <arglist>(in unsigned long windowId, in string filename, in string extension)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>stopCapture</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab3eac35d0bbe28c60fe1a76d297ec59f</anchor>
+      <arglist>(in unsigned long windowId)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>setCaptureTransform</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a242e4f1bf0fecf04d14818485ff8a7be</anchor>
+      <arglist>(in string filename, in Names_t nodeNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>captureTransformOnRefresh</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ad8c3b56c3e148b992613067571e3f141</anchor>
+      <arglist>(in boolean autoCapture)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>captureTransform</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>addf3873a3eb4ebcf368b08cd3c014c2b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>writeNodeFile</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae5851e517073846d19f35111037e768d</anchor>
+      <arglist>(in string nodeName, in string filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>writeWindowFile</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a3cabbe0705f8c6ed00e1a3085fedda08</anchor>
+      <arglist>(in unsigned long windowId, in string filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>floatSeq</type>
+      <name>getNodeGlobalTransform</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a3d1dce52b62b3c3eff2773e61f8b177a</anchor>
+      <arglist>(in string nodeName)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>graphics::NodeConfiguration</name>
+    <filename>a00007.html</filename>
+    <member kind="variable">
+      <type>NodePtr_t</type>
+      <name>node</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a5115b92ec3a96d1de71f91f12f608e5c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>osgVector3</type>
+      <name>position</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>afdfbdb5343fc8bdc83e313d83ec5adfe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>osgQuat</type>
+      <name>quat</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a049a21f97382ccfd8f700f5f9ebc9821</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>se3::SE3Tpl</name>
+    <filename>a00008.html</filename>
+    <templarg>_Scalar</templarg>
+    <templarg>_Options</templarg>
+    <member kind="enumvalue">
+      <name>Options</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1267774813a07b92463863d140cdba81a71c8e2ec81bb6b48cf5daba336ae3a58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LINEAR</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ace1495dd5d62a4d181d9cbbd34089869ac2133af6eebdb80cdba52fea9070806b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ANGULAR</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ace1495dd5d62a4d181d9cbbd34089869aeaf3d7fe50c69922795a8cd11d703cce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>_Scalar</type>
+      <name>Scalar</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a8c43197af2ae841bb6b37c444d49b91c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; Scalar, 3, 1, Options &gt;</type>
+      <name>Vector3</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a723d53a880deba8627dbb3d3abe33a04</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; Scalar, 4, 1, Options &gt;</type>
+      <name>Vector4</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a80058f7befe8a992d8ac59ce1fedc63c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; Scalar, 3, 3, Options &gt;</type>
+      <name>Matrix3</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a7f82646db07f3e38df5a984f73b513f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; Scalar, 6, 1, Options &gt;</type>
+      <name>Vector6</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a22bb53e51933fd498439388518c2fca9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; Scalar, 4, 4, Options &gt;</type>
+      <name>Matrix4</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a4d9250f455c74a37f469993a7fa536fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Matrix&lt; Scalar, 6, 6, Options &gt;</type>
+      <name>Matrix6</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a5c32760fff3b8e87a4d2a390b0bcbc78</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Eigen::Quaternion&lt; Scalar, Options &gt;</type>
+      <name>Quaternion</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a3d36aacca10dc21345380a53fbfb5597</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Options</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1267774813a07b92463863d140cdba81a71c8e2ec81bb6b48cf5daba336ae3a58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LINEAR</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ace1495dd5d62a4d181d9cbbd34089869ac2133af6eebdb80cdba52fea9070806b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ANGULAR</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ace1495dd5d62a4d181d9cbbd34089869aeaf3d7fe50c69922795a8cd11d703cce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SE3Tpl</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>af7cd282e3c97be0521664d6aed1ea569</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SE3Tpl</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>aad184b3d72e3aa179afdc0ac59f0e025</anchor>
+      <arglist>(const Eigen::MatrixBase&lt; M3 &gt; &amp;R, const Eigen::MatrixBase&lt; v3 &gt; &amp;p)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SE3Tpl</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afe993572d83af68a8a67622bff17de22</anchor>
+      <arglist>(int)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SE3Tpl</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>abc1a9da61064889d7ac97a82d79c71d7</anchor>
+      <arglist>(const SE3Tpl&lt; S2, O2 &gt; clone)</arglist>
+    </member>
+    <member kind="function">
+      <type>SE3Tpl &amp;</type>
+      <name>operator=</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ac744e8f2d78d9389c387e68dad386b70</anchor>
+      <arglist>(const SE3Tpl&lt; S2, O2 &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Matrix3 &amp;</type>
+      <name>rotation</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1fc07f4afe803a3bd4c236577ce9a32f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const Vector3 &amp;</type>
+      <name>translation</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a8440afd2c041f2b5021c345c52bf8e3b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>Matrix3 &amp;</type>
+      <name>rotation</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a2449438fc8cfa2e05b76f765495c152c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector3 &amp;</type>
+      <name>translation</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a41d86bad0516791010173a372aafdbf9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rotation</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a01af023274c24008ea4a2ddd1e8d50ce</anchor>
+      <arglist>(const Matrix3 &amp;R)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>translation</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a8f580cae3bdc1d142526bfcc0507e16f</anchor>
+      <arglist>(const Vector3 &amp;p)</arglist>
+    </member>
+    <member kind="function">
+      <type>Eigen::Matrix&lt; Scalar, 4, 4, Options &gt;</type>
+      <name>toHomogeneousMatrix</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>affa4026d77cebd23932bed1956f172c5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>Matrix6</type>
+      <name>toActionMatrix</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a5906c8bec07dce657fb7ab4d93ae8ef2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>SE3Tpl</type>
+      <name>inverse</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a902f9875c2866fe2474707667338bace</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>disp</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ace7c3330ecf46e1999ba22b112cccdfe</anchor>
+      <arglist>(std::ostream &amp;os) const </arglist>
+    </member>
+    <member kind="function">
+      <type>internal::ActionReturn&lt; D &gt;::Type</type>
+      <name>act</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a27d061112d39d615ec1d73f1084570d8</anchor>
+      <arglist>(const D &amp;d) const </arglist>
+    </member>
+    <member kind="function">
+      <type>internal::ActionReturn&lt; D &gt;::Type</type>
+      <name>actInv</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>abd95c410ff950bc7547b8fe38bb2dd4b</anchor>
+      <arglist>(const D &amp;d) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector3</type>
+      <name>act</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a8f380485b70cd7b972797730aa72e919</anchor>
+      <arglist>(const Vector3 &amp;p) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector3</type>
+      <name>actInv</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ae4d9de669527f06125201e97595f82f3</anchor>
+      <arglist>(const Vector3 &amp;p) const </arglist>
+    </member>
+    <member kind="function">
+      <type>SE3Tpl</type>
+      <name>act</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ad415d3e301ec27e2427cf2b3a47b3f41</anchor>
+      <arglist>(const SE3Tpl &amp;m2) const </arglist>
+    </member>
+    <member kind="function">
+      <type>SE3Tpl</type>
+      <name>actInv</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a806fb669cc487f14f948639e44fe5032</anchor>
+      <arglist>(const SE3Tpl &amp;m2) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator Matrix4</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a6595e04e307abf11c5c91d9c27585272</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator Matrix6</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a9379f28aa4d6fc1e1f572503f27adc41</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>SE3Tpl</type>
+      <name>operator*</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a001d1f5367377c670ef0e1c40045683a</anchor>
+      <arglist>(const SE3Tpl &amp;m2) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static SE3Tpl</type>
+      <name>Identity</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a37c7d7e817a6819dbf955c092c464377</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static SE3Tpl</type>
+      <name>Random</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a75759edf793c588e06d64c2659132289</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a8e2aa6a69a69b61521dc6999026ad2e2</anchor>
+      <arglist>(std::ostream &amp;os, const SE3Tpl &amp;X)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::corbaServer::Server</name>
+    <filename>a00009.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Server</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a0a4496fbad80e433fea231ed43ff76dc</anchor>
+      <arglist>(WindowsManagerPtr_t windowsManager, int argc, const char *argv[], bool multiThread=false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Server</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a1ef65d5bc92e466d952f1eb5486684e6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>startCorbaServer</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ac8152ac020b7b16126d441933e117ef0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>processRequest</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>acdcd168d0510a0fe96e572ae1f4f2a13</anchor>
+      <arglist>(bool loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>WindowsManagerPtr_t</type>
+      <name>windowsManager</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>adc4e04acb0369804f2d573ca3d7fee09</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>graphics::UrdfFile</name>
+    <filename>a00010.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>UrdfFile</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a1ccc345bd03669b9e01f4c47393b3fea</anchor>
+      <arglist>(const std::string &amp;f)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>UrdfFile</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ada9afd01030879007a1349f2f0436cbd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>filename</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a567da172dd7016b7b697f8ad19c0800e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>time_t</type>
+      <name>modTime</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ad29af17d4c7450a53fab302a2d276340</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::WindowsManager</name>
+    <filename>a00011.html</filename>
+    <member kind="typedef">
+      <type>osg::Vec3f::value_type</type>
+      <name>value_type</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a5e596a5a515ce4e0828a6aa2b42a4638</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; float &gt;</type>
+      <name>configuration_t</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a811b10385fea91da87acce6e9eb20524</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>unsigned int</type>
+      <name>WindowID</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a9f4dbfd0a40cd2ccce98468ef9740980</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, WindowID &gt;</type>
+      <name>WindowIDMap_t</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a37aac640140f9130bc51f13169fc3203</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, UrdfFile &gt;</type>
+      <name>UrdfFileMap_t</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a19987a20cb1566baee61119b26f56110</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>gepetto::corbaserver::PositionSeq</type>
+      <name>PositionSeq</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a7a25874b93c0cd943ffd4b0d5b7eca62</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~WindowsManager</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a7a09ce64c8f8f050bf5dccee08ae5a8b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; std::string &gt;</type>
+      <name>getNodeList</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a18146c36daae3e61d5c6ce1dca4e1e9a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; std::string &gt;</type>
+      <name>getGroupNodeList</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ad141d18da5834a0f85eb347b91b756dd</anchor>
+      <arglist>(const char *group)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; std::string &gt;</type>
+      <name>getSceneList</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a19a5e222eaf9e436f23b7b70c66c9305</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; std::string &gt;</type>
+      <name>getWindowList</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a5e7468834ec0b41d926a4f720d73c7bf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boost::mutex &amp;</type>
+      <name>lock</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a3b6429eaebd76886b27fe2e74bd0a1f0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setRate</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a6d707ee1fb1f3b679d0d0fefbc2746fc</anchor>
+      <arglist>(const int &amp;rate)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>refresh</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a7303297e7fdaec4c8bb639cffa753ed9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual WindowID</type>
+      <name>createWindow</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a46f34796a6af77139c70117aafcce9db</anchor>
+      <arglist>(const char *windowNameCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual WindowID</type>
+      <name>getWindowID</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ab7dd23fab8e1471c7c25031ef203e24e</anchor>
+      <arglist>(const char *windowNameCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>createScene</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>af1c62f23c79395e8fd07168e1c0818ed</anchor>
+      <arglist>(const char *sceneNameCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>createSceneWithFloor</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a234e6ad94182f80156c7521a1ff18317</anchor>
+      <arglist>(const char *sceneNameCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addSceneToWindow</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a274f7f9b78998e6804d67f235b7b2896</anchor>
+      <arglist>(const char *sceneNameCorba, const WindowID windowId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addFloor</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a79b4c33c8abf6c21ba5873c9f5916123</anchor>
+      <arglist>(const char *floorNameCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addBox</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a334d899d9013ea042b6e47326e8d48f3</anchor>
+      <arglist>(const char *boxName, float boxSize1, float boxSize2, float boxSize3, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addCapsule</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a6d36f13da763263be6e60e6092b6d44a</anchor>
+      <arglist>(const char *capsuleName, float radius, float height, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addArrow</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a1269eeda3ffb18d4f60210541bbc3136</anchor>
+      <arglist>(const char *arrowNameCorba, const float radius, const float length, const value_type *colorCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addRod</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ae5f13aa2580299f7801868702a325a33</anchor>
+      <arglist>(const char *rodNameCorba, const value_type *colorCorba, const float radius, const float length, short maxCapsule)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>resizeCapsule</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a2c1babebfde26ebc32cdf9afac3adf37</anchor>
+      <arglist>(const char *capsuleNameCorba, float newHeight)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>resizeArrow</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a16d71d558f428926fc1c4a3784410647</anchor>
+      <arglist>(const char *arrowNameCorba, float newRadius, float newLength)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addMesh</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a6c920e24b028580697b7a0a4628b75e7</anchor>
+      <arglist>(const char *meshNameCorba, const char *meshPathCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addCone</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>adb8dee743bf7ccd7e2c413454943f792</anchor>
+      <arglist>(const char *coneName, float radius, float height, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addCylinder</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ad0eb6a70ab7e2e77652cbbb7027aecdb</anchor>
+      <arglist>(const char *cylinderName, float radius, float height, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addSphere</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a0a0bd6edc2bfcbb6260f5d01d592707d</anchor>
+      <arglist>(const char *sphereName, float radius, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addLight</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ae46bb54273f0a6083f924931cba1040e</anchor>
+      <arglist>(const char *lightName, const WindowID wid, float radius, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addLine</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a6b605ff0fb0d61be3938aa0290b2ae2b</anchor>
+      <arglist>(const char *lineName, const value_type *pos1, const value_type *pos2, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addCurve</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a1035a29f718ce29f89d003e15c9a291b</anchor>
+      <arglist>(const char *curveName, const PositionSeq &amp;pos, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setCurveMode</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aaaa434554e30ea68a10bb5d035f24c26</anchor>
+      <arglist>(const char *curveName, const GLenum mode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addSquareFace</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>adf2ffdd6b2ed3d311cb5fe76fca5b029</anchor>
+      <arglist>(const char *faceName, const value_type *pos1, const value_type *pos2, const value_type *pos3, const value_type *pos4, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addTriangleFace</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ab0349344cdbd66e25894af7b8044efb4</anchor>
+      <arglist>(const char *faceName, const value_type *pos1, const value_type *pos2, const value_type *pos3, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addXYZaxis</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a7a03ffc7c1edb526b40f83f8f5183d55</anchor>
+      <arglist>(const char *nodeNameCorba, const value_type *colorCorba, float radius, float sizeAxis)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>createRoadmap</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ada95ef0380a8d2303a44edd7f0abcf01</anchor>
+      <arglist>(const char *nameCorba, const value_type *colorNodeCorba, float radius, float sizeAxis, const value_type *colorEdgeCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addEdgeToRoadmap</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a30bfd3d1c3616946efae9a3f0b66bd7c</anchor>
+      <arglist>(const char *nameRoadmapCorba, const value_type *posFromCorba, const value_type *posToCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addNodeToRoadmap</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a5ffef86fb9c8358d4c94c0d2ab1f5322</anchor>
+      <arglist>(const char *nameRoadmapCorba, const value_type *configuration)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addURDF</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ae287fbe022d2082aaeaf27925a69fae9</anchor>
+      <arglist>(const char *urdfNameCorba, const char *urdfPathCorba, const char *urdfPackagePathCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addUrdfCollision</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a644f50c1c89f572b6b8db56817f1645d</anchor>
+      <arglist>(const char *urdfNameCorba, const char *urdfPathCorba, const char *urdfPackagePathCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addUrdfObjects</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a48ca8e91f178fb7efa6f6e4013997984</anchor>
+      <arglist>(const char *urdfNameCorba, const char *urdfPathCorba, const char *urdfPackagePathCorba, bool visual)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>createGroup</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a74cebfb9f6c20cdc7a334d067d506f50</anchor>
+      <arglist>(const char *groupNameCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addToGroup</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a83bb6044695c8041a6699c6e1541d59a</anchor>
+      <arglist>(const char *nodeNameCorba, const char *groupNameCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>removeFromGroup</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aa6f1634446828a10c47730430936e761</anchor>
+      <arglist>(const char *nodeNameCorba, const char *groupNameCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>deleteNode</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a236a67adfd2899f1336f409a3f4892cb</anchor>
+      <arglist>(const char *nodeNameCorba, bool all)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>applyConfiguration</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>af14902c58563493a655368cafb30ae5f</anchor>
+      <arglist>(const char *nodeNameCorba, const value_type *configuration)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addLandmark</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ad82edcdf4b3eb47e8feb27f4cb69b2be</anchor>
+      <arglist>(const char *nodeNameCorba, float size)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>deleteLandmark</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>af12c0ae158dcdb5188866ff068ba22d0</anchor>
+      <arglist>(const char *nodeNameCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>getStaticTransform</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a2c7e58a571114243af28a343c6401c67</anchor>
+      <arglist>(const char *nodeName,::gepetto::corbaserver::Transform transform) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setVisibility</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a32c280ad49353e3cfec968c3984ba317</anchor>
+      <arglist>(const char *nodeNameCorba, const char *visibilityModeCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setScale</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a7aae57d4ff9f61e4865ec4dca3758347</anchor>
+      <arglist>(const char *nodeNameCorba, const value_type *scale)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setColor</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ac1e9b17970c12b91e1c41ab0c1a686d1</anchor>
+      <arglist>(const char *nodeNameCorba, const value_type *color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setWireFrameMode</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a74dcae0e1cb683c6247325a94319eaa7</anchor>
+      <arglist>(const char *nodeNameCorba, const char *wireFrameModeCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setLightingMode</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a6bea2c1c577aa97782b6873b6ceed944</anchor>
+      <arglist>(const char *nodeNameCorba, const char *lightingModeCorba)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setHighlight</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>afd3d4e518259cc0c03f15260ca858457</anchor>
+      <arglist>(const char *nodeNameCorba, int state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setAlpha</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ab6cd6a2d30ba123163e275e24ab8eba2</anchor>
+      <arglist>(const char *nodeNameCorba, const float &amp;alpha)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>startCapture</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ac9c2a57f5c2c183a106ac97077584655</anchor>
+      <arglist>(const WindowID windowId, const char *filename, const char *extension)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>stopCapture</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a2ea0b6903752e2be22e571e93ec09ad4</anchor>
+      <arglist>(const WindowID windowId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setCaptureTransform</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ad5400ffcbbcd689b98283441b5fc5da7</anchor>
+      <arglist>(const char *filename, const std::list&lt; std::string &gt; &amp;nodename)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>captureTransformOnRefresh</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a18dc99485ce8a329e0c5e1b4b5b64905</anchor>
+      <arglist>(bool autoCapture)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>captureTransform</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ad86da611e6d6065cbfadd0ab788f7eab</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>writeNodeFile</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a873ed0243a90eb79e7cf6e6ce9cdad93</anchor>
+      <arglist>(const char *nodename, const char *filename)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>writeWindowFile</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a0292c30d401807d5eb0b73819c2b2114</anchor>
+      <arglist>(const WindowID windowId, const char *filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>WindowManagerPtr_t</type>
+      <name>getWindowManager</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aaf809b1ce83f69fd7b09462f2c558997</anchor>
+      <arglist>(const WindowID wid)</arglist>
+    </member>
+    <member kind="function">
+      <type>GroupNodePtr_t</type>
+      <name>getScene</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a9fa14bf945d4f1878505ef180b3d60c6</anchor>
+      <arglist>(const std::string sceneName)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodePtr_t</type>
+      <name>getNode</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a162feb0cbdeb18cf41b0549a6e03aeb7</anchor>
+      <arglist>(const std::string &amp;nodeName) const </arglist>
+    </member>
+    <member kind="function">
+      <type>configuration_t</type>
+      <name>getNodeGlobalTransform</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aea71edd1a6b9048fe5f9f6e7161a9c0e</anchor>
+      <arglist>(const std::string nodeName)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static WindowsManagerPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a1a54db2876f22ebc2afd8a5869e91855</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>WindowIDMap_t</type>
+      <name>windowIDmap_</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a5fbabc8ff78d7a63620764f555ff72ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>UrdfFileMap_t</type>
+      <name>urdfFileMap_</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a6a6bacbf1f984c6ab17bd7972f7e1f74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>WindowsManager</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>af4c3ef88567198530556187fe727ffe2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>WindowID</type>
+      <name>addWindow</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aa5407be986e86ec907b272edf7a4955a</anchor>
+      <arglist>(std::string winName, WindowManagerPtr_t newWindow)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>nodeExists</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>af1ed7350c97411e53d67a9cef8e2840c</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>std::size_t</type>
+      <name>getNodes</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a27059f480bcedfe30e19200ad40e0f29</anchor>
+      <arglist>(const gepetto::corbaserver::Names_t &amp;name, NodeContainer_t &amp;nodes)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>std::size_t</type>
+      <name>getNodes</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>acbf014ac352b820cf192dfa122e0619f</anchor>
+      <arglist>(const Iterator &amp;begin, const Iterator &amp;end, NodeContainer_t &amp;nodes)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>gepetto</name>
+    <filename>a00021.html</filename>
+    <namespace>gepetto::corbaserver</namespace>
+    <class kind="exception">gepetto::Error</class>
+    <member kind="typedef">
+      <type>sequence&lt; string &gt;</type>
+      <name>Names_t</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a2495b909eea476a19566e13db3eb3767</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>gepetto::corbaserver</name>
+    <filename>a00022.html</filename>
+    <class kind="interface">gepetto::corbaserver::Client</class>
+    <class kind="interface">gepetto::corbaserver::GraphicalInterface</class>
+    <member kind="typedef">
+      <type>float</type>
+      <name>Transform</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a5c96fd8eba49d973d91fc96d44317846</anchor>
+      <arglist>[7]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>float</type>
+      <name>Position</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a519faa0e7234d4f794cee35bc5bae644</anchor>
+      <arglist>[3]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>float</type>
+      <name>Color</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a78ad80d679401af8a1effa336bee67ac</anchor>
+      <arglist>[4]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>unsigned long</type>
+      <name>WindowID</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a54f4db3a9bd02d06d42eaedccc6e5993</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; string &gt;</type>
+      <name>Names_t</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a56613acaa6c144fa124d96f1fa9cc5c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; float &gt;</type>
+      <name>floatSeq</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>ad37b781b359d1b35ee32a2dcc9d9676b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; Position &gt;</type>
+      <name>PositionSeq</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>aed852d4897b1f171c927ed4777489f99</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>graphics</name>
+    <filename>a00023.html</filename>
+    <namespace>graphics::corbaServer</namespace>
+    <class kind="struct">graphics::BlenderFrameCapture</class>
+    <class kind="struct">graphics::NodeConfiguration</class>
+    <class kind="struct">graphics::UrdfFile</class>
+    <class kind="class">graphics::WindowsManager</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>VisibilityMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>LightingMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a0039795c4d6b33832eefcc2ea6a29f88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WireFrameMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FaceMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>VISIBILITY_ON</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0aa5685dde4e8a08b67fd2d82c4ff03fa58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>ALWAYS_ON_TOP</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0aa0613824073da6316353614337b32171a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>VISIBILITY_OFF</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0aad39840eac0da54fd9f476a9b46632c85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>LIGHT_INFLUENCE_ON</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a0039795c4d6b33832eefcc2ea6a29f88ae34d4d64749b750a9d80932483ba67cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>LIGHT_INFLUENCE_OFF</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a0039795c4d6b33832eefcc2ea6a29f88a322c752f5d647a161fac0497b44d55d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>FILL</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923a21a3e06d07f1b19ccaff859bdd357c26</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>WIREFRAME</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923a2b5d71f0ffd94e2645906418e3bdb8c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>FILL_AND_WIREFRAME</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923ae418795a322936de88aaa395dbdce4ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>FACE</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96a6db03d6516a2482cb758cf6e41121cc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>EDGE</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96a6f5c98da85b3a7ada8105e23313355b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>FACE_AND_EDGE</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96a40ef61269d9fbae5d91820e8a988f154</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>graphics::corbaServer</name>
+    <filename>a00024.html</filename>
+    <namespace>graphics::corbaServer::impl</namespace>
+    <class kind="class">graphics::corbaServer::Client</class>
+    <class kind="class">graphics::corbaServer::Server</class>
+  </compound>
+  <compound kind="namespace">
+    <name>graphics::corbaServer::impl</name>
+    <filename>a00025.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>se3</name>
+    <filename>a00026.html</filename>
+    <namespace>se3::internal</namespace>
+    <class kind="class">se3::SE3Tpl</class>
+    <member kind="typedef">
+      <type>SE3Tpl&lt; float, 0 &gt;</type>
+      <name>SE3</name>
+      <anchorfile>a00026.html</anchorfile>
+      <anchor>a11cdc2b80eaa04c1e88715c630b932bd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>se3::internal</name>
+    <filename>a00027.html</filename>
+    <class kind="struct">se3::internal::ActionReturn</class>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+    <docanchor file="index">gepetto_viewer_corba_introduction</docanchor>
+    <docanchor file="index" title="Introduction">gepetto_viewer_sec_intro</docanchor>
+  </compound>
+</tagfile>

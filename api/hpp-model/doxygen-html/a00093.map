@@ -1,0 +1,8 @@
+<map id="hpp::model::Joint" name="hpp::model::Joint">
+<area shape="rect" id="node2" href="$a00014.html" title="Anchor Joint. " alt="" coords="188,5,351,32"/>
+<area shape="rect" id="node3" href="$a00016.html" title="Rotation Joint. " alt="" coords="184,56,355,83"/>
+<area shape="rect" id="node6" href="$a00017.html" title="Spherical Joint. " alt="" coords="195,107,343,133"/>
+<area shape="rect" id="node7" href="$a00018.html" title="Translation Joint. " alt="" coords="176,158,363,199"/>
+<area shape="rect" id="node4" href="$a00004.html" title="Rotation about an axis with bound. " alt="" coords="411,17,578,58"/>
+<area shape="rect" id="node5" href="$a00025.html" title="Rotation about an axis without bound. " alt="" coords="411,82,578,123"/>
+</map>

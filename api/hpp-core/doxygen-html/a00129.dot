@@ -1,0 +1,17 @@
+digraph "comparison-type.hh"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="comparison-type.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="config-projector.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00061.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="problem-solver.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00093.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="equation.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00076.html"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="numerical-constraint.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00081.html"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="locked-joint.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00079.html"];
+}

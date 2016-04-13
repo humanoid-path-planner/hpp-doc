@@ -1,0 +1,5 @@
+<map id="hpp::manipulation::ProblemSolver" name="hpp::manipulation::ProblemSolver">
+<area shape="rect" id="node2" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00068.html" title="hpp::core::ProblemSolver" alt="" coords="427,41,597,68"/>
+<area shape="rect" id="node3" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00021.html" title="Containers\&lt; boost::\lmpl::vector\&lt; PathPlannerBuilder\l_t, PathOptimizerBuilder_t,\l PathValidationBuilder_t, PathProjector\lBuilder_t, ConfigurationShooterBuilder\l_t, NumericalConstraintPtr_t, SteeringMethodBuilder_t \&gt; \&gt;" alt="" coords="5,5,368,105"/>
+<area shape="rect" id="node4" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00021.html" title="hpp::core::Containers\l\&lt; boost::mpl::vector\l\&lt; LockedJointPtr_t, JointAnd\lShapes_t \&gt; \&gt;" alt="" coords="417,93,607,163"/>
+</map>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>robot.py</name>
+    <path>/local/jmirabel/devel/hpp/src/ur_description/src/hpp/corbaserver/ur5_robot/</path>
+    <filename>a00002</filename>
+    <class kind="class">ur5_robot::robot::Robot</class>
+    <namespace>ur5_robot::robot</namespace>
+  </compound>
+  <compound kind="class">
+    <name>ur5_robot::robot::Robot</name>
+    <filename>a00001.html</filename>
+    <member kind="function">
+      <type>def</type>
+      <name>__init__</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a0cd1cc2e1d78bded298186f1b39fe20f</anchor>
+      <arglist>(self, robotName)</arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>tf_root</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a42d2fd063b106143e7cf7bb39f8d2b4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>string</type>
+      <name>packageName</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a379962edb826ba7496474fabe55e244d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>string</type>
+      <name>urdfName</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a09e3d7b6815ee319adcdd3dd4871546c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>string</type>
+      <name>urdfSuffix</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a49618ea91ce3317dcd6a667933c0fc37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>string</type>
+      <name>srdfSuffix</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a2842b9adcbbdd3031c7193031636c3a8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ur5_robot</name>
+    <filename>a00004.html</filename>
+    <namespace>ur5_robot::robot</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>ur5_robot::robot</name>
+    <filename>a00005.html</filename>
+    <class kind="class">ur5_robot::robot::Robot</class>
+  </compound>
+</tagfile>

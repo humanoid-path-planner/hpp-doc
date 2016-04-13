@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00013.html" title="com&#45;between&#45;feet.hh" alt="" coords="5,86,149,117"/>
+<area shape="rect" id="node5" href="$a00016.html" title="orientation.hh" alt="" coords="173,86,275,117"/>
+<area shape="rect" id="node7" href="$a00017.html" title="position.hh" alt="" coords="299,86,384,117"/>
+<area shape="rect" id="node9" href="$a00018.html" title="relative&#45;com.hh" alt="" coords="408,86,520,117"/>
+<area shape="rect" id="node11" href="$a00019.html" title="relative&#45;orientation.hh" alt="" coords="544,86,693,117"/>
+<area shape="rect" id="node13" href="$a00021.html" title="relative&#45;transformation.hh" alt="" coords="645,166,816,197"/>
+<area shape="rect" id="node15" href="$a00020.html" title="relative&#45;position.hh" alt="" coords="768,86,899,117"/>
+<area shape="rect" id="node19" href="$a00022.html" title="static&#45;stability.hh" alt="" coords="923,86,1040,117"/>
+</map>

@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="hpp::core::ValidationReport",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00053.html",tooltip="Abstraction of validation report for paths and configurations. "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="hpp::core::CollisionValidation\lReport",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00005.html",tooltip="Validate a configuration with respect to collision. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="hpp::core::PathValidation\lReport",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00041.html",tooltip="Abstraction of path validation report. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="hpp::core::CollisionPath\lValidationReport",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00003.html",tooltip="Path validation report used for standard collision checking. "];
+}

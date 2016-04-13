@@ -1,0 +1,9 @@
+digraph "path-optimization" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ec650033a5a388847ed11d275b2baf5d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="core" fontname="Helvetica", fontsize="10", URL="dir_ec650033a5a388847ed11d275b2baf5d.html"]
+  dir_94df271f7ea3fe29fb2c1936dc1f06c3 [shape=box, label="path-optimization", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_94df271f7ea3fe29fb2c1936dc1f06c3.html"];
+  }
+}

@@ -1,0 +1,3392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>config-osg.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00025</filename>
+    <includes id="a00041" name="macros.h" local="no" imported="no">gepetto/viewer/macros.h</includes>
+    <namespace>osg</namespace>
+    <namespace>osgShadow</namespace>
+    <namespace>osgViewer</namespace>
+    <namespace>graphics</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>DEF_WIDTH_WINDOW</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a44ede564b7032bc9d3de4386d2974574</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DEF_HEIGHT_WINDOW</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a645dcb3ec1b936ee674ac15a8f164372</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>::osg::ref_ptr&lt; GraphicsContext::Traits &gt;</type>
+      <name>TraitsRefPtr</name>
+      <anchorfile>a00052.html</anchorfile>
+      <anchor>ab8110fb6e19cb79a258c30f4f75343d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>::osg::Vec2f</type>
+      <name>osgVector2</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>adbc05c52ea9a02fb54909cb02752d304</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>::osg::Vec3f</type>
+      <name>osgVector3</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>a6c6ba8599079385ccfd6c36946382c71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>::osg::Vec4f</type>
+      <name>osgVector4</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>ade1dec058dcca36ff77bfd9393cb5a0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>::osg::Quat</type>
+      <name>osgQuat</name>
+      <anchorfile>a00025.html</anchorfile>
+      <anchor>abb02fb90008999f84fbb89d086af5e94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>VisibilityMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VISIBILITY_ON</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0aa5685dde4e8a08b67fd2d82c4ff03fa58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALWAYS_ON_TOP</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0aa0613824073da6316353614337b32171a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VISIBILITY_OFF</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0aad39840eac0da54fd9f476a9b46632c85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>LightingMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a0039795c4d6b33832eefcc2ea6a29f88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LIGHT_INFLUENCE_ON</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a0039795c4d6b33832eefcc2ea6a29f88ae34d4d64749b750a9d80932483ba67cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LIGHT_INFLUENCE_OFF</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a0039795c4d6b33832eefcc2ea6a29f88a322c752f5d647a161fac0497b44d55d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WireFrameMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FILL</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923a21a3e06d07f1b19ccaff859bdd357c26</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WIREFRAME</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923a2b5d71f0ffd94e2645906418e3bdb8c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FILL_AND_WIREFRAME</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923ae418795a322936de88aaa395dbdce4ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FaceMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FACE</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96a6db03d6516a2482cb758cf6e41121cc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EDGE</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96a6f5c98da85b3a7ada8105e23313355b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FACE_AND_EDGE</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96a40ef61269d9fbae5d91820e8a988f154</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>frame-capture-handler.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00026</filename>
+    <class kind="class">graphics::FrameCaptureHandlerHandler</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>group-node.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00027</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::GroupNode</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>keyboard-manipulator.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/OSGManipulator/</path>
+    <filename>a00028</filename>
+    <class kind="class">osgGA::KeyboardManipulator</class>
+    <namespace>osgGA</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>KeyBinding</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_forward</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895a18e6c4e569e5b94ad90154e5eee5a962</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_backward</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895a2e5cf552fd6c2f24b1014963162d0aeb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_right</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895af4cbb58ecfe567d418bdce9d5c75c2ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_left</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895ad48fd4dd20a612e15f57d80f0d16b97f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_roll_right</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895a1d5098090b2aae8153c5b72da22dc391</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_roll_left</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895acb2b8ccc3065b4ba0b5d4cea112fe90f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_up</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895a2afaa03124f2ea68057e18ac872f94d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_down</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895a5437b7c371175a0dd6a91dd5554a7437</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>keyLayout</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a5d28c646a540c36e1ec74240e401890c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LAYOUT_unknown</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a5d28c646a540c36e1ec74240e401890ca20c6b2636cab0394a448e1c51017ccbf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LAYOUT_azerty</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a5d28c646a540c36e1ec74240e401890ca1fe0a0fc67451f42a35a804ea70b161a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LAYOUT_qwerty</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a5d28c646a540c36e1ec74240e401890caf8de243cd1bdd8e9bdf0b6da021fdb2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const double</type>
+      <name>startSpeed_</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a2e81c7b668b4cae6fbf49a15299534ed</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-arrow.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00029</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeArrow</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-box.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00030</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeBox</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-capsule.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00031</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeCapsule</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-collada.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00032</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeCollada</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-cone.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00033</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeCone</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-cylinder.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00034</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeCylinder</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-face.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00035</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeFace</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-ground.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00036</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeGround</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-light.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00037</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <includes id="a00027" name="group-node.h" local="no" imported="no">gepetto/viewer/group-node.h</includes>
+    <class kind="class">graphics::LeafNodeLight</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-line.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00038</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeLine</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-sphere.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00039</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeSphere</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>leaf-node-xyzaxis.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00040</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::LeafNodeXYZAxis</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>macros.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00041</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>ASSERT</name>
+      <anchorfile>a00041.html</anchorfile>
+      <anchor>aa06eedd6f738a415870e97a375337d51</anchor>
+      <arglist>(condition, message)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DEF_CLASS_SMART_PTR</name>
+      <anchorfile>a00041.html</anchorfile>
+      <anchor>afbaa603ffb6a6a5833f883178c1b78c2</anchor>
+      <arglist>(className)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DEF_OSG_CLASS_REF_PTR</name>
+      <anchorfile>a00041.html</anchorfile>
+      <anchor>a38853dd619f0c36bd5f9f993a6691ce6</anchor>
+      <arglist>(className)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>node-rod.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00042</filename>
+    <includes id="a00027" name="group-node.h" local="no" imported="no">gepetto/viewer/group-node.h</includes>
+    <includes id="a00031" name="leaf-node-capsule.h" local="no" imported="no">gepetto/viewer/leaf-node-capsule.h</includes>
+    <includes id="a00025" name="config-osg.h" local="no" imported="no">gepetto/viewer/config-osg.h</includes>
+    <class kind="class">graphics::NodeRod</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>node-visitor.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00043</filename>
+    <includes id="a00025" name="config-osg.h" local="no" imported="no">gepetto/viewer/config-osg.h</includes>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::NodeVisitor</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>node.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00044</filename>
+    <includes id="a00025" name="config-osg.h" local="no" imported="no">gepetto/viewer/config-osg.h</includes>
+    <class kind="class">graphics::Node</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>package.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/doc/main-page/</path>
+    <filename>a00045</filename>
+  </compound>
+  <compound kind="file">
+    <name>roadmap-viewer.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00046</filename>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <includes id="a00027" name="group-node.h" local="no" imported="no">gepetto/viewer/group-node.h</includes>
+    <includes id="a00040" name="leaf-node-xyzaxis.h" local="no" imported="no">gepetto/viewer/leaf-node-xyzaxis.h</includes>
+    <includes id="a00038" name="leaf-node-line.h" local="no" imported="no">gepetto/viewer/leaf-node-line.h</includes>
+    <class kind="class">graphics::RoadmapViewer</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>transform-writer.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00047</filename>
+    <includes id="a00025" name="config-osg.h" local="no" imported="no">gepetto/viewer/config-osg.h</includes>
+    <includes id="a00043" name="node-visitor.h" local="no" imported="no">gepetto/viewer/node-visitor.h</includes>
+    <class kind="class">graphics::TransformWriter</class>
+    <class kind="class">graphics::BasicTransformWriter</class>
+    <class kind="class">graphics::YamlTransformWriter</class>
+    <class kind="class">graphics::TransformWriterVisitor</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="file">
+    <name>urdf-parser.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00048</filename>
+    <includes id="a00027" name="group-node.h" local="no" imported="no">gepetto/viewer/group-node.h</includes>
+    <includes id="a00032" name="leaf-node-collada.h" local="no" imported="no">gepetto/viewer/leaf-node-collada.h</includes>
+    <namespace>graphics</namespace>
+    <namespace>graphics::urdfParser</namespace>
+    <member kind="function">
+      <type>GroupNodePtr_t</type>
+      <name>parse</name>
+      <anchorfile>a00051.html</anchorfile>
+      <anchor>a9ce6942bd6c650cc96f22b18212dc314</anchor>
+      <arglist>(const std::string &amp;robotName, const std::string &amp;urdf_file_path, const std::string &amp;meshDataRootDir, const std::string &amp;collisionOrVisual=&quot;visual&quot;, const std::string &amp;linkOrObjectFrame=&quot;link&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>window-manager.h</name>
+    <path>/local/jmirabel/devel/hpp/src/gepetto-viewer/include/gepetto/viewer/</path>
+    <filename>a00049</filename>
+    <includes id="a00027" name="group-node.h" local="no" imported="no">gepetto/viewer/group-node.h</includes>
+    <includes id="a00044" name="node.h" local="no" imported="no">gepetto/viewer/node.h</includes>
+    <class kind="class">graphics::WindowManager</class>
+    <namespace>graphics</namespace>
+  </compound>
+  <compound kind="class">
+    <name>graphics::BasicTransformWriter</name>
+    <filename>a00001.html</filename>
+    <base>graphics::TransformWriter</base>
+    <member kind="function">
+      <type></type>
+      <name>BasicTransformWriter</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a3f970b0e51c69864ef07d87b2a8b6b80</anchor>
+      <arglist>(const std::string filename)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~BasicTransformWriter</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>afc4403baf0ec8fbc1c878c6fdf6a2787</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeTransform</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a0c42426cb702e6e9c236e0db62755368</anchor>
+      <arglist>(const char *objName, const osgVector3 &amp;vec, const osgQuat &amp;quat)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>writeNewFrame</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a25936983763889b8f78d428834cacd0b</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::FrameCaptureHandlerHandler</name>
+    <filename>a00002.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>FrameCaptureHandlerHandler</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ac6586a43f27920d02b6fc42e24f207e0</anchor>
+      <arglist>(TransformWriterVisitor *visitor=0, int numFrames=1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setKeyEventTakeScreenShot</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a8b4acb399a1a084a8d779bcda2714b40</anchor>
+      <arglist>(int key)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getKeyEventTakeScreenShot</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a574b01b719870087fe455c10e1dbcb0b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setKeyEventToggleContinuousCapture</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ac9ab330b02a3ded0f4820f6c08f6f951</anchor>
+      <arglist>(int key)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getKeyEventToggleContinuousCapture</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a9b283877290e83a2e67b042b4277f7ec</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCaptureOperation</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ae5167fdc16355d3bed878d0fa765f804</anchor>
+      <arglist>(CaptureOperation *operation)</arglist>
+    </member>
+    <member kind="function">
+      <type>CaptureOperation *</type>
+      <name>getCaptureOperation</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a34bed1b035238b7b0f4867ff22f7da64</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>handle</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aa7a36fbfab74de8d17042ca7f6450788</anchor>
+      <arglist>(const osgGA::GUIEventAdapter &amp;ea, osgGA::GUIActionAdapter &amp;aa)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>captureNextFrame</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>af0b1b19033780055456b3435709dbdf7</anchor>
+      <arglist>(osgViewer::ViewerBase &amp;viewer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFramesToCapture</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a332516d0aae0151c3c05ff24b3b62456</anchor>
+      <arglist>(int numFrames)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getFramesToCapture</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a159ebb2c1d3f1f432f5c8eb1eedf3259</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>startCapture</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>abd50586c560c35f254d9bcbd28aa171d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>stopCapture</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>ae7a9591052cf28f928389e6017a0881e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>getUsage</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a4f6c4fbdd3189fc655536eba5e2df2b3</anchor>
+      <arglist>(osg::ApplicationUsage &amp;usage) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>addCallbackToViewer</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>abd7de6b06d15cee8633faf8f57e66d05</anchor>
+      <arglist>(osgViewer::ViewerBase &amp;viewer)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>removeCallbackFromViewer</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a655ce2ed1a96cfd0e0b03ca107f09352</anchor>
+      <arglist>(osgViewer::ViewerBase &amp;viewer)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>osg::Camera *</type>
+      <name>findAppropriateCameraForCallback</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a48cac5bb6c7d291071c38674d6370600</anchor>
+      <arglist>(osgViewer::ViewerBase &amp;viewer)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>_startCapture</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a29bb44b2d24ec3afb38aa504d47569c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>_stopCapture</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a6d813e816fa8417e53b08739e389c7f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>_keyEventTakeScreenShot</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aff60d90b405b3a01f8e074707752e0a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>_keyEventToggleContinuousCapture</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aaedea359615f88276b6776b4998009a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>osg::ref_ptr&lt; CaptureOperation &gt;</type>
+      <name>_operation</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>aa44fa20333d2090d3526612965445300</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>osg::ref_ptr&lt; osg::Camera::DrawCallback &gt;</type>
+      <name>_callback</name>
+      <anchorfile>a00002.html</anchorfile>
+      <anchor>a7eee7c5a7d75bab404d5b3db46a9d998</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::GroupNode</name>
+    <filename>a00003.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual GroupNodePtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a7894e30205c8e470da481844a566cea8</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>GroupNodePtr_t</type>
+      <name>self</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a39dc99879f5ab8fc20f0130bc2be4589</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addChild</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>ac7274d1ebf2d908764947cf99cc8f7ac</anchor>
+      <arglist>(::graphics::NodePtr_t child_ptr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>removeChild</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a08959838be54cee2dc52b576405a047f</anchor>
+      <arglist>(::graphics::NodePtr_t child_ptr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>hasChild</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>acce6a55b4025896f84cee409b3e40f26</anchor>
+      <arglist>(::graphics::NodePtr_t child_ptr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeAllChildren</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>af7d8f0cf0d3e1375f7f22641bd088179</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual size_t</type>
+      <name>getNumOfChildren</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a4bf8ac4c148f90e9f268d0ff81861015</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual graphics::NodePtr_t</type>
+      <name>getChild</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a2ffe35d018cf0aba2d66b19e2ffe84ac</anchor>
+      <arglist>(size_t i) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setVisibilityMode</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a43675d2dba1e783e21a410ab42aeea8d</anchor>
+      <arglist>(const VisibilityMode &amp;visibility_state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setLightingMode</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>af7e4a0336da1cd5e181492d0aba3c36c</anchor>
+      <arglist>(const LightingMode &amp;lighting_state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setWireFrameMode</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>afc3999026b80494729757a2ff2a627f6</anchor>
+      <arglist>(const WireFrameMode &amp;wireframe_state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setAlpha</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>ab9778ce9326e04b82c57292e38876404</anchor>
+      <arglist>(const float &amp;alpha)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setScale</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>ab7b266e4f6f732fcc0ab64f0160cfb6a</anchor>
+      <arglist>(const float scale)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a8f70b5c1f38ac2f6982683a83a0e5b2b</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>traverse</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a25f9b3d8d4f7d817d3408b6e1fc537c0</anchor>
+      <arglist>(NodeVisitor &amp;visitor)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~GroupNode</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a02a75bada4dad91ebf5de1daaca4e2be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static GroupNodePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>ac21933adae5fe29db9c20d898e2b5b7e</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static GroupNodePtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a06b84976518489e90d91e79b48c03be6</anchor>
+      <arglist>(GroupNodePtr_t other)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>GroupNode</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>adf2bb29da9326f00c088946a41018cc4</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>GroupNode</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a8475734db55de3f05df32b9d1a0b3c2b</anchor>
+      <arglist>(const GroupNode &amp;other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>osgGA::KeyboardManipulator</name>
+    <filename>a00004.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>KeyboardManipulator</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a086226ff7e4b5cbaf3758889da793cd1</anchor>
+      <arglist>(int flags=DEFAULT_SETTINGS)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>KeyboardManipulator</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>aefea593e85a6e7a89ed2ae09a8660b2c</anchor>
+      <arglist>(const KeyboardManipulator &amp;fpm, const osg::CopyOp &amp;copyOp=osg::CopyOp::SHALLOW_COPY)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>KeyboardManipulator</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>afc5a04600c94e72c716af6631482e931</anchor>
+      <arglist>(osgViewer::GraphicsWindow *window, int flags=DEFAULT_SETTINGS)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>META_Object</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>aaafe9c44b4bfd53f39705df3105cdbdd</anchor>
+      <arglist>(osgGA, KeyboardManipulator)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>handleKeyDown</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a7fe1a7a59c9411e7665d859247946680</anchor>
+      <arglist>(const osgGA::GUIEventAdapter &amp;ea, osgGA::GUIActionAdapter &amp;us)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>handleKeyUp</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>ab4558333b4e893aeb6500cadd350dbc7</anchor>
+      <arglist>(const osgGA::GUIEventAdapter &amp;ea, osgGA::GUIActionAdapter &amp;us)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>handleFrame</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a23d646a11f7e04eeb3d32c52a3392f19</anchor>
+      <arglist>(const osgGA::GUIEventAdapter &amp;ea, osgGA::GUIActionAdapter &amp;us)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>handleMousePush</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a1555740dd7fbf445caaf2fdda298a293</anchor>
+      <arglist>(const osgGA::GUIEventAdapter &amp;ea, osgGA::GUIActionAdapter &amp;us)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>handleMouseRelease</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a3a1c822d09af9831db0a4d8b1c905f5b</anchor>
+      <arglist>(const osgGA::GUIEventAdapter &amp;ea, osgGA::GUIActionAdapter &amp;us)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>performMovementLeftMouseButton</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a0242fafe71a56d6cae0bb6b650aaa762</anchor>
+      <arglist>(const double eventTimeDelta, const double dx, const double dy)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>rotateRoll</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>adfba256a949bffdeeefd13f684f82233</anchor>
+      <arglist>(const double roll)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>getUsage</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a03554108ab9e1aae1a60412bfe11b8e7</anchor>
+      <arglist>(osg::ApplicationUsage &amp;usage) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>initKeyboard</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a0ff58c942f9bf007300ebfb71f8b31df</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeArrow</name>
+    <filename>a00005.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function">
+      <type>void</type>
+      <name>addVertex</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ade7158e4b0c0c7de68c52945261835b7</anchor>
+      <arglist>(const osgVector3 &amp;vertex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeArrowPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>adf2577b72f72161181d5ee6fc71a18d6</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual NodePtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a91473e3d8b2621d23d818e3540472c2f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeArrowPtr_t</type>
+      <name>self</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ad388e5574b047e9e2474fdbde1ae261b</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a188795355448826dad24558006cde57d</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getRadius</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>aabcd1667e4f94c96151e8633b84c4fb0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRadius</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a26fc08969f594b360f4235114fa5f62c</anchor>
+      <arglist>(const float &amp;radius)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setSize</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a4d0f2fea4bbd626747b5a6e638310d00</anchor>
+      <arglist>(const float &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getSize</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ab59bfbb0e054e73752733467373504c2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>resize</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac4cd85ab486a96cf9987bc070b4090c2</anchor>
+      <arglist>(float radius, float length)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTexture</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ac3e592aca0026474c42a10b86ab6fed4</anchor>
+      <arglist>(const std::string &amp;image_path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeArrow</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a324f1e08c9be35b0615be1e059509314</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeArrowPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a4b7f8b387507e039e26a89a4c0068e29</anchor>
+      <arglist>(const std::string &amp;name, const osgVector4 &amp;color, float radiusCenter, float sizeAxis)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeArrowPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a3c134a340da5eb4f2f43a2cc735ef1b0</anchor>
+      <arglist>(const std::string &amp;name, const osgVector4 &amp;color, float radiusCenter)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeArrowPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>abd6382417e8e55d9054a0118f4425173</anchor>
+      <arglist>(LeafNodeArrowPtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeBox</name>
+    <filename>a00006.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeBoxPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>aecdc26de5c84e7dc3e871819df9acdb0</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual NodePtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>acd014ed383cf28a8c89646692adad336</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeBoxPtr_t</type>
+      <name>self</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a1c2eed1a3957febc9c21033edd8c114f</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setHalfAxis</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a5af9f313ddf5cfd01dff2a67e0117854</anchor>
+      <arglist>(const osgVector3 &amp;half_axis)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector3</type>
+      <name>getHalfAxis</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a251abdc38e8861b3f1b951a65127feed</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ab74532fd4fa9f7fb85c2069ae6c81eef</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector4</type>
+      <name>getColor</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a68c292d494fbec521df338589f790edb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTexture</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>afc4ab9ca9919422850f54e3fb4542337</anchor>
+      <arglist>(const std::string &amp;image_path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeBox</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a7dcd2cb41da613b108878c3f0d4728a8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeBoxPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>ae89f64a92c3d5a3cbabc8a7045b18149</anchor>
+      <arglist>(const std::string &amp;name, const osgVector3 &amp;half_axis)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeBoxPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a294a2edbf9b9567a3805545b62a5ccbc</anchor>
+      <arglist>(const std::string &amp;name, const osgVector3 &amp;half_axis, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeBoxPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a350b51f12f7ce94ffcf16b1a8960a4f5</anchor>
+      <arglist>(LeafNodeBoxPtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeCapsule</name>
+    <filename>a00007.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeCapsulePtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a70299298bb86272dfc516912e30d3dd5</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeCapsulePtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a0a5ccc132fe95f39931d497a20d07803</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeCapsulePtr_t</type>
+      <name>self</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>afeda60266c0cbaab8ccc636e21e41f33</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setRadius</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a7961463d1f59b1837d3089a51ec57a29</anchor>
+      <arglist>(const float &amp;radius)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getRadius</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a10cc3d1a9e1bd5a6cea701b35fa85b89</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setHeight</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>aebb07c2f58ec1e4a773a920cb9641a8a</anchor>
+      <arglist>(const float &amp;height)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getHeight</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a26f68ed16dbc92d94144326313d9b783</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resize</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a3511264df718d35a5765144b17c61137</anchor>
+      <arglist>(float height)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setColor</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a0ab9ff0d697af337c4e33ce6269ad159</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector4</type>
+      <name>getColor</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ab62cebcd3ecf645b4c790b18890f005f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addLandmark</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a501b2535a19a1b95fb24df6a26007db6</anchor>
+      <arglist>(const float &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTexture</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a4959da3f213e77647b5927f9e5d62a25</anchor>
+      <arglist>(const std::string &amp;image_path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeCapsule</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a466ba48174540debb4f0885c599ee3d3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeCapsulePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ab7dce1e46137a0834cab33d14ec99e5a</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;radius, const float &amp;height)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeCapsulePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac9708a9f8516ba67291c8b1035cfe24f</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;radius, const float &amp;height, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeCapsulePtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a12049d29b9e7bcb56008a69535d13326</anchor>
+      <arglist>(const LeafNodeCapsulePtr_t &amp;other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeCollada</name>
+    <filename>a00008.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeColladaPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afdac89464340ac5714eee8afdeb1d70c</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>::osg::NodeRefPtr</type>
+      <name>getColladaPtr</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a4dc63b840efe8d78216c57284dbd077b</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeColladaPtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>adedc5d909927bee19d113d6687397ddc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeColladaPtr_t</type>
+      <name>self</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>afa00a0f8cc36342cd30daef6f0dcee16</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1982b979faec5e54e304768fc945c2e0</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTexture</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a494b1ad86370bf11365573324812d1b3</anchor>
+      <arglist>(const std::string &amp;image_path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setAlpha</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a3c9f997e888286e2e92f2812a62b4a21</anchor>
+      <arglist>(const float &amp;alpha)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeCollada</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>af3882929f7f1a02535d8d1dd82b465bb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeColladaPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a0854fac4e8b5d06dd36754f8e1d9af8d</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;collada_file_path)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeColladaPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>ad46826226e9d230459e7b358a09ab056</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;collada_file_path, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeColladaPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a556dbdad849576810341d4ea3525729f</anchor>
+      <arglist>(LeafNodeColladaPtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeCone</name>
+    <filename>a00009.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeConePtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a5ea261a807193e816dd5a5650cf56c07</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeConePtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a8c4ca2e9f19a239a7605db776e9b7b03</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeConePtr_t</type>
+      <name>self</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a385b08670a589866ff8a099324f3f44f</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setRadius</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ad8f0f38132708699aa772d15cb7863c9</anchor>
+      <arglist>(const float &amp;radius)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getRadius</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a53b95b309d64be8303d4b3cadb49156a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setHeight</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ae31ac9c9d02d56268f4bb4ca8a535f79</anchor>
+      <arglist>(const float &amp;height)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getHeight</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a689f1e71b7fd83ba4a0917e755fdb1fc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setColor</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a93c8d3cffd85e0a63620b044cae63cdb</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector4</type>
+      <name>getColor</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>af93c4e8757f4526fc4f8ec2f1b224a6d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTexture</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ab64e80905053f588613ac134747a909b</anchor>
+      <arglist>(const std::string &amp;image_path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeCone</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a4fb4c7a342c5407ed9b643629234e3f7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeConePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>aa2140bf21b04b61daa89f77474a95b23</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;radius, const float &amp;height)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeConePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a3e1ec96fcb0cbc09232197339c6e876a</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;radius, const float &amp;height, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeConePtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a12b9977bdef05798335f7e1a82f808fc</anchor>
+      <arglist>(LeafNodeConePtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeCylinder</name>
+    <filename>a00010.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeCylinderPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>aa7e6d38578996a7e87efa33675ed6473</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual NodePtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a9ec068c586a9aaef666913471a9ec28d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeCylinderPtr_t</type>
+      <name>self</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>abaf6fe300363226fd4b4a33c29a7fd22</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRadius</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a27f517888eaa1e3a2a4fb6e543f6c001</anchor>
+      <arglist>(const float &amp;radius)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getRadius</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a93c3aac595607240ce7d47fc17635253</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setHeight</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>aa6f32c548dfdf6dda8d058dfcd475736</anchor>
+      <arglist>(const float &amp;height)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getHeight</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a858cfb80ea19da80efd81ed504f1d0c3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a9cec3cc398b5ddde7a73f40aee677e39</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector4</type>
+      <name>getColor</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a7f5de1f3a617fce4c713ddb427bf6405</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTexture</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>afd5076bccffe7c35146710cf9d610b97</anchor>
+      <arglist>(const std::string &amp;image_path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeCylinder</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a2039f8a6436c91fbb7db44e0476b65b4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeCylinderPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a922a27df2cc13df6e108f4834e7008fb</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;radius, const float &amp;height)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeCylinderPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a0ddbd2d798bf71b8a90ae1472bfb01f7</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;radius, const float &amp;height, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeCylinderPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a35a7fe58822a876bcc3ab9c611f9bf5f</anchor>
+      <arglist>(LeafNodeCylinderPtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeFace</name>
+    <filename>a00011.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function">
+      <type>void</type>
+      <name>addVertex</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ab23cf30da5c0c15ae78c543926e51bc1</anchor>
+      <arglist>(const osgVector3 &amp;vertex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeFacePtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aa4a88c528d61b0df2bc5a10103353b26</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual NodePtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a954a3eb59ec3d96b3060b1d181ee2403</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeFacePtr_t</type>
+      <name>self</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a68f8a0d7f937e97154ab417347991332</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>af2e7c1505ef62f06d50e531f67acbc87</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTexture</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a6cf0c24dcd90e3a9eba340a4639b04bc</anchor>
+      <arglist>(const std::string &amp;image_path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeFace</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a23cf4789e80d787b82d874201e641118</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeFacePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>abf8b9dc79ff60f634167586aab46c5f6</anchor>
+      <arglist>(const std::string &amp;name, const osgVector3 &amp;point1, const osgVector3 &amp;point2, const osgVector3 &amp;point3)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeFacePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aa8a4cbdd0de554fe42112c85cf4efa8a</anchor>
+      <arglist>(const std::string &amp;name, const osgVector3 &amp;point1, const osgVector3 &amp;point2, const osgVector3 &amp;point3, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeFacePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a0c2e60486eaf34a34b70215dd55f29cc</anchor>
+      <arglist>(const std::string &amp;name, const osgVector3 &amp;point1, const osgVector3 &amp;point2, const osgVector3 &amp;point3, const osgVector3 &amp;point4)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeFacePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a9611935407a6c00ef9e3169a43e056cb</anchor>
+      <arglist>(const std::string &amp;name, const osgVector3 &amp;point1, const osgVector3 &amp;point2, const osgVector3 &amp;point3, const osgVector3 &amp;point4, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeFacePtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>ab365dbfd2ec9447213eb189b357b505c</anchor>
+      <arglist>(LeafNodeFacePtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeGround</name>
+    <filename>a00012.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeGroundPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a9863b478f5ec1a68905312042aa607ae</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeGroundPtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a2c9eb6db367a006f580d3418803e78e7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeGroundPtr_t</type>
+      <name>self</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>ade7873be429830c5febc65d0535d78c8</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a149abc01a01933e066ce729354fdaa7f</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setColor1</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a4810f3c843645d62f0d1bf82ad4b77ef</anchor>
+      <arglist>(const osgVector4 &amp;color1)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector4</type>
+      <name>getColor1</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>aa51c8ffcad9e2836e0e745d3f983b7f3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setColor2</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a425523a152796ff5edb3867ce81aff8a</anchor>
+      <arglist>(const osgVector4 &amp;color2)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector4</type>
+      <name>getColor2</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a586bddee3ca907db8cdf5341cc8bfb9d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setColors</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a92a2cce28e67c19961740cb11d1cacca</anchor>
+      <arglist>(const osgVector4 &amp;color1, const osgVector4 &amp;color2)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeGround</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a55c79ce2f9ef0bddbcbd18c42241ae36</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeGroundPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a8f76fc181ebf7aac6d9f4e875f2a6d61</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;length, const float &amp;width)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeGroundPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a56c9136825bad335ca67cb35f47616bc</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;length, const float &amp;width, const float &amp;square_length, const float &amp;square_width)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeGroundPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>af607d65915f0e546933ee630aca0c454</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;length, const float &amp;width, const float &amp;square_length, const float &amp;square_width, const osgVector4 &amp;color1, const osgVector4 &amp;color2)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeGroundPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a4af65cebb69195783bd0309b92076d55</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeGroundPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a93bf531a26fc8f33b3f3bd53eb9ef84a</anchor>
+      <arglist>(const LeafNodeGroundPtr_t &amp;other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeLight</name>
+    <filename>a00013.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeLightPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a08aaca27c5dbe97e3b6907bdf88b900b</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeLightPtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a932d48a6e3a5342b43f27dafd908d863</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeLightPtr_t</type>
+      <name>self</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a9f5a9a072b1091ec767fe8b82c6aade9</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRadius</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ad043c1f65819723c338dddc29e862d11</anchor>
+      <arglist>(const float &amp;radius)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getRadius</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a67f2199af9ec0cf0ef5e7aa8816ea4dc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setColor</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a06460b64507bbd6cf4a13b33062ef2b5</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector4</type>
+      <name>getColor</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a33ce2d5a44a6339dc99ae955d6292d72</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTexture</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>acaffabfd834a8767494fe8a1d28693ad</anchor>
+      <arglist>(const std::string &amp;image_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRoot</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>af8b17031c190d85723070e097960fba4</anchor>
+      <arglist>(GroupNodePtr_t root)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeLight</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>aac810543a608fe82d704dff35907966d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeLightPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a5c34a26e687b9b51758f81147697d12a</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;radius)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeLightPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a2cf3d7deeaf10c247aa5da4d0700cfbf</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;radius, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeLightPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a52bb95b368b52ebc966ebd13920657ec</anchor>
+      <arglist>(LeafNodeLightPtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeLine</name>
+    <filename>a00014.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeLinePtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ade91cd460083c91001f96848fa960fc6</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual NodePtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ab71d648bc93aa7124f4ef458599dfa39</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeLinePtr_t</type>
+      <name>self</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a7f77db813e5c396876965b3db1c507c2</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setStartPoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ab131c98267916b7e74690cfb91f5509a</anchor>
+      <arglist>(const osgVector3 &amp;start_point)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector3</type>
+      <name>getStartPoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ac74c1d26dd70243af00ec19d12e0079a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setEndPoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a521a2ba24e311924afc20aefd1a9d5bd</anchor>
+      <arglist>(const osgVector3 &amp;end_point)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector3</type>
+      <name>getEndPoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a1411129d564d045bb164a36f0fb09939</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setMode</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a5e2dba518dea06e2b14855839953ec60</anchor>
+      <arglist>(const GLenum mode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setPoints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a6f0e30fc365c0aed8e0c4065d0dd3920</anchor>
+      <arglist>(const osgVector3 &amp;start_point, const osgVector3 &amp;end_point)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setPoints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abbb40834b740d7819dc01eb36c285ab6</anchor>
+      <arglist>(const ::osg::Vec3ArrayRefPtr &amp;points)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a008b70712be4b105ffe04f38e9ca9b3f</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector4</type>
+      <name>getColor</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a4ba765fea67a0ed6f772524c02185d8d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeLine</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a0a5b18468c9365f28216448a042a2988</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeLinePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a2e26e9cc2228a6e0c3d71adf1888bfbc</anchor>
+      <arglist>(const std::string &amp;name, const osgVector3 &amp;start_point, const osgVector3 &amp;end_point)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeLinePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ad75f4ea1d54d967477e4523bae26803e</anchor>
+      <arglist>(const std::string &amp;name, const osgVector3 &amp;start_point, const osgVector3 &amp;end_point, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeLinePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ab866b2b266667646cfa5e4efa901cfe2</anchor>
+      <arglist>(const std::string &amp;name, const ::osg::Vec3ArrayRefPtr &amp;points, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeLinePtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a59f6540d4e5a775f9f68850da554cc8e</anchor>
+      <arglist>(LeafNodeLinePtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeSphere</name>
+    <filename>a00015.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeSpherePtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>aa195a6e160480e15f8e3b417fe3a7e72</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeSpherePtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ae2fa0a133b4238e69fab63d9bfd435bc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeSpherePtr_t</type>
+      <name>self</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a0bca6d5efb40bc2bc2bf48232be0500c</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRadius</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>aaa2305caaf485a5e35891d9f4984bbf5</anchor>
+      <arglist>(const float &amp;radius)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getRaduis</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a64df9dec37c5d75ac408d02ff612d133</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setColor</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a11f4deb4c2052f15cf598fc5ab31ee33</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector4</type>
+      <name>getColor</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a15038c656ecdf083867c05724f325d3c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTexture</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a22bc613e95bc07a9b6eb2386e05e37a5</anchor>
+      <arglist>(const std::string &amp;image_path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeSphere</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a5656be5ee048028d68cdb5216e69c48d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeSpherePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a73657dd2588dd0350603484afd469041</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;radius)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeSpherePtr_t</type>
+      <name>create</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a23c13460e9faac2e4acaaf71992f24f5</anchor>
+      <arglist>(const std::string &amp;name, const float &amp;radius, const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeSpherePtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a415cf774c235066db4fd6841d2b341e5</anchor>
+      <arglist>(LeafNodeSpherePtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::LeafNodeXYZAxis</name>
+    <filename>a00016.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function">
+      <type>void</type>
+      <name>addVertex</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>acffd801390a9ffcae1ca5f4e62727f00</anchor>
+      <arglist>(const osgVector3 &amp;vertex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeXYZAxisPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a2aed5493cdb0986171714012c1e54eab</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual NodePtr_t</type>
+      <name>copy</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a7b9d24a8d59e1204ae1e9f41ed0d801d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>LeafNodeXYZAxisPtr_t</type>
+      <name>self</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a131dac88dd7345e8a9fba0d9eaf08728</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>acaf54544d8fef210405eddc9e87e5688</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getRadius</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>ad3ad8051c70912af3512220f987c7acb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRadius</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>aae17824a458c2736366b400808d879ae</anchor>
+      <arglist>(const float &amp;radius)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setSizeAxis</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a28b48a13aa7cd0573b485bff616700f2</anchor>
+      <arglist>(const float &amp;sizeAxis)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getSizeAxis</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a8b167e4b1d0707c8dd2b83fc3b834e61</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTexture</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a8917199f78bda9846f00c061833c3596</anchor>
+      <arglist>(const std::string &amp;image_path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafNodeXYZAxis</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>ac01f207173ca99c176318b6ed2bc2d53</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeXYZAxisPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a67b7a18ba0a0529f663fffde0e62ad99</anchor>
+      <arglist>(const std::string &amp;name, const osgVector4 &amp;color, float radiusCenter, float sizeAxis)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeXYZAxisPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>aed0d39075fff50082e0c180e112d51d8</anchor>
+      <arglist>(const std::string &amp;name, const osgVector4 &amp;color, float radiusCenter)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static LeafNodeXYZAxisPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>af3ba4753b9a1fb69d0b89b9810d83ce7</anchor>
+      <arglist>(LeafNodeXYZAxisPtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::Node</name>
+    <filename>a00017.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>Arrow</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NONE</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a3eeb2e83bd83de6633c4afd2d3b7f7e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ROT_X</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a9f1e5e5014157e2ed5f7c5b606fd49cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ROT_Y</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a55359e8947602d688e99b1502b7fda2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ROT_Z</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a8852d0f4f8b18f1dcb5afea136e71a98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TRANS_X</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a5755bcbeec9a68b05ad7b9361958a9f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TRANS_Y</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a9ab381c6c205ce97c33a5a7286c6feef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TRANS_Z</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25aa928df4aed7dfc7cd15d5ea6ad034de5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALL</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a0e5494cde59a61f1f1048f2548ec03d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NONE</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a3eeb2e83bd83de6633c4afd2d3b7f7e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ROT_X</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a9f1e5e5014157e2ed5f7c5b606fd49cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ROT_Y</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a55359e8947602d688e99b1502b7fda2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ROT_Z</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a8852d0f4f8b18f1dcb5afea136e71a98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TRANS_X</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a5755bcbeec9a68b05ad7b9361958a9f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TRANS_Y</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a9ab381c6c205ce97c33a5a7286c6feef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TRANS_Z</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25aa928df4aed7dfc7cd15d5ea6ad034de5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALL</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad130e15ecd3e26f6637f252b28780e25a0e5494cde59a61f1f1048f2548ec03d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; osgVector3, osgQuat &gt;</type>
+      <name>getGlobalTransform</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a12754dd79b7a88790d434971a21935ed</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>getID</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a8d28a4fbce7e2f16dbceca465ab3241f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>applyConfiguration</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a0a2e576db7a25fbb05b6fb2dc6694a42</anchor>
+      <arglist>(const osgVector3 &amp;position, const osgQuat &amp;quat)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setStaticTransform</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a58e7e9bc90e0fcf61d2338594dd95ad3</anchor>
+      <arglist>(const osgVector3 &amp;position, const osgQuat &amp;quat)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgQuat</type>
+      <name>getStaticRotation</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>af76b4129d5336cd69e7b35fd00d8bbfb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector3</type>
+      <name>getStaticPosition</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a25a6b7a2f8cfab7c783be6057937ea6e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setVisibilityMode</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ae66a4d07d98dcf2cf0d19d8da57d9d34</anchor>
+      <arglist>(const VisibilityMode &amp;visibility_state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setLightingMode</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ab5606e37056200638983da76484b866e</anchor>
+      <arglist>(const LightingMode &amp;lighting_state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setWireFrameMode</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>acbaad03436c87fcfa1ee5c4cff8efa5d</anchor>
+      <arglist>(const WireFrameMode &amp;wireframe_state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setScale</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a45333caa8cd602c511be8ade878b9500</anchor>
+      <arglist>(float scale)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setScale</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>aa0d91ed911ef31cac81761dabcca3e14</anchor>
+      <arglist>(const osg::Vec3d &amp;scale)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>setColor</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a62f46cd21486e755ebbb2d28126b468c</anchor>
+      <arglist>(const osgVector4 &amp;color)=0</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>selectArrows</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a58b0d7b64630c080b4f0d5722d33b58e</anchor>
+      <arglist>(int arrows=ROT_X|ROT_Y|ROT_Z|TRANS_X|TRANS_Y|TRANS_Z)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setArrowsVisibility</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a1484a4cd33930d3d9874b531e1405e5b</anchor>
+      <arglist>(const VisibilityMode &amp;visibility)</arglist>
+    </member>
+    <member kind="function">
+      <type>virtual ::osg::GroupRefPtr</type>
+      <name>asGroup</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a9128b4887f975fd83755d35996c3c677</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>addLandmark</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a5810e7609aabc8c4dfa0ee9fec2fe49d</anchor>
+      <arglist>(const float &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>::osg::StateSetRefPtr</type>
+      <name>getOrCreateRootStateSet</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ad282294bc877bca88ef4580f2f4a81b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>deleteLandmark</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a45a9942c04c6dcda5d050bba0092a297</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setHighlightState</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a0ccb87662144f6af5ab29fe8578e7592</anchor>
+      <arglist>(unsigned int state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setAlpha</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>aae67adf4cca25663a2530672fa55cb19</anchor>
+      <arglist>(const float &amp;alpha)</arglist>
+    </member>
+    <member kind="function">
+      <type>float</type>
+      <name>getAlpha</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>aa89a413056139cb7d1ca58ad3c4362be</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>accept</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a789b20dd6e28b8d060663adddde6dd2d</anchor>
+      <arglist>(NodeVisitor &amp;visitor)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>traverse</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a16d476ba8a217dfae7ecc54fea75fa68</anchor>
+      <arglist>(NodeVisitor &amp;visitor)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Node</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a620b9216fa6dfd391f06e57ad0afd34d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Node</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>abe34d0b4f8eca421ce6261ed21306aab</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Node</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a3ef55c2b0e0de14e0e20ad65f2e1c7d7</anchor>
+      <arglist>(const Node &amp;other)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>::osg::GroupRefPtr</type>
+      <name>asQueue</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a18ccf89f8c244ffed458f2e7c1effea3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setID</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ae0eae4024e11ee140fee3e70ad625264</anchor>
+      <arglist>(const std::string &amp;id_name)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>::osg::GeodeRefPtr</type>
+      <name>landmark_geode_ptr_</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>ac4cdd5ccf07812c8f292d8937660d4fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>::osg::GeodeRefPtr</type>
+      <name>geode_ptr_</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a32d45e5d3b23cabbc2893f786c79afc9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>float</type>
+      <name>alpha_</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a37f98854998ad1337ca271a2f44aff8d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::NodeRod</name>
+    <filename>a00018.html</filename>
+    <base>graphics::Node</base>
+    <member kind="typedef">
+      <type>osg::Vec3f::value_type</type>
+      <name>value_type</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a5abded4bec290d87d661849547229437</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getCapsuleName</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a188aa46acca1431a454406327edb084a</anchor>
+      <arglist>(size_t i)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LeafNodeCapsulePtr_t</type>
+      <name>getCapsule</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a5a62e73aed2ed8408ff02cf77ed9dc3f</anchor>
+      <arglist>(size_t i) const </arglist>
+    </member>
+    <member kind="function">
+      <type>NodeRodPtr_t</type>
+      <name>self</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>aaac3d970f37e2781544d89521793d31c</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual float</type>
+      <name>radius</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a266bcd873c96c679c03d52d2fd356cb9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual float</type>
+      <name>totalLength</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>ad0f9d8e24defd776dfd9bdee2e341a52</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a7e95e85c69683b777b12b91a80ab9047</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual osgVector4</type>
+      <name>color</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>ab0670b2d60bdafde9306d4bedb527573</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual size_t</type>
+      <name>maxCapsule</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>acc7183cb24c40152a6f77ac242029753</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>applyConfiguration</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a80f755f8039334e8ea8d44141c670058</anchor>
+      <arglist>(std::vector&lt; std::vector&lt; value_type &gt; &gt; params)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static NodeRodPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a7ac5dfd612e46b70589e54dfa9e6c32f</anchor>
+      <arglist>(const std::string &amp;name, osgVector4 color, float radius, float totalLength, short maxCapsule)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static NodeRodPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a4af5ff063b68e5bd27983f8269a38f46</anchor>
+      <arglist>(NodeRodPtr_t other)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>NodeRod</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>ac3005ffab622a8e19e24d4e7d57d5d6e</anchor>
+      <arglist>(const std::string &amp;name, osgVector4 color, float radius, float totalLength, size_t maxCapsule)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>NodeRod</name>
+      <anchorfile>a00018.html</anchorfile>
+      <anchor>a56572a894ace1d59cc633f3c08998538</anchor>
+      <arglist>(const NodeRod &amp;other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::NodeVisitor</name>
+    <filename>a00019.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>NodeVisitor</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a8ee78c1d617366feebe1d07447612893</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~NodeVisitor</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a8cfcbad020969306b9964665e02f352f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a8fe2773e7376c19f52c12b01907c0776</anchor>
+      <arglist>(Node &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a6c86eb2ddac173858a314613dc4536a8</anchor>
+      <arglist>(GroupNode &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a797c5f215f5e3ba30acd4e3f911a6903</anchor>
+      <arglist>(LeafNodeArrow &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a84ec977e7024b065710c06c97e186b10</anchor>
+      <arglist>(LeafNodeBox &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>aea0a592368f829171b2fa45866ce0ff1</anchor>
+      <arglist>(LeafNodeCapsule &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a943c18dcd80a3d7ebe39302c0e809bcf</anchor>
+      <arglist>(LeafNodeCollada &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a9edf3a61c724f45eb142682440e6d222</anchor>
+      <arglist>(LeafNodeCone &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a317f9e315530f52c9c1f312698c48bc1</anchor>
+      <arglist>(LeafNodeCylinder &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a25e2d25ef57e37b27b54e0e455bff899</anchor>
+      <arglist>(LeafNodeFace &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a256d4b0b92c3d909282654547d530cee</anchor>
+      <arglist>(LeafNodeGround &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a43c23448bc38493c67e92c70abc6dafd</anchor>
+      <arglist>(LeafNodeLight &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>afe7e8dda6b27888c85a8f71a6906973e</anchor>
+      <arglist>(LeafNodeLine &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>aadb957a91da522080f27ad410163802d</anchor>
+      <arglist>(LeafNodeSphere &amp;node)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>a6c5c331b862cb70d9dc7cb4e83dc6c88</anchor>
+      <arglist>(LeafNodeXYZAxis &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>traverse</name>
+      <anchorfile>a00019.html</anchorfile>
+      <anchor>afd042069210655032de39fc632ba4945</anchor>
+      <arglist>(Node &amp;node)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::RoadmapViewer</name>
+    <filename>a00020.html</filename>
+    <base>graphics::Node</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual RoadmapViewerPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>ae40efef32a96306436aefcfb60cc40b2</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>RoadmapViewerPtr_t</type>
+      <name>self</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a07e9eae2b3a489f2682c5d4470042e8d</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>addNode</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a6170bff630fcfbf7fd89748ec3f2eff1</anchor>
+      <arglist>(osgVector3 position, osgQuat quat, boost::mutex &amp;mtx)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>addEdge</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>ae6803884a2276e2e4ac595e1b046a24e</anchor>
+      <arglist>(osgVector3 from, osgVector3 to, boost::mutex &amp;mtx)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeAllChildren</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a9d788f814f61888c930e53bf9e8530c5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setVisibilityMode</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a4fa69eb3d79d5f0c51bc2f8741b6757d</anchor>
+      <arglist>(const VisibilityMode &amp;visibility_state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setLightingMode</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a131644504b0138d6f3371f2fe22ef305</anchor>
+      <arglist>(const LightingMode &amp;lighting_state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setWireFrameMode</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a4b5888ae5d4bfbb8f953deacf536cdd6</anchor>
+      <arglist>(const WireFrameMode &amp;wireframe_state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual size_t</type>
+      <name>getNumOfNodes</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>ac8ca47be01b2fe15b7ff842aa7cddb17</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual size_t</type>
+      <name>getNumOfEdges</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a54337a9ce2bbe9c92027f1ace2e65e64</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual graphics::LeafNodeXYZAxisPtr_t</type>
+      <name>getNode</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>ad1744d330f9c9bc628e18560945442ed</anchor>
+      <arglist>(size_t i) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual graphics::LeafNodeLinePtr_t</type>
+      <name>getEdge</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a3ccf4de090b13247085d2f76d79b4208</anchor>
+      <arglist>(size_t i) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual float</type>
+      <name>getRadiusSphere</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a3aa9cf7f4d3887614d3e119986948837</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual float</type>
+      <name>getSizeAxis</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a44fd1d22f98d5bd4a1cd7d1cbb64dcc2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual osgVector4</type>
+      <name>getColorNode</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>ab1854909500f712ceedd828e1fc1071f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual osgVector4</type>
+      <name>getColorEdge</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a6c9f089ce51765b119dd0272aaaa3bd0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColorNode</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a37f7b644955fb3063112691a97f7ad98</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColorEdge</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a1c7b28963340ff6bc19d75e69f116ad0</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setColor</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a7701c29f285854ef9ba6871310714393</anchor>
+      <arglist>(const osgVector4 &amp;color)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static RoadmapViewerPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a184b328859ec03a9e1347d356d5173d8</anchor>
+      <arglist>(const std::string &amp;name, const osgVector4 &amp;colorNode, float radiusSphere, float sizeAxis, const osgVector4 &amp;colorEdge)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static RoadmapViewerPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>a9b1d55a3933d31b44ace871c3afb2297</anchor>
+      <arglist>(RoadmapViewerPtr_t other)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>RoadmapViewer</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>ada14b204645a22ae6f994a5aa5ea1b0f</anchor>
+      <arglist>(const std::string &amp;name, const osgVector4 &amp;colorNode, float radiusSphere, float sizeAxis, const osgVector4 &amp;colorEdge)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>RoadmapViewer</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>affb29fb75638b7ae082627165504bf78</anchor>
+      <arglist>(const RoadmapViewer &amp;other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::TransformWriter</name>
+    <filename>a00021.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>TransformWriter</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>affaeb173d2a510a2c0244171a1b1fdd8</anchor>
+      <arglist>(const std::string filename)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~TransformWriter</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>ad2a2623508e1f4c9e30c605fffcefdd9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>newFrame</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a2bd32e42601eab8fd002ee305eea6056</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>writeTransform</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a0f99f345a431d41d756587ea3ab2259f</anchor>
+      <arglist>(const char *objName, const osgVector3 &amp;vec, const osgQuat &amp;quat)=0</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ofstream &amp;</type>
+      <name>out</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>aa923f9f4c7476fb4a49db9c5bfeb907d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>openFile</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a5f9677b192dcebaa4d1e1739067a1b1a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>closeFile</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>aef71fb9874196bac0c8ea8667407269d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>writeNewFrame</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>ad35ea9e934979092ac3ca2e9139defd4</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::ofstream</type>
+      <name>file_</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a35eca9f400111af4a0fcdbb8e80c786c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>filename_</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>a17e3fac110e520f24bfa659c3c8c0d19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>unsigned int</type>
+      <name>frameCount_</name>
+      <anchorfile>a00021.html</anchorfile>
+      <anchor>ad39584b957abc842a95e9eba5fb5546e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::TransformWriterVisitor</name>
+    <filename>a00022.html</filename>
+    <base>graphics::NodeVisitor</base>
+    <member kind="function">
+      <type></type>
+      <name>TransformWriterVisitor</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>adb57d599c0f4122bd8e593269d1b5bd5</anchor>
+      <arglist>(TransformWriter *writer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>captureFrame</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>aaedb0753c93c491eb3ada6973bec2d18</anchor>
+      <arglist>(Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>captureFrame</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>ad202f3b9bc5aeeecfebbce762e7ebd5d</anchor>
+      <arglist>(Iterator begin, Iterator end)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>apply</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>ab4556952ae24af94057e613772c82d43</anchor>
+      <arglist>(Node &amp;node)</arglist>
+    </member>
+    <member kind="variable">
+      <type>osg::ref_ptr&lt; TransformWriter &gt;</type>
+      <name>writer_</name>
+      <anchorfile>a00022.html</anchorfile>
+      <anchor>a24786fcec07d56d3d582af787bd7e64a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::WindowManager</name>
+    <filename>a00023.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual WindowManagerPtr_t</type>
+      <name>clone</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>a586f3eee3941c9428cb6bc0379c071db</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function">
+      <type>WindowManagerPtr_t</type>
+      <name>self</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>ab9b679b4f418788a492ebbd2b7782f25</anchor>
+      <arglist>(void) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addNode</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>ac01596780a245c3ec2f314535b39d2c6</anchor>
+      <arglist>(NodePtr_t graphical_object_ptr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual GroupNodePtr_t</type>
+      <name>getScene</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>a0000d06454ba3153b79067fa7a97930e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>done</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>abbec5cd39a02464448adc2360407d040</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>frame</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>aa988038ef0f2c303af545e830b76f46b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>run</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>a6f389c788b6bbb7ed560e493dac4e81b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setWindowDimension</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>ab43e1414bb9ff87a348ce7499f29c30c</anchor>
+      <arglist>(const unsigned int &amp;width, const unsigned int &amp;height)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setWindowPosition</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>af786e62f6e0c640495a75258c61b78d6</anchor>
+      <arglist>(const unsigned int &amp;x_position, const unsigned int &amp;y_position)</arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector2</type>
+      <name>getWindowPosition</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>ae292dc036c1d9418cb9d6dd79ea0188e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>osgVector2</type>
+      <name>getWindowDimension</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>a14e6b72658824daebb48e88135760155</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>::osgViewer::ViewerRefPtr</type>
+      <name>getViewerClone</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>aa0678e2f88c6bda98a98f7d7152681bc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~WindowManager</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>ae74ab23439265fd3dfdddbb0abb0378b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>startCapture</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>a24de449b6793c7e33fb3aead952714df</anchor>
+      <arglist>(const std::string &amp;filename, const std::string &amp;extension)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>stopCapture</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>a813327509e6afd5197dd2c24443fc7b8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>writeNodeFile</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>aaf681ea686ee7ea9c584a744645e3b5d</anchor>
+      <arglist>(const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static WindowManagerPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>ad599dd34e219872a648f7a429769f48a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static WindowManagerPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>a7847f4569c1b3559358224e4e2e5f324</anchor>
+      <arglist>(osg::GraphicsContext *gc)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static WindowManagerPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>ad8a3a7c516685b1c4683349f6b438160</anchor>
+      <arglist>(osgViewer::Viewer *v, osg::GraphicsContext *gc)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static WindowManagerPtr_t</type>
+      <name>create</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>aea841156888fe54ae019cf38b41565df</anchor>
+      <arglist>(const unsigned int &amp;x, const unsigned int &amp;y, const unsigned int &amp;width, const unsigned int &amp;height)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static WindowManagerPtr_t</type>
+      <name>createCopy</name>
+      <anchorfile>a00023.html</anchorfile>
+      <anchor>a68805a4c2efda643d16ade1f4391ee94</anchor>
+      <arglist>(WindowManagerPtr_t other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>graphics::YamlTransformWriter</name>
+    <filename>a00024.html</filename>
+    <base>graphics::TransformWriter</base>
+    <member kind="function">
+      <type></type>
+      <name>YamlTransformWriter</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>aba70bb1d0a4a0f6899749725f8e687f3</anchor>
+      <arglist>(const std::string filename)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~YamlTransformWriter</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a34a8a4fd6ac2f8400d01ec8e122bc7a1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeTransform</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>a74563acf1aaa5e28e646358dfee5b2f3</anchor>
+      <arglist>(const char *objName, const osgVector3 &amp;vec, const osgQuat &amp;quat)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>writeNewFrame</name>
+      <anchorfile>a00024.html</anchorfile>
+      <anchor>ac2b271c000ec18394058422cf2e132e5</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>graphics</name>
+    <filename>a00050.html</filename>
+    <namespace>graphics::urdfParser</namespace>
+    <class kind="class">graphics::BasicTransformWriter</class>
+    <class kind="class">graphics::FrameCaptureHandlerHandler</class>
+    <class kind="class">graphics::GroupNode</class>
+    <class kind="class">graphics::LeafNodeArrow</class>
+    <class kind="class">graphics::LeafNodeBox</class>
+    <class kind="class">graphics::LeafNodeCapsule</class>
+    <class kind="class">graphics::LeafNodeCollada</class>
+    <class kind="class">graphics::LeafNodeCone</class>
+    <class kind="class">graphics::LeafNodeCylinder</class>
+    <class kind="class">graphics::LeafNodeFace</class>
+    <class kind="class">graphics::LeafNodeGround</class>
+    <class kind="class">graphics::LeafNodeLight</class>
+    <class kind="class">graphics::LeafNodeLine</class>
+    <class kind="class">graphics::LeafNodeSphere</class>
+    <class kind="class">graphics::LeafNodeXYZAxis</class>
+    <class kind="class">graphics::Node</class>
+    <class kind="class">graphics::NodeRod</class>
+    <class kind="class">graphics::NodeVisitor</class>
+    <class kind="class">graphics::RoadmapViewer</class>
+    <class kind="class">graphics::TransformWriter</class>
+    <class kind="class">graphics::TransformWriterVisitor</class>
+    <class kind="class">graphics::WindowManager</class>
+    <class kind="class">graphics::YamlTransformWriter</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>VisibilityMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VISIBILITY_ON</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0aa5685dde4e8a08b67fd2d82c4ff03fa58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ALWAYS_ON_TOP</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0aa0613824073da6316353614337b32171a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VISIBILITY_OFF</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a3d9cadfe9e800071bacd70f687bb0aad39840eac0da54fd9f476a9b46632c85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>LightingMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a0039795c4d6b33832eefcc2ea6a29f88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LIGHT_INFLUENCE_ON</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a0039795c4d6b33832eefcc2ea6a29f88ae34d4d64749b750a9d80932483ba67cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LIGHT_INFLUENCE_OFF</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a0039795c4d6b33832eefcc2ea6a29f88a322c752f5d647a161fac0497b44d55d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WireFrameMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FILL</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923a21a3e06d07f1b19ccaff859bdd357c26</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WIREFRAME</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923a2b5d71f0ffd94e2645906418e3bdb8c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FILL_AND_WIREFRAME</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a3a65ee922df98392e1e5f4e1ae6d3923ae418795a322936de88aaa395dbdce4ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FaceMode</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FACE</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96a6db03d6516a2482cb758cf6e41121cc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>EDGE</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96a6f5c98da85b3a7ada8105e23313355b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>FACE_AND_EDGE</name>
+      <anchorfile>a00050.html</anchorfile>
+      <anchor>a1ec1830abc1be36a5061948a5450ff96a40ef61269d9fbae5d91820e8a988f154</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>graphics::urdfParser</name>
+    <filename>a00051.html</filename>
+    <member kind="function">
+      <type>GroupNodePtr_t</type>
+      <name>parse</name>
+      <anchorfile>a00051.html</anchorfile>
+      <anchor>a9ce6942bd6c650cc96f22b18212dc314</anchor>
+      <arglist>(const std::string &amp;robotName, const std::string &amp;urdf_file_path, const std::string &amp;meshDataRootDir, const std::string &amp;collisionOrVisual=&quot;visual&quot;, const std::string &amp;linkOrObjectFrame=&quot;link&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>osg</name>
+    <filename>a00052.html</filename>
+    <member kind="typedef">
+      <type>::osg::ref_ptr&lt; GraphicsContext::Traits &gt;</type>
+      <name>TraitsRefPtr</name>
+      <anchorfile>a00052.html</anchorfile>
+      <anchor>ab8110fb6e19cb79a258c30f4f75343d2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>osgGA</name>
+    <filename>a00053.html</filename>
+    <class kind="class">osgGA::KeyboardManipulator</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>KeyBinding</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_forward</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895a18e6c4e569e5b94ad90154e5eee5a962</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_backward</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895a2e5cf552fd6c2f24b1014963162d0aeb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_right</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895af4cbb58ecfe567d418bdce9d5c75c2ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_left</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895ad48fd4dd20a612e15f57d80f0d16b97f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_roll_right</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895a1d5098090b2aae8153c5b72da22dc391</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_roll_left</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895acb2b8ccc3065b4ba0b5d4cea112fe90f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_up</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895a2afaa03124f2ea68057e18ac872f94d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>key_down</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a48f3d42c9c904cde447e511c4929b895a5437b7c371175a0dd6a91dd5554a7437</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>keyLayout</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a5d28c646a540c36e1ec74240e401890c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LAYOUT_unknown</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a5d28c646a540c36e1ec74240e401890ca20c6b2636cab0394a448e1c51017ccbf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LAYOUT_azerty</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a5d28c646a540c36e1ec74240e401890ca1fe0a0fc67451f42a35a804ea70b161a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LAYOUT_qwerty</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a5d28c646a540c36e1ec74240e401890caf8de243cd1bdd8e9bdf0b6da021fdb2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const double</type>
+      <name>startSpeed_</name>
+      <anchorfile>a00053.html</anchorfile>
+      <anchor>a2e81c7b668b4cae6fbf49a15299534ed</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>osgShadow</name>
+    <filename>a00054.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>osgViewer</name>
+    <filename>a00055.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+    <docanchor file="index" title="Introduction">gepetto_viewer_sec_intro</docanchor>
+  </compound>
+</tagfile>

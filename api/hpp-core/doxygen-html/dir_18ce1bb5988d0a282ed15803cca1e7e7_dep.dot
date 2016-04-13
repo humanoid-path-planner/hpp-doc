@@ -1,0 +1,9 @@
+digraph "continuous-collision-checking" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ec650033a5a388847ed11d275b2baf5d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="core" fontname="Helvetica", fontsize="10", URL="dir_ec650033a5a388847ed11d275b2baf5d.html"]
+  dir_18ce1bb5988d0a282ed15803cca1e7e7 [shape=box, label="continuous-collision-checking", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_18ce1bb5988d0a282ed15803cca1e7e7.html"];
+  }
+}

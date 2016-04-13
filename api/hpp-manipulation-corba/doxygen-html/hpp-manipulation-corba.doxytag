@@ -1,0 +1,3662 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>client.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/include/hpp/corbaserver/manipulation/</path>
+    <filename>a00018</filename>
+    <includes id="a00003" name="config.hh" local="no" imported="no">hpp/corbaserver/manipulation/config.hh</includes>
+    <class kind="class">hpp::corbaServer::manipulation::Client</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::corbaServer</namespace>
+    <namespace>hpp::corbaServer::manipulation</namespace>
+  </compound>
+  <compound kind="file">
+    <name>config.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/build-rel/include/hpp/corbaserver/manipulation/</path>
+    <filename>a00003</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MANIPULATION_CORBA_VERSION</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>aa71a9cfdd53c5e1f73442ed762b9cbc0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MANIPULATION_CORBA_DLLIMPORT</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a2ae1bf08f072c83dfee30311b6ba631e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MANIPULATION_CORBA_DLLEXPORT</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a15dd3ed0e6469e5c37b05a0b02372d8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MANIPULATION_CORBA_DLLLOCAL</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a9351d8d1154f1d56739f642482a43215</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MANIPULATION_CORBA_DLLAPI</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>add569171329e9aaacf6ee8fb27f46e63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MANIPULATION_CORBA_LOCAL</name>
+      <anchorfile>a00003.html</anchorfile>
+      <anchor>a1b55b5537662077b16066c4079b06121</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>constraint_graph.py</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/src/hpp/corbaserver/manipulation/</path>
+    <filename>a00019</filename>
+    <class kind="class">manipulation::constraint_graph::_ConstraintAndPassiveJoints</class>
+    <class kind="class">manipulation::constraint_graph::ConstraintGraph</class>
+    <namespace>manipulation::constraint_graph</namespace>
+  </compound>
+  <compound kind="file">
+    <name>deprecated.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/build-rel/include/hpp/corbaserver/manipulation/</path>
+    <filename>a00020</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MANIPULATION_CORBA_DEPRECATED</name>
+      <anchorfile>a00020.html</anchorfile>
+      <anchor>aa2975ddd679f83b7425d6363d5f196a2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>doc.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/build-rel/include/hpp/corbaserver/manipulation/</path>
+    <filename>a00021</filename>
+  </compound>
+  <compound kind="file">
+    <name>fwd.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/include/hpp/corbaserver/manipulation/</path>
+    <filename>a00001</filename>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::impl</namespace>
+    <member kind="typedef">
+      <type>manipulation::ProblemSolver</type>
+      <name>ProblemSolver</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>a9afc93ca045e74e8ce8090a40c4d9cdc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConstraintSet</type>
+      <name>ConstraintSet</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>ad65a8407dac9786dc3cc8b31bbdcf83d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjector</type>
+      <name>ConfigProjector</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>ad8ccb9aacce187f65a50b7b6e4c4ecf7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjectorPtr_t</type>
+      <name>ConfigProjectorPtr_t</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>ae194e64e10b8cab65f288056a67cf0bd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>gcommon.idl</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/idl/hpp/corbaserver/manipulation/</path>
+    <filename>a00022</filename>
+    <class kind="struct">hpp::ConfigProjStat</class>
+    <class kind="struct">hpp::GraphComp</class>
+    <class kind="struct">hpp::GraphElements</class>
+    <namespace>hpp</namespace>
+    <member kind="typedef">
+      <type>long</type>
+      <name>ID</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a0ffb4695c0f1007ceade7d346ae09a2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; ID &gt;</type>
+      <name>IDseq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a80f3148e826e61f7a30d0ba7351080d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; GraphComp &gt;</type>
+      <name>GraphComps_t</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>addecb45cca3808e729852f3c3d828c5f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>graph.idl</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/idl/hpp/corbaserver/manipulation/</path>
+    <filename>a00023</filename>
+    <includes id="a00022" name="gcommon.idl" local="yes" imported="yes">hpp/corbaserver/manipulation/gcommon.idl</includes>
+    <class kind="interface">hpp::corbaserver::manipulation::Graph</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::corbaserver</namespace>
+    <namespace>hpp::corbaserver::manipulation</namespace>
+    <member kind="typedef">
+      <type>sequence&lt; Names_t &gt;</type>
+      <name>Namess_t</name>
+      <anchorfile>a00032.html</anchorfile>
+      <anchor>ac9afe274c45da5df3f245fe26c74eba3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>problem.idl</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/idl/hpp/corbaserver/manipulation/</path>
+    <filename>a00024</filename>
+    <includes id="a00022" name="gcommon.idl" local="yes" imported="yes">hpp/corbaserver/manipulation/gcommon.idl</includes>
+    <class kind="interface">hpp::corbaserver::manipulation::Problem</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::corbaserver</namespace>
+    <namespace>hpp::corbaserver::manipulation</namespace>
+  </compound>
+  <compound kind="file">
+    <name>problem_solver.py</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/src/hpp/corbaserver/manipulation/</path>
+    <filename>a00025</filename>
+    <class kind="class">manipulation::problem_solver::ProblemSolver</class>
+    <namespace>manipulation::problem_solver</namespace>
+  </compound>
+  <compound kind="file">
+    <name>robot.idl</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/idl/hpp/corbaserver/manipulation/</path>
+    <filename>a00026</filename>
+    <class kind="interface">hpp::corbaserver::manipulation::Robot</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::corbaserver</namespace>
+    <namespace>hpp::corbaserver::manipulation</namespace>
+  </compound>
+  <compound kind="file">
+    <name>robot.py</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/src/hpp/corbaserver/manipulation/</path>
+    <filename>a00027</filename>
+    <class kind="class">manipulation::robot::CorbaClient</class>
+    <class kind="class">manipulation::robot::Robot</class>
+    <class kind="class">manipulation::robot::HumanoidRobot</class>
+    <namespace>manipulation::robot</namespace>
+  </compound>
+  <compound kind="file">
+    <name>server.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/include/hpp/corbaserver/manipulation/</path>
+    <filename>a00002</filename>
+    <includes id="a00001" name="fwd.hh" local="no" imported="no">hpp/corbaserver/manipulation/fwd.hh</includes>
+    <includes id="a00003" name="config.hh" local="no" imported="no">hpp/corbaserver/manipulation/config.hh</includes>
+    <class kind="class">hpp::manipulation::Server</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <namespace>hpp::manipulation::impl</namespace>
+  </compound>
+  <compound kind="file">
+    <name>warning.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-manipulation-corba/build-rel/include/hpp/corbaserver/manipulation/</path>
+    <filename>a00028</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MANIPULATION_CORBA_WARN_STRINGISE_IMPL</name>
+      <anchorfile>a00028.html</anchorfile>
+      <anchor>aa291d637751d392748ce04330b452601</anchor>
+      <arglist>(x)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MANIPULATION_CORBA_WARN_STRINGISE</name>
+      <anchorfile>a00028.html</anchorfile>
+      <anchor>ae02ed601f6a8df90d81375505f5f2b9c</anchor>
+      <arglist>(x)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_MANIPULATION_CORBA_WARN</name>
+      <anchorfile>a00028.html</anchorfile>
+      <anchor>a96f47ab6f9fc8c5f949f30c634948acb</anchor>
+      <arglist>(MSG)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>manipulation::constraint_graph::_ConstraintAndPassiveJoints</name>
+    <filename>a00004.html</filename>
+    <member kind="function">
+      <type>def</type>
+      <name>__init__</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>ac29fb8090b74d0a7954d66cc43d912f9</anchor>
+      <arglist>(self, constraint, passiveJoints)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>constraint</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a709ef6b594883291df8a608dc3f5b775</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>passiveJoints</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>aa2cdf31a7dbec9f4256fbfbaec06b555</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>constraint_</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a73e04f5b250559ecc3a8484dc7db08e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>passiveJoints_</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a3f4bb0fc62a6bedbd9c4dd72c049d5c2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::corbaServer::manipulation::Client</name>
+    <filename>a00005.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Client</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ab0756d0525eda210aa30a4316f7d0bea</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Client</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a8817bbcb8e21e8f123c3982abbe81a87</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>connect</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a24123c211ae7017d8ac73ef34c9ce70c</anchor>
+      <arglist>(const char *iiop=&quot;corbaloc:rir:/NameService&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>hpp::corbaserver::manipulation::Robot_var &amp;</type>
+      <name>robot</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>a349c4be81242ae2642c3f2a45529b352</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>hpp::corbaserver::manipulation::Problem_var &amp;</type>
+      <name>problem</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>ad38452f7e12fe607d3b2907b57ac7753</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>hpp::corbaserver::manipulation::Graph_var &amp;</type>
+      <name>graph</name>
+      <anchorfile>a00005.html</anchorfile>
+      <anchor>addb94d25fff46179d8cd1ed387abb9f5</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::ConfigProjStat</name>
+    <filename>a00006.html</filename>
+    <member kind="variable">
+      <type>long</type>
+      <name>success</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a588660c29aaeadcf5ada1875524f59d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>error</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>adccc808e754617c38dfd982544e829df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>nbObs</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a1bc8c01faec9a1895a796e31abe078f1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>manipulation::constraint_graph::ConstraintGraph</name>
+    <filename>a00007.html</filename>
+    <member kind="function">
+      <type>def</type>
+      <name>__init__</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a671ee4c2d3c7529fb95aad048518e86d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>display</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a7987ebb98969c428217829300971f122</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createNode</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>aeaf4a019d23f759191f87f21d591c39e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createEdge</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ae3fcfed1eebef2ed8e1d90ee0a0bd9c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createWaypointEdge</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>abbd32ca976178918bafd5310ab0c8e55</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createLevelSetEdge</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ab8c08084e10a179c848785a3079d0df5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createGrasp</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ac27356204ff92f667f7b25c7cc747835</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createPreGrasp</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a95cda9c70ee4b1134c1d6354d2d25bf5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setConstraints</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a618d8f62baa9e1de456390b8770c7581</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setLevelSetFoliation</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a7f6f6a3b2bd327a306b4e0a978c86454</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>addTextToTeXTranslation</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ad43a9dfbde92d9fc2d9ef103f39f2da3</anchor>
+      <arglist>(self, text, tex)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setTextToTeXTranslation</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a212963607494e3c729abf9b8a6a52702</anchor>
+      <arglist>(self, textToTex)</arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>client</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ab37175b61f868bd5c49b30b8e5891d27</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>clientBasic</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a8508ee9731936c36568983b34839833e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>graph</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a0bbfb1df2acc75f3c47233a7d92e3402</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>name</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>ab6b2f752b3c744b642a190650dbc34fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>grasps</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a26ae020cb5f55426a70e3365cd485183</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>pregrasps</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a99580ee5f4597ea222a92511a675731f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>nodes</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>adea331de39fa53de0c16236070304cd5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>edges</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a99bc7290f81a2b2caa2f1918ff748e37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>graphId</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a96a767057c349f6b13588c0639b91afb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>subGraphId</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a62df92cefb4c75448960a01f97becdc4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>textToTex</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a13c89fa2cf9a5435dfc8acfddfeb52ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>dictionary</type>
+      <name>cmdDot</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a1cbd8822303664ad3b6709fbd3169016</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>dictionary</type>
+      <name>cmdViewer</name>
+      <anchorfile>a00007.html</anchorfile>
+      <anchor>a11ff9be4b08c5c4838fccda1f082d0a1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>manipulation::robot::CorbaClient</name>
+    <filename>a00008.html</filename>
+    <member kind="function">
+      <type>def</type>
+      <name>__init__</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a1f89b852fb3f6cdd6dfc9d5cd7890f5d</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>basic</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>a6d44e474e7b939f7fa076ebc7c1f150c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>manipulation</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>acb623e828c73fd7921c64653d34d9b26</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>wholebodyStep</name>
+      <anchorfile>a00008.html</anchorfile>
+      <anchor>adf10698b810f82f86042d9165ec0f083</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="interface">
+    <name>hpp::corbaserver::manipulation::Graph</name>
+    <filename>a00009.html</filename>
+    <member kind="function">
+      <type>long</type>
+      <name>createGraph</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a583dbd31357dbb67a0821f7aaa8f7ed4</anchor>
+      <arglist>(in string graphName)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>createSubGraph</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>abbe54039e89ed0e8e60310b34a3914f5</anchor>
+      <arglist>(in string subgraphName)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTargetNodeList</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ab26487c2c2def316b1e14b4c6b983c21</anchor>
+      <arglist>(in ID subgraph, in IDseq nodes)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>createNode</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a2e3d5c97869fc985bf34033dc41cd35a</anchor>
+      <arglist>(in long subGraphId, in string nodeName, in boolean waypoint)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>createEdge</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a8a59a652ed818b9c0799a4ef8c607e70</anchor>
+      <arglist>(in long nodeFromId, in long nodeToId, in string edgeName, in long weight, in boolean isInNodeFrom)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>isInNodeFrom</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>aa97eca1de76b716727453692058fab9c</anchor>
+      <arglist>(in long edgeId, in boolean isInNodeFrom)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setContainingNode</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a5733aa52c1ca1e92a56744531af0547d</anchor>
+      <arglist>(in ID edgeId, in ID nodeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>createWaypointEdge</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a46f16e4d611f050d9fd9a4d55d90f5ee</anchor>
+      <arglist>(in long nodeFromId, in long nodeToId, in string edgeName, in long number, in long weight, in boolean isInNodeFrom)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>getWaypoint</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a2bedc745b2aba7ed65413406058ce0dc</anchor>
+      <arglist>(in long edgeId, in long index, out ID nodeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setWaypoint</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a9b8004dd16d225ab6fd306dd669c6903</anchor>
+      <arglist>(in ID waypointEdgeId, in long index, in ID edgeId, in ID nodeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getGraph</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a18963139ba8e33d366d1cc089f1d90d8</anchor>
+      <arglist>(out GraphComp graph, out GraphElements elmts)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getEdgeStat</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a7e4571f081b114b354e94b2f4caec622</anchor>
+      <arglist>(in ID edgeId, out Names_t reasons, out intSeq freqs)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>getConfigProjectorStats</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ae0d926418cb76da8811cb03781109b7a</anchor>
+      <arglist>(in ID elmt, out ConfigProjStat config, out ConfigProjStat path)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>createLevelSetEdge</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ad8626bd8a3658c82b2f43061da792bfb</anchor>
+      <arglist>(in long nodeFromId, in long nodeToId, in string edgeName, in long weight, in boolean isInNodeFrom)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setLevelSetFoliation</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ab24496a1dc22e2076c1fa5a9de8fff05</anchor>
+      <arglist>(in long edgeId, in Names_t condNC, in Names_t condLJ, in Names_t paramNC, in Names_t paramPassiveJoints, in Names_t paramLJ)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNumericalConstraints</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>acd7565f7948ff7237ee45f3595148cae</anchor>
+      <arglist>(in long graphComponentId, in Names_t constraintNames, in Names_t passiveDofsNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNumericalConstraintsForPath</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ae5df69b2e3e1c2917abdf3eeeccf6915</anchor>
+      <arglist>(in long nodeId, in Names_t constraintNames, in Names_t passiveDofsNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setLockedDofConstraints</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>ac9ac1a97d70ad969a136a3bd6542ea94</anchor>
+      <arglist>(in long graphComponentId, in Names_t constraintNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getNode</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a9e8472103e144f1892088c8f7950d215</anchor>
+      <arglist>(in floatSeq dofArray, out ID nodeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>getConfigErrorForNode</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a12d7f29874fdd281bd7d97f9acc34e2d</anchor>
+      <arglist>(in floatSeq config, in ID nodeId, out floatSeq errorVector)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>displayNodeConstraints</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a8117d73e255795bc1726410e2a9cab2f</anchor>
+      <arglist>(in ID nodeId, out string constraints)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>displayEdgeConstraints</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>acd2d357e266e2e8800c125151a25e9d5</anchor>
+      <arglist>(in ID edgeId, out string constraints)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>display</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a2291419118fd1568878c03e443281835</anchor>
+      <arglist>(in string filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getHistogramValue</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>aeb9af8439324fa7ee64872c442b9b443</anchor>
+      <arglist>(in ID edgeId, out floatSeq freq, out floatSeqSeq values)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setShort</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>aa315bbdd131361f8741a1d92b52cbbe3</anchor>
+      <arglist>(in ID edgeId, in boolean isShort)</arglist>
+    </member>
+    <member kind="function">
+      <type>intSeq</type>
+      <name>autoBuild</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>aa6eadec7c295a5ebad43a962b515899e</anchor>
+      <arglist>(in string graphName, in Names_t grippers, in Names_t objects, in Namess_t handlesPerObject, in Namess_t shapesPreObject, in Names_t envNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setWeight</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>aa26122d7cb7f4c6cad9eb1f0774b7f6b</anchor>
+      <arglist>(in ID edgeID, in long weight)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>getWeight</name>
+      <anchorfile>a00009.html</anchorfile>
+      <anchor>a0c0c4280bf89f0e95531162a9d9e9cb7</anchor>
+      <arglist>(in ID edgeID)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::GraphComp</name>
+    <filename>a00010.html</filename>
+    <member kind="variable">
+      <type>string</type>
+      <name>name</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a07ee0e7a053843ea377221a159d4dda7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>id</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a95a7f5f2e99e5f27a272bebec45c594f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>start</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a0d69ce4cdda025e6a9553328956045b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>end</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a5c42f30c244bb94b1504e74744c9cad5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>hpp::GraphElements</name>
+    <filename>a00011.html</filename>
+    <member kind="variable">
+      <type>GraphComps_t</type>
+      <name>nodes</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>aa9d4cc80246c223f6f49a00c9e13ea29</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>GraphComps_t</type>
+      <name>edges</name>
+      <anchorfile>a00011.html</anchorfile>
+      <anchor>a7890af1d59ce71d259c6775d317d409c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>manipulation::robot::HumanoidRobot</name>
+    <filename>a00012.html</filename>
+    <base>manipulation::robot::Robot</base>
+    <member kind="function">
+      <type>def</type>
+      <name>__init__</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a8f9656386730d781f9aa9b386af09f35</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>loadModel</name>
+      <anchorfile>a00012.html</anchorfile>
+      <anchor>a24ea5cda540b4b032d63f56afc9df3d0</anchor>
+      <arglist>(self, robotName, rootJointType)</arglist>
+    </member>
+  </compound>
+  <compound kind="interface">
+    <name>hpp::corbaserver::manipulation::Problem</name>
+    <filename>a00013.html</filename>
+    <member kind="function">
+      <type>boolean</type>
+      <name>selectProblem</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a2907e8af5e066873e2698d7349718480</anchor>
+      <arglist>(in string name)</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getAvailable</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>abb54d91a9e442c1b099b339b2c92946b</anchor>
+      <arglist>(in string type)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createGrasp</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a92646709e583dcdad4af4e47a61081cd</anchor>
+      <arglist>(in string graspName, in string gripperName, in string handleName)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createPreGrasp</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a15a2cbaa0bfe0d449f48f1d10609d9b0</anchor>
+      <arglist>(in string name, in string gripper, in string handle)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createLockedJoint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a847af31b204ab388d617e241142de7e5</anchor>
+      <arglist>(in string lockedJointName, in string jointName, in floatSeq value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createLockedExtraDof</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a041cc7313835a5b6c9d20f292183673b</anchor>
+      <arglist>(in string lockedDofName, in unsigned long index, in floatSeq value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getEnvironmentContactNames</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a5fb73d354e4861f1bc31b0171d605cbc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getRobotContactNames</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a7da629ef48803976ab6d409624acebd8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getEnvironmentContact</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a317f515a33af027c2029b263aa6da405</anchor>
+      <arglist>(in string name, out intSeq indexes, out floatSeqSeq points)</arglist>
+    </member>
+    <member kind="function">
+      <type>Names_t</type>
+      <name>getRobotContact</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>adaaef0c012169b40c454a834f0b8070f</anchor>
+      <arglist>(in string name, out intSeq indexes, out floatSeqSeq points)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createPlacementConstraint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a91e8eae9c3772f21cb30171d5c4e1ae2</anchor>
+      <arglist>(in string placementName, in Names_t shapeName, in Names_t envContactName)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createPrePlacementConstraint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a8a5c6b8eedc8b9f7d2191372fba9b494</anchor>
+      <arglist>(in string placementName, in Names_t shapeName, in Names_t envContactName, in double witdh)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createQPStabilityConstraint</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a5eb59a11807741cd3cbbe44a3bf140fd</anchor>
+      <arglist>(in string constraintName, in Names_t shapesName)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>applyConstraints</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>ae0b643e69ec3a393c3c4849ac4e2b10f</anchor>
+      <arglist>(in ID idComp, in floatSeq input, out floatSeq output, out double residualError)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>applyConstraintsWithOffset</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a4831770dfc70beff9fd8eff912caf4dd</anchor>
+      <arglist>(in ID IDedge, in floatSeq qnear, in floatSeq input, out floatSeq output, out double residualError)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>buildAndProjectPath</name>
+      <anchorfile>a00013.html</anchorfile>
+      <anchor>a652c6c4bdf84b7b2163dae8bd9e8cc71</anchor>
+      <arglist>(in ID IDedge, in floatSeq qb, in floatSeq qe, out long indexNotProj, out long indexProj)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>manipulation::problem_solver::ProblemSolver</name>
+    <filename>a00014.html</filename>
+    <member kind="function">
+      <type>def</type>
+      <name>__init__</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a197b1733d30d49f95e5bd1f7310cd1f2</anchor>
+      <arglist>(self, robot)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setInitialConfig</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>afc27631117196c15571e076b7c0d5caf</anchor>
+      <arglist>(self, dofArray)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getInitialConfig</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>afaa57c545b5ed0ffa00f16d51253965a</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>addGoalConfig</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a49b96f6a177e9e5570f8eee58a211985</anchor>
+      <arglist>(self, dofArray)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getGoalConfigs</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abb5a3149cff0a75809877d0eae27d93a</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>resetGoalConfigs</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abc7bb56278497678a55d28d69ce48cba</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>loadObstacleFromUrdf</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ad701dac3cf336b652a59526a4dbda03c</anchor>
+      <arglist>(self, package, filename, prefix)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>removeObstacleFromJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a50a35f724c36a881665af3cf5648878d</anchor>
+      <arglist>(self, objectName, jointName, collision, distance)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>moveObstacle</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>af96ae5f6ea239ecf2cef5e1dc88590aa</anchor>
+      <arglist>(self, objectName, cfg)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getObstaclePosition</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abe565e34f248cf3ddf5d9b59a8d225ea</anchor>
+      <arglist>(self, objectName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getObstacleNames</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a4b0b254ca41eff2013e36811eff22dbd</anchor>
+      <arglist>(self, collision, distance)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createStaticStabilityConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ad8fdd308786cd2db7883f8be9288b7a3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createComplementStaticStabilityConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a5577c24c91a3a528afe6fcc1e2f9a996</anchor>
+      <arglist>(self, constraintName, q0)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createPlacementConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a8b20fa04eff41ae5bab73d2fba136a29</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>balanceConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ad9d6fe969084eacc38faf74a0a42c7e2</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createOrientationConstraint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a23c52713e5b23824844540bac222a732</anchor>
+      <arglist>(self, constraintName, joint1Name, joint2Name, p, mask)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createPositionConstraint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aa09531bebdd2fd826f72a3579992e419</anchor>
+      <arglist>(self, constraintName, joint1Name, joint2Name, point1, point2, mask)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createRelativeComConstraint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>af7952bacb8b6a82e6aeacbc85a8bcbef</anchor>
+      <arglist>(self, constraintName, comName, jointLName, point, mask)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createComBeetweenFeet</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>adce2bf58d5eefdf2b6203d0682b40c74</anchor>
+      <arglist>(self, constraintName, comName, jointLName, jointRName, pointL, pointR, jointRefName, mask)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>addPartialCom</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aaf953f89149d55159389e7b0790060a2</anchor>
+      <arglist>(self, comName, jointNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>addPassiveDofs</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a75c90608c2adfe794eb695838cec6b69</anchor>
+      <arglist>(self, name, dofNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>resetConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abdd20a400c0cab49a7ad0650d8980887</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setNumericalConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a3ab8079756f1ba4eb59df6b988c0be73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>applyConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a5c3f8922540387e8ca13e2147b7518c5</anchor>
+      <arglist>(self, q)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>generateValidConfig</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a23a54873f073c8c4613317e199304431</anchor>
+      <arglist>(self, maxIter)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createLockedJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ac8265e1782f49ae8759725bf24d4a31c</anchor>
+      <arglist>(self, lockedDofName, jointName, value)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>lockFreeFlyerJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aa64e11c2f70c768f5afbc3b5bfa16c43</anchor>
+      <arglist>(self, freeflyerBname, lockJointBname, values=(0, 0)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>lockPlanarJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a89c67e37b5df5cf8020809d3840b3037</anchor>
+      <arglist>(self, planarBname, lockJointBname, values=(0, 0)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>lockDof</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>afc440efe21bfca3ecdce03c112b5084a</anchor>
+      <arglist>(self, jointName, value, rankInConfiguration, rankInVelocity)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>lockOneDofJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aca06b631e3cd53b9cfc53cfe32a7525c</anchor>
+      <arglist>(self, jointName, value)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setErrorThreshold</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a44e9c9cd1a548f0f6994efe129e50172</anchor>
+      <arglist>(self, threshold)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setMaxIterations</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a1dfd4a3b95f8cad313604be8ba64eb74</anchor>
+      <arglist>(self, iterations)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>selectPathPlanner</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a94c78008e35b8033216e74771183ec11</anchor>
+      <arglist>(self, pathPlannerType)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>addPathOptimizer</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a6f30e1d5675f67964898db25c1be82a2</anchor>
+      <arglist>(self, pathOptimizerType)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>clearPathOptimizers</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aa6e75eb80f4b310b35df083dd6f45578</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>selectPathValidation</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>acbd4a8e6071fc780cb4a39d4116a00a4</anchor>
+      <arglist>(self, pathValidationType, tolerance)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>selectPathProjector</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a708169bfeeea7d873e70a23b098886d7</anchor>
+      <arglist>(self, pathProjectorType, tolerance)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>prepareSolveStepByStep</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aeb32cc634a0caf6056399d4427c17495</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>executeOneStep</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a0a4414a610bdc3d2396d5b1edf8e20e6</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>finishSolveStepByStep</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a13b164b64fb0d2f5d509ac488d6e2bb6</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>solve</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a8f5216edb46f2826039b3bc0c8a7b84c</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>directPath</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a81697e4b5f67acdcdc135705cafe6497</anchor>
+      <arglist>(self, startConfig, endConfig)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>numberPaths</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a60796e1ed2ec6b41058a33c6c0e802de</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>optimizePath</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aacf46de12c81694175abda992d6c305f</anchor>
+      <arglist>(self, inPathId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>pathLength</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a77aef773c6a94773c4c9625921b9e7aa</anchor>
+      <arglist>(self, inPathId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>configAtParam</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a7996aa3386bab3ad7d3222f66b68257e</anchor>
+      <arglist>(self, inPathId, atDistance)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getWaypoints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a3bb767afe89748b9eff5791d3a7ae208</anchor>
+      <arglist>(self, pathId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>interruptPathPlanning</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ae5538694eee3e1a0300552794d7661ff</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>nodes</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a3f5cdc3827fc2510ff65218cdd52e390</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>node</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a141cf50f62f3515d9d2c38a90bbe0f0a</anchor>
+      <arglist>(self, nodeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>numberNodes</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a863e02c63e3e388819a67df6dca76222</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>numberEdges</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ae73ed0890f7be21893c8636504b3139c</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>edge</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a27d0d0fcf4f488b6a0332a7e50130b32</anchor>
+      <arglist>(self, edgeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>numberConnectedComponents</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abc6b0299a58a2b460d4fd4d3aed2221a</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>nodesConnectedComponent</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aa321f2c9f80d1e111e7d23a0632b1e71</anchor>
+      <arglist>(self, ccId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>clearRoadmap</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a060e7313987707c8f7bf9d7cb842cb86</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>client</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aac4b48a91512ce2f11f08c0d04abfcff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>robot</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aa2d3d323dfb005a0f1dc3fe90e40f435</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>balanceConstraints_</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a49e10974f3f84ba40ae3dd1883bc4854</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type></type>
+      <name>SLIDING</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a67e797779a178ff4deb5aa1e5c6ddbf3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type></type>
+      <name>ALIGNED_COM</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a61baafee8d69ac011cd7d3ce3c688f1f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setInitialConfig</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>afc27631117196c15571e076b7c0d5caf</anchor>
+      <arglist>(self, dofArray)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getInitialConfig</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>afaa57c545b5ed0ffa00f16d51253965a</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>addGoalConfig</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a49b96f6a177e9e5570f8eee58a211985</anchor>
+      <arglist>(self, dofArray)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getGoalConfigs</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abb5a3149cff0a75809877d0eae27d93a</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>resetGoalConfigs</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abc7bb56278497678a55d28d69ce48cba</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>loadObstacleFromUrdf</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ad701dac3cf336b652a59526a4dbda03c</anchor>
+      <arglist>(self, package, filename, prefix)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>removeObstacleFromJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a50a35f724c36a881665af3cf5648878d</anchor>
+      <arglist>(self, objectName, jointName, collision, distance)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>moveObstacle</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>af96ae5f6ea239ecf2cef5e1dc88590aa</anchor>
+      <arglist>(self, objectName, cfg)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getObstaclePosition</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abe565e34f248cf3ddf5d9b59a8d225ea</anchor>
+      <arglist>(self, objectName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getObstacleNames</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a4b0b254ca41eff2013e36811eff22dbd</anchor>
+      <arglist>(self, collision, distance)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createStaticStabilityConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ad8fdd308786cd2db7883f8be9288b7a3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createComplementStaticStabilityConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a5577c24c91a3a528afe6fcc1e2f9a996</anchor>
+      <arglist>(self, constraintName, q0)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createPlacementConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a8b20fa04eff41ae5bab73d2fba136a29</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>balanceConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ad9d6fe969084eacc38faf74a0a42c7e2</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createOrientationConstraint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a23c52713e5b23824844540bac222a732</anchor>
+      <arglist>(self, constraintName, joint1Name, joint2Name, p, mask)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createPositionConstraint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aa09531bebdd2fd826f72a3579992e419</anchor>
+      <arglist>(self, constraintName, joint1Name, joint2Name, point1, point2, mask)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createRelativeComConstraint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>af7952bacb8b6a82e6aeacbc85a8bcbef</anchor>
+      <arglist>(self, constraintName, comName, jointLName, point, mask)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createComBeetweenFeet</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>adce2bf58d5eefdf2b6203d0682b40c74</anchor>
+      <arglist>(self, constraintName, comName, jointLName, jointRName, pointL, pointR, jointRefName, mask)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>addPartialCom</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aaf953f89149d55159389e7b0790060a2</anchor>
+      <arglist>(self, comName, jointNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>addPassiveDofs</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a75c90608c2adfe794eb695838cec6b69</anchor>
+      <arglist>(self, name, dofNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>resetConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abdd20a400c0cab49a7ad0650d8980887</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setNumericalConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a3ab8079756f1ba4eb59df6b988c0be73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>applyConstraints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a5c3f8922540387e8ca13e2147b7518c5</anchor>
+      <arglist>(self, q)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>generateValidConfig</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a23a54873f073c8c4613317e199304431</anchor>
+      <arglist>(self, maxIter)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>createLockedJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ac8265e1782f49ae8759725bf24d4a31c</anchor>
+      <arglist>(self, lockedDofName, jointName, value)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>lockFreeFlyerJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aa64e11c2f70c768f5afbc3b5bfa16c43</anchor>
+      <arglist>(self, freeflyerBname, lockJointBname, values=(0, 0)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>lockPlanarJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a89c67e37b5df5cf8020809d3840b3037</anchor>
+      <arglist>(self, planarBname, lockJointBname, values=(0, 0)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>lockDof</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>afc440efe21bfca3ecdce03c112b5084a</anchor>
+      <arglist>(self, jointName, value, rankInConfiguration, rankInVelocity)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>lockOneDofJoint</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aca06b631e3cd53b9cfc53cfe32a7525c</anchor>
+      <arglist>(self, jointName, value)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setErrorThreshold</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a44e9c9cd1a548f0f6994efe129e50172</anchor>
+      <arglist>(self, threshold)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setMaxIterations</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a1dfd4a3b95f8cad313604be8ba64eb74</anchor>
+      <arglist>(self, iterations)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>selectPathPlanner</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a94c78008e35b8033216e74771183ec11</anchor>
+      <arglist>(self, pathPlannerType)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>addPathOptimizer</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a6f30e1d5675f67964898db25c1be82a2</anchor>
+      <arglist>(self, pathOptimizerType)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>clearPathOptimizers</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aa6e75eb80f4b310b35df083dd6f45578</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>selectPathValidation</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>acbd4a8e6071fc780cb4a39d4116a00a4</anchor>
+      <arglist>(self, pathValidationType, tolerance)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>selectPathProjector</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a708169bfeeea7d873e70a23b098886d7</anchor>
+      <arglist>(self, pathProjectorType, tolerance)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>prepareSolveStepByStep</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aeb32cc634a0caf6056399d4427c17495</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>executeOneStep</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a0a4414a610bdc3d2396d5b1edf8e20e6</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>finishSolveStepByStep</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a13b164b64fb0d2f5d509ac488d6e2bb6</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>solve</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a8f5216edb46f2826039b3bc0c8a7b84c</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>directPath</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a81697e4b5f67acdcdc135705cafe6497</anchor>
+      <arglist>(self, startConfig, endConfig)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>numberPaths</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a60796e1ed2ec6b41058a33c6c0e802de</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>optimizePath</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aacf46de12c81694175abda992d6c305f</anchor>
+      <arglist>(self, inPathId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>pathLength</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a77aef773c6a94773c4c9625921b9e7aa</anchor>
+      <arglist>(self, inPathId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>configAtParam</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a7996aa3386bab3ad7d3222f66b68257e</anchor>
+      <arglist>(self, inPathId, atDistance)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getWaypoints</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a3bb767afe89748b9eff5791d3a7ae208</anchor>
+      <arglist>(self, pathId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>interruptPathPlanning</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ae5538694eee3e1a0300552794d7661ff</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>nodes</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a3f5cdc3827fc2510ff65218cdd52e390</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>node</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a141cf50f62f3515d9d2c38a90bbe0f0a</anchor>
+      <arglist>(self, nodeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>numberNodes</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a863e02c63e3e388819a67df6dca76222</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>numberEdges</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>ae73ed0890f7be21893c8636504b3139c</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>edge</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a27d0d0fcf4f488b6a0332a7e50130b32</anchor>
+      <arglist>(self, edgeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>numberConnectedComponents</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>abc6b0299a58a2b460d4fd4d3aed2221a</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>nodesConnectedComponent</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>aa321f2c9f80d1e111e7d23a0632b1e71</anchor>
+      <arglist>(self, ccId)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>clearRoadmap</name>
+      <anchorfile>a00014.html</anchorfile>
+      <anchor>a060e7313987707c8f7bf9d7cb842cb86</anchor>
+      <arglist>(self)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>manipulation::robot::Robot</name>
+    <filename>a00015.html</filename>
+    <member kind="function">
+      <type>def</type>
+      <name>__init__</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>abea354b94334df7903aa11e2f8de5642</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>loadModel</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a9d5c91f98137281e65a557a7f47be12b</anchor>
+      <arglist>(self, robotName, rootJointType)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>insertRobotModel</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a52506270d2ad752454723a64157d5839</anchor>
+      <arglist>(self, robotName, rootJointType, packageName, modelName, urdfSuffix, srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>insertHumanoidModel</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ab80c4441c3508a20cedd627c998f70f6</anchor>
+      <arglist>(self, robotName, rootJointType, packageName, modelName, urdfSuffix, srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>loadHumanoidModel</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a29b38fe6f69ec90bd705cd9ceea863c5</anchor>
+      <arglist>(self, robotName, rootJointType, packageName, modelName, urdfSuffix, srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>insertObjectModel</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a3c9ca93e906f102df19739b8c9466761</anchor>
+      <arglist>(self, objectName, rootJointType, packageName, modelName, urdfSuffix, srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>loadEnvironmentModel</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a4521901b57f1f36364105bbdd64de65d</anchor>
+      <arglist>(self, packageName, modelName, urdfSuffix, srdfSuffix, envName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>rebuildRanks</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a7fbc44205fa38b7bb583951ec610687d</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getConfigSize</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a6f616b0a895726af4b5eb38e4330dce5</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getNumberDof</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>affa188b03a3e7a78d00ec9004377256f</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointNames</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a683e51509834101ad019cf46b54eb199</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getAllJointNames</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a23378f489207495f541ac9245d6c159a</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointPosition</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a7ef5c15d3bf8c1a8389b64f96c5e4686</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setJointPosition</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac8bbbf053c54f94a964e4872a75053a3</anchor>
+      <arglist>(self, jointName, position)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointNumberDof</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a643d42ea816b4c5622391833eee51f89</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointConfigSize</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a89dc9c158686cefe446cf3cf2991aca2</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setJointBounds</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>adbdc44de0c8db4722dfaaacbad1f1a3e</anchor>
+      <arglist>(self, jointName, inJointBound)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setRootJointPosition</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ab12d543f6e74f80ea7375afe15197293</anchor>
+      <arglist>(self, robotName, position)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setTranslationBounds</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ae8b68b00c60af25adcef11872b4934a6</anchor>
+      <arglist>(self, xmin, xmax, ymin, ymax, zmin, zmax)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getLinkPosition</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a8ad5f0b298a0736fe591c58ca1d6d92c</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getLinkName</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ad7ce3f47c1b111a5b627a4e1d45d18e8</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setCurrentConfig</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a8b6e163f403724aaeeb4d18daa8cec4e</anchor>
+      <arglist>(self, q)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getCurrentConfig</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a2e76519e01bf92b523f47b51c3e57631</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>shootRandomConfig</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ab8fc0a01047e051df44e2ba7ce0914d4</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointInnerObjects</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a79ba3482d031157bc96d9dd358aad6f0</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointOuterObjects</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a7cb6d0ba1e8294e63d4ddcca01421256</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getObjectPosition</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a8d478cc32bf90add0d0422c7478fc6aa</anchor>
+      <arglist>(self, objectName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>removeObstacleFromJoint</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a530cfec47a365e0094abee2a669b9812</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>collisionTest</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a589c8e0908fc3cee41c7efd3c90508ea</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>isConfigValid</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a6ae6d63139578338f22fef10181a4ed1</anchor>
+      <arglist>(self, cfg)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>distancesToCollision</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a843a5eee86506033f9f21c8fb0b0a5e9</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getMass</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a82f0e96b3d2d6fff896911330b37f415</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getCenterOfMass</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a1bf58dd0b619cda5897ccff916ee0940</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJacobianCenterOfMass</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ace6aa051a662b2fba864545e432f3c65</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>tf_root</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a3b3ced96cf64bcfc4a76f68b2dff6043</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>rootJointType</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a6aca72472a29dd4f9a84ec515c1d2238</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>name</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>afa8e3ee88b9d63977c59e89aa9d10546</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>displayName</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a0e22d764f5df96dbb8f7434971997d30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>client</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a923f5f8c7ed030fd959a2abc61878db3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>load</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac130a372142f22d43342b9626acac527</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>jointNames</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a9dcc03f7b244d9f17317c7d14609de28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>rankInConfiguration</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a1c7d2fa7d2e40881678510c610aa3d4c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>rankInVelocity</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a22c27bfdb706122615802005e533bd8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getConfigSize</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a6f616b0a895726af4b5eb38e4330dce5</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getNumberDof</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>affa188b03a3e7a78d00ec9004377256f</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointNames</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a683e51509834101ad019cf46b54eb199</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getAllJointNames</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a23378f489207495f541ac9245d6c159a</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointPosition</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a7ef5c15d3bf8c1a8389b64f96c5e4686</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setJointPosition</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ac8bbbf053c54f94a964e4872a75053a3</anchor>
+      <arglist>(self, jointName, position)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointNumberDof</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a643d42ea816b4c5622391833eee51f89</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointConfigSize</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a89dc9c158686cefe446cf3cf2991aca2</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setJointBounds</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>adbdc44de0c8db4722dfaaacbad1f1a3e</anchor>
+      <arglist>(self, jointName, inJointBound)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setRootJointPosition</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ab12d543f6e74f80ea7375afe15197293</anchor>
+      <arglist>(self, robotName, position)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setTranslationBounds</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ae8b68b00c60af25adcef11872b4934a6</anchor>
+      <arglist>(self, xmin, xmax, ymin, ymax, zmin, zmax)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getLinkPosition</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a8ad5f0b298a0736fe591c58ca1d6d92c</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getLinkName</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ad7ce3f47c1b111a5b627a4e1d45d18e8</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>setCurrentConfig</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a8b6e163f403724aaeeb4d18daa8cec4e</anchor>
+      <arglist>(self, q)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getCurrentConfig</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a2e76519e01bf92b523f47b51c3e57631</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>shootRandomConfig</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ab8fc0a01047e051df44e2ba7ce0914d4</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointInnerObjects</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a79ba3482d031157bc96d9dd358aad6f0</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJointOuterObjects</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a7cb6d0ba1e8294e63d4ddcca01421256</anchor>
+      <arglist>(self, jointName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getObjectPosition</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a8d478cc32bf90add0d0422c7478fc6aa</anchor>
+      <arglist>(self, objectName)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>removeObstacleFromJoint</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a530cfec47a365e0094abee2a669b9812</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>collisionTest</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a589c8e0908fc3cee41c7efd3c90508ea</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>isConfigValid</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a6ae6d63139578338f22fef10181a4ed1</anchor>
+      <arglist>(self, cfg)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>distancesToCollision</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a843a5eee86506033f9f21c8fb0b0a5e9</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getMass</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a82f0e96b3d2d6fff896911330b37f415</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getCenterOfMass</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>a1bf58dd0b619cda5897ccff916ee0940</anchor>
+      <arglist>(self)</arglist>
+    </member>
+    <member kind="function">
+      <type>def</type>
+      <name>getJacobianCenterOfMass</name>
+      <anchorfile>a00015.html</anchorfile>
+      <anchor>ace6aa051a662b2fba864545e432f3c65</anchor>
+      <arglist>(self)</arglist>
+    </member>
+  </compound>
+  <compound kind="interface">
+    <name>hpp::corbaserver::manipulation::Robot</name>
+    <filename>a00016.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>create</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a56e52a01a4d267e1bb91194421969413</anchor>
+      <arglist>(in string robotName)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>insertRobotModel</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a3d6115d6764540b9402e25fefd36d700</anchor>
+      <arglist>(in string robotName, in string rootJointType, in string packageName, in string modelName, in string urdfSuffix, in string srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>insertRobotSRDFModel</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>aa67224666d4f63b4c85088b3370aa2e0</anchor>
+      <arglist>(in string robotName, in string packageName, in string modelName, in string srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>insertHumanoidModel</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a210aee0e4276e78a4af36cc44d013d7d</anchor>
+      <arglist>(in string robotName, in string rootJointType, in string packageName, in string modelName, in string urdfSuffix, in string srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>insertObjectModel</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a817695efc3c45458c2b4027444e6d512</anchor>
+      <arglist>(in string objectName, in string rootJointType, in string packageName, in string modelName, in string urdfSuffix, in string srdfSuffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>loadEnvironmentModel</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a37d7a03c448f5497457656d02ec64044</anchor>
+      <arglist>(in string packageName, in string envModelName, in string urdfSuffix, in string srdfSuffix, in string prefix)</arglist>
+    </member>
+    <member kind="function">
+      <type>Transform_</type>
+      <name>getRootJointPosition</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>ab5244027f85c8e7d38c965b83ee33763</anchor>
+      <arglist>(in string robotName)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRootJointPosition</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a5773372235a65cfe1973aebbbfd90512</anchor>
+      <arglist>(in string robotName, in Transform_ position)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addGripper</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a54b70d217bc8fd686a3fd26c24bea7ff</anchor>
+      <arglist>(in string linkName, in string gripperName, in Transform_ handlePositioninJoint, in Names_t bodyInCollisionNames)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addHandle</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a45661a6dfe5076cf5f64f2c9649b07a0</anchor>
+      <arglist>(in string linkName, in string handleName, in Transform_ localPosition)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addAxialHandle</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>a0471c9bfb2491fe84a8ee6527c6c5340</anchor>
+      <arglist>(in string linkName, in string handleName, in Transform_ localPosition)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>getGripperPositionInJoint</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>ae55e7c995b6de1b851cf47158513af85</anchor>
+      <arglist>(in string gripperName, out Transform_ position)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>getHandlePositionInJoint</name>
+      <anchorfile>a00016.html</anchorfile>
+      <anchor>ab69a6553c2902880d8d0fd0b7ee271b4</anchor>
+      <arglist>(in string handleName, out Transform_ position)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::manipulation::Server</name>
+    <filename>a00017.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Server</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a25f8c84f097df7d1f38c8724a0074528</anchor>
+      <arglist>(int argc, const char *argv[], bool multiThread=false, const std::string &amp;poaName=&quot;child&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Server</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a39de06165be23796632a388c3002ea84</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setProblemSolverMap</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a08d6834c96bc1e6282b939c7fc93aa67</anchor>
+      <arglist>(corbaServer::ProblemSolverMapPtr_t psMap)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>startCorbaServer</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a0851abcf231579b2572b7f27668ad9da</anchor>
+      <arglist>(const std::string &amp;contextId, const std::string &amp;contextKind, const std::string &amp;objectId)</arglist>
+    </member>
+    <member kind="function">
+      <type>ProblemSolverPtr_t</type>
+      <name>problemSolver</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a314c16abf1fecd5a0379b712be1bf048</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>corbaServer::ProblemSolverMapPtr_t</type>
+      <name>problemSolverMap</name>
+      <anchorfile>a00017.html</anchorfile>
+      <anchor>a3363a2c44e49d2847287fda7c09ff293</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00029.html</filename>
+    <namespace>hpp::corbaServer</namespace>
+    <namespace>hpp::corbaserver</namespace>
+    <namespace>hpp::manipulation</namespace>
+    <class kind="struct">hpp::ConfigProjStat</class>
+    <class kind="struct">hpp::GraphComp</class>
+    <class kind="struct">hpp::GraphElements</class>
+    <member kind="typedef">
+      <type>sequence&lt; string &gt;</type>
+      <name>Names_t</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>aaf2cd2058ca2b7078a44db27acdf759c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; boolean &gt;</type>
+      <name>boolSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a1ee11cb81c069fab362b221baf62d566</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; long &gt;</type>
+      <name>intSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>aed890abb35e052cae7cda98d7096022e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; intSeq &gt;</type>
+      <name>intSeqSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a67be5b661bd23439a11de55524616f01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>floatSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a45c0423291b61bc8cab2b86f44e7a5c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; floatSeq &gt;</type>
+      <name>floatSeqSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a8e52ca94e51aedffaf099d1d426cad95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double</type>
+      <name>Transform_</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a4b440e779d8fd13bf9cd136c7a2a2732</anchor>
+      <arglist>[7]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>double</type>
+      <name>Quaternion_</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a7383a9d3dcd6de57210b8da50eed409f</anchor>
+      <arglist>[4]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; string &gt;</type>
+      <name>Names_t</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>aaf2cd2058ca2b7078a44db27acdf759c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; boolean &gt;</type>
+      <name>boolSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a1ee11cb81c069fab362b221baf62d566</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; long &gt;</type>
+      <name>intSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>aed890abb35e052cae7cda98d7096022e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; intSeq &gt;</type>
+      <name>intSeqSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a67be5b661bd23439a11de55524616f01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>floatSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a45c0423291b61bc8cab2b86f44e7a5c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; floatSeq &gt;</type>
+      <name>floatSeqSeq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a8e52ca94e51aedffaf099d1d426cad95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>double</type>
+      <name>Transform_</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a4b440e779d8fd13bf9cd136c7a2a2732</anchor>
+      <arglist>[7]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>double</type>
+      <name>Quaternion_</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a7383a9d3dcd6de57210b8da50eed409f</anchor>
+      <arglist>[4]</arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>dofSeq</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>ac0155f186423eb78c1e5829d06b8afa6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; dofSeq &gt;</type>
+      <name>dofSeqSeq</name>
+      <anchorfile>a00010.html</anchorfile>
+      <anchor>a46b52f4290d2ba30cb2647a4b0fc9d57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>long</type>
+      <name>ID</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a0ffb4695c0f1007ceade7d346ae09a2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; ID &gt;</type>
+      <name>IDseq</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>a80f3148e826e61f7a30d0ba7351080d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; GraphComp &gt;</type>
+      <name>GraphComps_t</name>
+      <anchorfile>a00029.html</anchorfile>
+      <anchor>addecb45cca3808e729852f3c3d828c5f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::corbaServer</name>
+    <filename>a00030.html</filename>
+    <namespace>hpp::corbaServer::manipulation</namespace>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; ProblemSolverMap &gt;</type>
+      <name>ProblemSolverMapPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a14c051d619415081f237864dc4a6de34</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Body *</type>
+      <name>BodyPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a2dc9d613505437ed0f3e8e7dab43f8d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::CollisionGeometry</type>
+      <name>CollisionGeometry_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>aa110f8d49db3529f339a8d981404d5f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; CollisionGeometry_t &gt;</type>
+      <name>CollisionGeometryPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a10e474efcfcbd48891c383916b2f9e4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::CollisionObject</type>
+      <name>CollisionObject_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>ae505426a7047a6dc928e7cdd9543472f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::CollisionObjectPtr_t</type>
+      <name>CollisionObjectPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a0a9ee836135e8264119d63e96809b905</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Configuration_t</type>
+      <name>Configuration_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>ad27fb0c77dc53ad9bc420e01134eb86f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigurationPtr_t</type>
+      <name>ConfigurationPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a79643eaf9be31c47357ac7faa803aca0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigIterator_t</type>
+      <name>ConfigIterator_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a29b409f91adf322650921d300ff5b826</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigConstIterator_t</type>
+      <name>ConfigConstIterator_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>ad2e41eb9418f35f17430e29f2f444472</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConnectedComponent</type>
+      <name>ConnectedComponent</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>aa58d2e93ea283c49efe713617a608436</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConnectedComponents_t</type>
+      <name>ConnectedComponents_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>ab90aa00748e650e0b4472b698d87e3d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConnectedComponentPtr_t</type>
+      <name>ConnectedComponentPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>ae8b6ecfd25f1902f439c00b29e92d48f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Device</type>
+      <name>Device_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a485ea7ed9bdfd4c41234d224fd4428d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::DevicePtr_t</type>
+      <name>DevicePtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a1fdc0b7f3563cd8eca6e8f037617e5d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::DistanceResult</type>
+      <name>DistanceResult_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a3af2caac6545c642b60b243b1efcc520</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::DistanceResults_t</type>
+      <name>DistanceResults_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>abda55da406575ce18b946fb5910e5425</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::DistanceBetweenObjects</type>
+      <name>DistanceBetweenObjects</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a298a623c59c08d28df99921007717106</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::DistanceBetweenObjectsPtr_t</type>
+      <name>DistanceBetweenObjectsPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a5c6c2f2074243859fa0f6e56afa9a7e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::Edges_t</type>
+      <name>Edges_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a33e9c949c5837b699cb299762acdf7a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Joint</type>
+      <name>Joint_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>aa60741ca726162d4f671a384e42193ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::JointPtr_t</type>
+      <name>JointPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>aaa46a5d59303daa0d9cc3d73a6f5b959</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::JointVector_t</type>
+      <name>JointVector_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a7a005524ae7bae10064432a9d323292b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::LockedJoint</type>
+      <name>LockedJoint</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a82ec3fb0560faa312fc81e18b6ee0e40</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::LockedJointPtr_t</type>
+      <name>LockedJointPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a29aaa28b84d44e16fb63d83c46819d7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::Nodes_t</type>
+      <name>Nodes_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>abcac3fc62e2b24366634a730b6865cd8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::NodeVector_t</type>
+      <name>NodeVector_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a622647306aad8edcaac0bfbd697f9892</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ObjectVector_t</type>
+      <name>ObjectVector_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a463c128a7791d91eeeb125b7567344fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ObjectIterator</type>
+      <name>ObjectIterator</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>af008c9c6847503b244306feb9f799b17</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathPtr_t</type>
+      <name>PathPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a9249556ce83bb34dcbade0e4b8f5085e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathValidationReportPtr_t</type>
+      <name>PathValidationReportPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a40248cef945bd865b078f9c9389bb37a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathVector</type>
+      <name>PathVector_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a5aee573f39c565882a0dd75c96968047</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathVectorPtr_t</type>
+      <name>PathVectorPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a0bd91a707e934a92dd161bc08460737b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::SteeringMethod</type>
+      <name>SteeringMethod_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a3feabf07fca5b5dbc657eb9ab1829b1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::SteeringMethodPtr_t</type>
+      <name>SteeringMethodPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a8ab00f83084b36e20735ec36e1ba23d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Transform3f</type>
+      <name>Transform3f</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>ae3bd18123c0ad75f85e22e6ad80f2590</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::BVHModel&lt; fcl::RSS &gt;</type>
+      <name>Polyhedron_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>ad39227b750a19619c1b0dafcde082e6c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Polyhedron_t &gt;</type>
+      <name>PolyhedronPtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a0d9127bcfa0b76dd76c1d24f7478b1cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>fcl::ShapeBase</type>
+      <name>BasicShape_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a79306d0c2373f0269c1ac3e0e57fb636</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; BasicShape_t &gt;</type>
+      <name>BasicShapePtr_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a0250521abd68a0fde84380494ca87145</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, BasicShapePtr_t &gt;</type>
+      <name>ShapeMap_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a624fb2a10a49f89a0ccacfa39119b4b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, std::vector&lt; fcl::Triangle &gt; &gt;</type>
+      <name>TriangleMap_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>ac426882ea4d3c01455c6f926ea62a3e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; std::string, std::vector&lt; fcl::Vec3f &gt; &gt;</type>
+      <name>VertexMap_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>add3bf02ce2b382532f8c4b1814b87a54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::matrix_t</type>
+      <name>matrix_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>aee88429df0150e9c89e57591c26fce25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vector_t</type>
+      <name>vector_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a80e6af38ac8f380e7d90813215ab3084</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vector3_t</type>
+      <name>vector3_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a1acc53205c4fbee7f1bcced5102dc524</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ComJacobian_t</type>
+      <name>ComJacobian_t</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a8c4b35f75c40dd83c4fb2321e842e3f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::size_type</type>
+      <name>size_type</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>a6fdb53c8fa2ccfa68f8dae65b6a92d09</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::serialization::singleton&lt; OrbSingleton &gt;</type>
+      <name>OrbSingletonAccessor</name>
+      <anchorfile>a00031.html</anchorfile>
+      <anchor>ab283617d2caee44212b1c0eed5c459a0</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::corbaserver</name>
+    <filename>a00031.html</filename>
+    <namespace>hpp::corbaserver::manipulation</namespace>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>dofSeq</name>
+      <anchorfile>a00030.html</anchorfile>
+      <anchor>a89f2c040cf9cbc23e8f6022fff8091bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>jointBoundSeq</name>
+      <anchorfile>a00030.html</anchorfile>
+      <anchor>a6c1b92a18728f5925684d7714634d16c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>dofSeq</name>
+      <anchorfile>a00030.html</anchorfile>
+      <anchor>a89f2c040cf9cbc23e8f6022fff8091bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>sequence&lt; double &gt;</type>
+      <name>jointBoundSeq</name>
+      <anchorfile>a00030.html</anchorfile>
+      <anchor>a6c1b92a18728f5925684d7714634d16c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::corbaserver::manipulation</name>
+    <filename>a00032.html</filename>
+    <class kind="interface">hpp::corbaserver::manipulation::Graph</class>
+    <class kind="interface">hpp::corbaserver::manipulation::Problem</class>
+    <class kind="interface">hpp::corbaserver::manipulation::Robot</class>
+    <member kind="typedef">
+      <type>sequence&lt; Names_t &gt;</type>
+      <name>Namess_t</name>
+      <anchorfile>a00032.html</anchorfile>
+      <anchor>ac9afe274c45da5df3f245fe26c74eba3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::corbaServer::manipulation</name>
+    <filename>a00033.html</filename>
+    <class kind="class">hpp::corbaServer::manipulation::Client</class>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::manipulation</name>
+    <filename>a00034.html</filename>
+    <namespace>hpp::manipulation::impl</namespace>
+    <class kind="class">hpp::manipulation::Server</class>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Device &gt;</type>
+      <name>DevicePtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ad782ecbe33604e227e8d8ffaa3614906</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const Device &gt;</type>
+      <name>DeviceConstPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a69f5e0fb94ffdc8334ba82cbb0d56b50</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Joint</type>
+      <name>Joint</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>adfd76d64a37c6e59aa9d95f0dcf05200</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::JointPtr_t</type>
+      <name>JointPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a94e9b444a71f0850deaf5f27cce8a124</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::JointConstPtr_t</type>
+      <name>JointConstPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a756c0f8872bd09102d59eab2b7681b96</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Transform3f</type>
+      <name>Transform3f</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>af6f585b882e9733cf0d34dcbc59ad401</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::Configuration_t</type>
+      <name>Configuration_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ae74e9ea4efeac19fa2174c3905aaf81c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ConfigurationIn_t</type>
+      <name>ConfigurationIn_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a07dc0a18fd3808047e49374198062aaa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::ConfigurationOut_t</type>
+      <name>ConfigurationOut_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a503c26e02402f7769e8a391cddc69bbc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; model::Configuration_t &gt;</type>
+      <name>ConfigurationPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aba7e2b59f78904ae8093b14b97296786</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::GripperPtr_t</type>
+      <name>GripperPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a4a95e108e33773d5e8bcb890f6b51151</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; AxialHandle &gt;</type>
+      <name>AxialHandlePtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a0684e45fa926cbb65b9df8272bb24a8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Handle &gt;</type>
+      <name>HandlePtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a92732c6c727613b61716ad124a6a9d0b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Object &gt;</type>
+      <name>ObjectPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>abb0c5d5ccdb621475b2797eef462c4bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; const Object &gt;</type>
+      <name>ObjectConstPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a50bc6e8ea2712047a6805e69e930e0ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ProblemSolver *</type>
+      <name>ProblemSolverPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a608debc446da69af3feadf4c39f78246</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Problem *</type>
+      <name>ProblemPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a745399f6356393fc73d1a2515c4cc44b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Roadmap &gt;</type>
+      <name>RoadmapPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a0c28dd700f352653af9666049279d3e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>RoadmapNode *</type>
+      <name>RoadmapNodePtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>adaf8da46b37f1942734d58b272a952fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; ConnectedComponent &gt;</type>
+      <name>ConnectedComponentPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a8e9ef6a3200682acf79c032b0dd4bf1c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; WeighedDistance &gt;</type>
+      <name>WeighedDistancePtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a9a7b15d5a7f059a2ab41f9a933a543d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativeOrientation</type>
+      <name>RelativeOrientation</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a23228c696526a79a6c6f6f0514cda71f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativePosition</type>
+      <name>RelativePosition</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aa1fe652c389244e999ea148b04ec52de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativeOrientationPtr_t</type>
+      <name>RelativeOrientationPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a83d1833e1da6222d4c203ad837356e13</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativePositionPtr_t</type>
+      <name>RelativePositionPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a81ad9eeab8f2c2632c2e52bbf7843502</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativeTransformation</type>
+      <name>RelativeTransformation</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>abc2663e5c21b5802d547fdd11f53941c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>constraints::RelativeTransformationPtr_t</type>
+      <name>RelativeTransformationPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a8e62be0d61f84f3c67b5106da63db983</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::value_type</type>
+      <name>value_type</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ac007ccc56320eb7b5748ad259fe4a9f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::size_type</type>
+      <name>size_type</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a86f423dcee19dfc5cb8769273d2d09a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vector_t</type>
+      <name>vector_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a981b6bc4a319231c72aa078711053900</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vectorIn_t</type>
+      <name>vectorIn_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a2e9e8f926af13b5b319bca19b011dff9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>model::vectorOut_t</type>
+      <name>vectorOut_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a92c205e63302341d85a47befb66b1217</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; ManipulationPlanner &gt;</type>
+      <name>ManipulationPlannerPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a3180586c1bd5703bbb8d5d386215b9c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; GraphPathValidation &gt;</type>
+      <name>GraphPathValidationPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a06e1192f8e68967eb7102d1eb38efc2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; GraphSteeringMethod &gt;</type>
+      <name>GraphSteeringMethodPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aca63475b1fea174dc09dbbe444963a20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathOptimizer</type>
+      <name>PathOptimizer</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a5636b04594dffd6bfad225b069c0c0b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathOptimizerPtr_t</type>
+      <name>PathOptimizerPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a5e1c635c1a0881ccbc2229d049c7f02b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; GraphOptimizer &gt;</type>
+      <name>GraphOptimizerPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ab48442b4dadade45ec31c70bd7a7f2b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; GraphNodeOptimizer &gt;</type>
+      <name>GraphNodeOptimizerPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a7e55377231d6e301b9208c5335ff62c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathProjectorPtr_t</type>
+      <name>PathProjectorPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a111ec48114fff48949b1661a563ed992</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; model::DevicePtr_t &gt;</type>
+      <name>Devices_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ae11a367622c7f98ade7fed0a587cdca0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; ObjectPtr_t &gt;</type>
+      <name>Objects_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a25076831a140495234778ddf75ce8441</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; JointConstPtr_t, JointPtr_t &gt;</type>
+      <name>JointMap_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a2f2fa7d5da88707b333401181ccdfcef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::Constraint</type>
+      <name>Constraint</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aba6f9feb2949e5da227f8fa4aa9a7209</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConstraintPtr_t</type>
+      <name>ConstraintPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>afc4cdb920936f0196fe98045485da1e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::LockedJoint</type>
+      <name>LockedJoint</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>acb11a66b22d4dc255f83c0ed4a5a44a3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::LockedJointPtr_t</type>
+      <name>LockedJointPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a7b473b5114c7a50f9652c3a41b819a08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::NumericalConstraint</type>
+      <name>NumericalConstraint</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a644a28b0909469ca38c4500c861e07d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::NumericalConstraintPtr_t</type>
+      <name>NumericalConstraintPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a89578b7df5c82795ff27003ae5e73e09</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjector</type>
+      <name>ConfigProjector</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a1dcc36804edf6d230dc7d25e99d6ccdd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjectorPtr_t</type>
+      <name>ConfigProjectorPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a7fe50e8ceaee83f3c26bac0019fe8a9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; ConstraintSet &gt;</type>
+      <name>ConstraintSetPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>afeac6b2dff035785fcf8901c13bfb916</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::DifferentiableFunctionPtr_t</type>
+      <name>DifferentiableFunctionPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a09b7c812dd9f9d7cce1d6c705e758ac7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigurationShooter</type>
+      <name>ConfigurationShooter</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aedc4023cf0088c70cd97134ceb174fa7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigurationShooterPtr_t</type>
+      <name>ConfigurationShooterPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ac43851bbd27162488b16452412e7d62b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ValidationReport</type>
+      <name>ValidationReport</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a659be0f00813e134c888ac1473d8e612</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::PathValidationReportPtr_t</type>
+      <name>PathValidationReportPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a99f3a6bb901058f0d5a131c4ec5fe6ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::matrix_t</type>
+      <name>matrix_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ad0909318f61ecc99e11c76cf15b7d5fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::matrixIn_t</type>
+      <name>matrixIn_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a63539e7146401f235bce0818b9c5c7b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::matrixOut_t</type>
+      <name>matrixOut_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a5b57fec16e81aa95544067a9d955b266</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::vector3_t</type>
+      <name>vector3_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a24c129a3bd161824758d2ca4fa5d8de9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; NumericalConstraintPtr_t &gt;</type>
+      <name>NumericalConstraints_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a9cacffc969c8a64c6e0df0df903ab53a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::pair&lt; GripperPtr_t, HandlePtr_t &gt;</type>
+      <name>Grasp_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a67c5d401beeaed1bcff5145efc085293</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>boost::shared_ptr&lt; Grasp_t &gt;</type>
+      <name>GraspPtr_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a7a34f9feb11f5bb2e3c41f6a53dd99f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; NumericalConstraintPtr_t, GraspPtr_t &gt;</type>
+      <name>GraspsMap_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ad3a279f3e18a786b8e57a88361917caa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; core::vector3_t &gt;</type>
+      <name>Shape_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a934372c499338274e49da83c318016cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::pair&lt; JointPtr_t, Shape_t &gt;</type>
+      <name>JointAndShape_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a898a66f15f9c304a4448c4398b46c825</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; JointAndShape_t &gt;</type>
+      <name>JointAndShapes_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a4828846d9c914bf6bb05b8c80a5a7b9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::list&lt; std::string &gt;</type>
+      <name>StringList_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a8cccc2c73f80a309b4eb35824c05984e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>HPP_MANIPULATION_DEPRECATED Shape_t</type>
+      <name>Triangle</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a3a4b09cb5230750f8ea302b4980797ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>HPP_MANIPULATION_DEPRECATED JointAndShape_t</type>
+      <name>JointAndTriangle_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a1784f506eeceddbc9ead32b29b5356d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>HPP_MANIPULATION_DEPRECATED JointAndShapes_t</type>
+      <name>JointAndTriangles_t</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a69ce36d45552e440af51ca30ffeb0245</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>af4699e4830401075367c8905798c0c0f</anchor>
+      <arglist>(Device)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a69828fdc6347a6a64ede6faefe5675fb</anchor>
+      <arglist>(AxialHandle)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a2501eb4647dda7ee50714bca99bd46a2</anchor>
+      <arglist>(Handle)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a9e798463bb2770a7606de13815f9c489</anchor>
+      <arglist>(Object)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a8de0acc9a402e5584de79595d31d256f</anchor>
+      <arglist>(ProblemSolver)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ab0a488840c517e5b6ec45ef7044c72c7</anchor>
+      <arglist>(Problem)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a42f3996e834f4c74e87e3f6cce12a895</anchor>
+      <arglist>(Roadmap)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a8fc81d1898468dd479a2c8d11e6ddb01</anchor>
+      <arglist>(RoadmapNode)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>afb1d58021ff588ec2bb9446327424ea7</anchor>
+      <arglist>(ConnectedComponent)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a662d5d4e06314436f51f277f86a61b0c</anchor>
+      <arglist>(WeighedDistance)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a6ea0b209a0e13971d352a276bfc414f8</anchor>
+      <arglist>(ManipulationPlanner)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>ab5076cf1c1f42bea2d843d91b23b5196</anchor>
+      <arglist>(GraphPathValidation)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a29c03ec6f561219a696086681a24ab80</anchor>
+      <arglist>(GraphSteeringMethod)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a3e1d04a56375b80dbc77768cabbe8100</anchor>
+      <arglist>(GraphOptimizer)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>acae5af5babe429a887c70aa30ddbe4d5</anchor>
+      <arglist>(GraphNodeOptimizer)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HPP_PREDEF_CLASS</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>a753c71e72904db352d7dbf5bcbdc452e</anchor>
+      <arglist>(ConstraintSet)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>a00068.html</anchorfile>
+      <anchor>aadf512ba33cbe149b0b4823dd674c4ad</anchor>
+      <arglist>(std::ostream &amp;os, const Handle &amp;handle)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::manipulation::impl</name>
+    <filename>a00035.html</filename>
+    <member kind="typedef">
+      <type>manipulation::ProblemSolver</type>
+      <name>ProblemSolver</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>a9afc93ca045e74e8ce8090a40c4d9cdc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConstraintSet</type>
+      <name>ConstraintSet</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>ad65a8407dac9786dc3cc8b31bbdcf83d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjector</type>
+      <name>ConfigProjector</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>ad8ccb9aacce187f65a50b7b6e4c4ecf7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>core::ConfigProjectorPtr_t</type>
+      <name>ConfigProjectorPtr_t</name>
+      <anchorfile>a00035.html</anchorfile>
+      <anchor>ae194e64e10b8cab65f288056a67cf0bd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>manipulation</name>
+    <filename>a00036.html</filename>
+    <namespace>manipulation::constraint_graph</namespace>
+    <namespace>manipulation::problem_solver</namespace>
+    <namespace>manipulation::robot</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>manipulation::constraint_graph</name>
+    <filename>a00037.html</filename>
+    <class kind="class">manipulation::constraint_graph::_ConstraintAndPassiveJoints</class>
+    <class kind="class">manipulation::constraint_graph::ConstraintGraph</class>
+  </compound>
+  <compound kind="namespace">
+    <name>manipulation::problem_solver</name>
+    <filename>a00038.html</filename>
+    <class kind="class">manipulation::problem_solver::ProblemSolver</class>
+  </compound>
+  <compound kind="namespace">
+    <name>manipulation::robot</name>
+    <filename>a00039.html</filename>
+    <class kind="class">manipulation::robot::CorbaClient</class>
+    <class kind="class">manipulation::robot::HumanoidRobot</class>
+    <class kind="class">manipulation::robot::Robot</class>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+    <docanchor file="index" title="Introduction">hpp_manipulation_corba_intro</docanchor>
+    <docanchor file="index" title="How to communicate with the CORBA server">hpp_manipulation_corba_howto_communicate</docanchor>
+    <docanchor file="index" title="How to embed a server in an application">hpp_manipulation_corba_how_to_embed</docanchor>
+    <docanchor file="index" title="Introduction">hpp_core_sec_intro</docanchor>
+    <docanchor file="index" title="Embedding hpp-core into an application">hpp_core_sec_embedding</docanchor>
+    <docanchor file="index" title="Introduction">sec_intro_hpp_model</docanchor>
+    <docanchor file="index" title="Main classes">sec_hpp_model_main_classes</docanchor>
+    <docanchor file="index" title="Joints">subsec_hpp_model_joint</docanchor>
+    <docanchor file="index" title="Joint configuration">hpp_model_joint_configuration</docanchor>
+    <docanchor file="index" title="Device">subsec_hpp_model_device</docanchor>
+    <docanchor file="index">Configuration</docanchor>
+    <docanchor file="index">Velocity</docanchor>
+    <docanchor file="index" title="Operations between configurations and velocities">hpp_model_operation_between_configurations_and_velocities</docanchor>
+    <docanchor file="index" title="Introduction">hppCorbaServer_sec_intro</docanchor>
+    <docanchor file="index" title="How to communicate with the CORBA server">hppCorbaServer_sec_howto</docanchor>
+    <docanchor file="index" title="How to embed a server in an application">hppCorbaServer_sec_embedding</docanchor>
+    <docanchor file="index" title="Introduction">hpp_wholebody_step_corba_intro</docanchor>
+    <docanchor file="index" title="How to communicate with the CORBA server">hpp_wholebody_step_corba_howto_communicate</docanchor>
+    <docanchor file="index" title="How to embed a server in an application">how_to_embed</docanchor>
+    <docanchor file="index" title="Introduction">sec_intro_hpp_manipulation</docanchor>
+    <docanchor file="index" title="Constraint graph">sec_graph_hpp_manipulation</docanchor>
+    <docanchor file="index" title="Manipulation planner">sec_solver_hpp_manipulation</docanchor>
+    <docanchor file="index" title="Introduction">fcl_introduction</docanchor>
+    <docanchor file="index" title="Using fcl">fcl_howto</docanchor>
+  </compound>
+</tagfile>

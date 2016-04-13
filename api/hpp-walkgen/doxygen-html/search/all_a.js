@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['kdtreeptr_5ft',['KDTreePtr_t',['https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/a00159.html#a8b4e1106dc1ea73492a8b34dd3dd1480',1,'hpp::core::KDTreePtr_t()'],['https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/a00163.html#ad7bb0151c114887548e601d1ed626cef',1,'hpp::core::nearestNeighbor::KDTreePtr_t()']]],
+  ['knearestsearch',['KnearestSearch',['https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/a00047.html#abf88936c44c8a057b3059d165d9146d8',1,'hpp::core::NearestNeighbor::KnearestSearch(const ConfigurationPtr_t &amp;configuration, const ConnectedComponentPtr_t &amp;connectedComponent, const std::size_t K, value_type &amp;distance)=0'],['https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/a00047.html#ae9660326278416bb3cb081b73795db7e',1,'hpp::core::NearestNeighbor::KnearestSearch(const NodePtr_t &amp;node, const ConnectedComponentPtr_t &amp;connectedComponent, const std::size_t K, value_type &amp;distance)=0']]],
+  ['knots_5ft',['knots_t',['https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/a00009.html#ae19d294bb228f65f64fbb13871beb453',1,'roboptim::trajectory::CubicBSpline']]],
+  ['knotvector',['knotVector',['https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/a00006.html#a1939fc820ee942c7d81a15fb4a5e7a50',1,'roboptim::trajectory::BSpline::knotVector()'],['https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/a00009.html#af43f917310f677ab80f452a79bea9a32',1,'roboptim::trajectory::CubicBSpline::knotVector()']]]
+];

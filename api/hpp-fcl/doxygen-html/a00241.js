@@ -1,0 +1,27 @@
+var a00241 =
+[
+    [ "BVHBuildState", "a00241.html#ae282ecfb7a2a310150ab7a5a1cb0b903", [
+      [ "BVH_BUILD_STATE_EMPTY", "a00241.html#ae282ecfb7a2a310150ab7a5a1cb0b903ae77a47d44c561f35b98bd35d99da284b", null ],
+      [ "BVH_BUILD_STATE_BEGUN", "a00241.html#ae282ecfb7a2a310150ab7a5a1cb0b903ab4b43a78244c7ca9075d574be855abb4", null ],
+      [ "BVH_BUILD_STATE_PROCESSED", "a00241.html#ae282ecfb7a2a310150ab7a5a1cb0b903a974153e9dbc2b06b0abcbf8d3d708701", null ],
+      [ "BVH_BUILD_STATE_UPDATE_BEGUN", "a00241.html#ae282ecfb7a2a310150ab7a5a1cb0b903a0046a200b336cf633af881d929b35d2c", null ],
+      [ "BVH_BUILD_STATE_UPDATED", "a00241.html#ae282ecfb7a2a310150ab7a5a1cb0b903a76633d7b729c9a20c4a18e617ce9b8e8", null ],
+      [ "BVH_BUILD_STATE_REPLACE_BEGUN", "a00241.html#ae282ecfb7a2a310150ab7a5a1cb0b903a572b91eb341425f15aeaf097d0bb8c27", null ]
+    ] ],
+    [ "BVHModelType", "a00241.html#a41f5f0e97729622fd4749b285a0fd848", [
+      [ "BVH_MODEL_UNKNOWN", "a00241.html#a41f5f0e97729622fd4749b285a0fd848aa8ddcde6ac1e82f3fbe22e7dc7fe6864", null ],
+      [ "BVH_MODEL_TRIANGLES", "a00241.html#a41f5f0e97729622fd4749b285a0fd848a00ca407cf9da666862722133cd18a0b4", null ],
+      [ "BVH_MODEL_POINTCLOUD", "a00241.html#a41f5f0e97729622fd4749b285a0fd848a33b4f7676fa1247fd3a728bc672d577a", null ]
+    ] ],
+    [ "BVHReturnCode", "a00241.html#a440e2c689cf4b8092a519c8e000eebd8", [
+      [ "BVH_OK", "a00241.html#a440e2c689cf4b8092a519c8e000eebd8a2ed3e9cc6a5634f3ca6584fd2b959f7e", null ],
+      [ "BVH_ERR_MODEL_OUT_OF_MEMORY", "a00241.html#a440e2c689cf4b8092a519c8e000eebd8afb160e4324dbfadad4e849d4e089ec9d", null ],
+      [ "BVH_ERR_BUILD_OUT_OF_SEQUENCE", "a00241.html#a440e2c689cf4b8092a519c8e000eebd8ab5748632eb40cd13a027a5f30c551844", null ],
+      [ "BVH_ERR_BUILD_EMPTY_MODEL", "a00241.html#a440e2c689cf4b8092a519c8e000eebd8a951705c5436e5fe2a5f50d971d528af4", null ],
+      [ "BVH_ERR_BUILD_EMPTY_PREVIOUS_FRAME", "a00241.html#a440e2c689cf4b8092a519c8e000eebd8a18ce31b56f49cadb82c2bea48279b2f2", null ],
+      [ "BVH_ERR_UNSUPPORTED_FUNCTION", "a00241.html#a440e2c689cf4b8092a519c8e000eebd8ab20baa1089fe6f35f697246b574294e9", null ],
+      [ "BVH_ERR_UNUPDATED_MODEL", "a00241.html#a440e2c689cf4b8092a519c8e000eebd8a3845b66a886bff6b5290f4880f51b666", null ],
+      [ "BVH_ERR_INCORRECT_DATA", "a00241.html#a440e2c689cf4b8092a519c8e000eebd8a7d5b8933a310253f86a82c15122284b5", null ],
+      [ "BVH_ERR_UNKNOWN", "a00241.html#a440e2c689cf4b8092a519c8e000eebd8a72c62ead9e80b334d334fadc7bfb7b9b", null ]
+    ] ]
+];

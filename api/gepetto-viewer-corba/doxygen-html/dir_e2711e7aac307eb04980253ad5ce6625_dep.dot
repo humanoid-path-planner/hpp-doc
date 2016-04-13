@@ -1,0 +1,10 @@
+digraph "idl" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_e2711e7aac307eb04980253ad5ce6625 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e2711e7aac307eb04980253ad5ce6625.html"];
+    dir_e2711e7aac307eb04980253ad5ce6625 [shape=plaintext label="idl"];
+    dir_21732084047e0c2f390d68df3b184299 [shape=box label="gepetto" color="red" fillcolor="white" style="filled" URL="dir_21732084047e0c2f390d68df3b184299.html"];
+  }
+}

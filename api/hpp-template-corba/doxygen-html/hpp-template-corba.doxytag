@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>doc.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-template-corba/include/hpp/corba/template/</path>
+    <filename>a00002</filename>
+  </compound>
+  <compound kind="file">
+    <name>server.hh</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-template-corba/include/hpp/corba/template/</path>
+    <filename>a00003</filename>
+    <includes id="a00004" name="server.hxx" local="yes" imported="no">hpp/corba/template/server.hxx</includes>
+    <class kind="class">hpp::corba::Server</class>
+    <namespace>hpp</namespace>
+    <namespace>hpp::corba</namespace>
+  </compound>
+  <compound kind="file">
+    <name>server.hxx</name>
+    <path>/local/jmirabel/devel/hpp/src/hpp-template-corba/include/hpp/corba/template/</path>
+    <filename>a00004</filename>
+    <namespace>hpp</namespace>
+    <namespace>hpp::corba</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>HPP_CORBA_CATCH</name>
+      <anchorfile>a00004.html</anchorfile>
+      <anchor>a8f504cf581757604bad970468dbba9ee</anchor>
+      <arglist>(msg, ret)</arglist>
+    </member>
+    <member kind="typedef">
+      <type>CORBA::ORB::InvalidName</type>
+      <name>InvalidName</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a4f6d010ee1fd5c8c7f94fd8fe10fd5b8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>hpp::corba::Server</name>
+    <filename>a00001.html</filename>
+    <templarg>T</templarg>
+    <member kind="function">
+      <type></type>
+      <name>Server</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>ae11f480125038cb990b8e341020c961a</anchor>
+      <arglist>(int argc, const char *argv[], bool multiThread=false, const std::string &amp;poaName=&quot;child&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Server</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>afdfba5595ad02f59574821e625932ac9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>startCorbaServer</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>a0ce3ae1ecc9f30e512b7bbe918ba31f1</anchor>
+      <arglist>(const std::string &amp;contextId, const std::string &amp;contextKind, const std::string &amp;objectId, const std::string &amp;objectKind)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>processRequest</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>af1056437e407f1d4a0a9b32237332132</anchor>
+      <arglist>(bool loop)</arglist>
+    </member>
+    <member kind="function">
+      <type>T &amp;</type>
+      <name>implementation</name>
+      <anchorfile>a00001.html</anchorfile>
+      <anchor>aa0079f13f49b09def10c25c85ac4868b</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp</name>
+    <filename>a00005.html</filename>
+    <namespace>hpp::corba</namespace>
+  </compound>
+  <compound kind="namespace">
+    <name>hpp::corba</name>
+    <filename>a00006.html</filename>
+    <class kind="class">hpp::corba::Server</class>
+    <member kind="typedef">
+      <type>CORBA::ORB::InvalidName</type>
+      <name>InvalidName</name>
+      <anchorfile>a00006.html</anchorfile>
+      <anchor>a4f6d010ee1fd5c8c7f94fd8fe10fd5b8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+    <docanchor file="index" title="Introduction">hpp_template_corba_sec_intro</docanchor>
+    <docanchor file="index" title="Principle">hpp_template_corba_sec_principle</docanchor>
+    <docanchor file="index" title="How to">hpp_template_corba_sec_how_to</docanchor>
+    <docanchor file="index" title="Implementing the server">hpp_template_corba_subsec_server</docanchor>
+    <docanchor file="index" title="Implementing the client">hpp_template_corba_subsec_client</docanchor>
+    <docanchor file="index" title="Running the server and client">hpp_template_corba_subsec_running</docanchor>
+  </compound>
+</tagfile>

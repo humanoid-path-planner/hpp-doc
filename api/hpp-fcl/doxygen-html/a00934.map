@@ -1,0 +1,12 @@
+<map id="fcl::ShapeBase" name="fcl::ShapeBase">
+<area shape="rect" id="node3" href="$a00009.html" title="Center at zero point, axis aligned box. " alt="" coords="384,5,451,32"/>
+<area shape="rect" id="node4" href="$a00030.html" title="Center at zero point capsule. " alt="" coords="371,56,463,83"/>
+<area shape="rect" id="node5" href="$a00037.html" title="Center at zero cone. " alt="" coords="380,107,455,133"/>
+<area shape="rect" id="node6" href="$a00044.html" title="Convex polytope. " alt="" coords="373,157,462,184"/>
+<area shape="rect" id="node7" href="$a00046.html" title="Center at zero cylinder. " alt="" coords="371,208,463,235"/>
+<area shape="rect" id="node8" href="$a00085.html" title="Half Space: this is equivalent to the Plane in ODE. " alt="" coords="366,259,469,285"/>
+<area shape="rect" id="node9" href="$a00166.html" title="Infinite plane. " alt="" coords="379,309,456,336"/>
+<area shape="rect" id="node10" href="$a00225.html" title="Center at zero point sphere. " alt="" coords="375,360,460,387"/>
+<area shape="rect" id="node11" href="$a00248.html" title="Triangle stores the points instead of only indices of points. " alt="" coords="368,411,467,437"/>
+<area shape="rect" id="node2" href="$a00032.html" title="The geometry for the object for collision or distance computation. " alt="" coords="6,208,157,235"/>
+</map>

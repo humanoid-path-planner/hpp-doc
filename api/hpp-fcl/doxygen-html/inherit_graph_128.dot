@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="fcl::Vec_n\< FCL_REAL, N \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00224.html"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="fcl::Vecnf\< N \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00225.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="fcl::Vecnf\< 2 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00225.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="fcl::Vecnf\< 3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00225.html"];
+}

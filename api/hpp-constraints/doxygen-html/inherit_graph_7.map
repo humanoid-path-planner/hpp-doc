@@ -1,0 +1,20 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$a00012.html" title="Differentiable function. " alt="" coords="5,493,205,534"/>
+<area shape="rect" id="node2" href="$a00004.html" title="Constraint on the relative position of the center of mass. " alt="" coords="254,5,482,32"/>
+<area shape="rect" id="node3" href="$a00005.html" title="hpp::constraints::Configuration\lConstraint" alt="" coords="268,57,468,98"/>
+<area shape="rect" id="node4" href="$a00008.html" title="The function returns a relative transformation between the two &quot;closest&quot; convex shapes it contains..." alt="" coords="284,122,452,163"/>
+<area shape="rect" id="node5" href="$a00009.html" title="Complement to full transformation constraint of ConvexShapeContact. " alt="" coords="279,187,457,229"/>
+<area shape="rect" id="node6" href="$a00013.html" title="Distance between two sets of objects. " alt="" coords="281,253,455,294"/>
+<area shape="rect" id="node7" href="$a00014.html" title="Distance between two sets of objects. " alt="" coords="281,318,455,359"/>
+<area shape="rect" id="node8" href="$a00017.html" title="GenericTransformation class encapsulates 6 possible differentiable functions: Position2, Orientation2, Transformation2 and their relative versions RelativePosition2, RelativeOrientation2, RelativeTransformation2. " alt="" coords="275,383,461,425"/>
+<area shape="rect" id="node9" href="$a00021.html" title="Constraint on the orientation of a robot joint. " alt="" coords="275,449,461,476"/>
+<area shape="rect" id="node10" href="$a00025.html" title="Constraint on the position of a robot point. " alt="" coords="283,500,453,527"/>
+<area shape="rect" id="node11" href="$a00026.html" title="hpp::constraints::QPStatic\lStability" alt="" coords="280,551,456,593"/>
+<area shape="rect" id="node12" href="$a00027.html" title="Constraint on the relative position of the center of mass. " alt="" coords="269,617,467,644"/>
+<area shape="rect" id="node13" href="$a00028.html" title="Constraint on the relative orientation of two robot joints. " alt="" coords="283,669,453,710"/>
+<area shape="rect" id="node14" href="$a00029.html" title="Constraint on the relative position of two robot joints. " alt="" coords="283,734,453,775"/>
+<area shape="rect" id="node15" href="$a00030.html" title="Relative transformation of two fixed frames in robot joints. " alt="" coords="283,799,453,841"/>
+<area shape="rect" id="node16" href="$a00034.html" title="hpp::constraints::Static\lStability" alt="" coords="289,865,447,906"/>
+<area shape="rect" id="node17" href="$a00036.html" title="hpp::constraints::Symbolic\lFunction\&lt; Expression \&gt;" alt="" coords="279,930,457,971"/>
+<area shape="rect" id="node18" href="$a00041.html" title="Constraint on the transformation of one robot joint. " alt="" coords="263,996,473,1023"/>
+</map>

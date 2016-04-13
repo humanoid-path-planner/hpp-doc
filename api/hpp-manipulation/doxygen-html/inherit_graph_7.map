@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00059.html" title="hpp::core::PathOptimizer" alt="" coords="6,77,173,104"/>
+<area shape="rect" id="node2" href="$a00019.html" title="Path optimizer that recompute the edge parameter of the constraints. " alt="" coords="247,5,391,46"/>
+<area shape="rect" id="node3" href="$a00020.html" title="Path optimizer for paths created with the constraint graph. " alt="" coords="253,70,385,111"/>
+<area shape="rect" id="node4" href="$a00040.html" title="Walking trajectory generator for paths created with the constraint graph. " alt="" coords="221,135,416,177"/>
+</map>

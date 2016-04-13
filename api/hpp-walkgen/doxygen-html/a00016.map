@@ -1,0 +1,22 @@
+<map id="bspline&#45;based.cc" name="bspline&#45;based.cc">
+<area shape="rect" id="node4" href="https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/roboptim-trajectory.doxytag$a00039.html" title="roboptim/trajectory\l/cubic&#45;b&#45;spline.hh" alt="" coords="366,321,495,362"/>
+<area shape="rect" id="node15" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00134.html" title="hpp/core/path&#45;vector.hh" alt="" coords="787,80,945,107"/>
+<area shape="rect" id="node24" href="$a00009.html" title="hpp/walkgen/bspline\l&#45;based.hh" alt="" coords="481,230,620,271"/>
+<area shape="rect" id="node28" href="$a00012.html" title="hpp/walkgen/foot&#45;trajectory.hh" alt="" coords="568,80,763,107"/>
+<area shape="rect" id="node5" href="https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/roboptim-trajectory.doxytag$a00068.html" title="roboptim/trajectory\l/sys.hh" alt="" coords="369,593,497,634"/>
+<area shape="rect" id="node6" href="https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/roboptim-trajectory.doxytag$a00073.html" title="roboptim/trajectory\l/trajectory.hh" alt="" coords="366,411,495,453"/>
+<area shape="rect" id="node7" href="https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/roboptim-trajectory.doxytag$a00049.html" title="roboptim/trajectory\l/fwd.hh" alt="" coords="681,502,809,543"/>
+<area shape="rect" id="node10" href="https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/roboptim-trajectory.doxytag$a00057.html" title="roboptim/trajectory\l/polynomial&#45;3.hh" alt="" coords="6,411,135,453"/>
+<area shape="rect" id="node13" href="https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/roboptim-trajectory.doxytag$a00040.html" title="roboptim/trajectory\l/cubic&#45;b&#45;spline.hxx" alt="" coords="159,411,288,453"/>
+<area shape="rect" id="node8" href="https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/roboptim-trajectory.doxytag$a00065.html" title="roboptim/trajectory\l/stable&#45;time&#45;point.hh" alt="" coords="364,502,503,543"/>
+<area shape="rect" id="node9" href="https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/roboptim-trajectory.doxytag$a00076.html" title="roboptim/trajectory\l/trajectory.hxx" alt="" coords="527,502,656,543"/>
+<area shape="rect" id="node11" href="https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/roboptim-trajectory.doxytag$a00058.html" title="roboptim/trajectory\l/polynomial.hh" alt="" coords="6,502,135,543"/>
+<area shape="rect" id="node12" href="https://jmirabel.github.io/hpp-doc/api/roboptim-trajectory/doxygen-html/roboptim-trajectory.doxytag$a00059.html" title="roboptim/trajectory\l/polynomial.hxx" alt="" coords="6,593,135,634"/>
+<area shape="rect" id="node16" href="$a00001.html" title="hpp/core/fwd.hh" alt="" coords="887,419,1001,445"/>
+<area shape="rect" id="node19" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00001.html" title="hpp/core/fwd.hh" alt="" coords="1029,509,1144,536"/>
+<area shape="rect" id="node20" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00135.html" title="hpp/core/path.hh" alt="" coords="807,155,925,181"/>
+<area shape="rect" id="node21" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00099.html" title="hpp/core/constraint\l&#45;set.hh" alt="" coords="907,230,1040,271"/>
+<area shape="rect" id="node23" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00143.html" title="hpp/core/projection\l&#45;error.hh" alt="" coords="697,230,828,271"/>
+<area shape="rect" id="node22" href="https://jmirabel.github.io/hpp-doc/api/hpp-core/doxygen-html/hpp-core.doxytag$a00100.html" title="hpp/core/constraint.hh" alt="" coords="901,328,1051,355"/>
+<area shape="rect" id="node26" href="$a00010.html" title="hpp/walkgen/foot&#45;print.hh" alt="" coords="589,328,755,355"/>
+</map>

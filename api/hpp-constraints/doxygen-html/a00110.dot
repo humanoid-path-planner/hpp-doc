@@ -1,0 +1,17 @@
+digraph "hpp::constraints::RotationMultiply&lt; RhsValue &gt;"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="hpp::constraints::Rotation\lMultiply\< RhsValue \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="hpp::constraints::Calculus\lBase\< ScalarMultiply\< RhsValue \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00002.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="hpp::constraints::Calculus\lBaseAbstract",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00003.html",tooltip="Abstract class defining a basic common interface. "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" e_" ,fontname="FreeSans"];
+  Node4 [label="hpp::constraints::Expression\l\< hpp::model::Joint, RhsValue \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00009.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rhs_" ,fontname="FreeSans"];
+  Node5 [label="RhsValue",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lhs_" ,fontname="FreeSans"];
+  Node6 [label="hpp::model::Joint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="https://jmirabel.github.io/hpp-doc/api/hpp-model/doxygen-html/hpp-model.doxytag$a00013.html"];
+}

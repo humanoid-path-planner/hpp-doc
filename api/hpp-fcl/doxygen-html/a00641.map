@@ -1,0 +1,4 @@
+<map id="fcl::Cone" name="fcl::Cone">
+<area shape="rect" id="node2" href="$a00198.html" title="Base class for all basic geometric shapes. " alt="" coords="25,80,135,107"/>
+<area shape="rect" id="node3" href="$a00032.html" title="The geometry for the object for collision or distance computation. " alt="" coords="5,5,155,32"/>
+</map>

@@ -1,0 +1,21 @@
+digraph "hpp::manipulation::graph::LevelSetEdge"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="hpp::manipulation::\lgraph::LevelSetEdge",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="hpp::manipulation::\lgraph::Edge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00013.html",tooltip="Abstract class representing representing the link between two nodes. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="hpp::manipulation::\lgraph::GraphComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00015.html",tooltip="Define common methods of the graph components. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lockedJoints_" ,fontname="Helvetica"];
+  Node4 [label="std::list\< LockedJointPtr_t \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" passiveDofs_" ,fontname="Helvetica"];
+  Node5 [label="std::vector\< SizeIntervals_t \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node6 [label="std::vector\< T \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node7 [label="T",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" numericalConstraints_" ,fontname="Helvetica"];
+  Node8 [label="std::list\< NumericalConstraint\lPtr_t \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}
