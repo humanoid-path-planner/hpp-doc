@@ -1,6 +1,6 @@
 name: Humanoid Path Planner
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 gems:
     - jekyll-sitemap
 

@@ -11,7 +11,7 @@ disqus: no
 
 Main contact: Florent Lamiraux
 
-Mail: nmansard@laas.fr
+Mail: florent@laas.fr
 
 LAAS-CNRS
 7, avenue du Colonel Roche
