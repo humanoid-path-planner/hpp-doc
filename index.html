@@ -8,13 +8,19 @@ sitemap:
 ---
 <div class="container">
   <div class="jumbotron">
-    <h1>Humanoid Path Planner</h1>
+    <a href="http://projects.laas.fr/gepetto/index.php">
+    <img src="{{ site.baseurl }}/assets/logo-medium-black.png" alt="Gepetto team logo"
+    style="max-width: 15%; vertical-align: middle;"/></a>
 
-    <p> Software for Motion and Manipulation Planning </p>
+    <div style="display: inline-block; vertical-align: middle; margin-left: 3em;">
+      <h1>Humanoid Path Planner</h1>
 
-    <p>
+      <p> Software for Motion and Manipulation Planning </p>
+
+      <p>
       <a class="btn btn-lg btn-primary" href="getting-started.html" role="button">Get started now &raquo;</a>
-    </p>
+      </p>
+    </div>
   </div>
 </div>
 
@@ -46,13 +52,16 @@ sitemap:
 
   <div class="row featurette">
     <div class="col-md-5">
-      &nbsp;
+      <img src="{{ site.baseurl }}/assets/python-logo.png" alt="Python logo" style="max-width: 95%;" />
     </div>
     <div class="col-md-7">
       <h2 class="featurette-heading">Python interface for quick prototyping of problems</h2>
       <p class="lead">
-      Python scripting is implemented via CORBA servers and idl interfaces in a seamless way.
-      See <a href="{{ site.baseurl }}/{% post_url 2016-04-14-rrt-python %}">this example</a>.
+      Python scripting is implemented via <a href="http://omniorb.sourceforge.net/">CORBA</a>
+      servers and idl interfaces in a seamless way.
+      A few lines of Python code allows users to
+      <a href="{{ site.baseurl }}/getting-started.html">solve motion planning problems</a> or
+      <a href="{{ site.baseurl }}/{% post_url 2016-04-14-rrt-python %}">design an planning algorithm</a>.
       </p>
     </div>
   </div>
@@ -65,7 +74,7 @@ sitemap:
       </p>
     </div>
     <div class="col-md-5">
-      &nbsp;
+      <img src="{{ site.baseurl }}/assets/hpp-gui.png" alt="hpp-gui screenshot" style="max-width: 95%;" />
     </div>
   </div>
   <!--

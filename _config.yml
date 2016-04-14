@@ -1,8 +1,11 @@
 name: Humanoid Path Planner
 markdown: kramdown
-highlighter: rouge
 gems:
     - jekyll-sitemap
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)

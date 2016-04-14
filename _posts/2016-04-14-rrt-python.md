@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "Tutorial: Implement an RRT in Python"
+title: "Implement an RRT in Python"
 date: 2016-04-14
 disqus: no
 excerpt_separator: <!--more-->
 ---
-
-# {{ page.title }}
 
 Thanks to the Python bindings of HPP, prototyping new motion planning algorithm
 is very easy.
@@ -15,7 +13,7 @@ is very easy.
 
 ## Write a function
 
-{% highlight python %}
+{% highlight python linenos %}
 def solveBiRRT (ps, robot, maxIter = float("inf")):
   ps.prepareSolveStepByStep ()
   finished = False
