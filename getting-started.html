@@ -13,12 +13,12 @@ This page provides guidelines for installation as well as tutorials to get you s
 
 </p>
 <ul class="nav nav-tabs" id="howto">
-  <li class="active"><a href="#installation" data-toggle="tab">
+  <li class="active"><a href="#installation" id="installation_tab" data-toggle="tab">
     <img src="{{site.baseurl}}/assets/logo-ubuntu.svg" style="height: 1.5em; margin-top: -0.25em; margin-bottom: -0.25em;">
     Installation on Ubuntu </a>
   </li>
-  <li><a href="#tutorial_1" data-toggle="tab">Tutorial 1</a></li>
-  <li><a href="#tutorial_1_details" data-toggle="tab">Tutorial 1 - Details</a></li>
+  <li><a href="#tutorial_1" id="tutorial_1_tab" data-toggle="tab">Tutorial 1</a></li>
+  <li><a href="#tutorial_1_details" id="tutorial_1_details_tab" data-toggle="tab">Tutorial 1 - Details</a></li>
 </ul>
 
 <div class="tab-content" style="padding-top: 1.75em">
@@ -102,7 +102,18 @@ This page provides guidelines for installation as well as tutorials to get you s
 </div>
 
 <script type="text/javascript">
-  $(function () { $('#howto a:first').tab('show') })
+  $(function () {
+    var hash = window.location.hash;
+    var tab;
+    if (hash) {
+      tab = hash + "_tab";
+      var attr = $(tab).attr("data-toggle");
+      if (attr !== "tab") tab = '#howto a:first';
+    } else {
+      tab = '#howto a:first';
+    }
+    $(tab).tab('show');
+    })
 </script>
 
 <div style="padding: 2em"></div>
