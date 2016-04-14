@@ -24,26 +24,30 @@ sitemap:
 
 <div style="padding: 2em"></div>
 
-  
+<div class="container marketing">
+  <hr class="featurette-divider">
 
-   <div class="container marketing">
-<!--
-      <hr class="featurette-divider">
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Motion and Manipulation planning in C++ and Python</h2>
+      <p class="lead">
+      HPP is a C++ Software Developement Kit implementing path planning for kinematic chains in environments cluttered with obstacles.
+      Collision checking is performed by a modified version of the Flexible Collision Library developed at University of North Carolina.
 
-       <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Rigid multi-body dynamics in C++ and Python</h2>
-          <p class="lead">Pinocchio is a C++ library for dynamic computations
-        focusing on robotic, computer animation and biomechanical
-        applications. </br> It is based on the dynamic multi-body computations formalized by Featherstone in his book. </br> The software comes with a python wrapping and vizualisation
-        tool.
-    </p>
-        </div>
-        <div class="col-md-5">
-          &nbsp;
-        </div>
-      </div>
+      A visualization tool is provided to visualize obstacles, robot configurations and paths.
+      Robots can be loaded from URDF model.
 
+      Python scripting is implemented via CORBA servers and idl interfaces in a seamless way.
+
+      It is a collection of software packages handled by cmake and pkg-config.
+      </p>
+    </div>
+    <div class="col-md-5">
+      &nbsp;
+    </div>
+  </div>
+
+  <!--
       <hr class="featurette-divider">
      <div class="row featurette">
         <div class="col-md-5">
@@ -55,39 +59,7 @@ sitemap:
         </div>
 
       </div>
-
-
-       <hr class="featurette-divider">
-
-            <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Library features</h2>
-          <p class="lead">The following algorithms are implemented.
-      <li>Recursive Newton-Euler algorithm (RNEA, i.e inverse dynamics)
-      <li>Composite Rigid Body algorithm (CRBA, i.e generalized inertia matrix)
-      <li>Sparse Cholsky decomposition of the inertia matrix (for constrained forward-dynamics resolution)
-      <li>Placement Jacobians (i.e application from configuration velocities to end-effector spatial velocities), along with computation of body placements, velocities and accelerations.
-      <li>Center of mass and its Jacobian
-    </p>
-    <p>The model can be parsed from a URDF format. The following joint models are implemented.
-      <li>Revolute X, Y, Z (optimized) and unaligned with Cartesian directions
-      <li>Prismatic X, Y, Z
-      <li>Sperical (quaternion representation)
-      <li>Free (i.e. no constraint, for mobile robots like humanoids -- using quaternion representation for the rotation)
-    </p>
-    <p>Tutorials are proposed (see the corresponding item in the menu
-    atop the page): generate your first humanoid walk in 20 hours of
-    work, while discovering Python, the Pinocchio interface, inverse
-    kinematics and LQR.
-    </p>
-
-        </div>
-        <div class="col-md-5">
-          &nbsp;
-        </div>
-      </div>
-
       -->
 
-<!-- /END THE FEATURETTES -->
-   </div>
+  <!-- /END THE FEATURETTES -->
+</div>
