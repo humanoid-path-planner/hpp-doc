@@ -1,3 +1,37 @@
+ - id: mirabel:iros:2016
+   title: "HPP: a new software for constrained motion planning"
+   author:
+   - family: Mirabel
+     given: Joseph
+   - family: Tonneau
+     given: Steve
+   - family: Pierre
+     given: Fernback
+   - family: Seppala
+     given: Anna-Kaarina
+   - family: Campana
+     given: Mylene
+   - family: Mansard
+     given: Nicolas
+   - family: Lamiraux
+     given: Florent
+   year: 2016
+   container-title: Submitted to IROS 2016
+   type: article
+   URL: https://hal.archives-ouvertes.fr/hal-01290850
+
+ - id: mirabel2:iros:2016
+   title: "Constraint Graph: Unifying task and motion planning for Navigation and Manipulation Among Movable Obstacles"
+   author:
+   - family: Mirabel
+     given: Joseph
+   - family: Lamiraux
+     given: Florent
+   year: 2016
+   container-title: Submitted to IROS 2016
+   type: article
+   URL: https://hal.archives-ouvertes.fr/hal-01281348
+
 # - id: who:where:when #moulard:rsj:2014
 #   title: "Title of paper or conference"
 #   author:
