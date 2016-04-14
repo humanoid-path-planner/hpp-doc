@@ -7,9 +7,102 @@ disqus: no
 
 <h1 id="getting-started" class="page-header">{{ page.title }}</h1>
 
-We currently provide tutorials to help you to get started with HPP in the hpp_tutorial package.
-A tutorial is proposed at the bottom of the documentation page, installed on your computer, to help you get familiar with the software. 
+<p class="lead">
 
-The online tutorial is <a href="api/hpp_tutorial/doxygen-html/index.html">here</a>.
+This page provides guidelines for installation as well as tutorials to get you started with HPP.
+
+</p>
+<ul class="nav nav-tabs" id="howto">
+  <li class="active"><a href="#installation" data-toggle="tab">
+    <img src="{{site.baseurl}}/assets/logo-ubuntu.svg" style="height: 1.5em; margin-top: -0.25em; margin-bottom: -0.25em;">
+    Installation on Ubuntu </a>
+  </li>
+  <li><a href="#tutorial_1" data-toggle="tab">Tutorial 1</a></li>
+  <li><a href="#tutorial_1_details" data-toggle="tab">Tutorial 1 - Details</a></li>
+</ul>
+
+<div class="tab-content" style="padding-top: 1.75em">
+
+  <div class="tab-pane active" id="installation">
+    <p>
+    The software architecture has been tested entirely on:
+    <ul>
+      <li>Ubuntu 12.04 LTS, with ros-hydro,</li>
+      <li>Ubuntu 14.04 LTS, with ros-indigo.</li>
+    </ul>
+    Current developpments are done under Ubuntu 14.04 LTS so it is preferable to choose it.
+
+    If you are running other distributions, we expect the library to work correctly but we can not guarantee it.
+
+    Follow the instructions <a href="https://github.com/humanoid-path-planner/hpp-doc#readme">here</a>.
+    </p>
+
+  </div>
+
+  <div class="tab-pane" id="tutorial_1">
+    <p>
+    To run the tutorial, open a terminal and open 3 tabs by typing CTRL+SHIFT+T twice.
+
+    When the terminal is selected, you can select a tab by typing ALT-[1|2|3].
+    </p>
+
+    <hr/>
+
+    <h4>Step 1 - Starting gepetto-viewer-server</h4>
+    <p>
+    In the first tab, type
+    {% highlight bash %} $ gepetto-viewer-server {% endhighlight %}
+
+    Nothing apparently happens, but the graphical user interface is ready to create a new window and to display a scene.
+    </p>
+
+    <hr/>
+
+    <h4>Step 2 - Starting hppcorbaserver </h4>
+
+    <p>
+    In the second tab, type
+    {% highlight bash %} $ hppcorbaserver {% endhighlight %}
+
+    See package hpp-corbaserver for details.
+
+    Note that gepetto-viewer-server and hppcorbaserver executables are completely independent.
+    </p>
+
+    <hr/>
+
+    <h4>Step 3 - Controlling via a python terminal</h4>
+
+    <p>
+    In the third tab, type
+    {% highlight bash %} $ python {% endhighlight %}
+
+    {% highlight bash %}
+    Python 2.7.3 (default, Feb 27 2014, 20:00:17)
+    [GCC 4.6.3] on linux2
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> {% endhighlight %}
+
+    Copy-paste the content of file
+    <a href="/api/hpp_tutorial/doxygen-html/script/tutorial_1.py">script/tutorial_1.py</a>
+    in the python terminal.
+
+    A window should pop-up, displaying a scene containing a PR2 robot in a kitchen environment.
+
+    See <a href="tutorial_1_details">next section</a> for details about the instructions in
+    <a href="/api/hpp_tutorial/doxygen-html/script/tutorial_1.py">script/tutorial_1.py</a>
+    </p>
+  </div>
+  <div class="tab-pane" id="tutorial_1_details">
+    <p>
+    <!--TODO: This link will likely be broken when updating the doc-->
+    Please see <a href="{{ site.url }}/api/hpp_tutorial/doxygen-html/a00002.html">this</a>.
+    </p>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(function () { $('#howto a:first').tab('show') })
+</script>
 
 <div style="padding: 2em"></div>
