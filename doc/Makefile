@@ -10,6 +10,11 @@ HPP_REPO=https://github.com/humanoid-path-planner
 
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
+ifeq (${BUILD_TYPE},Debug)
+  BUILD_FOLDER=build
+else
+  BUILD_FOLDER=build-rel
+endif
 
 hpp-fcl_branch=master
 hpp-fcl_repository=${HPP_REPO}
@@ -109,6 +114,12 @@ OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRA
 
 doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
+roboptim-core-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
+roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
+qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
 all: doxygen-Release_1_8_10.install hpp_tutorial.install \
 	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
@@ -116,7 +127,7 @@ all: doxygen-Release_1_8_10.install hpp_tutorial.install \
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
 hrp2: test-hpp.install
 
-hpp-fcl.configure.dep: hpp-fcl.checkout
+hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
 doxygen-Release_1_8_10.configure.dep: doxygen-Release_1_8_10.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
@@ -136,7 +147,7 @@ hpp-constraints.configure.dep: qpOASES.install hpp-model.install hpp-constraints
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
-	hpp-manipulation.checkout
+	hpp-wholebody-step.install hpp-manipulation.checkout
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-model-urdf.install hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-model-urdf.install hpp-core.install \
@@ -250,8 +261,8 @@ update:
 hpp-doc.configure: hpp-doc.checkout
 	cd ${SRC_DIR}/$(@:.configure=);\
 	./bootstrap;\
-	mkdir -p build; \
-	cd ${SRC_DIR}/$(@:.configure=)/build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
 	../configure --prefix=${DEVEL_DIR}/install
 
 eigen3.checkout:
@@ -264,8 +275,8 @@ eigen3.checkout:
 
 eigen3.configure: eigen3.configure.dep
 	cd ${SRC_DIR}/eigen3;\
-	mkdir -p build; \
-	cd ${SRC_DIR}/eigen3/build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/eigen3/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
 
 roboptim-core-3.1.checkout:
@@ -292,28 +303,28 @@ doxygen-Release_1_8_10.checkout:
 hrp2.configure: hrp2.configure.dep
 	. ${DEVEL_DIR}/install/setup.sh; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
-	mkdir -p build; \
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 hrp2.install: hrp2.configure
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/build;\
+	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER};\
 	make install
 
 robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
-	mkdir -p build; \
-	cd build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 	cd ${SRC_DIR}/$(@:.configure=)/urdf_parser_py;\
-	mkdir -p build; \
-	cd build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 robot_model_py.install: robot_model_py.configure
-	cd ${SRC_DIR}/$(@:.install=)/xml_reflection/build; \
+	cd ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER}; \
 	make install; \
-	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/build; \
+	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER}; \
 	make install;
 
 OpenSceneGraph-3.4.0.checkout:
