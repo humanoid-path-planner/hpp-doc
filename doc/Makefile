@@ -126,7 +126,7 @@ all: doxygen-Release_1_8_10.install hpp_tutorial.install \
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
 hrp2: test-hpp.install
 
-hpp-fcl.configure.dep: hpp-fcl.checkout
+hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
 doxygen-Release_1_8_10.configure.dep: doxygen-Release_1_8_10.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
@@ -146,7 +146,7 @@ hpp-constraints.configure.dep: qpOASES.install hpp-model.install hpp-constraints
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
-	hpp-manipulation.checkout
+	hpp-wholebody-step.install hpp-manipulation.checkout
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-model-urdf.install hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-model-urdf.install hpp-core.install \
