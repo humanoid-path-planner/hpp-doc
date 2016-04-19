@@ -1,0 +1,49 @@
+---
+layout: default
+title: Contributing
+group: navigation
+disqus: no
+---
+
+<h1 id="download_install" class="page-header">{{ page.title }}</h1>
+
+<p class="lead">
+In order to contribute to HPP, you have to install the development version on the
+<a href="{{ site.baseurl }}/download.html">download page</a>.
+</p>
+
+<p class="lead">
+Contributions are welcome through the github pull-requests mechanism.
+Here is a list of the most important packages, pointing to the corresponding github repository:
+
+<div class="table-responsive">
+  <table class="table table-condensed" id="status">
+    <thead>
+      <tr>
+        <td><em>Package</em></td>
+        <td>Description</td>
+      </tr>
+    </thead>
+    <tbody>
+    {% for package in site.data.packages %}
+    <tr id="{{ package.github }}" style="">
+      <td><a href="https://github.com/humanoid-path-planner/{{ package.github }}">{{ package.name }}</a>
+      </td>
+      <td id="{{ package.github }}-description"> {{ package.description }} </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+</p>
+
+<div style="padding: 2em"></div>
+
+<h2 class="page-header">Dependency graph of HPP</h2>
+<img src="{{ site.baseurl }}/api/hpp-doc/images/dependencies.png"
+class="img-responsive"
+alt="Dependency graph of HPP"
+title="Dependency graph of HPP"/>
+<!--<div class="text-center"><em><strong>Dependency graph of HPP</em></div>-->
+
+<div style="padding: 2em"></div>
