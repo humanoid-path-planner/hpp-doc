@@ -1,3 +1,22 @@
+- name: hpp-fcl
+  github: hpp-fcl
+  description: Modified version of the Flexible Collision Library
+- name: hpp-model
+  github: hpp-model
+  description: Definition of the kinematic chain.
+- name: hpp-constraints
+  github: hpp-constraints
+  description: Definition of non-linear constraints.
+- name: hpp-core
+  github: hpp-core
+  description: The core functionnalities of HPP.
+- name: hpp-wholebody-step
+  github: hpp-wholebody-step
+  description: Whole-body and walk planning using sliding path approximation.
+- name: hpp-manipulation
+  github: hpp-manipulation
+  description: Manipulation planning algorithms.
+
 ###
 # - name: RobOptim Core
 # github: roboptim-core

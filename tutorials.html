@@ -1,65 +1,25 @@
 ---
 layout: default
-title: Getting Started
+title: Tutorials
 group: navigation
 disqus: no
 ---
 
-<h1 id="getting-started" class="page-header">{{ page.title }}</h1>
+<h1 id="tutorials" class="page-header">{{ page.title }}</h1>
 
 <p class="lead">
 
-This page provides guidelines for installation as well as tutorials to get you started with HPP.
+This page provides tutorials to get you started with HPP.
 
 </p>
 <ul class="nav nav-tabs" id="howto">
-  <li class="active"><a href="#installation" id="installation_tab" data-toggle="tab">
-    <img src="{{site.baseurl}}/assets/logo-ubuntu.svg" style="height: 1.5em; margin-top: -0.25em; margin-bottom: -0.25em;">
-    Installation on Ubuntu </a>
-  </li>
-  <li><a href="#installation_devel" id="installation_devel_tab" data-toggle="tab">
-    <img src="{{site.baseurl}}/assets/logo-ubuntu.svg" style="height: 1.5em; margin-top: -0.25em; margin-bottom: -0.25em;">
-    devel branch </a>
-  </li>
-  <li><a href="#tutorial_1" id="tutorial_1_tab" data-toggle="tab">Tutorial 1</a></li>
+  <li class="active"><a href="#tutorial_1" id="tutorial_1_tab" data-toggle="tab">Tutorial 1</a></li>
   <li><a href="#tutorial_1_details" id="tutorial_1_details_tab" data-toggle="tab">Tutorial 1 - Details</a></li>
 </ul>
 
 <div class="tab-content" style="padding-top: 1.75em">
 
-  <div class="tab-pane active" id="installation">
-    <p>
-    The software architecture has been tested entirely on:
-    <ul>
-      <li>Ubuntu 12.04 LTS, with ros-hydro,</li>
-      <li>Ubuntu 14.04 LTS, with ros-indigo.</li>
-    </ul>
-    Current developpments are done under Ubuntu 14.04 LTS so it is preferable to choose it.
-
-    If you are running other distributions, we expect the library to work correctly but we can not guarantee it.
-
-    Follow the instructions <a href="https://github.com/humanoid-path-planner/hpp-doc#readme">here</a>.
-    </p>
-  </div>
-
-  <div class="tab-pane" id="installation_devel">
-    <SELECT id="installation_branch" size="1" onchange="">
-      <OPTION>
-      <OPTION>master
-      <OPTION>devel
-      <OPTION>euroc-c1
-      <OPTION>euroc-c2
-    </SELECT>
-    <div id="installation_devel_readme" style="display:none;">
-    </div>
-    <div id="installation_devel_readme_rendered">
-      <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
-      <span class="sr-only">Refreshing...</span>
-    </div>
-
-  </div>
-
-  <div class="tab-pane" id="tutorial_1">
+  <div class="tab-pane active" id="tutorial_1">
     <p>
     To run the tutorial, open a terminal and open 3 tabs by typing CTRL+SHIFT+T twice.
 
@@ -134,21 +94,6 @@ This page provides guidelines for installation as well as tutorials to get you s
     }
     $(tab).tab('show');
     })
-</script>
-
-<script src="{{ site.baseurl }}/lib/markdown.js"></script>
-<script>
-function fetch (url, divRaw, divRend) {
-  $(divRaw).load(url, function() {
-      $(divRend).html(markdown.toHTML($('#installation_devel_readme').text()))
-      });
-}
-<!--$('#installation_devel_readme').ready(-->
-    <!--$('#installation_devel_readme_rendered').html(markdown.toHTML($('#installation_devel_readme').text()))-->
-    <!--);-->
-fetch("https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/README.md",
-    "#installation_devel_readme",
-    "#installation_devel_readme_rendered");
 </script>
 
 <div style="padding: 2em"></div>
