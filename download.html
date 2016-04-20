@@ -20,8 +20,6 @@ This page provides guidelines for installation of HPP. Several versions are avai
 </select>
 <hr class="featurette-divider">
 
-<div style="padding: 2em"></div>
-
 <div id="installation_devel">
   <div id="installation_devel_readme" style="display:none;">
   </div>
@@ -30,11 +28,16 @@ This page provides guidelines for installation of HPP. Several versions are avai
 
 </div>
 
-<script src="{{ site.baseurl }}/lib/markdown.js"></script>
+<script src="https://cdn.rawgit.com/showdownjs/showdown/1.3.0/dist/showdown.min.js"></script>
 <script>
 function fetch (url, divRaw, divRend) {
-  $(divRaw).load(url, function() {
-      $(divRend).html(markdown.toHTML($('#installation_devel_readme').text()))
+  var converter = new showdown.Converter();
+  $(divRaw).load(url, function(respText, statText, xhr) {
+      if (statText == "success") {
+      $(divRend).html(converter.makeHtml($('#installation_devel_readme').text()))
+      } else {
+      $(divRend).html("Could not open " + url + "<br/>" + xhr.status + ": " + xhr.statusText);
+      }
       });
 }
 function updateInstall(branch) {
@@ -45,7 +48,9 @@ function updateInstall(branch) {
         'Please select the version you want to install'
         );
   } else {
-    fetch("https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/" + branch + "/README.md",
+    $("#installation_devel_readme").text ("");
+    $("#installation_devel_readme_rendered").text ("");
+    fetch("https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/" + branch + "/doc/instructions.md",
         "#installation_devel_readme",
         "#installation_devel_readme_rendered");
   }
