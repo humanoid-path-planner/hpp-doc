@@ -228,24 +228,24 @@ update:
 
 %.configure:%.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=);\
-	mkdir -p build; \
-	cd ${SRC_DIR}/$(@:.configure=)/build; \
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure=)_extra_flags} ..
 
 %.install:%.configure
-	cd ${SRC_DIR}/$(@:.install=)/build;\
+	cd ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER};\
 	make install
 
 %.uninstall:
-	cd ${SRC_DIR}/$(@:.uninstall=)/build;\
+	cd ${SRC_DIR}/$(@:.uninstall=)/${BUILD_FOLDER};\
 	make uninstall
 
 %.clean:
-	cd ${SRC_DIR}/$(@:.clean=)/build;\
+	cd ${SRC_DIR}/$(@:.clean=)/${BUILD_FOLDER};\
 	make clean
 
 %.very-clean:
-	rm -rf ${SRC_DIR}/$(@:.very-clean=)/build/*
+	rm -rf ${SRC_DIR}/$(@:.very-clean=)/${BUILD_FOLDER}/*
 
 %.status:
 	cd ${SRC_DIR}/$(@:.status=); git status
