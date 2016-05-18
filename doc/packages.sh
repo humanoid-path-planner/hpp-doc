@@ -97,12 +97,12 @@ pkg "hpp-wholebody-step-corba" \
 
 pkg "hpp-manipulation" \
     "hpp-manipulation" \
-    "ssh://trac.laas.fr/git/jrl/algo/hpp-manipulation" \
+    "git@github.com:humanoid-path-planner/hpp-manipulation" \
     "path/hpp-manipulation"
 
 pkg "hpp-manipulation-corba" \
     "hpp-manipulation-corba" \
-    "ssh://trac.laas.fr/git/jrl/corba/hpp-manipulation-corba" \
+    "git@github.com:humanoid-path-planner/hpp-manipulation-corba" \
     "path/hpp-manipulation-corba"
 
 pkg "hpp_ros" \
