@@ -54,8 +54,10 @@ sudo apt-get build-dep openscenegraph
   4. Choose a directory on you file system and define the environment
      variable `DEVEL_DIR` with the full path to this directory.
      - the packages will be cloned into `$DEVEL_DIR/src`,
-     - the packages will be installed by default in `$DEVEL_DIR/install`. To install in another prefix, edit the Makefile downloaded at step 5 and set variable `INSTALL_DIR` accordingly.
-     It is recommanded to set variable `DEVEL_DIR` in your `.bashrc` for future use.
+     - the packages will be installed by default in `$DEVEL_DIR/install`.
+     - You may install in another prefix, in that case, you should
+       - edit the Makefile downloaded at step 5 and set variable `INSTALL_DIR` accordingly,
+       - edit file config.sh downloaded at step 5 and set variable `INSTALL_DIR` accordingly.
 
   5. Copy Config and Makefile
 
@@ -63,6 +65,11 @@ sudo apt-get build-dep openscenegraph
 wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config.sh
 wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile
     ```
+
+     It is recommanded
+       - to set variable `DEVEL_DIR` in your `.bashrc`
+       - to source file `config.sh` in your `.bashrc`
+     for future use.
 
   6. cd into `$DEVEL_DIR` and type
 

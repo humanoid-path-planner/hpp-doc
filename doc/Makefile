@@ -9,6 +9,8 @@ LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 
 SRC_DIR=${DEVEL_DIR}/src
+# Installation prefix. If you change the installation prefix, you should
+# also change it in file ../config.sh
 INSTALL_DIR=${DEVEL_DIR}/install
 
 BUILD_TYPE=Release
