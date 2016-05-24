@@ -11,7 +11,7 @@ HPP_REPO=https://github.com/humanoid-path-planner
 SRC_DIR=${DEVEL_DIR}/src
 INSTALL_DIR=${DEVEL_DIR}/install
 
-BUILD_TYPE=Debug
+BUILD_TYPE=Release
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
 else
@@ -109,6 +109,9 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=master
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
+hpp-plot_branch=master
+hpp-plot_repository=${HPP_REPO}
+
 hpp-gui_branch=master
 hpp-gui_repository=${HPP_REPO}
 
@@ -123,7 +126,8 @@ roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 all: doxygen-Release_1_8_10.install hpp_tutorial.install \
-	hpp-gepetto-viewer.install
+	hpp-gepetto-viewer.install hpp-manipulation-corba.install \
+	hpp-plot.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
@@ -184,6 +188,10 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
+hpp-plot.configure.dep: hpp-manipulation-corba.install \
+	hpp-wholebody-step-corba \
+	hpp-corbaserver.install \
+	hpp-plot.checkout
 hpp-gui.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install hpp-gui.checkout
 
