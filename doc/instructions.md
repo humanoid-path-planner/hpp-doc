@@ -54,7 +54,7 @@ sudo apt-get build-dep openscenegraph
   4. Choose a directory on you file system and define the environment
      variable `DEVEL_DIR` with the full path to this directory.
      - the packages will be cloned into `$DEVEL_DIR/src`,
-     - the packages will be installed by default in `$DEVEL_DIR/install`. To install in another prefix, edit the Makefile downloaded at step 5 and set variable INSTALL_DIR accordingly.
+     - the packages will be installed by default in `$DEVEL_DIR/install`. To install in another prefix, edit the Makefile downloaded at step 5 and set variable `INSTALL_DIR` accordingly.
      It is recommanded to set variable `DEVEL_DIR` in your `.bashrc` for future use.
 
   5. Copy Config and Makefile
