@@ -9,6 +9,8 @@ LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 
 SRC_DIR=${DEVEL_DIR}/src
+INSTALL_DIR=${DEVEL_DIR}/install
+
 BUILD_TYPE=Debug
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
@@ -110,7 +112,7 @@ hpp-gepetto-viewer_repository=${HPP_REPO}
 hpp-gui_branch=master
 hpp-gui_repository=${HPP_REPO}
 
-OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
+OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
 doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
@@ -230,7 +232,7 @@ update:
 	cd ${SRC_DIR}/$(@:.configure=);\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure=)_extra_flags} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure=)_extra_flags} ..
 
 %.install:%.configure
 	cd ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER};\
@@ -263,7 +265,7 @@ hpp-doc.configure: hpp-doc.checkout
 	./bootstrap;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
-	../configure --prefix=${DEVEL_DIR}/install
+	../configure --prefix=${INSTALL_DIR}
 
 eigen3.checkout:
 	if [ -d $(@:.checkout=) ]; then \
@@ -277,7 +279,7 @@ eigen3.configure: eigen3.configure.dep
 	cd ${SRC_DIR}/eigen3;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/eigen3/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${INSTALL_DIR}/lib ..
 
 roboptim-core-3.1.checkout:
 	if [ -d $(@:.checkout=) ]; then \
@@ -301,11 +303,11 @@ doxygen-Release_1_8_10.checkout:
 	fi
 
 hrp2.configure: hrp2.configure.dep
-	. ${DEVEL_DIR}/install/setup.sh; \
+	. ${INSTALL_DIR}/setup.sh; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 hrp2.install: hrp2.configure
 	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER};\
@@ -315,11 +317,11 @@ robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 	cd ${SRC_DIR}/$(@:.configure=)/urdf_parser_py;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 robot_model_py.install: robot_model_py.configure
 	cd ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER}; \
