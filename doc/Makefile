@@ -21,34 +21,34 @@ else
   BUILD_FOLDER=build-rel
 endif
 
-hpp-fcl_branch=master
+hpp-fcl_branch=isae
 hpp-fcl_repository=${HPP_REPO}
 
-hpp-util_branch=master
+hpp-util_branch=isae
 hpp-util_repository=${HPP_REPO}
 
-hpp-model_branch=master
+hpp-model_branch=isae
 hpp-model_repository=${HPP_REPO}
 
-hpp-model-urdf_branch=master
+hpp-model-urdf_branch=isae
 hpp-model-urdf_repository=${HPP_REPO}
 
-hpp-statistics_branch=master
+hpp-statistics_branch=isae
 hpp-statistics_repository=${HPP_REPO}
 
-hpp-core_branch=master
+hpp-core_branch=isae
 hpp-core_repository=${HPP_REPO}
 
 hpp-template-corba_branch=master
 hpp-template-corba_repository=${LAAS_REPO}
 
-hpp-corbaserver_branch=master
+hpp-corbaserver_branch=isae
 hpp-corbaserver_repository=${HPP_REPO}
 
 qpOASES_branch=master
 qpOASES_repository=${HPP_REPO}
 
-hpp-constraints_branch=master
+hpp-constraints_branch=isae
 hpp-constraints_repository=${HPP_REPO}
 
 hpp-walkgen_branch=master
@@ -75,17 +75,16 @@ robot_capsule_urdf_repository=${LAAS_REPO}
 robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
-hpp-doc_branch=master
+hpp-doc_branch=isae
 hpp-doc_repository=${HPP_REPO}
 
-hpp-manipulation_branch=master
+hpp-manipulation_branch=isae
 hpp-manipulation_repository=${HPP_REPO}
 
-
-hpp-manipulation-urdf_branch=master
+hpp-manipulation-urdf_branch=isae
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
-hpp-manipulation-corba_branch=master
+hpp-manipulation-corba_branch=isae
 hpp-manipulation-corba_repository=${HPP_REPO}
 
 robot_state_chain_publisher_branch=master
@@ -103,32 +102,29 @@ hpp_benchmark_repository=${HPP_REPO}
 collada-dom_branch=master
 collada-dom_repository=${HPP_REPO}
 
-gepetto-viewer_branch=master
+gepetto-viewer_branch=isae
 gepetto-viewer_repository=${HPP_REPO}
 
-gepetto-viewer-corba_branch=master
+gepetto-viewer-corba_branch=isae
 gepetto-viewer-corba_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=master
+hpp-gepetto-viewer_branch=isae
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-gepetto-gui_branch=master
+gepetto-gui_branch=isae
 gepetto-gui_repository=${HPP_REPO}
 
 universal_robot_branch=indigo-devel
 universal_robot_repository=${ROS_INDUSTRIAL}
 
-hpp_universal_robot_branch=master
+hpp_universal_robot_branch=isae
 hpp_universal_robot_repository=${HPP_REPO}
 
 qgv_branch=isae
 qgv_repository=${HPP_REPO}
 
-hpp-plot_branch=master
+hpp-plot_branch=isae
 hpp-plot_repository=${HPP_REPO}
-
-hpp-gui_branch=master
-hpp-gui_repository=${HPP_REPO}
 
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
