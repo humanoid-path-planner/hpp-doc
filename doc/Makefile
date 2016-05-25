@@ -7,6 +7,7 @@ FCL_REPO=https://github.com/flexible-collision-library
 JRL_REPO=https://github.com/jrl-umi3218
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
+ROS_INDUSTRIAL=https://github.com/ros-industrial
 
 SRC_DIR=${DEVEL_DIR}/src
 # Installation prefix. If you change the installation prefix, you should
@@ -111,6 +112,18 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=master
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
+gepetto-gui_branch=master
+gepetto-gui_repository=${HPP_REPO}
+
+universal_robot_branch=indigo-devel
+universal_robot_repository=${ROS_INDUSTRIAL}
+
+hpp_universal_robot_branch=master
+hpp_universal_robot_repository=${HPP_REPO}
+
+qgv_branch=isae
+qgv_repository=${HPP_REPO}
+
 hpp-plot_branch=master
 hpp-plot_repository=${HPP_REPO}
 
@@ -127,9 +140,8 @@ roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
-all: doxygen-Release_1_8_10.install hpp_tutorial.install \
-	hpp-gepetto-viewer.install hpp-manipulation-corba.install \
-	hpp-plot.install
+all: doxygen-Release_1_8_10.install hpp-gepetto-viewer.install \
+	hpp-manipulation-corba.install hpp-plot.install gepetto-gui.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
@@ -190,12 +202,17 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
+qgv.configure.dep: qgv.checkout
 hpp-plot.configure.dep: hpp-manipulation-corba.install \
 	hpp-wholebody-step-corba \
 	hpp-corbaserver.install \
+	qgv.install \
 	hpp-plot.checkout
-hpp-gui.configure.dep: gepetto-viewer-corba.install \
-	hpp-corbaserver.install hpp-gui.checkout
+gepetto-gui.configure.dep: gepetto-viewer-corba.install \
+	hpp-corbaserver.install gepetto-gui.checkout
+universal_robot.configure.dep: universal_robot.checkout
+hpp_universal_robot.configure.dep: universal_robot.install \
+	hpp_universal_robot.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
@@ -347,3 +364,13 @@ OpenSceneGraph-3.4.0.checkout:
 		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
 		rm -f OpenSceneGraph-3.4.0.zip;\
 	fi
+
+universal_robot.configure: universal_robot.configure.dep
+	cd ${SRC_DIR}/universal_robot/ur_description;\
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/universal_robot/ur_description/${BUILD_FOLDER}; \
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+
+universal_robot.install: universal_robot.configure
+	cd ${SRC_DIR}/universal_robot/ur_description/${BUILD_FOLDER};\
+	make install
