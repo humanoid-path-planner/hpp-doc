@@ -62,6 +62,7 @@ sudo apt-get build-dep openscenegraph
   5. Copy Config and Makefile
 
     ```bash
+mkdir -p ${DEVEL_DIR}/src
 wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/isae/doc/config.sh
 wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/isae/doc/Makefile
     ```
@@ -76,7 +77,6 @@ wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-
     ```bash
 cd ${DEVEL_DIR}
 source config.sh
-mkdir -p ${DEVEL_DIR}/src
     ```
 
   7. cd into `$DEVEL_DIR/src` and type
