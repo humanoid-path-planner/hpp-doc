@@ -14,7 +14,7 @@ SRC_DIR=${DEVEL_DIR}/src
 # also change it in file ../config.sh
 INSTALL_DIR=${DEVEL_DIR}/install
 
-BUILD_TYPE=Release
+BUILD_TYPE=Debug
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
 else
@@ -137,7 +137,8 @@ roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 all: doxygen-Release_1_8_10.install hpp-gepetto-viewer.install \
-	hpp-manipulation-corba.install hpp-plot.install hpp-gui.install
+	hpp-manipulation-corba.install hpp-plot.install hpp-gui.install \
+	universal_robot.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.

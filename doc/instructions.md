@@ -83,9 +83,9 @@ source config.sh
 
     ```bash
 cd ${DEVEL_DIR}/src
-make robot_state_chain_publisher.install;
-source ../config.sh;
 make all
+source ../config.sh;
+make hpp_universal_robot.install
     ```
 
 ##Documentation
