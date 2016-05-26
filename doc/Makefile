@@ -54,7 +54,7 @@ hpp-constraints_repository=${HPP_REPO}
 hpp-walkgen_branch=master
 hpp-walkgen_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=master
+hpp-wholebody-step_branch=isae
 hpp-wholebody-step_repository=${HPP_REPO}
 
 hpp-wholebody-step-corba_branch=master
@@ -111,8 +111,8 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=isae
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-gepetto-gui_branch=isae
-gepetto-gui_repository=${HPP_REPO}
+hpp-gui_branch=devel
+hpp-gui_repository=${HPP_REPO}
 
 universal_robot_branch=indigo-devel
 universal_robot_repository=${ROS_INDUSTRIAL}
@@ -137,7 +137,7 @@ roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 all: doxygen-Release_1_8_10.install hpp-gepetto-viewer.install \
-	hpp-manipulation-corba.install hpp-plot.install gepetto-gui.install
+	hpp-manipulation-corba.install hpp-plot.install hpp-gui.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
@@ -204,8 +204,8 @@ hpp-plot.configure.dep: hpp-manipulation-corba.install \
 	hpp-corbaserver.install \
 	qgv.install \
 	hpp-plot.checkout
-gepetto-gui.configure.dep: gepetto-viewer-corba.install \
-	hpp-corbaserver.install gepetto-gui.checkout
+hpp-gui.configure.dep: gepetto-viewer-corba hpp-manipulation-corba \
+	hpp-gui.checkout
 universal_robot.configure.dep: universal_robot.checkout
 hpp_universal_robot.configure.dep: universal_robot.install \
 	hpp_universal_robot.checkout
