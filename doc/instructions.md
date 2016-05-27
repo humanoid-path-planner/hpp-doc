@@ -85,7 +85,7 @@ source config.sh
 cd ${DEVEL_DIR}/src
 make all
 source ../config.sh;
-make hpp_universal_robot.install
+make hpp_universal_robot.install hpp-environments.install
     ```
 
 ##Documentation

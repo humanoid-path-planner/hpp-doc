@@ -126,6 +126,9 @@ qgv_repository=${HPP_REPO}
 hpp-plot_branch=isae
 hpp-plot_repository=${HPP_REPO}
 
+hpp-environments_branch=isae
+hpp-environments_repository=${HPP_REPO}
+
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
 doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
@@ -210,6 +213,7 @@ hpp-gui.configure.dep: gepetto-viewer-corba hpp-manipulation-corba \
 universal_robot.configure.dep: universal_robot.checkout
 hpp_universal_robot.configure.dep: universal_robot.install \
 	hpp_universal_robot.checkout
+hpp-environments.configure.dep: hpp-environments.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
