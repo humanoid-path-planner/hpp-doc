@@ -111,7 +111,7 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=isae
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-hpp-gui_branch=devel
+hpp-gui_branch=isae
 hpp-gui_repository=${HPP_REPO}
 
 universal_robot_branch=indigo-devel
