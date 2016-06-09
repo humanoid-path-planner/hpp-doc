@@ -106,8 +106,18 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=devel
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
+pythonqt_branch=patched-5
+pythonqt_repository=${HPP_REPO}
+pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
+
 hpp-gui_branch=devel
 hpp-gui_repository=${HPP_REPO}
+
+hpp-plot_branch=devel
+hpp-plot_repository=${HPP_REPO}
+
+qgv_branch=devel
+qgv_repository=${HPP_REPO}
 
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
 
@@ -183,6 +193,11 @@ hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-gepetto-viewer.checkout
 hpp-gui.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install hpp-gui.checkout
+pythonqt.configure.dep: pythonqt.checkout
+hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
+	hpp-wholebody-step-corba.install qgv.install \
+	hpp-plot.checkout
+qgv.configure.dep: qgv.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
