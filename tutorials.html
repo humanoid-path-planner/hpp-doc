@@ -20,6 +20,7 @@ This page provides tutorials to get you started with HPP.
 <ul class="nav nav-tabs" id="howto">
   <li class="active"><a href="#tutorial_1" id="tutorial_1_tab" data-toggle="tab">Tutorial 1</a></li>
   <li><a href="#tutorial_1_details" id="tutorial_1_details_tab" data-toggle="tab">Tutorial 1 - Details</a></li>
+  <li><a href="#tutorial_2" id="tutorial_2_tab" data-toggle="tab">Tutorial 2</a></li>
 </ul>
 
 <div class="tab-content" style="padding-top: 1.75em">
@@ -82,6 +83,75 @@ This page provides tutorials to get you started with HPP.
     <p>
     <!--TODO: This link will likely be broken when updating the doc-->
     Please see <a href="{{ site.baseurl }}/api/hpp_tutorial/doxygen-html/a00002.html">this</a>.
+    </p>
+  </div>
+  <div class="tab-pane" id="tutorial_2">
+    <p>
+      WARNING: this tutorial has been tested with installations instructions corresponding to branch "isae".
+    </p>
+    <p>
+    To run the tutorial, open a terminal and open 4 tabs by typing CTRL+SHIFT+T twice.
+
+    When the terminal is selected, you can select a tab by typing ALT-[1|2|3|4].
+    </p>
+
+    <hr/>
+
+    <h4>Step 1 - Starting gepetto-viewer-server</h4>
+    <p>
+    In the first tab, type
+    {% highlight bash %} $ gepetto-viewer-server {% endhighlight %}
+
+    Nothing apparently happens, but the graphical user interface is ready to create a new window and to display a scene.
+    </p>
+
+    <hr/>
+
+    <h4>Step 2 - Starting hpp-manipulation-server</h4>
+
+    <p>
+    In the second tab, type
+    {% highlight bash %} $ hpp-manipulation-server {% endhighlight %}
+
+    See package hpp-manipulation-server for details.
+    </p>
+
+    <hr/>
+
+    <h4>Step 3 - Controlling via a python terminal</h4>
+
+    <p>
+    In the third tab, type
+    {% highlight bash %} $ python {% endhighlight %}
+
+    {% highlight bash %}
+    Python 2.7.3 (default, Feb 27 2014, 20:00:17)
+    [GCC 4.6.3] on linux2
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> {% endhighlight %}
+
+    Copy-paste the content of file
+    <a href="{{ site.baseurl }}/hpp-doc/api/be-isae/script/manipulation.py">script/manipulation.py</a>
+    in the python terminal.
+
+    A window should pop-up, displaying a scene containing a UR5 robot and a ball. In the python terminal, type
+    {% highlight bash %}
+    >>> ps.solve () {% endhighlight %}
+    After a minute or so, you should be able to display the solution path.
+    </p>
+    <h4>Step 4 - Displaying the constraint graph</h4>
+    <p>
+    In the fourth terminal, type
+    {% highlight bash %} $ hpp-plot-manipulation-graph {% endhighlight %}
+    A window should pop up. Click on "Refresh" and "Statistics" button to display the constraint graph. Then, clicking on edges of the graph displays the statistics of the search related to the edge.
+    </p>
+    <h4>Step 5 - Write your own script</h4>
+    <p>
+    Start again from step 1 replacing script
+    <span class="highlight"><code class="language-bash" data-lang="bash">manipulation.py</code></span>
+    by
+    <a href="{{ site.baseurl }}/hpp-doc/api/be-isae/script/manipulation_box.py">manipulation_box.py</a>
+    . The ball is in a box. To help the planner, create nodes where the gripper is above the box.
     </p>
   </div>
 </div>
