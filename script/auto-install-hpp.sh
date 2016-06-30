@@ -12,7 +12,7 @@ APT_BUILD_DEP="openscenegraph"
 
 MAKE_TARBALL=false
 
-BRANCH=devel
+BRANCH=master
 if [ -z ${DEVEL_DIR} ]; then
   export DEVEL_DIR=/local/devel/hpp
 fi
