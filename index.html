@@ -17,6 +17,7 @@ sitemap:
   <p> Software for Motion and Manipulation Planning </p>
 
   <p>
+  <a class="btn btn-lg btn-primary" href="#videos" role="button">See videos</a>
   <a class="btn btn-lg btn-primary" href="download.html" role="button">Get started now &raquo;</a>
   </p>
 </div>
@@ -59,21 +60,35 @@ sitemap:
     </div>
     <div class="col-md-5">
       <h2 class="featurette-heading">Acknowledgement</h2>
-      <p class="lead">
+      <!--<p class="lead">-->
+      <p>
       This work has been partially supported by:
       <ul>
         <li>FP7 Factory in a Day</li>
         <li>Euroc project</li>
         <li>ERC Actanthrope</li>
         <li>PSPC Romeo 2</li>
+        <li>ANR Entracte</li>
       </ul>
       </p>
     </div>
-    <div class="col-md-2">
-      <a href="https://ec.europa.eu/research/fp7/index_en.cfm">
-        <img title="Framework Program 7" id="FP7_logo" src="{{ site.baseurl }}/assets/logo-FP7.jpg" alt="Framework Program 7"
-        style="height: 110px;"/>
-      </a>
+    <div class="col-md-2 text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <a href="https://ec.europa.eu/research/fp7/index_en.cfm">
+            <img title="Framework Program 7" id="FP7_logo" src="{{ site.baseurl }}/assets/logo-FP7.jpg" alt="Framework Program 7"
+            style="height: 110px;"/>
+          </a>
+        </div>
+        <div class="row">
+          <div class="col-md-12" style="padding-top:0.5em; padding-bottom:0.5em;">
+            <a href="http://www.agence-nationale-recherche.fr">
+              <img title="ANR project" id="anr_logo" src="{{ site.baseurl }}/assets/logo_anr.gif" alt="Logo ANR project"
+              style="height: 70px;"/>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -82,7 +97,9 @@ sitemap:
 
 <div style="padding: 2em"></div>
 
+<div id="videos">
 {% include carrousel.html carrousel=site.data.projects %}
+</div>
 
 <div style="padding: 2em"></div>
 
