@@ -67,7 +67,7 @@ wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-
   6. cd into `$DEVEL_DIR` and type
 
     ```bash
-cd #{DEVEL_DIR}
+cd ${DEVEL_DIR}
 source config.sh
     ```
 
