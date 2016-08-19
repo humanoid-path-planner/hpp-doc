@@ -232,7 +232,7 @@ log:
 update:
 	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp-doc ; do \
 	echo "Updating $$d";\
-	make $$d.update; done
+	${MAKE} $$d.update; done
 
 %.checkout:
 	if [ -d $(@:.checkout=) ]; then \
@@ -252,22 +252,25 @@ update:
 	git branch -D bce46g;\
 	git submodule update
 
-%.configure:%.configure.dep
-	mkdir -p ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure=)_extra_flags} ..
+%.configure:%.configure.dep %.confthis
+	: # Do nothing else
+
+%.confthis:
+	mkdir -p ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \ -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.confthis=)_extra_flags} ..
 
 %.install:%.configure
-	cd ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER};\
-	make install
+	${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install
+
+%.instthis:%.confthis
+	${MAKE} -C ${SRC_DIR}/$(@:.instthis=)/${BUILD_FOLDER} install
 
 %.uninstall:
-	cd ${SRC_DIR}/$(@:.uninstall=)/${BUILD_FOLDER};\
-	make uninstall
+	${MAKE} -C ${SRC_DIR}/$(@:.uninstall=)/${BUILD_FOLDER} uninstall
 
 %.clean:
-	cd ${SRC_DIR}/$(@:.clean=)/${BUILD_FOLDER};\
-	make clean
+	${MAKE} -C ${SRC_DIR}/$(@:.clean=)/${BUILD_FOLDER} clean
 
 %.very-clean:
 	rm -rf ${SRC_DIR}/$(@:.very-clean=)/${BUILD_FOLDER}/*
@@ -333,8 +336,7 @@ hrp2.configure: hrp2.configure.dep
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 hrp2.install: hrp2.configure
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER};\
-	make install
+	${MAKE} -C ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER} install
 
 robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
@@ -347,10 +349,8 @@ robot_model_py.configure: robot_model_py.configure.dep
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 robot_model_py.install: robot_model_py.configure
-	cd ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER}; \
-	make install; \
-	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER}; \
-	make install;
+	${MAKE} -C ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER} install; \
+	${MAKE} -C ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER} install;
 
 OpenSceneGraph-3.4.0.checkout:
 	if [ -d $(@:.checkout=) ]; then \
