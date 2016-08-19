@@ -7,6 +7,7 @@ FCL_REPO=https://github.com/flexible-collision-library
 JRL_REPO=https://github.com/jrl-umi3218
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
+SOT_REPO=https://github.com/stack-of-tasks
 
 SRC_DIR=${DEVEL_DIR}/src
 BUILD_TYPE=Debug
@@ -24,6 +25,13 @@ hpp-util_repository=${HPP_REPO}
 
 hpp-model_branch=devel
 hpp-model_repository=${HPP_REPO}
+
+pinocchio_branch=hpp_devel
+pinocchio_repository=${SOT_REPO}
+pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
+
+hpp-pinocchio_branch=master
+hpp-pinocchio_repository=${HPP_REPO}
 
 hpp-model-urdf_branch=devel
 hpp-model-urdf_repository=${HPP_REPO}
@@ -148,11 +156,15 @@ hpp-util.configure.dep: hpp-util.checkout
 hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
+pinocchio.configure.dep: eigen3.install hpp-fcl.install pinocchio.checkout
+hpp-pinocchio.configure.dep: hpp-model-urdf.install pinocchio.install \
+	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
 qpOASES.configure.dep: qpOASES.checkout
-hpp-constraints.configure.dep: qpOASES.install hpp-model.install hpp-constraints.checkout
+hpp-constraints.configure.dep: qpOASES.install hpp-model.install \
+	hpp-pinocchio.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
