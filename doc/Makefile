@@ -255,7 +255,7 @@ update:
 %.configure:%.configure.dep %.confthis
 	: # Do nothing else
 
-%.confthis:
+%.confthis:%.checkout
 	mkdir -p ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \ -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.confthis=)_extra_flags} ..
