@@ -19,6 +19,7 @@ endif
 
 hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
+hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 hpp-util_branch=devel
 hpp-util_repository=${HPP_REPO}
@@ -26,7 +27,7 @@ hpp-util_repository=${HPP_REPO}
 hpp-model_branch=devel
 hpp-model_repository=${HPP_REPO}
 
-pinocchio_branch=hpp_devel
+pinocchio_branch=hpp-devel
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -39,19 +40,19 @@ hpp-model-urdf_repository=${HPP_REPO}
 hpp-statistics_branch=devel
 hpp-statistics_repository=${HPP_REPO}
 
-hpp-core_branch=devel
+hpp-core_branch=topic/pinocchio
 hpp-core_repository=${HPP_REPO}
 
 hpp-template-corba_branch=devel
 hpp-template-corba_repository=${LAAS_REPO}
 
-hpp-corbaserver_branch=devel
+hpp-corbaserver_branch=topic/pinocchio
 hpp-corbaserver_repository=${HPP_REPO}
 
 qpOASES_branch=master
 qpOASES_repository=${HPP_REPO}
 
-hpp-constraints_branch=devel
+hpp-constraints_branch=topic/pinocchio
 hpp-constraints_repository=${HPP_REPO}
 
 hpp-walkgen_branch=devel
@@ -78,7 +79,7 @@ robot_capsule_urdf_repository=${LAAS_REPO}
 robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
-hpp-doc_branch=devel
+hpp-doc_branch=topic/pinocchio
 hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=devel
@@ -96,7 +97,7 @@ robot_state_chain_publisher_repository=${HPP_REPO}
 iai_maps_branch=master
 iai_maps_repository=${HPP_REPO}
 
-hpp_tutorial_branch=devel
+hpp_tutorial_branch=topic/pinocchio
 hpp_tutorial_repository=${HPP_REPO}
 
 hpp_benchmark_branch=master
@@ -111,14 +112,14 @@ gepetto-viewer_repository=${HPP_REPO}
 gepetto-viewer-corba_branch=devel
 gepetto-viewer-corba_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=devel
+hpp-gepetto-viewer_branch=topic/pinocchio
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
 pythonqt_branch=patched-5
 pythonqt_repository=${HPP_REPO}
 pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
-hpp-gui_branch=devel
+hpp-gui_branch=topic/pinocchio
 hpp-gui_repository=${HPP_REPO}
 
 hpp-plot_branch=devel
