@@ -55,13 +55,13 @@ qpOASES_repository=${HPP_REPO}
 hpp-constraints_branch=topic/pinocchio
 hpp-constraints_repository=${HPP_REPO}
 
-hpp-walkgen_branch=devel
+hpp-walkgen_branch=topic/pinocchio
 hpp-walkgen_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=devel
+hpp-wholebody-step_branch=topic/pinocchio
 hpp-wholebody-step_repository=${HPP_REPO}
 
-hpp-wholebody-step-corba_branch=devel
+hpp-wholebody-step-corba_branch=topic/pinocchio
 hpp-wholebody-step-corba_repository=${HPP_REPO}
 
 test-hpp_branch=devel
@@ -70,7 +70,7 @@ test-hpp_repository=${HPP_REPO}
 hrp2_branch=groovy
 hrp2_repository=${JRL_REPO}
 
-hpp-hrp2_branch=devel
+hpp-hrp2_branch=topic/pinocchio
 hpp-hrp2_repository=${HPP_REPO}
 
 robot_capsule_urdf_branch=groovy
@@ -82,13 +82,13 @@ robot_model_py_repository=${LAAS_REPO}
 hpp-doc_branch=topic/pinocchio
 hpp-doc_repository=${HPP_REPO}
 
-hpp-manipulation_branch=devel
+hpp-manipulation_branch=topic/pinocchio
 hpp-manipulation_repository=${HPP_REPO}
 
-hpp-manipulation-urdf_branch=devel
+hpp-manipulation-urdf_branch=topic/pinocchio
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
-hpp-manipulation-corba_branch=devel
+hpp-manipulation-corba_branch=topic/pinocchio
 hpp-manipulation-corba_repository=${HPP_REPO}
 
 robot_state_chain_publisher_branch=master
@@ -158,21 +158,21 @@ hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 pinocchio.configure.dep: eigen3.install hpp-fcl.install pinocchio.checkout
-hpp-pinocchio.configure.dep: hpp-model-urdf.install pinocchio.install \
+hpp-pinocchio.configure.dep: pinocchio.install \
 	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
 qpOASES.configure.dep: qpOASES.checkout
-hpp-constraints.configure.dep: qpOASES.install hpp-model.install \
+hpp-constraints.configure.dep: qpOASES.install \
 	hpp-pinocchio.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
-	hpp-model-urdf.install hpp-manipulation-urdf.checkout
-hpp-corbaserver.configure.dep: hpp-model-urdf.install hpp-core.install \
+	hpp-manipulation-urdf.checkout
+hpp-corbaserver.configure.dep: hpp-core.install \
 	hpp-constraints.install hpp-corbaserver.checkout
 hpp-wholebody-step-corba.configure.dep: hpp-corbaserver.install \
 	hpp-wholebody-step.install hpp-template-corba.install \
@@ -231,7 +231,7 @@ log:
 	done
 
 update:
-	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp-doc ; do \
+	for d in hpp-util hpp-pinocchio hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp-doc ; do \
 	echo "Updating $$d";\
 	${MAKE} $$d.update; done
 
