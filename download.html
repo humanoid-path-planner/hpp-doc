@@ -57,7 +57,16 @@ function updateInstall(branch) {
         "#installation_devel_readme_rendered");
   }
 }
-updateInstall("");
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var branch = getParameterByName('branch');
+$('#installation_branch').val(branch);
+updateInstall(branch);
 </script>
 
 <div style="padding: 2em"></div>
