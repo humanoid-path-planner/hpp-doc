@@ -1,3 +1,46 @@
+- name: fiad-showcase
+  id: 2
+  title: Factory In A Day - Full sequence
+  description: "The robot grasp each of 8 parts, move them to the caroussel where they are processed, put them back to the initially empty tray, and finally stacks the empty tray on top of the full tray."
+  video:
+    url: http://projects.laas.fr/gepetto/uploads/Members/fiad-full-sequence.mp4
+
+- name: manipulation_baxter
+  id: 3
+  title: Manipulation planning
+  description: "A sequence of tasks is automatically discovered during the planning in order to swap the position of the boxes."
+  video:
+    url: http://homepages.laas.fr/jmirabel/raw/videos/baxter_three_boxes.mp4
+
+- name: multicontact_hrp2_standup
+  id: 4
+  title: Multi-contact locomotion - Stand up
+  description: "A sequence of contact configurations for a multiped robot is computed. Position constraint and static equilibrium constraint are used to create and maintain contacts along the sequence."
+  video:
+    url: http://homepages.laas.fr/jmirabel/raw/videos/hrp2_standup.mp4
+
+- name: multicontact_hrp2_stairs
+  id: 5
+  title: Multi-contact locomotion - Stairs
+  description: "A sequence of contact configurations for a multiped robot is computed. Position constraint and static equilibrium constraint are used to create and maintain contacts along the sequence.
+    <br/>The motion is then executed on the HRP-2 robot."
+  video:
+    url: http://homepages.laas.fr/jmirabel/raw/videos/hrp2_stairs.mp4
+
+- name: optimization
+  id: 6
+  title: Constraint based path optimization
+  description: "Path optimization algorithm based on collision constraints, automatically built between bodies close to collision."
+  video:
+    url: http://homepages.laas.fr/jmirabel/raw/videos/campana16optim.mp4
+
+- name: rod_planning
+  id: 7
+  title: Elastic rod planning.
+  description: "Integration of external software: QSERL and XDE are used to implement a dedicated steering method for elastic rod planning.<br/><em>Engine model courtesy of Siemens-KineoCAM.</em>"
+  video:
+    url: http://homepages.laas.fr/jmirabel/raw/videos/rod_planning.mp4
+
 - name: hpp-showcase
   id: 0
   title: HPP demonstration
@@ -11,13 +54,6 @@
   description: "Differents features that can be achieved using the manipulation stack of the Humanoid Path Planner"
   video:
     url: http://homepages.laas.fr/jmirabel/article/iros16manip/video.mp4
-
-- name: fiad-showcase
-  id: 2
-  title: Factory In A Day - Full sequence
-  description: "The robot grasp each of 8 parts, move them to the caroussel where they are processed, put them back to the initially empty tray, and finally stacks the empty tray on top of the full tray."
-  video:
-    url: http://projects.laas.fr/gepetto/uploads/Members/fiad-full-sequence.mp4
 
 #### Examples of format to use. Remember : 1 image or 1 video. not both
 # - name: pg-ellipses
