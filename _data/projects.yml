@@ -12,6 +12,13 @@
   video:
     url: http://homepages.laas.fr/jmirabel/raw/videos/baxter_three_boxes.mp4
 
+- name: manipulation_romeo_placard
+  id: 8
+  title: Manipulation planning
+  description: "Romeo rotates a placard. Each hand can grasp the placard with one degree of freedom in rotation, thus the space of valid grasps for each hand is continuous. This case illustrates the <em>crossing foliation issue</em>."
+  video:
+    url: http://homepages.laas.fr/jmirabel/raw/videos/romeo_placard.mp4
+
 - name: multicontact_hrp2_standup
   id: 4
   title: Multi-contact locomotion - Stand up
