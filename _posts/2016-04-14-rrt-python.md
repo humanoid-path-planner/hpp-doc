@@ -4,6 +4,8 @@ title: "Implement an RRT in Python"
 date: 2016-04-14
 disqus: no
 excerpt_separator: <!--more-->
+sitemap:
+  lastmod: 2016-10-07
 ---
 
 Thanks to the Python bindings of HPP, prototyping new motion planning algorithm
@@ -32,7 +34,7 @@ def solveBiRRT (ps, robot, maxIter = float("inf")):
     for i in [0,1]:
       ## Extend connected components
       qnear, dist = ps.getNearestConfig (qrand, i)
-      pathFullyValid, i_path = ps.directPath (qnear, qrand)
+      pathFullyValid, i_path, msg = ps.directPath (qnear, qrand, True)
       l = ps.pathLength (i_path)
       qnew = ps.configAtParam (i_path, l)
       ps.addConfigToRoadmap (qnew)
@@ -42,7 +44,7 @@ def solveBiRRT (ps, robot, maxIter = float("inf")):
     ## Try connecting the new nodes together
     for i in range (len(newConfigs)):
       for j in range (i):
-        pathFullyValid, i_path = ps.directPath (newConfigs[i], newConfigs[j])
+        pathFullyValid, i_path, msg = ps.directPath (newConfigs[i], newConfigs[j], True)
         if pathFullyValid:
           ps.addEdgeToRoadmap (newConfigs[i], newConfigs[j], i_path, True)
 
