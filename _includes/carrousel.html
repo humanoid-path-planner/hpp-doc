@@ -30,7 +30,7 @@
         </li>
         {% else if project.video.url %}
         <li class="slide" style="text-align: center;">
-            <video style="" width="960" height="540" id="video_{{ project.id }}"
+          <video style="" width="90%" max-height="500" id="video_{{ project.id }}"
             title="{{ project.title }}"
             src="{{ project.video.url }}"
             allowfullscreen controls
