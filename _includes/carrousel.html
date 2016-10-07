@@ -38,6 +38,9 @@
             <p>If you are reading this, it is because your browser does not support the HTML5 video element.
             The video is located <a href="{{ project.video.url }}">here</a></p>
           </video>
+        {% if project.description %}
+          <p class="flex-caption" style="position: relative; text-align: center" >{{ project.description }}</p>
+        {% endif %}
         </li>
         {% endif %}
       {% endif %}
