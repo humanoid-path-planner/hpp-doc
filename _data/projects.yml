@@ -12,6 +12,13 @@
   video:
     url: http://homepages.laas.fr/jmirabel/article/iros16manip/video.mp4
 
+- name: fiad-showcase
+  id: 2
+  title: Factory In A Day - Full sequence
+  description: "The robot grasp each of 8 parts, move them to the caroussel where they are processed, put them back to the initially empty tray, and finally stacks the empty tray on top of the full tray."
+  video:
+    url: http://projects.laas.fr/gepetto/uploads/Members/fiad-full-sequence.mp4
+
 #### Examples of format to use. Remember : 1 image or 1 video. not both
 # - name: pg-ellipses
 #   title: Non-Inclusive Contacts
