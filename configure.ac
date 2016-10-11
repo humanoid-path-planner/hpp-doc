@@ -79,6 +79,7 @@ pkg_list="$pkg_list $2"
 JRL_GENERATELINK([HPPFCL], [hpp-fcl])
 JRL_GENERATELINK([HPPUTIL], [hpp-util])
 JRL_GENERATELINK([PINOCCHIO], [pinocchio])
+JRL_GENERATELINK([HPPPINOCCHIO], [hpp-pinocchio])
 JRL_GENERATELINK([HPPCORE], [hpp-core])
 JRL_GENERATELINK([HPPCORBASERVER], [hpp-corbaserver])
 JRL_GENERATELINK([HPPCONSTRAINTS], [hpp-constraints])

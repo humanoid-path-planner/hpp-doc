@@ -37,7 +37,14 @@
 	  </td>
 	  <td>implementation of kinematic chain with dynamic computations,</td>
 	</tr>
-      </table>
+       <tr>
+         <td>
+           <a href="@HPPPINOCCHIO_LINK@">hpp-pinocchio</a>
+         </td>
+         <td>Interface between pinocchio and hpp-core,
+         </td>
+       </tr>
+       </table>
 
       <li><b>Non linear constraints</b></li>
       <table class="pkglist">
