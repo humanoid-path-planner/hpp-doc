@@ -30,11 +30,15 @@ The core functionalities are well suited to solve classical path planning proble
 
 It can be extended to path planning for other types of robots like digital actors for instance.
 
+For more information, visit the
+<a href="https://humanoid-path-planner.github.io/hpp-doc/index.html">website</a>.
 
 <h2>Installation</h2>
 
 <p>Installation instructions can be found on
-<a href="https://github.com/humanoid-path-planner/hpp-doc">github</a>.
+the <a href="https://humanoid-path-planner.github.io/hpp-doc/download.html?branch=master">download page</a>
+or on
+<a href="https://github.com/humanoid-path-planner/hpp-doc">github</a>
 </p>
 
 <h2>Overview of the architecture</h2>
