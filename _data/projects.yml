@@ -48,6 +48,20 @@
   video:
     url: http://homepages.laas.fr/jmirabel/raw/videos/rod_planning.mp4
 
+- name: manipulation_pr2_drawer
+  id: 8
+  title: Manipulation planning with tool use inference
+  description: "Manipulation planning with tool use inference"
+  video:
+    url: http://homepages.laas.fr/jmirabel/raw/videos/pr2_drawer.mp4
+
+- name: manipulation_hrp2_stairs
+  id: 9
+  title: Locomotion planning expressed as a Manipulation planning problem
+  description: "The locomotion planning problem is expressed as a Manipulation planning problem."
+  video:
+    url: http://homepages.laas.fr/jmirabel/raw/videos/hrp2_stairs.mp4
+
 - name: hpp-showcase
   id: 0
   title: HPP demonstration
