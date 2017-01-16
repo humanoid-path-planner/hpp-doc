@@ -25,7 +25,7 @@
         <li class="slide">
           <iframe width="560" height="200" id="youtubevideo"
             title="{{ project.title }}"
-            src="http://www.youtube.com/embed/{{ project.video.youtube_id}}?enablejsapi=1&version=3&playerapiid=youtubevideo&vq=hd720"
+            src="http://www.youtube.com/embed/{{ project.video.youtube_id}}?enablejsapi=1&version=3&playerapiid=youtubevideo&vq=hd720&{{ project.video.youtube_extra }}"
             allowfullscreen frameborder="0"></iframe>
         </li>
         {% else if project.video.url %}

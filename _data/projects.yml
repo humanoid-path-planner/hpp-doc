@@ -13,7 +13,7 @@
     url: http://homepages.laas.fr/jmirabel/raw/videos/baxter_three_boxes.mp4
 
 - name: manipulation_romeo_placard
-  id: 8
+  id: 10
   title: Manipulation planning
   description: "Romeo rotates a placard. Each hand can grasp the placard with one degree of freedom in rotation, thus the space of valid grasps for each hand is continuous. This case illustrates the <em>crossing foliation issue</em>."
   video:
@@ -32,7 +32,8 @@
   description: "A sequence of contact configurations for a multiped robot is computed. Position constraint and static equilibrium constraint are used to create and maintain contacts along the sequence.
     <br/>The motion is then executed on the HRP-2 robot."
   video:
-    url: http://homepages.laas.fr/jmirabel/raw/videos/hrp2_stairs.mp4
+    youtube_id: 2ELEpuPjGP4
+    youtube_extra: start=2m07&end2m55
 
 - name: optimization
   id: 6
