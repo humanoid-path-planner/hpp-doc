@@ -9,7 +9,7 @@ LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 
 SRC_DIR=${DEVEL_DIR}/src
-BUILD_TYPE=Debug
+BUILD_TYPE=Release
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
 else
@@ -119,6 +119,21 @@ hpp-plot_repository=${HPP_REPO}
 qgv_branch=devel
 qgv_repository=${HPP_REPO}
 
+hpp-affordance_branch=master
+hpp-affordance_repository=${HPP_REPO}
+
+hpp-affordance-corba_branch=master
+hpp-affordance-corba_repository=${HPP_REPO}
+
+hpp-rbprm_branch=master
+hpp-rbprm_repository=${HPP_REPO}
+
+hpp-rbprm-corba_branch=master
+hpp-rbprm-corba_repository=${HPP_REPO}
+
+robust-equilibrium-lib_branch=master
+robust-equilibrium-lib_repository=${HPP_REPO}
+
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
 
 doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
@@ -198,6 +213,16 @@ hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
 	hpp-wholebody-step-corba.install qgv.install \
 	hpp-plot.checkout
 qgv.configure.dep: qgv.checkout
+hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
+hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
+ hpp-corbaserver.install hpp-affordance-corba.checkout
+hpp-rbprm.configure.dep: hpp-core.install robust-equilibrium-lib.install \ 
+hpp-affordance.install hpp-rbprm.checkout
+hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
+ hpp-corbaserver.install hpp-rbprm-corba.checkout
+robust-equilibrium-lib.configure.dep: qpOASES.install robust-equilibrium-lib.checkout
+
+
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
