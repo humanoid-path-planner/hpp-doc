@@ -16,34 +16,34 @@ else
   BUILD_FOLDER=build-rel
 endif
 
-hpp-fcl_branch=devel
+hpp-fcl_branch=rbprm
 hpp-fcl_repository=${HPP_REPO}
 
-hpp-util_branch=devel
+hpp-util_branch=rbprm
 hpp-util_repository=${HPP_REPO}
 
-hpp-model_branch=devel
+hpp-model_branch=rbprm
 hpp-model_repository=${HPP_REPO}
 
-hpp-model-urdf_branch=devel
+hpp-model-urdf_branch=rbprm
 hpp-model-urdf_repository=${HPP_REPO}
 
 hpp-statistics_branch=devel
 hpp-statistics_repository=${HPP_REPO}
 
-hpp-core_branch=devel
+hpp-core_branch=rbprm
 hpp-core_repository=${HPP_REPO}
 
-hpp-template-corba_branch=devel
+hpp-template-corba_branch=master
 hpp-template-corba_repository=${LAAS_REPO}
 
-hpp-corbaserver_branch=devel
+hpp-corbaserver_branch=rbprm
 hpp-corbaserver_repository=${HPP_REPO}
 
 qpOASES_branch=master
 qpOASES_repository=${HPP_REPO}
 
-hpp-constraints_branch=devel
+hpp-constraints_branch=rbprm
 hpp-constraints_repository=${HPP_REPO}
 
 hpp-walkgen_branch=devel
@@ -97,13 +97,13 @@ hpp_benchmark_repository=${HPP_REPO}
 collada-dom_branch=master
 collada-dom_repository=${HPP_REPO}
 
-gepetto-viewer_branch=devel
+gepetto-viewer_branch=rbprm
 gepetto-viewer_repository=${HPP_REPO}
 
-gepetto-viewer-corba_branch=devel
+gepetto-viewer-corba_branch=rbprm
 gepetto-viewer-corba_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=devel
+hpp-gepetto-viewer_branch=rbprm
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
 pythonqt_branch=patched-5
