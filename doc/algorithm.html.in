@@ -33,18 +33,18 @@
 	</tr>
 	<tr>
 	  <td>
-	    <a href="@HPPMODEL_LINK@">hpp-model</a>
+	    <a href="@PINOCCHIO_LINK@">pinocchio</a>
 	  </td>
 	  <td>implementation of kinematic chain with dynamic computations,</td>
 	</tr>
-	<tr>
-	  <td>
-	    <a href="@HPPMODELURDF_LINK@">hpp-model-urdf</a>
-	  </td>
-	  <td>construction of robots and objects by parsing urdf/srdf files,
-	  </td>
-	</tr>
-      </table>
+       <tr>
+         <td>
+           <a href="@HPPPINOCCHIO_LINK@">hpp-pinocchio</a>
+         </td>
+         <td>Interface between pinocchio and hpp-core,
+         </td>
+       </tr>
+       </table>
 
       <li><b>Non linear constraints</b></li>
       <table class="pkglist">

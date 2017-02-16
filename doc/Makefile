@@ -7,8 +7,11 @@ FCL_REPO=https://github.com/flexible-collision-library
 JRL_REPO=https://github.com/jrl-umi3218
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
+SOT_REPO=https://github.com/stack-of-tasks
 
 SRC_DIR=${DEVEL_DIR}/src
+INSTALL_DIR=${DEVEL_DIR}/install
+
 BUILD_TYPE=Debug
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
@@ -16,8 +19,9 @@ else
   BUILD_FOLDER=build-rel
 endif
 
-hpp-fcl_branch=master
+hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
+hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 hpp-util_branch=master
 hpp-util_repository=${HPP_REPO}
@@ -25,7 +29,14 @@ hpp-util_repository=${HPP_REPO}
 hpp-model_branch=master
 hpp-model_repository=${HPP_REPO}
 
-hpp-model-urdf_branch=master
+pinocchio_branch=master
+pinocchio_repository=${SOT_REPO}
+pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
+
+hpp-pinocchio_branch=master
+hpp-pinocchio_repository=${HPP_REPO}
+
+hpp-model-urdf_branch=xxx
 hpp-model-urdf_repository=${HPP_REPO}
 
 hpp-statistics_branch=master
@@ -98,6 +109,9 @@ hpp_benchmark_repository=${HPP_REPO}
 collada-dom_branch=master
 collada-dom_repository=${HPP_REPO}
 
+OpenSceneGraph-dae-plugin_branch=master
+OpenSceneGraph-dae-plugin_repository=${HPP_REPO}
+
 gepetto-viewer_branch=master
 gepetto-viewer_repository=${HPP_REPO}
 
@@ -116,7 +130,7 @@ hpp-environments_repository=${HPP_REPO}
 hpp-baxter_branch=master
 hpp-baxter_repository=${HPP_REPO}
 
-OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
+OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
 
 doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
@@ -127,7 +141,7 @@ roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 all: doxygen-Release_1_8_10.install hpp_tutorial.install \
-	hpp-gepetto-viewer.install hpp-manipulation-corba.install
+	hpp-manipulation-corba.install 	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
@@ -145,18 +159,22 @@ hpp-util.configure.dep: hpp-util.checkout
 hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
+pinocchio.configure.dep: eigen3.install hpp-fcl.install pinocchio.checkout
+hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
+	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
 qpOASES.configure.dep: qpOASES.checkout
-hpp-constraints.configure.dep: qpOASES.install hpp-model.install hpp-constraints.checkout
+hpp-constraints.configure.dep: qpOASES.install \
+	hpp-pinocchio.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-wholebody-step.install hpp-manipulation.checkout
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
-	hpp-model-urdf.install hpp-manipulation-urdf.checkout
-hpp-corbaserver.configure.dep: hpp-model-urdf.install hpp-core.install \
+	hpp-manipulation-urdf.checkout
+hpp-corbaserver.configure.dep: hpp-core.install \
 	hpp-constraints.install hpp-corbaserver.checkout
 hpp-wholebody-step-corba.configure.dep: hpp-corbaserver.install \
 	hpp-wholebody-step.install hpp-template-corba.install \
@@ -179,9 +197,9 @@ hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
 	hpp-corbaserver.install hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_benchmark.checkout
 collada-dom.configure.dep: collada-dom.checkout
-OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
-	OpenSceneGraph-3.4.0.checkout
-gepetto-viewer.configure.dep: OpenSceneGraph-3.4.0.install \
+OpenSceneGraph-dae-plugin.configure.dep: collada-dom.install \
+	OpenSceneGraph-dae-plugin.checkout
+gepetto-viewer.configure.dep: OpenSceneGraph-dae-plugin.install \
 	gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 	gepetto-viewer-corba.checkout
@@ -210,9 +228,9 @@ log:
 	done
 
 update:
-	for d in hpp-util hpp-model hpp-model-urdf hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp-doc ; do \
+	for d in hpp-util hpp-pinocchio hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp-doc ; do \
 	echo "Updating $$d";\
-	make $$d.update; done
+	${MAKE} $$d.update; done
 
 %.checkout:
 	if [ -d $(@:.checkout=) ]; then \
@@ -232,22 +250,25 @@ update:
 	git branch -D bce46g;\
 	git submodule update
 
-%.configure:%.configure.dep
-	mkdir -p ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure=)_extra_flags} ..
+%.configure:%.configure.dep %.confthis
+	: # Do nothing else
+
+%.confthis:%.checkout
+	mkdir -p ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \ -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.confthis=)_extra_flags} ..
 
 %.install:%.configure
-	cd ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER};\
-	make install
+	${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install
+
+%.instthis:%.confthis
+	${MAKE} -C ${SRC_DIR}/$(@:.instthis=)/${BUILD_FOLDER} install
 
 %.uninstall:
-	cd ${SRC_DIR}/$(@:.uninstall=)/${BUILD_FOLDER};\
-	make uninstall
+	${MAKE} -C ${SRC_DIR}/$(@:.uninstall=)/${BUILD_FOLDER} uninstall
 
 %.clean:
-	cd ${SRC_DIR}/$(@:.clean=)/${BUILD_FOLDER};\
-	make clean
+	${MAKE} -C ${SRC_DIR}/$(@:.clean=)/${BUILD_FOLDER} clean
 
 %.very-clean:
 	rm -rf ${SRC_DIR}/$(@:.very-clean=)/${BUILD_FOLDER}/*
@@ -268,7 +289,7 @@ hpp-doc.configure: hpp-doc.checkout
 	./bootstrap;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
-	../configure --prefix=${DEVEL_DIR}/install
+	../configure --prefix=${INSTALL_DIR}
 
 eigen3.checkout:
 	if [ -d $(@:.checkout=) ]; then \
@@ -282,7 +303,7 @@ eigen3.configure: eigen3.configure.dep
 	cd ${SRC_DIR}/eigen3;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/eigen3/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${DEVEL_DIR}/install/lib ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${INSTALL_DIR}/lib ..
 
 roboptim-core-3.1.checkout:
 	if [ -d $(@:.checkout=) ]; then \
@@ -306,37 +327,25 @@ doxygen-Release_1_8_10.checkout:
 	fi
 
 hrp2.configure: hrp2.configure.dep
-	. ${DEVEL_DIR}/install/setup.sh; \
+	. ${INSTALL_DIR}/setup.sh; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 hrp2.install: hrp2.configure
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER};\
-	make install
+	${MAKE} -C ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER} install
 
 robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 	cd ${SRC_DIR}/$(@:.configure=)/urdf_parser_py;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 robot_model_py.install: robot_model_py.configure
-	cd ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER}; \
-	make install; \
-	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER}; \
-	make install;
-
-OpenSceneGraph-3.4.0.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-		wget http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
-		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
-		rm -f OpenSceneGraph-3.4.0.zip;\
-	fi
+	${MAKE} -C ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER} install; \
+	${MAKE} -C ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER} install;

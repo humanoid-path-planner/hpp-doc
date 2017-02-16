@@ -1,14 +1,14 @@
 #!/bin/bash
 
-APT_DEP="autoconf g++ cmake libboost-dev \
-  liburdfdom-dev libassimp-dev ros-indigo-xacro ros-indigo-kdl-parser \
-  ros-indigo-common-msgs ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd \
-  ros-indigo-octomap ros-indigo-resource-retriever ros-indigo-srdfdom \
-  ros-indigo-pr2-robot flex bison asciidoc source-highlight git libomniorb4-dev \
-  omniorb-nameserver omniidl omniidl-python libltdl-dev python-matplotlib \
-  libtinyxml2-dev liblog4cxx10-dev \
-  qt4-dev-tools libqt4-opengl-dev libqtgui4 oxygen-icon-theme"
-APT_BUILD_DEP="openscenegraph"
+APT_DEP="autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
+ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs \
+ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap \
+ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-robot flex \
+bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver \
+omniidl omniidl-python libltdl-dev python-matplotlib libtinyxml2-dev \
+liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev \
+libqtgui4 oxygen-icon-theme libopenscenegraph-dev"
+APT_BUILD_DEP=""
 
 MAKE_TARBALL=false
 
@@ -83,7 +83,7 @@ cd $DEVEL_DIR/src
 make -e robot_state_chain_publisher.install
 source ../config.sh
 make -e doxygen-Release_1_8_10.install
-make -e hpp-manipulation-corba.install all hpp-gui.install
+make -e all
 
 if [ ${MAKE_TARBALL} = true ]; then
   cd $DEVEL_DIR/
