@@ -1,8 +1,12 @@
 #!/usr/bin/python
 
-from __future__ import with_statement
+from __future__ import print_function, with_statement
+
+from future import standard_library
+standard_library.install_aliases()
+
 from optparse import OptionParser
-import commands
+import subprocess
 import re
 import sys, os
 
@@ -56,17 +60,17 @@ def extractDep(inPkg):
                                 depString = "\"" + depName + "\" -> \"" + inPkg + "\""
                                 dependencySet.add(depString)
 
-        except IOError, ex:
+        except IOError:
             None
 
     for dep in depSet:
-        print "extracting ", dep
+        print("extracting ", dep)
         extractDep(dep)
 
 
 def getDocLink(package):
     cmd = "pkg-config --variable=doxygendocdir " + package
-    status,output = commands.getstatusoutput(cmd)
+    status,output = subprocess.getstatusoutput(cmd)
 
     if status != 0:
         return ''
@@ -75,7 +79,7 @@ def getDocLink(package):
         return output
 
     cmd = "pkg-config --variable=docdir " + package
-    status,output = commands.getstatusoutput(cmd)
+    status,output = subprocess.getstatusoutput(cmd)
 
     if status != 0:
         return ''
@@ -94,8 +98,8 @@ for pkg in packageList:
 
 try:
     f = open(filename, 'w')
-except IOError, ex:
-    print "cannot open ", filename
+except IOError:
+    print("cannot open ", filename)
 
 f.write("digraph CD  {\n")
 f.write("\tsize = \"12,15\"\n")
