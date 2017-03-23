@@ -2,13 +2,14 @@
 
 from __future__ import print_function, with_statement
 
-from future import standard_library
-standard_library.install_aliases()
-
 from optparse import OptionParser
-import subprocess
 import re
 import sys, os
+
+try:  # python2
+    from commands import getstatusoutput
+except:  # python3
+    from subprocess import getstatusoutput
 
 pkgConfigPath = os.environ.get("PKG_CONFIG_PATH")
 pathList = re.split(':', pkgConfigPath)
@@ -70,7 +71,7 @@ def extractDep(inPkg):
 
 def getDocLink(package):
     cmd = "pkg-config --variable=doxygendocdir " + package
-    status,output = subprocess.getstatusoutput(cmd)
+    status,output = getstatusoutput(cmd)
 
     if status != 0:
         return ''
@@ -79,7 +80,7 @@ def getDocLink(package):
         return output
 
     cmd = "pkg-config --variable=docdir " + package
-    status,output = subprocess.getstatusoutput(cmd)
+    status,output = getstatusoutput(cmd)
 
     if status != 0:
         return ''
