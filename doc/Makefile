@@ -128,6 +128,9 @@ hpp-affordance-corba_repository=${HPP_REPO}
 hpp-rbprm_branch=master
 hpp-rbprm_repository=${HPP_REPO}
 
+hpp-rbprm-robot-data_branch=master
+hpp-rbprm-robot-data_repository=https://github.com/stonneau
+
 hpp-rbprm-corba_branch=master
 hpp-rbprm-corba_repository=${HPP_REPO}
 
@@ -218,8 +221,9 @@ hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.in
  hpp-corbaserver.install hpp-affordance-corba.checkout
 hpp-rbprm.configure.dep: hpp-core.install robust-equilibrium-lib.install \ 
 hpp-affordance.install hpp-rbprm.checkout
+hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
- hpp-corbaserver.install hpp-rbprm-corba.checkout
+ hpp-corbaserver.install hpp-rbprm-robot-data.install hpp-rbprm-corba.checkout
 robust-equilibrium-lib.configure.dep: qpOASES.install robust-equilibrium-lib.checkout
 
 
