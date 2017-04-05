@@ -19,6 +19,11 @@ else
   BUILD_FOLDER=build-rel
 endif
 
+WGET=wget --quiet
+UNZIP=unzip -qq
+TAR=tar
+GIT_QUIET=--quiet
+
 hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
@@ -135,15 +140,13 @@ hpp-baxter_repository=${HPP_REPO}
 
 OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
 
-doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
-
 roboptim-core-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
-all: doxygen-Release_1_8_10.install hpp_tutorial.install \
+all: doxygen-1.8.10.install hpp_tutorial.install \
 	hpp-manipulation-corba.install 	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
@@ -152,7 +155,7 @@ hrp2: test-hpp.install
 
 hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
-doxygen-Release_1_8_10.configure.dep: doxygen-Release_1_8_10.checkout
+doxygen-1.8.10.configure.dep: doxygen-1.8.10.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
 roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
 	roboptim-trajectory-3.1.checkout
@@ -165,7 +168,7 @@ hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 pinocchio.configure.dep: eigen3.install hpp-fcl.install pinocchio.checkout
 hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
 	hpp-pinocchio.checkout
-hpp-statistics.configure.dep: hpp-statistics.checkout
+hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
 qpOASES.configure.dep: qpOASES.checkout
@@ -239,7 +242,7 @@ update:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		git clone --recursive -b ${$(@:.checkout=)_branch} ${$(@:.checkout=)_repository}/$(@:.checkout=); \
+		git clone ${GIT_QUIET} --recursive -b ${$(@:.checkout=)_branch} ${$(@:.checkout=)_repository}/$(@:.checkout=); \
 	fi \
 
 %.update:
@@ -298,7 +301,7 @@ eigen3.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget -O - "http://bitbucket.org/eigen/eigen/get/3.2.4.tar.bz2" | tar -xj; \
+		${WGET} -O - "http://bitbucket.org/eigen/eigen/get/3.2.4.tar.bz2" | ${TAR} -xj; \
 		mv eigen-eigen-10219c95fe65 eigen3;\
 	fi
 
@@ -312,22 +315,30 @@ roboptim-core-3.1.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | tar -xj; \
+		${WGET} -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | ${TAR} -xj; \
 	fi
 
 roboptim-trajectory-3.1.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-	        wget -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | tar -xj; \
+	  ${WGET} -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | ${TAR} -xj; \
 	fi
 
-doxygen-Release_1_8_10.checkout:
+doxygen-1.8.10.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget -O - "https://github.com/doxygen/doxygen/archive/Release_1_8_10.tar.gz" | tar -xz;\
+	  ${WGET} -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | ${TAR} -xz;\
 	fi
+
+doxygen-1.8.10.configure: doxygen-1.8.10.configure.dep
+	@ :
+
+doxygen-1.8.10.install: doxygen-1.8.10.configure
+	cd ${SRC_DIR}/doxygen-1.8.10;\
+  mkdir -p ${DEVEL_DIR}/install/bin;\
+  install --mode=755 -t ${DEVEL_DIR}/install/bin bin/doxygen
 
 hrp2.configure: hrp2.configure.dep
 	. ${INSTALL_DIR}/setup.sh; \

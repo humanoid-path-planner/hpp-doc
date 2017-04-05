@@ -12,7 +12,7 @@ APT_BUILD_DEP=""
 
 MAKE_TARBALL=false
 
-BRANCH=master
+BRANCH=devel
 if [ -z ${DEVEL_DIR} ]; then
   export DEVEL_DIR=/local/devel/hpp
 fi
