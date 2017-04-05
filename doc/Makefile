@@ -150,7 +150,7 @@ hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 hpp-statistics.configure.dep: hpp-statistics.checkout
-hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
+hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install hpp-model-urdf.install \
 	hpp-core.checkout
 qpOASES.configure.dep: qpOASES.checkout
 hpp-constraints.configure.dep: qpOASES.install hpp-model.install hpp-constraints.checkout
