@@ -14,5 +14,5 @@ For more information about the software, please
 visit the [HPP website](https://humanoid-path-planner.github.io/hpp-doc).
 
 For installation instructions, visit
-the [HPP website](https://humanoid-path-planner.github.io/hpp-doc)
+the [HPP website](https://humanoid-path-planner.github.io/hpp-doc/download.html?branch=topic/pinocchio)
 or [these instructions](doc/instructions.md).

@@ -23,13 +23,13 @@ hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
-hpp-util_branch=master
+hpp-util_branch=devel
 hpp-util_repository=${HPP_REPO}
 
-hpp-model_branch=master
+hpp-model_branch=xxx
 hpp-model_repository=${HPP_REPO}
 
-pinocchio_branch=master
+pinocchio_branch=devel
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -39,40 +39,40 @@ hpp-pinocchio_repository=${HPP_REPO}
 hpp-model-urdf_branch=xxx
 hpp-model-urdf_repository=${HPP_REPO}
 
-hpp-statistics_branch=master
+hpp-statistics_branch=devel
 hpp-statistics_repository=${HPP_REPO}
 
-hpp-core_branch=master
+hpp-core_branch=devel
 hpp-core_repository=${HPP_REPO}
 
-hpp-template-corba_branch=master
+hpp-template-corba_branch=devel
 hpp-template-corba_repository=${LAAS_REPO}
 
-hpp-corbaserver_branch=master
+hpp-corbaserver_branch=devel
 hpp-corbaserver_repository=${HPP_REPO}
 
-qpOASES_branch=master
+qpOASES_branch=devel
 qpOASES_repository=${HPP_REPO}
 
-hpp-constraints_branch=master
+hpp-constraints_branch=devel
 hpp-constraints_repository=${HPP_REPO}
 
-hpp-walkgen_branch=master
+hpp-walkgen_branch=devel
 hpp-walkgen_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=master
+hpp-wholebody-step_branch=devel
 hpp-wholebody-step_repository=${HPP_REPO}
 
-hpp-wholebody-step-corba_branch=master
+hpp-wholebody-step-corba_branch=devel
 hpp-wholebody-step-corba_repository=${HPP_REPO}
 
-test-hpp_branch=master
+test-hpp_branch=devel
 test-hpp_repository=${HPP_REPO}
 
 hrp2_branch=groovy
 hrp2_repository=${JRL_REPO}
 
-hpp-hrp2_branch=master
+hpp-hrp2_branch=devel
 hpp-hrp2_repository=${HPP_REPO}
 
 robot_capsule_urdf_branch=groovy
@@ -81,26 +81,25 @@ robot_capsule_urdf_repository=${LAAS_REPO}
 robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
-hpp-doc_branch=master
+hpp-doc_branch=devel
 hpp-doc_repository=${HPP_REPO}
 
-hpp-manipulation_branch=master
+hpp-manipulation_branch=devel
 hpp-manipulation_repository=${HPP_REPO}
 
-
-hpp-manipulation-urdf_branch=master
+hpp-manipulation-urdf_branch=devel
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
-hpp-manipulation-corba_branch=master
+hpp-manipulation-corba_branch=devel
 hpp-manipulation-corba_repository=${HPP_REPO}
 
 robot_state_chain_publisher_branch=master
 robot_state_chain_publisher_repository=${HPP_REPO}
 
-iai_maps_branch=master
+iai_maps_branch=devel
 iai_maps_repository=${HPP_REPO}
 
-hpp_tutorial_branch=master
+hpp_tutorial_branch=devel
 hpp_tutorial_repository=${HPP_REPO}
 
 hpp_benchmark_branch=master
@@ -112,22 +111,26 @@ collada-dom_repository=${HPP_REPO}
 OpenSceneGraph-dae-plugin_branch=master
 OpenSceneGraph-dae-plugin_repository=${HPP_REPO}
 
-gepetto-viewer_branch=master
+gepetto-viewer_branch=devel
 gepetto-viewer_repository=${HPP_REPO}
 
-gepetto-viewer-corba_branch=master
+gepetto-viewer-corba_branch=devel
 gepetto-viewer-corba_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=master
+hpp-gepetto-viewer_branch=devel
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-qgv_branch=master
+pythonqt_branch=patched-5
+pythonqt_repository=${HPP_REPO}
+pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
+
+qgv_branch=devel
 qgv_repository=${HPP_REPO}
 
-hpp-environments_branch=master
+hpp-environments_branch=devel
 hpp-environments_repository=${HPP_REPO}
 
-hpp-baxter_branch=master
+hpp-baxter_branch=devel
 hpp-baxter_repository=${HPP_REPO}
 
 OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
@@ -171,7 +174,7 @@ hpp-constraints.configure.dep: qpOASES.install \
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
-	hpp-wholebody-step.install hpp-manipulation.checkout
+	hpp-manipulation.checkout
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-core.install \
@@ -206,8 +209,8 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
-qgv.configure.dep: qgv.checkout
 hpp-baxter.configure.dep: hpp-corbaserver.install hpp-baxter.checkout
+pythonqt.configure.dep: pythonqt.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \

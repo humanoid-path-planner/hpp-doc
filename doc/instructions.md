@@ -55,8 +55,8 @@ sudo apt-get install autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-de
   4. Copy Config and Makefile
 
     ```bash
-wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config.sh
-wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile
+wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/config.sh
+wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/Makefile
     ```
 
   5. cd into `$DEVEL_DIR` and type
