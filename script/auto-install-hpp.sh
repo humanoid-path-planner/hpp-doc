@@ -82,8 +82,7 @@ cd $DEVEL_DIR/src
 
 make -e robot_state_chain_publisher.install
 source ../config.sh
-make -e doxygen-1.8.10.install
-make -e hpp-manipulation-corba.install all
+make -e -s -j4 all
 
 if [ ${MAKE_TARBALL} = true ]; then
   cd $DEVEL_DIR/
