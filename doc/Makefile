@@ -129,7 +129,7 @@ roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
-all: doxygen-Release_1_8_10.install hpp_tutorial.install \
+all: doxygen-1.8.10.install hpp_tutorial.install \
 	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
@@ -138,6 +138,7 @@ hrp2: test-hpp.install
 
 hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
+doxygen-1.8.10.configure.dep: doxygen-1.8.10.checkout
 doxygen-Release_1_8_10.configure.dep: doxygen-Release_1_8_10.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
 roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
@@ -156,7 +157,7 @@ hpp-constraints.configure.dep: qpOASES.install hpp-model.install hpp-constraints
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
-	hpp-wholebody-step.install hpp-manipulation.checkout
+	hpp-manipulation.checkout
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-model-urdf.install hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-model-urdf.install hpp-core.install \
@@ -305,6 +306,20 @@ roboptim-trajectory-3.1.checkout:
 	else \
 	        wget -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | tar -xj; \
 	fi
+
+doxygen-1.8.10.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+	  wget -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | tar -xz;\
+	fi
+
+doxygen-1.8.10.configure: doxygen-1.8.10.configure.dep
+	@ :
+
+doxygen-1.8.10.install: doxygen-1.8.10.configure
+	cd ${SRC_DIR}/doxygen-1.8.10;\
+  cp bin/doxygen ${DEVEL_DIR}/install/bin
 
 doxygen-Release_1_8_10.checkout:
 	if [ -d $(@:.checkout=) ]; then \
