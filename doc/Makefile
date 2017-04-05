@@ -16,6 +16,11 @@ else
   BUILD_FOLDER=build-rel
 endif
 
+WGET=wget --quiet
+UNZIP=unzip -qq
+TAR=tar
+GIT_QUIET=--quiet
+
 hpp-fcl_branch=master
 hpp-fcl_repository=${HPP_REPO}
 
@@ -131,7 +136,7 @@ roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 all: doxygen-1.8.10.install hpp_tutorial.install \
-	hpp-gepetto-viewer.install
+	hpp-manipulation-corba.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
@@ -150,7 +155,7 @@ hpp-util.configure.dep: hpp-util.checkout
 hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
 	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
-hpp-statistics.configure.dep: hpp-statistics.checkout
+hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install hpp-model-urdf.install \
 	hpp-core.checkout
 qpOASES.configure.dep: qpOASES.checkout
@@ -228,7 +233,7 @@ update:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		git clone --recursive -b ${$(@:.checkout=)_branch} ${$(@:.checkout=)_repository}/$(@:.checkout=); \
+		git clone ${GIT_QUIET} --recursive -b ${$(@:.checkout=)_branch} ${$(@:.checkout=)_repository}/$(@:.checkout=); \
 	fi \
 
 %.update:
@@ -249,15 +254,15 @@ update:
 
 %.install:%.configure
 	cd ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER};\
-	make install
+	${MAKE} install
 
 %.uninstall:
 	cd ${SRC_DIR}/$(@:.uninstall=)/${BUILD_FOLDER};\
-	make uninstall
+	${MAKE} uninstall
 
 %.clean:
 	cd ${SRC_DIR}/$(@:.clean=)/${BUILD_FOLDER};\
-	make clean
+	${MAKE} clean
 
 %.very-clean:
 	rm -rf ${SRC_DIR}/$(@:.very-clean=)/${BUILD_FOLDER}/*
@@ -284,7 +289,7 @@ eigen3.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget -O - "http://bitbucket.org/eigen/eigen/get/3.2.4.tar.bz2" | tar -xj; \
+		${WGET} -O - "http://bitbucket.org/eigen/eigen/get/3.2.4.tar.bz2" | ${TAR} -xj; \
 		mv eigen-eigen-10219c95fe65 eigen3;\
 	fi
 
@@ -298,21 +303,21 @@ roboptim-core-3.1.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | tar -xj; \
+		${WGET} -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | ${TAR} -xj; \
 	fi
 
 roboptim-trajectory-3.1.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-	        wget -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | tar -xj; \
+	        ${WGET} -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | ${TAR} -xj; \
 	fi
 
 doxygen-1.8.10.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-	  wget -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | tar -xz;\
+	  ${WGET} -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | ${TAR} -xz;\
 	fi
 
 doxygen-1.8.10.configure: doxygen-1.8.10.configure.dep
@@ -320,13 +325,14 @@ doxygen-1.8.10.configure: doxygen-1.8.10.configure.dep
 
 doxygen-1.8.10.install: doxygen-1.8.10.configure
 	cd ${SRC_DIR}/doxygen-1.8.10;\
-  cp bin/doxygen ${DEVEL_DIR}/install/bin
+  mkdir -p ${DEVEL_DIR}/install/bin;\
+  install --mode=755 -t ${DEVEL_DIR}/install/bin bin/doxygen
 
 doxygen-Release_1_8_10.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget -O - "https://github.com/doxygen/doxygen/archive/Release_1_8_10.tar.gz" | tar -xz;\
+		${WGET} -O - "https://github.com/doxygen/doxygen/archive/Release_1_8_10.tar.gz" | ${TAR} -xz;\
 	fi
 
 hrp2.configure: hrp2.configure.dep
@@ -338,7 +344,7 @@ hrp2.configure: hrp2.configure.dep
 
 hrp2.install: hrp2.configure
 	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER};\
-	make install
+	${MAKE} install
 
 robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
@@ -352,15 +358,15 @@ robot_model_py.configure: robot_model_py.configure.dep
 
 robot_model_py.install: robot_model_py.configure
 	cd ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER}; \
-	make install; \
+	${MAKE} install; \
 	cd ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER}; \
-	make install;
+	${MAKE} install;
 
 OpenSceneGraph-3.4.0.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		wget http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
-		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
+		${WGET} http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
+		cd ${SRC_DIR}; ${UNZIP} OpenSceneGraph-3.4.0.zip;\
 		rm -f OpenSceneGraph-3.4.0.zip;\
 	fi
