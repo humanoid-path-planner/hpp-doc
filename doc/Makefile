@@ -256,8 +256,8 @@ update:
 	git branch -D bce46g;\
 	git submodule update
 
-%.configure:%.configure.dep %.confthis
-	: # Do nothing else
+%.configure: %.configure.dep
+	${MAKE} $(@:.configure=).confthis
 
 %.confthis:%.checkout
 	mkdir -p ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
