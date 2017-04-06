@@ -91,6 +91,7 @@ hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=devel
 hpp-manipulation_repository=${HPP_REPO}
+hpp-manipulation_extra_flags= -DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=OFF
 
 hpp-manipulation-urdf_branch=devel
 hpp-manipulation-urdf_repository=${HPP_REPO}
