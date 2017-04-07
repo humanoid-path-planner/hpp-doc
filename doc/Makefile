@@ -129,7 +129,7 @@ hpp-rbprm_branch=master
 hpp-rbprm_repository=${HPP_REPO}
 
 hpp-rbprm-robot-data_branch=master
-hpp-rbprm-robot-data_repository=https://github.com/stonneau
+hpp-rbprm-robot-data_repository=${HPP_REPO}
 
 hpp-rbprm-corba_branch=master
 hpp-rbprm-corba_repository=${HPP_REPO}
