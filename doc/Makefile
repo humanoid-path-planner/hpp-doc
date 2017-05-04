@@ -38,7 +38,7 @@ pinocchio_branch=devel
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
-hpp-pinocchio_branch=master
+hpp-pinocchio_branch=devel
 hpp-pinocchio_repository=${HPP_REPO}
 
 hpp-model-urdf_branch=xxx
@@ -141,9 +141,9 @@ hpp-baxter_repository=${HPP_REPO}
 
 OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
 
-roboptim-core-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
+roboptim-core-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
 
-roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
+roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
 
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
