@@ -211,9 +211,11 @@ update:
 	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \ -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.confthis=)_extra_flags} ..
 
 %.install:%.configure
+	${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER}; \
 	${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install
 
 %.instthis:%.confthis
+	${MAKE} -C ${SRC_DIR}/$(@:.instthis=)/${BUILD_FOLDER}; \
 	${MAKE} -C ${SRC_DIR}/$(@:.instthis=)/${BUILD_FOLDER} install
 
 %.uninstall:
