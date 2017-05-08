@@ -5,8 +5,4 @@ export PYTHONPATH=$DEVEL_DIR/install/lib/python2.7/site-packages:$DEVEL_DIR/inst
 
 export LD_LIBRARY_PATH=$DEVEL_DIR/install/lib:/opt/ros/indigo/lib:$LD_LIBRARY_PATH
 
-if [ -f $DEVEL_DIR/install/setup.bash ]; then
-    source $DEVEL_DIR/install/setup.bash
-else
-    source /opt/ros/indigo/setup.bash
-fi
+export ROS_PACKAGE_PATH=$DEVEL_DIR/install/share

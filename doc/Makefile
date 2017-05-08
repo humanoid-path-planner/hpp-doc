@@ -19,195 +19,147 @@ else
   BUILD_FOLDER=build-rel
 endif
 
-hpp-fcl_branch=devel
+hpp-fcl_branch=isae-2017
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
-hpp-util_branch=master
+hpp-util_branch=isae-2017
 hpp-util_repository=${HPP_REPO}
 
-hpp-model_branch=master
-hpp-model_repository=${HPP_REPO}
-
-pinocchio_branch=master
+pinocchio_branch=isae-2017
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
-hpp-pinocchio_branch=master
+hpp-pinocchio_branch=isae-2017
 hpp-pinocchio_repository=${HPP_REPO}
 
-hpp-model-urdf_branch=xxx
-hpp-model-urdf_repository=${HPP_REPO}
-
-hpp-statistics_branch=master
+hpp-statistics_branch=isae-2017
 hpp-statistics_repository=${HPP_REPO}
 
-hpp-core_branch=master
+hpp-core_branch=isae-2017
 hpp-core_repository=${HPP_REPO}
 
-hpp-template-corba_branch=master
+hpp-template-corba_branch=isae-2017
 hpp-template-corba_repository=${LAAS_REPO}
 
-hpp-corbaserver_branch=master
+hpp-corbaserver_branch=isae-2017
 hpp-corbaserver_repository=${HPP_REPO}
 
-qpOASES_branch=master
+qpOASES_branch=isae-2017
 qpOASES_repository=${HPP_REPO}
 
-hpp-constraints_branch=master
+hpp-constraints_branch=isae-2017
 hpp-constraints_repository=${HPP_REPO}
 
-hpp-walkgen_branch=master
-hpp-walkgen_repository=${HPP_REPO}
-
-hpp-wholebody-step_branch=master
-hpp-wholebody-step_repository=${HPP_REPO}
-
-hpp-wholebody-step-corba_branch=master
-hpp-wholebody-step-corba_repository=${HPP_REPO}
-
-test-hpp_branch=master
-test-hpp_repository=${HPP_REPO}
-
-hrp2_branch=groovy
-hrp2_repository=${JRL_REPO}
-
-hpp-hrp2_branch=master
-hpp-hrp2_repository=${HPP_REPO}
-
-robot_capsule_urdf_branch=groovy
-robot_capsule_urdf_repository=${LAAS_REPO}
-
-robot_model_py_branch=groovy
-robot_model_py_repository=${LAAS_REPO}
-
-hpp-doc_branch=master
+hpp-doc_branch=isae-2017
 hpp-doc_repository=${HPP_REPO}
 
-hpp-manipulation_branch=master
+hpp-manipulation_branch=isae-2017
 hpp-manipulation_repository=${HPP_REPO}
 
 
-hpp-manipulation-urdf_branch=master
+hpp-manipulation-urdf_branch=isae-2017
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
-hpp-manipulation-corba_branch=master
+hpp-manipulation-corba_branch=isae-2017
 hpp-manipulation-corba_repository=${HPP_REPO}
 
-robot_state_chain_publisher_branch=master
-robot_state_chain_publisher_repository=${HPP_REPO}
+urdfdom_headers_branch=isae-2017
+urdfdom_headers_repository=${HPP_REPO}
 
-iai_maps_branch=master
-iai_maps_repository=${HPP_REPO}
+urdfdom_branch=isae-2017
+urdfdom_repository=${HPP_REPO}
+urdfdom_extra_flags=-DCMAKE_INSTALL_LIBDIR=lib
 
-hpp_tutorial_branch=master
-hpp_tutorial_repository=${HPP_REPO}
+resource_retriever_branch=isae-2017
+resource_retriever_repository=${HPP_REPO}
+resource_retriever_extra_flags=-DCMAKE_INSTALL_LIBDIR=lib
 
-hpp_benchmark_branch=master
-hpp_benchmark_repository=${HPP_REPO}
+urdf_branch=isae-2017
+urdf_repository=${HPP_REPO}
+urdf_extra_flags=-DCMAKE_INSTALL_LIBDIR=lib
 
-collada-dom_branch=master
+ros-compat_branch=isae-2017
+ros-compat_repository=${HPP_REPO}
+ros-compat_extra_flags=-DCMAKE_INSTALL_LIBDIR=lib
+
+collada-dom_branch=isae-2017
 collada-dom_repository=${HPP_REPO}
 
-OpenSceneGraph-dae-plugin_branch=master
-OpenSceneGraph-dae-plugin_repository=${HPP_REPO}
-
-gepetto-viewer_branch=master
+gepetto-viewer_branch=isae-2017
 gepetto-viewer_repository=${HPP_REPO}
 
-gepetto-viewer-corba_branch=master
+gepetto-viewer-corba_branch=isae-2017
 gepetto-viewer-corba_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=master
+hpp-gepetto-viewer_branch=isae-2017
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-qgv_branch=master
-qgv_repository=${HPP_REPO}
+hpp-practicals_branch=isae-2017
+hpp-practicals_repository=${HPP_REPO}
 
-hpp-environments_branch=master
-hpp-environments_repository=${HPP_REPO}
-
-hpp-baxter_branch=master
-hpp-baxter_repository=${HPP_REPO}
-
-OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
-
+collada-dom_extra_flags=-DBUILD_SHARED_LIBS=YES -DOPT_COLLADA15=OFF
+OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${DEVEL_DIR}/install/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${DEVEL_DIR}/install/include/collada-dom -DLIB_POSTFIX=""
 doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
-
-roboptim-core-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
-
-roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release
-
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
+assimp-3.3.1_extra_flags= -DCMAKE_DEBUG_POSTFIX=""
+hpp-manipulation_extra_flags= -DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
+hpp-manipulation-corba_extra_flags= -DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
 
-all: doxygen-Release_1_8_10.install hpp_tutorial.install \
-	hpp-manipulation-corba.install 	hpp-gepetto-viewer.install
+all: doxygen-Release_1_8_10.install hpp-practicals.install \
+	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
 hrp2: test-hpp.install
 
-hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
+hpp-fcl.configure.dep: eigen3.install assimp-3.3.1.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
 doxygen-Release_1_8_10.configure.dep: doxygen-Release_1_8_10.checkout
-roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
-roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
-	roboptim-trajectory-3.1.checkout
-hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
-        roboptim-trajectory-3.1.install hpp-walkgen.checkout
 hpp-util.configure.dep: hpp-util.checkout
-hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
-	eigen3.install hpp-model.checkout
-hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
-pinocchio.configure.dep: eigen3.install hpp-fcl.install pinocchio.checkout
+pinocchio.configure.dep: eigen3.install hpp-fcl.install urdfdom.install \
+	pinocchio.checkout
 hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
-	hpp-pinocchio.checkout
+	resource_retriever.install hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
 qpOASES.configure.dep: qpOASES.checkout
 hpp-constraints.configure.dep: qpOASES.install \
 	hpp-pinocchio.install hpp-constraints.checkout
-hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
-	hpp-wholebody-step.checkout
+urdfdom_headers.configure.dep: ros-compat.install urdfdom_headers.checkout
+urdfdom.configure.dep:urdfdom_headers.install urdfdom.checkout
+resource_retriever.configure.dep: urdfdom.install resource_retriever.checkout
+urdf.configure.dep: urdfdom.install urdfdom_headers.install urdf.checkout
+ros-compat.configure.dep: ros-compat.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
-	hpp-wholebody-step.install hpp-manipulation.checkout
+	hpp-manipulation.checkout
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-core.install \
-	hpp-constraints.install hpp-corbaserver.checkout
-hpp-wholebody-step-corba.configure.dep: hpp-corbaserver.install \
-	hpp-wholebody-step.install hpp-template-corba.install \
-	hpp-wholebody-step-corba.checkout
+	hpp-constraints.install omniORBpy-4.2.1.install \
+	hpp-corbaserver.checkout
+hpp-practicals.configure.dep: hpp-manipulation-corba.install \
+	hpp-practicals.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-wholebody-step-corba.install hpp-manipulation.install \
-	hpp-manipulation-corba.checkout
-robot_model_py.configure.dep: robot_model_py.checkout
-robot_capsule_urdf.configure.dep: robot_model_py.install \
-	robot_capsule_urdf.checkout
-hpp-hrp2.configure.dep: hrp2.install hpp-corbaserver.install hpp-hrp2.checkout
-hrp2.configure.dep: robot_capsule_urdf.install robot_model_py.install \
-	hrp2.checkout
-test-hpp.configure.dep: hpp-wholebody-step-corba.install \
-	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
-robot_state_chain_publisher.configure.dep: robot_state_chain_publisher.checkout
-iai_maps.configure.dep: robot_state_chain_publisher.install iai_maps.checkout
-hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
-	hpp-corbaserver.install hpp_tutorial.checkout
-hpp_benchmark.configure.dep: hpp_benchmark.checkout
+	hpp-manipulation.install  hpp-corbaserver.install \
+	hpp-template-corba.install hpp-manipulation-corba.checkout
 collada-dom.configure.dep: collada-dom.checkout
-OpenSceneGraph-dae-plugin.configure.dep: collada-dom.install \
-	OpenSceneGraph-dae-plugin.checkout
-gepetto-viewer.configure.dep: OpenSceneGraph-dae-plugin.install \
+OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
+	OpenSceneGraph-3.4.0.checkout
+gepetto-viewer.configure.dep: OpenSceneGraph-3.4.0.install  urdfdom.install\
 	gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
-	gepetto-viewer-corba.checkout
+	omniORBpy-4.2.1.install gepetto-viewer-corba.checkout
+omniORBpy-4.2.1.configure.dep: omniORB-4.2.1.install omniORBpy-4.2.1.checkout
+omniORB-4.2.1.configure.dep: omniORB-4.2.1.checkout
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
-qgv.configure.dep: qgv.checkout
 hpp-baxter.configure.dep: hpp-corbaserver.install hpp-baxter.checkout
+assimp-3.3.1.configure.dep: assimp-3.3.1.checkout
+hpp-doc.configure.dep: hpp-doc.checkout
 
 status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
@@ -228,7 +180,7 @@ log:
 	done
 
 update:
-	for d in hpp-util hpp-pinocchio hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp-doc ; do \
+	for d in hpp-util hpp-pinocchio hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-doc ; do \
 	echo "Updating $$d";\
 	${MAKE} $$d.update; done
 
@@ -284,11 +236,11 @@ update:
 	fi
 
 
-hpp-doc.configure: hpp-doc.checkout
-	cd ${SRC_DIR}/$(@:.configure=);\
+hpp-doc.confthis: hpp-doc.checkout
+	cd ${SRC_DIR}/$(@:.confthis=);\
 	./bootstrap;\
 	mkdir -p ${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
 	../configure --prefix=${INSTALL_DIR}
 
 eigen3.checkout:
@@ -299,25 +251,11 @@ eigen3.checkout:
 		mv eigen-eigen-10219c95fe65 eigen3;\
 	fi
 
-eigen3.configure: eigen3.configure.dep
+eigen3.confthis: eigen3.checkout
 	cd ${SRC_DIR}/eigen3;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/eigen3/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${INSTALL_DIR}/lib ..
-
-roboptim-core-3.1.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-		wget -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | tar -xj; \
-	fi
-
-roboptim-trajectory-3.1.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-	        wget -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | tar -xj; \
-	fi
 
 doxygen-Release_1_8_10.checkout:
 	if [ -d $(@:.checkout=) ]; then \
@@ -326,26 +264,64 @@ doxygen-Release_1_8_10.checkout:
 		wget -O - "https://github.com/doxygen/doxygen/archive/Release_1_8_10.tar.gz" | tar -xz;\
 	fi
 
-hrp2.configure: hrp2.configure.dep
-	. ${INSTALL_DIR}/setup.sh; \
-	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+OpenSceneGraph-3.4.0.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
+		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
+		rm -f OpenSceneGraph-3.4.0.zip;\
+	fi
 
-hrp2.install: hrp2.configure
-	${MAKE} -C ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER} install
+omniORB-4.2.1.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget http://downloads.sourceforge.net/sourceforge/omniorb/omniORB-4.2.1-2.tar.bz2;\
+		cd ${SRC_DIR}; bunzip2 omniORB-4.2.1-2.tar.bz2;\
+		cd ${SRC_DIR}; tar xf omniORB-4.2.1-2.tar;\
+		rm -f omniORB-4.2.1-2.tar;\
+		mkdir -p $(@:.checkout=)/include/omniORB4;\
+		ln -s /usr/include/omniORB4/internal $(@:.checkout=)/include/omniORB4/internal;\
+	fi
 
-robot_model_py.configure: robot_model_py.configure.dep
-	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
+omniORB-4.2.1.confthis: omniORB-4.2.1.checkout
+	cd ${SRC_DIR}/$(@:.confthis=);\
+	if [ ! -d ${INSTALL_DIR}/lib64 ]; then \
+		ln -s ${INSTALL_DIR}/lib ${INSTALL_DIR}/lib64;\
+	else \
+		echo "directory ${INSTALL_DIR}/lib64 already exists"; \
+	fi; \
 	mkdir -p ${BUILD_FOLDER}; \
-	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-	cd ${SRC_DIR}/$(@:.configure=)/urdf_parser_py;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	mkdir -p ${BUILD_FOLDER}/src/services/mklib/stublib/static; \
+	mkdir -p ${BUILD_FOLDER}/src/services/mklib/stublib/shared; \
+	mkdir -p ${BUILD_FOLDER}/src/services/mklib/dynstublib/static; \
+	mkdir -p ${BUILD_FOLDER}/src/services/mklib/dynstublib/shared; \
+	cd ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
+	../configure --prefix=${INSTALL_DIR}
 
-robot_model_py.install: robot_model_py.configure
-	${MAKE} -C ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER} install; \
-	${MAKE} -C ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER} install;
+omniORBpy-4.2.1.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget http://downloads.sourceforge.net/sourceforge/omniorb/omniORBpy-4.2.1-2.tar.bz2;\
+		cd ${SRC_DIR}; bunzip2 omniORBpy-4.2.1-2.tar.bz2;\
+		cd ${SRC_DIR}; tar xf omniORBpy-4.2.1-2.tar;\
+		rm -f omniORBpy-4.2.1-2.tar;\
+	fi
+
+omniORBpy-4.2.1.confthis: omniORBpy-4.2.1.checkout \
+	omniORBpy-4.2.1.checkout
+	cd ${SRC_DIR}/$(@:.confthis=);\
+	mkdir -p ${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
+	../configure --prefix=${INSTALL_DIR} --libdir=${INSTALL_DIR}/lib
+
+assimp-3.3.1.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget https://github.com/assimp/assimp/archive/v3.3.1.tar.gz; \
+		cd ${SRC_DIR}; tar xzf v3.3.1.tar.gz; \
+		rm -f v3.3.1.tar.gz; \
+	fi
