@@ -1,49 +1,20 @@
-## Installation on ubuntu-14.04 64 bit with ros-indigo
+## Installation on centos 7
 
-To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the following steps:
+To install all the packages on centos 7, you should do the following steps:
 
-  1. install ROS-indigo: follow steps 1.1 to 1.3 of [the ROS installation website.](http://wiki.ros.org/indigo/Installation/Ubuntu).
-
-  2. install by apt-get
-    - autoconf
-    - g++
-    - cmake
-    - libboost-dev
-    - liburdfdom-dev
-    - libassimp-dev
-    - ros-indigo-xacro
-    - ros-indigo-kdl-parser
-    - ros-indigo-common-msgs
-    - ros-indigo-tf
-    - ros-indigo-tf-conversions
-    - ros-indigo-libccd
-    - ros-indigo-octomap
-    - ros-indigo-resource-retriever
-    - ros-indigo-urdfdom-py
-    - ros-indigo-srdfdom
-    - ros-indigo-pr2-robot
-    - flex
-    - bison
-    - asciidoc
-    - source-highlight
-    - git
-    - libomniorb4-dev
-    - omniorb-nameserver
-    - omniidl
-    - omniidl-python
-    - libltdl-dev
-    - python-matplotlib
-    - libtinyxml2-dev
-    - liblog4cxx10-dev
-    - libltdl-dev
-    - qt4-dev-tools
-    - libqt4-opengl-dev
-    - libqtgui4
-    - oxygen-icon-theme
-    - libopenscenegraph-dev
+  1. install by yum the following packages
 
     ```bash
-sudo apt-get install autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-robot flex bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python libltdl-dev python-matplotlib libtinyxml2-dev liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 oxygen-icon-theme libopenscenegraph-dev
+sudo yum install boost-devel.x86_64 autoconf.noarch cmake-gui.x86_64 flex.x86_64 bison.x86_64 asciidoc.noarch source-highlight.x86_64 git.x86_64 python-devel.x86_64 libxml2-devel libXrandr-devel freeglut mesa-libGLU-devel avahi-qt4-devel libcurl-devel numpy
+    ```
+
+  2. download and install the following binay packages
+
+    ```bash
+  wget http://dl.fedoraproject.org/pub/epel/7/x86_64/t/tinyxml-2.6.2-3.el7.x86_64.rpm
+  wget http://dl.fedoraproject.org/pub/epel/7/x86_64/t/tinyxml-devel-2.6.2-3.el7.x86_64.rpm
+  sudo yum install tinyxml-2.6.2-3.el7.x86_64.rpm
+  sudo yum install tinyxml-devel-2.6.2-3.el7.x86_64.rpm
     ```
 
   3. Choose a directory on you file system and define the environment
@@ -55,8 +26,8 @@ sudo apt-get install autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-de
   4. Copy Config and Makefile
 
     ```bash
-wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config.sh
-wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile
+wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/isae-2017/doc/config.sh
+wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/isae-2017/doc/Makefile
     ```
 
   5. cd into `$DEVEL_DIR` and type
