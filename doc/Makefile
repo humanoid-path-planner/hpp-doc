@@ -19,7 +19,7 @@ else
   BUILD_FOLDER=build-rel
 endif
 
-hpp-fcl_branch=devel
+hpp-fcl_branch=master
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
