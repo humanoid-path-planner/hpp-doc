@@ -26,14 +26,14 @@
   video:
     url: http://homepages.laas.fr/jmirabel/raw/videos/hrp2_standup.mp4
 
-- name: multicontact_hrp2_stairs
-  id: 5
-  title: Multi-contact locomotion - Stairs
-  description: "A sequence of contact configurations for a multiped robot is computed. Position constraint and static equilibrium constraint are used to create and maintain contacts along the sequence.
-    <br/>The motion is then executed on the HRP-2 robot."
-  video:
-    youtube_id: 2ELEpuPjGP4
-    youtube_extra: start=2m07&end2m55
+#- name: multicontact_hrp2_stairs
+#id: 5
+#title: Multi-contact locomotion - Stairs
+#description: "A sequence of contact configurations for a multiped robot is computed. Position constraint and static equilibrium constraint are used to create and maintain contacts along the sequence.
+#<br/>The motion is then executed on the HRP-2 robot."
+#video:
+#youtube_id: 01K_nmax9E0
+#youtube_extra: start=2m07&end=2m55
 
 - name: optimization
   id: 6
@@ -68,7 +68,7 @@
   title: HPP demonstration
   description: "Differents features that can be achieved using the Humanoid Path Planner"
   video:
-    url: http://homepages.laas.fr/jmirabel/article/iros16hpp/video.mp4
+    youtube_id: 01K_nmax9E0
 
 - name: hpp-manipulation-showcase
   id: 1
