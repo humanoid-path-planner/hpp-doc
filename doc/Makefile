@@ -95,6 +95,9 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=isae-2017
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
+qgv_branch=isae-2017
+qgv_repository=${HPP_REPO}
+
 hpp-practicals_branch=isae-2017
 hpp-practicals_repository=${HPP_REPO}
 
@@ -159,6 +162,8 @@ hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-gepetto-viewer.checkout
 hpp-baxter.configure.dep: hpp-corbaserver.install hpp-baxter.checkout
 assimp-3.3.1.configure.dep: assimp-3.3.1.checkout
+qgv.configure.dep: qgv.checkout
+hpp-plot.configure.dep: qgv.install hpp-plot.checkout
 hpp-doc.configure.dep: hpp-doc.checkout
 
 status:
@@ -326,4 +331,14 @@ assimp-3.3.1.checkout:
 		wget https://github.com/assimp/assimp/archive/v3.3.1.tar.gz; \
 		cd ${SRC_DIR}; tar xzf v3.3.1.tar.gz; \
 		rm -f v3.3.1.tar.gz; \
+		mkdir -p ${SRC_DIR}/$(@:.checkout=)/${BUILD_FOLDER}; \
 	fi
+
+hpp-plot.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		cd ${SRC_DIR}; tar xzf hpp-plot-0.1.0.tar.gz; \
+		mv ${SRC_DIR}/hpp-plot-0.1.0 ${SRC_DIR}/hpp-plot; \
+	fi
+

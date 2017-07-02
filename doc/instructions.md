@@ -5,7 +5,7 @@ To install all the packages on centos 7, you should do the following steps:
   1. install by yum the following packages
 
     ```bash
-sudo yum install boost-devel.x86_64 autoconf.noarch cmake-gui.x86_64 flex.x86_64 bison.x86_64 asciidoc.noarch source-highlight.x86_64 git.x86_64 python-devel.x86_64 libxml2-devel libXrandr-devel freeglut mesa-libGLU-devel avahi-qt4-devel libcurl-devel numpy
+sudo yum install boost-devel.x86_64 autoconf.noarch cmake-gui.x86_64 flex.x86_64 bison.x86_64 asciidoc.noarch source-highlight.x86_64 git.x86_64 python-devel.x86_64 libxml2-devel libXrandr-devel freeglut mesa-libGLU-devel avahi-qt4-devel libcurl-devel numpy graphviz-devel.x86_64
     ```
 
   2. download and install the following binay packages
