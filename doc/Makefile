@@ -12,7 +12,7 @@ SOT_REPO=https://github.com/stack-of-tasks
 SRC_DIR=${DEVEL_DIR}/src
 INSTALL_DIR=${DEVEL_DIR}/install
 
-BUILD_TYPE=Debug
+BUILD_TYPE=Release
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
 else
