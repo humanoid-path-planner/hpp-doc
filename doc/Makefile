@@ -197,8 +197,19 @@ hpp-constraints.configure.dep: qpOASES.install \
 	hpp-pinocchio.install hpp-statistics.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
+ifeq (${HUMANOID}, TRUE)
+hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
+	hpp-wholebody-step.install hpp-manipulation.checkout
+hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
+	hpp-wholebody-step-corba.install hpp-manipulation.install \
+	hpp-manipulation-corba.checkout
+else
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
+hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
+	hpp-manipulation.install \
+	hpp-manipulation-corba.checkout
+endif
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-core.install \
@@ -209,15 +220,6 @@ hpp-wholebody-step-corba.configure.dep: hpp-corbaserver.install \
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
 qgv.configure.dep: qgv.checkout
 pythonqt.configure.dep: pythonqt.checkout
-ifeq (${HUMANOID}, TRUE)
-hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-wholebody-step-corba.install hpp-manipulation.install \
-	hpp-manipulation-corba.checkout
-else
-hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-manipulation.install \
-	hpp-manipulation-corba.checkout
-endif
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
