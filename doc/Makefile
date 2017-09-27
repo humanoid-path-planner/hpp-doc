@@ -119,16 +119,16 @@ hpp-plot_repository=${HPP_REPO}
 qgv_branch=devel
 qgv_repository=${HPP_REPO}
 
-hpp-affordance_branch=master
+hpp-affordance_branch=rbprm
 hpp-affordance_repository=${HPP_REPO}
 
-hpp-affordance-corba_branch=master
+hpp-affordance-corba_branch=rbprm
 hpp-affordance-corba_repository=${HPP_REPO}
 
-hpp-rbprm_branch=master
+hpp-rbprm_branch=rbprm
 hpp-rbprm_repository=${HPP_REPO}
 
-hpp-rbprm-corba_branch=master
+hpp-rbprm-corba_branch=rbprm
 hpp-rbprm-corba_repository=${HPP_REPO}
 
 robust-equilibrium-lib_branch=master
