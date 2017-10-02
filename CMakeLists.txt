@@ -65,7 +65,6 @@ FOREACH(PKG ${SETUP_DOC_PKG})
       SET(DOC_PREFIX ${${PREFIX}_PREFIX}/share/doc/${PKG}/doxygen-html)
     ENDIF(DEFINED ${PREFIX}_DOXYGENDOCDIR)
     STRING(REPLACE ${CMAKE_INSTALL_PREFIX}/share/doc .. DOC_PREFIX "${DOC_PREFIX}")
-    MESSAGE(STATUS ${DOC_PREFIX})
     IF (EXISTS ${DOC_PREFIX}/main.html)
       SET(${DOC_VAR}_LINK ${DOC_PREFIX}/main.html)
     ELSE (EXISTS ${DOC_PREFIX}/main.html)
@@ -98,7 +97,6 @@ ENDFOREACH(PKG ${SETUP_DOC_PKG})
 SET(EXTRA_HTML_FILES
   doc/corba.html
   doc/algorithm.html
-  doc/kpp-interface.html
   doc/gui.html
   doc/main.html
   doc/index.html
