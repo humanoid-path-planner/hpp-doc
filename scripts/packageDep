@@ -17,13 +17,18 @@ pathList = re.split(':', pkgConfigPath)
 usage = "usage: %prog [options] package-1 ... package-n"
 parser = OptionParser(version="packageDep 0.1", usage=usage)
 
-parser.add_option("-o", "--ouput", dest="filename",
+parser.add_option("-o", "--output", dest="filename",
                   help="write graph to FILE", metavar="FILE")
+parser.add_option("-q", "--quiet", action="store_true", dest="quiet", default=False,
+                  help="Do not print messages to stdout")
 
 (options, args) = parser.parse_args()
 
 if options.filename is None:
     parser.print_help()
+
+if options.quiet:
+    sys.stdout = open(os.devnull, 'w')
 
 packageList = args
 filename = options.filename
