@@ -1,0 +1,10 @@
+variables:
+    GIT_SSL_NO_VERIFY: "true"
+    GIT_SUBMODULE_STRATEGY: "recursive"
+
+build:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master:14.04
+    script:
+        - cd script
+        - ./auto-install-hpp.sh
+
