@@ -67,6 +67,7 @@ do
 done
 
 # standard HPP installation
+sudo apt-get update -qqy
 sudo apt-get --assume-yes install ${APT_DEP}
 sudo apt-get --assume-yes build-dep ${APT_BUILD_DEP}
 
