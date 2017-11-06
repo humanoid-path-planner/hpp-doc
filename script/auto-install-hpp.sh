@@ -3,7 +3,7 @@
 APT_DEP="autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
 ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs \
 ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap \
-ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-robot flex \
+ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-description flex \
 bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver \
 omniidl omniidl-python libltdl-dev python-matplotlib libtinyxml2-dev \
 liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev \
