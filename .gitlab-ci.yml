@@ -2,6 +2,6 @@ variables:
     GIT_SSL_NO_VERIFY: "true"
     GIT_SUBMODULE_STRATEGY: "recursive"
 
-build:
+master-14:
     image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:14.04
     script: /auto-install-hpp.sh
