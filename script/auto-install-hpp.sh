@@ -84,8 +84,8 @@ mkdir --parents $DEVEL_DIR/src
 mkdir --parents $DEVEL_DIR/install
 
 # Get config script
-wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config.sh
-wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/Makefile
+wget -q -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config.sh
+wget -q -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/Makefile
 
 source $DEVEL_DIR/config.sh
 
