@@ -14,6 +14,7 @@ libqtgui4 oxygen-icon-theme libopenscenegraph-dev"
 APT_BUILD_DEP=""
 
 MAKE_TARBALL=false
+TARGET=all
 
 BRANCH=devel
 if [ -z ${DEVEL_DIR} ]; then
@@ -36,11 +37,17 @@ do
       echo "${APT_BUILD_DEP}"
       exit 0
       ;;
+    --target)
+      shift
+      TARGET=$1
+      echo "Target set to $TARGET"
+      ;;
     --help)
       echo "Options are"
-      echo "--mktar:   \tmake tar balls after compilation"
-      echo "--show-dep:\tshow dependencies resolved by aptitude"
-      echo "-v:        \tshow variables and ask for confirm (must be last arg)"
+      echo "--mktar:          \tmake tar balls after compilation"
+      echo "--show-dep:       \tshow dependencies resolved by aptitude"
+      echo "--target TARGET:  \tinstall TARGET (default: all)"
+      echo "-v:               \tshow variables and ask for confirm (must be last arg)"
       exit 0
       ;;
     -v)
@@ -86,8 +93,7 @@ cd $DEVEL_DIR/src
 
 make -e robot_state_chain_publisher.install
 source ../config.sh
-make -e doxygen-1.8.10.install
-make -e all
+make -e $TARGET
 
 if [ ${MAKE_TARBALL} = true ]; then
   cd $DEVEL_DIR/

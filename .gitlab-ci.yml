@@ -3,6 +3,5 @@ variables:
     GIT_SUBMODULE_STRATEGY: "recursive"
 
 build:
-    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master:14.04
-    script: ./script/auto-install-hpp.sh
-
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:14.04
+    script: /auto-install-hpp.sh
