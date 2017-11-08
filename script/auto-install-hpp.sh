@@ -91,9 +91,9 @@ source $DEVEL_DIR/config.sh
 
 cd $DEVEL_DIR/src
 
-make -e robot_state_chain_publisher.install
+make -s -e robot_state_chain_publisher.install
 source ../config.sh
-make -e $TARGET
+make -s -e $TARGET
 
 if [ ${MAKE_TARBALL} = true ]; then
   cd $DEVEL_DIR/
