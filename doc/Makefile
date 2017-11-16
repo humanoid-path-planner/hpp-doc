@@ -151,7 +151,7 @@ hpp-baxter_repository=${HPP_REPO}
 
 OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
 
-doxygen-Release_1_8_10_extra_flags= -DCMAKE_BUILD_TYPE=Release
+collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
 
 roboptim-core-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
 
@@ -167,7 +167,7 @@ else
   hpp-manipulation-corba_extra_flags-DHPP_MANIPULATION_HAS_WHOLEBODY=FALSE
 endif
 
-all: doxygen-1.8.10.install hpp_tutorial.install \
+all: hpp_tutorial.install \
 	hpp-manipulation-corba.install 	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
@@ -176,7 +176,6 @@ hrp2: test-hpp.install
 
 hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
-doxygen-1.8.10.configure.dep: doxygen-1.8.10.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
 roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
 	roboptim-trajectory-3.1.checkout
@@ -363,21 +362,6 @@ roboptim-trajectory-3.1.checkout:
 	else \
 	  ${WGET} -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | ${TAR} -xj; \
 	fi
-
-doxygen-1.8.10.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-	  ${WGET} -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | ${TAR} -xz;\
-	fi
-
-doxygen-1.8.10.configure: doxygen-1.8.10.configure.dep
-	@ :
-
-doxygen-1.8.10.install: doxygen-1.8.10.configure
-	cd ${SRC_DIR}/doxygen-1.8.10;\
-  mkdir -p ${DEVEL_DIR}/install/bin;\
-  install --mode=755 -t ${DEVEL_DIR}/install/bin bin/doxygen
 
 hrp2.configure: hrp2.configure.dep
 	. ${INSTALL_DIR}/setup.sh; \
