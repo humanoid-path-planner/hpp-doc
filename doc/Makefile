@@ -12,7 +12,10 @@ SOT_REPO=https://github.com/stack-of-tasks
 SRC_DIR=${DEVEL_DIR}/src
 INSTALL_DIR=${DEVEL_DIR}/install
 
-BUILD_TYPE=Debug
+# Whether to compute humanoid specific part
+HUMANOID=TRUE
+
+BUILD_TYPE=Release
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
 else
@@ -49,6 +52,7 @@ hpp-statistics_repository=${HPP_REPO}
 
 hpp-core_branch=devel
 hpp-core_repository=${HPP_REPO}
+hpp-core_extra_flags=-DRUN_TESTS=FALSE
 
 hpp-template-corba_branch=devel
 hpp-template-corba_repository=${LAAS_REPO}
@@ -91,7 +95,6 @@ hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=devel
 hpp-manipulation_repository=${HPP_REPO}
-hpp-manipulation_extra_flags= -DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=OFF
 
 hpp-manipulation-urdf_branch=devel
 hpp-manipulation-urdf_repository=${HPP_REPO}
@@ -136,10 +139,18 @@ qgv_repository=${HPP_REPO}
 hpp-environments_branch=devel
 hpp-environments_repository=${HPP_REPO}
 
-hpp-baxter_branch=devel
+universal_robot_branch=indigo-devel
+universal_robot_repository=${HPP_REPO}
+
+hpp_universal_robot_branch=devel
+hpp_universal_robot_repository=${FLORENT_REPO}
+
+hpp-baxter_branch=master
 hpp-baxter_repository=${HPP_REPO}
 
 OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
+
+collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
 
 roboptim-core-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
 
@@ -147,7 +158,15 @@ roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WE
 
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
-all: doxygen-1.8.10.install hpp_tutorial.install \
+ifeq (${HUMANOID}, TRUE)
+  hpp-manipulation_extra_flags= -DHPP_MANIPULATION_HAS_WHOLEBODY=TRUE
+  hpp-manipulation-corba_extra_flags-DHPP_MANIPULATION_HAS_WHOLEBODY=TRUE
+else
+  hpp-manipulation_extra_flags= -DHPP_MANIPULATION_HAS_WHOLEBODY=FALSE
+  hpp-manipulation-corba_extra_flags-DHPP_MANIPULATION_HAS_WHOLEBODY=FALSE
+endif
+
+all: hpp_tutorial.install \
 	hpp-manipulation-corba.install 	hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
@@ -156,7 +175,6 @@ hrp2: test-hpp.install
 
 hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
-doxygen-1.8.10.configure.dep: doxygen-1.8.10.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
 roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
 	roboptim-trajectory-3.1.checkout
@@ -174,11 +192,22 @@ hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
 qpOASES.configure.dep: qpOASES.checkout
 hpp-constraints.configure.dep: qpOASES.install \
-	hpp-pinocchio.install hpp-constraints.checkout
+	hpp-pinocchio.install hpp-statistics.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
+ifeq (${HUMANOID}, TRUE)
+hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
+	hpp-wholebody-step.install hpp-manipulation.checkout
+hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
+	hpp-wholebody-step-corba.install hpp-manipulation.install \
+	hpp-manipulation-corba.checkout
+else
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
+hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
+	hpp-manipulation.install \
+	hpp-manipulation-corba.checkout
+endif
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-core.install \
@@ -187,9 +216,8 @@ hpp-wholebody-step-corba.configure.dep: hpp-corbaserver.install \
 	hpp-wholebody-step.install hpp-template-corba.install \
 	hpp-wholebody-step-corba.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
-hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-wholebody-step-corba.install hpp-manipulation.install \
-	hpp-manipulation-corba.checkout
+qgv.configure.dep: qgv.checkout
+pythonqt.configure.dep: pythonqt.checkout
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
@@ -213,6 +241,11 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
+universal_robot.configure.dep: universal_robot.install \
+	universal_robot.checkout
+hpp_universal_robot.configure.dep: universal_robot.install \
+	hpp_universal_robot.checkout
+hpp-environments.configure.dep: hpp-environments.checkout
 hpp-baxter.configure.dep: hpp-corbaserver.install hpp-baxter.checkout
 pythonqt.configure.dep: pythonqt.checkout
 
@@ -235,7 +268,10 @@ log:
 	done
 
 update:
-	for d in hpp-util hpp-pinocchio hpp-core hpp-template-corba hpp-corbaserver hpp-constraints hpp-wholebody-step hpp-wholebody-step-corba hpp-doc ; do \
+	for d in hpp-util hpp-pinocchio hpp-constraints hpp-core \
+		hpp-template-corba hpp-corbaserver hpp-constraints \
+		hpp-manipulation hpp-manipulation-urdf hpp-manipulation-corba \
+		hpp-doc ; do \
 	echo "Updating $$d";\
 	${MAKE} $$d.update; done
 
@@ -258,18 +294,18 @@ update:
 	git submodule update
 
 %.configure: %.configure.dep
-	${MAKE} $(@:.configure=).confthis
+	${MAKE} $(@:.configure=).configure_nodep
 
-%.confthis:%.checkout
-	mkdir -p ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/$(@:.confthis=)/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \ -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.confthis=)_extra_flags} ..
+%.configure_nodep:%.checkout
+	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \ -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..
 
 %.install:%.configure
 	${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install
 
-%.instthis:%.confthis
-	${MAKE} -C ${SRC_DIR}/$(@:.instthis=)/${BUILD_FOLDER} install
+%.install_nodep:%.configure_nodep
+	${MAKE} -C ${SRC_DIR}/$(@:.install_nodep=)/${BUILD_FOLDER} install
 
 %.uninstall:
 	${MAKE} -C ${SRC_DIR}/$(@:.uninstall=)/${BUILD_FOLDER} uninstall
@@ -326,21 +362,6 @@ roboptim-trajectory-3.1.checkout:
 	  ${WGET} -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | ${TAR} -xj; \
 	fi
 
-doxygen-1.8.10.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-	  ${WGET} -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | ${TAR} -xz;\
-	fi
-
-doxygen-1.8.10.configure: doxygen-1.8.10.configure.dep
-	@ :
-
-doxygen-1.8.10.install: doxygen-1.8.10.configure
-	cd ${SRC_DIR}/doxygen-1.8.10;\
-  mkdir -p ${DEVEL_DIR}/install/bin;\
-  install --mode=755 -t ${DEVEL_DIR}/install/bin bin/doxygen
-
 hrp2.configure: hrp2.configure.dep
 	. ${INSTALL_DIR}/setup.sh; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
@@ -364,3 +385,16 @@ robot_model_py.configure: robot_model_py.configure.dep
 robot_model_py.install: robot_model_py.configure
 	${MAKE} -C ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER} install; \
 	${MAKE} -C ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER} install;
+
+universal_robot.configure_nodep:
+	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/ur_description/${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.configure_nodep=)/ur_description/${BUILD_FOLDER}; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..
+
+universal_robot.install_nodep:universal_robot.configure_nodep
+	cd ${SRC_DIR}/$(@:.install_nodep=)/ur_description/${BUILD_FOLDER};\
+	make install
+
+universal_robot.install:universal_robot.configure
+	cd ${SRC_DIR}/$(@:.install=)/ur_description/${BUILD_FOLDER};\
+	make install
