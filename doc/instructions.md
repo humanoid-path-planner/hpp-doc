@@ -1,6 +1,6 @@
 ## Installation on ubuntu-16.04 64 bit with ros-kinetic
 
-To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the following steps:
+To install all the packages on ubuntu 16.04 LTS 64 bit, you should do the following steps:
 
   1. install ROS-kinetic: follow steps 1.1 to 1.3 of [the ROS installation website.](http://wiki.ros.org/kinetic/Installation/Ubuntu).
 
