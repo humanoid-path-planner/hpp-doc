@@ -82,8 +82,7 @@ cd $DEVEL_DIR/src
 
 make -e robot_state_chain_publisher.install
 source ../config.sh
-make -e doxygen-Release_1_8_10.install
-make -e all
+make -e -s -j4 all
 
 if [ ${MAKE_TARBALL} = true ]; then
   cd $DEVEL_DIR/
