@@ -1,5 +1,7 @@
 ## Installation on ubuntu-14.04 64 bit with ros-indigo
 
+**Warning: this version has stopped receiving updates. Please consider using a more recent version**
+
 To install all the packages on ubuntu 14.04 LTS 64 bit, you should do the following steps:
 
   1. install ROS-indigo: follow steps 1.1 to 1.3 of [the ROS installation website.](http://wiki.ros.org/indigo/Installation/Ubuntu).
