@@ -21,7 +21,7 @@ UNZIP=unzip -qq
 TAR=tar
 GIT_QUIET=--quiet
 
-hpp-fcl_branch=master
+hpp-fcl_branch=v0.5
 hpp-fcl_repository=${HPP_REPO}
 
 hpp-util_branch=master
