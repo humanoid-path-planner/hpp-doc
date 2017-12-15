@@ -83,7 +83,9 @@
       video: true,
       before: function(slider){
         if (slider.slides.eq(slider.currentSlide).find('iframe').length !== 0)
-          $f( slider.slides.eq(slider.currentSlide).find('iframe').attr('id') ).api('pause');
+        {
+          //$f( slider.slides.eq(slider.currentSlide).find('iframe').attr('id') ).api('pause');
+        }
       }
     });
   });
