@@ -22,12 +22,11 @@
         </li>
       {% else if project.video %}
         {% if project.video.youtube_id %}
-        <li class="slide">
-          <iframe width="560" height="200" id="youtubevideo"
-            title="{{ project.title }}"
-            src="http://www.youtube.com/embed/{{ project.video.youtube_id}}?enablejsapi=1&version=3&playerapiid=youtubevideo&vq=hd720&{{ project.video.youtube_extra }}"
-            allowfullscreen frameborder="0"></iframe>
-        </li>
+        <li class="slide" style="text-align: center;">
+        <iframe width="500" height="300" id="video_{{ project.id }}"
+          title="{{ project.title }}"
+          src="//www.youtube.com/embed/{{ project.video.youtube_id}}?enablejsapi=1&version=3&playerapiid=youtubevideo&vq=hd720&{{ project.video.youtube_extra }}"
+          allowfullscreen frameborder="0"></iframe>
         {% else if project.video.url %}
         <li class="slide" style="text-align: center;">
           <video style="" width="90%" max-height="500" id="video_{{ project.id }}"
@@ -38,11 +37,11 @@
             <p>If you are reading this, it is because your browser does not support the HTML5 video element.
             The video is located <a href="{{ project.video.url }}">here</a></p>
           </video>
+        {% endif %}
         {% if project.description %}
-          <p class="flex-caption" style="position: relative; text-align: center" >{{ project.description }}</p>
+        <p class="flex-caption" style="position: relative; text-align: center" >{{ project.description }}</p>
         {% endif %}
         </li>
-        {% endif %}
       {% endif %}
     {% endfor %}
   </ul>

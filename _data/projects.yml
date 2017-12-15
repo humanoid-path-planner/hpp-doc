@@ -54,7 +54,7 @@
   title: Manipulation planning with tool use inference
   description: "Manipulation planning with tool use inference"
   video:
-    url: http://homepages.laas.fr/jmirabel/raw/videos/pr2_drawer.mp4
+    youtube_id: iRJtmt7RzDM
 
 - name: manipulation_hrp2_stairs
   id: 9
