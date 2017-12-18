@@ -39,7 +39,7 @@ hpp-model_repository=${HPP_REPO}
 
 pinocchio_branch=devel
 pinocchio_repository=${SOT_REPO}
-pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
+pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF
 
 hpp-pinocchio_branch=devel
 hpp-pinocchio_repository=${HPP_REPO}
