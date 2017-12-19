@@ -160,11 +160,11 @@ roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WE
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 ifeq (${HUMANOID}, TRUE)
-  hpp-manipulation_extra_flags= -DHPP_MANIPULATION_HAS_WHOLEBODY=TRUE
-  hpp-manipulation-corba_extra_flags-DHPP_MANIPULATION_HAS_WHOLEBODY=TRUE
+  hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
+  hpp-manipulation-corba_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
 else
-  hpp-manipulation_extra_flags= -DHPP_MANIPULATION_HAS_WHOLEBODY=FALSE
-  hpp-manipulation-corba_extra_flags-DHPP_MANIPULATION_HAS_WHOLEBODY=FALSE
+  hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
+  hpp-manipulation-corba_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
 endif
 
 all: hpp_tutorial.install \
@@ -206,7 +206,7 @@ else
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-manipulation.install \
+	hpp-manipulation.install hpp-template-corba.install \
 	hpp-manipulation-corba.checkout
 endif
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
