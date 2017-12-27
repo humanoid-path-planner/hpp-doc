@@ -141,7 +141,7 @@ hpp_universal_robot_branch=devel
 hpp_universal_robot_repository=${FLORENT_REPO}
 
 baxter_common_branch=master
-baxter_repository=${RETHINK_ROBOTICS_REPO}
+baxter_common_repository=${RETHINK_ROBOTICS_REPO}
 
 hpp-baxter_branch=master
 hpp-baxter_repository=${HPP_REPO}
@@ -256,8 +256,7 @@ hpp_universal_robot.configure.dep: universal_robot.install \
 	hpp_universal_robot.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
 baxter_common.configure.dep: baxter_common.checkout
-hpp-baxter.configure.dep: hpp-corbaserver.install baxter_common.install \
-	hpp-baxter.checkout
+hpp-baxter.configure.dep: baxter_common.install hpp-baxter.checkout
 pythonqt.configure.dep: pythonqt.checkout
 hpp_romeo.configure.dep: romeo.install hpp_romeo.checkout
 romeo.configure.dep: romeo.checkout
