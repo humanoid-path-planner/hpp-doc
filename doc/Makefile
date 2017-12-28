@@ -280,12 +280,11 @@ log:
 	done
 
 update:
-	for d in hpp-util hpp-pinocchio hpp-constraints hpp-core \
-		hpp-template-corba hpp-corbaserver hpp-constraints \
-		hpp-manipulation hpp-manipulation-urdf hpp-manipulation-corba \
-		hpp-doc ; do \
-	echo "Updating $$d";\
-	${MAKE} $$d.update; done
+	@for child_dir in $$(ls ${SRC_DIR}); do \
+		test -d "$$child_dir" || continue; \
+		test -d "$$child_dir/.git" || continue; \
+		${MAKE} "$$child_dir".update; \
+	done
 
 %.checkout:
 	if [ -d $(@:.checkout=) ]; then \
@@ -295,15 +294,20 @@ update:
 	fi \
 
 %.update:
-	cd ${SRC_DIR}/$(@:.update=);\
-	git remote rm origin;\
-	git remote add origin ${$(@:.update=)_repository}/$(@:.update=);\
-	git fetch origin;\
-	git checkout -b bce46g origin/${$(@:.update=)_branch};\
-	git branch -D ${$(@:.update=)_branch};\
-	git checkout -b ${$(@:.update=)_branch} bce46g;\
-	git branch -D bce46g;\
-	git submodule update
+	if [ "${$(@:.update=)_repository}" = "" ]; then \
+		echo "$(@:.update=) is not referenced"; \
+	else \
+		cd ${SRC_DIR}/$(@:.update=);\
+		git remote rm origin;\
+		git remote add origin ${$(@:.update=)_repository}/$(@:.update=);\
+		git fetch origin;\
+		git checkout -b bce46g origin/${$(@:.update=)_branch};\
+		git branch -D ${$(@:.update=)_branch};\
+		git checkout -b ${$(@:.update=)_branch} bce46g;\
+		git branch -D bce46g;\
+		git submodule update; \
+	fi
+
 
 %.configure: %.configure.dep
 	${MAKE} $(@:.configure=).configure_nodep
