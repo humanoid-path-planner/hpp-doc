@@ -35,7 +35,7 @@ hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 hpp-util_branch=master
 hpp-util_repository=${HPP_REPO}
 
-pinocchio_branch=master
+pinocchio_branch=hpp
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
