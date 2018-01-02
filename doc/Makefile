@@ -171,8 +171,7 @@ else
   hpp-manipulation-corba_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
 endif
 
-all: hpp_tutorial.install \
-	hpp-manipulation-corba.install 	hpp-gepetto-viewer.install
+all: hpp_tutorial.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
@@ -239,7 +238,7 @@ test-hpp.configure.dep: hpp-wholebody-step-corba.install \
 robot_state_chain_publisher.configure.dep: robot_state_chain_publisher.checkout
 iai_maps.configure.dep: robot_state_chain_publisher.install iai_maps.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
-	hpp-corbaserver.install hpp_tutorial.checkout
+	hpp-manipulation-corba.install hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_benchmark.checkout
 collada-dom.configure.dep: collada-dom.checkout
 OpenSceneGraph-dae-plugin.configure.dep: collada-dom.install \
