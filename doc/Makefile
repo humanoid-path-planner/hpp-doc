@@ -138,7 +138,7 @@ universal_robot_branch=indigo-devel
 universal_robot_repository=${HPP_REPO}
 
 hpp_universal_robot_branch=devel
-hpp_universal_robot_repository=${FLORENT_REPO}
+hpp_universal_robot_repository=${HPP_REPO}
 
 baxter_common_branch=master
 baxter_common_repository=${RETHINK_ROBOTICS_REPO}
@@ -211,8 +211,8 @@ else
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-manipulation.install hpp-template-corba.install \
-	hpp-manipulation-corba.checkout
+	hpp-manipulation.install hpp-corbaserver.install \
+	hpp-template-corba.install hpp-manipulation-corba.checkout
 hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
 	qgv.install hpp-plot.checkout
 endif
