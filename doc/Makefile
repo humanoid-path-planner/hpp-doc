@@ -341,14 +341,6 @@ update:
 		cat .git/refs/heads/${$(@:.log=)_branch}; \
 	fi
 
-
-hpp-doc.configure: hpp-doc.checkout
-	cd ${SRC_DIR}/$(@:.configure=);\
-	./bootstrap;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/$(@:.configure=)/${BUILD_FOLDER}; \
-	../configure --prefix=${INSTALL_DIR}
-
 eigen3.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
