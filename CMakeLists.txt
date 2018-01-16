@@ -71,20 +71,20 @@ FOREACH(PKG ${SETUP_DOC_PKG})
       SET(${DOC_VAR}_LINK ${DOC_PREFIX}/index.html)
     ENDIF (EXISTS ${DOC_PREFIX}/main.html)
   ELSE(${PREFIX}_FOUND)
-    SET(${DOC_VAR}_LINK ${CMAKE_INSTALL_DOCDIR}/${PKG}-missing.html)
+    SET(${DOC_VAR}_LINK ${PKG}-missing.html)
 
     SET(PACKAGE_NAME ${PKG})
     SET(STEPS)
     IF(DEFINED ${PKG}_giturl)
       SET(STEPS "${STEPS} <li>
       to get the source code through <code>git</code>:
-      <code>git clone $git_url</code>,
+      <code>git clone ${${PKG}_giturl}</code>,
       then configure, compile and install the package.</code></li>")
     ENDIF(DEFINED ${PKG}_giturl)
     IF(DEFINED ${PKG}_robotpkg_package)
       SET(STEPS "${STEPS} <li>
       install it through <code>robotpkg</code>:
-      <code>cd robotpkg/$robotpkg_package;
+      <code>cd robotpkg/${${PKG}_robotpkg_package};
       make update</code></li>")
     ENDIF(DEFINED ${PKG}_robotpkg_package)
     CONFIGURE_FILE(doc/missing.html.in ${CMAKE_BINARY_DIR}/doc/${PKG}-missing.html @ONLY)
