@@ -23,6 +23,9 @@ else
   BUILD_FOLDER=build-rel
 endif
 
+#OSG_PACKAGE=OpenSceneGraph-dae-plugin
+OSG_PACKAGE=OpenSceneGraph-3.4.0
+
 WGET=wget --quiet
 UNZIP=unzip -qq
 TAR=tar
@@ -153,6 +156,7 @@ romeo_branch=master
 romeo_repository=${HPP_REPO}
 
 OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
+OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
 collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
 
@@ -176,6 +180,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
 hrp2: test-hpp.install
 
+hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
@@ -242,7 +247,9 @@ hpp_benchmark.configure.dep: hpp_benchmark.checkout
 collada-dom.configure.dep: collada-dom.checkout
 OpenSceneGraph-dae-plugin.configure.dep: collada-dom.install \
 	OpenSceneGraph-dae-plugin.checkout
-gepetto-viewer.configure.dep: OpenSceneGraph-dae-plugin.install \
+OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
+	OpenSceneGraph-3.4.0.checkout
+gepetto-viewer.configure.dep: ${OSG_PACKAGE}.install \
 	gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 	gepetto-viewer-corba.checkout
@@ -360,6 +367,15 @@ roboptim-core-3.1.checkout:
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
 		${WGET} -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | ${TAR} -xj; \
+	fi
+
+OpenSceneGraph-3.4.0.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		wget http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
+		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
+		rm -f OpenSceneGraph-3.4.0.zip;\
 	fi
 
 roboptim-trajectory-3.1.checkout:
