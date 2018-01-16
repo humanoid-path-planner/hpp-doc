@@ -22,15 +22,3 @@
 	 alt="packages dependencies"
 	 usemap="#CD"
 	 style="border:0">
-
-@MAP@
-
-    <hr>
-    <center>
-      <img src="images/footer.jpg" height="100" alt="footer"><br>
-      Humanoid Path Planner documentation<br>
-    </center>
-    <hr>
-</center>
-</body>
-</html>
