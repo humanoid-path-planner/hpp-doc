@@ -2,24 +2,12 @@
 #  Copyright 2007 LAAS-CNRS
 #
 
-Installation instructions for library hppDoc
-----------------------------------------------
+Installation instructions for hpp-doc
+-------------------------------------
 
 It is recommended to create a specific directory to install this package.
 mkdir build
 cd build
-../configure [OPTIONS]
+cmake [OPTIONS] ..
 make 
 make install
-
-If you install from git, you need to access two submodules. To do so, add the
-following lines in your ~/.gitconfig:
-
-[url "git://roboptim.git.sourceforge.net/gitroot/roboptim/"
-     insteadOf = roboptim:
-[url "ssh://[softs|git].laas.fr/git/"] 
-     insteadOf = git-laas:
-
-where [softs|git] means
-  - git if you are an external user,
-  - softs if you are a member of CNRS-LAAS.
