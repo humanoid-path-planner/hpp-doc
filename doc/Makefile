@@ -44,13 +44,14 @@ pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF
 
 hpp-pinocchio_branch=devel
 hpp-pinocchio_repository=${HPP_REPO}
+hpp-pinocchio_extra_flags=-DDISABLE_TESTS=ON
 
 hpp-statistics_branch=devel
 hpp-statistics_repository=${HPP_REPO}
 
 hpp-core_branch=devel
 hpp-core_repository=${HPP_REPO}
-hpp-core_extra_flags=-DRUN_TESTS=FALSE
+hpp-core_extra_flags=-DDISABLE_TESTS=ON
 
 hpp-template-corba_branch=devel
 hpp-template-corba_repository=${LAAS_REPO}
@@ -63,6 +64,7 @@ qpOASES_repository=${HPP_REPO}
 
 hpp-constraints_branch=devel
 hpp-constraints_repository=${HPP_REPO}
+hpp-constraints_extra_flags=-DDISABLE_TESTS=ON
 
 hpp-walkgen_branch=devel
 hpp-walkgen_repository=${HPP_REPO}
