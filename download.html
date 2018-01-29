@@ -1,19 +1,16 @@
 ---
-layout: default
+layout: page
 title: Download and install
-group: navigation
-disqus: no
+category: Getting Started
 ---
-
-<h1 id="download_install" class="page-header">{{ page.title }}</h1>
 
 <p class="lead">
 This page provides guidelines for installation of HPP. Several versions are available:
 </p>
 
 <select class="form-control" id="installation_branch" size="1" onchange="updateInstall(this.value)">
-  <option value=""      >          </option>
-  <option value="master">  Stable  </option>
+  <option value=""></option>
+  <option value="master">Stable</option>
   <option value="devel">Development</option>
   <option value="euroc-c1">Euroc - challenge 1</option>
   <option value="euroc">Euroc - challenge 2</option>
@@ -25,50 +22,20 @@ This page provides guidelines for installation of HPP. Several versions are avai
 <hr class="featurette-divider">
 
 <div id="installation_devel">
-  <div id="installation_devel_readme" style="display:none;">
-  </div>
   <div id="installation_devel_readme_rendered">
+    <i class="fa fa-refresh fa-spin fa-2x fa-fw" aria-hidden="true"></i>
+    <span class="sr-only"></span>
+    Please select the version you want to install
   </div>
-
 </div>
 
-<script src="https://cdn.rawgit.com/showdownjs/showdown/1.3.0/dist/showdown.min.js"></script>
+<script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js" crossorigin="anonymous"></script>
 <script>
-function fetch (url, divRaw, divRend) {
-  var converter = new showdown.Converter();
-  $(divRaw).load(url, function(respText, statText, xhr) {
-      if (statText == "success") {
-      $(divRend).html(converter.makeHtml($('#installation_devel_readme').text()))
-      } else {
-      $(divRend).html("Could not open " + url + "<br/>" + xhr.status + ": " + xhr.statusText);
-      }
-      });
-}
+var converter = new showdown.Converter();
+var rendered = document.getElementById("installation_devel_readme_rendered");
+
 function updateInstall(branch) {
-  if (branch === "") {
-    $("#installation_devel_readme_rendered").html (
-        '<i class="fa fa-refresh fa-spin fa-2x fa-fw" aria-hidden="true"></i>' +
-        '<span class="sr-only"></span>' +
-        'Please select the version you want to install'
-        );
-  } else {
-    $("#installation_devel_readme").text ("");
-    $("#installation_devel_readme_rendered").text ("");
-    fetch("https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/" + branch + "/doc/instructions.md",
-        "#installation_devel_readme",
-        "#installation_devel_readme_rendered");
-  }
+  fetch("https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/" + branch + "/doc/instructions.md")
+    .then(r => r.text()).then(r => rendered.innerHTML = converter.makeHtml(r));
 }
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-var branch = getParameterByName('branch');
-$('#installation_branch').val(branch);
-updateInstall(branch);
 </script>
-
-<div style="padding: 2em"></div>

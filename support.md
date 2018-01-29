@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: page
 title: Support
-group: navigation
-disqus: no
+category: Support
 ---
 
 ## Getting support
@@ -25,7 +24,7 @@ Send an email to one of the contacts below to be added to the mailing list.
 
 ----
 
-## Contacts 
+## Contacts
 
 ### LAAS-CNRS, Gepetto team
 

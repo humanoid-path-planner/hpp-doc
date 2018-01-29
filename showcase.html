@@ -1,17 +1,14 @@
 ---
-layout: default
+layout: page
 title: Showcase
-group: "navigation"
-disqus: no
+category: Documentation
 ---
-
-<h1 id="showcase" class="page-header">{{ page.title }}</h1>
 
 <h2>Gallery</h2>
 
 <div style="padding: 2em"></div>
 
-  {% include carrousel.html carrousel=site.data.projects %}
+  {% include carousel.html %}
 
 <div style="padding: 2em"></div>
 
@@ -60,7 +57,7 @@ disqus: no
           <td id="{{ paper.id }}-url">
             {% if paper.URL %}
               <a href="{{ paper.URL }}" target="_blank">
-                <span class='glyphicon glyphicon-file'></span>
+                <span class='fas fa-file'></span>
               </a>
             {% endif %}
           </td>
@@ -69,7 +66,5 @@ disqus: no
     </tbody>
   </table>
 </div>
-
-<div style="padding: 10em"></div>
 
 <!-- vim: set ts=2 sw=2 ft=liquid si: -->

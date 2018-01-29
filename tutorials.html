@@ -1,31 +1,27 @@
 ---
-layout: default
+layout: page
 title: Tutorials
-group: navigation
-disqus: no
+category: Getting Started
 ---
 
-<h1 id="tutorials" class="page-header">{{ page.title }}</h1>
-
 <p class="lead">
-
 This page provides tutorials to get you started with HPP.
 
-<div class="bs-callout bs-callout-warning text-warning bg-warning">
+<div class="alert alert-warning">
   <strong>Warning!</strong> If you have installed HPP, the tutorials corresponding to <em>your version</em>
   of HPP are installed in <code>${DEVEL_DIR}/install/share/doc/hpp-tutorial/doxygen-html/index.html</code>.
 </div>
-
 </p>
-<ul class="nav nav-tabs" id="howto">
-  <li class="active"><a href="#tutorial_1" id="tutorial_1_tab" data-toggle="tab">Tutorial 1</a></li>
-  <li><a href="#tutorial_1_details" id="tutorial_1_details_tab" data-toggle="tab">Tutorial 1 - Details</a></li>
-  <li><a href="#tutorial_2" id="tutorial_2_tab" data-toggle="tab">Tutorial 2</a></li>
+
+<ul class="nav nav-tabs" id="howto" role="tablist">
+  <li class="nav-item"><a href="#tutorial_1" id="tutorial_1_tab" data-toggle="tab" role="tab" aria-controls="tutorial_1" aria-selected="true" class="nav-link active">Tutorial 1</a></li>
+  <li class="nav-item"><a href="#tutorial_1_details" id="tutorial_1_details_tab" data-toggle="tab" role="tab" aria-controls="tutorial_1_details" aria-selected="false" class="nav-link">Tutorial 1 - Details</a></li>
+  <li class="nav-item"><a href="#tutorial_2" id="tutorial_2_tab" data-toggle="tab" role="tab" aria-controls="tutorial_2" aria-selected="false" class="nav-link">Tutorial 2</a></li>
 </ul>
 
 <div class="tab-content" style="padding-top: 1.75em">
 
-  <div class="tab-pane active" id="tutorial_1">
+  <div class="tab-pane fade show active" id="tutorial_1" role="tabpanel" aria-labelledby="tutorial_1_tab">
     <p>
     To run the tutorial, open a terminal and open 3 tabs by typing CTRL+SHIFT+T twice.
 
@@ -79,13 +75,13 @@ This page provides tutorials to get you started with HPP.
     <a href="api/hpp_tutorial/doxygen-html/script/tutorial_1.py">script/tutorial_1.py</a>
     </p>
   </div>
-  <div class="tab-pane" id="tutorial_1_details">
+  <div class="tab-pane fade" id="tutorial_1_details" role="tabpanel" aria-labelledby="tutorial_1_details_tab">
     <p>
     <!--TODO: This link will likely be broken when updating the doc-->
     Please see <a href="{{ site.baseurl }}/api/hpp_tutorial/doxygen-html/a00002.html">this</a>.
     </p>
   </div>
-  <div class="tab-pane" id="tutorial_2">
+  <div class="tab-pane fade" id="tutorial_2" role="tabpanel" aria-labelledby="tutorial_2_tab">
     <p>
       WARNING: this tutorial has been tested with installations instructions corresponding to branch "isae".
     </p>
@@ -155,20 +151,3 @@ This page provides tutorials to get you started with HPP.
     </p>
   </div>
 </div>
-
-<script type="text/javascript">
-  $(function () {
-    var hash = window.location.hash;
-    var tab;
-    if (hash) {
-      tab = hash + "_tab";
-      var attr = $(tab).attr("data-toggle");
-      if (attr !== "tab") tab = '#howto a:first';
-    } else {
-      tab = '#howto a:first';
-    }
-    $(tab).tab('show');
-    })
-</script>
-
-<div style="padding: 2em"></div>
