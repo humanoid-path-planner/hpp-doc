@@ -10,6 +10,6 @@ if [ -f $DEVEL_DIR/install/setup.bash ]; then
 else
     source /opt/ros/kinetic/setup.bash
 fi
-if [ "$ROS_PACKAGE_PATH" = "" ]; then
-    export ROS_PACKAGE_PATH=$DEVEL_DIR/install/share:/opt/ros/kinetic/share
-fi
+# Make sure that /opt/ros/kinetic/setup.bash is in the ROS_PACKAGE_PATH,
+# otherwise, you should add it by hand in the line below.
+export ROS_PACKAGE_PATH=$DEVEL_DIR/install/share:$ROS_PACKAGE_PATH
