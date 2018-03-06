@@ -130,7 +130,7 @@ gepetto-viewer-corba_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=master
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-pythonqt_branch=patched-5
+pythonqt_branch=qt4
 pythonqt_repository=${HPP_REPO}
 pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
