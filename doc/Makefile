@@ -30,6 +30,8 @@ WGET=wget --quiet
 UNZIP=unzip -qq
 TAR=tar
 GIT_QUIET=--quiet
+# Qt version should be either 4 or 5
+QT_VERSION=4
 
 hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
@@ -125,11 +127,14 @@ gepetto-viewer_repository=${HPP_REPO}
 
 gepetto-viewer-corba_branch=devel
 gepetto-viewer-corba_repository=${HPP_REPO}
+ifeq (${QT_VERSION}, 5)
+  gepetto-viewer-corba_extra_flags= -DUSE_QT4=OFF
+endif
 
 hpp-gepetto-viewer_branch=devel
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-pythonqt_branch=qt4
+pythonqt_branch=qt${QT_VERSION}
 pythonqt_repository=${HPP_REPO}
 pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
@@ -158,7 +163,7 @@ romeo_branch=master
 romeo_repository=${HPP_REPO}
 
 OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
-OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom -DLIB_POSTFIX=""
+OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
 collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
 
