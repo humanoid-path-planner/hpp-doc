@@ -13,3 +13,9 @@ devel-14:
     script: /auto-install-hpp.sh
     only:
       -  devel
+
+devel-16:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    script: /auto-install-hpp.sh
+    only:
+      -  devel
