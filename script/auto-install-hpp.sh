@@ -2,16 +2,37 @@
 
 # Exit on error
 set -e
-
-APT_DEP="autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
-ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs \
-ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap \
-ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-description flex \
-bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver \
-omniidl omniidl-python libltdl-dev python-matplotlib libtinyxml2-dev \
-liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev \
-libqtgui4 oxygen-icon-theme libopenscenegraph-dev"
-APT_BUILD_DEP=""
+HOST_DIST=$(lsb_release -s -c)
+case $HOST_DIST in
+  trusty)
+    APT_DEP="autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
+      ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs \
+      ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap \
+      ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-description flex \
+      bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver \
+      omniidl omniidl-python libltdl-dev python-matplotlib libtinyxml2-dev \
+      liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev \
+      libqtgui4 oxygen-icon-theme libopenscenegraph-dev"
+    APT_BUILD_DEP=""
+    CONFIG_FILE="ubuntu-14.04-indigo.sh"
+    ;;
+  xenial)
+    APT_DEP="autoconf g++ cmake doxygen libboost-dev liburdfdom-dev \
+      libassimp-dev ros-kinetic-xacro ros-kinetic-kdl-parser ros-kinetic-common-msgs \
+      ros-kinetic-tf ros-kinetic-tf-conversions libccd-dev ros-kinetic-octomap \
+      ros-kinetic-resource-retriever ros-kinetic-srdfdom ros-kinetic-pr2-description flex \
+      bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl \
+      omniidl-python libltdl-dev python-matplotlib libxml2 libtinyxml2-dev \
+      liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 oxygen-icon-theme \
+      libopenscenegraph-dev openscenegraph libpcre3-dev"
+    APT_BUILD_DEP=""
+    CONFIG_FILE="ubuntu-16.04-kinetic.sh"
+    ;;
+  *)
+    echo "Unknow host distribution."
+    exit 1
+    ;;
+esac
 
 MAKE_TARBALL=false
 TARGET=all
@@ -84,19 +105,7 @@ mkdir --parents $DEVEL_DIR/src
 mkdir --parents $DEVEL_DIR/install
 
 # Get config script
-HOST_DIST=$(lsb_release -s -c)
-case $HOST_DIST in
-  trusty)
-    wget -q -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config/ubuntu-14.04-indigo.sh
-    ;;
-  xenial)
-    wget -q -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config/ubuntu-16.04-kinetic.sh
-    ;;
-  *)
-    echo "Unknow host distribution."
-    exit 1
-    ;;
-esac
+wget -q -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config/${CONFIG_FILE}
 wget -q -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/Makefile
 
 source $DEVEL_DIR/config.sh
