@@ -84,7 +84,19 @@ mkdir --parents $DEVEL_DIR/src
 mkdir --parents $DEVEL_DIR/install
 
 # Get config script
-wget -q -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config.sh
+HOST_DIST=$(lsb_release -s -c)
+case $HOST_DIST in
+  trusty)
+    wget -q -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config/ubuntu-14.04-indigo.sh
+    ;;
+  xenial)
+    wget -q -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config/ubuntu-16.04-kinetic.sh
+    ;;
+  *)
+    echo "Unknow host distribution."
+    exit 1
+    ;;
+esac
 wget -q -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/Makefile
 
 source $DEVEL_DIR/config.sh
