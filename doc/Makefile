@@ -190,6 +190,7 @@ hrp2: test-hpp.install
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
+doxygen-1.8.10.configure.dep: doxygen-1.8.10.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
 roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
 	roboptim-trajectory-3.1.checkout
@@ -458,3 +459,18 @@ romeo.configure: romeo.configure.dep
 
 romeo.install: romeo.configure
 	${MAKE} -C ${SRC_DIR}/romeo/romeo_description/${BUILD_FOLDER} install
+
+doxygen-1.8.10.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		${WGET} -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | ${TAR} -xz;\
+	fi
+
+doxygen-1.8.10.configure_nodep:
+	@ :
+
+doxygen-1.8.10.install: doxygen-1.8.10.configure
+	cd ${SRC_DIR}/doxygen-1.8.10;\
+	mkdir -p ${DEVEL_DIR}/install/bin;\
+	install --mode=755 -t ${DEVEL_DIR}/install/bin bin/doxygen
