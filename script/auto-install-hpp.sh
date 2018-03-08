@@ -1,16 +1,41 @@
 #!/bin/bash
 
-APT_DEP="autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
-ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs \
-ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap \
-ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-robot flex \
-bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver \
-omniidl omniidl-python libltdl-dev python-matplotlib libtinyxml2-dev \
-liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev \
-libqtgui4 oxygen-icon-theme libopenscenegraph-dev"
-APT_BUILD_DEP=""
+# Exit on error
+set -e
+HOST_DIST=$(lsb_release -s -c)
+case $HOST_DIST in
+  trusty)
+    APT_DEP="autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
+      ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs \
+      ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap \
+      ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-description flex \
+      bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver \
+      omniidl omniidl-python libltdl-dev python-matplotlib libtinyxml2-dev \
+      liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev \
+      libqtgui4 oxygen-icon-theme libopenscenegraph-dev"
+    APT_BUILD_DEP=""
+    CONFIG_FILE="ubuntu-14.04-indigo.sh"
+    ;;
+  xenial)
+    APT_DEP="autoconf g++ cmake doxygen libboost-dev liburdfdom-dev \
+      libassimp-dev ros-kinetic-xacro ros-kinetic-kdl-parser ros-kinetic-common-msgs \
+      ros-kinetic-tf ros-kinetic-tf-conversions libccd-dev ros-kinetic-octomap \
+      ros-kinetic-resource-retriever ros-kinetic-srdfdom ros-kinetic-pr2-description flex \
+      bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl \
+      omniidl-python libltdl-dev python-matplotlib libxml2 libtinyxml2-dev \
+      liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 oxygen-icon-theme \
+      libopenscenegraph-dev openscenegraph libpcre3-dev"
+    APT_BUILD_DEP=""
+    CONFIG_FILE="ubuntu-16.04-kinetic.sh"
+    ;;
+  *)
+    echo "Unknow host distribution."
+    exit 1
+    ;;
+esac
 
 MAKE_TARBALL=false
+TARGET=all
 
 BRANCH=master
 if [ -z ${DEVEL_DIR} ]; then
@@ -33,11 +58,17 @@ do
       echo "${APT_BUILD_DEP}"
       exit 0
       ;;
+    --target)
+      shift
+      TARGET=$1
+      echo "Target set to $TARGET"
+      ;;
     --help)
       echo "Options are"
-      echo "--mktar:   \tmake tar balls after compilation"
-      echo "--show-dep:\tshow dependencies resolved by aptitude"
-      echo "-v:        \tshow variables and ask for confirm (must be last arg)"
+      echo "--mktar:          \tmake tar balls after compilation"
+      echo "--show-dep:       \tshow dependencies resolved by aptitude"
+      echo "--target TARGET:  \tinstall TARGET (default: all)"
+      echo "-v:               \tshow variables and ask for confirm (must be last arg)"
       exit 0
       ;;
     -v)
@@ -64,8 +95,9 @@ do
 done
 
 # standard HPP installation
+sudo apt-get update -qqy
 sudo apt-get --assume-yes install ${APT_DEP}
-sudo apt-get --assume-yes build-dep ${APT_BUILD_DEP}
+[[ -z $APT_BUILD_DEP ]] || sudo apt-get --assume-yes build-dep ${APT_BUILD_DEP}
 
 # Setup environment
 mkdir --parents $DEVEL_DIR
@@ -73,16 +105,16 @@ mkdir --parents $DEVEL_DIR/src
 mkdir --parents $DEVEL_DIR/install
 
 # Get config script
-wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config.sh
-wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/Makefile
+wget -q -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config/${CONFIG_FILE}
+wget -q -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/Makefile
 
 source $DEVEL_DIR/config.sh
 
 cd $DEVEL_DIR/src
 
-make -e robot_state_chain_publisher.install
+make -s -e robot_state_chain_publisher.install
 source ../config.sh
-make -e -s -j4 all
+make -s -e $TARGET
 
 if [ ${MAKE_TARBALL} = true ]; then
   cd $DEVEL_DIR/

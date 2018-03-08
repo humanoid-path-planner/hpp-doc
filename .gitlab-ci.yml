@@ -1,0 +1,21 @@
+variables:
+    GIT_SSL_NO_VERIFY: "true"
+    GIT_SUBMODULE_STRATEGY: "recursive"
+
+master-14:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:14.04
+    script: /auto-install-hpp.sh
+    only:
+      - master
+
+devel-14:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:14.04
+    script: /auto-install-hpp.sh
+    only:
+      -  devel
+
+devel-16:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    script: /auto-install-hpp.sh
+    only:
+      -  devel

@@ -30,6 +30,8 @@ WGET=wget --quiet
 UNZIP=unzip -qq
 TAR=tar
 GIT_QUIET=--quiet
+# Qt version should be either 4 or 5
+QT_VERSION=4
 
 hpp-fcl_branch=master
 hpp-fcl_repository=${HPP_REPO}
@@ -126,11 +128,14 @@ gepetto-viewer_repository=${HPP_REPO}
 
 gepetto-viewer-corba_branch=master
 gepetto-viewer-corba_repository=${HPP_REPO}
+ifeq (${QT_VERSION}, 5)
+  gepetto-viewer-corba_extra_flags= -DUSE_QT4=OFF
+endif
 
 hpp-gepetto-viewer_branch=master
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-pythonqt_branch=qt4
+pythonqt_branch=qt${QT_VERSION}
 pythonqt_repository=${HPP_REPO}
 pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
@@ -159,7 +164,7 @@ romeo_branch=master
 romeo_repository=${HPP_REPO}
 
 OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
-OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=4 -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom -DLIB_POSTFIX=""
+OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
 collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
 
@@ -186,6 +191,7 @@ hrp2: test-hpp.install
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
+doxygen-1.8.10.configure.dep: doxygen-1.8.10.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
 roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
 	roboptim-trajectory-3.1.checkout
@@ -453,3 +459,18 @@ romeo.configure: romeo.configure.dep
 
 romeo.install: romeo.configure
 	${MAKE} -C ${SRC_DIR}/romeo/romeo_description/${BUILD_FOLDER} install
+
+doxygen-1.8.10.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+		${WGET} -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | ${TAR} -xz;\
+	fi
+
+doxygen-1.8.10.configure_nodep:
+	@ :
+
+doxygen-1.8.10.install: doxygen-1.8.10.configure
+	cd ${SRC_DIR}/doxygen-1.8.10;\
+	mkdir -p ${DEVEL_DIR}/install/bin;\
+	install --mode=755 -t ${DEVEL_DIR}/install/bin bin/doxygen
