@@ -1,21 +1,57 @@
 variables:
     GIT_SSL_NO_VERIFY: "true"
     GIT_SUBMODULE_STRATEGY: "recursive"
+    DEVEL_DIR: "$CI_PROJECT_DIR/workspace"
+    BUILD_TYPE: "Release"
 
-master-14:
-    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:14.04
-    script: /auto-install-hpp.sh
+.build_template: &build_definition
+    stage: build
+    script: /auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME}
+    artifacts:
+      paths:
+        - workspace
+
+.test_template: &test_definition
+    stage: test
+    script:
+      - cd $DEVEL_DIR/src/hpp-util/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-fcl/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-pinocchio/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-statistics/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-constraints/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-core/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-corbaserver/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-manipulation/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-manipulation-urdf/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-manipulation-corba/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-walkgen/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-wholebody-step/build-rel && make test
+      - cd $DEVEL_DIR/src/hpp-wholebody-step-corba/build-rel && make test
+    allow_failure: true
+    artifacts:
+      paths:
+        - workspace
+
+master-16-build:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:16.04
     only:
       - master
+    <<: *build_definition
 
-devel-14:
+devel-14-build:
     image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:14.04
-    script: /auto-install-hpp.sh
     only:
       -  devel
+    <<: *build_definition
 
-devel-16:
+devel-16-build:
     image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:16.04
-    script: /auto-install-hpp.sh
     only:
       -  devel
+    <<: *build_definition
+
+devel-16-test:
+    dependencies: devel-16-build
+    only:
+      -  devel
+    <<: *test_definition
