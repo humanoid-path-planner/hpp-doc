@@ -51,7 +51,9 @@ devel-16-build:
     <<: *build_definition
 
 devel-16-test:
-    dependencies: devel-16-build
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    dependencies:
+      - devel-16-build
     only:
       -  devel
     <<: *test_definition
