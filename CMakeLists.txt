@@ -115,13 +115,14 @@ ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_BINARY_DIR}/dependencies.png
 ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_BINARY_DIR}/graphDep.html
   COMMAND dot -o ${CMAKE_BINARY_DIR}/graphDep.html -Tcmapx ${CMAKE_BINARY_DIR}/graphDep.dot
   DEPENDS graphDep.dot)
-ADD_CUSTOM_TARGET(graph-dependency.html ALL
+ADD_CUSTOM_COMMAND(OUTPUT graph-dependency.html
   COMMAND cat ${CMAKE_SOURCE_DIR}/doc/graph-dependency.html.head
   ${CMAKE_BINARY_DIR}/graphDep.html
   ${CMAKE_SOURCE_DIR}/doc/graph-dependency.html.foot
   > ${CMAKE_BINARY_DIR}/graph-dependency.html
-  DEPENDS ${CMAKE_BINARY_DIR}/graphDep.html ${CMAKE_BINARY_DIR}/dependencies.png
-  BYPRODUCTS ${CMAKE_BINARY_DIR}/graph-dependency.html)
+  DEPENDS ${CMAKE_BINARY_DIR}/graphDep.html ${CMAKE_BINARY_DIR}/dependencies.png)
+ADD_CUSTOM_TARGET(generate-html ALL
+  DEPENDS graph-dependency.html)
 
 INSTALL(FILES
   doc/custom.css
