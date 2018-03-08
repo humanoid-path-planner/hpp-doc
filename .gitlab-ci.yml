@@ -6,7 +6,7 @@ variables:
 
 .build_template: &build_definition
     stage: build
-    script: /auto-install-hpp.sh
+    script: /auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME}
     artifacts:
       paths:
         - workspace

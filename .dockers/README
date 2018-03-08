@@ -5,7 +5,7 @@ Setup
 2 From the root of the repository, run (update version number and branch)
 
 ```
-docker build -t eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel:14.04 -f .dockers/ubuntu-14.04/Dockerfile .
+docker build -t eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:14.04 -f .dockers/ubuntu-14.04/Dockerfile .
 docker build -t eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:14.04 -f .dockers/ubuntu-14.04/Dockerfile.premade .
 ```
 

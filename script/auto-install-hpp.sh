@@ -37,7 +37,7 @@ esac
 MAKE_TARBALL=false
 TARGET=all
 
-BRANCH=devel
+BRANCH=""
 if [ -z ${DEVEL_DIR} ]; then
   export DEVEL_DIR=/local/devel/hpp
 fi
@@ -63,8 +63,14 @@ do
       TARGET=$1
       echo "Target set to $TARGET"
       ;;
+    --branch)
+      shift
+      BRANCH=$1
+      echo "Branch set to $BRANCH"
+      ;;
     --help)
       echo "Options are"
+      echo "--branch:         \tbranch which should be installed"
       echo "--mktar:          \tmake tar balls after compilation"
       echo "--show-dep:       \tshow dependencies resolved by aptitude"
       echo "--target TARGET:  \tinstall TARGET (default: all)"
@@ -72,7 +78,7 @@ do
       exit 0
       ;;
     -v)
-      for v in "DEVEL_DIR" "BUILD_TYPE" "MAKE_TARBALL"
+      for v in "DEVEL_DIR" "BUILD_TYPE" "MAKE_TARBALL" "BRANCH"
       do
         echo "$v=${!v}"
       done
@@ -93,6 +99,11 @@ do
   esac
   shift
 done
+
+if [ -z "${BRANCH}" ]; then
+  echo "A branch must be specified with argument --branch"
+  exit 1
+fi
 
 # standard HPP installation
 sudo apt-get update -qqy
