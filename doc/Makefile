@@ -23,8 +23,8 @@ else
   BUILD_FOLDER=build-rel
 endif
 
-#OSG_PACKAGE=OpenSceneGraph-dae-plugin
-OSG_PACKAGE=OpenSceneGraph-3.4.0
+OSG_PACKAGE=OpenSceneGraph-dae-plugin
+#OSG_PACKAGE=OpenSceneGraph-3.4.0
 
 WGET=wget --quiet
 UNZIP=unzip -qq
@@ -254,7 +254,7 @@ OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
 	OpenSceneGraph-3.4.0.checkout
 gepetto-viewer.configure.dep: ${OSG_PACKAGE}.install \
 	gepetto-viewer.checkout
-gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
+gepetto-viewer-corba.configure.dep: gepetto-viewer.install pythonqt.install \
 	gepetto-viewer-corba.checkout
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
@@ -266,7 +266,6 @@ hpp_universal_robot.configure.dep: universal_robot.install \
 hpp-environments.configure.dep: hpp-environments.checkout
 baxter_common.configure.dep: baxter_common.checkout
 hpp-baxter.configure.dep: baxter_common.install hpp-baxter.checkout
-pythonqt.configure.dep: pythonqt.checkout
 hpp_romeo.configure.dep: romeo.install hpp_romeo.checkout
 romeo.configure.dep: romeo.checkout
 
