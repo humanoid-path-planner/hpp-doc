@@ -56,11 +56,18 @@ sudo apt-get install autoconf g++ cmake doxygen libboost-dev liburdfdom-dev liba
      - the packages will be installed in `$DEVEL_DIR/install`.
      It is recommanded to set variable `DEVEL_DIR` in your `.bashrc` for future use.
 
+    ```bash
+    mkdir -p $DEVEL_DIR/src
+    mkdir -p $DEVEL_DIR/config
+    ```
   4. Copy Config and Makefile
 
     ```bash
 wget -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config.sh
 wget -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile
+wget -O $DEVEL_DIR/config/ubuntu-16.04-kinetic.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config/ubuntu-16.04-kinetic.sh
+wget -O $DEVEL_DIR/config/ubuntu-14.04-indigo.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config/ubuntu-14.04-indigo.sh
+chmod 755  $DEVEL_DIR/config/ubuntu-14.04-indigo.sh $DEVEL_DIR/config/ubuntu-16.04-kinetic.sh
     ```
 
   5. cd into `$DEVEL_DIR` and type
