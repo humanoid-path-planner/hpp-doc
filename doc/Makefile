@@ -23,8 +23,8 @@ else
   BUILD_FOLDER=build-rel
 endif
 
-#OSG_PACKAGE=OpenSceneGraph-dae-plugin
-OSG_PACKAGE=OpenSceneGraph-3.4.0
+OSG_PACKAGE=OpenSceneGraph-dae-plugin
+#OSG_PACKAGE=OpenSceneGraph-3.4.0
 
 WGET=wget --quiet
 UNZIP=unzip -qq
