@@ -1,1 +1,1 @@
-config/ubuntu-16.04-kinetic.sh
+config/ubuntu-14.04-indigo.sh

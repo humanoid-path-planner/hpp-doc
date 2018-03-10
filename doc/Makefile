@@ -23,8 +23,8 @@ else
   BUILD_FOLDER=build-rel
 endif
 
-OSG_PACKAGE=OpenSceneGraph-dae-plugin
-#OSG_PACKAGE=OpenSceneGraph-3.4.0
+#OSG_PACKAGE=OpenSceneGraph-dae-plugin
+OSG_PACKAGE=OpenSceneGraph-3.4.0
 
 WGET=wget --quiet
 UNZIP=unzip -qq
@@ -182,7 +182,7 @@ else
   hpp-manipulation-corba_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
 endif
 
-all: hpp_tutorial.install hpp-gepetto-viewer.install
+all: doxygen-1.8.10.install hpp_tutorial.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_DIR/install/setup.bash before installing hrp2.
@@ -385,6 +385,21 @@ OpenSceneGraph-3.4.0.checkout:
 		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
 		rm -f OpenSceneGraph-3.4.0.zip;\
 	fi
+
+doxygen-1.8.10.checkout:
+	if [ -d $(@:.checkout=) ]; then \
+		echo "$(@:.checkout=) already checkout out."; \
+	else \
+	  ${WGET} -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | ${TAR} -xz;\
+	fi
+
+doxygen-1.8.10.configure: doxygen-1.8.10.configure.dep
+	@ :
+
+doxygen-1.8.10.install: doxygen-1.8.10.configure
+	cd ${SRC_DIR}/doxygen-1.8.10;\
+  mkdir -p ${DEVEL_DIR}/install/bin;\
+  install --mode=755 -t ${DEVEL_DIR}/install/bin bin/doxygen
 
 roboptim-trajectory-3.1.checkout:
 	if [ -d $(@:.checkout=) ]; then \
