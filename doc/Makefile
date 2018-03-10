@@ -189,19 +189,15 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install
 hrp2: test-hpp.install
 
 hpp-doc.configure.dep: hpp-doc.checkout
-hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
-eigen3.configure.dep: eigen3.checkout
-doxygen-1.8.10.configure.dep: doxygen-1.8.10.checkout
-roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
+hpp-fcl.configure.dep: hpp-fcl.checkout
+roboptim-core-3.1.configure.dep: roboptim-core-3.1.checkout
 roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
 	roboptim-trajectory-3.1.checkout
 hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
         roboptim-trajectory-3.1.install hpp-walkgen.checkout
 hpp-util.configure.dep: hpp-util.checkout
-hpp-model.configure.dep: hpp-util.install hpp-fcl.install \
-	eigen3.install hpp-model.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
-pinocchio.configure.dep: eigen3.install hpp-fcl.install pinocchio.checkout
+pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
 hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
 	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
@@ -356,20 +352,6 @@ update:
 		cat .git/refs/heads/${$(@:.log=)_branch}; \
 	fi
 
-eigen3.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-		${WGET} -O - "http://bitbucket.org/eigen/eigen/get/3.2.4.tar.bz2" | ${TAR} -xj; \
-		mv eigen-eigen-10219c95fe65 eigen3;\
-	fi
-
-eigen3.configure: eigen3.configure.dep
-	cd ${SRC_DIR}/eigen3;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/eigen3/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -Dpkg_config_libdir=${INSTALL_DIR}/lib ..
-
 roboptim-core-3.1.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
@@ -459,18 +441,3 @@ romeo.configure: romeo.configure.dep
 
 romeo.install: romeo.configure
 	${MAKE} -C ${SRC_DIR}/romeo/romeo_description/${BUILD_FOLDER} install
-
-doxygen-1.8.10.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-		${WGET} -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | ${TAR} -xz;\
-	fi
-
-doxygen-1.8.10.configure_nodep:
-	@ :
-
-doxygen-1.8.10.install: doxygen-1.8.10.configure
-	cd ${SRC_DIR}/doxygen-1.8.10;\
-	mkdir -p ${DEVEL_DIR}/install/bin;\
-	install --mode=755 -t ${DEVEL_DIR}/install/bin bin/doxygen
