@@ -43,5 +43,3 @@ RUN apt-get update -qqy && apt-get install -qqy \
    && rm -rf /var/lib/apt/lists/*
 
 COPY script/auto-install-hpp.sh /
-
-ENTRYPOINT /auto-install-hpp.sh

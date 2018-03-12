@@ -7,8 +7,8 @@ variables:
 .build_template: &build_definition
     stage: build
     script:
-      - cp /clean_workspace $DEVEL_DIR
-      - /auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME}
+      - cp -r /clean_workspace $DEVEL_DIR
+      - /auto-install-hpp.sh --branch devel
     artifacts:
       paths:
         - workspace
@@ -34,28 +34,44 @@ variables:
       paths:
         - workspace
 
-master-16-build:
+master-build:
     image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:16.04
     only:
       - master
     <<: *build_definition
 
-devel-14-build:
-    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:14.04
+ubuntu-14.04-build:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
     only:
-      -  devel
+      - ubuntu-14.04
     <<: *build_definition
 
-devel-16-build:
+devel-build:
     image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:16.04
     only:
       -  devel
     <<: *build_definition
 
-devel-16-test:
+master-test:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:16.04
+    dependencies:
+      - master-build
+    only:
+      - master
+    <<: *test_definition
+
+ubuntu-14.04-test:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
+    dependencies:
+      - ubuntu-14.04-build
+    only:
+      - ubuntu-14.04
+    <<: *test_definition
+
+devel-test:
     image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:16.04
     dependencies:
-      - devel-16-build
+      - devel-build
     only:
       -  devel
     <<: *test_definition
