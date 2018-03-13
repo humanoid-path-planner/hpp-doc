@@ -17,19 +17,20 @@ variables:
 .test_template: &test_definition
     stage: test
     script:
+      - source $DEVEL_DIR/config.sh
       - cd $DEVEL_DIR/src/hpp-util/build-rel && make test
       - cd $DEVEL_DIR/src/hpp-fcl/build-rel && make test
       - cd $DEVEL_DIR/src/hpp-pinocchio/build-rel && make test
       - cd $DEVEL_DIR/src/hpp-statistics/build-rel && make test
       - cd $DEVEL_DIR/src/hpp-constraints/build-rel && make test
       - cd $DEVEL_DIR/src/hpp-core/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-corbaserver/build-rel && make test
+        #- cd $DEVEL_DIR/src/hpp-corbaserver/build-rel && make test
       - cd $DEVEL_DIR/src/hpp-manipulation/build-rel && make test
       - cd $DEVEL_DIR/src/hpp-manipulation-urdf/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-manipulation-corba/build-rel && make test
+        #- cd $DEVEL_DIR/src/hpp-manipulation-corba/build-rel && make test
       - cd $DEVEL_DIR/src/hpp-walkgen/build-rel && make test
       - cd $DEVEL_DIR/src/hpp-wholebody-step/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-wholebody-step-corba/build-rel && make test
+        #- cd $DEVEL_DIR/src/hpp-wholebody-step-corba/build-rel && make test
     allow_failure: true
     artifacts:
       paths:
