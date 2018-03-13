@@ -32,6 +32,7 @@ TAR=tar
 GIT_QUIET=--quiet
 # Qt version should be either 4 or 5
 QT_VERSION=4
+INSTALL_DOCUMENTATION=ON
 
 hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
@@ -325,7 +326,10 @@ update:
 %.configure_nodep:%.checkout
 	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \ -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
+			-DINSTALL_DOCUMENTATION=${INSTALL_DOCUMENTATION} \
+			-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" \
+			${$(@:.configure_nodep=)_extra_flags} ..
 
 %.install:%.configure
 	${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install
