@@ -1,4 +1,0 @@
-FROM eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:14.04
-
-RUN /auto-install-hpp.sh --branch master --target doxygen-1.8.10.install
-RUN /auto-install-hpp.sh --branch master --target OpenSceneGraph-dae-plugin.install
