@@ -23,7 +23,7 @@ case $HOST_DIST in
       ros-kinetic-resource-retriever ros-kinetic-srdfdom ros-kinetic-pr2-description flex \
       bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl \
       omniidl-python libltdl-dev python-matplotlib libxml2 libtinyxml2-dev \
-      liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 oxygen-icon-theme \
+      liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 libqtwebkit-dev oxygen-icon-theme \
       libopenscenegraph-dev openscenegraph libpcre3-dev"
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-16.04-kinetic.sh"

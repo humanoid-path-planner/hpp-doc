@@ -40,6 +40,7 @@ RUN apt-get install -qqy \
       libltdl-dev \
       qt4-dev-tools \
       libqt4-opengl-dev \
+      libqtwebkit-dev \
       libqtgui4 \
       oxygen-icon-theme \
       libopenscenegraph-dev \
