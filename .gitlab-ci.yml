@@ -50,7 +50,7 @@ variables:
 master-build:
     image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:16.04
     only:
-      - master
+      - future
     <<: *build_definition
 
 ubuntu-14.04-build:
@@ -70,7 +70,7 @@ master-test:
     dependencies:
       - master-build
     only:
-      - master
+      - future
     <<: *test_definition
 
 ubuntu-14.04-test:
@@ -94,7 +94,7 @@ master-doc:
     dependencies:
       - master-build
     only:
-      - master
+      - future
     <<: *doc_definition
 
 ubuntu-14.04-doc:
