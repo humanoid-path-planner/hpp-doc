@@ -1,10 +1,11 @@
 FROM eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:16.04
 
-RUN export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
+<<<<<<< HEAD
+RUN export DEVEL_HPP_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
       /auto-install-hpp.sh --branch master --target OpenSceneGraph-dae-plugin.install
-RUN export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
+RUN export DEVEL_HPP_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
       /auto-install-hpp.sh --branch master --target qpOASES.install
-RUN export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
+RUN export DEVEL_HPP_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
       /auto-install-hpp.sh --branch master --target roboptim-trajectory-3.1.install
-RUN export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
-      mv $DEVEL_DIR /clean_workspace
+RUN export DEVEL_HPP_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
+      mv $DEVEL_HPP_DIR /clean_workspace
