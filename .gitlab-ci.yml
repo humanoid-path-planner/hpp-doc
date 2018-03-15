@@ -1,14 +1,14 @@
 variables:
     GIT_SSL_NO_VERIFY: "true"
     GIT_SUBMODULE_STRATEGY: "recursive"
-    DEVEL_DIR: "$CI_PROJECT_DIR/workspace"
+    DEVEL_HPP_DIR: "$CI_PROJECT_DIR/workspace"
     BUILD_TYPE: "Release"
 
 .build_template: &build_definition
     stage: build
     script:
       - export INSTALL_DOCUMENTATION=OFF
-      - cp -r /clean_workspace $DEVEL_DIR
+      - cp -r /clean_workspace $DEVEL_HPP_DIR
       - /auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME}
     artifacts:
       paths:
@@ -17,20 +17,31 @@ variables:
 .test_template: &test_definition
     stage: test
     script:
-      - source $DEVEL_DIR/config.sh
-      - cd $DEVEL_DIR/src/hpp-util/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-fcl/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-pinocchio/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-statistics/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-constraints/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-core/build-rel && make test
-        #- cd $DEVEL_DIR/src/hpp-corbaserver/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-manipulation/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-manipulation-urdf/build-rel && make test
-        #- cd $DEVEL_DIR/src/hpp-manipulation-corba/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-walkgen/build-rel && make test
-      - cd $DEVEL_DIR/src/hpp-wholebody-step/build-rel && make test
-        #- cd $DEVEL_DIR/src/hpp-wholebody-step-corba/build-rel && make test
+      - source $DEVEL_HPP_DIR/config.sh
+      - cd $DEVEL_HPP_DIR/src/hpp-util/build-rel && make test
+      - cd $DEVEL_HPP_DIR/src/hpp-fcl/build-rel && make test
+      - cd $DEVEL_HPP_DIR/src/hpp-pinocchio/build-rel && make test
+      - cd $DEVEL_HPP_DIR/src/hpp-statistics/build-rel && make test
+      - cd $DEVEL_HPP_DIR/src/hpp-constraints/build-rel && make test
+      - cd $DEVEL_HPP_DIR/src/hpp-core/build-rel && make test
+        #- cd $DEVEL_HPP_DIR/src/hpp-corbaserver/build-rel && make test
+      - cd $DEVEL_HPP_DIR/src/hpp-manipulation/build-rel && make test
+      - cd $DEVEL_HPP_DIR/src/hpp-manipulation-urdf/build-rel && make test
+        #- cd $DEVEL_HPP_DIR/src/hpp-manipulation-corba/build-rel && make test
+      - cd $DEVEL_HPP_DIR/src/hpp-walkgen/build-rel && make test
+      - cd $DEVEL_HPP_DIR/src/hpp-wholebody-step/build-rel && make test
+        #- cd $DEVEL_HPP_DIR/src/hpp-wholebody-step-corba/build-rel && make test
+    allow_failure: true
+    artifacts:
+      paths:
+        - workspace
+
+.doc_template: &doc_definition
+    stage: deploy
+    script:
+      - export INSTALL_DOCUMENTATION=ON
+      - make -C $DEVEL_HPP_DIR/src -s all
+      - tar czf hpp.${CI_COMMIT_REF_NAME}.`date +"%Y%m%d"`.tar.gz $DEVEL_HPP_DIR/install/share/doc
     allow_failure: true
     artifacts:
       paths:
@@ -77,3 +88,27 @@ devel-test:
     only:
       -  devel
     <<: *test_definition
+
+master-doc:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:16.04
+    dependencies:
+      - master-build
+    only:
+      - master
+    <<: *doc_definition
+
+ubuntu-14.04-doc:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
+    dependencies:
+      - ubuntu-14.04-build
+    only:
+      - ubuntu-14.04
+    <<: *doc_definition
+
+devel-doc:
+    image: eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    dependencies:
+      - devel-build
+    only:
+      -  devel
+    <<: *doc_definition
