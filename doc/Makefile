@@ -10,8 +10,10 @@ HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 RETHINK_ROBOTICS_REPO=https://github.com/RethinkRobotics
 
-SRC_DIR=${DEVEL_DIR}/src
-INSTALL_DIR=${DEVEL_DIR}/install
+SRC_DIR=${DEVEL_HPP_DIR}/src
+ifndef INSTALL_HPP_DIR
+INSTALL_HPP_DIR=${DEVEL_HPP_DIR}/install
+endif
 
 # Whether to compute humanoid specific part
 HUMANOID=TRUE
@@ -163,8 +165,8 @@ hpp_romeo_repository=${HPP_REPO}
 romeo_branch=master
 romeo_repository=${HPP_REPO}
 
-OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom
-OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_DIR}/include/collada-dom -DLIB_POSTFIX=""
+OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
+OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
 collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
 
@@ -185,7 +187,7 @@ endif
 all: hpp_tutorial.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
-# source $DEVEL_DIR/install/setup.bash before installing hrp2.
+# source $DEVEL_HPP_DIR/install/setup.bash before installing hrp2.
 hrp2: test-hpp.install
 
 hpp-doc.configure.dep: hpp-doc.checkout
@@ -326,7 +328,7 @@ update:
 %.configure_nodep:%.checkout
 	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
 			-DINSTALL_DOCUMENTATION=${INSTALL_DOCUMENTATION} \
 			-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" \
 			${$(@:.configure_nodep=)_extra_flags} ..
@@ -380,11 +382,11 @@ roboptim-trajectory-3.1.checkout:
 	fi
 
 hrp2.configure: hrp2.configure.dep
-	. ${INSTALL_DIR}/setup.sh; \
+	. ${INSTALL_HPP_DIR}/setup.sh; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 hrp2.install: hrp2.configure
 	${MAKE} -C ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER} install
@@ -393,11 +395,11 @@ robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 	cd ${SRC_DIR}/$(@:.configure=)/urdf_parser_py;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 robot_model_py.install: robot_model_py.configure
 	${MAKE} -C ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER} install; \
@@ -406,7 +408,7 @@ robot_model_py.install: robot_model_py.configure
 universal_robot.configure_nodep:
 	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/ur_description/${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure_nodep=)/ur_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_HPP_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..
 
 universal_robot.install_nodep:universal_robot.configure_nodep
 	cd ${SRC_DIR}/$(@:.install_nodep=)/ur_description/${BUILD_FOLDER};\
@@ -419,10 +421,10 @@ universal_robot.install:universal_robot.configure
 baxter_common.configure_nodep:
 	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/baxter_description/${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure_nodep=)/baxter_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..; \
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_HPP_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..; \
 	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/rethink_ee_description/${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure_nodep=)/rethink_ee_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_HPP_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..
 
 baxter_common.install_nodep:baxter_common.configure_nodep
 	cd ${SRC_DIR}/$(@:.install_nodep=)/baxter_description/${BUILD_FOLDER};\
@@ -437,11 +439,11 @@ baxter_common.install:baxter_common.configure
 	make install
 
 romeo.configure: romeo.configure.dep
-	. ${INSTALL_DIR}/setup.sh; \
+	. ${INSTALL_HPP_DIR}/setup.sh; \
 	cd ${SRC_DIR}/romeo/romeo_description;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/romeo/romeo_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 romeo.install: romeo.configure
 	${MAKE} -C ${SRC_DIR}/romeo/romeo_description/${BUILD_FOLDER} install
