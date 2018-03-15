@@ -41,7 +41,7 @@ function _confirm () {
 # Generate a tar ball and send it to the remote server.
 if [ ! -f /tmp/hpp.tar.gz ]; then
   echo "Generating tarball... (This may take a while)"
-  generate-tar-doc $DEVEL_DIR/install/share/doc $VERSIONURL
+  generate-tar-doc $DEVEL_HPP_DIR/install/share/doc $VERSIONURL
 else
   echo "Tarball already generated."
   _confirm "Should I use existing /tmp/hpp.tar.gz ?"

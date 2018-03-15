@@ -23,7 +23,7 @@ case $HOST_DIST in
       ros-kinetic-resource-retriever ros-kinetic-srdfdom ros-kinetic-pr2-description flex \
       bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl \
       omniidl-python libltdl-dev python-matplotlib libxml2 libtinyxml2-dev \
-      liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 oxygen-icon-theme \
+      liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 libqtwebkit-dev oxygen-icon-theme \
       libopenscenegraph-dev openscenegraph libpcre3-dev"
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-16.04-kinetic.sh"
@@ -38,8 +38,8 @@ MAKE_TARBALL=false
 TARGET=all
 
 BRANCH=""
-if [ -z ${DEVEL_DIR} ]; then
-  export DEVEL_DIR=/local/devel/hpp
+if [ -z ${DEVEL_HPP_DIR} ]; then
+  export DEVEL_HPP_DIR=/local/devel/hpp
 fi
 if [ -z ${BUILD_TYPE} ]; then
   export BUILD_TYPE=Release
@@ -78,7 +78,7 @@ do
       exit 0
       ;;
     -v)
-      for v in "DEVEL_DIR" "BUILD_TYPE" "MAKE_TARBALL" "BRANCH"
+      for v in "DEVEL_HPP_DIR" "BUILD_TYPE" "MAKE_TARBALL" "BRANCH"
       do
         echo "$v=${!v}"
       done
@@ -111,29 +111,29 @@ sudo apt-get --assume-yes install ${APT_DEP}
 [[ -z $APT_BUILD_DEP ]] || sudo apt-get --assume-yes build-dep ${APT_BUILD_DEP}
 
 # Setup environment
-mkdir --parents $DEVEL_DIR
-mkdir --parents $DEVEL_DIR/src
-mkdir --parents $DEVEL_DIR/install
+mkdir --parents $DEVEL_HPP_DIR
+mkdir --parents $DEVEL_HPP_DIR/src
+mkdir --parents $DEVEL_HPP_DIR/install
 
 # Get config script
-wget -q -O $DEVEL_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config/${CONFIG_FILE}
-wget -q -O $DEVEL_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/Makefile
+wget -q -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config/${CONFIG_FILE}
+wget -q -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/Makefile
 
-source $DEVEL_DIR/config.sh
+source $DEVEL_HPP_DIR/config.sh
 
-cd $DEVEL_DIR/src
+cd $DEVEL_HPP_DIR/src
 
 make -s -e robot_state_chain_publisher.install
 source ../config.sh
 make -s -e $TARGET
 
 if [ ${MAKE_TARBALL} = true ]; then
-  cd $DEVEL_DIR/
+  cd $DEVEL_HPP_DIR/
   mkdir tarball
   SUFFIX="${BRANCH}-`date +%Y%m%d`-${BUILD_TYPE}"
   tar czf "tarball/hpp.src.${SUFFIX}.tar.gz" src/ install/ config.sh
   tar czf "tarball/hpp.${SUFFIX}.tar.gz" install/ config.sh
-  INSTALL="$DEVEL_DIR/tarball/check.${SUFFIX}.sh"
+  INSTALL="$DEVEL_HPP_DIR/tarball/check.${SUFFIX}.sh"
   echo "#!/bin/bash" > ${INSTALL}
   echo "# Dependencies" >> ${INSTALL}
   echo "sudo apt-get install $APT_DEP" >> ${INSTALL}

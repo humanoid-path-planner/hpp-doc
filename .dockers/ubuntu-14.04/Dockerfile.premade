@@ -1,14 +1,14 @@
 FROM eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:14.04
 
-RUN export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
+RUN export DEVEL_HPP_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
     /auto-install-hpp.sh --branch ubuntu-14.04 --target doxygen-1.8.10.install
-RUN export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
+RUN export DEVEL_HPP_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
     /auto-install-hpp.sh --branch ubuntu-14.04 --target OpenSceneGraph-dae-plugin.install
-RUN export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
+RUN export DEVEL_HPP_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
     /auto-install-hpp.sh --branch ubuntu-14.04 --target qpOASES.install
-RUN export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
+RUN export DEVEL_HPP_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
     /auto-install-hpp.sh --branch ubuntu-14.04 --target eigen3.install
-RUN export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
+RUN export DEVEL_HPP_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
     /auto-install-hpp.sh --branch ubuntu-14.04 --target roboptim-trajectory-3.1.install
-RUN export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
-    mv $DEVEL_DIR /clean_workspace
+RUN export DEVEL_HPP_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
+    mv $DEVEL_HPP_DIR /clean_workspace
