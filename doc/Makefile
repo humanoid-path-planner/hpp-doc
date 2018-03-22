@@ -264,8 +264,7 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install pythonqt.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
-universal_robot.configure.dep: universal_robot.install \
-	universal_robot.checkout
+universal_robot.configure.dep: universal_robot.checkout
 hpp_universal_robot.configure.dep: universal_robot.install \
 	hpp_universal_robot.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
