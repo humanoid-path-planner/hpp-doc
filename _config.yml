@@ -19,6 +19,6 @@ category_list:
     icon: wrench
     links:
       - name: View on Github
-        url: http://www.github.com/stack-of-tasks/pinocchio
+        url: https://github.com/humanoid-path-planner/hpp-doc
   - name: Support
     icon: question-circle
