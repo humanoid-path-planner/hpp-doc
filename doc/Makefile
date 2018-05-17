@@ -187,6 +187,9 @@ endif
 all: hpp_tutorial.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
+benchmark: all hpp_romeo.install hpp_universal_robot.install \
+	hpp-baxter.install hpp-environments.install
+
 # source $DEVEL_HPP_DIR/install/setup.bash before installing hrp2.
 hrp2: test-hpp.install
 
