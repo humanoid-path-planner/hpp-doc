@@ -9,7 +9,7 @@ variables:
     script:
       - export INSTALL_DOCUMENTATION=OFF
       - cp -r /clean_workspace $DEVEL_HPP_DIR
-      - /auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME} --target benchmark
+      - $CI_PROJECT_DIR/script/auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME} --gitrepo https://gepgitlab.laas.fr/humanoid-path-planner/hpp-doc/raw --target benchmark
     artifacts:
       paths:
         - workspace

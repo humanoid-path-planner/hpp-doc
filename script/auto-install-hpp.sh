@@ -34,6 +34,7 @@ case $HOST_DIST in
     ;;
 esac
 
+GITREPO="https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc"
 MAKE_TARBALL=false
 TARGET=all
 
@@ -50,6 +51,11 @@ do
   case $1 in
     --mktar)
       MAKE_TARBALL=true
+      ;;
+    --gitrepo)
+      shift
+      GITREPO=$1
+      echo "Will download Makefile and config.sh from $GITREPO"
       ;;
     --show-dep)
       echo "Will install"
@@ -71,6 +77,7 @@ do
     --help)
       echo "Options are"
       echo "--branch:         \tbranch which should be installed"
+      echo "--gitrepo:        \trepository where to download makefile and config.sh"
       echo "--mktar:          \tmake tar balls after compilation"
       echo "--show-dep:       \tshow dependencies resolved by aptitude"
       echo "--target TARGET:  \tinstall TARGET (default: all)"
@@ -116,8 +123,8 @@ mkdir --parents $DEVEL_HPP_DIR/src
 mkdir --parents $DEVEL_HPP_DIR/install
 
 # Get config script
-wget -q -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config/${CONFIG_FILE}
-wget -q -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/Makefile
+wget -q -O $DEVEL_HPP_DIR/config.sh ${GITREPO}/${BRANCH}/doc/config/${CONFIG_FILE}
+wget -q -O $DEVEL_HPP_DIR/src/Makefile ${GITREPO}/${BRANCH}/doc/Makefile
 
 source $DEVEL_HPP_DIR/config.sh
 
