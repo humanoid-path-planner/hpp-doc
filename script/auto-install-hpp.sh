@@ -5,7 +5,7 @@ set -e
 HOST_DIST=$(lsb_release -s -c)
 case $HOST_DIST in
   trusty)
-    APT_DEP="autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
+    APT_DEP="g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
       ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs \
       ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap \
       ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-description flex \
@@ -17,7 +17,7 @@ case $HOST_DIST in
     CONFIG_FILE="ubuntu-14.04-indigo.sh"
     ;;
   xenial)
-    APT_DEP="autoconf g++ cmake doxygen libboost-dev liburdfdom-dev \
+    APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev \
       libassimp-dev ros-kinetic-xacro ros-kinetic-kdl-parser ros-kinetic-common-msgs \
       ros-kinetic-tf ros-kinetic-tf-conversions libccd-dev ros-kinetic-octomap \
       ros-kinetic-resource-retriever ros-kinetic-srdfdom ros-kinetic-pr2-description flex \
