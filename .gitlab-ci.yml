@@ -61,25 +61,25 @@ variables:
         - workspace
 
 master-build:
-    image: gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:16.04
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
     only:
       - future
     <<: *build_definition
 
 ubuntu-14.04-build:
-    image: gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
     only:
       - ubuntu-14.04
     <<: *build_definition
 
 devel-build:
-    image: gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
     only:
       -  devel
     <<: *build_definition
 
 master-test:
-    image: gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:16.04
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
     dependencies:
       - master-build
     only:
@@ -87,7 +87,7 @@ master-test:
     <<: *test_definition
 
 ubuntu-14.04-test:
-    image: gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
     dependencies:
       - ubuntu-14.04-build
     only:
@@ -95,7 +95,7 @@ ubuntu-14.04-test:
     <<: *test_definition
 
 devel-test:
-    image: gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
     dependencies:
       - devel-build
     only:
@@ -103,7 +103,7 @@ devel-test:
     <<: *test_definition
 
 master-doc:
-    image: gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:16.04
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
     dependencies:
       - master-build
     only:
@@ -111,7 +111,7 @@ master-doc:
     <<: *doc_definition
 
 ubuntu-14.04-doc:
-    image: gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
     dependencies:
       - ubuntu-14.04-build
     only:
@@ -119,7 +119,7 @@ ubuntu-14.04-doc:
     <<: *doc_definition
 
 devel-doc:
-    image: gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
     dependencies:
       - devel-build
     only:
