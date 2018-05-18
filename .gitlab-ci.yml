@@ -11,6 +11,7 @@ variables:
       - cp -r /clean_workspace $DEVEL_HPP_DIR
       - $CI_PROJECT_DIR/script/auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME} --gitrepo https://gepgitlab.laas.fr/humanoid-path-planner/hpp-doc/raw --target benchmark
     artifacts:
+      expire_in: 1 day
       when: always
       paths:
         - workspace
@@ -40,6 +41,7 @@ variables:
       - exit $status
     allow_failure: true
     artifacts:
+      expire_in: 1 day
       when: always
       paths:
         - workspace
@@ -56,6 +58,7 @@ variables:
       - tar czf ${DEVEL_HPP_DIR}/hpp.${CI_COMMIT_REF_NAME}.`date +"%Y%m%d"`.tar.gz $DEVEL_HPP_DIR/install/share/doc
     allow_failure: true
     artifacts:
+      expire_in: 1 day
       when: always
       paths:
         - workspace
