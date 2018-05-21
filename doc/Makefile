@@ -187,12 +187,11 @@ endif
 all: hpp_tutorial.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
-benchmark: all hpp_romeo.install hpp_universal_robot.install \
-	hpp-baxter.install hpp-environments.install
-	${MAKE} hpp-pinocchio.install_nodep
-
-# source $DEVEL_HPP_DIR/install/setup.bash before installing hrp2.
-hrp2: test-hpp.install
+# For test and benchmark, install robot packages first
+benchmark: romeo.install universal_robot.install hpp-environments.install \
+	hrp2.install
+	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
+	${MAKE} hpp-doc.install
 
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: hpp-fcl.checkout
