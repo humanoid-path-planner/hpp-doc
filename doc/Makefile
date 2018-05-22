@@ -184,10 +184,20 @@ endif
 all: hpp_tutorial.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
-# For test and benchmark, install robot packages first
-benchmark: romeo.install universal_robot.install hpp-environments.install \
-	hrp2.install
+# For test on gepgitlab, install robot packages first
+test-ci: baxter_common.install romeo.install universal_robot.install \
+	hpp-environments.install
+	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install \
+	hpp_universal_robot.install; \
+	${MAKE} hpp-doc.install
+
+# For benchmark, install robot packages first
+benchmark: baxter_common.install romeo.install universal_robot.install \
+	hpp-environments.install hrp2.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
+	${MAKE} hpp-baxter.install hpp_romeo.install \
+	hpp_universal_robot.install hpp-hrp2.install; \
+	${MAKE} hpp_benchmark.checkout; \
 	${MAKE} hpp-doc.install
 
 hpp-doc.configure.dep: hpp-doc.checkout
