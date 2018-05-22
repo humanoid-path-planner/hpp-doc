@@ -79,7 +79,7 @@ source config.sh
 
     ```bash
 cd ${DEVEL_HPP_DIR}/src
-make robot_state_chain_publisher.install;
+make iai_maps.install;
 source ../config.sh;
 make all
     ```

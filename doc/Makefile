@@ -107,9 +107,6 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 hpp-manipulation-corba_branch=devel
 hpp-manipulation-corba_repository=${HPP_REPO}
 
-robot_state_chain_publisher_branch=master
-robot_state_chain_publisher_repository=${HPP_REPO}
-
 iai_maps_branch=devel
 iai_maps_repository=${HPP_REPO}
 
@@ -249,8 +246,7 @@ hrp2.configure.dep: robot_capsule_urdf.install robot_model_py.install \
 	hrp2.checkout
 test-hpp.configure.dep: hpp-wholebody-step-corba.install \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
-robot_state_chain_publisher.configure.dep: robot_state_chain_publisher.checkout
-iai_maps.configure.dep: robot_state_chain_publisher.install iai_maps.checkout
+iai_maps.configure.dep: iai_maps.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_benchmark.checkout

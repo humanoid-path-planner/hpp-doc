@@ -130,7 +130,7 @@ source $DEVEL_HPP_DIR/config.sh
 
 cd $DEVEL_HPP_DIR/src
 
-make -s -e robot_state_chain_publisher.install
+make -s -e iai_maps.install
 source ../config.sh
 make -s -e $TARGET
 
