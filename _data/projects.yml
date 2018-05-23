@@ -10,21 +10,21 @@
   title: Manipulation planning
   description: "A sequence of tasks is automatically discovered during the planning in order to swap the position of the boxes."
   video:
-    url: http://homepages.laas.fr/jmirabel/raw/videos/baxter_three_boxes.mp4
+    url: https://homepages.laas.fr/jmirabel/raw/videos/baxter_three_boxes.mp4
 
 - name: manipulation_romeo_placard
   id: 10
   title: Manipulation planning
   description: "Romeo rotates a placard. Each hand can grasp the placard with one degree of freedom in rotation, thus the space of valid grasps for each hand is continuous. This case illustrates the <em>crossing foliation issue</em>."
   video:
-    url: http://homepages.laas.fr/jmirabel/raw/videos/romeo_placard.mp4
+    url: https://homepages.laas.fr/jmirabel/raw/videos/romeo_placard.mp4
 
 - name: multicontact_hrp2_standup
   id: 4
   title: Multi-contact locomotion - Stand up
   description: "A sequence of contact configurations for a multiped robot is computed. Position constraint and static equilibrium constraint are used to create and maintain contacts along the sequence."
   video:
-    url: http://homepages.laas.fr/jmirabel/raw/videos/hrp2_standup.mp4
+    url: https://homepages.laas.fr/jmirabel/raw/videos/hrp2_standup.mp4
 
 #- name: multicontact_hrp2_stairs
 #id: 5
@@ -40,14 +40,14 @@
   title: Constraint based path optimization
   description: "Path optimization algorithm based on collision constraints, automatically built between bodies close to collision."
   video:
-    url: http://homepages.laas.fr/jmirabel/raw/videos/campana16optim.mp4
+    url: https://homepages.laas.fr/jmirabel/raw/videos/campana16optim.mp4
 
 - name: rod_planning
   id: 7
   title: Elastic rod planning.
   description: "Integration of external software: QSERL and XDE are used to implement a dedicated steering method for elastic rod planning.<br/><em>Engine model courtesy of Siemens-KineoCAM.</em>"
   video:
-    url: http://homepages.laas.fr/jmirabel/raw/videos/rod_planning.mp4
+    url: https://homepages.laas.fr/jmirabel/raw/videos/rod_planning.mp4
 
 - name: manipulation_pr2_drawer
   id: 8
@@ -61,7 +61,7 @@
   title: Locomotion planning expressed as a Manipulation planning problem
   description: "The locomotion planning problem is expressed as a Manipulation planning problem."
   video:
-    url: http://homepages.laas.fr/jmirabel/raw/videos/hrp2_stairs.mp4
+    url: https://homepages.laas.fr/jmirabel/raw/videos/hrp2_stairs.mp4
 
 - name: hpp-showcase
   id: 0
@@ -75,7 +75,7 @@
   title: HPP manipulation stack demonstration
   description: "Differents features that can be achieved using the manipulation stack of the Humanoid Path Planner"
   video:
-    url: http://homepages.laas.fr/jmirabel/article/iros16manip/video.mp4
+    url: https://homepages.laas.fr/jmirabel/article/iros16manip/video.mp4
 
 #### Examples of format to use. Remember : 1 image or 1 video. not both
 # - name: pg-ellipses
