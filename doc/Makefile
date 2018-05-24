@@ -108,9 +108,6 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 hpp-manipulation-corba_branch=master
 hpp-manipulation-corba_repository=${HPP_REPO}
 
-robot_state_chain_publisher_branch=master
-robot_state_chain_publisher_repository=${HPP_REPO}
-
 iai_maps_branch=master
 iai_maps_repository=${HPP_REPO}
 
@@ -188,8 +185,21 @@ endif
 all: hpp_tutorial.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
-# source $DEVEL_HPP_DIR/install/setup.bash before installing hrp2.
-hrp2: test-hpp.install
+# For test on gepgitlab, install robot packages first
+test-ci: baxter_common.install romeo.install universal_robot.install \
+	hpp-environments.install
+	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install \
+	hpp_universal_robot.install; \
+	${MAKE} hpp-doc.install
+
+# For benchmark, install robot packages first
+benchmark: baxter_common.install romeo.install universal_robot.install \
+	hpp-environments.install hrp2.install
+	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
+	${MAKE} hpp-baxter.install hpp_romeo.install \
+	hpp_universal_robot.install hpp-hrp2.install; \
+	${MAKE} hpp_benchmark.checkout; \
+	${MAKE} hpp-doc.install
 
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: hpp-fcl.checkout
@@ -247,8 +257,7 @@ hrp2.configure.dep: robot_capsule_urdf.install robot_model_py.install \
 	hrp2.checkout
 test-hpp.configure.dep: hpp-wholebody-step-corba.install \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
-robot_state_chain_publisher.configure.dep: robot_state_chain_publisher.checkout
-iai_maps.configure.dep: robot_state_chain_publisher.install iai_maps.checkout
+iai_maps.configure.dep: iai_maps.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_benchmark.checkout

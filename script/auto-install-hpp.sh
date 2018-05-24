@@ -5,7 +5,7 @@ set -e
 HOST_DIST=$(lsb_release -s -c)
 case $HOST_DIST in
   trusty)
-    APT_DEP="autoconf g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
+    APT_DEP="g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
       ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs \
       ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap \
       ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-description flex \
@@ -17,7 +17,7 @@ case $HOST_DIST in
     CONFIG_FILE="ubuntu-14.04-indigo.sh"
     ;;
   xenial)
-    APT_DEP="autoconf g++ cmake doxygen libboost-dev liburdfdom-dev \
+    APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev \
       libassimp-dev ros-kinetic-xacro ros-kinetic-kdl-parser ros-kinetic-common-msgs \
       ros-kinetic-tf ros-kinetic-tf-conversions libccd-dev ros-kinetic-octomap \
       ros-kinetic-resource-retriever ros-kinetic-srdfdom ros-kinetic-pr2-description flex \
@@ -34,6 +34,7 @@ case $HOST_DIST in
     ;;
 esac
 
+GITREPO="https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc"
 MAKE_TARBALL=false
 TARGET=all
 
@@ -50,6 +51,11 @@ do
   case $1 in
     --mktar)
       MAKE_TARBALL=true
+      ;;
+    --gitrepo)
+      shift
+      GITREPO=$1
+      echo "Will download Makefile and config.sh from $GITREPO"
       ;;
     --show-dep)
       echo "Will install"
@@ -71,6 +77,7 @@ do
     --help)
       echo "Options are"
       echo "--branch:         \tbranch which should be installed"
+      echo "--gitrepo:        \trepository where to download makefile and config.sh"
       echo "--mktar:          \tmake tar balls after compilation"
       echo "--show-dep:       \tshow dependencies resolved by aptitude"
       echo "--target TARGET:  \tinstall TARGET (default: all)"
@@ -116,14 +123,14 @@ mkdir --parents $DEVEL_HPP_DIR/src
 mkdir --parents $DEVEL_HPP_DIR/install
 
 # Get config script
-wget -q -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/config/${CONFIG_FILE}
-wget -q -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/${BRANCH}/doc/Makefile
+wget -q -O $DEVEL_HPP_DIR/config.sh ${GITREPO}/${BRANCH}/doc/config/${CONFIG_FILE}
+wget -q -O $DEVEL_HPP_DIR/src/Makefile ${GITREPO}/${BRANCH}/doc/Makefile
 
 source $DEVEL_HPP_DIR/config.sh
 
 cd $DEVEL_HPP_DIR/src
 
-make -s -e robot_state_chain_publisher.install
+make -s -e iai_maps.install
 source ../config.sh
 make -s -e $TARGET
 
