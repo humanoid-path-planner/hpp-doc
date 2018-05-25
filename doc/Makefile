@@ -59,7 +59,7 @@ hpp-core_repository=${HPP_REPO}
 hpp-core_extra_flags=-DDISABLE_TESTS=ON
 
 hpp-template-corba_branch=devel
-hpp-template-corba_repository=${LAAS_REPO}
+hpp-template-corba_repository=${HPP_REPO}
 
 hpp-corbaserver_branch=devel
 hpp-corbaserver_repository=${HPP_REPO}
