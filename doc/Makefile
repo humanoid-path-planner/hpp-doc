@@ -144,7 +144,7 @@ qgv_repository=${HPP_REPO}
 hpp-environments_branch=devel
 hpp-environments_repository=${HPP_REPO}
 
-universal_robot_branch=indigo-devel
+universal_robot_branch=kinetic
 universal_robot_repository=${HPP_REPO}
 
 hpp_universal_robot_branch=devel
