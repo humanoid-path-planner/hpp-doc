@@ -4,11 +4,11 @@
 #
 
 FCL_REPO=https://github.com/flexible-collision-library
-JRL_REPO=https://github.com/jrl-umi3218
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 RETHINK_ROBOTICS_REPO=https://github.com/RethinkRobotics
+TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
 ifndef INSTALL_HPP_DIR
@@ -83,8 +83,8 @@ hpp-wholebody-step-corba_repository=${HPP_REPO}
 test-hpp_branch=devel
 test-hpp_repository=${HPP_REPO}
 
-hrp2_branch=groovy
-hrp2_repository=${JRL_REPO}
+hrp2-14-description_branch=master
+hrp2-14-description_repository=${TRAC_REPO}
 
 hpp-hrp2_branch=devel
 hpp-hrp2_repository=${HPP_REPO}
@@ -193,7 +193,7 @@ test-ci: baxter_common.install romeo.install universal_robot.install \
 
 # For benchmark, install robot packages first
 benchmark: baxter_common.install romeo.install universal_robot.install \
-	hpp-environments.install hrp2.install
+	hpp-environments.install hrp2-14-description.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
 	${MAKE} hpp-baxter.install hpp_romeo.install \
 	hpp_universal_robot.install hpp-hrp2.install; \
@@ -251,9 +251,10 @@ pythonqt.configure.dep: pythonqt.checkout
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
-hpp-hrp2.configure.dep: hrp2.install hpp-corbaserver.install hpp-hrp2.checkout
-hrp2.configure.dep: robot_capsule_urdf.install robot_model_py.install \
-	hrp2.checkout
+hpp-hrp2.configure.dep: hrp2-14-description.install hpp-corbaserver.install \
+	hpp-hrp2.checkout
+hrp2-14-description.configure.dep: robot_capsule_urdf.install \
+	robot_model_py.install hrp2-14-description.checkout
 test-hpp.configure.dep: hpp-wholebody-step-corba.install \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
 iai_maps.configure.dep: iai_maps.checkout
@@ -388,16 +389,6 @@ roboptim-trajectory-3.1.checkout:
 	else \
 	  ${WGET} -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | ${TAR} -xj; \
 	fi
-
-hrp2.configure: hrp2.configure.dep
-	. ${INSTALL_HPP_DIR}/setup.sh; \
-	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-
-hrp2.install: hrp2.configure
-	${MAKE} -C ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER} install
 
 robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
