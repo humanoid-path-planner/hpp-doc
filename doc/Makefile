@@ -8,6 +8,7 @@ LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 RETHINK_ROBOTICS_REPO=https://github.com/RethinkRobotics
+ROBOPTIM_REPO=https://github.com/roboptim
 TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
@@ -39,6 +40,14 @@ INSTALL_DOCUMENTATION=ON
 hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
+roboptim-core_branch=master
+roboptim-core_repository=${ROBOPTIM_REPO}
+roboptim-core_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
+
+roboptim-trajectory_branch=master
+roboptim-trajectory_repository=${ROBOPTIM_REPO}
+roboptim-trajectory_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
 
 hpp-util_branch=devel
 hpp-util_repository=${HPP_REPO}
@@ -167,10 +176,6 @@ OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_D
 
 collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
 
-roboptim-core-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
-
-roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
-
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 ifeq (${HUMANOID}, TRUE)
@@ -202,11 +207,11 @@ benchmark: baxter_common.install romeo.install universal_robot.install \
 
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: hpp-fcl.checkout
-roboptim-core-3.1.configure.dep: roboptim-core-3.1.checkout
-roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
-	roboptim-trajectory-3.1.checkout
+roboptim-core.configure.dep: roboptim-core.checkout
+roboptim-trajectory.configure.dep: roboptim-core.install \
+	roboptim-trajectory.checkout
 hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
-        roboptim-trajectory-3.1.install hpp-walkgen.checkout
+        roboptim-trajectory.install hpp-walkgen.checkout
 hpp-util.configure.dep: hpp-util.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
@@ -367,13 +372,6 @@ update:
 		cat .git/refs/heads/${$(@:.log=)_branch}; \
 	fi
 
-roboptim-core-3.1.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-		${WGET} -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | ${TAR} -xj; \
-	fi
-
 OpenSceneGraph-3.4.0.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
@@ -381,13 +379,6 @@ OpenSceneGraph-3.4.0.checkout:
 		wget http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
 		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
 		rm -f OpenSceneGraph-3.4.0.zip;\
-	fi
-
-roboptim-trajectory-3.1.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-	  ${WGET} -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | ${TAR} -xj; \
 	fi
 
 robot_model_py.configure: robot_model_py.configure.dep
