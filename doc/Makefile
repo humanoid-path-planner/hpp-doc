@@ -150,6 +150,12 @@ pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 qgv_branch=devel
 qgv_repository=${HPP_REPO}
 
+hpp-plot_branch=devel
+hpp-plot_repository=${HPP_REPO}
+
+hpp-gui_branch=devel
+hpp-gui_repository=${HPP_REPO}
+
 hpp-environments_branch=devel
 hpp-environments_repository=${HPP_REPO}
 
@@ -201,7 +207,7 @@ benchmark: baxter_common.install romeo.install universal_robot.install \
 	hpp-environments.install hrp2-14-description.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
 	${MAKE} hpp-baxter.install hpp_romeo.install \
-	hpp_universal_robot.install hpp-hrp2.install; \
+	hpp_universal_robot.install hpp-plot.install hpp-gui.install; \
 	${MAKE} hpp_benchmark.checkout; \
 	${MAKE} hpp-doc.install
 
@@ -278,6 +284,7 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
+hpp-gui.configure.dep: hpp-gui.checkout
 universal_robot.configure.dep: universal_robot.checkout
 hpp_universal_robot.configure.dep: universal_robot.install \
 	hpp_universal_robot.checkout
