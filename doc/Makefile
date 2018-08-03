@@ -299,11 +299,7 @@ status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
 		test -d "$$child_dir" || continue; \
 		test -d "$$child_dir/.git" || continue; \
-		cd "$$child_dir";\
-		echo \
-		"\033[1;36m------- Folder $$child_dir ---------------\033[0m"; \
-		git --no-pager -c status.showUntrackedFiles=no status --short --branch; \
-		cd ..; \
+		${MAKE} "$$child_dir".status; \
 	done
 
 log:
@@ -370,7 +366,10 @@ update:
 	rm -rf ${SRC_DIR}/$(@:.very-clean=)/${BUILD_FOLDER}/*
 
 %.status:
-	cd ${SRC_DIR}/$(@:.status=); git status
+	@cd ${SRC_DIR}/$(@:.status=); \
+	echo \
+	"\033[1;36m------- Folder $(@:.status=) ---------------\033[0m"; \
+	git --no-pager -c status.showUntrackedFiles=no status --short --branch;\
 
 %.log:
 	@cd ${SRC_DIR}/$(@:.log=); \
