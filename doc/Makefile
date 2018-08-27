@@ -331,10 +331,9 @@ update:
 		git remote rm origin;\
 		git remote add origin ${$(@:.update=)_repository}/$(@:.update=);\
 		git fetch origin;\
-		git checkout -b bce46g origin/${$(@:.update=)_branch};\
-		git branch -D ${$(@:.update=)_branch};\
-		git checkout -b ${$(@:.update=)_branch} bce46g;\
-		git branch -D bce46g;\
+		git checkout -q --detach;\
+		git branch -f ${$(@:.update=)_branch} origin/${$(@:.update=)_branch};\
+		git checkout -q ${$(@:.update=)_branch};\
 		git submodule update; \
 	fi
 
