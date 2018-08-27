@@ -80,7 +80,7 @@ release:
 			cd ${SRC_DIR}/$(@:.release=)/${BUILD_FOLDER}; \
 			make release VERSION=${$(@:.release=)_version}; \
 			make dist; \
-			scp ${SRC_DIR}/$(@:.release=)/${BUILD_FOLDER}/$(@:.release=)-${$(@:.release=)_version}.tar.gz trac.laas.fr:/var/ftp/pub/openrobots/$(@:.release=)/.; \
+			scp ${SRC_DIR}/$(@:.release=)/${BUILD_FOLDER}/$(@:.release=)-${$(@:.release=)_version}.tar.gz www.openrobots.org:/var/www/html/distfiles/$(@:.release=)/.; \
 		fi \
 	fi
 # for pinocchio, push in hpp branch.

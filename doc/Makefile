@@ -4,11 +4,12 @@
 #
 
 FCL_REPO=https://github.com/flexible-collision-library
-JRL_REPO=https://github.com/jrl-umi3218
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 RETHINK_ROBOTICS_REPO=https://github.com/RethinkRobotics
+ROBOPTIM_REPO=https://github.com/roboptim
+TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
 ifndef INSTALL_HPP_DIR
@@ -40,6 +41,14 @@ hpp-fcl_branch=master
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
+roboptim-core_branch=master
+roboptim-core_repository=${ROBOPTIM_REPO}
+roboptim-core_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
+
+roboptim-trajectory_branch=master
+roboptim-trajectory_repository=${ROBOPTIM_REPO}
+roboptim-trajectory_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
+
 hpp-util_branch=master
 hpp-util_repository=${HPP_REPO}
 
@@ -59,7 +68,7 @@ hpp-core_repository=${HPP_REPO}
 hpp-core_extra_flags=-DDISABLE_TESTS=ON
 
 hpp-template-corba_branch=master
-hpp-template-corba_repository=${LAAS_REPO}
+hpp-template-corba_repository=${HPP_REPO}
 
 hpp-corbaserver_branch=master
 hpp-corbaserver_repository=${HPP_REPO}
@@ -83,8 +92,8 @@ hpp-wholebody-step-corba_repository=${HPP_REPO}
 test-hpp_branch=master
 test-hpp_repository=${HPP_REPO}
 
-hrp2_branch=groovy
-hrp2_repository=${JRL_REPO}
+hrp2-14-description_branch=master
+hrp2-14-description_repository=${TRAC_REPO}
 
 hpp-hrp2_branch=master
 hpp-hrp2_repository=${HPP_REPO}
@@ -142,13 +151,19 @@ pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 oqgv_branch=master
 qgv_repository=${HPP_REPO}
 
+hpp-plot_branch=master
+hpp-plot_repository=${HPP_REPO}
+
+hpp-gui_branch=master
+hpp-gui_repository=${HPP_REPO}
+
 hpp-environments_branch=master
 hpp-environments_repository=${HPP_REPO}
 
-universal_robot_branch=indigo-devel
+universal_robot_branch=kinetic
 universal_robot_repository=${HPP_REPO}
 
-hpp_universal_robot_branch=devel
+hpp_universal_robot_branch=master
 hpp_universal_robot_repository=${HPP_REPO}
 
 baxter_common_branch=master
@@ -167,10 +182,6 @@ OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_D
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
 collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
-
-roboptim-core-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
-
-roboptim-trajectory-3.1_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
 
 qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
@@ -194,20 +205,20 @@ test-ci: baxter_common.install romeo.install universal_robot.install \
 
 # For benchmark, install robot packages first
 benchmark: baxter_common.install romeo.install universal_robot.install \
-	hpp-environments.install hrp2.install
+	hpp-environments.install hrp2-14-description.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
 	${MAKE} hpp-baxter.install hpp_romeo.install \
-	hpp_universal_robot.install hpp-hrp2.install; \
+	hpp_universal_robot.install hpp-plot.install hpp-gui.install; \
 	${MAKE} hpp_benchmark.checkout; \
 	${MAKE} hpp-doc.install
 
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: hpp-fcl.checkout
-roboptim-core-3.1.configure.dep: roboptim-core-3.1.checkout
-roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
-	roboptim-trajectory-3.1.checkout
+roboptim-core.configure.dep: roboptim-core.checkout
+roboptim-trajectory.configure.dep: roboptim-core.install \
+	roboptim-trajectory.checkout
 hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
-        roboptim-trajectory-3.1.install hpp-walkgen.checkout
+        roboptim-trajectory.install hpp-walkgen.checkout
 hpp-util.configure.dep: hpp-util.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
@@ -252,9 +263,10 @@ pythonqt.configure.dep: pythonqt.checkout
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
-hpp-hrp2.configure.dep: hrp2.install hpp-corbaserver.install hpp-hrp2.checkout
-hrp2.configure.dep: robot_capsule_urdf.install robot_model_py.install \
-	hrp2.checkout
+hpp-hrp2.configure.dep: hrp2-14-description.install hpp-corbaserver.install \
+	hpp-hrp2.checkout
+hrp2-14-description.configure.dep: robot_capsule_urdf.install \
+	robot_model_py.install hrp2-14-description.checkout
 test-hpp.configure.dep: hpp-wholebody-step-corba.install \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
 iai_maps.configure.dep: iai_maps.checkout
@@ -273,6 +285,7 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install pythonqt.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
+hpp-gui.configure.dep: hpp-gui.checkout
 universal_robot.configure.dep: universal_robot.checkout
 hpp_universal_robot.configure.dep: universal_robot.install \
 	hpp_universal_robot.checkout
@@ -286,11 +299,7 @@ status:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
 		test -d "$$child_dir" || continue; \
 		test -d "$$child_dir/.git" || continue; \
-		cd "$$child_dir";\
-		echo \
-		"\033[1;36m------- Folder $$child_dir ---------------\033[0m"; \
-		git --no-pager -c status.showUntrackedFiles=no status --short --branch; \
-		cd ..; \
+		${MAKE} "$$child_dir".status; \
 	done
 
 log:
@@ -322,10 +331,9 @@ update:
 		git remote rm origin;\
 		git remote add origin ${$(@:.update=)_repository}/$(@:.update=);\
 		git fetch origin;\
-		git checkout -b bce46g origin/${$(@:.update=)_branch};\
-		git branch -D ${$(@:.update=)_branch};\
-		git checkout -b ${$(@:.update=)_branch} bce46g;\
-		git branch -D bce46g;\
+		git checkout -q --detach;\
+		git branch -f ${$(@:.update=)_branch} origin/${$(@:.update=)_branch};\
+		git checkout -q ${$(@:.update=)_branch};\
 		git submodule update; \
 	fi
 
@@ -357,20 +365,16 @@ update:
 	rm -rf ${SRC_DIR}/$(@:.very-clean=)/${BUILD_FOLDER}/*
 
 %.status:
-	cd ${SRC_DIR}/$(@:.status=); git status
+	@cd ${SRC_DIR}/$(@:.status=); \
+	echo \
+	"\033[1;36m------- Folder $(@:.status=) ---------------\033[0m"; \
+	git --no-pager -c status.showUntrackedFiles=no status --short --branch;\
 
 %.log:
 	@cd ${SRC_DIR}/$(@:.log=); \
 	if [ -f .git/refs/heads/${$(@:.log=)_branch} ]; then \
 		echo -n "$(@:.log=): "; \
 		cat .git/refs/heads/${$(@:.log=)_branch}; \
-	fi
-
-roboptim-core-3.1.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-		${WGET} -O - "https://github.com/roboptim/roboptim-core/releases/download/v3.1/roboptim-core-3.1.tar.bz2" | ${TAR} -xj; \
 	fi
 
 OpenSceneGraph-3.4.0.checkout:
@@ -381,23 +385,6 @@ OpenSceneGraph-3.4.0.checkout:
 		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
 		rm -f OpenSceneGraph-3.4.0.zip;\
 	fi
-
-roboptim-trajectory-3.1.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-	  ${WGET} -O - "https://github.com/roboptim/roboptim-trajectory/releases/download/v3.1/roboptim-trajectory-3.1.tar.bz2" | ${TAR} -xj; \
-	fi
-
-hrp2.configure: hrp2.configure.dep
-	. ${INSTALL_HPP_DIR}/setup.sh; \
-	cd ${SRC_DIR}/hrp2/hrp2_14_description;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-
-hrp2.install: hrp2.configure
-	${MAKE} -C ${SRC_DIR}/hrp2/hrp2_14_description/${BUILD_FOLDER} install
 
 robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
