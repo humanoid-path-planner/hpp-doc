@@ -20,8 +20,12 @@ or [these instructions](doc/instructions.md).
 ## Build docker images for CI
 
 ```
-docker build -t eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master:14.04 .
-docker build -t eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:14.04 -f Dockerfile.premade .
-docker push eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master:14.04
-docker push eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:14.04
+branch=$(git branch --no-color | grep \* | cut -d' ' -f2)
+for ubuntu in 14.04 16.04
+do
+    docker build -t gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile .
+    docker build -t gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile.premade .
+    docker push gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu}
+    docker push gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu}
+done
 ```

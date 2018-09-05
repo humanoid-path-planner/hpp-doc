@@ -1,4 +1,4 @@
-FROM eur0c.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:14.04
+FROM gepgitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:14.04
 
 RUN \
       export DEVEL_DIR=/builds/humanoid-path-planner/hpp-doc/workspace; \
