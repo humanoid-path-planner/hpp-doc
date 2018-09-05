@@ -20,23 +20,23 @@ variables:
     stage: test
     script:
       - status=0
-      - echo -e "#!/bin/bash\nsource $DEVEL_HPP_DIR/config.sh\ncd $DEVEL_HPP_DIR/src/\$1/build-rel && make CTEST_OUTPUT_ON_FAILURE=1 test" > $DEVEL_HPP_DIR/test.sh || status=1
+      - echo -e "#!/bin/bash\nsource $DEVEL_HPP_DIR/config.sh\ncd $DEVEL_HPP_DIR/src/\$1/build-rel && make CTEST_OUTPUT_ON_FAILURE=1 test" > $DEVEL_HPP_DIR/test.sh || status=1
       - cat $DEVEL_HPP_DIR/test.sh
       - set +e
       - chmod u+x $DEVEL_HPP_DIR/test.sh
-      - $DEVEL_HPP_DIR/test.sh hpp-util                    || status=1
-      - $DEVEL_HPP_DIR/test.sh hpp-fcl                     || status=1
-      - $DEVEL_HPP_DIR/test.sh hpp-pinocchio               || status=1
-      - $DEVEL_HPP_DIR/test.sh hpp-statistics              || status=1
-      - $DEVEL_HPP_DIR/test.sh hpp-constraints             || status=1
-      - $DEVEL_HPP_DIR/test.sh hpp-core                    || status=1
-        #- $DEVEL_HPP_DIR/test.sh hpp-corbaserver          || status=1
-      - $DEVEL_HPP_DIR/test.sh hpp-manipulation            || status=1
-      - $DEVEL_HPP_DIR/test.sh hpp-manipulation-urdf       || status=1
-        #- $DEVEL_HPP_DIR/test.sh hpp-manipulation-corba   || status=1
-      - $DEVEL_HPP_DIR/test.sh hpp-walkgen                 || status=1
-      - $DEVEL_HPP_DIR/test.sh hpp-wholebody-step          || status=1
-        #- $DEVEL_HPP_DIR/test.sh hpp-wholebody-step-corba || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-util                    || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-fcl                     || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-pinocchio               || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-statistics              || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-constraints             || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-core                    || status=1
+        #- $DEVEL_HPP_DIR/test.sh hpp-corbaserver          || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-manipulation            || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-manipulation-urdf       || status=1
+        #- $DEVEL_HPP_DIR/test.sh hpp-manipulation-corba   || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-walkgen                 || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-wholebody-step          || status=1
+        #- $DEVEL_HPP_DIR/test.sh hpp-wholebody-step-corba || status=1
       - set -e
       - exit $status
     allow_failure: true
