@@ -52,4 +52,4 @@ RUN apt-get install -qqy \
       libpcre3-dev \
       && rm -rf /var/lib/apt/lists/*
 
-COPY script/auto-install-hpp.sh /
+COPY auto-install-hpp.sh /

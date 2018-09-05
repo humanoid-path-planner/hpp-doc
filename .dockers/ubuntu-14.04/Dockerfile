@@ -42,4 +42,4 @@ RUN apt-get update -qqy && apt-get install -qqy \
    wget \
    && rm -rf /var/lib/apt/lists/*
 
-COPY script/auto-install-hpp.sh /
+COPY auto-install-hpp.sh /

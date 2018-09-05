@@ -23,8 +23,8 @@ or [these instructions](doc/instructions.md).
 branch=$(git branch --no-color | grep \* | cut -d' ' -f2)
 for ubuntu in 14.04 16.04
 do
-    docker build -t eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile .
-    docker build -t eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile.premade .
+    docker build -t eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile ./script
+    docker build -t eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile.premade ./script
     docker push eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu}
     docker push eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu}
 done
