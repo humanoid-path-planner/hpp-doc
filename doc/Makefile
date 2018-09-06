@@ -280,7 +280,7 @@ OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
 gepetto-viewer.configure.dep: ${OSG_PACKAGE}.install \
 	gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
-	gepetto-viewer-corba.checkout
+	pythonqt.install gepetto-viewer-corba.checkout
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
