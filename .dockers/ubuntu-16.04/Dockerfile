@@ -50,8 +50,8 @@ RUN apt-get install -qqy \
       libopenscenegraph-dev \
       openscenegraph \
       libpcre3-dev \
-      && apt-get remove -qqy texlive \
-      && apt-get autoremove \
+   && apt-get remove -qqy texlive-latex-base texlive-binaries ghostscript \
+      && apt-get autoremove -qqy \
       && rm -rf /var/lib/apt/lists/*
 
 COPY auto-install-hpp.sh /
