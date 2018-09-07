@@ -7,4 +7,4 @@ RUN /auto-install-hpp.sh --branch ubuntu-14.04 --target \
                      OpenSceneGraph-dae-plugin.install \
                      qpOASES.install \
                      eigen3.install \
-                     roboptim-trajectory-3.1.install
+                     roboptim-trajectory.install

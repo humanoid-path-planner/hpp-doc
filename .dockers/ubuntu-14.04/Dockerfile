@@ -40,8 +40,8 @@ RUN apt-get update -qqy && apt-get install -qqy \
    ros-indigo-pr2-description \
    source-highlight \
    wget \
-   && apt remove -qqy texlive \
-   && apt autoremove \
+   && apt-get remove -qqy texlive \
+   && apt-get autoremove \
    && rm -rf /var/lib/apt/lists/*
 
 COPY auto-install-hpp.sh /
