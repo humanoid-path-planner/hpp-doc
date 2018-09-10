@@ -8,7 +8,6 @@ LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 RETHINK_ROBOTICS_REPO=https://github.com/RethinkRobotics
-ROBOPTIM_REPO=https://github.com/roboptim
 TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
@@ -40,14 +39,6 @@ INSTALL_DOCUMENTATION=ON
 hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
-
-roboptim-core_branch=master
-roboptim-core_repository=${ROBOPTIM_REPO}
-roboptim-core_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
-
-roboptim-trajectory_branch=master
-roboptim-trajectory_repository=${ROBOPTIM_REPO}
-roboptim-trajectory_extra_flags= -DCMAKE_BUILD_TYPE=Release -DCXX_DISABLE_WERROR=ON
 
 hpp-util_branch=devel
 hpp-util_repository=${HPP_REPO}
@@ -213,11 +204,8 @@ benchmark: baxter_common.install romeo.install universal_robot.install \
 
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: hpp-fcl.checkout
-roboptim-core.configure.dep: roboptim-core.checkout
-roboptim-trajectory.configure.dep: roboptim-core.install \
-	roboptim-trajectory.checkout
 hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
-        roboptim-trajectory.install hpp-walkgen.checkout
+	hpp-walkgen.checkout
 hpp-util.configure.dep: hpp-util.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout

@@ -4,4 +4,3 @@ ENV DEVEL_HPP_DIR /workspace
 
 RUN /auto-install-hpp.sh --branch devel --target OpenSceneGraph-dae-plugin.install
 RUN /auto-install-hpp.sh --branch devel --target qpOASES.install
-RUN /auto-install-hpp.sh --branch devel --target roboptim-trajectory.install

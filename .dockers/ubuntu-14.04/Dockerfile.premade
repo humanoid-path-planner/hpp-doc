@@ -6,5 +6,4 @@ RUN /auto-install-hpp.sh --branch ubuntu-14.04 --target \
                      "doxygen-1.8.10.install \
                      OpenSceneGraph-dae-plugin.install \
                      qpOASES.install \
-                     eigen3.install \
-                     roboptim-trajectory.install"
+                     eigen3.install"
