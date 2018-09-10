@@ -199,7 +199,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install
 test-ci: baxter_common.install romeo.install universal_robot.install \
 	hpp-environments.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install \
-	hpp_universal_robot.install; \
+	hpp_universal_robot.install && \
 	${MAKE} hpp-doc.install
 
 # For benchmark, install robot packages first
@@ -280,7 +280,7 @@ OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
 gepetto-viewer.configure.dep: ${OSG_PACKAGE}.install \
 	gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
-	gepetto-viewer-corba.checkout
+	pythonqt.install gepetto-viewer-corba.checkout
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
