@@ -148,7 +148,7 @@ pythonqt_branch=qt${QT_VERSION}
 pythonqt_repository=${HPP_REPO}
 pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
-oqgv_branch=master
+qgv_branch=master
 qgv_repository=${HPP_REPO}
 
 hpp-plot_branch=master
