@@ -1,0 +1,10 @@
+FROM eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:14.04
+
+ENV DEVEL_DIR /workspace
+
+RUN /auto-install-hpp.sh --branch ubuntu-14.04 --target \
+                     "doxygen-1.8.10.install \
+                     OpenSceneGraph-dae-plugin.install \
+                     qpOASES.install \
+                     eigen3.install \
+                     roboptim-trajectory.install"
