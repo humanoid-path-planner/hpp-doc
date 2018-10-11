@@ -34,6 +34,7 @@ RUN apt-get update -qqy && apt-get install -qqy \
    oxygen-icon-theme \
    python-matplotlib \
    qt4-dev-tools \
+   robotpkg-qpoases+doc \
    robotpkg-roboptim-core \
    robotpkg-roboptim-trajectory \
    ros-indigo-xacro \

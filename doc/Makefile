@@ -64,9 +64,6 @@ hpp-template-corba_repository=${HPP_REPO}
 hpp-corbaserver_branch=devel
 hpp-corbaserver_repository=${HPP_REPO}
 
-qpOASES_branch=devel
-qpOASES_repository=${HPP_REPO}
-
 hpp-constraints_branch=devel
 hpp-constraints_repository=${HPP_REPO}
 hpp-constraints_extra_flags=-DDISABLE_TESTS=ON
@@ -173,8 +170,6 @@ OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_D
 
 collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
 
-qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
-
 ifeq (${HUMANOID}, TRUE)
   hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
   hpp-manipulation-corba_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
@@ -214,9 +209,8 @@ hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
-qpOASES.configure.dep: qpOASES.checkout
-hpp-constraints.configure.dep: qpOASES.install \
-	hpp-pinocchio.install hpp-statistics.install hpp-constraints.checkout
+hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
+	hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 ifeq (${HUMANOID}, TRUE)

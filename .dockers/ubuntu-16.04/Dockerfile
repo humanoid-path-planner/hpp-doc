@@ -19,6 +19,7 @@ RUN apt-get install -qqy \
       libboost-dev \
       liburdfdom-dev \
       libassimp-dev \
+      robotpkg-qpoases+doc \
       robotpkg-roboptim-core \
       robotpkg-roboptim-trajectory \
       ros-kinetic-xacro \
