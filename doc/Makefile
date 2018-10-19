@@ -150,8 +150,8 @@ hpp-environments_repository=${HPP_REPO}
 universal_robot_branch=kinetic
 universal_robot_repository=${HPP_REPO}
 
-hpp_universal_robot_branch=devel
-hpp_universal_robot_repository=${HPP_REPO}
+hpp-universal-robot_branch=devel
+hpp-universal-robot_repository=${HPP_REPO}
 
 baxter_common_branch=master
 baxter_common_repository=${RETHINK_ROBOTICS_REPO}
@@ -185,7 +185,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install
 test-ci: baxter_common.install romeo.install universal_robot.install \
 	hpp-environments.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install \
-	hpp_universal_robot.install && \
+	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
 
 # For benchmark, install robot packages first
@@ -193,7 +193,7 @@ benchmark: baxter_common.install romeo.install universal_robot.install \
 	hpp-environments.install hrp2-14-description.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
 	${MAKE} hpp-baxter.install hpp_romeo.install \
-	hpp_universal_robot.install hpp-plot.install hpp-gui.install; \
+	hpp-universal-robot.install hpp-plot.install hpp-gui.install; \
 	${MAKE} hpp_benchmark.checkout; \
 	${MAKE} hpp-doc.install
 
@@ -268,8 +268,8 @@ hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-gepetto-viewer.checkout
 hpp-gui.configure.dep: hpp-gui.checkout
 universal_robot.configure.dep: universal_robot.checkout
-hpp_universal_robot.configure.dep: universal_robot.install \
-	hpp_universal_robot.checkout
+hpp-universal-robot.configure.dep: universal_robot.install \
+	hpp-universal-robot.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
 baxter_common.configure.dep: baxter_common.checkout
 hpp-baxter.configure.dep: baxter_common.install hpp-baxter.checkout
