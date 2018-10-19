@@ -1,5 +1,4 @@
 variables:
-    GIT_SSL_NO_VERIFY: "true"
     GIT_SUBMODULE_STRATEGY: "recursive"
     DEVEL_HPP_DIR: "/workspace"
     BUILD_TYPE: "Release"
