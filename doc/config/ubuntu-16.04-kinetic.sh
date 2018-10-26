@@ -1,5 +1,6 @@
 export PATH=$DEVEL_HPP_DIR/install/sbin:$DEVEL_HPP_DIR/install/bin:/opt/ros/kinetic/bin:$PATH
-export PKG_CONFIG_PATH=$DEVEL_HPP_DIR/install/lib/pkgconfig/:/opt/ros/kinetic/lib/pkgconfig
+export PKG_CONFIG_PATH=$DEVEL_HPP_DIR/install/lib/pkgconfig/:/opt/ros/kinetic/lib/pkgconfig:/opt/openrobots/lib/pkgconfig
+export CMAKE_PREFIX_PATH=/opt/openrobots
 
 export PYTHONPATH=$DEVEL_HPP_DIR/install/lib/python2.7/site-packages:$DEVEL_HPP_DIR/install/lib/python2.7/dist-packages:/opt/ros/kinetic/lib/python2.7/dist-packages:$PYTHONPATH
 
