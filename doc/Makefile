@@ -7,6 +7,7 @@ FCL_REPO=https://github.com/flexible-collision-library
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
+GEPETTO_REPO=https://github.com/Gepetto
 RETHINK_ROBOTICS_REPO=https://github.com/RethinkRobotics
 TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
 
@@ -117,13 +118,13 @@ collada-dom_branch=master
 collada-dom_repository=${HPP_REPO}
 
 osg-dae_branch=master
-osg-dae_repository=${SOT_REPO}
+osg-dae_repository=${GEPETTO_REPO}
 
 gepetto-viewer_branch=devel
-gepetto-viewer_repository=${HPP_REPO}
+gepetto-viewer_repository=${GEPETTO_REPO}
 
 gepetto-viewer-corba_branch=devel
-gepetto-viewer-corba_repository=${HPP_REPO}
+gepetto-viewer-corba_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
   gepetto-viewer-corba_extra_flags= -DUSE_QT4=OFF
 endif
