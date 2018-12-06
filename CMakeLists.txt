@@ -74,6 +74,7 @@ FOREACH(PKG ${SETUP_DOC_PKG})
     SET(PACKAGE_NAME ${PKG})
     SET(DOC_PKG_NAME "hpp_doc_missing_${DOC_VAR}")
     SET(${DOC_VAR}_LINK "\\ref ${DOC_PKG_NAME}")
+    SET(${DOC_VAR}_URL ${${DOC_VAR}_LINK})
     SET(STEPS)
     IF(DEFINED ${PKG}_giturl)
       SET(STEPS "${STEPS}\\li get the source code through \\c git:
@@ -91,26 +92,17 @@ make update
   ENDIF(${PREFIX}_FOUND)
 ENDFOREACH(PKG ${SETUP_DOC_PKG})
 
-SET(EXTRA_HTML_FILES
-  doc/index.html
-  doc/tree.html
-  doc/main.dox)
-CONFIG_FILES(${EXTRA_HTML_FILES})
-FOREACH(HTML_FILE ${EXTRA_HTML_FILES})
-  INSTALL(FILES ${CMAKE_BINARY_DIR}/${HTML_FILE} DESTINATION ${CMAKE_INSTALL_DOCDIR})
-ENDFOREACH(HTML_FILE ${EXTRA_HTML_FILES})
+CONFIG_FILES(doc/main.dox doc/doxygenLayout.xml)
 
 ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_BINARY_DIR}/graphDep.dot
-  COMMAND ${CMAKE_SOURCE_DIR}/scripts/packageDep --quiet --output ${CMAKE_BINARY_DIR}/graphDep.dot ${SETUP_DOC_PKG}
-  COMMAND sed -i 's/size = \"12,15\"//' ${CMAKE_BINARY_DIR}/graphDep.dot)
+  COMMAND ${CMAKE_SOURCE_DIR}/scripts/packageDep --quiet --output ${CMAKE_BINARY_DIR}/graphDep.dot ${SETUP_DOC_PKG})
 ADD_CUSTOM_TARGET(generate-html ALL
   DEPENDS graphDep.dot)
 
 INSTALL(FILES
-  doc/custom.css
-  doc/tree.css
-  doc/tabs.css
+  doc/index.html
   doc/jquery-3.3.1.min.js
+  ${CMAKE_BINARY_DIR}/doc/main.dox
   DESTINATION ${CMAKE_INSTALL_DOCDIR})
 INSTALL(DIRECTORY
   doc/images

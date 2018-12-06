@@ -55,16 +55,9 @@ how to use this project.
 
 /**
 
-\page hpp_doc_dependency_graph Graph of dependencies between packages
+\page hpp_doc_algorithms Algorithms
 
-Below is the graph of dependencies between packages.
-\dotfile graphDep.dot "Dependency graph"
-
- **/
-
-/**
-
-\page hpp_doc_algorithms Packages implementing algorithms
+<h1>Packages implementing algorithms</h1>
 
 <h2>Technical tools</h2>
 <table class="pkglist">
@@ -132,7 +125,9 @@ Below is the graph of dependencies between packages.
 
 /**
 
-\page hpp_doc_corba_interface Packages implementing CORBA interfaces
+\page hpp_doc_corba_interface Corba interfaces
+
+<h1>Packages implementing CORBA interfaces</h1>
 
 The following packages implement Corba communication functionalities
 \li @HPPCORBASERVER_LINK@ : Corba server embedding a hpp::core::ProblemSolver instance.
@@ -143,11 +138,24 @@ The following packages implement Corba communication functionalities
 
 /**
 
-\page hpp_doc_graphical_interface Packages implementing graphical user interface
+\page hpp_doc_graphical_interface Graphical user interface
+
+<h1>Packages implementing graphical user interface</h1>
 
 The following packages implement a corba connection with a graphical display
 \li @GEPETTOVIEWER_LINK@ : Graphical window based on OpenSceneGraph.
 \li @GEPETTOVIEWERCORBA_LINK@ : Corba interface to gepetto-viewer.
 \li @HPPGEPETTOVIEWER_LINK@ : Link between hpp and gepetto-viewer-corba.
+
+ **/
+
+/**
+
+\page hpp_doc_dependency_graph Dependencies
+
+<h1>Graph of dependencies between packages</h1>
+
+Below is the graph of dependencies between packages.
+\dotfile graphDep.dot "Dependency graph"
 
  **/
