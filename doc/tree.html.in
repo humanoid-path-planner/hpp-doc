@@ -4,8 +4,9 @@
     <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta http-equiv="Content-Language" content="en" />
-    <link rel="stylesheet" href="doxygen.css"/>
+    <link rel="stylesheet" href="tree.css"/>
     <title>TreeView</title>
+    <script src="jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
     <!-- // Hide script from old browsers
 
@@ -55,6 +56,23 @@
         folder.style.display = "block";
       }
     }
+    $(document).ready(function()
+    {
+      $.ajax({
+          type: "GET",
+          url: "doxygen-html/index.xml",
+          dataType: "xml",
+          success: function(xml) {
+              $(xml).find('compound[kind="page"]').each(function(index, element){
+                var refid = $(element).attr("refid");
+                var name = $($(element).children("name")[0]).text();
+                console.log (refid);
+                console.log (name);
+                $("a[href='"+name+"']").attr('href', 'doxygen-html/'+refid+'.html');
+              });
+          }
+      });
+    });
 
     // End script hiding -->
     </script>
@@ -65,18 +83,18 @@
     <div class="directory">
       <h3>Humanoid Path Planner</h3>
       <div style="display: block;">
-	<p><img id="togglebuttonminus" src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="main.html" target="basefrm">Home</a></p>
+	<p><img id="togglebuttonminus" src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="doxygen-html/index.html" target="basefrm">Home</a></p>
 
         <p><img id="togglebuttonplus" src="images/ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder2', this)"/><img src="images/ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder2', this)"/>Packages type</p>
 
         <div id="folder2">
-          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="algorithm.html" target="basefrm">Algorithms</a></p>
-          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="corba.html" target="basefrm">Corba interfaces</a></p>
-          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="gui.html" target="basefrm">Graphical User Interface</a></p>
-          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="@HPPTUTORIAL_LINK@" target="basefrm">Tutorial</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="hpp_doc_algorithms" target="basefrm">Algorithms</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="hpp_doc_corba_interface" target="basefrm">Corba interfaces</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="hpp_doc_graphical_interface" target="basefrm">Graphical User Interface</a></p>
+          <p><img src="images/ftv2vertline.png" alt="|" width="16" height="22" /><img src="images/ftv2node.png" alt="o" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="hpp-doc/@HPPTUTORIAL_LINK@" target="basefrm">Tutorial</a></p>
         </div>
 
-	<p><img src="images/ftv2lastnode.png" alt="\" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="graph-dependency.html" target="basefrm">Dependencies</a></p>
+	<p><img src="images/ftv2lastnode.png" alt="\" width="16" height="22" /><img src="images/ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="hpp_doc_dependency_graph" target="basefrm">Dependencies</a></p>
 
   <script type="text/javascript">
     toggleFolder('folder2', document.getElementById('togglebuttonplus'));

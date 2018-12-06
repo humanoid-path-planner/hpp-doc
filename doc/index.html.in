@@ -6,9 +6,9 @@
   </head>
   <frameset cols="250,*">
     <frame src="tree.html" name="treefrm">
-    <frame src="main.html" name="basefrm">
+    <frame src="doxygen-html/index.html" name="basefrm">
     <noframes>
-      <a href="main.html">Frames are disabled. Click here to go to the main page.</a>
+      <a href="doxygen-html/index.html">Frames are disabled. Click here to go to the main page.</a>
     </noframes>
   </frameset>
 </html>
