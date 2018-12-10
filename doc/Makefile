@@ -7,6 +7,7 @@ FCL_REPO=https://github.com/flexible-collision-library
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
+GEPETTO_REPO=https://github.com/Gepetto
 RETHINK_ROBOTICS_REPO=https://github.com/RethinkRobotics
 ROBOPTIM_REPO=https://github.com/roboptim
 TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
@@ -26,7 +27,7 @@ else
   BUILD_FOLDER=build-rel
 endif
 
-OSG_PACKAGE=OpenSceneGraph-dae-plugin
+OSG_PACKAGE=osg-dae
 #OSG_PACKAGE=OpenSceneGraph-3.4.0
 
 WGET=wget --quiet
@@ -129,14 +130,14 @@ hpp_benchmark_repository=${HPP_REPO}
 collada-dom_branch=master
 collada-dom_repository=${HPP_REPO}
 
-OpenSceneGraph-dae-plugin_branch=master
-OpenSceneGraph-dae-plugin_repository=${HPP_REPO}
+osg-dae_branch=master
+osg-dae_repository=${GEPETTO_REPO}
 
 gepetto-viewer_branch=master
-gepetto-viewer_repository=${HPP_REPO}
+gepetto-viewer_repository=${GEPETTO_REPO}
 
 gepetto-viewer-corba_branch=master
-gepetto-viewer-corba_repository=${HPP_REPO}
+gepetto-viewer-corba_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
   gepetto-viewer-corba_extra_flags= -DUSE_QT4=OFF
 endif
@@ -178,7 +179,7 @@ hpp_romeo_repository=${HPP_REPO}
 romeo_branch=master
 romeo_repository=${HPP_REPO}
 
-OpenSceneGraph-dae-plugin_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
+osg-dae_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
 collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
@@ -274,8 +275,8 @@ hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_benchmark.checkout
 collada-dom.configure.dep: collada-dom.checkout
-OpenSceneGraph-dae-plugin.configure.dep: collada-dom.install \
-	OpenSceneGraph-dae-plugin.checkout
+osg-dae.configure.dep: collada-dom.install \
+	osg-dae.checkout
 OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
 	OpenSceneGraph-3.4.0.checkout
 gepetto-viewer.configure.dep: ${OSG_PACKAGE}.install \
