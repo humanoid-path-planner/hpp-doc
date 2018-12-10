@@ -9,7 +9,6 @@ HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 GEPETTO_REPO=https://github.com/Gepetto
 RETHINK_ROBOTICS_REPO=https://github.com/RethinkRobotics
-ROBOPTIM_REPO=https://github.com/roboptim
 TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
@@ -184,8 +183,6 @@ OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_D
 
 collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
 
-qpOASES_extra_flags= -DCMAKE_BUILD_TYPE=Release
-
 ifeq (${HUMANOID}, TRUE)
   hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
   hpp-manipulation-corba_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
@@ -201,7 +198,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install
 test-ci: baxter_common.install romeo.install universal_robot.install \
 	hpp-environments.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install \
-	hpp_universal_robot.install && \
+	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
 
 # For benchmark, install robot packages first
@@ -209,17 +206,14 @@ benchmark: baxter_common.install romeo.install universal_robot.install \
 	hpp-environments.install hrp2-14-description.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
 	${MAKE} hpp-baxter.install hpp_romeo.install \
-	hpp_universal_robot.install hpp-plot.install hpp-gui.install; \
+	hpp-universal-robot.install hpp-plot.install hpp-gui.install; \
 	${MAKE} hpp_benchmark.checkout; \
 	${MAKE} hpp-doc.install
 
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: hpp-fcl.checkout
-roboptim-core.configure.dep: roboptim-core.checkout
-roboptim-trajectory.configure.dep: roboptim-core.install \
-	roboptim-trajectory.checkout
 hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
-        roboptim-trajectory.install hpp-walkgen.checkout
+	hpp-walkgen.checkout
 hpp-util.configure.dep: hpp-util.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
@@ -228,9 +222,8 @@ hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
-qpOASES.configure.dep: qpOASES.checkout
-hpp-constraints.configure.dep: qpOASES.install \
-	hpp-pinocchio.install hpp-statistics.install hpp-constraints.checkout
+hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
+	hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 ifeq (${HUMANOID}, TRUE)
@@ -288,8 +281,8 @@ hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-gepetto-viewer.checkout
 hpp-gui.configure.dep: hpp-gui.checkout
 universal_robot.configure.dep: universal_robot.checkout
-hpp_universal_robot.configure.dep: universal_robot.install \
-	hpp_universal_robot.checkout
+hpp-universal-robot.configure.dep: universal_robot.install \
+	hpp-universal-robot.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
 baxter_common.configure.dep: baxter_common.checkout
 hpp-baxter.configure.dep: baxter_common.install hpp-baxter.checkout

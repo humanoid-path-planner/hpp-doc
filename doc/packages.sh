@@ -70,16 +70,6 @@ pkg "hpp-model-urdf" \
     "git@github.com:humanoid-path-planner/hpp-model" \
     "path/hpp-model"
 
-pkg "roboptim-core" \
-    "RobOptim core" \
-    "git@github.com:roboptim/roboptim-core" \
-    "optimization/roboptim-core"
-
-pkg "roboptim-trajectory" \
-    "RobOptim trajectory" \
-    "git@github.com:roboptim/roboptim-trajectory" \
-    "optimization/roboptim-trajectory"
-
 pkg "hpp-constraints" \
     "hpp-constraints" \
     "git@github.com:humanoid-path-planner/hpp-constraints" \

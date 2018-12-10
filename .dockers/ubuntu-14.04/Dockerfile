@@ -1,7 +1,13 @@
 FROM ubuntu:14.04
 
+RUN apt-get update -qqy && apt-get install -qqy \
+   curl \
+   && rm -rf /var/lib/apt/lists/*
+
 RUN echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list
 RUN apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+RUN echo "deb [arch=amd64] http://robotpkg.openrobots.org/packages/debian/pub trusty robotpkg" > /etc/apt/sources.list.d/robotpkg.list
+RUN curl http://robotpkg.openrobots.org/packages/debian/robotpkg.key | apt-key add -
 
 RUN apt-get update -qqy && apt-get install -qqy \
    autoconf \
@@ -28,6 +34,9 @@ RUN apt-get update -qqy && apt-get install -qqy \
    oxygen-icon-theme \
    python-matplotlib \
    qt4-dev-tools \
+   robotpkg-qpoases+doc \
+   robotpkg-roboptim-core \
+   robotpkg-roboptim-trajectory \
    ros-indigo-xacro \
    ros-indigo-kdl-parser \
    ros-indigo-common-msgs \

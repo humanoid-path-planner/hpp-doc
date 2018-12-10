@@ -1,5 +1,4 @@
 variables:
-    GIT_SSL_NO_VERIFY: "true"
     GIT_SUBMODULE_STRATEGY: "recursive"
     DEVEL_HPP_DIR: "/workspace"
     BUILD_TYPE: "Release"
@@ -9,6 +8,7 @@ variables:
     script:
       - export INSTALL_DOCUMENTATION=OFF
       - $CI_PROJECT_DIR/script/auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME} --gitrepo ${CI_PROJECT_URL}/raw --target test-ci
+    after_script:
       - mv $DEVEL_HPP_DIR $CI_PROJECT_DIR
     artifacts:
       expire_in: 1 day
@@ -40,9 +40,10 @@ variables:
       - $DEVEL_HPP_DIR/test.sh hpp-wholebody-step          || status=1
         #- $DEVEL_HPP_DIR/test.sh hpp-wholebody-step-corba || status=1
       - set -e
-      - mv $DEVEL_HPP_DIR $CI_PROJECT_DIR
       - exit $status
     allow_failure: true
+    after_script:
+      - mv $DEVEL_HPP_DIR $CI_PROJECT_DIR
     artifacts:
       expire_in: 1 day
       when: always
@@ -61,6 +62,7 @@ variables:
         #- make -C $DEVEL_HPP_DIR/src -s all
       - $DEVEL_HPP_DIR/doc.sh
       - tar czf ${DEVEL_HPP_DIR}/hpp.${CI_COMMIT_REF_NAME}.`date +"%Y%m%d"`.tar.gz $DEVEL_HPP_DIR/install/share/doc
+    after_script:
       - mv $DEVEL_HPP_DIR $CI_PROJECT_DIR
     allow_failure: true
     artifacts:
