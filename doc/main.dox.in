@@ -57,77 +57,37 @@ how to use this project.
 
 \page hpp_doc_algorithms Algorithms
 
-<h1>Packages implementing algorithms</h1>
+\section hpp_doc_algorithms_technical_tools Technical tools
 
-<h2>Technical tools</h2>
-<table class="pkglist">
-  <tr>
-    <td>@HPPUTIL_LINK@</td>
-    <td>technical tools for the HPP project (logging, benchmark, quality assurance tools),</td>
-  </tr>
-</table>
+- @HPPUTIL_LINK@: technical tools for the HPP project (logging, benchmark, quality assurance tools),
 
-<h2>Motion planning for humanoid systems</h2>
+\section hpp_doc_algorithms_motion_planning Motion planning for humanoid systems
 
 \par Kinematic chain with geometry
-<table class="pkglist">
-  <tr>
-    <td>@HPPFCL_LINK@</td>
-    <td>Modified version of Flexible collision library, for collision detection and distance computation,</td>
-  </tr>
-  <tr>
-    <td>@PINOCCHIO_LINK@</td>
-    <td>implementation of kinematic chain with dynamic computations,</td>
-  </tr>
-  <tr>
-    <td>@HPPPINOCCHIO_LINK@</td>
-    <td>Interface between pinocchio and hpp-core,
-  </td>
-  </tr>
-</table>
+- @HPPFCL_LINK@: Modified version of Flexible collision library, for collision detection and distance computation,
+- @PINOCCHIO_LINK@: implementation of kinematic chain with dynamic computations,
+- @HPPPINOCCHIO_LINK@: Interface between pinocchio and hpp-core,
 
 \par Non linear constraints
-<table class="pkglist">
-  <tr>
-    <td>@HPPCONSTRAINTS_LINK@</td>
-    <td>definition of some nonlinear constraints,</td>
-  </tr>
-</table>
+- @HPPCONSTRAINTS_LINK@: definition of some nonlinear constraints,
 
 \par Path planning
-<table class="pkglist">
-<tr>
-<td>@HPPCORE_LINK@</td>
-<td>definition of basic classes, path planning problems and solvers,</td>
-</tr>
-</table>
+- @HPPCORE_LINK@: definition of basic classes, path planning problems and solvers,
 
 \par Path Planning for humanoid robots
-<table class="pkglist">
-  <tr>
-    <td>@HPPWHOLEBODYSTEP_LINK@</td>
-    <td>whole-body and walk planning using sliding path approximation.</td>
-  </tr>
-</table>
-\par Manipulation Planning
-<table class="pkglist">
-  <tr>
-    <td>@HPPMANIPULATION_LINK@</td>
-    <td>Manipulation planning.</td>
-  </tr>
-  <tr>
-    <td>@HPPMANIPULATIONURDF_LINK@</td>
-    <td>Enhance hpp-pinocchio to support datas required by hpp-manipulation.</td>
-  </tr>
-</table>
+- @HPPWHOLEBODYSTEP_LINK@: whole-body and walk planning using sliding path approximation.
 
- **/
+\par Manipulation Planning
+- @HPPMANIPULATION_LINK@: Manipulation planning
+- @HPPMANIPULATIONURDF_LINK@: Manipulation planning
+
+**/
 
 /**
 
 \page hpp_doc_corba_interface Corba interfaces
 
-<h1>Packages implementing CORBA interfaces</h1>
+\par Packages implementing CORBA interfaces
 
 The following packages implement Corba communication functionalities
 \li @HPPCORBASERVER_LINK@ : Corba server embedding a hpp::core::ProblemSolver instance.
@@ -140,7 +100,7 @@ The following packages implement Corba communication functionalities
 
 \page hpp_doc_graphical_interface Graphical user interface
 
-<h1>Packages implementing graphical user interface</h1>
+\par Packages implementing graphical user interface
 
 The following packages implement a corba connection with a graphical display
 \li @GEPETTOVIEWER_LINK@ : Graphical window based on OpenSceneGraph.
@@ -153,9 +113,7 @@ The following packages implement a corba connection with a graphical display
 
 \page hpp_doc_dependency_graph Dependencies
 
-<h1>Graph of dependencies between packages</h1>
-
-Below is the graph of dependencies between packages.
+Graph of dependencies between packages
 \dotfile graphDep.dot "Dependency graph"
 
  **/
