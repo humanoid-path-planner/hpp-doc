@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
 
-SET(INSTALL_DOCUMENTATION OFF)
 include(cmake/base.cmake)
 
 # These variables have to be defined before running setup_project
@@ -64,78 +63,53 @@ FOREACH(PKG ${SETUP_DOC_PKG})
     ELSE(DEFINED ${PREFIX}_DOCDIR)
       SET(DOC_PREFIX ${${PREFIX}_PREFIX}/share/doc/${PKG}/doxygen-html)
     ENDIF(DEFINED ${PREFIX}_DOXYGENDOCDIR)
-    STRING(REPLACE ${CMAKE_INSTALL_PREFIX}/share/doc .. DOC_PREFIX "${DOC_PREFIX}")
+    STRING(REPLACE ${CMAKE_INSTALL_PREFIX}/share/doc ../.. DOC_PREFIX "${DOC_PREFIX}")
     IF (EXISTS ${DOC_PREFIX}/main.html)
-      SET(${DOC_VAR}_LINK ${DOC_PREFIX}/main.html)
+      SET(${DOC_VAR}_URL ${DOC_PREFIX}/main.html)
     ELSE (EXISTS ${DOC_PREFIX}/main.html)
-      SET(${DOC_VAR}_LINK ${DOC_PREFIX}/index.html)
+      SET(${DOC_VAR}_URL ${DOC_PREFIX}/index.html)
     ENDIF (EXISTS ${DOC_PREFIX}/main.html)
+    SET(${DOC_VAR}_LINK "<a href='${${DOC_VAR}_URL}'>${PKG}</a>")
   ELSE(${PREFIX}_FOUND)
-    SET(${DOC_VAR}_LINK ${PKG}-missing.html)
-
     SET(PACKAGE_NAME ${PKG})
+    SET(DOC_PKG_NAME "hpp_doc_missing_${DOC_VAR}")
+    SET(${DOC_VAR}_LINK "\\ref ${DOC_PKG_NAME}")
+    SET(${DOC_VAR}_URL ${${DOC_VAR}_LINK})
     SET(STEPS)
     IF(DEFINED ${PKG}_giturl)
-      SET(STEPS "${STEPS} <li>
-      to get the source code through <code>git</code>:
-      <code>git clone ${${PKG}_giturl}</code>,
-      then configure, compile and install the package.</code></li>")
+      SET(STEPS "${STEPS}\\li get the source code through \\c git:
+\\code git clone --recursive ${${PKG}_giturl} \\endcode
+Then configure, compile and install the package.\n")
     ENDIF(DEFINED ${PKG}_giturl)
     IF(DEFINED ${PKG}_robotpkg_package)
-      SET(STEPS "${STEPS} <li>
-      install it through <code>robotpkg</code>:
-      <code>cd robotpkg/${${PKG}_robotpkg_package};
-      make update</code></li>")
+      SET(STEPS "${STEPS}\\li install it through \\c robotpkg :
+\\code
+cd robotpkg/${${PKG}_robotpkg_package}
+make update
+\\endcode")
     ENDIF(DEFINED ${PKG}_robotpkg_package)
-    CONFIGURE_FILE(doc/missing.html.in ${CMAKE_BINARY_DIR}/doc/${PKG}-missing.html @ONLY)
-
-    INSTALL(FILES ${CMAKE_BINARY_DIR}/doc/${PKG}-missing.html
-      DESTINATION ${CMAKE_INSTALL_DOCDIR})
+    CONFIGURE_FILE(doc/missing.dox.in ${CMAKE_BINARY_DIR}/doc/${PKG}-missing.dox @ONLY)
   ENDIF(${PREFIX}_FOUND)
 ENDFOREACH(PKG ${SETUP_DOC_PKG})
 
-SET(EXTRA_HTML_FILES
-  doc/corba.html
-  doc/algorithm.html
-  doc/gui.html
-  doc/main.html
-  doc/index.html
-  doc/tree.html)
-CONFIG_FILES(${EXTRA_HTML_FILES})
-FOREACH(HTML_FILE ${EXTRA_HTML_FILES})
-  INSTALL(FILES ${CMAKE_BINARY_DIR}/${HTML_FILE} DESTINATION ${CMAKE_INSTALL_DOCDIR})
-ENDFOREACH(HTML_FILE ${EXTRA_HTML_FILES})
+CONFIG_FILES(doc/main.dox doc/doxygenLayout.xml)
 
 ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_BINARY_DIR}/graphDep.dot
-  COMMAND ${CMAKE_SOURCE_DIR}/scripts/packageDep --quiet --output ${CMAKE_BINARY_DIR}/graphDep.dot ${SETUP_DOC_PKG}
-  COMMAND sed -i 's/size = \"12,15\"//' ${CMAKE_BINARY_DIR}/graphDep.dot)
-ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_BINARY_DIR}/dependencies.png
-  COMMAND dot -o ${CMAKE_BINARY_DIR}/dependencies.png -Tpng ${CMAKE_BINARY_DIR}/graphDep.dot
-  DEPENDS graphDep.dot)
-ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_BINARY_DIR}/graphDep.html
-  COMMAND dot -o ${CMAKE_BINARY_DIR}/graphDep.html -Tcmapx ${CMAKE_BINARY_DIR}/graphDep.dot
-  DEPENDS graphDep.dot)
-ADD_CUSTOM_COMMAND(OUTPUT graph-dependency.html
-  COMMAND cat ${CMAKE_SOURCE_DIR}/doc/graph-dependency.html.head
-  ${CMAKE_BINARY_DIR}/graphDep.html
-  ${CMAKE_SOURCE_DIR}/doc/graph-dependency.html.foot
-  > ${CMAKE_BINARY_DIR}/graph-dependency.html
-  DEPENDS ${CMAKE_BINARY_DIR}/graphDep.html ${CMAKE_BINARY_DIR}/dependencies.png)
+  COMMAND ${CMAKE_SOURCE_DIR}/scripts/packageDep --quiet --output ${CMAKE_BINARY_DIR}/graphDep.dot ${SETUP_DOC_PKG})
 ADD_CUSTOM_TARGET(generate-html ALL
-  DEPENDS graph-dependency.html)
+  DEPENDS graphDep.dot)
 
 INSTALL(FILES
-  doc/custom.css
-  doc/doxygen.css
-  doc/tabs.css
-  ${CMAKE_BINARY_DIR}/graph-dependency.html
+  doc/index.html
+  doc/jquery-3.3.1.min.js
+  ${CMAKE_BINARY_DIR}/doc/main.dox
   DESTINATION ${CMAKE_INSTALL_DOCDIR})
-INSTALL(FILES
-  ${CMAKE_BINARY_DIR}/dependencies.png
-  DESTINATION ${CMAKE_INSTALL_DOCDIR}/images)
 INSTALL(DIRECTORY
   doc/images
   doc/figures
   DESTINATION ${CMAKE_INSTALL_DOCDIR})
+INSTALL(
+  FILES ${CMAKE_CURRENT_BINARY_DIR}/doc/doxygen-xml/index.xml
+  DESTINATION ${CMAKE_INSTALL_DOCDIR}/doxygen-html)
 
 setup_project_finalize()
