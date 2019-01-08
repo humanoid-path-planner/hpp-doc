@@ -4,5 +4,5 @@ ENV DEVEL_DIR /workspace
 
 RUN /auto-install-hpp.sh --branch ubuntu-14.04 --target \
                      "doxygen-1.8.10.install \
-                     OpenSceneGraph-dae-plugin.install \
+                     osg-dae.install \
                      eigen3.install"
