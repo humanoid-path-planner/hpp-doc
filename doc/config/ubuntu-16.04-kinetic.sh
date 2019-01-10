@@ -17,4 +17,6 @@ fi
 # otherwise, you should add it by hand in the line below.
 export ROS_PACKAGE_PATH=$INSTALL_HPP_DIR/share:$ROS_PACKAGE_PATH
 
-[ -f "${INSTALL_HPP_DIR}/etc/hpp-tools/bashrc" ] && source "${INSTALL_HPP_DIR}/etc/hpp-tools/bashrc"
+if [ -f "${INSTALL_HPP_DIR}/etc/hpp-tools/bashrc" ]; then
+    source "${INSTALL_HPP_DIR}/etc/hpp-tools/bashrc"
+fi
