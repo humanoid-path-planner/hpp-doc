@@ -35,3 +35,39 @@ do
     docker push eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu}
 done
 ```
+
+## Make new releases
+
+The explanation below assumes you have an account on https://gepgitlab.laas.fr and that
+you have write-access on https://gepgitlab.laas.fr/humanoid-path-planner/hpp-doc.
+
+### Naming the release
+
+In the following, *M*, *m* and *r* correspond to major, minor and revision numbers.
+
+- Tags *vM.m.r-rc* correspond to tested releases.
+- Tags *vM.m.r* correspond to benchmarked releases.
+- *master* branches always point to the latest benchmarked release.
+- *devel* branches are always based on the latest tested release.
+
+### Tested release
+
+The procedure only checks that the code compiles and the unittests pass.
+
+When you are ready with your changes:
+1. If hpp-doc has changes, push to branch *devel* on https://gepgitlab.laas.fr/humanoid-path-planner/hpp-doc
+   Otherwise, trigger a new build on https://gepgitlab.laas.fr/humanoid-path-planner/hpp-doc/pipelines
+2. If the build is successful, run `scripts/create-tags.sh <version>`.
+   The script will check that:
+   - You are on the *devel* branch in all hpp repositories.
+   - All hpp repositories are clean (no local changes).
+3. Push the tags to github. (TODO add a script)
+
+### Benchmarked release
+
+Benchmarked release are tested release for which the benchmark have been run.
+
+1. Same as step 1 above, using branch *future* instead of *devel*.
+2. Run the scripts in `hpp_benchmark`.
+3. Same as step 2 above.
+4. Move the *master* branch to the current tag and push *master* and tag to github. (TODO add a script)
