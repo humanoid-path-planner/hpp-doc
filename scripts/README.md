@@ -22,3 +22,16 @@ You will find three files in the directory `${DEVEL_HPP_DIR}/tarball/`:
 * a bash script called `check.***.sh` that should be used in order to resolve the dependencies on a new computer,
 * a tarball called `hpp.***.tar.gz` containing only the binaries,
 * a tarball called `hpp.src.***.tar.gz` containing the binaries and the source files.
+
+## Build docker images for CI
+
+```
+branch=$(git branch --no-color | grep \* | cut -d' ' -f2)
+for ubuntu in 14.04 16.04
+do
+    docker build -t eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile ./scripts
+    docker build -t eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile.premade ./scripts
+    docker push eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu}
+    docker push eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu}
+done
+```

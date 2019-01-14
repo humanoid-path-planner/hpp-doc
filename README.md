@@ -17,15 +17,6 @@ For installation instructions, visit
 the [HPP website](https://humanoid-path-planner.github.io/hpp-doc)
 or [these instructions](doc/instructions.md).
 
-## Build docker images for CI
+## Instructions for developers
 
-```
-branch=$(git branch --no-color | grep \* | cut -d' ' -f2)
-for ubuntu in 14.04 16.04
-do
-    docker build -t eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile ./script
-    docker build -t eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile.premade ./script
-    docker push eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu}
-    docker push eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu}
-done
-```
+See `scripts/README.md` for instructions for developers.

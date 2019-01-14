@@ -7,7 +7,7 @@ variables:
     stage: build
     script:
       - export INSTALL_DOCUMENTATION=OFF
-      - $CI_PROJECT_DIR/script/auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME} --gitrepo ${CI_PROJECT_URL}/raw --target test-ci
+      - $CI_PROJECT_DIR/scripts/auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME} --gitrepo ${CI_PROJECT_URL}/raw --target test-ci
     after_script:
       - mv $DEVEL_HPP_DIR $CI_PROJECT_DIR
     artifacts:
