@@ -65,7 +65,7 @@ When you are ready with your changes:
    The script will check that:
    - You are on the *devel* branch in all hpp repositories.
    - All hpp repositories are clean (no local changes).
-3. Push the tags to github. (TODO add a script)
+3. Push the tags to github.
 
 ### Benchmarked release
 
