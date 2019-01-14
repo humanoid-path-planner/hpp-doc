@@ -49,6 +49,10 @@ In the following, *M*, *m* and *r* correspond to major, minor and revision numbe
 - Tags *vM.m.r* correspond to benchmarked releases.
 - *master* branches always point to the latest benchmarked release.
 - *devel* branches are always based on the latest tested release.
+- Major and minor numbers *M* and *m* increments are synchronized in all packages.
+- Revision number *r* increment is package-wise.
+  It is kept for changes which affect only one package and that do not change the
+  *tested* status (i.e. compilation + unit-test).
 
 ### Tested release
 
