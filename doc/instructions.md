@@ -70,8 +70,8 @@ sudo apt-get install autoconf g++ cmake doxygen libboost-dev liburdfdom-dev liba
   5. Copy Config and Makefile
 
     ```bash
-wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config/ubuntu-16.04-kinetic.sh
-wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/Makefile
+wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/config/ubuntu-16.04-kinetic.sh
+wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/Makefile
     ```
 
   6. cd into `$DEVEL_HPP_DIR` and type

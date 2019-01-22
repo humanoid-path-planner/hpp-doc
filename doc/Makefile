@@ -46,7 +46,7 @@ pinocchio_branch=v1.3.1
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF
 
-hpp-template-corba_branch=master
+hpp-template-corba_branch=v1.1.5
 hpp-template-corba_repository=${HPP_REPO}
 
 # }}}
@@ -54,7 +54,7 @@ hpp-template-corba_repository=${HPP_REPO}
 # {{{ Packages supporting HPP_VERSION
 
 # Either a version tag (e.g. v4.3.0), master or devel
-HPP_VERSION=v4.3.0
+HPP_VERSION=devel
 HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS}
 
 hpp-util_branch=${HPP_VERSION}
@@ -127,13 +127,10 @@ hpp-gui_repository=${HPP_REPO}
 ##################################
 # {{{ Robot specific package + test packages
 
-test-hpp_branch=master
-test-hpp_repository=${HPP_REPO}
-
-hrp2-14-description_branch=master
+hrp2-14-description_branch=devel
 hrp2-14-description_repository=${TRAC_REPO}
 
-hpp-hrp2_branch=master
+hpp-hrp2_branch=devel
 hpp-hrp2_repository=${HPP_REPO}
 
 robot_capsule_urdf_branch=groovy
@@ -142,19 +139,19 @@ robot_capsule_urdf_repository=${LAAS_REPO}
 robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
-iai_maps_branch=master
+iai_maps_branch=devel
 iai_maps_repository=${HPP_REPO}
 
 hpp_benchmark_branch=master
 hpp_benchmark_repository=${HPP_REPO}
 
-hpp-environments_branch=master
+hpp-environments_branch=devel
 hpp-environments_repository=${HPP_REPO}
 
 universal_robot_branch=kinetic
 universal_robot_repository=${HPP_REPO}
 
-hpp_universal_robot_branch=master
+hpp_universal_robot_branch=devel
 hpp_universal_robot_repository=${HPP_REPO}
 
 baxter_common_branch=master
@@ -182,10 +179,10 @@ osg-dae_repository=${GEPETTO_REPO}
 osg-dae_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
-gepetto-viewer_branch=master
+gepetto-viewer_branch=devel
 gepetto-viewer_repository=${GEPETTO_REPO}
 
-gepetto-viewer-corba_branch=master
+gepetto-viewer-corba_branch=devel
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
   gepetto-viewer-corba_extra_flags= -DUSE_QT4=OFF
@@ -195,7 +192,7 @@ pythonqt_branch=qt${QT_VERSION}
 pythonqt_repository=${HPP_REPO}
 pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
-qgv_branch=master
+qgv_branch=devel
 qgv_repository=${HPP_REPO}
 
 # }}}
