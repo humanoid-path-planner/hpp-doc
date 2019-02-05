@@ -166,6 +166,44 @@ hpp_romeo_repository=${HPP_REPO}
 romeo_branch=master
 romeo_repository=${HPP_REPO}
 
+
+# }}}
+##################################
+# {{{ Packages for rbprm
+
+hpp-affordance_branch=${HPP_VERSION}
+hpp-affordance_repository=${HPP_REPO}
+hpp-affordance_extra_flags=${HPP_EXTRA_FLAGS}
+
+hpp-affordance-corba_branch=${HPP_VERSION}
+hpp-affordance-corba_repository=${HPP_REPO}
+hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
+
+hpp-rbprm_branch=devel
+hpp-rbprm_repository=${HPP_REPO}
+hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
+
+hpp-rbprm-robot-data_branch=master
+hpp-rbprm-robot-data_repository=${HPP_REPO}
+
+hpp-rbprm-corba_branch=devel
+hpp-rbprm-corba_repository=${HPP_REPO}
+hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}
+
+hpp-centroidal-dynamics_branch=master
+hpp-centroidal-dynamics_repository=${HPP_REPO}
+
+hpp-bezier-com-traj_branch=master
+hpp-bezier-com-traj_repository=${HPP_REPO}
+hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
+
+hpp-spline_branch=master
+hpp-spline_repository=${HPP_REPO}
+hpp-spline_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
+
+eigenpy_branch=master
+eigenpy_repository=${SOT_REPO}
+
 # }}}
 ##################################
 # {{{ Packages for gepetto-gui
@@ -207,7 +245,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install
 # For test on gepgitlab, install robot packages first
 test-ci: baxter_common.install romeo.install universal_robot.install \
 	hpp-environments.install
-	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install \
+	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp_universal_robot.install && \
 	${MAKE} hpp-doc.install
 
@@ -219,6 +257,10 @@ benchmark: baxter_common.install romeo.install universal_robot.install \
 	hpp_universal_robot.install hpp-plot.install hpp-gui.install; \
 	${MAKE} hpp_benchmark.checkout; \
 	${MAKE} hpp-doc.install
+
+rbprm: hpp-rbprm-corba.install hpp-gepetto-viewer.install
+	${MAKE} hpp-doc.install
+
 
 # }}}
 ##################################
@@ -237,7 +279,7 @@ hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
 	hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
-	hpp-constraints.checkout
+	romeo.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 ifeq (${HUMANOID}, TRUE)
@@ -302,6 +344,18 @@ baxter_common.configure.dep: baxter_common.checkout
 hpp-baxter.configure.dep: baxter_common.install hpp-baxter.checkout
 hpp_romeo.configure.dep: romeo.install hpp_romeo.checkout
 romeo.configure.dep: romeo.checkout
+hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
+hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
+ hpp-corbaserver.install hpp-affordance-corba.checkout
+hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
+hpp-affordance.install hpp-spline.install hpp-bezier-com-traj.install hpp-rbprm.checkout
+hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
+hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
+ hpp-corbaserver.install hpp-rbprm-robot-data.install hpp-rbprm-corba.checkout
+hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.checkout
+hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install hpp-spline.install hpp-bezier-com-traj.checkout
+hpp-spline.configure.dep: hpp-spline.checkout
+eigenpy.configure.dep: eigenpy.checkout
 
 # }}}
 ##################################

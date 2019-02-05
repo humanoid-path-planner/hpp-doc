@@ -12,7 +12,7 @@ case $HOST_DIST in
       bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver \
       omniidl omniidl-python libltdl-dev python-matplotlib libtinyxml2-dev \
       liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev \
-      libqtgui4 oxygen-icon-theme libopenscenegraph-dev"
+      libqtgui4 oxygen-icon-theme libopenscenegraph-dev libcdd-dev"
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-14.04-indigo.sh"
     ;;
@@ -24,7 +24,7 @@ case $HOST_DIST in
       bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl \
       omniidl-python libltdl-dev python-matplotlib libxml2 libtinyxml2-dev \
       liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 libqtwebkit-dev oxygen-icon-theme \
-      libopenscenegraph-dev openscenegraph libpcre3-dev"
+      libopenscenegraph-dev openscenegraph libpcre3-dev libcdd-dev"
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-16.04-kinetic.sh"
     ;;
