@@ -9,9 +9,7 @@ RUN apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C3
 RUN echo "deb [arch=amd64] http://robotpkg.openrobots.org/packages/debian/pub xenial robotpkg" > /etc/apt/sources.list.d/robotpkg.list
 RUN curl http://robotpkg.openrobots.org/packages/debian/robotpkg.key | apt-key add -
 
-RUN apt-get update -qqy && apt-get upgrade -qqy
-RUN apt-get install -qqy sudo wget
-RUN apt-get install -qqy \
+RUN apt-get update -qqy && apt-get install -qqy \
     autoconf \
     g++ \
     cmake \
@@ -57,6 +55,8 @@ RUN apt-get install -qqy \
     libopenscenegraph-dev \
     openscenegraph \
     libpcre3-dev \
+    sudo \
+    wget \
  && apt-get remove -qqy texlive-latex-base texlive-binaries ghostscript \
  && apt-get autoremove -qqy \
  && rm -rf /var/lib/apt/lists/*
