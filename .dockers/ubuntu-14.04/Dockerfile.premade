@@ -3,6 +3,6 @@ FROM eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:14.04
 ENV DEVEL_DIR /workspace
 
 RUN /auto-install-hpp.sh --branch ubuntu-14.04 --target \
-                     "doxygen-1.8.10.install \
+                     "doxygen-1.8.15.install \
                      osg-dae.install \
                      eigen3.install"
