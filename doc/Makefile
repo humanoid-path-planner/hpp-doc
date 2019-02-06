@@ -185,7 +185,7 @@ else
   hpp-manipulation-corba_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
 endif
 
-all: doxygen-1.8.10.install hpp_tutorial.install hpp-gepetto-viewer.install
+all: doxygen-1.8.15.install hpp_tutorial.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
 # source $DEVEL_HPP_DIR/install/setup.bash before installing hrp2.
@@ -194,7 +194,7 @@ hrp2: test-hpp.install
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: eigen3.install hpp-fcl.checkout
 eigen3.configure.dep: eigen3.checkout
-doxygen-1.8.10.configure.dep: doxygen-1.8.10.checkout
+doxygen-1.8.15.configure.dep: doxygen-1.8.15.checkout
 roboptim-core-3.1.configure.dep: eigen3.install roboptim-core-3.1.checkout
 roboptim-trajectory-3.1.configure.dep: roboptim-core-3.1.install \
 	roboptim-trajectory-3.1.checkout
@@ -465,17 +465,17 @@ romeo.configure: romeo.configure.dep
 romeo.install: romeo.configure
 	${MAKE} -C ${SRC_DIR}/romeo/romeo_description/${BUILD_FOLDER} install
 
-doxygen-1.8.10.checkout:
+doxygen-1.8.15.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		${WGET} -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | ${TAR} -xz;\
+		${WGET} -O - "http://doxygen.nl/files/doxygen-1.8.15.linux.bin.tar.gz" | ${TAR} -xz;\
 	fi
 
-doxygen-1.8.10.configure_nodep:
+doxygen-1.8.15.configure_nodep:
 	@ :
 
-doxygen-1.8.10.install: doxygen-1.8.10.configure
-	cd ${SRC_DIR}/doxygen-1.8.10;\
+doxygen-1.8.15.install: doxygen-1.8.15.configure
+	cd ${SRC_DIR}/doxygen-1.8.15;\
 	mkdir -p ${INSTALL_HPP_DIR}/bin;\
 	install --mode=755 -t ${INSTALL_HPP_DIR}/bin bin/doxygen
