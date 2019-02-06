@@ -19,6 +19,8 @@ RUN apt-get update -qqy && apt-get install -qqy \
    g++ \
    libassimp-dev \
    libboost-all-dev \
+   libcdd-dev \
+   libglpk-dev \
    liblog4cxx10-dev \
    libltdl-dev \
    libomniorb4-dev \
