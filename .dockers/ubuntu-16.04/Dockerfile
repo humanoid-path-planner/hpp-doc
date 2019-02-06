@@ -12,53 +12,53 @@ RUN curl http://robotpkg.openrobots.org/packages/debian/robotpkg.key | apt-key a
 RUN apt-get update -qqy && apt-get upgrade -qqy
 RUN apt-get install -qqy sudo wget
 RUN apt-get install -qqy \
-      autoconf \
-      g++ \
-      cmake \
-      doxygen \
-      libassimp-dev \
-      libboost-dev \
-      libcdd-dev \
-      libglpk-dev \
-      liburdfdom-dev \
-      robotpkg-qpoases+doc \
-      robotpkg-roboptim-core \
-      robotpkg-roboptim-trajectory \
-      ros-kinetic-xacro \
-      ros-kinetic-kdl-parser \
-      ros-kinetic-common-msgs \
-      ros-kinetic-tf \
-      ros-kinetic-tf-conversions \
-      libccd-dev \
-      ros-kinetic-octomap \
-      ros-kinetic-resource-retriever \
-      ros-kinetic-srdfdom \
-      ros-kinetic-pr2-description \
-      flex \
-      bison \
-      asciidoc \
-      source-highlight \
-      git \
-      libomniorb4-dev \
-      omniorb-nameserver \
-      omniidl \
-      omniidl-python \
-      libltdl-dev \
-      python-matplotlib \
-      libxml2-dev \
-      libtinyxml2-dev \
-      liblog4cxx10-dev \
-      libltdl-dev \
-      qt4-dev-tools \
-      libqt4-opengl-dev \
-      libqtwebkit-dev \
-      libqtgui4 \
-      oxygen-icon-theme \
-      libopenscenegraph-dev \
-      openscenegraph \
-      libpcre3-dev \
-   && apt-get remove -qqy texlive-latex-base texlive-binaries ghostscript \
-      && apt-get autoremove -qqy \
-      && rm -rf /var/lib/apt/lists/*
+    autoconf \
+    g++ \
+    cmake \
+    doxygen \
+    libassimp-dev \
+    libboost-dev \
+    libcdd-dev \
+    libglpk-dev \
+    liburdfdom-dev \
+    robotpkg-qpoases+doc \
+    robotpkg-roboptim-core \
+    robotpkg-roboptim-trajectory \
+    ros-kinetic-xacro \
+    ros-kinetic-kdl-parser \
+    ros-kinetic-common-msgs \
+    ros-kinetic-tf \
+    ros-kinetic-tf-conversions \
+    libccd-dev \
+    ros-kinetic-octomap \
+    ros-kinetic-resource-retriever \
+    ros-kinetic-srdfdom \
+    ros-kinetic-pr2-description \
+    flex \
+    bison \
+    asciidoc \
+    source-highlight \
+    git \
+    libomniorb4-dev \
+    omniorb-nameserver \
+    omniidl \
+    omniidl-python \
+    libltdl-dev \
+    python-matplotlib \
+    libxml2-dev \
+    libtinyxml2-dev \
+    liblog4cxx10-dev \
+    libltdl-dev \
+    qt4-dev-tools \
+    libqt4-opengl-dev \
+    libqtwebkit-dev \
+    libqtgui4 \
+    oxygen-icon-theme \
+    libopenscenegraph-dev \
+    openscenegraph \
+    libpcre3-dev \
+ && apt-get remove -qqy texlive-latex-base texlive-binaries ghostscript \
+ && apt-get autoremove -qqy \
+ && rm -rf /var/lib/apt/lists/*
 
 COPY auto-install-hpp.sh /
