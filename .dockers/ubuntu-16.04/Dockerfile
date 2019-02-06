@@ -16,9 +16,12 @@ RUN apt-get install -qqy \
       g++ \
       cmake \
       doxygen \
-      libboost-dev \
-      liburdfdom-dev \
       libassimp-dev \
+      libboost-dev \
+      libglpk-dev \
+      libcdd-dev \
+      libassimp-dev \
+      liburdfdom-dev \
       robotpkg-qpoases+doc \
       robotpkg-roboptim-core \
       robotpkg-roboptim-trajectory \
