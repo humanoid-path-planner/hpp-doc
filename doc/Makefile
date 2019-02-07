@@ -186,6 +186,8 @@ gepetto-viewer-corba_branch=devel
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
   gepetto-viewer-corba_extra_flags= -DUSE_QT4=OFF
+else
+  gepetto-viewer-corba_extra_flags= -DUSE_QT4=ON
 endif
 
 pythonqt_branch=qt${QT_VERSION}
