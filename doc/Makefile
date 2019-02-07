@@ -470,7 +470,7 @@ doxygen-1.8.10.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		${WGET} -O - "ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.10.linux.bin.tar.gz" | ${TAR} -xz;\
+		${WGET} -O - "https://sourceforge.net/projects/doxygen/files/rel-1.8.10/doxygen-1.8.10.linux.bin.tar.gz/download" | ${TAR} -xz;\
 	fi
 
 doxygen-1.8.10.configure_nodep:
