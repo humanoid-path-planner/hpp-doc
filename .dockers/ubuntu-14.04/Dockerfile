@@ -39,6 +39,7 @@ RUN apt-get update -qqy && apt-get install -qqy \
     robotpkg-qpoases+doc \
     robotpkg-roboptim-core \
     robotpkg-roboptim-trajectory \
+    robotpkg-romeo-description \
     ros-indigo-xacro \
     ros-indigo-kdl-parser \
     ros-indigo-common-msgs \
