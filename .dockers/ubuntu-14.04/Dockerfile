@@ -51,7 +51,6 @@ RUN apt-get update -qqy && apt-get install -qqy \
     ros-indigo-pr2-description \
     source-highlight \
     wget \
-    libcdd-dev \
  && apt-get remove -qqy texlive-latex-base texlive-binaries ghostscript \
  && apt-get autoremove -qqy \
  && rm -rf /var/lib/apt/lists/*

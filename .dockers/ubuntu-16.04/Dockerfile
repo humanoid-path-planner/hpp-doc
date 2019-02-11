@@ -57,7 +57,6 @@ RUN apt-get update -qqy && apt-get install -qqy \
     libpcre3-dev \
     sudo \
     wget \
-    libcdd-dev \
  && apt-get remove -qqy texlive-latex-base texlive-binaries ghostscript \
  && apt-get autoremove -qqy \
  && rm -rf /var/lib/apt/lists/*
