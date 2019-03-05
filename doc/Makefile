@@ -329,11 +329,16 @@ update:
 		${MAKE} "$$child_dir".update; \
 	done
 
+# Git clone --branch (or -b) should accept tags as mentionned in git clone --help
+# However, the following command fails.
+#   git clone ${GIT_QUIET} --recursive -b ${$(@:.checkout=)_branch} ${$(@:.checkout=)_repository}/$(@:.checkout=);
+# It has been replace by two commands.
 %.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
 	else \
-		git clone ${GIT_QUIET} --recursive -b ${$(@:.checkout=)_branch} ${$(@:.checkout=)_repository}/$(@:.checkout=); \
+		git clone ${GIT_QUIET} --recursive ${$(@:.checkout=)_repository}/$(@:.checkout=); \
+		git checkout ${GIT_QUIET} ${$(@:.checkout=)_branch}; \
 	fi \
 
 %.update:
