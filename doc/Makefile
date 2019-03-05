@@ -46,6 +46,10 @@ pinocchio_branch=v1.3.1
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF
 
+hpp-fcl_branch=v0.9.0
+hpp-fcl_repository=${HPP_REPO}
+hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
+
 hpp-template-corba_branch=master
 hpp-template-corba_repository=${HPP_REPO}
 
@@ -59,10 +63,6 @@ HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS}
 
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
-
-hpp-fcl_branch=${HPP_VERSION}
-hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 hpp-statistics_branch=${HPP_VERSION}
 hpp-statistics_repository=${HPP_REPO}
