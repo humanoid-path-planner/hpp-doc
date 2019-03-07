@@ -229,7 +229,7 @@ else
 endif
 
 pythonqt_branch=qt${QT_VERSION}
-pythonqt_repository=${HPP_REPO}
+pythonqt_repository=${GEPETTO_REPO}
 pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
 qgv_branch=devel
