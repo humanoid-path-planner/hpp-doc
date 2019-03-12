@@ -229,6 +229,11 @@ pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
 qgv_branch=devel
 qgv_repository=${HPP_REPO}
+ifeq (${QT_VERSION}, 5)
+	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
+else
+	qgv_extra_flags=-DBINDINGS_QT5=OFF -DBINDINGS_QT4=ON
+endif
 
 # }}}
 ##################################
@@ -346,6 +351,7 @@ hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.c
 hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install hpp-spline.install hpp-bezier-com-traj.checkout
 hpp-spline.configure.dep: hpp-spline.checkout
 eigenpy.configure.dep: eigenpy.checkout
+hpp-tools.configure.dep: hpp-tools.checkout
 
 # }}}
 ##################################
