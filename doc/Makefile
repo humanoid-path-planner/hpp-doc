@@ -211,9 +211,9 @@ gepetto-viewer_repository=${GEPETTO_REPO}
 gepetto-viewer-corba_branch=devel
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
-  gepetto-viewer-corba_extra_flags= -DUSE_QT4=OFF
+  gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
 else
-  gepetto-viewer-corba_extra_flags= -DUSE_QT4=ON
+  gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
 endif
 
 pythonqt_branch=qt${QT_VERSION}
@@ -315,7 +315,7 @@ osg-dae.configure.dep: collada-dom.install \
 	osg-dae.checkout
 OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
 	OpenSceneGraph-3.4.0.checkout
-gepetto-viewer.configure.dep: gepetto-viewer.checkout
+gepetto-viewer.configure.dep: pythonqt.install gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 	pythonqt.install gepetto-viewer-corba.checkout
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
