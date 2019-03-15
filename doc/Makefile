@@ -88,9 +88,6 @@ hpp-walkgen_repository=${HPP_REPO}
 hpp-wholebody-step_branch=${HPP_VERSION}
 hpp-wholebody-step_repository=${HPP_REPO}
 
-hpp-wholebody-step-corba_branch=${HPP_VERSION}
-hpp-wholebody-step-corba_repository=${HPP_REPO}
-
 hpp-doc_branch=${HPP_VERSION}
 hpp-doc_repository=${HPP_REPO}
 
@@ -105,10 +102,8 @@ hpp-manipulation-corba_repository=${HPP_REPO}
 
 ifeq (${HUMANOID}, TRUE)
   hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
-  hpp-manipulation-corba_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
 else
   hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
-  hpp-manipulation-corba_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
 endif
 
 hpp_tutorial_branch=${HPP_VERSION}
@@ -234,6 +229,11 @@ pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
 qgv_branch=devel
 qgv_repository=${HPP_REPO}
+ifeq (${QT_VERSION}, 5)
+	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
+else
+	qgv_extra_flags=-DBINDINGS_QT5=OFF -DBINDINGS_QT4=ON
+endif
 
 # }}}
 ##################################
@@ -286,11 +286,9 @@ ifeq (${HUMANOID}, TRUE)
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-wholebody-step.install hpp-manipulation.checkout
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-wholebody-step-corba.install hpp-manipulation.install \
-	hpp-manipulation-corba.checkout
+	hpp-manipulation.install hpp-manipulation-corba.checkout
 hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
-	hpp-wholebody-step-corba.install qgv.install \
-	hpp-plot.checkout
+	qgv.install hpp-plot.checkout
 else
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
@@ -304,9 +302,6 @@ hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-core.install \
 	hpp-constraints.install hpp-corbaserver.checkout
-hpp-wholebody-step-corba.configure.dep: hpp-corbaserver.install \
-	hpp-wholebody-step.install hpp-template-corba.install \
-	hpp-wholebody-step-corba.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
 qgv.configure.dep: qgv.checkout
 pythonqt.configure.dep: pythonqt.checkout
@@ -317,7 +312,7 @@ hpp-hrp2.configure.dep: hrp2-14-description.install hpp-corbaserver.install \
 	hpp-hrp2.checkout
 hrp2-14-description.configure.dep: robot_capsule_urdf.install \
 	robot_model_py.install hrp2-14-description.checkout
-test-hpp.configure.dep: hpp-wholebody-step-corba.install \
+test-hpp.configure.dep: hpp-wholebody-step.install \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
 iai_maps.configure.dep: iai_maps.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
@@ -356,6 +351,7 @@ hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.c
 hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install hpp-spline.install hpp-bezier-com-traj.checkout
 hpp-spline.configure.dep: hpp-spline.checkout
 eigenpy.configure.dep: eigenpy.checkout
+hpp-tools.configure.dep: hpp-tools.checkout
 
 # }}}
 ##################################
