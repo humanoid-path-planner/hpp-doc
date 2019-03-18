@@ -292,7 +292,7 @@ hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
 endif
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
-hpp-corbaserver.configure.dep: hpp-core.install \
+hpp-corbaserver.configure.dep: hpp-core.install hpp-template-corba.install \
 	hpp-constraints.install hpp-corbaserver.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
 qgv.configure.dep: qgv.checkout
