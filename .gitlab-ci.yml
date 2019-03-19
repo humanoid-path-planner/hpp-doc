@@ -6,6 +6,7 @@ variables:
 .build_template: &build_definition
     stage: build
     script:
+      - mkdir -p $DEVEL_HPP_DIR/src
       - export INSTALL_DOCUMENTATION=OFF
       - $CI_PROJECT_DIR/scripts/auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME} --gitrepo ${CI_PROJECT_URL}/raw --target test-ci
     after_script:
