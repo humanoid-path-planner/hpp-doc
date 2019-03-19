@@ -90,6 +90,13 @@ devel-build:
       -  devel
     <<: *build_definition
 
+devel-18.04-build:
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
+    allow_failure: true
+    only:
+      -  devel
+    <<: *build_definition
+
 master-test:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
     dependencies:
@@ -114,6 +121,15 @@ devel-test:
       -  devel
     <<: *test_definition
 
+devel-18.04-test:
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
+    allow_failure: true
+    dependencies:
+      - devel-18.04-build
+    only:
+      -  devel
+    <<: *test_definition
+
 master-doc:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
     dependencies:
@@ -134,6 +150,15 @@ devel-doc:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
     dependencies:
       - devel-build
+    only:
+      -  devel
+    <<: *doc_definition
+
+devel-18.04-doc:
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
+    allow_failure: true
+    dependencies:
+      - devel-18.04-build
     only:
       -  devel
     <<: *doc_definition
