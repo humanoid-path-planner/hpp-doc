@@ -28,6 +28,18 @@ case $HOST_DIST in
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-16.04-kinetic.sh"
     ;;
+  bionic)
+    APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev \
+      libassimp-dev ros-melodic-xacro ros-melodic-kdl-parser ros-melodic-common-msgs \
+      ros-melodic-tf ros-melodic-tf-conversions libccd-dev ros-melodic-octomap \
+      ros-melodic-resource-retriever ros-melodic-srdfdom ros-melodic-pr2-description flex \
+      bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl \
+      omniidl-python libltdl-dev python-matplotlib libxml2-dev libtinyxml2-dev \
+      liblog4cxx-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 libqtwebkit-dev oxygen-icon-theme \
+      libopenscenegraph-dev openscenegraph libpcre3-dev libcdd-dev libglpk-dev"
+    APT_BUILD_DEP=""
+    CONFIG_FILE="ubuntu-18.04-melodic.sh"
+    ;;
   *)
     echo "Unknow host distribution."
     exit 1
@@ -90,7 +102,7 @@ do
         echo "$v=${!v}"
       done
       read -p "Continue (y/N)?" choice
-      case "$choice" in 
+      case "$choice" in
         y|Y )
           echo "yes"
           ;;
