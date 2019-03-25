@@ -6,6 +6,7 @@ variables:
 .build_template: &build_definition
     stage: build
     script:
+      - mkdir -p $DEVEL_HPP_DIR/src
       - export INSTALL_DOCUMENTATION=OFF
       - $CI_PROJECT_DIR/scripts/auto-install-hpp.sh --branch ${CI_COMMIT_REF_NAME} --gitrepo ${CI_PROJECT_URL}/raw --target test-ci
     after_script:
@@ -84,8 +85,15 @@ ubuntu-14.04-build:
       - ubuntu-14.04
     <<: *build_definition
 
-devel-build:
+devel-16.04-build:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    only:
+      -  devel
+    <<: *build_definition
+
+devel-18.04-build:
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
+    allow_failure: true
     only:
       -  devel
     <<: *build_definition
@@ -106,10 +114,19 @@ ubuntu-14.04-test:
       - ubuntu-14.04
     <<: *test_definition
 
-devel-test:
+devel-16.04-test:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
     dependencies:
-      - devel-build
+      - devel-16.04-build
+    only:
+      -  devel
+    <<: *test_definition
+
+devel-18.04-test:
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
+    allow_failure: true
+    dependencies:
+      - devel-18.04-build
     only:
       -  devel
     <<: *test_definition
@@ -130,10 +147,19 @@ ubuntu-14.04-doc:
       - ubuntu-14.04
     <<: *doc_definition
 
-devel-doc:
+devel-16.04-doc:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
     dependencies:
-      - devel-build
+      - devel-16.04-build
+    only:
+      -  devel
+    <<: *doc_definition
+
+devel-18.04-doc:
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
+    allow_failure: true
+    dependencies:
+      - devel-18.04-build
     only:
       -  devel
     <<: *doc_definition

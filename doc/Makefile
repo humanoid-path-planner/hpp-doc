@@ -8,7 +8,6 @@ LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 GEPETTO_REPO=https://github.com/Gepetto
-RETHINK_ROBOTICS_REPO=https://github.com/RethinkRobotics
 TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
@@ -149,17 +148,11 @@ universal_robot_repository=${HPP_REPO}
 hpp_universal_robot_branch=devel
 hpp_universal_robot_repository=${HPP_REPO}
 
-baxter_common_branch=master
-baxter_common_repository=${RETHINK_ROBOTICS_REPO}
-
 hpp-baxter_branch=master
 hpp-baxter_repository=${HPP_REPO}
 
 hpp_romeo_branch=master
 hpp_romeo_repository=${HPP_REPO}
-
-romeo_branch=master
-romeo_repository=${HPP_REPO}
 
 
 # }}}
@@ -218,9 +211,9 @@ gepetto-viewer_repository=${GEPETTO_REPO}
 gepetto-viewer-corba_branch=devel
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
-  gepetto-viewer-corba_extra_flags= -DUSE_QT4=OFF
+  gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
 else
-  gepetto-viewer-corba_extra_flags= -DUSE_QT4=ON
+  gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
 endif
 
 pythonqt_branch=qt${QT_VERSION}
@@ -243,14 +236,13 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
 # For test on gepgitlab, install robot packages first
-test-ci: baxter_common.install romeo.install universal_robot.install \
-	hpp-environments.install
+test-ci: universal_robot.install  hpp-environments.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp_universal_robot.install && \
 	${MAKE} hpp-doc.install
 
 # For benchmark, install robot packages first
-benchmark: baxter_common.install romeo.install universal_robot.install \
+benchmark: universal_robot.install \
 	hpp-environments.install hrp2-14-description.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
 	${MAKE} hpp-baxter.install hpp_romeo.install \
@@ -300,7 +292,7 @@ hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
 endif
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
-hpp-corbaserver.configure.dep: hpp-core.install \
+hpp-corbaserver.configure.dep: hpp-core.install hpp-template-corba.install \
 	hpp-constraints.install hpp-corbaserver.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
 qgv.configure.dep: qgv.checkout
@@ -323,8 +315,7 @@ osg-dae.configure.dep: collada-dom.install \
 	osg-dae.checkout
 OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
 	OpenSceneGraph-3.4.0.checkout
-gepetto-viewer.configure.dep: ${OSG_PACKAGE}.install \
-	gepetto-viewer.checkout
+gepetto-viewer.configure.dep: pythonqt.install gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 	pythonqt.install gepetto-viewer-corba.checkout
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
@@ -335,10 +326,8 @@ universal_robot.configure.dep: universal_robot.checkout
 hpp_universal_robot.configure.dep: universal_robot.install \
 	hpp_universal_robot.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
-baxter_common.configure.dep: baxter_common.checkout
-hpp-baxter.configure.dep: baxter_common.install hpp-baxter.checkout
-hpp_romeo.configure.dep: romeo.install hpp_romeo.checkout
-romeo.configure.dep: romeo.checkout
+hpp-baxter.configure.dep: hpp-baxter.checkout
+hpp_romeo.configure.dep: hpp_romeo.checkout
 hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
 hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
  hpp-corbaserver.install hpp-affordance-corba.checkout
@@ -474,36 +463,6 @@ universal_robot.install_nodep:universal_robot.configure_nodep
 universal_robot.install:universal_robot.configure
 	cd ${SRC_DIR}/$(@:.install=)/ur_description/${BUILD_FOLDER};\
 	make install
-
-baxter_common.configure_nodep:
-	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/baxter_description/${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/$(@:.configure_nodep=)/baxter_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_HPP_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..; \
-	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/rethink_ee_description/${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/$(@:.configure_nodep=)/rethink_ee_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_HPP_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..
-
-baxter_common.install_nodep:baxter_common.configure_nodep
-	cd ${SRC_DIR}/$(@:.install_nodep=)/baxter_description/${BUILD_FOLDER};\
-	make install; \
-	cd ${SRC_DIR}/$(@:.install_nodep=)/rethink_ee_description/${BUILD_FOLDER};\
-	make install
-
-baxter_common.install:baxter_common.configure
-	cd ${SRC_DIR}/$(@:.install=)/baxter_description/${BUILD_FOLDER};\
-	make install; \
-	cd ${SRC_DIR}/$(@:.install=)/rethink_ee_description/${BUILD_FOLDER};\
-	make install
-
-romeo.configure: romeo.configure.dep
-	. ${INSTALL_HPP_DIR}/setup.sh; \
-	cd ${SRC_DIR}/romeo/romeo_description;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/romeo/romeo_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-
-romeo.install: romeo.configure
-	${MAKE} -C ${SRC_DIR}/romeo/romeo_description/${BUILD_FOLDER} install
 
 # }}}
 

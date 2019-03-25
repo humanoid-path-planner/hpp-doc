@@ -1,6 +1,6 @@
 export INSTALL_HPP_DIR=$DEVEL_HPP_DIR/install
 export ROBOTPKG=/opt/openrobots
-export ROS=/opt/ros/kinetic
+export ROS=/opt/ros/melodic
 
 export PATH=$INSTALL_HPP_DIR/sbin:$INSTALL_HPP_DIR/bin:$ROS/bin:$PATH
 export PKG_CONFIG_PATH=$INSTALL_HPP_DIR/lib/pkgconfig/:$ROS/lib/pkgconfig:$ROBOTPKG/lib/pkgconfig
@@ -14,7 +14,7 @@ if [ -f $INSTALL_HPP_DIR/setup.bash ]; then
 else
     source $ROS/setup.bash
 fi
-# Make sure that /opt/ros/kinetic/setup.bash is in the ROS_PACKAGE_PATH,
+# Make sure that /opt/ros/melodic/setup.bash is in the ROS_PACKAGE_PATH,
 # otherwise, you should add it by hand in the line below.
 export ROS_PACKAGE_PATH=$INSTALL_HPP_DIR/share:$ROBOTPKG/share:$ROS_PACKAGE_PATH
 
