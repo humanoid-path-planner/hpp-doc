@@ -9,6 +9,7 @@ HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 GEPETTO_REPO=https://github.com/Gepetto
 TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
+FLORENT_REPO=https://github.com/florent-lamiraux
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
 ifndef INSTALL_HPP_DIR
@@ -71,7 +72,7 @@ hpp-pinocchio_repository=${HPP_REPO}
 hpp-pinocchio_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-constraints_branch=${HPP_VERSION}
-hpp-constraints_repository=${HPP_REPO}
+hpp-constraints_repository=${FLORENT_REPO}
 hpp-constraints_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-core_branch=${HPP_VERSION}
