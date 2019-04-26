@@ -53,7 +53,7 @@ hpp-template-corba_repository=${HPP_REPO}
 # {{{ Packages supporting HPP_VERSION
 
 # Either a version tag (e.g. v4.3.0), master or devel
-HPP_VERSION=devel
+HPP_VERSION=v4.5.0
 HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS}
 
 hpp-util_branch=${HPP_VERSION}
@@ -87,7 +87,7 @@ hpp-walkgen_repository=${HPP_REPO}
 hpp-wholebody-step_branch=${HPP_VERSION}
 hpp-wholebody-step_repository=${HPP_REPO}
 
-hpp-doc_branch=${HPP_VERSION}
+hpp-doc_branch=future
 hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=${HPP_VERSION}
@@ -136,10 +136,10 @@ robot_model_py_repository=${LAAS_REPO}
 iai_maps_branch=devel
 iai_maps_repository=${HPP_REPO}
 
-hpp_benchmark_branch=master
+hpp_benchmark_branch=${HPP_VERSION}
 hpp_benchmark_repository=${HPP_REPO}
 
-hpp-environments_branch=${HPP_VERSION}
+hpp-environments_branch=v4.4.0
 hpp-environments_repository=${HPP_REPO}
 
 universal_robot_branch=kinetic
@@ -159,7 +159,7 @@ hpp_romeo_repository=${HPP_REPO}
 ##################################
 # {{{ Packages for rbprm
 
-hpp-affordance_branch=${HPP_VERSION}
+hpp-affordance_branch=v4.4.0
 hpp-affordance_repository=${HPP_REPO}
 hpp-affordance_extra_flags=${HPP_EXTRA_FLAGS}
 
@@ -178,7 +178,7 @@ hpp-rbprm-corba_branch=${HPP_VERSION}
 hpp-rbprm-corba_repository=${HPP_REPO}
 hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-centroidal-dynamics_branch=${HPP_VERSION}
+hpp-centroidal-dynamics_branch=v4.5.1
 hpp-centroidal-dynamics_repository=${HPP_REPO}
 
 hpp-bezier-com-traj_branch=${HPP_VERSION}
@@ -213,7 +213,7 @@ else
   gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
 endif
 
-gepetto-viewer-corba_branch=${HPP_VERSION}
+gepetto-viewer-corba_branch=v5.2.1
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 
 pythonqt_branch=qt${QT_VERSION}
