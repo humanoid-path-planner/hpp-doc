@@ -1,5 +1,3 @@
 FROM eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:16.04
 
 ENV DEVEL_HPP_DIR /workspace
-
-RUN /auto-install-hpp.sh --branch master --target osg-dae.install
