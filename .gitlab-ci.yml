@@ -73,8 +73,15 @@ variables:
       paths:
         - workspace
 
-master-build:
+master-16.04-build:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
+    only:
+      - future
+    <<: *build_definition
+
+master-18.04-build:
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:18.04
+    allow_failure: true
     only:
       - future
     <<: *build_definition
@@ -98,13 +105,23 @@ devel-18.04-build:
       -  devel
     <<: *build_definition
 
-master-test:
+master-16.04-test:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
     dependencies:
-      - master-build
+      - master-16.04-build
     only:
       - future
     <<: *test_definition
+
+master-18.04-test:
+    allow_failure: true
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:18.04
+    dependencies:
+      - master-18.04-build
+    only:
+      - future
+    <<: *test_definition
+
 
 ubuntu-14.04-test:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
@@ -131,10 +148,19 @@ devel-18.04-test:
       -  devel
     <<: *test_definition
 
-master-doc:
+master-16.04-doc:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
     dependencies:
-      - master-build
+      - master-16.04-build
+    only:
+      - future
+    <<: *doc_definition
+
+master-18.04-doc:
+    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:18.04
+    allow_failure: true
+    dependencies:
+      - master-18.04-build
     only:
       - future
     <<: *doc_definition
