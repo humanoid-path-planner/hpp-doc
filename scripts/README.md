@@ -27,7 +27,7 @@ You will find three files in the directory `${DEVEL_HPP_DIR}/tarball/`:
 
 ```
 branch=$(git branch --no-color | grep \* | cut -d' ' -f2)
-for ubuntu in 14.04 16.04
+for ubuntu in 14.04 16.04 18.04
 do
     docker build -t eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile ./scripts
     docker build -t eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/${branch}-premade:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile.premade ./scripts
