@@ -36,7 +36,6 @@ To install all the packages on ubuntu 16.04 LTS 64 bit, you should do the follow
   3. install by apt-get
   ```bash
 sudo apt-get install \
-  autoconf \
   g++ \
   cmake \
   doxygen \
@@ -49,19 +48,11 @@ sudo apt-get install \
   robotpkg-roboptim-trajectory \
   robotpkg-romeo-description \
   ros-kinetic-xacro \
-  ros-kinetic-kdl-parser \
-  ros-kinetic-common-msgs \
-  ros-kinetic-tf \
-  ros-kinetic-tf-conversions \
   libccd-dev \
   ros-kinetic-octomap \
   ros-kinetic-resource-retriever \
   ros-kinetic-srdfdom \
   ros-kinetic-pr2-description \
-  flex \
-  bison \
-  asciidoc \
-  source-highlight \
   git \
   libomniorb4-dev \
   omniorb-nameserver \
