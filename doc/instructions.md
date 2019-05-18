@@ -6,7 +6,10 @@ To install all the packages on ubuntu 16.04 LTS 64 bit, you should do the follow
 
   2. install robotpkg: follow [the robotpkg installation website](http://robotpkg.openrobots.org/debian.html).
 
-  3. run command `sudo apt-get install robotpkg-hpp-tutorial robotpkg-osg-dae ros-kinetic-pr2-description`
+  3. install HPP: `sudo apt-get install robotpkg-hpp-tutorial robotpkg-osg-dae`
+
+  4. install (optionnal) extra packages for demonstrations:
+     `sudo apt-get install robotpkg-hpp-tutorial robotpkg-osg-dae ros-kinetic-pr2-description robotpkg-hpp-environments robotpkg-hpp-universal-robot robotpkg-romeo-description robotpkg-ros-baxter-common`
 
   4. setup your environment variables by adding the following lines to your `.bashrc`:
 
@@ -14,7 +17,7 @@ To install all the packages on ubuntu 16.04 LTS 64 bit, you should do the follow
 source /opt/ros/kinetic/setup.bash
 
 export PATH=/opt/openrobots/bin${!PATH:-:}${PATH}
-export LD_LIBRARY_PATH=/opt/openrobots/lib64:/opt/openrobots/lib${!LD_LIBRARY_PATH:-:}${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=/opt/openrobots/lib${!LD_LIBRARY_PATH:-:}${LD_LIBRARY_PATH}
 export PYTHONPATH=/opt/openrobots/lib/python2.7/site-packages${!PYTHONPATH:-:}${PYTHONPATH}
 export ROS_PACKAGE_PATH=/opt/openrobots/share${!ROS_PACKAGE_PATH:-:}${ROS_PACKAGE_PATH}
 
