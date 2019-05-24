@@ -14,15 +14,15 @@ To install all the packages on ubuntu 16.04 LTS 64 bit, you should do the follow
   4. setup your environment variables by adding the following lines to your `.bashrc`:
 
     ```bash
-source /opt/ros/kinetic/setup.bash
+    source /opt/ros/kinetic/setup.bash
 
-export PATH=/opt/openrobots/bin${!PATH:-:}${PATH}
-export LD_LIBRARY_PATH=/opt/openrobots/lib${!LD_LIBRARY_PATH:-:}${LD_LIBRARY_PATH}
-export PYTHONPATH=/opt/openrobots/lib/python2.7/site-packages${!PYTHONPATH:-:}${PYTHONPATH}
-export ROS_PACKAGE_PATH=/opt/openrobots/share${!ROS_PACKAGE_PATH:-:}${ROS_PACKAGE_PATH}
+    export PATH=/opt/openrobots/bin${!PATH:-:}${PATH}
+    export LD_LIBRARY_PATH=/opt/openrobots/lib${!LD_LIBRARY_PATH:-:}${LD_LIBRARY_PATH}
+    export PYTHONPATH=/opt/openrobots/lib/python2.7/site-packages${!PYTHONPATH:-:}${PYTHONPATH}
+    export ROS_PACKAGE_PATH=/opt/openrobots/share${!ROS_PACKAGE_PATH:-:}${ROS_PACKAGE_PATH}
 
-export CMAKE_PREFIX_PATH=/opt/openrobots${!CMAKE_PREFIX_PATH:-:}${CMAKE_PREFIX_PATH}
-export PKG_CONFIG_PATH=/opt/openrobots${!PKG_CONFIG_PATH:-:}${PKG_CONFIG_PATH}
+    export CMAKE_PREFIX_PATH=/opt/openrobots${!CMAKE_PREFIX_PATH:-:}${CMAKE_PREFIX_PATH}
+    export PKG_CONFIG_PATH=/opt/openrobots${!PKG_CONFIG_PATH:-:}${PKG_CONFIG_PATH}
     ```
 
   5. open `/opt/openrobots/share/doc/hpp-doc/index.html` in a web brower and you
@@ -38,42 +38,42 @@ To install all the packages on ubuntu 16.04 LTS 64 bit, you should do the follow
 
   3. install by apt-get
   ```bash
-sudo apt-get install \
-  g++ \
-  cmake \
-  doxygen \
-  libboost-dev \
-  liburdfdom-dev \
-  libassimp-dev \
-  libeigen3-dev \
-  robotpkg-qpoases+doc \
-  robotpkg-roboptim-core \
-  robotpkg-roboptim-trajectory \
-  robotpkg-romeo-description \
-  ros-kinetic-xacro \
-  libccd-dev \
-  ros-kinetic-octomap \
-  ros-kinetic-resource-retriever \
-  ros-kinetic-srdfdom \
-  ros-kinetic-pr2-description \
-  git \
-  libomniorb4-dev \
-  omniorb-nameserver \
-  omniidl \
-  omniidl-python \
-  libltdl-dev \
-  python-matplotlib \
-  libxml2 \
-  libtinyxml2-dev \
-  liblog4cxx10-dev \
-  qt4-dev-tools \
-  libqt4-opengl-dev \
-  libqtgui4 \
-  libqtwebkit-dev \
-  oxygen-icon-theme \
-  libopenscenegraph-dev \
-  openscenegraph \
-  libpcre3-dev \
+    sudo apt-get install \
+      g++ \
+      cmake \
+      doxygen \
+      libboost-dev \
+      liburdfdom-dev \
+      libassimp-dev \
+      libeigen3-dev \
+      robotpkg-qpoases+doc \
+      robotpkg-roboptim-core \
+      robotpkg-roboptim-trajectory \
+      robotpkg-romeo-description \
+      ros-kinetic-xacro \
+      libccd-dev \
+      ros-kinetic-octomap \
+      ros-kinetic-resource-retriever \
+      ros-kinetic-srdfdom \
+      ros-kinetic-pr2-description \
+      git \
+      libomniorb4-dev \
+      omniorb-nameserver \
+      omniidl \
+      omniidl-python \
+      libltdl-dev \
+      python-matplotlib \
+      libxml2 \
+      libtinyxml2-dev \
+      liblog4cxx10-dev \
+      qt4-dev-tools \
+      libqt4-opengl-dev \
+      libqtgui4 \
+      libqtwebkit-dev \
+      oxygen-icon-theme \
+      libopenscenegraph-dev \
+      openscenegraph \
+      libpcre3-dev \
     ```
 
   4. Choose a directory on you file system and define the environment
@@ -88,24 +88,24 @@ sudo apt-get install \
   5. Copy Config and Makefile
 
     ```bash
-wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/config/ubuntu-16.04-kinetic.sh
-wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/Makefile
+    wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/config/ubuntu-16.04-kinetic.sh
+    wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/doc/Makefile
     ```
 
   6. cd into `$DEVEL_HPP_DIR` and type
 
     ```bash
-cd ${DEVEL_HPP_DIR}
-source config.sh
+    cd ${DEVEL_HPP_DIR}
+    source config.sh
     ```
 
   7. cd into `$DEVEL_HPP_DIR/src` and type
 
     ```bash
-cd ${DEVEL_HPP_DIR}/src
-make iai_maps.install;
-source ../config.sh;
-make all
+    cd ${DEVEL_HPP_DIR}/src
+    make iai_maps.install;
+    source ../config.sh;
+    make all
     ```
 
   8. open `$DEVEL_HPP_DIR/install/share/doc/hpp-doc/index.html` in a web brower and you
