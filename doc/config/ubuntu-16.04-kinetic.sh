@@ -4,6 +4,10 @@ if [ -f $INSTALL_HPP_DIR/setup.bash ]; then
     source $INSTALL_HPP_DIR/setup.bash
 else
     source /opt/ros/kinetic/setup.bash
+    export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$INSTALL_HPP_DIR/share
+    export export CMAKE_PREFIX_PATH=$INSTALL_HPP_DIR:$CMAKE_PREFIX_PATH
+    export LD_LIBRARY_PATH=$INSTALL_HPP_DIR/lib:$LD_LIBRARY_PATH
+    export PATH=$INSTALL_HPP_DIR/bin:${PATH}
 fi
 
 if [ -f "${INSTALL_HPP_DIR}/etc/hpp-tools/bashrc" ]; then
@@ -16,3 +20,4 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/opt/openrobots/share
 export PYTHONPATH=$INSTALL_HPP_DIR/lib/python2.7/site-packages:$INSTALL_HPP_DIR/lib/python2.7/dist-packages:$PYTHONPATH
 export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:/opt/openrobots
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/openrobots/lib
+export PATH=$INSTALL_HPP_DIR/sbin:${PATH}
