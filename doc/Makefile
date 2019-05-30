@@ -391,6 +391,8 @@ update:
 	fi
 
 
+%.configure.dep: %.checkout
+
 %.configure: %.configure.dep
 	${MAKE} $(@:.configure=).configure_nodep
 
