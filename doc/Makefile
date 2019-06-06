@@ -59,7 +59,7 @@ HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS}
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=v1.0.2
+hpp-fcl_branch=${HPP_VERSION}
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
