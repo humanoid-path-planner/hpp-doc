@@ -33,7 +33,7 @@ The packages are distributed into the following categories:
     The algorithmic part, built on @HPPCORE_LINK@ is
     embedded in corba servers implemented by
     @HPPCORBASERVER_LINK@ or extensions like
-    @HPPWHOLEBODYSTEPCORBA_LINK@.
+    @HPPMANIPULATIONCORBA_LINK@.
     The corba servers are linked to executable \c hppcorbaserver.
     <p></p>
     From a python terminal, clients to the corba servers can be created in order
@@ -41,7 +41,7 @@ The packages are distributed into the following categories:
     idl interfaces and python classes available in \ref hpp_doc_corba_interface.
     <p></p>
     Results of path planning requests as well as individual configurations can
-    be displayed in \c gepetto-viewer via package
+    be displayed in \c gepetto-gui via package
     @HPPGEPETTOVIEWER_LINK@.
   </td></tr>
 </table>
@@ -91,7 +91,6 @@ how to use this project.
 
 The following packages implement Corba communication functionalities
 \li @HPPCORBASERVER_LINK@ : Corba server embedding a hpp::core::ProblemSolver instance.
-\li @HPPWHOLEBODYSTEPCORBA_LINK@ : Corba server for @HPPWHOLEBODYSTEP_LINK@.
 \li @HPPMANIPULATIONCORBA_LINK@ : Corba server for @HPPMANIPULATION_LINK@.
 
  **/
@@ -104,7 +103,7 @@ The following packages implement Corba communication functionalities
 
 The following packages implement a corba connection with a graphical display
 \li @GEPETTOVIEWER_LINK@ : Graphical window based on OpenSceneGraph.
-\li @GEPETTOVIEWERCORBA_LINK@ : Corba interface to gepetto-viewer.
+\li @GEPETTOVIEWERCORBA_LINK@ : Corba interface to gepetto-gui.
 \li @HPPGEPETTOVIEWER_LINK@ : Link between hpp and gepetto-viewer-corba.
 
  **/

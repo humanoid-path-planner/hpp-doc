@@ -1,9 +1,9 @@
 #!/bin/bash
 
-VERSION="v1.0"
-HOST=projects.laas.fr
-BASEURL="http://$HOST/gepetto"
-HOSTDIR=/www/html/projects/gepetto
+VERSION="v4.6.0"
+HOST=gepettoweb.laas.fr
+BASEURL="https://$HOST"
+HOSTDIR=/var/www/gepetto
 
 VERSIONPATH="hpp-doc-release/$VERSION"
 MAINPATH="hpp"
