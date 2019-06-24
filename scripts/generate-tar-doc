@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# generate-tar-doc $DEVEL_HPP_DIR/install/share/doc http://projects.laas.fr/gepetto/hpp
+# generate-tar-doc $DEVEL_HPP_DIR/install/share/doc http://gepettoweb.laas.fr/hpp
 # then copy /tmp/hpp.tar.gz on server and inflate archive.
 
 usage="usage: `basename $0` <directory> <server>"
