@@ -78,5 +78,7 @@ To install all the packages on ubuntu 16.04 LTS 64 bit, you should do the follow
     make all
     ```
 
-  8. open `$DEVEL_HPP_DIR/install/share/doc/hpp-doc/index.html` in a web brower and you
+## Documentation
+
+  Open `$DEVEL_HPP_DIR/install/share/doc/hpp-doc/index.html` in a web brower and you
   will have access to the documentation of most packages.

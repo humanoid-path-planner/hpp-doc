@@ -1,4 +1,4 @@
-## Installation on ubuntu-16.04 64 bit with ros-kinetic
+## Source installation on ubuntu-16.04 64 bit with ros-kinetic
 
 To install all the packages on ubuntu 16.04 LTS 64 bit, you should do the following steps:
 
@@ -7,56 +7,43 @@ To install all the packages on ubuntu 16.04 LTS 64 bit, you should do the follow
   2. install robotpkg: follow [the robotpkg installation website](http://robotpkg.openrobots.org/debian.html).
 
   3. install by apt-get
-    - autoconf
-    - g++
-    - cmake
-    - doxygen
-    - libboost-dev
-    - liburdfdom-dev
-    - libassimp-dev
-    - libeigen3-dev
-    - robotpkg-qpoases+doc
-    - robotpkg-roboptim-core
-    - robotpkg-roboptim-trajectory
-    - robotpkg-romeo-description
-    - ros-kinetic-xacro
-    - ros-kinetic-kdl-parser
-    - ros-kinetic-common-msgs
-    - ros-kinetic-tf
-    - ros-kinetic-tf-conversions
-    - ros-kinetic-libccd
-    - ros-kinetic-octomap
-    - ros-kinetic-resource-retriever
-    - ros-kinetic-urdfdom-py
-    - ros-kinetic-srdfdom
-    - ros-kinetic-pr2-description
-    - ros-kinetic-romeo-description
-    - flex
-    - bison
-    - asciidoc
-    - source-highlight
-    - git
-    - libomniorb4-dev
-    - omniorb-nameserver
-    - omniidl
-    - omniidl-python
-    - libltdl-dev
-    - python-matplotlib
-    - libxml2-dev
-    - libtinyxml2-dev
-    - liblog4cxx10-dev
-    - libltdl-dev
-    - qt4-dev-tools
-    - libqt4-opengl-dev
-    - libqtgui4
-    - libqtwebkit-dev
-    - oxygen-icon-theme
-    - libopenscenegraph-dev
-    - openscenegraph
-    - libpcre3-dev
-
-    ```bash
-sudo apt-get install autoconf g++ cmake doxygen libboost-dev liburdfdom-dev libassimp-dev libeigen3-dev robotpkg-qpoases+doc robotpkg-roboptim-core robotpkg-roboptim-trajectory robotpkg-romeo-description ros-kinetic-xacro ros-kinetic-kdl-parser ros-kinetic-common-msgs ros-kinetic-tf ros-kinetic-tf-conversions libccd-dev ros-kinetic-octomap ros-kinetic-resource-retriever ros-kinetic-srdfdom ros-kinetic-pr2-description ros-kinetic-romeo-description flex bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl omniidl-python libltdl-dev python-matplotlib libxml2-dev libtinyxml2-dev liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 libqtwebkit-dev oxygen-icon-theme libopenscenegraph-dev openscenegraph libpcre3-dev
+  ```bash
+    sudo apt-get install \
+      g++ \
+      cmake \
+      doxygen \
+      libboost-dev \
+      liburdfdom-dev \
+      libassimp-dev \
+      libeigen3-dev \
+      robotpkg-qpoases+doc \
+      robotpkg-roboptim-core \
+      robotpkg-roboptim-trajectory \
+      robotpkg-romeo-description \
+      ros-kinetic-xacro \
+      libccd-dev \
+      ros-kinetic-octomap \
+      ros-kinetic-resource-retriever \
+      ros-kinetic-srdfdom \
+      ros-kinetic-pr2-description \
+      git \
+      libomniorb4-dev \
+      omniorb-nameserver \
+      omniidl \
+      omniidl-python \
+      libltdl-dev \
+      python-matplotlib \
+      libxml2 \
+      libtinyxml2-dev \
+      liblog4cxx10-dev \
+      qt4-dev-tools \
+      libqt4-opengl-dev \
+      libqtgui4 \
+      libqtwebkit-dev \
+      oxygen-icon-theme \
+      libopenscenegraph-dev \
+      openscenegraph \
+      libpcre3-dev \
     ```
 
   4. Choose a directory on you file system and define the environment
@@ -71,24 +58,24 @@ sudo apt-get install autoconf g++ cmake doxygen libboost-dev liburdfdom-dev liba
   5. Copy Config and Makefile
 
     ```bash
-wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config/ubuntu-16.04-kinetic.sh
-wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/makefiles/master.mk
+    wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config/ubuntu-16.04-kinetic.sh
+    wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/makefiles/master.mk
     ```
 
   6. cd into `$DEVEL_HPP_DIR` and type
 
     ```bash
-cd ${DEVEL_HPP_DIR}
-source config.sh
+    cd ${DEVEL_HPP_DIR}
+    source config.sh
     ```
 
   7. cd into `$DEVEL_HPP_DIR/src` and type
 
     ```bash
-cd ${DEVEL_HPP_DIR}/src
-make iai_maps.install;
-source ../config.sh;
-make all
+    cd ${DEVEL_HPP_DIR}/src
+    make iai_maps.install;
+    source ../config.sh;
+    make all
     ```
 
 ## Documentation
