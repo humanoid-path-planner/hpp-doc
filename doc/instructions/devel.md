@@ -9,41 +9,41 @@ To install all the packages on ubuntu 16.04 LTS 64 bit, you should do the follow
   3. install by apt-get
   ```bash
     sudo apt-get install \
-      g++ \
       cmake \
       doxygen \
-      libboost-dev \
-      liburdfdom-dev \
+      g++ \
+      git \
       libassimp-dev \
+      libboost-dev \
+      libccd-dev \
       libeigen3-dev \
+      liblog4cxx10-dev \
+      libltdl-dev \
+      libomniorb4-dev \
+      libopenscenegraph-dev \
+      libpcre3-dev \
+      libqt4-opengl-dev \
+      libqtgui4 \
+      libqtwebkit-dev \
+      libtinyxml2-dev \
+      liburdfdom-dev \
+      libxml2 \
+      omniidl \
+      omniidl-python \
+      omniorb-nameserver \
+      openscenegraph \
+      oxygen-icon-theme \
+      python-matplotlib \
+      qt4-dev-tools \
       robotpkg-qpoases+doc \
       robotpkg-roboptim-core \
       robotpkg-roboptim-trajectory \
       robotpkg-romeo-description \
-      ros-kinetic-xacro \
-      libccd-dev \
       ros-kinetic-octomap \
+      ros-kinetic-pr2-description \
       ros-kinetic-resource-retriever \
       ros-kinetic-srdfdom \
-      ros-kinetic-pr2-description \
-      git \
-      libomniorb4-dev \
-      omniorb-nameserver \
-      omniidl \
-      omniidl-python \
-      libltdl-dev \
-      python-matplotlib \
-      libxml2 \
-      libtinyxml2-dev \
-      liblog4cxx10-dev \
-      qt4-dev-tools \
-      libqt4-opengl-dev \
-      libqtgui4 \
-      libqtwebkit-dev \
-      oxygen-icon-theme \
-      libopenscenegraph-dev \
-      openscenegraph \
-      libpcre3-dev \
+      ros-kinetic-xacro \
     ```
 
   4. Choose a directory on you file system and define the environment
