@@ -278,7 +278,7 @@ ifeq (${HUMANOID}, TRUE)
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-wholebody-step.install hpp-manipulation.checkout
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-manipulation.install hpp-manipulation-corba.checkout
+	hpp-corbaserver.install hpp-manipulation-corba.checkout
 hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
 	qgv.install hpp-plot.checkout
 else
