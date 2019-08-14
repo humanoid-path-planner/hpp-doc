@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt-get update -qqy && apt-get install -qqy \
+RUN apt-get update -y && apt-get install -y \
    curl \
    && rm -rf /var/lib/apt/lists/*
 
@@ -10,7 +10,7 @@ RUN echo "deb [arch=amd64] http://robotpkg.openrobots.org/wip/packages/debian/pu
 RUN echo "deb [arch=amd64] http://robotpkg.openrobots.org/packages/debian/pub xenial robotpkg" >> /etc/apt/sources.list.d/robotpkg.list
 RUN curl http://robotpkg.openrobots.org/packages/debian/robotpkg.key | apt-key add -
 
-RUN apt-get update -qqy && apt-get install -qqy \
+RUN apt-get update -y && apt-get install -y \
     autoconf \
     g++ \
     cmake \
@@ -61,8 +61,8 @@ RUN apt-get update -qqy && apt-get install -qqy \
     libpcre3-dev \
     sudo \
     wget \
- && apt-get remove -qqy texlive-latex-base texlive-binaries ghostscript \
- && apt-get autoremove -qqy \
+ && apt-get remove -y texlive-latex-base texlive-binaries ghostscript \
+ && apt-get autoremove -y \
  && rm -rf /var/lib/apt/lists/*
 
 COPY auto-install-hpp.sh /
