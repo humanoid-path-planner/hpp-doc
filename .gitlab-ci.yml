@@ -86,12 +86,6 @@ master-18.04-build:
       - future
     <<: *build_definition
 
-ubuntu-14.04-build:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
-    only:
-      - ubuntu-14.04
-    <<: *build_definition
-
 devel-16.04-build:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
     only:
@@ -122,14 +116,6 @@ master-18.04-test:
       - future
     <<: *test_definition
 
-
-ubuntu-14.04-test:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
-    dependencies:
-      - ubuntu-14.04-build
-    only:
-      - ubuntu-14.04
-    <<: *test_definition
 
 devel-16.04-test:
     image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
@@ -163,14 +149,6 @@ master-18.04-doc:
       - master-18.04-build
     only:
       - future
-    <<: *doc_definition
-
-ubuntu-14.04-doc:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/ubuntu-14.04-premade:14.04
-    dependencies:
-      - ubuntu-14.04-build
-    only:
-      - ubuntu-14.04
     <<: *doc_definition
 
 devel-16.04-doc:
