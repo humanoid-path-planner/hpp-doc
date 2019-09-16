@@ -222,7 +222,7 @@ pythonqt_branch=qt${QT_VERSION}
 pythonqt_repository=${GEPETTO_REPO}
 pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
-qgv_branch=v1.1.1
+qgv_branch=v1.1.0
 qgv_repository=${HPP_REPO}
 ifeq (${QT_VERSION}, 5)
 	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
