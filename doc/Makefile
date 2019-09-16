@@ -234,7 +234,7 @@ endif
 ##################################
 # {{{ High-level targets
 
-all: hpp_tutorial.install hpp-gepetto-viewer.install
+all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.install
 	${MAKE} hpp-doc.install
 
 # For test on gepgitlab, install robot packages first

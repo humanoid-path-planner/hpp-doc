@@ -4,18 +4,6 @@
 set -e
 HOST_DIST=$(lsb_release -s -c)
 case $HOST_DIST in
-  trusty)
-    APT_DEP="g++ cmake libboost-dev liburdfdom-dev libassimp-dev \
-      ros-indigo-xacro ros-indigo-kdl-parser ros-indigo-common-msgs \
-      ros-indigo-tf ros-indigo-tf-conversions ros-indigo-libccd ros-indigo-octomap \
-      ros-indigo-resource-retriever ros-indigo-srdfdom ros-indigo-pr2-description flex \
-      bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver \
-      omniidl omniidl-python libltdl-dev python-matplotlib libtinyxml2-dev \
-      liblog4cxx10-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev \
-      libqtgui4 oxygen-icon-theme libopenscenegraph-dev libcdd-dev"
-    APT_BUILD_DEP=""
-    CONFIG_FILE="ubuntu-14.04-indigo.sh"
-    ;;
   xenial)
     APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev \
       libassimp-dev ros-kinetic-xacro ros-kinetic-kdl-parser ros-kinetic-common-msgs \
