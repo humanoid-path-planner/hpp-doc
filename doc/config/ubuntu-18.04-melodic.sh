@@ -14,7 +14,7 @@ if [ -f $INSTALL_HPP_DIR/setup.bash ]; then
 else
     source $ROS/setup.bash
 fi
-# Make sure that /opt/ros/melodic/setup.bash is in the ROS_PACKAGE_PATH,
+# Make sure that /opt/ros/melodic is in the ROS_PACKAGE_PATH,
 # otherwise, you should add it by hand in the line below.
 export ROS_PACKAGE_PATH=$INSTALL_HPP_DIR/share:$ROBOTPKG/share:$ROS_PACKAGE_PATH
 
