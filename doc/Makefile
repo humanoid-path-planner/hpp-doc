@@ -230,6 +230,9 @@ else
 	qgv_extra_flags=-DBINDINGS_QT5=OFF -DBINDINGS_QT4=ON
 endif
 
+hpp-tools_branch=${HPP_VERSION}
+hpp-tools_repository=${HPP_REPO}
+
 # }}}
 ##################################
 # {{{ High-level targets
