@@ -5,7 +5,7 @@ export ROS=/opt/ros/melodic
 export PATH=$INSTALL_HPP_DIR/sbin:$INSTALL_HPP_DIR/bin:$ROS/bin:$PATH
 export PKG_CONFIG_PATH=$INSTALL_HPP_DIR/lib/pkgconfig/:$ROS/lib/pkgconfig:$ROBOTPKG/lib/pkgconfig
 
-export PYTHONPATH=$INSTALL_HPP_DIR/lib/python2.7/site-packages:$INSTALL_HPP_DIR/lib/python2.7/dist-packages:$ROS/lib/python2.7/dist-packages:$PYTHONPATH
+export PYTHONPATH=$INSTALL_HPP_DIR/lib/python2.7/site-packages:$INSTALL_HPP_DIR/lib/python2.7/dist-packages:$ROS/lib/python2.7/dist-packages:$ROBOTPKG/lib/python2.7/site-packages:$PYTHONPATH
 
 export LD_LIBRARY_PATH=$INSTALL_HPP_DIR/lib:$INSTALL_HPP_DIR/lib64:$ROS/lib:$ROBOTPKG/lib:$LD_LIBRARY_PATH
 
@@ -14,7 +14,7 @@ if [ -f $INSTALL_HPP_DIR/setup.bash ]; then
 else
     source $ROS/setup.bash
 fi
-# Make sure that /opt/ros/melodic/setup.bash is in the ROS_PACKAGE_PATH,
+# Make sure that /opt/ros/melodic is in the ROS_PACKAGE_PATH,
 # otherwise, you should add it by hand in the line below.
 export ROS_PACKAGE_PATH=$INSTALL_HPP_DIR/share:$ROBOTPKG/share:$ROS_PACKAGE_PATH
 
