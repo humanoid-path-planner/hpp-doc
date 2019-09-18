@@ -19,8 +19,8 @@ fi
 
 # Make sure that /opt/ros/kinetic is in the ROS_PACKAGE_PATH,
 # otherwise, you should add it by hand in the line below.
-export PYTHONPATH=$INSTALL_HPP_DIR/lib/python2.7/site-packages:$INSTALL_HPP_DIR/lib/python2.7/dist-packages:$PYTHONPATH
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$ROBOTPKG/share
+export PYTHONPATH=$INSTALL_HPP_DIR/lib/python2.7/site-packages:$INSTALL_HPP_DIR/lib/python2.7/dist-packages:$ROBOTPKG/lib/python2.7/site-packages:$PYTHONPATH
 export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:$ROBOTPKG
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROBOTPKG/lib
 export PATH=$INSTALL_HPP_DIR/sbin:${PATH}
