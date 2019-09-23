@@ -41,7 +41,7 @@ INSTALL_DOCUMENTATION=ON
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.1.6
+pinocchio_branch=v2.1.7
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
@@ -59,7 +59,7 @@ HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS}
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=${HPP_VERSION}
+hpp-fcl_branch=v1.1.3
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
@@ -189,7 +189,7 @@ hpp-spline_branch=${HPP_VERSION}
 hpp-spline_repository=${HPP_REPO}
 hpp-spline_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-eigenpy_branch=v1.5.1
+eigenpy_branch=v1.6.0
 eigenpy_repository=${SOT_REPO}
 
 # }}}
