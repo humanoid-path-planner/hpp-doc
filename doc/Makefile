@@ -54,7 +54,7 @@ hpp-template-corba_repository=${HPP_REPO}
 
 # Either a version tag (e.g. v4.3.0), master or devel
 HPP_VERSION=devel
-HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS}
+HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS} -DCMAKE_CXX_STANDARD=11
 
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
