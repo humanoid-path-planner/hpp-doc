@@ -71,7 +71,7 @@ hpp-pinocchio_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-constraints_branch=v4.6.0
 hpp-constraints_repository=${HPP_REPO}
-hpp-constraints_extra_flags=${HPP_EXTRA_FLAGS}
+hpp-constraints_extra_flags=${HPP_EXTRA_FLAGS} -DUSE_QPOASES=OFF -DRUN_TESTS=OFF
 
 hpp-core_branch=v4.6.0
 hpp-core_repository=${HPP_REPO}
