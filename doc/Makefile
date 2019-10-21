@@ -85,6 +85,7 @@ hpp-walkgen_repository=${HPP_REPO}
 
 hpp-wholebody-step_branch=v4.6.0
 hpp-wholebody-step_repository=${HPP_REPO}
+hpp-wholebody-step_extra_flags= -DRUN_TESTS=OFF
 
 hpp-doc_branch=master
 hpp-doc_repository=${HPP_REPO}
