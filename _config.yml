@@ -13,7 +13,7 @@ category_list:
     icon: book
     links:
       - name: Presentation
-        url: https://humanoid-path-planner.github.io/hpp-doc/assets/hpp-presentation.pdf
+        url: https://humanoid-path-planner.github.io/hpp-doc/presentation/presentation.pdf
       - name: API documentation
         url: https://humanoid-path-planner.github.io/hpp-doc/documentation.html
   - name: Development

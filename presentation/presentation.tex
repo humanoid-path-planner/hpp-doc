@@ -1,0 +1,114 @@
+\documentclass[xcolor = {svgnames,x11names}]{beamer}
+
+\mode<presentation> {
+  \usetheme{Malmoe}
+  % ou autre ...
+
+  \setbeamercovered{transparent}
+  % ou autre chose (il est également possible de supprimer cette ligne)
+}
+
+
+%\usepackage[english]{babel}
+% or autre comme par exemple \usepackage[english]{babel}
+
+%\usepackage[latin1]{inputenc}
+% or autre
+
+\usepackage{times}
+%\usepackage[T1]{fontenc}
+% Or autre. Notez que le codage et la fonte doivent être assortis. Si T1
+% ne paraît pas très esthétique, essayer d'effacer la ligne contenant fontenc.
+
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+\usepackage{hyperref}
+\usepackage{multimedia}
+\usepackage{listings}
+
+\newcommand\vect[1]{\textbf{#1}}
+\newcommand\CS{{\cal C}}
+\newcommand\rational{\mathbb{Q}}
+\newcommand\real{\mathbb{R}}
+\newcommand\Sone{\mathbb{S}^1}
+\newcommand\conf{\textbf{q}}
+\newcommand\x{\vect{x}}
+\newcommand\y{\vect{y}}
+\newcommand\z{\vect{z}}
+\newcommand\WS{{\cal W}}
+\newcommand\robot{{\cal R}}
+\newcommand\body{{\cal B}}
+\newcommand\obst{{\cal O}}
+\newcommand\CSobst{\CS_{obst}}
+\newcommand\CSfree{\CS_{free}}
+\newcommand\sturm{\textbf{sturm}}
+\newcommand\var{\textbf{n}_{chsgn}}
+\newcommand\nor{\textbf{nr}}
+\newcommand\signe{\textbf{signe}}
+\newcommand\Kappa{{\cal K}}
+\newcommand\calP{{\cal P}}
+\newcommand\moment{\vect{M}}
+\newcommand\resultante{\vect{R}}
+\newcommand\f{\vect{f}}
+\newcommand\vel{\vect{v}}
+\newcommand\gravity{\vect{g}}
+\newcommand\trans{\vect{t}}
+\newcommand\rotation{R}
+\newcommand\utheta{u_{\theta}}
+
+\definecolor{grey}{rgb}{0.5,0.5,0.5}
+
+
+\title[HPP] {Humanoid Path Planner}
+
+\subtitle{}
+
+\author[]
+{Florent Lamiraux and Joseph Mirabel}
+
+\institute[CNRS-LAAS] % (facultatif mais généralement nécessaire)
+{
+  CNRS-LAAS, Toulouse, France
+}
+\date[] % (facultatif, peut être une abréviation du nom de la conférence)
+{}
+
+\AtBeginSection[]{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+  \tableofcontents[currentsection]
+  \end{frame} 
+}
+
+\AtBeginSubsection[]{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+  \tableofcontents[currentsection, currentsubsection]
+  \end{frame} 
+}
+
+\begin{document}
+
+\lstset{
+breakatwhitespace=true,
+%language=C++,
+%columns=fullflexible,
+%keepspaces=true,
+breaklines=true
+tabsize=3, 
+%showstringspaces=false,
+%extendedchars=true
+}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\input{intro}
+\begin{frame}{Humanoid Path Planner}
+  \tableofcontents[currentsection,currentsubsection]
+  % Vous pouvez, si vous le souhaiter ajouter l'option [pausesections]
+\end{frame}
+\input{slides.tex}
+\end{document}
