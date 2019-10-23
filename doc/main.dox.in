@@ -27,7 +27,7 @@ The packages are distributed into the following categories:
 
 <table>
   <tr><td width="50%">
-      <img src="../figures/archi.png" alt="Overview of the architecture" style="max-height: 50vh"/>
+      <img src="../figures/archi.svg" alt="Overview of the architecture" style="max-height: 50vh"/>
   </td><td width="5%">
   </td><td width="30%">
     The algorithmic part, built on @HPPCORE_LINK@ is
