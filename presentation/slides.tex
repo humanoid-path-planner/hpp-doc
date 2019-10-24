@@ -9,7 +9,7 @@
   \pause
   \item obstacles,
   \pause
-  \item constraints,
+  \item constraints (non-holonomic, manipulation),
   \pause
   \item an initial configuration and
   \item goal configurations,
@@ -37,7 +37,29 @@
   \end{itemize}
 \end {frame}
 
+%
+%  Main features
+%
+
+\begin {frame} {Main features}
+  \begin {itemize}
+  \item Numerical constraints at the core of the model
+    \begin {itemize}
+    \item quasi-static equilibrium
+    \item object grasp and placement
+    \item explicit and implicit constraints
+    \end {itemize}
+    \pause
+  \item no a priori discretization of paths
+    \begin {itemize}
+    \item evaluation calls constraint projection
+    \item constrained path need to be checked for continuity (class \texttt{hpp::core::PathProjector})
+    \end {itemize}
+  \end {itemize}
+\end{frame}
+
 \section {Description of the software}
+
 %
 %  Overview of the architecture
 %
