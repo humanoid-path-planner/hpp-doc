@@ -364,6 +364,13 @@ log:
 		${MAKE} "$$child_dir".log; \
 	done
 
+fetch:
+	@for child_dir in $$(ls ${SRC_DIR}); do \
+		test -d "$$child_dir" || continue; \
+		test -d "$$child_dir/.git" || continue; \
+		${MAKE} "$$child_dir".fetch; \
+	done
+
 update:
 	@for child_dir in $$(ls ${SRC_DIR}); do \
 		test -d "$$child_dir" || continue; \
@@ -377,6 +384,14 @@ update:
 	else \
 		git clone ${GIT_QUIET} --recursive -b ${$(@:.checkout=)_branch} ${$(@:.checkout=)_repository}/$(@:.checkout=); \
 	fi \
+
+%.fetch:
+	if [ "${$(@:.fetch=)_repository}" = "" ]; then \
+		echo "$(@:.fetch=) is not referenced"; \
+	else \
+		cd ${SRC_DIR}/$(@:.fetch=);\
+		git fetch ${GIT_QUIET} origin; \
+	fi
 
 %.update:
 	if [ "${$(@:.update=)_repository}" = "" ]; then \
