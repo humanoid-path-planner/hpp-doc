@@ -122,7 +122,7 @@ hpp-gui_repository=${HPP_REPO}
 ##################################
 # {{{ Robot specific package + test packages
 
-hrp2-14-description_branch=devel
+hrp2-14-description_branch=master
 hrp2-14-description_repository=${TRAC_REPO}
 
 hpp-hrp2_branch=devel
