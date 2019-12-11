@@ -122,6 +122,9 @@ hpp-gui_repository=${HPP_REPO}
 ##################################
 # {{{ Robot specific package + test packages
 
+example-robot-data_branch=devel
+example-robot-data_repository=${GEPETTO_REPO}
+
 hrp2-14-description_branch=master
 hrp2-14-description_repository=${TRAC_REPO}
 
@@ -327,8 +330,9 @@ hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-gepetto-viewer.checkout
 hpp-gui.configure.dep: hpp-gui.checkout
 universal_robot.configure.dep: universal_robot.checkout
-hpp-universal-robot.configure.dep: universal_robot.install \
+hpp-universal-robot.configure.dep: example-robot-data.install \
 	hpp-universal-robot.checkout
+example-robot-data.configure.dep: example-robot-data.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
 hpp-baxter.configure.dep: hpp-baxter.checkout
 hpp_romeo.configure.dep: hpp_romeo.checkout
