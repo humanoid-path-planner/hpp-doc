@@ -124,6 +124,9 @@ hpp-practicals_repository=${HPP_REPO}
 ##################################
 # {{{ Robot specific package + test packages
 
+example-robot-data_branch=devel
+example-robot-data_repository=${GEPETTO_REPO}
+
 hrp2-14-description_branch=master
 hrp2-14-description_repository=${TRAC_REPO}
 
@@ -210,11 +213,7 @@ OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_D
 
 gepetto-viewer_branch=v4.8.0
 gepetto-viewer_repository=${GEPETTO_REPO}
-ifeq (${QT_VERSION}, 5)
-  gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
-else
-  gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
-endif
+gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 gepetto-viewer-corba_branch=v5.3.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
@@ -329,8 +328,9 @@ hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-gepetto-viewer.checkout
 hpp-gui.configure.dep: hpp-gui.checkout
 universal_robot.configure.dep: universal_robot.checkout
-hpp-universal-robot.configure.dep: universal_robot.install \
+hpp-universal-robot.configure.dep: example-robot-data.install \
 	hpp-universal-robot.checkout
+example-robot-data.configure.dep: example-robot-data.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
 hpp-baxter.configure.dep: hpp-baxter.checkout
 hpp_romeo.configure.dep: hpp_romeo.checkout
