@@ -80,6 +80,7 @@ hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-corbaserver_branch=${HPP_VERSION}
 hpp-corbaserver_repository=${HPP_REPO}
+hpp-corbaserver_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-walkgen_branch=${HPP_VERSION}
 hpp-walkgen_repository=${HPP_REPO}
@@ -99,6 +100,7 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 
 hpp-manipulation-corba_branch=${HPP_VERSION}
 hpp-manipulation-corba_repository=${HPP_REPO}
+hpp-manipulation-corba_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 ifeq (${HUMANOID}, TRUE)
   hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
@@ -108,15 +110,18 @@ endif
 
 hpp_tutorial_branch=${HPP_VERSION}
 hpp_tutorial_repository=${HPP_REPO}
+hpp_tutorial_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-gepetto-viewer_branch=${HPP_VERSION}
 hpp-gepetto-viewer_repository=${HPP_REPO}
+hpp-gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-plot_branch=${HPP_VERSION}
 hpp-plot_repository=${HPP_REPO}
 
 hpp-gui_branch=${HPP_VERSION}
 hpp-gui_repository=${HPP_REPO}
+hpp-gui_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 # }}}
 ##################################
@@ -124,12 +129,14 @@ hpp-gui_repository=${HPP_REPO}
 
 example-robot-data_branch=devel
 example-robot-data_repository=${GEPETTO_REPO}
+example-robot-data_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hrp2-14-description_branch=master
 hrp2-14-description_repository=${TRAC_REPO}
 
 hpp-hrp2_branch=devel
 hpp-hrp2_repository=${HPP_REPO}
+hpp-hrp2_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 robot_capsule_urdf_branch=groovy
 robot_capsule_urdf_repository=${LAAS_REPO}
@@ -145,19 +152,22 @@ hpp_benchmark_repository=${HPP_REPO}
 
 hpp-environments_branch=${HPP_VERSION}
 hpp-environments_repository=${HPP_REPO}
+hpp-environments_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 universal_robot_branch=kinetic
 universal_robot_repository=${HPP_REPO}
 
 hpp-universal-robot_branch=${HPP_VERSION}
 hpp-universal-robot_repository=${HPP_REPO}
+hpp-universal-robot_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-baxter_branch=${HPP_VERSION}
 hpp-baxter_repository=${HPP_REPO}
+hpp-baxter_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp_romeo_branch=${HPP_VERSION}
 hpp_romeo_repository=${HPP_REPO}
-
+hpp_romeo_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 # }}}
 ##################################
@@ -215,6 +225,7 @@ gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 gepetto-viewer-corba_branch=${HPP_VERSION}
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
+gepetto-viewer-corba_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 pythonqt_branch=qt${QT_VERSION}
 pythonqt_repository=${GEPETTO_REPO}
