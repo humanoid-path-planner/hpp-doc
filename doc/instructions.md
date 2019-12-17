@@ -52,6 +52,7 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
       robotpkg-romeo-description \
       robotpkg-ros-baxter-common \
       robotpkg-ros-universal-robot \
+      robotpkg-py36-omniorbpy \
       ros-melodic-xacro \
       libccd-dev \
       ros-melodic-octomap \
