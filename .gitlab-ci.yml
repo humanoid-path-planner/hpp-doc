@@ -74,33 +74,33 @@ variables:
         - workspace
 
 master-16.04-build:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
     only:
       - future
     <<: *build_definition
 
 master-18.04-build:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:18.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:18.04
     allow_failure: true
     only:
       - future
     <<: *build_definition
 
 devel-16.04-build:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
     only:
       -  devel
     <<: *build_definition
 
 devel-18.04-build:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
     allow_failure: true
     only:
       -  devel
     <<: *build_definition
 
 master-16.04-test:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
     dependencies:
       - master-16.04-build
     only:
@@ -109,7 +109,7 @@ master-16.04-test:
 
 master-18.04-test:
     allow_failure: true
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:18.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:18.04
     dependencies:
       - master-18.04-build
     only:
@@ -118,7 +118,7 @@ master-18.04-test:
 
 
 devel-16.04-test:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
     dependencies:
       - devel-16.04-build
     only:
@@ -126,7 +126,7 @@ devel-16.04-test:
     <<: *test_definition
 
 devel-18.04-test:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
     allow_failure: true
     dependencies:
       - devel-18.04-build
@@ -135,7 +135,7 @@ devel-18.04-test:
     <<: *test_definition
 
 master-16.04-doc:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:16.04
     dependencies:
       - master-16.04-build
     only:
@@ -143,7 +143,7 @@ master-16.04-doc:
     <<: *doc_definition
 
 master-18.04-doc:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:18.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/master-premade:18.04
     allow_failure: true
     dependencies:
       - master-18.04-build
@@ -152,7 +152,7 @@ master-18.04-doc:
     <<: *doc_definition
 
 devel-16.04-doc:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:16.04
     dependencies:
       - devel-16.04-build
     only:
@@ -160,7 +160,7 @@ devel-16.04-doc:
     <<: *doc_definition
 
 devel-18.04-doc:
-    image: eur0c.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
+    image: memmos.laas.fr:5000/humanoid-path-planner/hpp-doc/devel-premade:18.04
     allow_failure: true
     dependencies:
       - devel-18.04-build
