@@ -129,7 +129,7 @@ hpp-gui_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 example-robot-data_branch=devel
 example-robot-data_repository=${GEPETTO_REPO}
-example-robot-data_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
+example-robot-data_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3 -DBUILD_PYTHON_INTERFACE=OFF
 
 hrp2-14-description_branch=master
 hrp2-14-description_repository=${TRAC_REPO}
@@ -282,8 +282,8 @@ pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
 hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
 	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
-hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
-	hpp-core.checkout
+hpp-core.configure.dep: example-robot-data.install hpp-constraints.install \
+	hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
 	hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
