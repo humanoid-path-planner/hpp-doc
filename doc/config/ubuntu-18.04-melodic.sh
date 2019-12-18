@@ -21,4 +21,4 @@ export ROS_PACKAGE_PATH=$INSTALL_HPP_DIR/share:$ROBOTPKG/share:$ROS_PACKAGE_PATH
 if [ -f "${INSTALL_HPP_DIR}/etc/hpp-tools/bashrc" ]; then
     source "${INSTALL_HPP_DIR}/etc/hpp-tools/bashrc"
 fi
-export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:$ROBOTPKG
+export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:$ROBOTPKG:/usr
