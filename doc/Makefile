@@ -45,7 +45,7 @@ pinocchio_branch=v2.2.1
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
-hpp-template-corba_branch=v4.5.0
+hpp-template-corba_branch=devel
 hpp-template-corba_repository=${HPP_REPO}
 
 # }}}
