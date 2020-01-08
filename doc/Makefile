@@ -256,7 +256,7 @@ test-ci: universal_robot.install  hpp-environments.install
 	${MAKE} hpp-doc.install
 
 # For benchmark, install robot packages first
-benchmark: universal_robot.install \
+benchmark: example-robot-data.install \
 	hpp-environments.install hrp2-14-description.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
 	${MAKE} hpp-baxter.install hpp_romeo.install \
