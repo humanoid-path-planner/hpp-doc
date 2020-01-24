@@ -61,7 +61,7 @@ hpp-util_repository=${HPP_REPO}
 
 hpp-fcl_branch=${HPP_VERSION}
 hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
+hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
 hpp-statistics_branch=${HPP_VERSION}
 hpp-statistics_repository=${HPP_REPO}
