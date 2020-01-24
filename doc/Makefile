@@ -45,7 +45,7 @@ pinocchio_branch=v2.2.1
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
-hpp-template-corba_branch=v4.5.0
+hpp-template-corba_branch=devel
 hpp-template-corba_repository=${HPP_REPO}
 
 # }}}
@@ -60,7 +60,7 @@ hpp-util_repository=${HPP_REPO}
 
 hpp-fcl_branch=v1.2.0
 hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
+hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
 hpp-statistics_branch=v4.8.0
 hpp-statistics_repository=${HPP_REPO}
@@ -79,6 +79,7 @@ hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-corbaserver_branch=v4.8.0
 hpp-corbaserver_repository=${HPP_REPO}
+hpp-corbaserver_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-walkgen_branch=v4.8.0
 hpp-walkgen_repository=${HPP_REPO}
@@ -98,6 +99,7 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 
 hpp-manipulation-corba_branch=v4.8.0
 hpp-manipulation-corba_repository=${HPP_REPO}
+hpp-manipulation-corba_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 ifeq (${HUMANOID}, TRUE)
   hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
@@ -107,15 +109,18 @@ endif
 
 hpp_tutorial_branch=v4.8.0
 hpp_tutorial_repository=${HPP_REPO}
+hpp_tutorial_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-gepetto-viewer_branch=v4.8.0
 hpp-gepetto-viewer_repository=${HPP_REPO}
+hpp-gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-plot_branch=v4.8.0
 hpp-plot_repository=${HPP_REPO}
 
 hpp-gui_branch=v4.8.0
 hpp-gui_repository=${HPP_REPO}
+hpp-gui_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-practicals_branch=v4.8.0
 hpp-practicals_repository=${HPP_REPO}
@@ -126,12 +131,14 @@ hpp-practicals_repository=${HPP_REPO}
 
 example-robot-data_branch=devel
 example-robot-data_repository=${GEPETTO_REPO}
+example-robot-data_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3 -DBUILD_PYTHON_INTERFACE=OFF
 
 hrp2-14-description_branch=master
 hrp2-14-description_repository=${TRAC_REPO}
 
 hpp-hrp2_branch=master
 hpp-hrp2_repository=${HPP_REPO}
+hpp-hrp2_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 robot_capsule_urdf_branch=groovy
 robot_capsule_urdf_repository=${LAAS_REPO}
@@ -147,19 +154,22 @@ hpp_benchmark_repository=${HPP_REPO}
 
 hpp-environments_branch=v4.4.0
 hpp-environments_repository=${HPP_REPO}
+hpp-environments_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 universal_robot_branch=kinetic
 universal_robot_repository=${HPP_REPO}
 
 hpp-universal-robot_branch=v4.8.0
 hpp-universal-robot_repository=${HPP_REPO}
+hpp-universal-robot_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-baxter_branch=v4.8.0
 hpp-baxter_repository=${HPP_REPO}
+hpp-baxter_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp_romeo_branch=v4.8.0
 hpp_romeo_repository=${HPP_REPO}
-
+hpp_romeo_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 # }}}
 ##################################
@@ -217,6 +227,7 @@ gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 gepetto-viewer-corba_branch=v5.3.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
+gepetto-viewer-corba_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 pythonqt_branch=qt${QT_VERSION}
 pythonqt_repository=${GEPETTO_REPO}
@@ -241,13 +252,13 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 	${MAKE} hpp-doc.install
 
 # For test on gepgitlab, install robot packages first
-test-ci: universal_robot.install  hpp-environments.install
+test-ci: example-robot-data.install  hpp-environments.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
 
 # For benchmark, install robot packages first
-benchmark: universal_robot.install \
+benchmark: example-robot-data.install \
 	hpp-environments.install hrp2-14-description.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
 	${MAKE} hpp-baxter.install hpp_romeo.install \
@@ -273,8 +284,8 @@ pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
 hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
 	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
-hpp-core.configure.dep: hpp-constraints.install hpp-statistics.install \
-	hpp-core.checkout
+hpp-core.configure.dep: example-robot-data.install hpp-constraints.install \
+	hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
 	hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
