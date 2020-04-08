@@ -221,7 +221,11 @@ OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_D
 
 gepetto-viewer_branch=${HPP_VERSION}
 gepetto-viewer_repository=${GEPETTO_REPO}
-gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
+ifeq (${QT_VERSION}, 5)
+	gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPROJECT_USE_QT4=OFF
+else
+	gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPROJECT_USE_QT4=ON
+endif
 
 gepetto-viewer-corba_branch=${HPP_VERSION}
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
