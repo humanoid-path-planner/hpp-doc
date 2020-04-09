@@ -245,6 +245,7 @@ endif
 
 hpp-tools_branch=${HPP_VERSION}
 hpp-tools_repository=${HPP_REPO}
+hpp-tools_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 # }}}
 ##################################
