@@ -41,7 +41,7 @@ INSTALL_DOCUMENTATION=ON
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.2.1
+pinocchio_branch=v2.2.3
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
@@ -223,7 +223,11 @@ OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_D
 
 gepetto-viewer_branch=v4.8.0
 gepetto-viewer_repository=${GEPETTO_REPO}
-gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
+ifeq (${QT_VERSION}, 5)
+	gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPROJECT_USE_QT4=OFF
+else
+	gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPROJECT_USE_QT4=ON
+endif
 
 gepetto-viewer-corba_branch=v5.3.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
@@ -243,6 +247,7 @@ endif
 
 hpp-tools_branch=${HPP_VERSION}
 hpp-tools_repository=${HPP_REPO}
+hpp-tools_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 # }}}
 ##################################
