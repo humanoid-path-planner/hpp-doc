@@ -25,7 +25,6 @@ RUN apt-get update -y && apt-get install -y \
     robotpkg-roboptim-core \
     robotpkg-roboptim-trajectory \
     robotpkg-romeo-description \
-    robotpkg-ros-baxter-common \
     ros-kinetic-xacro \
     ros-kinetic-kdl-parser \
     ros-kinetic-common-msgs \
