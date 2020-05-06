@@ -41,7 +41,7 @@ INSTALL_DOCUMENTATION=ON
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.2.3
+pinocchio_branch=v2.4.3
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
