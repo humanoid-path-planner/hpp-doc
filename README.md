@@ -3,13 +3,13 @@
 ## Updating the website
 The website can be locally built by installing `jekyll`:
 ```bash
-sudo apt-get install gem
-sudo gem install jekyll
+sudo apt-get install gem ruby ruby-dev
+bundler install
 ```
 
 and serving the website:
 ```bash
-jekyll serve --incremental --safe
+bundle exec jekyll serve --incremental --safe
 ```
 
 The locally-built website is the available at [http://localhost:4000/hpp-doc/](http://localhost:4000/hpp-doc/)
