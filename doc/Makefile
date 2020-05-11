@@ -43,7 +43,7 @@ INSTALL_DOCUMENTATION=ON
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.4.3
+pinocchio_branch=devel
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
@@ -150,7 +150,7 @@ robot_model_py_repository=${LAAS_REPO}
 iai_maps_branch=devel
 iai_maps_repository=${HPP_REPO}
 
-hpp_benchmark_branch=master
+hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
 
 hpp-environments_branch=${HPP_VERSION}
@@ -206,7 +206,7 @@ hpp-spline_branch=${HPP_VERSION}
 hpp-spline_repository=${HPP_REPO}
 hpp-spline_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-eigenpy_branch=v1.5.1
+eigenpy_branch=v2.3.2
 eigenpy_repository=${SOT_REPO}
 
 # }}}
