@@ -43,7 +43,7 @@ INSTALL_DOCUMENTATION=ON
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=2.4.3
+pinocchio_branch=v2.4.4
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
@@ -58,48 +58,48 @@ hpp-template-corba_repository=${HPP_REPO}
 HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS} \
 	-DBUILD_TESTING=${BUILD_TESTING}$
 
-hpp-util_branch=v4.8.0
+hpp-util_branch=v4.9.0
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=v1.2.0
+hpp-fcl_branch=v1.4.4
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
-hpp-statistics_branch=v4.8.0
+hpp-statistics_branch=v4.9.0
 hpp-statistics_repository=${HPP_REPO}
 
-hpp-pinocchio_branch=v4.8.0
+hpp-pinocchio_branch=v4.9.1
 hpp-pinocchio_repository=${HPP_REPO}
 hpp-pinocchio_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-constraints_branch=v4.8.0
+hpp-constraints_branch=v4.9.1
 hpp-constraints_repository=${HPP_REPO}
 hpp-constraints_extra_flags=${HPP_EXTRA_FLAGS} -DUSE_QPOASES=OFF -DRUN_TESTS=OFF
 
-hpp-core_branch=v4.8.0
+hpp-core_branch=v4.9.0
 hpp-core_repository=${HPP_REPO}
 hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-corbaserver_branch=v4.8.0
+hpp-corbaserver_branch=v4.9.0
 hpp-corbaserver_repository=${HPP_REPO}
 
-hpp-walkgen_branch=v4.8.0
+hpp-walkgen_branch=v4.9.1
 hpp-walkgen_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=v4.8.0
+hpp-wholebody-step_branch=v4.9.0
 hpp-wholebody-step_repository=${HPP_REPO}
 hpp-wholebody-step_extra_flags= -DRUN_TESTS=OFF
 
 hpp-doc_branch=master
 hpp-doc_repository=${HPP_REPO}
 
-hpp-manipulation_branch=v4.8.0
+hpp-manipulation_branch=v4.9.0
 hpp-manipulation_repository=${HPP_REPO}
 
-hpp-manipulation-urdf_branch=v4.8.0
+hpp-manipulation-urdf_branch=v4.9.0
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
-hpp-manipulation-corba_branch=v4.8.0
+hpp-manipulation-corba_branch=v4.9.0
 hpp-manipulation-corba_repository=${HPP_REPO}
 
 ifeq (${HUMANOID}, TRUE)
@@ -108,19 +108,19 @@ else
   hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
 endif
 
-hpp_tutorial_branch=v4.8.0
+hpp_tutorial_branch=v4.9.0
 hpp_tutorial_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=v4.8.0
+hpp-gepetto-viewer_branch=v4.9.0
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-hpp-plot_branch=v4.8.0
+hpp-plot_branch=v4.9.0
 hpp-plot_repository=${HPP_REPO}
 
-hpp-gui_branch=v4.8.0
+hpp-gui_branch=v4.9.0
 hpp-gui_repository=${HPP_REPO}
 
-hpp-practicals_branch=v4.8.0
+hpp-practicals_branch=v4.9.0
 hpp-practicals_repository=${HPP_REPO}
 
 # }}}
@@ -134,7 +134,7 @@ example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 hrp2-14-description_branch=master
 hrp2-14-description_repository=${TRAC_REPO}
 
-hpp-hrp2_branch=master
+hpp-hrp2_branch=v4.9.0
 hpp-hrp2_repository=${HPP_REPO}
 
 robot_capsule_urdf_branch=groovy
@@ -149,19 +149,19 @@ iai_maps_repository=${HPP_REPO}
 hpp_benchmark_branch=v4.6.0
 hpp_benchmark_repository=${HPP_REPO}
 
-hpp-environments_branch=v4.4.0
+hpp-environments_branch=v4.9.0
 hpp-environments_repository=${HPP_REPO}
 
 universal_robot_branch=kinetic
 universal_robot_repository=${HPP_REPO}
 
-hpp-universal-robot_branch=v4.8.0
+hpp-universal-robot_branch=v4.9.0
 hpp-universal-robot_repository=${HPP_REPO}
 
-hpp-baxter_branch=v4.8.0
+hpp-baxter_branch=v4.9.0
 hpp-baxter_repository=${HPP_REPO}
 
-hpp_romeo_branch=v4.8.0
+hpp_romeo_branch=v4.9.0
 hpp_romeo_repository=${HPP_REPO}
 
 
@@ -169,33 +169,33 @@ hpp_romeo_repository=${HPP_REPO}
 ##################################
 # {{{ Packages for rbprm
 
-hpp-affordance_branch=v4.8.0
+hpp-affordance_branch=v4.9.0
 hpp-affordance_repository=${HPP_REPO}
 hpp-affordance_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-affordance-corba_branch=v4.8.0
+hpp-affordance-corba_branch=v4.9.0
 hpp-affordance-corba_repository=${HPP_REPO}
 hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-rbprm_branch=v4.8.0
+hpp-rbprm_branch=v4.9.0
 hpp-rbprm_repository=${HPP_REPO}
 hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-rbprm-robot-data_branch=v4.8.0
+hpp-rbprm-robot-data_branch=v4.9.0
 hpp-rbprm-robot-data_repository=${HPP_REPO}
 
-hpp-rbprm-corba_branch=v4.8.0
+hpp-rbprm-corba_branch=v4.9.0
 hpp-rbprm-corba_repository=${HPP_REPO}
 hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-centroidal-dynamics_branch=v4.8.0
+hpp-centroidal-dynamics_branch=v4.9.0
 hpp-centroidal-dynamics_repository=${HPP_REPO}
 
-hpp-bezier-com-traj_branch=v4.8.0
+hpp-bezier-com-traj_branch=v4.9.0
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-hpp-spline_branch=v4.8.0
+hpp-spline_branch=v4.9.0
 hpp-spline_repository=${HPP_REPO}
 hpp-spline_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
@@ -215,7 +215,7 @@ osg-dae_repository=${GEPETTO_REPO}
 osg-dae_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
-gepetto-viewer_branch=v4.8.0
+gepetto-viewer_branch=v4.9.0
 gepetto-viewer_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
@@ -223,14 +223,14 @@ else
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
 endif
 
-gepetto-viewer-corba_branch=v5.3.0
+gepetto-viewer-corba_branch=v5.4.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 
 pythonqt_branch=qt${QT_VERSION}
 pythonqt_repository=${GEPETTO_REPO}
 pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
 
-qgv_branch=v1.2.0
+qgv_branch=v1.3.0
 qgv_repository=${HPP_REPO}
 ifeq (${QT_VERSION}, 5)
 	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
@@ -238,7 +238,7 @@ else
 	qgv_extra_flags=-DBINDINGS_QT5=OFF -DBINDINGS_QT4=ON
 endif
 
-hpp-tools_branch=${HPP_VERSION}
+hpp-tools_branch=v4.9.0
 hpp-tools_repository=${HPP_REPO}
 hpp-tools_extra_flags=
 
