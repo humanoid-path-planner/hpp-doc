@@ -20,11 +20,13 @@ HUMANOID=TRUE
 
 BUILD_TYPE=Release
 DISABLE_TESTS=OFF
+BUILD_TESTING=ON
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
 else
   BUILD_FOLDER=build-rel
   DISABLE_TESTS=ON
+  BUILD_TESTING=OFF
 endif
 
 OSG_PACKAGE=osg-dae
@@ -41,11 +43,11 @@ INSTALL_DOCUMENTATION=ON
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.2.3
+pinocchio_branch=2.4.3
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
-hpp-template-corba_branch=devel
+hpp-template-corba_branch=v4.9.0
 hpp-template-corba_repository=${HPP_REPO}
 
 # }}}
@@ -53,7 +55,8 @@ hpp-template-corba_repository=${HPP_REPO}
 # {{{ Packages supporting HPP_VERSION
 
 # Either a version tag (e.g. v4.3.0), master or devel
-HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS}
+HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS} \
+	-DBUILD_TESTING=${BUILD_TESTING}$
 
 hpp-util_branch=v4.8.0
 hpp-util_repository=${HPP_REPO}
@@ -79,7 +82,6 @@ hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-corbaserver_branch=v4.8.0
 hpp-corbaserver_repository=${HPP_REPO}
-hpp-corbaserver_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-walkgen_branch=v4.8.0
 hpp-walkgen_repository=${HPP_REPO}
@@ -99,7 +101,6 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 
 hpp-manipulation-corba_branch=v4.8.0
 hpp-manipulation-corba_repository=${HPP_REPO}
-hpp-manipulation-corba_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 ifeq (${HUMANOID}, TRUE)
   hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
@@ -109,18 +110,15 @@ endif
 
 hpp_tutorial_branch=v4.8.0
 hpp_tutorial_repository=${HPP_REPO}
-hpp_tutorial_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-gepetto-viewer_branch=v4.8.0
 hpp-gepetto-viewer_repository=${HPP_REPO}
-hpp-gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-plot_branch=v4.8.0
 hpp-plot_repository=${HPP_REPO}
 
 hpp-gui_branch=v4.8.0
 hpp-gui_repository=${HPP_REPO}
-hpp-gui_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-practicals_branch=v4.8.0
 hpp-practicals_repository=${HPP_REPO}
@@ -129,16 +127,15 @@ hpp-practicals_repository=${HPP_REPO}
 ##################################
 # {{{ Robot specific package + test packages
 
-example-robot-data_branch=devel
+example-robot-data_branch=v3.3.0
 example-robot-data_repository=${GEPETTO_REPO}
-example-robot-data_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3 -DBUILD_PYTHON_INTERFACE=OFF
+example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
 hrp2-14-description_branch=master
 hrp2-14-description_repository=${TRAC_REPO}
 
 hpp-hrp2_branch=master
 hpp-hrp2_repository=${HPP_REPO}
-hpp-hrp2_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 robot_capsule_urdf_branch=groovy
 robot_capsule_urdf_repository=${LAAS_REPO}
@@ -149,27 +146,24 @@ robot_model_py_repository=${LAAS_REPO}
 iai_maps_branch=master
 iai_maps_repository=${HPP_REPO}
 
-hpp_benchmark_branch=master
+hpp_benchmark_branch=v4.6.0
 hpp_benchmark_repository=${HPP_REPO}
 
 hpp-environments_branch=v4.4.0
 hpp-environments_repository=${HPP_REPO}
-hpp-environments_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 universal_robot_branch=kinetic
 universal_robot_repository=${HPP_REPO}
 
 hpp-universal-robot_branch=v4.8.0
 hpp-universal-robot_repository=${HPP_REPO}
-hpp-universal-robot_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp-baxter_branch=v4.8.0
 hpp-baxter_repository=${HPP_REPO}
-hpp-baxter_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 hpp_romeo_branch=v4.8.0
 hpp_romeo_repository=${HPP_REPO}
-hpp_romeo_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
+
 
 # }}}
 ##################################
@@ -205,7 +199,7 @@ hpp-spline_branch=v4.8.0
 hpp-spline_repository=${HPP_REPO}
 hpp-spline_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-eigenpy_branch=v1.6.9
+eigenpy_branch=v2.3.2
 eigenpy_repository=${SOT_REPO}
 
 # }}}
@@ -224,14 +218,13 @@ OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_D
 gepetto-viewer_branch=v4.8.0
 gepetto-viewer_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
-	gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPROJECT_USE_QT4=OFF
+	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
 else
-	gepetto-viewer_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPROJECT_USE_QT4=ON
+	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
 endif
 
 gepetto-viewer-corba_branch=v5.3.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
-gepetto-viewer-corba_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 pythonqt_branch=qt${QT_VERSION}
 pythonqt_repository=${GEPETTO_REPO}
@@ -247,7 +240,7 @@ endif
 
 hpp-tools_branch=${HPP_VERSION}
 hpp-tools_repository=${HPP_REPO}
-hpp-tools_extra_flags= -DPYTHON_EXECUTABLE=/usr/bin/python3
+hpp-tools_extra_flags=
 
 # }}}
 ##################################

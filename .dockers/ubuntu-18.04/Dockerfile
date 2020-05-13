@@ -28,7 +28,6 @@ RUN apt-get update -y && apt-get install -y \
     robotpkg-roboptim-core \
     robotpkg-roboptim-trajectory \
     robotpkg-romeo-description \
-    robotpkg-ros-baxter-common \
     ros-melodic-xacro \
     ros-melodic-kdl-parser \
     ros-melodic-common-msgs \
