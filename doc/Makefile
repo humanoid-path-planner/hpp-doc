@@ -9,6 +9,7 @@ HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 GEPETTO_REPO=https://github.com/Gepetto
 TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
+LOCO3D_REPO=https://github.com/loco-3d
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
 ifndef INSTALL_HPP_DIR
@@ -177,6 +178,9 @@ hpp-affordance-corba_branch=v4.9.0
 hpp-affordance-corba_repository=${HPP_REPO}
 hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
+talos-rbprm_branch=4.9.0
+talos-rbprm_repository=${HPP_REPO}
+
 hpp-rbprm_branch=v4.9.0
 hpp-rbprm_repository=${HPP_REPO}
 hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
@@ -195,9 +199,9 @@ hpp-bezier-com-traj_branch=v4.9.0
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-hpp-spline_branch=v4.9.0
-hpp-spline_repository=${HPP_REPO}
-hpp-spline_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
+curves_branch=v0.4.1
+curves_repository=${LOCO3D_REPO}
+curves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
 eigenpy_branch=v2.3.2
 eigenpy_repository=${SOT_REPO}
@@ -346,14 +350,16 @@ hpp_romeo.configure.dep: hpp_romeo.checkout
 hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
 hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
  hpp-corbaserver.install hpp-affordance-corba.checkout
-hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install hpp-rbprm-robot-data.install \
-hpp-affordance.install hpp-spline.install hpp-bezier-com-traj.install hpp-rbprm.checkout
+talos-rbprm.configure.dep: talos-rbprm.checkout
+hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
+	hpp-rbprm-robot-data.install hpp-affordance.install curves.install \
+	hpp-bezier-com-traj.install talos-rbprm.install hpp-rbprm.checkout
 hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
  hpp-corbaserver.install hpp-rbprm-robot-data.install hpp-rbprm-corba.checkout
 hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.checkout
-hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install hpp-spline.install hpp-bezier-com-traj.checkout
-hpp-spline.configure.dep: hpp-spline.checkout
+hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install curves.install hpp-bezier-com-traj.checkout
+curves.configure.dep: curves.checkout
 eigenpy.configure.dep: eigenpy.checkout
 hpp-tools.configure.dep: hpp-tools.checkout
 
