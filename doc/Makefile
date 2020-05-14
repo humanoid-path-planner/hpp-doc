@@ -84,7 +84,7 @@ hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 hpp-corbaserver_branch=v4.9.0
 hpp-corbaserver_repository=${HPP_REPO}
 
-hpp-walkgen_branch=v4.9.1
+hpp-walkgen_branch=v4.9.2
 hpp-walkgen_repository=${HPP_REPO}
 
 hpp-wholebody-step_branch=v4.9.0
