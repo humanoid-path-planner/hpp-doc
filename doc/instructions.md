@@ -77,7 +77,8 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
       libopenscenegraph-dev \
       openscenegraph \
       libpcre3-dev \
-      wget
+      wget \
+      libcdd-dev
     ```
 
   4. Choose a directory on your file system and define the environment

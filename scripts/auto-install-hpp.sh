@@ -29,7 +29,7 @@ case $HOST_DIST in
        omniidl omniidl-python libltdl-dev python-matplotlib libxml2 \
        libtinyxml2-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 \
        libqtwebkit-dev oxygen-icon-theme libopenscenegraph-dev \
-       openscenegraph libpcre3-dev wget"
+       openscenegraph libpcre3-dev libcdd-dev wget"
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-18.04-melodic.sh"
     ;;
