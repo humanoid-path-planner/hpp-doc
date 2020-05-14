@@ -17,14 +17,19 @@ case $HOST_DIST in
     CONFIG_FILE="ubuntu-16.04-kinetic.sh"
     ;;
   bionic)
-    APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev \
-      libassimp-dev ros-melodic-xacro ros-melodic-kdl-parser ros-melodic-common-msgs \
-      ros-melodic-tf ros-melodic-tf-conversions libccd-dev ros-melodic-octomap \
-      ros-melodic-resource-retriever ros-melodic-srdfdom ros-melodic-pr2-description flex \
-      bison asciidoc source-highlight git libomniorb4-dev omniorb-nameserver omniidl \
-      omniidl-python libltdl-dev python-matplotlib libxml2-dev libtinyxml2-dev \
-      liblog4cxx-dev libltdl-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 libqtwebkit-dev oxygen-icon-theme \
-      libopenscenegraph-dev openscenegraph libpcre3-dev libcdd-dev libglpk-dev"
+    APT_DEP=
+      "g++ cmake doxygen libboost-dev liburdfdom-dev libassimp-dev \
+       libeigen3-dev libgraphviz-dev robotpkg-qpoases+doc \
+       robotpkg-roboptim-core robotpkg-roboptim-trajectory
+       robotpkg-romeo-description robotpkg-ros-baxter-common \
+       robotpkg-ros-universal-robot robotpkg-py36-omniorbpy \
+       ros-melodic-xacro libccd-dev ros-melodic-octomap \
+       ros-melodic-resource-retriever ros-melodic-srdfdom \
+       ros-melodic-pr2-description git libomniorb4-dev omniorb-nameserver \
+       omniidl omniidl-python libltdl-dev python-matplotlib libxml2 \
+       libtinyxml2-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 \
+       libqtwebkit-dev oxygen-icon-theme libopenscenegraph-dev \
+       openscenegraph libpcre3-dev wget"
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-18.04-melodic.sh"
     ;;

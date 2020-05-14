@@ -11,7 +11,7 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
   4. install (optionnal) extra packages for demonstrations:
      `sudo apt-get install robotpkg-hpp-tutorial robotpkg-osg-dae ros-melodic-pr2-description robotpkg-hpp-environments robotpkg-hpp-universal-robot robotpkg-romeo-description robotpkg-ros-baxter-common`
 
-  4. setup your environment variables by adding the following lines to your `.bashrc`:
+  5. setup your environment variables by adding the following lines to your `.bashrc`:
 
     ```bash
     source /opt/ros/melodic/setup.bash
@@ -25,7 +25,7 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
     export PKG_CONFIG_PATH=/opt/openrobots${!PKG_CONFIG_PATH:-:}${PKG_CONFIG_PATH}
     ```
 
-  5. open `/opt/openrobots/share/doc/hpp-doc/index.html` in a web brower and you
+  6. open `/opt/openrobots/share/doc/hpp-doc/index.html` in a web brower and you
   will have access to the documentation of most packages.
 
 ## Source installation on ubuntu-18.04 64 bit with ros-melodic
@@ -46,6 +46,7 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
       liburdfdom-dev \
       libassimp-dev \
       libeigen3-dev \
+      libgraphviz-dev \
       robotpkg-qpoases+doc \
       robotpkg-roboptim-core \
       robotpkg-roboptim-trajectory \
@@ -68,7 +69,6 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
       python-matplotlib \
       libxml2 \
       libtinyxml2-dev \
-      liblog4cxx10-dev \
       qt4-dev-tools \
       libqt4-opengl-dev \
       libqtgui4 \
@@ -77,9 +77,10 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
       libopenscenegraph-dev \
       openscenegraph \
       libpcre3-dev \
+      wget
     ```
 
-  4. Choose a directory on you file system and define the environment
+  4. Choose a directory on your file system and define the environment
      variable `DEVEL_HPP_DIR` with the full path to this directory.
      - the packages will be cloned into `$DEVEL_HPP_DIR/src`,
      - the packages will be installed in `$DEVEL_HPP_DIR/install`.
