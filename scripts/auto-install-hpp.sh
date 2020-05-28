@@ -21,8 +21,7 @@ case $HOST_DIST in
       "g++ cmake doxygen libboost-dev liburdfdom-dev libassimp-dev \
        libeigen3-dev libgraphviz-dev robotpkg-qpoases+doc \
        robotpkg-roboptim-core robotpkg-roboptim-trajectory
-       robotpkg-romeo-description robotpkg-ros-baxter-common \
-       robotpkg-ros-universal-robot robotpkg-py36-omniorbpy \
+       robotpkg-romeo-description robotpkg-py36-omniorbpy \
        ros-melodic-xacro libccd-dev ros-melodic-octomap \
        ros-melodic-resource-retriever ros-melodic-srdfdom \
        ros-melodic-pr2-description git libomniorb4-dev omniorb-nameserver \

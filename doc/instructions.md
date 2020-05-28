@@ -9,7 +9,7 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
   3. install HPP: `sudo apt-get install robotpkg-hpp-tutorial robotpkg-osg-dae`
 
   4. install (optionnal) extra packages for demonstrations:
-     `sudo apt-get install robotpkg-hpp-tutorial robotpkg-osg-dae ros-melodic-pr2-description robotpkg-hpp-environments robotpkg-hpp-universal-robot robotpkg-romeo-description robotpkg-ros-baxter-common`
+     `sudo apt-get install robotpkg-hpp-tutorial robotpkg-osg-dae ros-melodic-pr2-description robotpkg-hpp-environments robotpkg-romeo-description
 
   5. setup your environment variables by adding the following lines to your `.bashrc`:
 
@@ -51,8 +51,6 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
       robotpkg-roboptim-core \
       robotpkg-roboptim-trajectory \
       robotpkg-romeo-description \
-      robotpkg-ros-baxter-common \
-      robotpkg-ros-universal-robot \
       robotpkg-py36-omniorbpy \
       ros-melodic-xacro \
       libccd-dev \
