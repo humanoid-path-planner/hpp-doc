@@ -24,7 +24,8 @@ case $HOST_DIST in
        ros-melodic-xacro libccd-dev ros-melodic-octomap \
        ros-melodic-resource-retriever ros-melodic-srdfdom \
        ros-melodic-pr2-description git libomniorb4-dev omniorb-nameserver \
-       omniidl omniidl-python libltdl-dev python-matplotlib libxml2 \
+       omniidl omniidl-python libltdl-dev python-matplotlib python-omniorb \
+       libxml2 \
        libtinyxml2-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 \
        libqtwebkit-dev oxygen-icon-theme libopenscenegraph-dev \
        openscenegraph libpcre3-dev libcdd-dev wget"

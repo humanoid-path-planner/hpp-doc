@@ -40,6 +40,7 @@ RUN apt-get update -y && apt-get install -y \
       omniidl-python \
       libltdl-dev \
       python-matplotlib \
+      python-omniorb \
       libxml2 \
       libtinyxml2-dev \
       qt4-dev-tools \

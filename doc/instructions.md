@@ -64,6 +64,7 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
       omniidl \
       omniidl-python \
       libltdl-dev \
+      python-omniorb \
       python-matplotlib \
       libxml2 \
       libtinyxml2-dev \
