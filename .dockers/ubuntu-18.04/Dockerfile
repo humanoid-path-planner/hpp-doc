@@ -26,8 +26,6 @@ RUN apt-get update -y && apt-get install -y \
       robotpkg-roboptim-core \
       robotpkg-roboptim-trajectory \
       robotpkg-romeo-description \
-      robotpkg-ros-baxter-common \
-      robotpkg-ros-universal-robot \
       robotpkg-py36-omniorbpy \
       ros-melodic-xacro \
       libccd-dev \
@@ -42,6 +40,7 @@ RUN apt-get update -y && apt-get install -y \
       omniidl-python \
       libltdl-dev \
       python-matplotlib \
+      python-omniorb \
       libxml2 \
       libtinyxml2-dev \
       qt4-dev-tools \
