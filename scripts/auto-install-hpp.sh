@@ -17,8 +17,7 @@ case $HOST_DIST in
     CONFIG_FILE="ubuntu-16.04-kinetic.sh"
     ;;
   bionic)
-    APT_DEP=
-      "g++ cmake doxygen libboost-dev liburdfdom-dev libassimp-dev \
+    APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev libassimp-dev \
        libeigen3-dev libgraphviz-dev robotpkg-qpoases+doc \
        robotpkg-roboptim-core robotpkg-roboptim-trajectory
        robotpkg-romeo-description robotpkg-py36-omniorbpy \
