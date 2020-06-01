@@ -22,6 +22,7 @@ RUN apt-get update -y && apt-get install -y \
       libassimp-dev \
       libeigen3-dev \
       libgraphviz-dev \
+      robotpkg-omniorb \
       robotpkg-qpoases+doc \
       robotpkg-roboptim-core \
       robotpkg-roboptim-trajectory \
@@ -36,8 +37,6 @@ RUN apt-get update -y && apt-get install -y \
       git \
       libomniorb4-dev \
       omniorb-nameserver \
-      omniidl \
-      omniidl-python \
       libltdl-dev \
       python-matplotlib \
       python-omniorb \
