@@ -2,7 +2,7 @@ title: Humanoid Path Planner
 description: Software for Motion and Manipulation Planning
 baseurl: "/hpp-doc"
 github-url: "https://github.com/humanoid-path-planner/hpp-doc"
-apidoc-url: "http://projects.laas.fr/gepetto/hpp"
+apidoc-url: "https://gepettoweb.laas.fr/hpp"
 remote_theme: Gepetto/jekyll-theme
 markdown: kramdown
 
