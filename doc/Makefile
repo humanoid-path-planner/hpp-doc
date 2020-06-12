@@ -20,13 +20,11 @@ endif
 HUMANOID?=TRUE
 
 BUILD_TYPE?=Release
-DISABLE_TESTS?=OFF
 BUILD_TESTING?=ON
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
 else
   BUILD_FOLDER=build-rel
-  DISABLE_TESTS=ON
   BUILD_TESTING=OFF
 endif
 
@@ -57,8 +55,7 @@ hpp-template-corba_repository=${HPP_REPO}
 
 # Either a version tag (e.g. v4.3.0), master or devel
 HPP_VERSION=devel
-HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS} \
-	-DBUILD_TESTING=${BUILD_TESTING}$
+HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
