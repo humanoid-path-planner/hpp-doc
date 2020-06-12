@@ -17,11 +17,11 @@ INSTALL_HPP_DIR=${DEVEL_HPP_DIR}/install
 endif
 
 # Whether to compute humanoid specific part
-HUMANOID=TRUE
+HUMANOID?=TRUE
 
-BUILD_TYPE=Release
-DISABLE_TESTS=OFF
-BUILD_TESTING=ON
+BUILD_TYPE?=Release
+DISABLE_TESTS?=OFF
+BUILD_TESTING?=ON
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
 else
