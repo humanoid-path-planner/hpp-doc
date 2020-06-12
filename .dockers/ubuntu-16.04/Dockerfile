@@ -20,7 +20,6 @@ RUN apt-get update -y && apt-get install -y \
     libcdd-dev \
     libglpk-dev \
     liburdfdom-dev \
-    robotpkg-osg-dae \
     robotpkg-qpoases+doc \
     robotpkg-roboptim-core \
     robotpkg-roboptim-trajectory \

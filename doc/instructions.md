@@ -47,6 +47,7 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
       libassimp-dev \
       libeigen3-dev \
       libgraphviz-dev \
+      robotpkg-omniorb \
       robotpkg-qpoases+doc \
       robotpkg-roboptim-core \
       robotpkg-roboptim-trajectory \
@@ -61,8 +62,6 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
       git \
       libomniorb4-dev \
       omniorb-nameserver \
-      omniidl \
-      omniidl-python \
       libltdl-dev \
       python-omniorb \
       python-matplotlib \

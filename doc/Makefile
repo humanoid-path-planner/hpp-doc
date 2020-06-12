@@ -17,16 +17,14 @@ INSTALL_HPP_DIR=${DEVEL_HPP_DIR}/install
 endif
 
 # Whether to compute humanoid specific part
-HUMANOID=TRUE
+HUMANOID?=TRUE
 
-BUILD_TYPE=Release
-DISABLE_TESTS=OFF
-BUILD_TESTING=ON
+BUILD_TYPE?=Release
+BUILD_TESTING?=ON
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
 else
   BUILD_FOLDER=build-rel
-  DISABLE_TESTS=ON
   BUILD_TESTING=OFF
 endif
 
@@ -44,7 +42,7 @@ INSTALL_DOCUMENTATION=ON
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.4.4
+pinocchio_branch=v2.4.5
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
@@ -56,8 +54,7 @@ hpp-template-corba_repository=${HPP_REPO}
 # {{{ Packages supporting HPP_VERSION
 
 # Either a version tag (e.g. v4.3.0), master or devel
-HPP_EXTRA_FLAGS=-DDISABLE_TESTS=${DISABLE_TESTS} \
-	-DBUILD_TESTING=${BUILD_TESTING}$
+HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 
 hpp-util_branch=v4.9.0
 hpp-util_repository=${HPP_REPO}
@@ -75,7 +72,7 @@ hpp-pinocchio_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-constraints_branch=v4.9.1
 hpp-constraints_repository=${HPP_REPO}
-hpp-constraints_extra_flags=${HPP_EXTRA_FLAGS} -DUSE_QPOASES=OFF -DRUN_TESTS=OFF
+hpp-constraints_extra_flags=${HPP_EXTRA_FLAGS} -DUSE_QPOASES=OFF
 
 hpp-core_branch=v4.9.0
 hpp-core_repository=${HPP_REPO}
@@ -254,7 +251,8 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 	${MAKE} hpp-doc.install
 
 # For test on gepgitlab, install robot packages first
-test-ci: example-robot-data.install  hpp-environments.install
+test-ci: example-robot-data.install  hpp-environments.install \
+	hpp-baxter.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
