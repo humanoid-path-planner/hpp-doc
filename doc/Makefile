@@ -78,7 +78,7 @@ hpp-core_branch=v4.9.0
 hpp-core_repository=${HPP_REPO}
 hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-corbaserver_branch=v4.9.0
+hpp-corbaserver_branch=v4.9.1
 hpp-corbaserver_repository=${HPP_REPO}
 
 hpp-walkgen_branch=v4.9.2
@@ -97,7 +97,7 @@ hpp-manipulation_repository=${HPP_REPO}
 hpp-manipulation-urdf_branch=v4.9.0
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
-hpp-manipulation-corba_branch=v4.9.0
+hpp-manipulation-corba_branch=v4.9.1
 hpp-manipulation-corba_repository=${HPP_REPO}
 
 ifeq (${HUMANOID}, TRUE)
