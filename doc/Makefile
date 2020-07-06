@@ -74,7 +74,7 @@ hpp-constraints_branch=v4.9.1
 hpp-constraints_repository=${HPP_REPO}
 hpp-constraints_extra_flags=${HPP_EXTRA_FLAGS} -DUSE_QPOASES=OFF
 
-hpp-core_branch=v4.9.0
+hpp-core_branch=v4.9.1
 hpp-core_repository=${HPP_REPO}
 hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
@@ -112,7 +112,7 @@ hpp_tutorial_repository=${HPP_REPO}
 hpp-gepetto-viewer_branch=v4.9.0
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-hpp-plot_branch=v4.9.0
+hpp-plot_branch=v4.9.1
 hpp-plot_repository=${HPP_REPO}
 
 hpp-gui_branch=v4.9.0
