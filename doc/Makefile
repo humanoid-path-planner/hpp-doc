@@ -56,48 +56,48 @@ hpp-template-corba_repository=${HPP_REPO}
 # Either a version tag (e.g. v4.3.0), master or devel
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 
-hpp-util_branch=v4.9.0
+hpp-util_branch=v4.10.0
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=v1.4.4
+hpp-fcl_branch=v1.4.6
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
-hpp-statistics_branch=v4.9.0
+hpp-statistics_branch=v4.10.0
 hpp-statistics_repository=${HPP_REPO}
 
-hpp-pinocchio_branch=v4.9.1
+hpp-pinocchio_branch=v4.10.0
 hpp-pinocchio_repository=${HPP_REPO}
 hpp-pinocchio_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-constraints_branch=v4.9.1
+hpp-constraints_branch=v4.10.0
 hpp-constraints_repository=${HPP_REPO}
 hpp-constraints_extra_flags=${HPP_EXTRA_FLAGS} -DUSE_QPOASES=OFF
 
-hpp-core_branch=v4.9.1
+hpp-core_branch=v4.10.0
 hpp-core_repository=${HPP_REPO}
 hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-corbaserver_branch=v4.9.1
+hpp-corbaserver_branch=v4.10.0
 hpp-corbaserver_repository=${HPP_REPO}
 
-hpp-walkgen_branch=v4.9.2
+hpp-walkgen_branch=v4.10.0
 hpp-walkgen_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=v4.9.0
+hpp-wholebody-step_branch=v4.10.0
 hpp-wholebody-step_repository=${HPP_REPO}
 hpp-wholebody-step_extra_flags= -DRUN_TESTS=OFF
 
 hpp-doc_branch=master
 hpp-doc_repository=${HPP_REPO}
 
-hpp-manipulation_branch=v4.9.0
+hpp-manipulation_branch=v4.10.0
 hpp-manipulation_repository=${HPP_REPO}
 
-hpp-manipulation-urdf_branch=v4.9.0
+hpp-manipulation-urdf_branch=v4.10.0
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
-hpp-manipulation-corba_branch=v4.9.1
+hpp-manipulation-corba_branch=v4.10.0
 hpp-manipulation-corba_repository=${HPP_REPO}
 
 ifeq (${HUMANOID}, TRUE)
@@ -109,13 +109,13 @@ endif
 hpp_tutorial_branch=v4.9.0
 hpp_tutorial_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=v4.9.0
+hpp-gepetto-viewer_branch=v4.10.0
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-hpp-plot_branch=v4.9.1
+hpp-plot_branch=v4.10.0
 hpp-plot_repository=${HPP_REPO}
 
-hpp-gui_branch=v4.9.0
+hpp-gui_branch=v4.10.0
 hpp-gui_repository=${HPP_REPO}
 
 hpp-practicals_branch=v4.9.0
@@ -147,7 +147,7 @@ iai_maps_repository=${HPP_REPO}
 hpp_benchmark_branch=v4.6.0
 hpp_benchmark_repository=${HPP_REPO}
 
-hpp-environments_branch=v4.9.0
+hpp-environments_branch=v4.10.0
 hpp-environments_repository=${HPP_REPO}
 
 universal_robot_branch=kinetic
@@ -175,7 +175,7 @@ hpp-affordance-corba_branch=v4.9.0
 hpp-affordance-corba_repository=${HPP_REPO}
 hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
-talos-rbprm_branch=4.9.0
+talos-rbprm_branch=v4.9.0
 talos-rbprm_repository=${HPP_REPO}
 
 hpp-rbprm_branch=v4.9.0
@@ -216,7 +216,7 @@ osg-dae_repository=${GEPETTO_REPO}
 osg-dae_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
-gepetto-viewer_branch=v4.9.0
+gepetto-viewer_branch=v4.10.0
 gepetto-viewer_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
@@ -224,7 +224,7 @@ else
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
 endif
 
-gepetto-viewer-corba_branch=v5.4.0
+gepetto-viewer-corba_branch=v5.5.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 
 pythonqt_branch=qt${QT_VERSION}
