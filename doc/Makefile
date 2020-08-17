@@ -404,6 +404,7 @@ update:
 	else \
 		cd ${SRC_DIR}/$(@:.fetch=);\
 		git fetch ${GIT_QUIET} origin; \
+		git fetch ${GIT_QUIET} origin --tags; \
 	fi
 
 %.update:
@@ -414,6 +415,7 @@ update:
 		git remote rm origin;\
 		git remote add origin ${$(@:.update=)_repository}/$(@:.update=);\
 		git fetch origin;\
+		git fetch origin --tags;\
 		git checkout -q --detach;\
 		git branch -f ${$(@:.update=)_branch} origin/${$(@:.update=)_branch};\
 		git checkout -q ${$(@:.update=)_branch};\
