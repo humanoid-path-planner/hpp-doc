@@ -175,7 +175,7 @@ hpp-affordance-corba_branch=v4.9.0
 hpp-affordance-corba_repository=${HPP_REPO}
 hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
-talos-rbprm_branch=v4.9.0
+talos-rbprm_branch=v4.10.0
 talos-rbprm_repository=${HPP_REPO}
 
 hpp-rbprm_branch=v4.9.0
@@ -196,7 +196,7 @@ hpp-bezier-com-traj_branch=v4.9.0
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-curves_branch=v0.4.1
+curves_branch=release/0.5.1
 curves_repository=${LOCO3D_REPO}
 curves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
