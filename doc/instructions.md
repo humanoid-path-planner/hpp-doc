@@ -25,7 +25,7 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
     - GUI:
 
       ```bash
-      sudo apt-get install robotpkg-py${pyver}-qt5-hpp-gui robotpkg-py${pyver}-qt5-hpp-manipulation
+      sudo apt-get install robotpkg-py${pyver}-qt5-hpp-gui robotpkg-py${pyver}-qt5-hpp-plot
       ```
 
     - Some robot descriptions:
