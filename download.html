@@ -10,16 +10,16 @@ This page provides guidelines for installation of HPP. Several versions are avai
 
 <select class="form-control" id="installation_branch" size="1" onchange="updateInstall(this.value)">
   <option value=""></option>
-  <option value="https://raw.githubusercontent.com/jmirabel/hpp-doc/master/instructions/binary.md">Stable - Binary</option>
-  <option value="https://raw.githubusercontent.com/jmirabel/hpp-doc/master/instructions/master-sources.md">Stable - Source install</option>
-  <option value="https://raw.githubusercontent.com/jmirabel/hpp-doc/master/instructions/devel-sources.md">Development - Source</option>
-  <option value="https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/euroc-c1/doc/instructions.md">Euroc - challenge 1</option>
-  <option value="https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/euroc/doc/instructions.md">Euroc - challenge 2</option>
-  <option value="https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/isae-2017/doc/instructions.md">ISAE - practice</option>
-  <option value="https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/rbprm/doc/instructions.md">RBPRM installer</option>
-  <option value="https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/ubuntu-16.04/doc/instructions.md"> Stable - Ubuntu 16.04 </option>
-  <option value="https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/ubuntu-14.04/doc/instructions.md"> Stable - Ubuntu 14.04 </option>
-  <option value="https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/version-3/doc/instructions.md">Old version without Pinocchio</option>
+  <option value="binary">Stable - Binary</option>
+  <option value="master">Stable - Source install</option>
+  <option value="devel">Development - Source</option>
+  <option value="euroc-c1">Euroc - challenge 1</option>
+  <option value="euroc">Euroc - challenge 2</option>
+  <option value="isae-2017">ISAE - practice</option>
+  <option value="rbprm">RBPRM installer</option>
+  <option value="ubuntu-16.04"> Stable - Ubuntu 16.04 </option>
+  <option value="ubuntu-14.04"> Stable - Ubuntu 14.04 </option>
+  <option value="version-3">Old version without Pinocchio</option>
 </select>
 <hr class="featurette-divider">
 
@@ -36,8 +36,24 @@ This page provides guidelines for installation of HPP. Several versions are avai
 var converter = new showdown.Converter();
 var rendered = document.getElementById("installation_devel_readme_rendered");
 
-function updateInstall(url) {
-  fetch(url).then(r => r.text()).then(r => rendered.innerHTML = converter.makeHtml(r));
+var urls = {
+  'binary'       : "https://raw.githubusercontent.com/jmirabel/hpp-doc/master/instructions/binary.md",
+  'master'       : "https://raw.githubusercontent.com/jmirabel/hpp-doc/master/instructions/master-sources.md",
+  'devel'        : "https://raw.githubusercontent.com/jmirabel/hpp-doc/master/instructions/devel-sources.md",
+  'euroc-c1'     : "https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/euroc-c1/doc/instructions.md",
+  'euroc'        : "https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/euroc/doc/instructions.md",
+  'isae-2017'    : "https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/isae-2017/doc/instructions.md",
+  'rbprm'        : "https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/rbprm/doc/instructions.md",
+  'ubuntu-16.04' : "https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/ubuntu-16.04/doc/instructions.md",
+  'ubuntu-14.04' : "https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/ubuntu-14.04/doc/instructions.md",
+  'version-3'    : "https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/version-3/doc/instructions.md",
+  }
+
+function updateInstall(branch) {
+  if (branch in urls) {
+    var url = urls[branch]
+    fetch(url).then(r => r.text()).then(r => rendered.innerHTML = converter.makeHtml(r));
+  }
 }
 
 function getParameterByName(name) {
@@ -48,7 +64,9 @@ function getParameterByName(name) {
 }
 
 var branch = getParameterByName('branch');
-document.getElementById('installation_branch').val(branch);
-updateInstall(branch);
+if (branch in urls) {
+  document.getElementById('installation_branch').value = branch;
+  updateInstall(branch);
+}
 
 </script>
