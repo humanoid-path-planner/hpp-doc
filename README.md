@@ -1,10 +1,11 @@
 #  Humanoid Path Planner
 
-Copyright 2014 LAAS-CNRS
+Copyright 2014-2020 LAAS-CNRS
 
 Authors: Florent Lamiraux, Joseph Mirabel
 
-##Description
+## Description
+
 Humanoid Path Planner is a software platform aimed at solving motion planning
 problems for humanoid robots. It is also designed to solve classical (non
 humanoid) path planning problems.
