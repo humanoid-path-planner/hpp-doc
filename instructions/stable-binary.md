@@ -16,10 +16,10 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
 
   4. install (optionnal) extra packages for demonstrations:
 
-    - Tutorials (binary release of the tutorial is only available for Python 2.7):
+    - Tutorials:
 
       ```bash
-      sudo apt-get install robotpkg-py27-hpp-tutorial
+      sudo apt-get install robotpkg-py${pyver}-hpp-tutorial
       ```
 
     - GUI:
