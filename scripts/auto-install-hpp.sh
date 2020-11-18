@@ -128,7 +128,7 @@ mkdir --parents $DEVEL_HPP_DIR/install
 
 # Get config script
 wget -q -O $DEVEL_HPP_DIR/config.sh ${GITREPO}/${BRANCH}/doc/config/${CONFIG_FILE}
-wget -q -O $DEVEL_HPP_DIR/src/Makefile ${GITREPO}/${BRANCH}/doc/Makefile
+wget -q -O $DEVEL_HPP_DIR/src/Makefile ${GITREPO}/makefiles/${BRANCH}.mk
 
 source $DEVEL_HPP_DIR/config.sh
 
