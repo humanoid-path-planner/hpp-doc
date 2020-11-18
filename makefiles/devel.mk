@@ -53,7 +53,7 @@ hpp-template-corba_repository=${HPP_REPO}
 ##################################
 # {{{ Packages supporting HPP_VERSION
 
-# Either a version tag (e.g. v4.3.0), master or devel
+# Either a version tag (e.g. v4.3.0), stable or devel
 HPP_VERSION=devel
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 

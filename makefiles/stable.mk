@@ -53,7 +53,7 @@ hpp-template-corba_repository=${HPP_REPO}
 ##################################
 # {{{ Packages supporting HPP_VERSION
 
-# Either a version tag (e.g. v4.3.0), master or devel
+# Either a version tag (e.g. v4.3.0), stable or devel
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 
 hpp-util_branch=v4.10.1
@@ -88,7 +88,7 @@ hpp-wholebody-step_branch=v4.10.1
 hpp-wholebody-step_repository=${HPP_REPO}
 hpp-wholebody-step_extra_flags= -DRUN_TESTS=OFF
 
-hpp-doc_branch=master
+hpp-doc_branch=stable
 hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=v4.10.1

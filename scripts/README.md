@@ -38,8 +38,8 @@ done
 
 ## Make new releases
 
-The explanation below assumes you have an account on https://gepgitlab.laas.fr and that
-you have write-access on https://gepgitlab.laas.fr/humanoid-path-planner/hpp-doc.
+The explanation below assumes you have an account on https://gitlab.laas.fr and that
+you have write-access on https://gitlab.laas.fr/humanoid-path-planner/hpp-doc.
 
 ### Naming the release
 
@@ -47,7 +47,7 @@ In the following, *M*, *m* and *r* correspond to major, minor and revision numbe
 
 - Tags *vM.m.r-rc* correspond to tested releases.
 - Tags *vM.m.r* correspond to benchmarked releases.
-- *master* branches always point to the latest benchmarked release.
+- *stable* branches always point to the latest benchmarked release.
 - *devel* branches are always based on the latest tested release.
 - Major and minor numbers *M* and *m* increments are synchronized in all packages.
 - Revision number *r* increment is package-wise.
@@ -59,8 +59,8 @@ In the following, *M*, *m* and *r* correspond to major, minor and revision numbe
 The procedure only checks that the code compiles and the unittests pass.
 
 When you are ready with your changes:
-1. If hpp-doc has changes, push to branch *devel* on https://gepgitlab.laas.fr/humanoid-path-planner/hpp-doc
-   Otherwise, trigger a new build on https://gepgitlab.laas.fr/humanoid-path-planner/hpp-doc/pipelines
+1. If hpp-doc has changes, push to branch *devel* on https://gitlab.laas.fr/humanoid-path-planner/hpp-doc
+   Otherwise, trigger a new build on https://gitlab.laas.fr/humanoid-path-planner/hpp-doc/pipelines
 2. If the build is successful, run `scripts/create-tags.sh <version>`.
    The script will check that:
    - You are on the *devel* branch in all hpp repositories.
@@ -74,4 +74,4 @@ Benchmarked release are tested release for which the benchmark have been run.
 1. Same as step 1 above, using branch *future* instead of *devel*.
 2. Run the scripts in `hpp_benchmark`.
 3. Same as step 2 above.
-4. Move the *master* branch to the current tag and push *master* and tag to github. (TODO add a script)
+4. Move the *stable* branch to the current tag and push *stable* and tag to github. (TODO add a script)

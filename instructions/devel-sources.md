@@ -111,8 +111,8 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
   5. Copy Config and Makefile
 
     ```bash
-    wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/doc/config/ubuntu-18.04-melodic.sh
-    wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/master/makefiles/devel.mk
+    wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/stable/doc/config/ubuntu-18.04-melodic.sh
+    wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/stable/makefiles/devel.mk
     ```
 
   6. cd into `$DEVEL_HPP_DIR` and type

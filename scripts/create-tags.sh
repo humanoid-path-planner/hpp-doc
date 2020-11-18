@@ -21,7 +21,7 @@ hpp-constraints hpp-corbaserver hpp-core hpp_tutorial hpp-doc \
 hpp-walkgen hpp-wholebody-step hpp-wholebody-step-corba \
 hpp-manipulation hpp-manipulation-corba hpp-manipulation-urdf \
 hpp-gepetto-viewer hpp-gui hpp-plot"
-branch="master"
+branch="stable"
 remote="origin"
 
 c_what="\e[33m"
