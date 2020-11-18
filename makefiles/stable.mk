@@ -42,11 +42,11 @@ INSTALL_DOCUMENTATION=ON
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.4.5
+pinocchio_branch=v2.5.3
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
-hpp-template-corba_branch=v4.9.0
+hpp-template-corba_branch=v4.10.0
 hpp-template-corba_repository=${HPP_REPO}
 
 # }}}
@@ -56,48 +56,48 @@ hpp-template-corba_repository=${HPP_REPO}
 # Either a version tag (e.g. v4.3.0), master or devel
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 
-hpp-util_branch=v4.9.0
+hpp-util_branch=v4.10.1
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=v1.4.4
+hpp-fcl_branch=v1.6.0
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
-hpp-statistics_branch=v4.9.0
+hpp-statistics_branch=v4.10.1
 hpp-statistics_repository=${HPP_REPO}
 
-hpp-pinocchio_branch=v4.9.1
+hpp-pinocchio_branch=v4.10.2
 hpp-pinocchio_repository=${HPP_REPO}
 hpp-pinocchio_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-constraints_branch=v4.9.1
+hpp-constraints_branch=v4.10.1
 hpp-constraints_repository=${HPP_REPO}
 hpp-constraints_extra_flags=${HPP_EXTRA_FLAGS} -DUSE_QPOASES=OFF
 
-hpp-core_branch=v4.9.1
+hpp-core_branch=v4.10.1
 hpp-core_repository=${HPP_REPO}
 hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-corbaserver_branch=v4.9.1
+hpp-corbaserver_branch=v4.10.1
 hpp-corbaserver_repository=${HPP_REPO}
 
-hpp-walkgen_branch=v4.9.2
+hpp-walkgen_branch=v4.10.1
 hpp-walkgen_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=v4.9.0
+hpp-wholebody-step_branch=v4.10.1
 hpp-wholebody-step_repository=${HPP_REPO}
 hpp-wholebody-step_extra_flags= -DRUN_TESTS=OFF
 
 hpp-doc_branch=master
 hpp-doc_repository=${HPP_REPO}
 
-hpp-manipulation_branch=v4.9.0
+hpp-manipulation_branch=v4.10.1
 hpp-manipulation_repository=${HPP_REPO}
 
-hpp-manipulation-urdf_branch=v4.9.0
+hpp-manipulation-urdf_branch=v4.10.1
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
-hpp-manipulation-corba_branch=v4.9.1
+hpp-manipulation-corba_branch=v4.10.1
 hpp-manipulation-corba_repository=${HPP_REPO}
 
 ifeq (${HUMANOID}, TRUE)
@@ -106,26 +106,26 @@ else
   hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
 endif
 
-hpp_tutorial_branch=v4.9.0
+hpp_tutorial_branch=v4.10.0
 hpp_tutorial_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=v4.9.0
+hpp-gepetto-viewer_branch=v4.10.1
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-hpp-plot_branch=v4.9.1
+hpp-plot_branch=v4.10.1
 hpp-plot_repository=${HPP_REPO}
 
-hpp-gui_branch=v4.9.0
+hpp-gui_branch=v4.10.1
 hpp-gui_repository=${HPP_REPO}
 
-hpp-practicals_branch=v4.9.0
+hpp-practicals_branch=v4.10.0
 hpp-practicals_repository=${HPP_REPO}
 
 # }}}
 ##################################
 # {{{ Robot specific package + test packages
 
-example-robot-data_branch=v3.3.0
+example-robot-data_branch=v3.6.1
 example-robot-data_repository=${GEPETTO_REPO}
 example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -147,19 +147,19 @@ iai_maps_repository=${HPP_REPO}
 hpp_benchmark_branch=v4.6.0
 hpp_benchmark_repository=${HPP_REPO}
 
-hpp-environments_branch=v4.9.0
+hpp-environments_branch=v4.10.1
 hpp-environments_repository=${HPP_REPO}
 
 universal_robot_branch=kinetic
 universal_robot_repository=${HPP_REPO}
 
-hpp-universal-robot_branch=v4.9.0
+hpp-universal-robot_branch=v4.10.0
 hpp-universal-robot_repository=${HPP_REPO}
 
-hpp-baxter_branch=v4.9.0
+hpp-baxter_branch=v4.10.0
 hpp-baxter_repository=${HPP_REPO}
 
-hpp_romeo_branch=v4.9.0
+hpp_romeo_branch=v4.10.0
 hpp_romeo_repository=${HPP_REPO}
 
 
@@ -167,40 +167,49 @@ hpp_romeo_repository=${HPP_REPO}
 ##################################
 # {{{ Packages for rbprm
 
-hpp-affordance_branch=v4.9.0
+hpp-affordance_branch=v4.10.0
 hpp-affordance_repository=${HPP_REPO}
 hpp-affordance_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-affordance-corba_branch=v4.9.0
+hpp-affordance-corba_branch=v4.10.0
 hpp-affordance-corba_repository=${HPP_REPO}
 hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
-talos-rbprm_branch=4.9.0
+anymal-rbprm_branch=v4.10.0
+anymal-rbprm_repository=${HPP_REPO}
+
+hyq-rbprm_branch=v4.10.0
+hyq-rbprm_repository=${HPP_REPO}
+
+simple-humanoid-rbprm_branch=v4.10.0
+simple-humanoid-rbprm_repository=${HPP_REPO}
+
+talos-rbprm_branch=v4.10.0
 talos-rbprm_repository=${HPP_REPO}
 
-hpp-rbprm_branch=v4.9.0
+hpp-rbprm_branch=v4.10.1
 hpp-rbprm_repository=${HPP_REPO}
 hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-rbprm-robot-data_branch=v4.9.0
 hpp-rbprm-robot-data_repository=${HPP_REPO}
 
-hpp-rbprm-corba_branch=v4.9.0
+hpp-rbprm-corba_branch=v4.10.0
 hpp-rbprm-corba_repository=${HPP_REPO}
 hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-centroidal-dynamics_branch=v4.9.0
+hpp-centroidal-dynamics_branch=v4.10.0
 hpp-centroidal-dynamics_repository=${HPP_REPO}
 
-hpp-bezier-com-traj_branch=v4.9.0
+hpp-bezier-com-traj_branch=v4.10.1
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-curves_branch=v0.4.1
+curves_branch=v0.5.2
 curves_repository=${LOCO3D_REPO}
 curves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-eigenpy_branch=v2.3.2
+eigenpy_branch=v2.5.0
 eigenpy_repository=${SOT_REPO}
 
 # }}}
@@ -216,7 +225,7 @@ osg-dae_repository=${GEPETTO_REPO}
 osg-dae_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
-gepetto-viewer_branch=v4.9.0
+gepetto-viewer_branch=v4.10.1
 gepetto-viewer_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
@@ -224,7 +233,7 @@ else
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
 endif
 
-gepetto-viewer-corba_branch=v5.4.0
+gepetto-viewer-corba_branch=v5.5.1
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 
 pythonqt_branch=qt${QT_VERSION}
@@ -348,10 +357,14 @@ hpp_romeo.configure.dep: hpp_romeo.checkout
 hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
 hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
  hpp-corbaserver.install hpp-affordance-corba.checkout
+anymal-rbprm.configure.dep: anymal-rbprm.checkout
+hyq-rbprm.configure.dep: hyq-rbprm.checkout
+simple-humanoid-rbprm.configure.dep: simple-humanoid-rbprm.checkout
 talos-rbprm.configure.dep: talos-rbprm.checkout
 hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
-	hpp-rbprm-robot-data.install hpp-affordance.install curves.install \
-	hpp-bezier-com-traj.install talos-rbprm.install hpp-rbprm.checkout
+	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install \
+	hpp-affordance.install curves.install \
+	hpp-bezier-com-traj.install hpp-rbprm.checkout
 hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
  hpp-corbaserver.install hpp-rbprm-robot-data.install hpp-rbprm-corba.checkout
@@ -406,6 +419,7 @@ update:
 	else \
 		cd ${SRC_DIR}/$(@:.fetch=);\
 		git fetch ${GIT_QUIET} origin; \
+		git fetch ${GIT_QUIET} origin --tags; \
 	fi
 
 %.update:
@@ -416,6 +430,7 @@ update:
 		git remote rm origin;\
 		git remote add origin ${$(@:.update=)_repository}/$(@:.update=);\
 		git fetch origin;\
+		git fetch origin --tags;\
 		git checkout -q --detach;\
 		git branch -f ${$(@:.update=)_branch} origin/${$(@:.update=)_branch};\
 		git checkout -q ${$(@:.update=)_branch};\
@@ -432,6 +447,7 @@ update:
 	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
+			-DENFORCE_MINIMAL_CXX_STANDARD=ON \
 			-DINSTALL_DOCUMENTATION=${INSTALL_DOCUMENTATION} \
 			-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" \
 			${$(@:.configure_nodep=)_extra_flags} ..
