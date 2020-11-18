@@ -1,13 +1,14 @@
-cmake_minimum_required(VERSION 2.8)
-
-include(cmake/base.cmake)
+cmake_minimum_required(VERSION 3.1)
 
 # These variables have to be defined before running setup_project
 set(PROJECT_NAME hpp-doc)
 set(PROJECT_DESCRIPTION "Documentation for HPP")
 set(PROJECT_URL https://humanoid-path-planner.github.io/hpp-doc/index.html)
 
-setup_project()
+include(cmake/hpp.cmake)
+
+COMPUTE_PROJECT_ARGS(PROJECT_ARGS LANGUAGES CXX)
+PROJECT(${PROJECT_NAME} ${PROJECT_ARGS})
 
 # Arguments are:
 # - (required) package name
@@ -48,7 +49,7 @@ ADD_HPP_PKG(hpp-gepetto-viewer)
 ADD_HPP_PKG(hpp_tutorial)
 
 FOREACH(PKG ${SETUP_DOC_PKG})
-  ADD_OPTIONAL_DEPENDENCY(${PKG})
+  ADD_PROJECT_DEPENDENCY(${PKG})
 
   STRING(REGEX REPLACE "[^a-zA-Z0-9]" "_" PREFIX "${PKG}")
   STRING(TOUPPER ${PREFIX} PREFIX)
@@ -111,5 +112,3 @@ IF(NOT DEFINED INSTALL_DOCUMENTATION OR ${INSTALL_DOCUMENTATION})
     FILES ${CMAKE_CURRENT_BINARY_DIR}/doc/doxygen-xml/index.xml
     DESTINATION ${CMAKE_INSTALL_DOCDIR}/doxygen-html)
 ENDIF()
-
-setup_project_finalize()
