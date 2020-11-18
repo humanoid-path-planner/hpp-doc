@@ -6,12 +6,35 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
 
   2. install robotpkg: follow [the robotpkg installation website](http://robotpkg.openrobots.org/debian.html).
 
-  3. install HPP: `sudo apt-get install robotpkg-hpp-tutorial robotpkg-osg-dae`
+  3. install HPP:
+
+    ```bash
+    #pyver=27
+    pyver=36
+    sudo apt-get install robotpkg-py${pyver}-hpp-manipulation-corba robotpkg-py${pyver}-qt5-hpp-gepetto-viewer
+    ```
 
   4. install (optionnal) extra packages for demonstrations:
-     `sudo apt-get install robotpkg-hpp-tutorial robotpkg-osg-dae ros-melodic-pr2-description robotpkg-hpp-environments robotpkg-romeo-description
 
-  5. setup your environment variables by adding the following lines to your `.bashrc`:
+    - Tutorials (binary release of the tutorial is only available for Python 2.7):
+
+      ```bash
+      sudo apt-get install robotpkg-py27-hpp-tutorial
+      ```
+
+    - GUI:
+
+      ```bash
+      sudo apt-get install robotpkg-py${pyver}-qt5-hpp-gui robotpkg-py${pyver}-qt5-hpp-plot
+      ```
+
+    - Some robot descriptions:
+
+      ```bash
+      sudo apt-get install ros-melodic-pr2-description robotpkg-py${pyver}-hpp-environments robotpkg-romeo-description
+      ```
+
+  5. setup your environment variables by adding the following lines (fix Python version if necessary) to your `.bashrc`:
 
     ```bash
     source /opt/ros/melodic/setup.bash
