@@ -76,14 +76,14 @@ variables:
 master-18.04-build:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:18.04
     only:
-      - future
+      - master
     <<: *build_definition
 
 master-16.04-build:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/master-premade:16.04
     allow_failure: true
     only:
-      - future
+      - master
     <<: *build_definition
 
 devel-18.04-build:
@@ -104,7 +104,7 @@ master-18.04-test:
     dependencies:
       - master-18.04-build
     only:
-      - future
+      - master
     <<: *test_definition
 
 master-16.04-test:
@@ -113,7 +113,7 @@ master-16.04-test:
     dependencies:
       - master-16.04-build
     only:
-      - future
+      - master
     <<: *test_definition
 
 
@@ -139,7 +139,7 @@ master-18.04-doc:
     dependencies:
       - master-18.04-build
     only:
-      - future
+      - master
     <<: *doc_definition
 
 master-16.04-doc:
@@ -148,7 +148,7 @@ master-16.04-doc:
     dependencies:
       - master-16.04-build
     only:
-      - future
+      - master
     <<: *doc_definition
 
 devel-18.04-doc:
