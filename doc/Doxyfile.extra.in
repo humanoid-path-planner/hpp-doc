@@ -6,4 +6,5 @@ HTML_EXTRA_STYLESHEET  = @PROJECT_SOURCE_DIR@/doc/doxygen_extra.css
 FILE_PATTERNS          = *.dox
 GENERATE_TREEVIEW      = YES
 LAYOUT_FILE            = @PROJECT_BINARY_DIR@/doc/doxygenLayout.xml
+XML_OUTPUT             = doxygen-xml
 GENERATE_XML           = YES
