@@ -1,3 +1,0 @@
-FROM gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:18.04
-
-ENV DEVEL_HPP_DIR /workspace

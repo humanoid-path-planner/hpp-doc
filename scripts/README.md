@@ -28,10 +28,8 @@ You will find three files in the directory `${DEVEL_HPP_DIR}/tarball/`:
 ```
 for ubuntu in 16.04 18.04
 do
-    docker build -t gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile ./scripts
-    docker build -t gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/premade:${ubuntu} -f .dockers/ubuntu-${ubuntu}/Dockerfile.premade ./scripts
-    docker push gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/ubuntu:${ubuntu}
-    docker push gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc/premade:${ubuntu}
+    docker build -t gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:$ubuntu -f .dockers/ubuntu-$ubuntu/Dockerfile ./scripts
+    docker push gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:$ubuntu
 done
 ```
 
