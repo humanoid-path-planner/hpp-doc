@@ -288,7 +288,7 @@ hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: example-robot-data.install hpp-constraints.install \
 	hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
-	hpp-constraints.checkout
+	hpp-environments.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 ifeq (${HUMANOID}, TRUE)
@@ -338,7 +338,7 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
-hpp-gui.configure.dep: hpp-gui.checkout
+hpp-gui.configure.dep: hpp-gui.checkout gepetto-viewer-corba.install
 universal_robot.configure.dep: universal_robot.checkout
 hpp-universal-robot.configure.dep: example-robot-data.install \
 	hpp-universal-robot.checkout
@@ -440,7 +440,11 @@ update:
 			${$(@:.configure_nodep=)_extra_flags} ..
 
 %.install:%.configure
-	${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install
+	if [ "$(findstring corba, $@)" = "" ]; then \
+	    ${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install \
+	else \
+	    ${MAKE} -j1 -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install \
+	fi
 
 %.install_nodep:%.configure_nodep
 	${MAKE} -C ${SRC_DIR}/$(@:.install_nodep=)/${BUILD_FOLDER} install
