@@ -37,6 +37,9 @@ TAR=tar
 GIT_QUIET=--quiet
 # Qt version should be either 4 or 5
 QT_VERSION=4
+ifeq ($(shell lsb_release -sc),focal)
+    QT_VERSION=5
+endif
 INSTALL_DOCUMENTATION=ON
 
 ##################################
