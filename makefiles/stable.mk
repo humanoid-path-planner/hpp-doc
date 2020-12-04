@@ -457,9 +457,9 @@ update:
 
 %.install:%.configure
 	if [ "$(findstring corba, $@)" = "" ]; then \
-	    ${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install \
+	    ${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install; \
 	else \
-	    ${MAKE} -j1 -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install \
+	    ${MAKE} -j1 -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install; \
 	fi
 
 %.install_nodep:%.configure_nodep
