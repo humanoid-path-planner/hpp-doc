@@ -440,6 +440,9 @@ update:
 			${$(@:.configure_nodep=)_extra_flags} ..
 
 %.install:%.configure
+        # Target dependencies in the CMake of most corba packages are not all declared. More precisely,
+        # compilation targets should wait for omniidl targets, that generate some files to be compiled. 
+        # This makes compilation with several jobs fail sometimes.
 	if [ "$(findstring corba, $@)" = "" ]; then \
 	    ${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install; \
 	else \
