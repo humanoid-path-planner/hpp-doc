@@ -16,9 +16,6 @@ ifndef INSTALL_HPP_DIR
 INSTALL_HPP_DIR=${DEVEL_HPP_DIR}/install
 endif
 
-# Whether to compute humanoid specific part
-HUMANOID?=TRUE
-
 BUILD_TYPE?=Release
 BUILD_TESTING?=ON
 ifeq (${BUILD_TYPE},Debug)
@@ -94,18 +91,13 @@ hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=${HPP_VERSION}
 hpp-manipulation_repository=${HPP_REPO}
+hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
 
 hpp-manipulation-urdf_branch=${HPP_VERSION}
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
 hpp-manipulation-corba_branch=${HPP_VERSION}
 hpp-manipulation-corba_repository=${HPP_REPO}
-
-ifeq (${HUMANOID}, TRUE)
-  hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
-else
-  hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
-endif
 
 hpp_tutorial_branch=${HPP_VERSION}
 hpp_tutorial_repository=${HPP_REPO}
@@ -288,14 +280,6 @@ hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
 	hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
-ifeq (${HUMANOID}, TRUE)
-hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
-	hpp-wholebody-step.install hpp-manipulation.checkout
-hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-corbaserver.install hpp-manipulation-corba.checkout
-hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
-	qgv.install hpp-plot.checkout
-else
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
@@ -303,7 +287,6 @@ hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
 	hpp-template-corba.install hpp-manipulation-corba.checkout
 hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
 	qgv.install hpp-plot.checkout
-endif
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-core.install hpp-template-corba.install \
