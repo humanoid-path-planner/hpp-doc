@@ -32,6 +32,19 @@ case $HOST_DIST in
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-18.04-melodic.sh"
     ;;
+  focal)
+  APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev libassimp-dev \
+      libeigen3-dev libgraphviz-dev graphviz robotpkg-omniorb \
+      robotpkg-qpoases+doc robotpkg-romeo-description robotpkg-py38-omniorbpy \
+      ros-noetic-xacro libccd-dev ros-noetic-octomap \
+      ros-noetic-resource-retriever ros-noetic-srdfdom \
+      ros-noetic-pr2-description git libltdl-dev python-omniorb \
+      python3-matplotlib qtbase5-private-dev qtdeclarative5-dev
+      qtmultimedia5-dev libqt5svg5-dev libxml2 libtinyxml2-dev
+      oxygen-icon-theme robotpkg-openscenegraph libpcre3-dev wget libcdd-dev"
+    APT_BUILD_DEP=""
+    CONFIG_FILE="ubuntu-20.04-noetic.sh"
+    ;;
   *)
     echo "Unknow host distribution."
     exit 1
