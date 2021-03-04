@@ -33,7 +33,7 @@ UNZIP=unzip -qq
 TAR=tar
 GIT_QUIET=--quiet
 # Qt version should be either 4 or 5
-QT_VERSION=4
+QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
 
 ##################################
@@ -130,9 +130,6 @@ robot_capsule_urdf_repository=${LAAS_REPO}
 
 robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
-
-iai_maps_branch=devel
-iai_maps_repository=${HPP_REPO}
 
 hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
@@ -277,7 +274,7 @@ hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: example-robot-data.install hpp-constraints.install \
 	hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
-	hpp-constraints.checkout
+	hpp-environments.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
@@ -303,10 +300,9 @@ hrp2-14-description.configure.dep: robot_capsule_urdf.install \
 	robot_model_py.install hrp2-14-description.checkout
 test-hpp.configure.dep: hpp-wholebody-step.install \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
-iai_maps.configure.dep: iai_maps.checkout
-hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
+hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
-hpp_benchmark.configure.dep: hpp_benchmark.checkout
+hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
 collada-dom.configure.dep: collada-dom.checkout
 osg-dae.configure.dep: collada-dom.install \
 	osg-dae.checkout
