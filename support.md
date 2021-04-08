@@ -44,7 +44,7 @@ Fax : 05 61 55 35 77
 
 Joseph Mirabel
 
-Mail: jmirabel at laas dot fr
+Mail: hpp at laas dot fr
 
 LAAS-CNRS<br/>
 7, avenue du Colonel Roche<br/>
