@@ -205,9 +205,9 @@ hpp-bezier-com-traj_branch=v4.10.1
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-curves_branch=v0.5.2
-curves_repository=${LOCO3D_REPO}
-curves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
+ndcurves_branch=v0.5.2
+ndcurves_repository=${LOCO3D_REPO}
+ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
 eigenpy_branch=v2.5.0
 eigenpy_repository=${SOT_REPO}
@@ -363,14 +363,14 @@ simple-humanoid-rbprm.configure.dep: simple-humanoid-rbprm.checkout
 talos-rbprm.configure.dep: talos-rbprm.checkout
 hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
 	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install \
-	hpp-affordance.install curves.install \
+	hpp-affordance.install ndcurves.install \
 	hpp-bezier-com-traj.install hpp-rbprm.checkout
 hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
  hpp-corbaserver.install hpp-rbprm-robot-data.install hpp-rbprm-corba.checkout
 hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.checkout
-hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install curves.install hpp-bezier-com-traj.checkout
-curves.configure.dep: curves.checkout
+hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install ndcurves.install hpp-bezier-com-traj.checkout
+ndcurves.configure.dep: ndcurves.checkout
 eigenpy.configure.dep: eigenpy.checkout
 hpp-tools.configure.dep: hpp-tools.checkout
 
