@@ -16,9 +16,6 @@ ifndef INSTALL_HPP_DIR
 INSTALL_HPP_DIR=${DEVEL_HPP_DIR}/install
 endif
 
-# Whether to compute humanoid specific part
-HUMANOID?=TRUE
-
 BUILD_TYPE?=Release
 BUILD_TESTING?=ON
 ifeq (${BUILD_TYPE},Debug)
@@ -36,7 +33,7 @@ UNZIP=unzip -qq
 TAR=tar
 GIT_QUIET=--quiet
 # Qt version should be either 4 or 5
-QT_VERSION=4
+QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
 
 ##################################
@@ -100,13 +97,7 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 hpp-manipulation-corba_branch=v4.10.1
 hpp-manipulation-corba_repository=${HPP_REPO}
 
-ifeq (${HUMANOID}, TRUE)
-  hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
-else
-  hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
-endif
-
-hpp_tutorial_branch=v4.10.0
+hpp_tutorial_branch=${HPP_VERSION}
 hpp_tutorial_repository=${HPP_REPO}
 
 hpp-gepetto-viewer_branch=v4.10.1
@@ -141,10 +132,7 @@ robot_capsule_urdf_repository=${LAAS_REPO}
 robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
-iai_maps_branch=master
-iai_maps_repository=${HPP_REPO}
-
-hpp_benchmark_branch=v4.6.0
+hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
 
 hpp-environments_branch=v4.10.1
@@ -299,14 +287,6 @@ hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
 	hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
-ifeq (${HUMANOID}, TRUE)
-hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
-	hpp-wholebody-step.install hpp-manipulation.checkout
-hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-corbaserver.install hpp-manipulation-corba.checkout
-hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
-	qgv.install hpp-plot.checkout
-else
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
@@ -314,7 +294,6 @@ hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
 	hpp-template-corba.install hpp-manipulation-corba.checkout
 hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
 	qgv.install hpp-plot.checkout
-endif
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-core.install hpp-template-corba.install \
@@ -331,10 +310,9 @@ hrp2-14-description.configure.dep: robot_capsule_urdf.install \
 	robot_model_py.install hrp2-14-description.checkout
 test-hpp.configure.dep: hpp-wholebody-step.install \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
-iai_maps.configure.dep: iai_maps.checkout
-hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
+hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
-hpp_benchmark.configure.dep: hpp_benchmark.checkout
+hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
 collada-dom.configure.dep: collada-dom.checkout
 osg-dae.configure.dep: collada-dom.install \
 	osg-dae.checkout

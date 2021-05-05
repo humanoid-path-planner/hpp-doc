@@ -162,6 +162,15 @@ hpp-affordance-corba_branch=${HPP_VERSION}
 hpp-affordance-corba_repository=${HPP_REPO}
 hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
+anymal-rbprm_branch=${HPP_VERSION}
+anymal-rbprm_repository=${HPP_REPO}
+
+hyq-rbprm_branch=${HPP_VERSION}
+hyq-rbprm_repository=${HPP_REPO}
+
+simple-humanoid-rbprm_branch=${HPP_VERSION}
+simple-humanoid-rbprm_repository=${HPP_REPO}
+
 talos-rbprm_branch=${HPP_VERSION}
 talos-rbprm_repository=${HPP_REPO}
 
@@ -325,10 +334,14 @@ hpp_romeo.configure.dep: hpp_romeo.checkout
 hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
 hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
  hpp-corbaserver.install hpp-affordance-corba.checkout
+anymal-rbprm.configure.dep: anymal-rbprm.checkout
+hyq-rbprm.configure.dep: hyq-rbprm.checkout
+simple-humanoid-rbprm.configure.dep: simple-humanoid-rbprm.checkout
 talos-rbprm.configure.dep: talos-rbprm.checkout
 hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
-	hpp-rbprm-robot-data.install hpp-affordance.install ndcurves.install \
-	hpp-bezier-com-traj.install talos-rbprm.install hpp-rbprm.checkout
+	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install \
+	hpp-affordance.install ndcurves.install \
+	hpp-bezier-com-traj.install hpp-rbprm.checkout
 hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
  hpp-corbaserver.install hpp-rbprm-robot-data.install hpp-rbprm-corba.checkout
@@ -411,6 +424,7 @@ update:
 	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
+			-DENFORCE_MINIMAL_CXX_STANDARD=ON \
 			-DINSTALL_DOCUMENTATION=${INSTALL_DOCUMENTATION} \
 			-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" \
 			${$(@:.configure_nodep=)_extra_flags} ..
