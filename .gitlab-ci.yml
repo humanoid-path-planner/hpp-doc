@@ -79,8 +79,8 @@ stable-18.04-build:
       - stable
     <<: *build_definition
 
-stable-16.04-build:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:16.04
+stable-20.04-build:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
     allow_failure: true
     only:
       - stable
@@ -92,8 +92,8 @@ devel-18.04-build:
       -  devel
     <<: *build_definition
 
-devel-16.04-build:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:16.04
+devel-20.04-build:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
     allow_failure: true
     only:
       -  devel
@@ -107,11 +107,11 @@ stable-18.04-test:
       - stable
     <<: *test_definition
 
-stable-16.04-test:
+stable-20.04-test:
     allow_failure: true
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:16.04
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
     dependencies:
-      - stable-16.04-build
+      - stable-20.04-build
     only:
       - stable
     <<: *test_definition
@@ -125,11 +125,11 @@ devel-18.04-test:
       -  devel
     <<: *test_definition
 
-devel-16.04-test:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:16.04
+devel-20.04-test:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
     allow_failure: true
     dependencies:
-      - devel-16.04-build
+      - devel-20.04-build
     only:
       -  devel
     <<: *test_definition
@@ -142,11 +142,11 @@ stable-18.04-doc:
       - stable
     <<: *doc_definition
 
-stable-16.04-doc:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:16.04
+stable-20.04-doc:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
     allow_failure: true
     dependencies:
-      - stable-16.04-build
+      - stable-20.04-build
     only:
       - stable
     <<: *doc_definition
@@ -159,11 +159,11 @@ devel-18.04-doc:
       -  devel
     <<: *doc_definition
 
-devel-16.04-doc:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:16.04
+devel-20.04-doc:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
     allow_failure: true
     dependencies:
-      - devel-16.04-build
+      - devel-20.04-build
     only:
       -  devel
     <<: *doc_definition

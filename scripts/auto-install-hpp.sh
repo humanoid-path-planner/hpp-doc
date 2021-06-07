@@ -38,7 +38,7 @@ case $HOST_DIST in
       robotpkg-qpoases+doc robotpkg-romeo-description robotpkg-py38-omniorbpy \
       ros-noetic-xacro libccd-dev ros-noetic-octomap \
       ros-noetic-resource-retriever ros-noetic-srdfdom \
-      ros-noetic-pr2-description git libltdl-dev python-omniorb \
+      ros-noetic-pr2-description git libltdl-dev \
       python3-matplotlib qtbase5-private-dev qtdeclarative5-dev
       qtmultimedia5-dev libqt5svg5-dev libxml2 libtinyxml2-dev
       oxygen-icon-theme robotpkg-openscenegraph libpcre3-dev wget libcdd-dev"

@@ -44,10 +44,13 @@ RUN apt-get update -qqy \
     python-matplotlib \
     python-omniorb \
     qt4-dev-tools \
+    qtbase5-dev \
+    qttools5-dev \
     robotpkg-omniorb \
     robotpkg-qpoases+doc \
     robotpkg-roboptim-core \
     robotpkg-roboptim-trajectory \
+    robotpkg-romeo-description \
     robotpkg-py36-omniorbpy \
     ros-${ROS}-octomap \
     ros-${ROS}-pr2-description \
