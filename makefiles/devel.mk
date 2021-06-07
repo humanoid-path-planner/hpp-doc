@@ -244,7 +244,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 
 # For test on gepgitlab, install robot packages first
 test-ci: example-robot-data.install  hpp-environments.install \
-	hpp-baxter.install
+	hpp-baxter.install hpp-wholebody-step.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
