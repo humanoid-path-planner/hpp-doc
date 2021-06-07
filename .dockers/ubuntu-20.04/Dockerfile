@@ -31,7 +31,6 @@ RUN apt-get update -qqy \
     libgraphviz-dev \
     libltdl-dev \
     libomniorb4-dev \
-    libopenscenegraph-dev \
     libpcre3-dev \
     libqt5svg5-dev \
     libqt5webkit5-dev \
@@ -40,7 +39,6 @@ RUN apt-get update -qqy \
     liburdfdom-dev \
     libxml2 \
     omniorb-nameserver \
-    openscenegraph \
     oxygen-icon-theme \
     pyqt5-dev \
     python-is-python3 \
@@ -50,11 +48,13 @@ RUN apt-get update -qqy \
     qtbase5-private-dev \
     qtmultimedia5-dev \
     robotpkg-omniorb \
+    robotpkg-openscenegraph \
     robotpkg-qpoases+doc \
     robotpkg-roboptim-core \
     robotpkg-roboptim-trajectory \
     robotpkg-romeo-description \
     robotpkg-py38-omniorbpy \
+    robotpkg-py38-pythonqt \
     robotpkg-qt5-osgqt \
     ros-${ROS}-octomap \
     ros-${ROS}-resource-retriever \
