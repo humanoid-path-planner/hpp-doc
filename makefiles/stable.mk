@@ -249,7 +249,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 
 # For test on gepgitlab, install robot packages first
 test-ci: example-robot-data.install  hpp-environments.install \
-	hpp-baxter.install
+	hpp-baxter.install hpp-wholebody-step.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
@@ -284,7 +284,7 @@ hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: example-robot-data.install hpp-constraints.install \
 	hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
-	hpp-constraints.checkout
+	hpp-environments.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
@@ -337,9 +337,10 @@ hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.in
 anymal-rbprm.configure.dep: anymal-rbprm.checkout
 hyq-rbprm.configure.dep: hyq-rbprm.checkout
 simple-humanoid-rbprm.configure.dep: simple-humanoid-rbprm.checkout
+solo-rbprm.configure.dep: solo-rbprm.checkout
 talos-rbprm.configure.dep: talos-rbprm.checkout
 hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
-	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install \
+	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install solo-rbprm.install \
 	hpp-affordance.install ndcurves.install \
 	hpp-bezier-com-traj.install hpp-rbprm.checkout
 hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
