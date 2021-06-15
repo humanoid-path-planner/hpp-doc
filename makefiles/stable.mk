@@ -53,7 +53,6 @@ hpp-template-corba_repository=${HPP_REPO}
 # }}}
 ##################################
 # {{{ Packages supporting HPP_VERSION
-#
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
