@@ -25,10 +25,10 @@ case $HOST_DIST in
        ros-melodic-resource-retriever ros-melodic-srdfdom \
        ros-melodic-pr2-description git libomniorb4-dev omniorb-nameserver \
        libltdl-dev python-matplotlib python-omniorb \
-       libxml2 \
+       libxml2 robotpkg-openscenegraph robotpkg-qt5-osgqt \
        libtinyxml2-dev qt4-dev-tools libqt4-opengl-dev libqtgui4 \
-       libqtwebkit-dev oxygen-icon-theme libopenscenegraph-dev \
-       openscenegraph libpcre3-dev libcdd-dev wget"
+       libqtwebkit-dev oxygen-icon-theme \
+       libpcre3-dev libcdd-dev wget"
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-18.04-melodic.sh"
     ;;
@@ -38,9 +38,9 @@ case $HOST_DIST in
       robotpkg-qpoases+doc robotpkg-romeo-description robotpkg-py38-omniorbpy \
       ros-noetic-xacro libccd-dev ros-noetic-octomap \
       ros-noetic-resource-retriever ros-noetic-srdfdom \
-      ros-noetic-pr2-description git libltdl-dev python-omniorb \
-      python3-matplotlib qtbase5-private-dev qtdeclarative5-dev
-      qtmultimedia5-dev libqt5svg5-dev libxml2 libtinyxml2-dev
+      ros-noetic-pr2-description git libltdl-dev \
+      python3-matplotlib qtbase5-private-dev qtdeclarative5-dev \
+      qtmultimedia5-dev libqt5svg5-dev libxml2 libtinyxml2-dev robotpkg-qt5-osgqt \
       oxygen-icon-theme robotpkg-openscenegraph libpcre3-dev wget libcdd-dev"
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-20.04-noetic.sh"
@@ -147,7 +147,6 @@ source $DEVEL_HPP_DIR/config.sh
 
 cd $DEVEL_HPP_DIR/src
 
-make -s -e iai_maps.install
 source ../config.sh
 make -s -e $TARGET
 

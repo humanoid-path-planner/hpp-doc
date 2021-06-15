@@ -72,7 +72,6 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
 
     ```bash
     cd ${DEVEL_HPP_DIR}/src
-    make iai_maps.install;
     source ../config.sh;
     make all
     ```
@@ -154,7 +153,6 @@ To install all the packages on ubuntu 20.04 LTS 64 bit, you should do the follow
 
     ```bash
     cd ${DEVEL_HPP_DIR}/src
-    make iai_maps.install;
     source ../config.sh;
     make all
     ```

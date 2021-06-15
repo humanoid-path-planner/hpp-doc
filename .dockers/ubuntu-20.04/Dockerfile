@@ -1,9 +1,10 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 
-ENV DEVEL_HPP_DIR=/workspace UBUNTU=xenial ROS=kinetic
+ENV DEVEL_HPP_DIR=/workspace UBUNTU=focal ROS=noetic
 
 RUN apt-get update -y && apt-get install -y \
    curl \
+   gnupg2 \
    && rm -rf /var/lib/apt/lists/*
 
 ADD repos.key /
@@ -16,49 +17,49 @@ RUN echo "deb http://packages.ros.org/ros/ubuntu ${UBUNTU} main" > /etc/apt/sour
 
 RUN apt-get update -qqy \
  && DEBIAN_FRONTEND=noninteractive apt-get install -qqy \
-    asciidoc \
-    autoconf \
-    bison \
     cmake \
     doxygen \
-    flex \
     g++ \
     git \
+    graphviz \
     libassimp-dev \
     libboost-dev \
+    libccd-dev \
     libcdd-dev \
+    libeigen3-dev \
     libglpk-dev \
-    liblog4cxx10-dev \
+    libgraphviz-dev \
     libltdl-dev \
     libomniorb4-dev \
-    libopenscenegraph-dev \
     libpcre3-dev \
-    libqt4-opengl-dev \
-    libqtgui4 \
-    libqtwebkit-dev \
+    libqt5svg5-dev \
+    libqt5webkit5-dev \
+    libqt5xmlpatterns5-dev \
     libtinyxml2-dev \
     liburdfdom-dev \
-    libxml2-dev \
-    omniidl \
-    omniidl-python \
+    libxml2 \
     omniorb-nameserver \
-    openscenegraph \
     oxygen-icon-theme \
-    python-matplotlib \
-    qt4-dev-tools \
+    pyqt5-dev \
+    python-is-python3 \
+    python3-pyqt5 \
+    python3-matplotlib \
+    qtdeclarative5-dev \
+    qtbase5-private-dev \
+    qtmultimedia5-dev \
+    robotpkg-omniorb \
+    robotpkg-openscenegraph \
     robotpkg-qpoases+doc \
     robotpkg-roboptim-core \
     robotpkg-roboptim-trajectory \
-    ros-${ROS}-common-msgs \
-    ros-${ROS}-kdl-parser \
+    robotpkg-romeo-description \
+    robotpkg-py38-omniorbpy \
+    robotpkg-py38-pythonqt \
+    robotpkg-qt5-osgqt \
     ros-${ROS}-octomap \
-    ros-${ROS}-pr2-description \
-    ros-${ROS}-srdfdom \
     ros-${ROS}-resource-retriever \
-    ros-${ROS}-tf \
-    ros-${ROS}-tf-conversions \
+    ros-${ROS}-srdfdom \
     ros-${ROS}-xacro \
-    source-highlight \
     sudo \
     wget \
  && apt-get remove -y texlive-latex-base texlive-binaries ghostscript \
