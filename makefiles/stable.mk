@@ -136,7 +136,7 @@ robot_model_py_repository=${LAAS_REPO}
 hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
 
-hpp-environments_branch=${HPP_VERSION}
+hpp-environments_branch=v4.11.1
 hpp-environments_repository=${HPP_REPO}
 
 universal_robot_branch=kinetic
