@@ -36,10 +36,14 @@ GIT_QUIET=--quiet
 QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
 
+# Either a version tag (e.g. v4.3.0), stable or devel
+HPP_VERSION=v4.11.0
+HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
+
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.6.1
+pinocchio_branch=v2.6.3
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
@@ -49,15 +53,11 @@ hpp-template-corba_repository=${HPP_REPO}
 # }}}
 ##################################
 # {{{ Packages supporting HPP_VERSION
-
-# Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=v4.11.0
-HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
-
+#
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=v1.7.4
+hpp-fcl_branch=v1.7.5
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -117,7 +117,7 @@ hpp-practicals_repository=${HPP_REPO}
 ##################################
 # {{{ Robot specific package + test packages
 
-example-robot-data_branch=v3.9.1
+example-robot-data_branch=v3.10.0
 example-robot-data_repository=${GEPETTO_REPO}
 example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -183,9 +183,6 @@ hpp-rbprm_branch=${HPP_VERSION}
 hpp-rbprm_repository=${HPP_REPO}
 hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-rbprm-robot-data_branch=v4.9.0
-hpp-rbprm-robot-data_repository=${HPP_REPO}
-
 hpp-rbprm-corba_branch=${HPP_VERSION}
 hpp-rbprm-corba_repository=${HPP_REPO}
 hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}
@@ -201,7 +198,7 @@ ndcurves_branch=v1.1.0
 ndcurves_repository=${LOCO3D_REPO}
 ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-eigenpy_branch=v2.6.4
+eigenpy_branch=v2.6.7
 eigenpy_repository=${SOT_REPO}
 
 # }}}
@@ -343,9 +340,8 @@ hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
 	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install solo-rbprm.install \
 	hpp-affordance.install ndcurves.install \
 	hpp-bezier-com-traj.install hpp-rbprm.checkout
-hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
- hpp-corbaserver.install hpp-rbprm-robot-data.install hpp-rbprm-corba.checkout
+ hpp-corbaserver.install hpp-rbprm-corba.checkout
 hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.checkout
 hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install ndcurves.install hpp-bezier-com-traj.checkout
 ndcurves.configure.dep: ndcurves.checkout
