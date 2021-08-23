@@ -326,7 +326,7 @@ hpp-universal-robot.configure.dep: example-robot-data.install \
 	hpp-universal-robot.checkout
 example-robot-data.configure.dep: example-robot-data.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
-hpp-baxter.configure.dep: hpp-baxter.checkout
+hpp-baxter.configure.dep: example-robot-data.install hpp-baxter.checkout
 hpp_romeo.configure.dep: hpp_romeo.checkout
 hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
 hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
