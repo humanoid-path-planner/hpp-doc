@@ -21,6 +21,7 @@ RUN apt-get update -qqy \
     doxygen \
     g++ \
     git \
+    graphviz \
     libassimp-dev \
     libboost-dev \
     libccd-dev \
