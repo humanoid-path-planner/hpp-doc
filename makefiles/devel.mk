@@ -33,7 +33,7 @@ UNZIP=unzip -qq
 TAR=tar
 GIT_QUIET=--quiet
 # Qt version should be either 4 or 5
-QT_VERSION=4
+QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
 
 ##################################
@@ -131,9 +131,6 @@ robot_capsule_urdf_repository=${LAAS_REPO}
 robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
-iai_maps_branch=devel
-iai_maps_repository=${HPP_REPO}
-
 hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
 
@@ -165,6 +162,15 @@ hpp-affordance-corba_branch=${HPP_VERSION}
 hpp-affordance-corba_repository=${HPP_REPO}
 hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
+anymal-rbprm_branch=${HPP_VERSION}
+anymal-rbprm_repository=${HPP_REPO}
+
+hyq-rbprm_branch=${HPP_VERSION}
+hyq-rbprm_repository=${HPP_REPO}
+
+simple-humanoid-rbprm_branch=${HPP_VERSION}
+simple-humanoid-rbprm_repository=${HPP_REPO}
+
 talos-rbprm_branch=${HPP_VERSION}
 talos-rbprm_repository=${HPP_REPO}
 
@@ -186,9 +192,9 @@ hpp-bezier-com-traj_branch=${HPP_VERSION}
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-curves_branch=${HPP_VERSION}
-curves_repository=${LOCO3D_REPO}
-curves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
+ndcurves_branch=${HPP_VERSION}
+ndcurves_repository=${LOCO3D_REPO}
+ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
 eigenpy_branch=v2.3.2
 eigenpy_repository=${SOT_REPO}
@@ -217,10 +223,6 @@ endif
 gepetto-viewer-corba_branch=${HPP_VERSION}
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 
-pythonqt_branch=qt${QT_VERSION}
-pythonqt_repository=${GEPETTO_REPO}
-pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
-
 qgv_branch=devel
 qgv_repository=${HPP_REPO}
 ifeq (${QT_VERSION}, 5)
@@ -242,7 +244,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 
 # For test on gepgitlab, install robot packages first
 test-ci: example-robot-data.install  hpp-environments.install \
-	hpp-baxter.install
+	hpp-baxter.install hpp-wholebody-step.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
@@ -277,7 +279,7 @@ hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: example-robot-data.install hpp-constraints.install \
 	hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
-	hpp-constraints.checkout
+	hpp-environments.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
@@ -293,7 +295,6 @@ hpp-corbaserver.configure.dep: hpp-core.install hpp-template-corba.install \
 	hpp-constraints.install hpp-corbaserver.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
 qgv.configure.dep: qgv.checkout
-pythonqt.configure.dep: pythonqt.checkout
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
@@ -303,18 +304,17 @@ hrp2-14-description.configure.dep: robot_capsule_urdf.install \
 	robot_model_py.install hrp2-14-description.checkout
 test-hpp.configure.dep: hpp-wholebody-step.install \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
-iai_maps.configure.dep: iai_maps.checkout
-hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
+hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
-hpp_benchmark.configure.dep: hpp_benchmark.checkout
+hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
 collada-dom.configure.dep: collada-dom.checkout
 osg-dae.configure.dep: collada-dom.install \
 	osg-dae.checkout
 OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
 	OpenSceneGraph-3.4.0.checkout
-gepetto-viewer.configure.dep: pythonqt.install gepetto-viewer.checkout
+gepetto-viewer.configure.dep: gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
-	pythonqt.install gepetto-viewer-corba.checkout
+	gepetto-viewer-corba.checkout
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
@@ -329,16 +329,20 @@ hpp_romeo.configure.dep: hpp_romeo.checkout
 hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
 hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
  hpp-corbaserver.install hpp-affordance-corba.checkout
+anymal-rbprm.configure.dep: anymal-rbprm.checkout
+hyq-rbprm.configure.dep: hyq-rbprm.checkout
+simple-humanoid-rbprm.configure.dep: simple-humanoid-rbprm.checkout
 talos-rbprm.configure.dep: talos-rbprm.checkout
 hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
-	hpp-rbprm-robot-data.install hpp-affordance.install curves.install \
-	hpp-bezier-com-traj.install talos-rbprm.install hpp-rbprm.checkout
+	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install \
+	hpp-affordance.install ndcurves.install \
+	hpp-bezier-com-traj.install hpp-rbprm.checkout
 hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
  hpp-corbaserver.install hpp-rbprm-robot-data.install hpp-rbprm-corba.checkout
 hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.checkout
-hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install curves.install hpp-bezier-com-traj.checkout
-curves.configure.dep: curves.checkout
+hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install ndcurves.install hpp-bezier-com-traj.checkout
+ndcurves.configure.dep: ndcurves.checkout
 eigenpy.configure.dep: eigenpy.checkout
 hpp-tools.configure.dep: hpp-tools.checkout
 
@@ -415,6 +419,7 @@ update:
 	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/$(@:.configure_nodep=)/${BUILD_FOLDER}; \
 	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
+			-DENFORCE_MINIMAL_CXX_STANDARD=ON \
 			-DINSTALL_DOCUMENTATION=${INSTALL_DOCUMENTATION} \
 			-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" \
 			${$(@:.configure_nodep=)_extra_flags} ..

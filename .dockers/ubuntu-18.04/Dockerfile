@@ -21,6 +21,7 @@ RUN apt-get update -qqy \
     doxygen \
     g++ \
     git \
+    graphviz \
     libassimp-dev \
     libboost-dev \
     libccd-dev \
@@ -30,8 +31,9 @@ RUN apt-get update -qqy \
     libgraphviz-dev \
     libltdl-dev \
     libomniorb4-dev \
-    libopenscenegraph-dev \
     libpcre3-dev \
+    libpythonqt-qtall-qt5-python2-dev \
+    libpythonqt-qtall-qt5-python3-dev \
     libqt4-opengl-dev \
     libqtgui4 \
     libqtwebkit-dev \
@@ -39,16 +41,20 @@ RUN apt-get update -qqy \
     liburdfdom-dev \
     libxml2 \
     omniorb-nameserver \
-    openscenegraph \
     oxygen-icon-theme \
     python-matplotlib \
     python-omniorb \
     qt4-dev-tools \
+    qtbase5-dev \
+    qttools5-dev \
     robotpkg-omniorb \
+    robotpkg-openscenegraph \
     robotpkg-qpoases+doc \
     robotpkg-roboptim-core \
     robotpkg-roboptim-trajectory \
+    robotpkg-romeo-description \
     robotpkg-py36-omniorbpy \
+    robotpkg-qt5-osgqt \
     ros-${ROS}-octomap \
     ros-${ROS}-pr2-description \
     ros-${ROS}-resource-retriever \

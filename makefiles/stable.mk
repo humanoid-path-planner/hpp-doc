@@ -16,9 +16,6 @@ ifndef INSTALL_HPP_DIR
 INSTALL_HPP_DIR=${DEVEL_HPP_DIR}/install
 endif
 
-# Whether to compute humanoid specific part
-HUMANOID?=TRUE
-
 BUILD_TYPE?=Release
 BUILD_TESTING?=ON
 ifeq (${BUILD_TYPE},Debug)
@@ -36,96 +33,91 @@ UNZIP=unzip -qq
 TAR=tar
 GIT_QUIET=--quiet
 # Qt version should be either 4 or 5
-QT_VERSION=4
+QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
+
+# Either a version tag (e.g. v4.3.0), stable or devel
+HPP_VERSION=v4.11.0
+HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.5.3
+pinocchio_branch=v2.6.3
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
-hpp-template-corba_branch=v4.10.0
+hpp-template-corba_branch=${HPP_VERSION}
 hpp-template-corba_repository=${HPP_REPO}
 
 # }}}
 ##################################
 # {{{ Packages supporting HPP_VERSION
-
-# Either a version tag (e.g. v4.3.0), stable or devel
-HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
-
-hpp-util_branch=v4.10.1
+#
+hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=v1.6.0
+hpp-fcl_branch=v1.7.5
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
-hpp-statistics_branch=v4.10.1
+hpp-statistics_branch=${HPP_VERSION}
 hpp-statistics_repository=${HPP_REPO}
 
-hpp-pinocchio_branch=v4.10.2
+hpp-pinocchio_branch=${HPP_VERSION}
 hpp-pinocchio_repository=${HPP_REPO}
 hpp-pinocchio_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-constraints_branch=v4.10.1
+hpp-constraints_branch=${HPP_VERSION}
 hpp-constraints_repository=${HPP_REPO}
 hpp-constraints_extra_flags=${HPP_EXTRA_FLAGS} -DUSE_QPOASES=OFF
 
-hpp-core_branch=v4.10.1
+hpp-core_branch=${HPP_VERSION}
 hpp-core_repository=${HPP_REPO}
 hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-corbaserver_branch=v4.10.1
+hpp-corbaserver_branch=${HPP_VERSION}
 hpp-corbaserver_repository=${HPP_REPO}
 
-hpp-walkgen_branch=v4.10.1
+hpp-walkgen_branch=${HPP_VERSION}
 hpp-walkgen_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=v4.10.1
+hpp-wholebody-step_branch=${HPP_VERSION}
 hpp-wholebody-step_repository=${HPP_REPO}
 hpp-wholebody-step_extra_flags= -DRUN_TESTS=OFF
 
 hpp-doc_branch=stable
 hpp-doc_repository=${HPP_REPO}
 
-hpp-manipulation_branch=v4.10.1
+hpp-manipulation_branch=${HPP_VERSION}
 hpp-manipulation_repository=${HPP_REPO}
 
-hpp-manipulation-urdf_branch=v4.10.1
+hpp-manipulation-urdf_branch=${HPP_VERSION}
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
-hpp-manipulation-corba_branch=v4.10.1
+hpp-manipulation-corba_branch=${HPP_VERSION}
 hpp-manipulation-corba_repository=${HPP_REPO}
 
-ifeq (${HUMANOID}, TRUE)
-  hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=TRUE
-else
-  hpp-manipulation_extra_flags=-DHPP_MANIPULATION_HAS_WHOLEBODY_STEP=FALSE
-endif
-
-hpp_tutorial_branch=v4.10.0
+hpp_tutorial_branch=${HPP_VERSION}
 hpp_tutorial_repository=${HPP_REPO}
 
-hpp-gepetto-viewer_branch=v4.10.1
+hpp-gepetto-viewer_branch=${HPP_VERSION}
 hpp-gepetto-viewer_repository=${HPP_REPO}
 
-hpp-plot_branch=v4.10.1
+hpp-plot_branch=${HPP_VERSION}
 hpp-plot_repository=${HPP_REPO}
 
-hpp-gui_branch=v4.10.1
+hpp-gui_branch=${HPP_VERSION}
 hpp-gui_repository=${HPP_REPO}
 
-hpp-practicals_branch=v4.10.0
+hpp-practicals_branch=${HPP_VERSION}
 hpp-practicals_repository=${HPP_REPO}
 
 # }}}
 ##################################
 # {{{ Robot specific package + test packages
 
-example-robot-data_branch=v3.6.1
+example-robot-data_branch=v3.10.0
 example-robot-data_repository=${GEPETTO_REPO}
 example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -141,25 +133,22 @@ robot_capsule_urdf_repository=${LAAS_REPO}
 robot_model_py_branch=groovy
 robot_model_py_repository=${LAAS_REPO}
 
-iai_maps_branch=master
-iai_maps_repository=${HPP_REPO}
-
-hpp_benchmark_branch=v4.6.0
+hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
 
-hpp-environments_branch=v4.10.1
+hpp-environments_branch=v4.11.1
 hpp-environments_repository=${HPP_REPO}
 
 universal_robot_branch=kinetic
 universal_robot_repository=${HPP_REPO}
 
-hpp-universal-robot_branch=v4.10.0
+hpp-universal-robot_branch=${HPP_VERSION}
 hpp-universal-robot_repository=${HPP_REPO}
 
-hpp-baxter_branch=v4.10.0
+hpp-baxter_branch=v4.11.1
 hpp-baxter_repository=${HPP_REPO}
 
-hpp_romeo_branch=v4.10.0
+hpp_romeo_branch=${HPP_VERSION}
 hpp_romeo_repository=${HPP_REPO}
 
 
@@ -167,49 +156,49 @@ hpp_romeo_repository=${HPP_REPO}
 ##################################
 # {{{ Packages for rbprm
 
-hpp-affordance_branch=v4.10.0
+hpp-affordance_branch=${HPP_VERSION}
 hpp-affordance_repository=${HPP_REPO}
 hpp-affordance_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-affordance-corba_branch=v4.10.0
+hpp-affordance-corba_branch=${HPP_VERSION}
 hpp-affordance-corba_repository=${HPP_REPO}
 hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
-anymal-rbprm_branch=v4.10.0
+anymal-rbprm_branch=${HPP_VERSION}
 anymal-rbprm_repository=${HPP_REPO}
 
-hyq-rbprm_branch=v4.10.0
+hyq-rbprm_branch=${HPP_VERSION}
 hyq-rbprm_repository=${HPP_REPO}
 
-simple-humanoid-rbprm_branch=v4.10.0
+simple-humanoid-rbprm_branch=${HPP_VERSION}
 simple-humanoid-rbprm_repository=${HPP_REPO}
 
-talos-rbprm_branch=v4.10.0
+solo-rbprm_branch=${HPP_VERSION}
+solo-rbprm_repository=${HPP_REPO}
+
+talos-rbprm_branch=${HPP_VERSION}
 talos-rbprm_repository=${HPP_REPO}
 
-hpp-rbprm_branch=v4.10.1
+hpp-rbprm_branch=${HPP_VERSION}
 hpp-rbprm_repository=${HPP_REPO}
 hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-rbprm-robot-data_branch=v4.9.0
-hpp-rbprm-robot-data_repository=${HPP_REPO}
-
-hpp-rbprm-corba_branch=v4.10.0
+hpp-rbprm-corba_branch=${HPP_VERSION}
 hpp-rbprm-corba_repository=${HPP_REPO}
 hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-centroidal-dynamics_branch=v4.10.0
+hpp-centroidal-dynamics_branch=${HPP_VERSION}
 hpp-centroidal-dynamics_repository=${HPP_REPO}
 
-hpp-bezier-com-traj_branch=v4.10.1
+hpp-bezier-com-traj_branch=${HPP_VERSION}
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-curves_branch=v0.5.2
-curves_repository=${LOCO3D_REPO}
-curves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
+ndcurves_branch=v1.1.0
+ndcurves_repository=${LOCO3D_REPO}
+ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-eigenpy_branch=v2.5.0
+eigenpy_branch=v2.6.7
 eigenpy_repository=${SOT_REPO}
 
 # }}}
@@ -225,7 +214,7 @@ osg-dae_repository=${GEPETTO_REPO}
 osg-dae_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
-gepetto-viewer_branch=v4.10.1
+gepetto-viewer_branch=v4.12.0
 gepetto-viewer_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
@@ -233,14 +222,10 @@ else
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
 endif
 
-gepetto-viewer-corba_branch=v5.5.1
+gepetto-viewer-corba_branch=v5.6.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 
-pythonqt_branch=qt${QT_VERSION}
-pythonqt_repository=${GEPETTO_REPO}
-pythonqt_extra_flags= -DPythonQt_Wrap_QtAll=ON -DPythonQt_Extensions=ON
-
-qgv_branch=v1.3.0
+qgv_branch=v1.3.2
 qgv_repository=${HPP_REPO}
 ifeq (${QT_VERSION}, 5)
 	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
@@ -261,7 +246,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 
 # For test on gepgitlab, install robot packages first
 test-ci: example-robot-data.install  hpp-environments.install \
-	hpp-baxter.install
+	hpp-baxter.install hpp-wholebody-step.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
@@ -296,17 +281,9 @@ hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: example-robot-data.install hpp-constraints.install \
 	hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
-	hpp-constraints.checkout
+	hpp-environments.install hpp-constraints.checkout
 hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
 	hpp-wholebody-step.checkout
-ifeq (${HUMANOID}, TRUE)
-hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
-	hpp-wholebody-step.install hpp-manipulation.checkout
-hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
-	hpp-corbaserver.install hpp-manipulation-corba.checkout
-hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
-	qgv.install hpp-plot.checkout
-else
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
@@ -314,14 +291,12 @@ hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
 	hpp-template-corba.install hpp-manipulation-corba.checkout
 hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
 	qgv.install hpp-plot.checkout
-endif
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-core.install hpp-template-corba.install \
 	hpp-constraints.install hpp-corbaserver.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
 qgv.configure.dep: qgv.checkout
-pythonqt.configure.dep: pythonqt.checkout
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
@@ -331,18 +306,17 @@ hrp2-14-description.configure.dep: robot_capsule_urdf.install \
 	robot_model_py.install hrp2-14-description.checkout
 test-hpp.configure.dep: hpp-wholebody-step.install \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
-iai_maps.configure.dep: iai_maps.checkout
-hpp_tutorial.configure.dep: hpp-gepetto-viewer.install iai_maps.install \
+hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
-hpp_benchmark.configure.dep: hpp_benchmark.checkout
+hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
 collada-dom.configure.dep: collada-dom.checkout
 osg-dae.configure.dep: collada-dom.install \
 	osg-dae.checkout
 OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
 	OpenSceneGraph-3.4.0.checkout
-gepetto-viewer.configure.dep: pythonqt.install gepetto-viewer.checkout
+gepetto-viewer.configure.dep: gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
-	pythonqt.install gepetto-viewer-corba.checkout
+	gepetto-viewer-corba.checkout
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
@@ -352,7 +326,7 @@ hpp-universal-robot.configure.dep: example-robot-data.install \
 	hpp-universal-robot.checkout
 example-robot-data.configure.dep: example-robot-data.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
-hpp-baxter.configure.dep: hpp-baxter.checkout
+hpp-baxter.configure.dep: example-robot-data.install hpp-baxter.checkout
 hpp_romeo.configure.dep: hpp_romeo.checkout
 hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
 hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
@@ -360,17 +334,17 @@ hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.in
 anymal-rbprm.configure.dep: anymal-rbprm.checkout
 hyq-rbprm.configure.dep: hyq-rbprm.checkout
 simple-humanoid-rbprm.configure.dep: simple-humanoid-rbprm.checkout
+solo-rbprm.configure.dep: solo-rbprm.checkout
 talos-rbprm.configure.dep: talos-rbprm.checkout
 hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
-	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install \
-	hpp-affordance.install curves.install \
+	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install solo-rbprm.install \
+	hpp-affordance.install ndcurves.install \
 	hpp-bezier-com-traj.install hpp-rbprm.checkout
-hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
- hpp-corbaserver.install hpp-rbprm-robot-data.install hpp-rbprm-corba.checkout
+ hpp-corbaserver.install hpp-rbprm-corba.checkout
 hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.checkout
-hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install curves.install hpp-bezier-com-traj.checkout
-curves.configure.dep: curves.checkout
+hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install ndcurves.install hpp-bezier-com-traj.checkout
+ndcurves.configure.dep: ndcurves.checkout
 eigenpy.configure.dep: eigenpy.checkout
 hpp-tools.configure.dep: hpp-tools.checkout
 
