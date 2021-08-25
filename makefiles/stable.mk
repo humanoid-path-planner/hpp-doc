@@ -225,7 +225,7 @@ endif
 gepetto-viewer-corba_branch=v5.6.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 
-qgv_branch=v1.3.1
+qgv_branch=v1.3.2
 qgv_repository=${HPP_REPO}
 ifeq (${QT_VERSION}, 5)
 	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
