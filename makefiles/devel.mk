@@ -36,24 +36,24 @@ GIT_QUIET=--quiet
 QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
 
+# Either a version tag (e.g. v4.3.0), stable or devel
+HPP_VERSION=devel
+HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
+
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.5.6
+pinocchio_branch=v2.6.3
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
-hpp-template-corba_branch=devel
+hpp-template-corba_branch=${HPP_VERSION}
 hpp-template-corba_repository=${HPP_REPO}
 
 # }}}
 ##################################
 # {{{ Packages supporting HPP_VERSION
-
-# Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=devel
-HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
-
+#
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
@@ -171,15 +171,15 @@ hyq-rbprm_repository=${HPP_REPO}
 simple-humanoid-rbprm_branch=${HPP_VERSION}
 simple-humanoid-rbprm_repository=${HPP_REPO}
 
+solo-rbprm_branch=${HPP_VERSION}
+solo-rbprm_repository=${HPP_REPO}
+
 talos-rbprm_branch=${HPP_VERSION}
 talos-rbprm_repository=${HPP_REPO}
 
 hpp-rbprm_branch=${HPP_VERSION}
 hpp-rbprm_repository=${HPP_REPO}
 hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
-
-hpp-rbprm-robot-data_branch=${HPP_VERSION}
-hpp-rbprm-robot-data_repository=${HPP_REPO}
 
 hpp-rbprm-corba_branch=${HPP_VERSION}
 hpp-rbprm-corba_repository=${HPP_REPO}
@@ -196,7 +196,7 @@ ndcurves_branch=${HPP_VERSION}
 ndcurves_repository=${LOCO3D_REPO}
 ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-eigenpy_branch=v2.3.2
+eigenpy_branch=v2.6.7
 eigenpy_repository=${SOT_REPO}
 
 # }}}
@@ -332,14 +332,14 @@ hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.in
 anymal-rbprm.configure.dep: anymal-rbprm.checkout
 hyq-rbprm.configure.dep: hyq-rbprm.checkout
 simple-humanoid-rbprm.configure.dep: simple-humanoid-rbprm.checkout
+solo-rbprm.configure.dep: solo-rbprm.checkout
 talos-rbprm.configure.dep: talos-rbprm.checkout
 hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
-	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install \
+	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install solo-rbprm.install \
 	hpp-affordance.install ndcurves.install \
 	hpp-bezier-com-traj.install hpp-rbprm.checkout
-hpp-rbprm-robot-data.configure.dep: hpp-rbprm-robot-data.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
- hpp-corbaserver.install hpp-rbprm-robot-data.install hpp-rbprm-corba.checkout
+ hpp-corbaserver.install hpp-rbprm-corba.checkout
 hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.checkout
 hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install ndcurves.install hpp-bezier-com-traj.checkout
 ndcurves.configure.dep: ndcurves.checkout
