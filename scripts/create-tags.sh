@@ -18,7 +18,7 @@ version=$1
 # pinocchio
 pkg_main="hpp-util hpp-statistics hpp-fcl hpp-pinocchio \
 hpp-constraints hpp-corbaserver hpp-core hpp_tutorial hpp-doc \
-hpp-walkgen hpp-wholebody-step hpp-wholebody-step-corba \
+hpp-walkgen \
 hpp-manipulation hpp-manipulation-corba hpp-manipulation-urdf \
 hpp-gepetto-viewer hpp-gui hpp-plot"
 branch="stable"

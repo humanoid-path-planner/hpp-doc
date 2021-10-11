@@ -81,10 +81,6 @@ hpp-corbaserver_repository=${HPP_REPO}
 hpp-walkgen_branch=${HPP_VERSION}
 hpp-walkgen_repository=${HPP_REPO}
 
-hpp-wholebody-step_branch=${HPP_VERSION}
-hpp-wholebody-step_repository=${HPP_REPO}
-hpp-wholebody-step_extra_flags= -DRUN_TESTS=OFF
-
 hpp-doc_branch=stable
 hpp-doc_repository=${HPP_REPO}
 
@@ -245,7 +241,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 
 # For test on gepgitlab, install robot packages first
 test-ci: example-robot-data.install  hpp-environments.install \
-	hpp-baxter.install hpp-wholebody-step.install
+	hpp-baxter.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
@@ -281,8 +277,6 @@ hpp-core.configure.dep: example-robot-data.install hpp-constraints.install \
 	hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
 	hpp-environments.install hpp-constraints.checkout
-hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
-	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
@@ -303,7 +297,7 @@ hpp-hrp2.configure.dep: hrp2-14-description.install hpp-corbaserver.install \
 	hpp-hrp2.checkout
 hrp2-14-description.configure.dep: robot_capsule_urdf.install \
 	robot_model_py.install hrp2-14-description.checkout
-test-hpp.configure.dep: hpp-wholebody-step.install \
+test-hpp.configure.dep: hpp-walkgen.install \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
