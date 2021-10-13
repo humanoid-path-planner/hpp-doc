@@ -43,9 +43,13 @@ HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 ##################################
 # {{{ Dependencies
 
+eigenpy_branch=v2.6.8
+eigenpy_repository=${SOT_REPO}
+
+
 pinocchio_branch=v2.6.3
 pinocchio_repository=${SOT_REPO}
-pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
+pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
 hpp-template-corba_branch=${HPP_VERSION}
 hpp-template-corba_repository=${HPP_REPO}
@@ -58,7 +62,7 @@ hpp-util_repository=${HPP_REPO}
 
 hpp-fcl_branch=v1.7.5
 hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
+hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
 hpp-statistics_branch=${HPP_VERSION}
 hpp-statistics_repository=${HPP_REPO}
@@ -77,13 +81,6 @@ hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-corbaserver_branch=${HPP_VERSION}
 hpp-corbaserver_repository=${HPP_REPO}
-
-hpp-walkgen_branch=${HPP_VERSION}
-hpp-walkgen_repository=${HPP_REPO}
-
-hpp-wholebody-step_branch=${HPP_VERSION}
-hpp-wholebody-step_repository=${HPP_REPO}
-hpp-wholebody-step_extra_flags= -DRUN_TESTS=OFF
 
 hpp-doc_branch=stable
 hpp-doc_repository=${HPP_REPO}
@@ -245,7 +242,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 
 # For test on gepgitlab, install robot packages first
 test-ci: example-robot-data.install  hpp-environments.install \
-	hpp-baxter.install hpp-wholebody-step.install
+	hpp-baxter.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
@@ -268,9 +265,7 @@ rbprm: hpp-rbprm-corba.install hpp-gepetto-viewer.install
 # {{{ Dependencies declaration
 
 hpp-doc.configure.dep: hpp-doc.checkout
-hpp-fcl.configure.dep: hpp-fcl.checkout
-hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
-	hpp-walkgen.checkout
+hpp-fcl.configure.dep: hpp-fcl.checkout eigenpy.install
 hpp-util.configure.dep: hpp-util.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
@@ -281,8 +276,6 @@ hpp-core.configure.dep: example-robot-data.install hpp-constraints.install \
 	hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
 	hpp-environments.install hpp-constraints.checkout
-hpp-wholebody-step.configure.dep: hpp-constraints.install hpp-walkgen.install \
-	hpp-wholebody-step.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
 	hpp-manipulation.checkout
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
@@ -303,7 +296,7 @@ hpp-hrp2.configure.dep: hrp2-14-description.install hpp-corbaserver.install \
 	hpp-hrp2.checkout
 hrp2-14-description.configure.dep: robot_capsule_urdf.install \
 	robot_model_py.install hrp2-14-description.checkout
-test-hpp.configure.dep: hpp-wholebody-step.install \
+test-hpp.configure.dep: \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout

@@ -75,16 +75,6 @@ pkg "hpp-constraints" \
     "git@github.com:humanoid-path-planner/hpp-constraints" \
     "path/hpp-constraints"
 
-pkg "hpp-wholebody-step" \
-    "hpp-wholebody-step" \
-    "git@github.com:humanoid-path-planner/hpp-wholebody-step" \
-    "path/hpp-wholebody-step"
-
-pkg "hpp-wholebody-step-corba" \
-    "hpp-wholebody-step-corba" \
-    "git@github.com:humanoid-path-planner/hpp-wholebody-step-corba" \
-    "path/hpp-wholebody-step-corba"
-
 pkg "hpp-manipulation" \
     "hpp-manipulation" \
     "git@github.com:humanoid-path-planner/hpp-manipulation" \
