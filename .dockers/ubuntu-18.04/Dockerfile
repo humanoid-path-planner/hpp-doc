@@ -42,6 +42,7 @@ RUN apt-get update -qqy \
     libxml2 \
     omniorb-nameserver \
     oxygen-icon-theme \
+    psmisc \
     python-matplotlib \
     python-omniorb \
     qt4-dev-tools \
@@ -50,8 +51,6 @@ RUN apt-get update -qqy \
     robotpkg-omniorb \
     robotpkg-openscenegraph \
     robotpkg-qpoases+doc \
-    robotpkg-roboptim-core \
-    robotpkg-roboptim-trajectory \
     robotpkg-romeo-description \
     robotpkg-py36-omniorbpy \
     robotpkg-qt5-osgqt \

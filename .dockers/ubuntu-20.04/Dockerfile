@@ -40,6 +40,7 @@ RUN apt-get update -qqy \
     libxml2 \
     omniorb-nameserver \
     oxygen-icon-theme \
+    psmisc \
     pyqt5-dev \
     python-is-python3 \
     python3-pyqt5 \
@@ -50,8 +51,6 @@ RUN apt-get update -qqy \
     robotpkg-omniorb \
     robotpkg-openscenegraph \
     robotpkg-qpoases+doc \
-    robotpkg-roboptim-core \
-    robotpkg-roboptim-trajectory \
     robotpkg-romeo-description \
     robotpkg-py38-omniorbpy \
     robotpkg-py38-pythonqt \
