@@ -19,7 +19,6 @@ case $HOST_DIST in
   bionic)
     APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev libassimp-dev \
        libeigen3-dev libgraphviz-dev robotpkg-omniorb robotpkg-qpoases+doc \
-       robotpkg-roboptim-core robotpkg-roboptim-trajectory
        robotpkg-romeo-description robotpkg-py36-omniorbpy \
        ros-melodic-xacro libccd-dev ros-melodic-octomap \
        ros-melodic-resource-retriever ros-melodic-srdfdom \
