@@ -45,7 +45,7 @@ HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 
 pinocchio_branch=v2.6.3
 pinocchio_repository=${SOT_REPO}
-pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
+pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
 hpp-template-corba_branch=${HPP_VERSION}
 hpp-template-corba_repository=${HPP_REPO}
