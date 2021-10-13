@@ -79,9 +79,6 @@ hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 hpp-corbaserver_branch=${HPP_VERSION}
 hpp-corbaserver_repository=${HPP_REPO}
 
-hpp-walkgen_branch=${HPP_VERSION}
-hpp-walkgen_repository=${HPP_REPO}
-
 hpp-doc_branch=${HPP_VERSION}
 hpp-doc_repository=${HPP_REPO}
 
@@ -263,8 +260,6 @@ rbprm: hpp-rbprm-corba.install hpp-gepetto-viewer.install
 
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: hpp-fcl.checkout
-hpp-walkgen.configure.dep: hpp-util.install hpp-core.install \
-	hpp-walkgen.checkout
 hpp-util.configure.dep: hpp-util.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
@@ -295,7 +290,7 @@ hpp-hrp2.configure.dep: hrp2-14-description.install hpp-corbaserver.install \
 	hpp-hrp2.checkout
 hrp2-14-description.configure.dep: robot_capsule_urdf.install \
 	robot_model_py.install hrp2-14-description.checkout
-test-hpp.configure.dep: hpp-walkgen.install \
+test-hpp.configure.dep: \
 	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout

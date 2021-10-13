@@ -4,7 +4,6 @@ hpp-pinocchio_version= 4.1
 hpp-statistics_version= 1.1.1
 hpp-constraints_version= 4.1
 hpp-core_version= 4.1
-hpp-walkgen_version= 4.1
 hpp-hrp2_version= 0.1
 hpp-manipulation_version= 4.1
 hpp-manipulation-urdf_version= 4.1
