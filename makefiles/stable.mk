@@ -43,10 +43,6 @@ HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 ##################################
 # {{{ Dependencies
 
-eigenpy_branch=v2.6.8
-eigenpy_repository=${SOT_REPO}
-
-
 pinocchio_branch=v2.6.3
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
@@ -62,7 +58,7 @@ hpp-util_repository=${HPP_REPO}
 
 hpp-fcl_branch=v1.7.5
 hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
+hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
 hpp-statistics_branch=${HPP_VERSION}
 hpp-statistics_repository=${HPP_REPO}
@@ -265,7 +261,7 @@ rbprm: hpp-rbprm-corba.install hpp-gepetto-viewer.install
 # {{{ Dependencies declaration
 
 hpp-doc.configure.dep: hpp-doc.checkout
-hpp-fcl.configure.dep: hpp-fcl.checkout eigenpy.install
+hpp-fcl.configure.dep: hpp-fcl.checkout
 hpp-util.configure.dep: hpp-util.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
