@@ -25,9 +25,6 @@ else
   BUILD_TESTING=OFF
 endif
 
-OSG_PACKAGE=osg-dae
-#OSG_PACKAGE=OpenSceneGraph-3.4.0
-
 WGET=wget --quiet
 UNZIP=unzip -qq
 TAR=tar
@@ -190,21 +187,9 @@ ndcurves_branch=v1.1.0
 ndcurves_repository=${LOCO3D_REPO}
 ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-eigenpy_branch=v2.6.7
-eigenpy_repository=${SOT_REPO}
-
 # }}}
 ##################################
 # {{{ Packages for gepetto-gui
-
-collada-dom_branch=master
-collada-dom_repository=${HPP_REPO}
-collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
-
-osg-dae_branch=master
-osg-dae_repository=${GEPETTO_REPO}
-osg-dae_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
-OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
 gepetto-viewer_branch=v4.12.1
 gepetto-viewer_repository=${GEPETTO_REPO}
@@ -297,11 +282,6 @@ test-hpp.configure.dep: \
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
-collada-dom.configure.dep: collada-dom.checkout
-osg-dae.configure.dep: collada-dom.install \
-	osg-dae.checkout
-OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
-	OpenSceneGraph-3.4.0.checkout
 gepetto-viewer.configure.dep: gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 	gepetto-viewer-corba.checkout
@@ -330,10 +310,9 @@ hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
 	hpp-bezier-com-traj.install hpp-rbprm.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
  hpp-corbaserver.install hpp-rbprm-corba.checkout
-hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.checkout
+hpp-centroidal-dynamics.configure.dep: hpp-centroidal-dynamics.checkout
 hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install ndcurves.install hpp-bezier-com-traj.checkout
 ndcurves.configure.dep: ndcurves.checkout
-eigenpy.configure.dep: eigenpy.checkout
 hpp-tools.configure.dep: hpp-tools.checkout
 
 # }}}
@@ -440,15 +419,6 @@ update:
 	if [ -f .git/refs/heads/${$(@:.log=)_branch} ]; then \
 		echo -n "$(@:.log=): "; \
 		cat .git/refs/heads/${$(@:.log=)_branch}; \
-	fi
-
-OpenSceneGraph-3.4.0.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-		wget http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
-		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
-		rm -f OpenSceneGraph-3.4.0.zip;\
 	fi
 
 robot_model_py.configure: robot_model_py.configure.dep
