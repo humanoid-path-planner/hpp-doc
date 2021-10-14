@@ -37,7 +37,7 @@ QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
 
 # Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=v4.11.0
+HPP_VERSION=v4.12.0
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 
 ##################################
@@ -56,7 +56,7 @@ hpp-template-corba_repository=${HPP_REPO}
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=v1.7.5
+hpp-fcl_branch=v1.7.7
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -109,7 +109,7 @@ hpp-practicals_repository=${HPP_REPO}
 ##################################
 # {{{ Robot specific package + test packages
 
-example-robot-data_branch=v3.10.0
+example-robot-data_branch=v3.11.0
 example-robot-data_repository=${GEPETTO_REPO}
 example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -128,7 +128,7 @@ robot_model_py_repository=${LAAS_REPO}
 hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
 
-hpp-environments_branch=v4.11.1
+hpp-environments_branch=${HPP_VERSION}
 hpp-environments_repository=${HPP_REPO}
 
 universal_robot_branch=kinetic
@@ -137,7 +137,7 @@ universal_robot_repository=${HPP_REPO}
 hpp-universal-robot_branch=${HPP_VERSION}
 hpp-universal-robot_repository=${HPP_REPO}
 
-hpp-baxter_branch=v4.11.1
+hpp-baxter_branch=${HPP_VERSION}
 hpp-baxter_repository=${HPP_REPO}
 
 hpp_romeo_branch=${HPP_VERSION}
@@ -206,7 +206,7 @@ osg-dae_repository=${GEPETTO_REPO}
 osg-dae_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
 OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
 
-gepetto-viewer_branch=v4.12.0
+gepetto-viewer_branch=v4.12.1
 gepetto-viewer_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
