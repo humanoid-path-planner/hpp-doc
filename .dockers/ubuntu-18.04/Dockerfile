@@ -45,6 +45,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=type=cache,s
     psmisc \
     python-matplotlib \
     python-omniorb \
+    python-pathlib \
     qt4-dev-tools \
     qtbase5-dev \
     qttools5-dev \
