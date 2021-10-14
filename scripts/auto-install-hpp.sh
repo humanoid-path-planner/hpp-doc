@@ -19,7 +19,7 @@ case $HOST_DIST in
   bionic)
     APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev libassimp-dev \
        libeigen3-dev libgraphviz-dev robotpkg-omniorb robotpkg-qpoases+doc \
-       robotpkg-romeo-description robotpkg-py36-omniorbpy \
+       robotpkg-romeo-description robotpkg-py36-omniorbpy robotpkg-py36-eigenpy \
        ros-melodic-xacro libccd-dev ros-melodic-octomap \
        ros-melodic-resource-retriever ros-melodic-srdfdom \
        ros-melodic-pr2-description git libomniorb4-dev omniorb-nameserver \
@@ -33,7 +33,7 @@ case $HOST_DIST in
     ;;
   focal)
   APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev libassimp-dev \
-      libeigen3-dev libgraphviz-dev graphviz robotpkg-omniorb \
+      libeigen3-dev libgraphviz-dev graphviz robotpkg-omniorb robotpkg-py38-eigenpy \
       robotpkg-qpoases+doc robotpkg-romeo-description robotpkg-py38-omniorbpy \
       ros-noetic-xacro libccd-dev ros-noetic-octomap \
       ros-noetic-resource-retriever ros-noetic-srdfdom \

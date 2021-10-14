@@ -52,6 +52,7 @@ RUN apt-get update -qqy \
     robotpkg-openscenegraph \
     robotpkg-qpoases+doc \
     robotpkg-romeo-description \
+    robotpkg-py38-eigenpy \
     robotpkg-py38-omniorbpy \
     robotpkg-py38-pythonqt \
     robotpkg-qt5-osgqt \

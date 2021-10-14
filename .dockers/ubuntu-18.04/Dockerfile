@@ -52,6 +52,7 @@ RUN apt-get update -qqy \
     robotpkg-openscenegraph \
     robotpkg-qpoases+doc \
     robotpkg-romeo-description \
+    robotpkg-py36-eigenpy \
     robotpkg-py36-omniorbpy \
     robotpkg-qt5-osgqt \
     ros-${ROS}-octomap \
