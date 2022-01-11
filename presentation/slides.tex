@@ -53,7 +53,7 @@
   \item no a priori discretization of paths
     \begin {itemize}
     \item evaluation calls constraint projection
-    \item constrained path need to be checked for continuity (class \texttt{hpp::core::PathProjector})
+    \item constrained paths need to be checked for continuity (class \texttt{hpp::core::PathProjector})
     \end {itemize}
   \end {itemize}
 \end{frame}
@@ -68,9 +68,7 @@
   Modular: collection of packages
   \pause
   \begin{itemize}
-    \item package dependencies tracked by \texttt{pkg-config},
-      \pause
-    \item installation managed by \texttt{cmake} and a \texttt{git}
+    \item installation and dependencies managed by \texttt{cmake} and a \texttt{git}
       submodule: {\tiny\texttt{git://github.com/jrl-umi3218/jrl-cmakemodules.git}},
       \pause
     \item programmed in \texttt{C++},
@@ -105,11 +103,11 @@ Packages implementing the core infrastructure
   \item \texttt{pinocchio}: implementation of kinematic chain with geometry,
     \begin{itemize}
       \item tree of joints (Rotation, Translation, SE3: vector + unit-quaternions),
-      \item moving fcl::CollisionObjects,
+      \item moving hpp::fcl::CollisionObjects,
       \item forward kinematics,
       \item joint Jacobians,
       \item center of mass and Jacobian,
-      \item URDF parser.
+      \item URDF, SRDF parser.
     \end{itemize}
   \end{itemize}
   \pause
@@ -292,7 +290,7 @@ Packages implementing the core infrastructure
     \end{itemize}
   }
   \centerline {
-    Result: a configuration that satisfies the constraints.
+    Result: a configuration that satisfies the constraints (up to given threshold).
   }
 \end {frame}
 
@@ -304,10 +302,11 @@ Packages implementing the core infrastructure
   \begin{itemize}
   \item \texttt{hpp-core}: definition of basic classes,
     \begin{itemize}
-      \item path planning problems,
+      \item path planning problem,
       \item path planning solvers (RRT),
-      \item constraints (locked dofs, numerical constraints)
       \item path optimizers (random shortcut),
+      \item path projector (random shortcut),
+      \item path validation (discretized and continuous),
       \item steering methods (straight interpolation)
     \end{itemize}
   \end{itemize}
@@ -317,13 +316,11 @@ Packages implementing the core infrastructure
 
 \begin {frame} {Extensions}
 
-Packages implementing other algorithms
+Packages implementing other algorithms via plugins in \texttt{hpp-corbaserver}
 \begin{itemize}
-  \item \texttt{hpp-wholebody-step}: whole-body and walk planning using sliding path approximation,
-    \pause
   \item \texttt{hpp-manipulation}: manipulation planning (see next section),
     \pause
-  \item any extension for a given application.
+  \item any extension for your application.
 \end{itemize}
 \end {frame}
 
@@ -535,7 +532,6 @@ Packages implementing other algorithms
 
 \begin {frame} {Keep informed}
 \begin{itemize}
-\item Mailing list \texttt {hpp@laas.fr} to discuss issues related to the software,
 \item github notifications for issues related to individual packages
 \centerline {
   \includegraphics [width=\linewidth] {figures/github-watch.png}
