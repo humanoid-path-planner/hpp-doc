@@ -1,0 +1,16 @@
+version: "3"
+services:
+  hpp-demo:
+    init: true
+    image: hpp-demo
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM="1"
+    network_mode: "host"
+    privileged: true
+    stop_signal: SIGINT
+    security_opt:
+      - seccomp:unconfined
+    command: [ "/hpp_entrypoint.sh", "hppcorbaserver" ]
