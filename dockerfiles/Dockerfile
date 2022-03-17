@@ -13,6 +13,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt \
     robotpkg-py38-qt5-hpp-gepetto-viewer \
     robotpkg-py38-qt5-hpp-gui \
     robotpkg-py38-qt5-hpp-plot \
+    robotpkg-py38-hpp-tutorials \
     ros-noetic-pr2-description
 
 RUN echo "[pyplugins]\nhpp.gui=true" >> /opt/openrobots/etc/gepetto-gui/settings.conf \
