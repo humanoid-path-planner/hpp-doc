@@ -172,7 +172,7 @@ hpp-rbprm_branch=${HPP_VERSION}
 hpp-rbprm_repository=${HPP_REPO}
 hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-rbprm-corba_branch=${HPP_VERSION}
+hpp-rbprm-corba_branch=release/4.13.0
 hpp-rbprm-corba_repository=${HPP_REPO}
 hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
