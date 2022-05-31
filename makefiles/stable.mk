@@ -34,13 +34,13 @@ QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
 
 # Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=v4.12.0
+HPP_VERSION=v4.13.0
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.6.3
+pinocchio_branch=v2.6.7
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
@@ -53,7 +53,7 @@ hpp-template-corba_repository=${HPP_REPO}
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=v1.7.7
+hpp-fcl_branch=v1.8.1
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -106,7 +106,7 @@ hpp-practicals_repository=${HPP_REPO}
 ##################################
 # {{{ Robot specific package + test packages
 
-example-robot-data_branch=v3.11.0
+example-robot-data_branch=v4.0.1
 example-robot-data_repository=${GEPETTO_REPO}
 example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -183,7 +183,7 @@ hpp-bezier-com-traj_branch=${HPP_VERSION}
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-ndcurves_branch=v1.1.0
+ndcurves_branch=v1.1.3
 ndcurves_repository=${LOCO3D_REPO}
 ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
@@ -191,7 +191,7 @@ ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 ##################################
 # {{{ Packages for gepetto-gui
 
-gepetto-viewer_branch=v4.12.1
+gepetto-viewer_branch=${HPP_VERSION}
 gepetto-viewer_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
@@ -199,10 +199,10 @@ else
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
 endif
 
-gepetto-viewer-corba_branch=v5.6.0
+gepetto-viewer-corba_branch=v5.7.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 
-qgv_branch=v1.3.2
+qgv_branch=v1.3.3
 qgv_repository=${HPP_REPO}
 ifeq (${QT_VERSION}, 5)
 	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
