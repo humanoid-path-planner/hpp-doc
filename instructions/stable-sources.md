@@ -1,8 +1,8 @@
-## Source installation on ubuntu-18.04 64 bit with ros-melodic
+## Source installation on ubuntu-20.04 64 bit with ros-noetic
 
-To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the following steps:
+To install all the packages on ubuntu 20.04 LTS 64 bit, you should do the following steps:
 
-  1. install ROS-melodic: follow steps 1.1 to 1.3 of [the ROS installation website.](http://wiki.ros.org/melodic/Installation/Ubuntu).
+  1. install ROS-noetic: follow steps 1.1 to 1.3 of [the ROS installation website.](http://wiki.ros.org/noetic/Installation/Ubuntu).
 
   2. install robotpkg: follow [the robotpkg installation website](http://robotpkg.openrobots.org/debian.html).
 
@@ -17,26 +17,27 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
       libassimp-dev \
       libeigen3-dev \
       libgraphviz-dev \
+      graphviz \
       robotpkg-omniorb \
       robotpkg-qpoases+doc \
       robotpkg-romeo-description \
-      robotpkg-py36-omniorbpy \
-      ros-melodic-xacro \
+      robotpkg-py38-omniorbpy \
+      ros-noetic-xacro \
       libccd-dev \
-      ros-melodic-octomap \
-      ros-melodic-resource-retriever \
-      ros-melodic-srdfdom \
-      ros-melodic-pr2-description \
+      ros-noetic-octomap \
+      ros-noetic-resource-retriever \
+      ros-noetic-srdfdom \
+      ros-noetic-pr2-description \
       git \
       libltdl-dev \
       python-omniorb \
-      python-matplotlib \
+      python3-matplotlib \
+      qtbase5-private-dev \
+      qtdeclarative5-dev \
+      qtmultimedia5-dev \
+      libqt5svg5-dev \
       libxml2 \
       libtinyxml2-dev \
-      qt4-dev-tools \
-      libqt4-opengl-dev \
-      libqtgui4 \
-      libqtwebkit-dev \
       oxygen-icon-theme \
       robotpkg-openscenegraph \
       libpcre3-dev \
@@ -56,7 +57,7 @@ To install all the packages on ubuntu 18.04 LTS 64 bit, you should do the follow
   5. Copy Config and Makefile
 
     ```bash
-    wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/stable/doc/config/ubuntu-18.04-melodic.sh
+    wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/stable/doc/config/ubuntu-20.04-noetic.sh
     wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/stable/makefiles/stable.mk
     ```
 

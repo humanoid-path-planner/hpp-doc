@@ -2,10 +2,10 @@ FROM ubuntu:18.04
 
 ENV DEVEL_HPP_DIR=/workspace UBUNTU=bionic ROS=melodic
 
-RUN apt-get update -y && apt-get install -y \
-   curl \
-   gnupg2 \
-   && rm -rf /var/lib/apt/lists/*
+RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=type=cache,sharing=locked,target=/var/lib/apt \
+    apt-get update -qqy && DEBIAN_FRONTEND=noninteractive apt-get install -qqy \
+    curl \
+    gnupg2
 
 ADD repos.key /
 RUN echo "deb http://packages.ros.org/ros/ubuntu ${UBUNTU} main" > /etc/apt/sources.list.d/ros-latest.list \
@@ -15,8 +15,8 @@ RUN echo "deb http://packages.ros.org/ros/ubuntu ${UBUNTU} main" > /etc/apt/sour
  >> /etc/apt/sources.list.d/robotpkg.list \
  && apt-key add /repos.key
 
-RUN apt-get update -qqy \
- && DEBIAN_FRONTEND=noninteractive apt-get install -qqy \
+RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=type=cache,sharing=locked,target=/var/lib/apt \
+    apt-get update -qqy && DEBIAN_FRONTEND=noninteractive apt-get install -qqy \
     cmake \
     doxygen \
     g++ \
@@ -45,6 +45,7 @@ RUN apt-get update -qqy \
     psmisc \
     python-matplotlib \
     python-omniorb \
+    python-pathlib \
     qt4-dev-tools \
     qtbase5-dev \
     qttools5-dev \
@@ -52,6 +53,7 @@ RUN apt-get update -qqy \
     robotpkg-openscenegraph \
     robotpkg-qpoases+doc \
     robotpkg-romeo-description \
+    robotpkg-py36-eigenpy \
     robotpkg-py36-omniorbpy \
     robotpkg-qt5-osgqt \
     ros-${ROS}-octomap \
@@ -62,7 +64,6 @@ RUN apt-get update -qqy \
     sudo \
     wget \
  && apt-get remove -y texlive-latex-base texlive-binaries ghostscript \
- && apt-get autoremove -y \
- && rm -rf /var/lib/apt/lists/*
+ && apt-get autoremove -y
 
 COPY auto-install-hpp.sh /

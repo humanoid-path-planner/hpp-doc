@@ -25,9 +25,6 @@ else
   BUILD_TESTING=OFF
 endif
 
-OSG_PACKAGE=osg-dae
-#OSG_PACKAGE=OpenSceneGraph-3.4.0
-
 WGET=wget --quiet
 UNZIP=unzip -qq
 TAR=tar
@@ -37,17 +34,13 @@ QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
 
 # Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=v4.11.0
+HPP_VERSION=v4.13.0
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
 
 ##################################
 # {{{ Dependencies
 
-eigenpy_branch=v2.6.8
-eigenpy_repository=${SOT_REPO}
-
-
-pinocchio_branch=v2.6.3
+pinocchio_branch=v2.6.7
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
@@ -60,7 +53,7 @@ hpp-template-corba_repository=${HPP_REPO}
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=v1.7.5
+hpp-fcl_branch=v1.8.1
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release
 
@@ -113,7 +106,7 @@ hpp-practicals_repository=${HPP_REPO}
 ##################################
 # {{{ Robot specific package + test packages
 
-example-robot-data_branch=v3.10.0
+example-robot-data_branch=v4.0.1
 example-robot-data_repository=${GEPETTO_REPO}
 example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -132,7 +125,7 @@ robot_model_py_repository=${LAAS_REPO}
 hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
 
-hpp-environments_branch=v4.11.1
+hpp-environments_branch=${HPP_VERSION}
 hpp-environments_repository=${HPP_REPO}
 
 universal_robot_branch=kinetic
@@ -141,7 +134,7 @@ universal_robot_repository=${HPP_REPO}
 hpp-universal-robot_branch=${HPP_VERSION}
 hpp-universal-robot_repository=${HPP_REPO}
 
-hpp-baxter_branch=v4.11.1
+hpp-baxter_branch=${HPP_VERSION}
 hpp-baxter_repository=${HPP_REPO}
 
 hpp_romeo_branch=${HPP_VERSION}
@@ -179,7 +172,7 @@ hpp-rbprm_branch=${HPP_VERSION}
 hpp-rbprm_repository=${HPP_REPO}
 hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-rbprm-corba_branch=${HPP_VERSION}
+hpp-rbprm-corba_branch=release/4.13.0
 hpp-rbprm-corba_repository=${HPP_REPO}
 hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
@@ -190,27 +183,15 @@ hpp-bezier-com-traj_branch=${HPP_VERSION}
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-ndcurves_branch=v1.1.0
+ndcurves_branch=v1.1.3
 ndcurves_repository=${LOCO3D_REPO}
 ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
-
-eigenpy_branch=v2.6.7
-eigenpy_repository=${SOT_REPO}
 
 # }}}
 ##################################
 # {{{ Packages for gepetto-gui
 
-collada-dom_branch=master
-collada-dom_repository=${HPP_REPO}
-collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
-
-osg-dae_branch=master
-osg-dae_repository=${GEPETTO_REPO}
-osg-dae_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
-OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
-
-gepetto-viewer_branch=v4.12.0
+gepetto-viewer_branch=${HPP_VERSION}
 gepetto-viewer_repository=${GEPETTO_REPO}
 ifeq (${QT_VERSION}, 5)
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
@@ -218,10 +199,10 @@ else
 	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
 endif
 
-gepetto-viewer-corba_branch=v5.6.0
+gepetto-viewer-corba_branch=v5.7.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 
-qgv_branch=v1.3.2
+qgv_branch=v1.3.3
 qgv_repository=${HPP_REPO}
 ifeq (${QT_VERSION}, 5)
 	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
@@ -265,7 +246,7 @@ rbprm: hpp-rbprm-corba.install hpp-gepetto-viewer.install
 # {{{ Dependencies declaration
 
 hpp-doc.configure.dep: hpp-doc.checkout
-hpp-fcl.configure.dep: hpp-fcl.checkout eigenpy.install
+hpp-fcl.configure.dep: hpp-fcl.checkout
 hpp-util.configure.dep: hpp-util.checkout
 hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
 pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
@@ -301,11 +282,6 @@ test-hpp.configure.dep: \
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
-collada-dom.configure.dep: collada-dom.checkout
-osg-dae.configure.dep: collada-dom.install \
-	osg-dae.checkout
-OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
-	OpenSceneGraph-3.4.0.checkout
 gepetto-viewer.configure.dep: gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 	gepetto-viewer-corba.checkout
@@ -334,10 +310,9 @@ hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
 	hpp-bezier-com-traj.install hpp-rbprm.checkout
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
  hpp-corbaserver.install hpp-rbprm-corba.checkout
-hpp-centroidal-dynamics.configure.dep: eigenpy.install hpp-centroidal-dynamics.checkout
+hpp-centroidal-dynamics.configure.dep: hpp-centroidal-dynamics.checkout
 hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install ndcurves.install hpp-bezier-com-traj.checkout
 ndcurves.configure.dep: ndcurves.checkout
-eigenpy.configure.dep: eigenpy.checkout
 hpp-tools.configure.dep: hpp-tools.checkout
 
 # }}}
@@ -444,15 +419,6 @@ update:
 	if [ -f .git/refs/heads/${$(@:.log=)_branch} ]; then \
 		echo -n "$(@:.log=): "; \
 		cat .git/refs/heads/${$(@:.log=)_branch}; \
-	fi
-
-OpenSceneGraph-3.4.0.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-		wget http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
-		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
-		rm -f OpenSceneGraph-3.4.0.zip;\
 	fi
 
 robot_model_py.configure: robot_model_py.configure.dep
