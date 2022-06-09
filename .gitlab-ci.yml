@@ -38,7 +38,7 @@ variables:
       - $DEVEL_HPP_DIR/test.sh hpp-manipulation-urdf       || status=1
       - $DEVEL_HPP_DIR/test.sh hpp-manipulation-corba      || status=1
       - $DEVEL_HPP_DIR/test.sh hpp-rbprm                   || status=1
-      #- $DEVEL_HPP_DIR/test.sh hpp-rbprm-corba             || status=1
+      - $DEVEL_HPP_DIR/test.sh hpp-rbprm-corba             || status=1
       - set -e
       - exit $status
     allow_failure: true
