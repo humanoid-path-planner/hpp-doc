@@ -35,12 +35,12 @@ INSTALL_DOCUMENTATION=ON
 
 # Either a version tag (e.g. v4.3.0), stable or devel
 HPP_VERSION=devel
-HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
+HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
 
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.6.3
+pinocchio_branch=v2.6.7
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
@@ -100,18 +100,21 @@ hpp-plot_repository=${HPP_REPO}
 hpp-gui_branch=${HPP_VERSION}
 hpp-gui_repository=${HPP_REPO}
 
+hpp-practicals_branch=${HPP_VERSION}
+hpp-practicals_repository=${HPP_REPO}
+
 # }}}
 ##################################
 # {{{ Robot specific package + test packages
 
-example-robot-data_branch=devel
+example-robot-data_branch=${HPP_VERSION}
 example-robot-data_repository=${GEPETTO_REPO}
 example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
 
 hrp2-14-description_branch=master
 hrp2-14-description_repository=${TRAC_REPO}
 
-hpp-hrp2_branch=devel
+hpp-hrp2_branch=${HPP_VERSION}
 hpp-hrp2_repository=${HPP_REPO}
 
 robot_capsule_urdf_branch=groovy

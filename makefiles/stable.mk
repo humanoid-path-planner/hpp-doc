@@ -35,7 +35,7 @@ INSTALL_DOCUMENTATION=ON
 
 # Either a version tag (e.g. v4.3.0), stable or devel
 HPP_VERSION=v4.13.0
-HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}$
+HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
 
 ##################################
 # {{{ Dependencies
@@ -50,6 +50,7 @@ hpp-template-corba_repository=${HPP_REPO}
 # }}}
 ##################################
 # {{{ Packages supporting HPP_VERSION
+#
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
@@ -210,7 +211,7 @@ else
 	qgv_extra_flags=-DBINDINGS_QT5=OFF -DBINDINGS_QT4=ON
 endif
 
-hpp-tools_branch=v4.9.0
+hpp-tools_branch=master
 hpp-tools_repository=${HPP_REPO}
 hpp-tools_extra_flags=
 
