@@ -8,7 +8,6 @@ LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 GEPETTO_REPO=https://github.com/Gepetto
-TRAC_REPO=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
 LOCO3D_REPO=https://github.com/loco-3d
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
@@ -110,12 +109,6 @@ hpp-practicals_repository=${HPP_REPO}
 example-robot-data_branch=${HPP_VERSION}
 example-robot-data_repository=${GEPETTO_REPO}
 example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
-
-hrp2-14-description_branch=master
-hrp2-14-description_repository=${TRAC_REPO}
-
-hpp-hrp2_branch=${HPP_VERSION}
-hpp-hrp2_repository=${HPP_REPO}
 
 robot_capsule_urdf_branch=groovy
 robot_capsule_urdf_repository=${LAAS_REPO}
@@ -230,8 +223,7 @@ test-ci: example-robot-data.install  hpp-environments.install \
 	${MAKE} hpp-doc.install
 
 # For benchmark, install robot packages first
-benchmark: example-robot-data.install \
-	hpp-environments.install hrp2-14-description.install
+benchmark: example-robot-data.install hpp-environments.install
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
 	${MAKE} hpp-baxter.install hpp_romeo.install \
 	hpp-universal-robot.install hpp-plot.install hpp-gui.install; \
@@ -274,12 +266,6 @@ qgv.configure.dep: qgv.checkout
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
-hpp-hrp2.configure.dep: hrp2-14-description.install hpp-corbaserver.install \
-	hpp-hrp2.checkout
-hrp2-14-description.configure.dep: robot_capsule_urdf.install \
-	robot_model_py.install hrp2-14-description.checkout
-test-hpp.configure.dep: \
-	hpp-gepetto-viewer.install hpp-hrp2.install test-hpp.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
 hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
