@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  hpp-demo:
+    init: true
+    image: hpp-demo
+    build: .
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM="1"
+    network_mode: "host"
+    stop_signal: SIGINT
+    command: hppcorbaserver
