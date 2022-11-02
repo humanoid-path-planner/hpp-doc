@@ -39,7 +39,7 @@ HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.6.7
+pinocchio_branch=v2.6.11
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
