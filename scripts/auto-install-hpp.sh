@@ -40,7 +40,8 @@ case $HOST_DIST in
       ros-noetic-pr2-description git libltdl-dev \
       python3-matplotlib qtbase5-private-dev qtdeclarative5-dev \
       qtmultimedia5-dev libqt5svg5-dev libxml2 libtinyxml2-dev robotpkg-qt5-osgqt \
-      oxygen-icon-theme robotpkg-openscenegraph libpcre3-dev wget libcdd-dev"
+      oxygen-icon-theme robotpkg-openscenegraph libpcre3-dev wget libcdd-dev \
+      texlive-latex-extra"
     APT_BUILD_DEP=""
     CONFIG_FILE="ubuntu-20.04-noetic.sh"
     ;;
