@@ -39,7 +39,7 @@ HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.6.11
+pinocchio_branch=v2.6.14
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
 
@@ -53,7 +53,7 @@ hpp-template-corba_repository=${HPP_REPO}
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
 
-hpp-fcl_branch=v1.8.1
+hpp-fcl_branch=v2.2.0
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
 
@@ -218,7 +218,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 # For test on gepgitlab, install robot packages first
 test-ci: example-robot-data.install  hpp-environments.install \
 	hpp-baxter.install
-	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
+	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-affordance-corba.install hpp-rbprm.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
 
