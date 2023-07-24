@@ -3,7 +3,7 @@
   <!-- Navigation index tabs for HTML output -->
   <navindex>
     <tab type="mainpage" visible="yes" title=""/>
-    <tab type="user" url="@HPPTUTORIAL_URL@" visible="yes" title="Tutorials"/>
+    <tab type="user" url="@hpp_tutorial_URL@" visible="yes" title="Tutorials"/>
     <tab type="pages" visible="yes" title="" intro=""/>
     <tab type="modules" visible="yes" title="" intro=""/>
     <tab type="namespaces" visible="no" title="">
