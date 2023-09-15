@@ -34,6 +34,7 @@ SET(SETUP_DOC_PKG)
 
 ADD_HPP_PKG(hpp-fcl)
 ADD_HPP_PKG(hpp-util)
+ADD_HPP_PKG(hpp-statistics)
 ADD_HPP_PKG(pinocchio)
 ADD_HPP_PKG(hpp-pinocchio)
 ADD_HPP_PKG(hpp-core)

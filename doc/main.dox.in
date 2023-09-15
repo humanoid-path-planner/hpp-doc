@@ -60,8 +60,9 @@ how to use this project.
 \section hpp_doc_algorithms_technical_tools Technical tools
 
 - @hpp-util_LINK@: technical tools for the HPP project (logging, benchmark, quality assurance tools),
+- @hpp-statistics_LINK@: various tools to make statistics on motion planning algorithms,
 
-\section hpp_doc_algorithms_motion_planning Motion planning for humanoid systems
+\section hpp_doc_algorithms_motion_planning Motion planning
 
 \par Kinematic chain with geometry
 - @hpp-fcl_LINK@: Modified version of Flexible collision library, for collision detection and distance computation,
@@ -76,7 +77,7 @@ how to use this project.
 
 \par Manipulation Planning
 - @hpp-manipulation_LINK@: Manipulation planning
-- @hpp-manipulationurdf_LINK@: Manipulation planning
+- @hpp-manipulation-urdf_LINK@: SRDF parser for Manipulation planning (handles, grippers, contact surfaces)
 
 **/
 
