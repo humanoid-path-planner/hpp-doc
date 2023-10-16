@@ -7,9 +7,11 @@ To install all the packages on any linux or osx distribution
   2. Create an environment with your choice of python version (from `3.8` to `3.11`).
 
     ```bash
-    conda create -n hpp -c conda-forge python=3.8 hpp-gepetto-viewer -y
+    conda create -n hpp -c conda-forge python=3.8 hpp-doc -y
     ```
 
 It will install all hpp packages and gepetto viewer with python bindings.
 
 Remember to use `conda activate hpp` in every terminal where you run `hppcorbaserver`, `hpp-manipulation-server`, `gepetto-gui` or any python script that use hpp.
+
+# TODO: access Doc online
