@@ -1,6 +1,6 @@
-## Source installation on every linux or osx
+## Source installation on every Linux or Osx
 
-To install all the packages on any linux or osx distribution
+To install all the packages on any Linux or Osx distribution
 
   1. Install miniconda [the miniconda installation website.](https://docs.conda.io/en/latest/miniconda.html).
 
@@ -12,6 +12,6 @@ To install all the packages on any linux or osx distribution
 
 It will install all hpp packages and gepetto viewer with python bindings.
 
-Remember to use `conda activate hpp` in every terminal where you run `hppcorbaserver`, `hpp-manipulation-server`, `gepetto-gui` or any python script that use hpp.
+Remember to use `conda activate hpp` in every terminal where you run `hppcorbaserver`, `hpp-manipulation-server`, `gepetto-gui` or any Python script that uses hpp.
 
-# TODO: access Doc online
+To access the documentation, open:  `firefox $CONDA_PREFIX/share/doc/hpp-doc/index.html` in a web browser and you will have access to the documentation of most packages.
