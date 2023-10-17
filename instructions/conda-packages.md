@@ -5,7 +5,7 @@ To install all the packages on any Linux or Osx distribution
 
   1. Install miniconda [the miniconda installation website.](https://docs.conda.io/en/latest/miniconda.html).
 
-  3. Create an environment with your choice of python version (from `3.8` to `3.11`).
+  2. Create an environment with your choice of python version (from `3.8` to `3.11`).
 
 ```bash
 conda create -n hpp -c conda-forge python=3.11 hpp-doc -y
