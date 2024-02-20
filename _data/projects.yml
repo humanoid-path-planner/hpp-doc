@@ -1,3 +1,10 @@
+- name: construction-set
+  id: 3
+  title: Manipulation planning for assembling objects
+  description: "Complex assembly problems can be defined and solved."
+  video:
+    youtube_id: ZVvePCl6qP0
+
 - name: fiad-showcase
   id: 2
   title: Factory In A Day - Full sequence
@@ -5,26 +12,19 @@
   video:
     url: http://projects.laas.fr/gepetto/uploads/Members/fiad-full-sequence.mp4
 
-- name: manipulation_baxter
-  id: 3
-  title: Manipulation planning
-  description: "A sequence of tasks is automatically discovered during the planning in order to swap the position of the boxes."
-  video:
-    url: https://peertube.laas.fr/download/videos/ae261aee-10f4-4ee3-9e40-45842957b7bc-540.mp4
-
 - name: manipulation_romeo_placard
   id: 10
   title: Manipulation planning
   description: "Romeo rotates a placard. Each hand can grasp the placard with one degree of freedom in rotation, thus the space of valid grasps for each hand is continuous. This case illustrates the <em>crossing foliation issue</em>."
   video:
-    url: https://peertube.laas.fr/download/videos/8854092f-d4ac-4d7b-b69a-345c24e1eadd-1080.mp4
+    url: https://peertube.laas.fr/videos/embed/8854092f-d4ac-4d7b-b69a-345c24e1eadd
 
 - name: multicontact_hrp2_standup
   id: 4
   title: Multi-contact locomotion - Stand up
   description: "A sequence of contact configurations for a multiped robot is computed. Position constraint and static equilibrium constraint are used to create and maintain contacts along the sequence."
   video:
-    url: https://peertube.laas.fr/download/videos/4baf0998-611e-45e6-a5ad-5b74a112a500-1080.mp4
+    url: https://peertube.laas.fr/videos/embed/4baf0998-611e-45e6-a5ad-5b74a112a500
 
 #- name: multicontact_hrp2_stairs
 #id: 5
@@ -40,14 +40,14 @@
   title: Constraint based path optimization
   description: "Path optimization algorithm based on collision constraints, automatically built between bodies close to collision."
   video:
-    url: https://peertube.laas.fr/download/videos/a0c0715b-d9c5-445f-acae-513fe61859a5-1080.mp4
+    url: https://peertube.laas.fr/videos/embed/a0c0715b-d9c5-445f-acae-513fe61859a5
 
 - name: rod_planning
   id: 7
   title: Elastic rod planning.
   description: "Integration of external software: QSERL and XDE are used to implement a dedicated steering method for elastic rod planning.<br/><em>Engine model courtesy of Siemens-KineoCAM.</em>"
   video:
-    url: https://peertube.laas.fr/download/videos/742a40eb-de0b-46c1-b4a1-461196da65e9-1080.mp4
+    url: https://peertube.laas.fr/videos/embed/742a40eb-de0b-46c1-b4a1-461196da65e9
 
 - name: manipulation_pr2_drawer
   id: 8
@@ -61,7 +61,7 @@
   title: Locomotion planning expressed as a manipulation planning problem
   description: "The locomotion planning problem is expressed as a Manipulation planning problem."
   video:
-    url: https://peertube.laas.fr/download/videos/d6022f88-c8c0-40e6-9bde-036cb3f7bef4-960.mp4
+    url: https://peertube.laas.fr/videos/embed/d6022f88-c8c0-40e6-9bde-036cb3f7bef4
 
 - name: hpp-showcase
   id: 0
@@ -75,7 +75,7 @@
   title: HPP manipulation stack demonstration
   description: "Differents features that can be achieved using the manipulation stack of the Humanoid Path Planner"
   video:
-    url: https://peertube.laas.fr/download/videos/fd152247-51d3-4605-973a-8208fed090fc-1080.mp4
+    url: https://peertube.laas.fr/videos/embed/fd152247-51d3-4605-973a-8208fed090fc
 
 #### Examples of format to use. Remember : 1 image or 1 video. not both
 # - name: pg-ellipses
