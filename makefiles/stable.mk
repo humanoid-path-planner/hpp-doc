@@ -9,6 +9,7 @@ HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
 GEPETTO_REPO=https://github.com/Gepetto
 LOCO3D_REPO=https://github.com/loco-3d
+SIMPLE_ROBOTICS_REPO=https://github.com/Simple-Robotics
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
 ifndef INSTALL_HPP_DIR
@@ -31,34 +32,42 @@ GIT_QUIET=--quiet
 # Qt version should be either 4 or 5
 QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
-
-# Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=v4.13.0
-HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
+PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
 
 ##################################
 # {{{ Dependencies
 
-pinocchio_branch=v2.6.7
-pinocchio_repository=${SOT_REPO}
-pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON
+hpp-fcl_branch=v2.4.4
+hpp-fcl_repository=${HPP_REPO}
+hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-hpp-template-corba_branch=${HPP_VERSION}
-hpp-template-corba_repository=${HPP_REPO}
+eigenpy_branch=v3.4.0
+eigenpy_repository=${SOT_REPO}
+eigenpy_extra_flags=
+
+pinocchio_branch=v2.7.0
+pinocchio_repository=${SOT_REPO}
+pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF ${PYTHON_FLAGS}
 
 # }}}
 ##################################
 # {{{ Packages supporting HPP_VERSION
-#
+
+# Either a version tag (e.g. v4.3.0), stable or devel
+HPP_VERSION=v5.0.0
+HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
+
+hpp-template-corba_branch=${HPP_VERSION}
+hpp-template-corba_repository=${HPP_REPO}
+hpp-template-corba_extra_flags= ${PYTHON_FLAGS}
+
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
-
-hpp-fcl_branch=v1.8.1
-hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_INTERFACE=OFF
+hpp-util_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-statistics_branch=${HPP_VERSION}
 hpp-statistics_repository=${HPP_REPO}
+hpp-statistics_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-pinocchio_branch=${HPP_VERSION}
 hpp-pinocchio_repository=${HPP_REPO}
@@ -74,62 +83,68 @@ hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-corbaserver_branch=${HPP_VERSION}
 hpp-corbaserver_repository=${HPP_REPO}
+hpp-corbaserver_extra_flags= ${PYTHON_FLAGS}
 
-hpp-doc_branch=stable
+hpp-python_branch=master
+hpp-python_repository=${HPP_REPO}
+hpp-python_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
+
+hpp-doc_branch=master
 hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=${HPP_VERSION}
 hpp-manipulation_repository=${HPP_REPO}
+hpp-manipulation_extra_flags=
 
 hpp-manipulation-urdf_branch=${HPP_VERSION}
 hpp-manipulation-urdf_repository=${HPP_REPO}
 
 hpp-manipulation-corba_branch=${HPP_VERSION}
 hpp-manipulation-corba_repository=${HPP_REPO}
+hpp-manipulation-corba_extra_flags= ${PYTHON_FLAGS}
 
 hpp_tutorial_branch=${HPP_VERSION}
 hpp_tutorial_repository=${HPP_REPO}
-
-hpp-gepetto-viewer_branch=${HPP_VERSION}
-hpp-gepetto-viewer_repository=${HPP_REPO}
-
-hpp-plot_branch=${HPP_VERSION}
-hpp-plot_repository=${HPP_REPO}
-
-hpp-gui_branch=${HPP_VERSION}
-hpp-gui_repository=${HPP_REPO}
+hpp_tutorial_extra_flags= ${PYTHON_FLAGS}
 
 hpp-practicals_branch=${HPP_VERSION}
 hpp-practicals_repository=${HPP_REPO}
+hpp-practicals_extra_flags= ${PYTHON_FLAGS}
+
+hpp-gepetto-viewer_branch=${HPP_VERSION}
+hpp-gepetto-viewer_repository=${HPP_REPO}
+hpp-gepetto-viewer_extra_flags= ${PYTHON_FLAGS} -DINSTALL_DOCUMENTATION=OFF
+
+hpp-plot_branch=${HPP_VERSION}
+hpp-plot_repository=${HPP_REPO}
+hpp-plot_extra_flags=  -DINSTALL_DOCUMENTATION=OFF
+
+hpp-gui_branch=${HPP_VERSION}
+hpp-gui_repository=${HPP_REPO}
+hpp-gui_extra_flags= ${PYTHON_FLAGS} -DINSTALL_DOCUMENTATION=OFF
 
 # }}}
 ##################################
 # {{{ Robot specific package + test packages
 
-example-robot-data_branch=v4.0.1
+proxsuite_branch =
+proxsuite_repository=${SIMPLE_ROBOTICS_REPO}
+proxsuite_extra_flags= -DBUILD_WITH_VECTORIZATION_SUPPORT=OFF -DBUILD_TESTING=OFF
+
+example-robot-data_branch=v4.1.0
 example-robot-data_repository=${GEPETTO_REPO}
-example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=OFF
-
-robot_capsule_urdf_branch=groovy
-robot_capsule_urdf_repository=${LAAS_REPO}
-
-robot_model_py_branch=groovy
-robot_model_py_repository=${LAAS_REPO}
+example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
 
 hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
 
 hpp-environments_branch=${HPP_VERSION}
 hpp-environments_repository=${HPP_REPO}
-
-universal_robot_branch=kinetic
-universal_robot_repository=${HPP_REPO}
-
-hpp-universal-robot_branch=${HPP_VERSION}
-hpp-universal-robot_repository=${HPP_REPO}
+hpp-environments_extra_flags= ${PYTHON_FLAGS}
 
 hpp-baxter_branch=${HPP_VERSION}
 hpp-baxter_repository=${HPP_REPO}
+hpp-baxter_extra_flags= ${PYTHON_FLAGS}
 
 hpp_romeo_branch=${HPP_VERSION}
 hpp_romeo_repository=${HPP_REPO}
@@ -145,7 +160,7 @@ hpp-affordance_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-affordance-corba_branch=${HPP_VERSION}
 hpp-affordance-corba_repository=${HPP_REPO}
-hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
+hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
 
 anymal-rbprm_branch=${HPP_VERSION}
 anymal-rbprm_repository=${HPP_REPO}
@@ -161,25 +176,26 @@ solo-rbprm_repository=${HPP_REPO}
 
 talos-rbprm_branch=${HPP_VERSION}
 talos-rbprm_repository=${HPP_REPO}
+talos-rbprm_extra_flags= ${PYTHON_FLAGS}
 
 hpp-rbprm_branch=${HPP_VERSION}
 hpp-rbprm_repository=${HPP_REPO}
 hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-rbprm-corba_branch=release/4.13.0
+hpp-rbprm-corba_branch=${HPP_VERSION}
 hpp-rbprm-corba_repository=${HPP_REPO}
-hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}
+hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}  ${PYTHON_FLAGS}
 
 hpp-centroidal-dynamics_branch=${HPP_VERSION}
 hpp-centroidal-dynamics_repository=${HPP_REPO}
 
 hpp-bezier-com-traj_branch=${HPP_VERSION}
 hpp-bezier-com-traj_repository=${HPP_REPO}
-hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
+hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON  ${PYTHON_FLAGS}
 
-ndcurves_branch=v1.1.3
+ndcurves_branch=${HPP_VERSION}
 ndcurves_repository=${LOCO3D_REPO}
-ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
+ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
 
 # }}}
 ##################################
@@ -187,16 +203,13 @@ ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
 gepetto-viewer_branch=${HPP_VERSION}
 gepetto-viewer_repository=${GEPETTO_REPO}
-ifeq (${QT_VERSION}, 5)
-	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF
-else
-	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
-endif
+gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF -DINSTALL_DOCUMENTATION=OFF
 
-gepetto-viewer-corba_branch=v5.7.0
+gepetto-viewer-corba_branch=v5.8.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
+gepetto-viewer-corba_extra_flags= ${PYTHON_FLAGS}  -DINSTALL_DOCUMENTATION=OFF
 
-qgv_branch=v1.3.3
+qgv_branch=master
 qgv_repository=${HPP_REPO}
 ifeq (${QT_VERSION}, 5)
 	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
@@ -204,7 +217,7 @@ else
 	qgv_extra_flags=-DBINDINGS_QT5=OFF -DBINDINGS_QT4=ON
 endif
 
-hpp-tools_branch=master
+hpp-tools_branch=${HPP_VERSION}
 hpp-tools_repository=${HPP_REPO}
 hpp-tools_extra_flags=
 
@@ -212,7 +225,7 @@ hpp-tools_extra_flags=
 ##################################
 # {{{ High-level targets
 
-all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.install
+all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.install hpp-python.install
 	${MAKE} hpp-doc.install
 
 # For test on gepgitlab, install robot packages first
@@ -241,13 +254,13 @@ rbprm: hpp-rbprm-corba.install hpp-gepetto-viewer.install
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: hpp-fcl.checkout
 hpp-util.configure.dep: hpp-util.checkout
-hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
-pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
-hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
+eigenpy.configure.dep: eigenpy.checkout
+pinocchio.configure.dep: eigenpy.install hpp-fcl.install pinocchio.checkout
+hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install hpp-environments.install\
 	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
-hpp-core.configure.dep: example-robot-data.install hpp-constraints.install \
-	hpp-statistics.install hpp-core.checkout
+hpp-core.configure.dep: example-robot-data.install \
+	hpp-constraints.install hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
 	hpp-environments.install hpp-constraints.checkout
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
@@ -261,13 +274,16 @@ hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
 hpp-corbaserver.configure.dep: hpp-core.install hpp-template-corba.install \
 	hpp-constraints.install hpp-corbaserver.checkout
+hpp-python.configure.dep: eigenpy.install hpp-corbaserver.install \
+	hpp-python.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
 qgv.configure.dep: qgv.checkout
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
-hpp_tutorial.configure.dep: hpp-gepetto-viewer.install \
+hpp_tutorial.configure.dep: hpp-gepetto-viewer.install hpp-python.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
+hpp-practicals.configure.dep: hpp-practicals.checkout
 hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
 gepetto-viewer.configure.dep: gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
@@ -275,11 +291,12 @@ gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
-hpp-gui.configure.dep: hpp-gui.checkout
+hpp-gui.configure.dep: gepetto-viewer-corba.install hpp-gui.checkout
 universal_robot.configure.dep: universal_robot.checkout
 hpp-universal-robot.configure.dep: example-robot-data.install \
 	hpp-universal-robot.checkout
-example-robot-data.configure.dep: example-robot-data.checkout
+proxsuite.configure.dep: proxsuite.checkout
+example-robot-data.configure.dep: pinocchio.install example-robot-data.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
 hpp-baxter.configure.dep: example-robot-data.install hpp-baxter.checkout
 hpp_romeo.configure.dep: hpp_romeo.checkout
@@ -408,32 +425,6 @@ update:
 		cat .git/refs/heads/${$(@:.log=)_branch}; \
 	fi
 
-robot_model_py.configure: robot_model_py.configure.dep
-	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-	cd ${SRC_DIR}/$(@:.configure=)/urdf_parser_py;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-
-robot_model_py.install: robot_model_py.configure
-	${MAKE} -C ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER} install; \
-	${MAKE} -C ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER} install;
-
-universal_robot.configure_nodep:
-	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/ur_description/${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/$(@:.configure_nodep=)/ur_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${DEVEL_HPP_DIR}/install -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..
-
-universal_robot.install_nodep:universal_robot.configure_nodep
-	cd ${SRC_DIR}/$(@:.install_nodep=)/ur_description/${BUILD_FOLDER};\
-	make install
-
-universal_robot.install:universal_robot.configure
-	cd ${SRC_DIR}/$(@:.install=)/ur_description/${BUILD_FOLDER};\
-	make install
 
 # }}}
 
