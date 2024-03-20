@@ -32,7 +32,6 @@ GIT_QUIET=--quiet
 # Qt version should be either 4 or 5
 QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
-
 PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
 
 ##################################
@@ -58,11 +57,17 @@ pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUIL
 HPP_VERSION=devel
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
 
+hpp-template-corba_branch=${HPP_VERSION}
+hpp-template-corba_repository=${HPP_REPO}
+hpp-template-corba_extra_flags= ${PYTHON_FLAGS}
+
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
+hpp-util_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-statistics_branch=${HPP_VERSION}
 hpp-statistics_repository=${HPP_REPO}
+hpp-statistics_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-pinocchio_branch=${HPP_VERSION}
 hpp-pinocchio_repository=${HPP_REPO}
@@ -251,7 +256,7 @@ hpp-fcl.configure.dep: hpp-fcl.checkout
 hpp-util.configure.dep: hpp-util.checkout
 eigenpy.configure.dep: eigenpy.checkout
 pinocchio.configure.dep: eigenpy.install hpp-fcl.install pinocchio.checkout
-hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
+hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install hpp-environments.install\
 	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
 hpp-core.configure.dep: example-robot-data.install proxsuite.install \
