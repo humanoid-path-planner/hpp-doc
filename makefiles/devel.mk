@@ -25,9 +25,6 @@ else
   BUILD_TESTING=OFF
 endif
 
-OSG_PACKAGE=osg-dae
-#OSG_PACKAGE=OpenSceneGraph-3.4.0
-
 WGET=wget --quiet
 UNZIP=unzip -qq
 TAR=tar
@@ -39,13 +36,18 @@ INSTALL_DOCUMENTATION=ON
 ##################################
 # {{{ Dependencies
 
+hpp-fcl_branch=devel
+hpp-fcl_repository=${HPP_REPO}
+hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
+
+eigenpy_branch=devel
+eigenpy_repository=${SOT_REPO}
+eigenpy_extra_flags=
+
 pinocchio_branch=devel
 pinocchio_repository=${SOT_REPO}
-pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF -DUSE_SHARED_PTR_FROM_HPP_FCL=ON ${PYTHON_FLAGS}
+pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF ${PYTHON_FLAGS}
 
-hpp-template-corba_branch=devel
-hpp-template-corba_repository=${HPP_REPO}
-hpp-template-corba_extra_flags=
 # }}}
 ##################################
 # {{{ Packages supporting HPP_VERSION
@@ -56,10 +58,6 @@ HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
 
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
-
-hpp-fcl_branch=${HPP_VERSION}
-hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${HPP_EXTRA_FLAGS}
 
 hpp-statistics_branch=${HPP_VERSION}
 hpp-statistics_repository=${HPP_REPO}
@@ -76,13 +74,13 @@ hpp-core_branch=${HPP_VERSION}
 hpp-core_repository=${HPP_REPO}
 hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-python_branch=${HPP_VERSION}
-hpp-python_repository=${FLORENT_REPO}
-hpp-python_extra_flags=${HPP_EXTRA_FLAGS}
-
 hpp-corbaserver_branch=${HPP_VERSION}
 hpp-corbaserver_repository=${HPP_REPO}
 hpp-corbaserver_extra_flags= ${PYTHON_FLAGS}
+
+hpp-python_branch=${HPP_VERSION}
+hpp-python_repository=${HPP_REPO}
+hpp-python_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
 
 hpp-doc_branch=${HPP_VERSION}
 hpp-doc_repository=${HPP_REPO}
@@ -137,13 +135,6 @@ hpp-environments_branch=${HPP_VERSION}
 hpp-environments_repository=${HPP_REPO}
 hpp-environments_extra_flags= ${PYTHON_FLAGS}
 
-universal_robot_branch=calibration_devel
-universal_robot_repository=https://github.com/fmauch
-
-hpp-universal-robot_branch=${HPP_VERSION}
-hpp-universal-robot_repository=${HPP_REPO}
-hpp-universal-robot_extra_flags= ${PYTHON_FLAGS}
-
 hpp-baxter_branch=${HPP_VERSION}
 hpp-baxter_repository=${HPP_REPO}
 hpp-baxter_extra_flags= ${PYTHON_FLAGS}
@@ -184,9 +175,6 @@ hpp-rbprm_branch=${HPP_VERSION}
 hpp-rbprm_repository=${HPP_REPO}
 hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
 
-hpp-rbprm-robot-data_branch=${HPP_VERSION}
-hpp-rbprm-robot-data_repository=${HPP_REPO}
-
 hpp-rbprm-corba_branch=${HPP_VERSION}
 hpp-rbprm-corba_repository=${HPP_REPO}
 hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}  ${PYTHON_FLAGS}
@@ -206,22 +194,9 @@ ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
 ##################################
 # {{{ Packages for gepetto-gui
 
-collada-dom_branch=master
-collada-dom_repository=${HPP_REPO}
-collada-dom_extra_flags=-DBUILD_SHARED_LIBS=TRUE -DOPT_COLLADA15=FALSE
-
-osg-dae_branch=master
-osg-dae_repository=${GEPETTO_REPO}
-osg-dae_extra_flags= -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom
-OpenSceneGraph-3.4.0_extra_flags= -DDESIRED_QT_VERSION=${QT_VERSION} -DCOLLADA_DYNAMIC_LIBRARY=${INSTALL_HPP_DIR}/lib/libcollada14dom.so -DCOLLADA_INCLUDE_DIR=${INSTALL_HPP_DIR}/include/collada-dom -DLIB_POSTFIX=""
-
 gepetto-viewer_branch=${HPP_VERSION}
 gepetto-viewer_repository=${GEPETTO_REPO}
-ifeq (${QT_VERSION}, 5)
-	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF -DINSTALL_DOCUMENTATION=OFF
-else
-	gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=ON
-endif
+gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF -DINSTALL_DOCUMENTATION=OFF
 
 gepetto-viewer-corba_branch=${HPP_VERSION}
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
@@ -243,13 +218,13 @@ hpp-tools_extra_flags=
 ##################################
 # {{{ High-level targets
 
-all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.install
+all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.install hpp-python.install
 	${MAKE} hpp-doc.install
 
 # For test on gepgitlab, install robot packages first
 test-ci: example-robot-data.install  hpp-environments.install \
 	hpp-baxter.install
-	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-affordance-corba.install hpp-rbprm.install \
+	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
 
@@ -272,8 +247,8 @@ rbprm: hpp-rbprm-corba.install hpp-gepetto-viewer.install
 hpp-doc.configure.dep: hpp-doc.checkout
 hpp-fcl.configure.dep: hpp-fcl.checkout
 hpp-util.configure.dep: hpp-util.checkout
-hpp-model-urdf.configure.dep: hpp-model.install hpp-model-urdf.checkout
-pinocchio.configure.dep: hpp-fcl.install pinocchio.checkout
+eigenpy.configure.dep: eigenpy.checkout
+pinocchio.configure.dep: eigenpy.install hpp-fcl.install pinocchio.checkout
 hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install \
 	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
@@ -290,23 +265,19 @@ hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
 	qgv.install hpp-plot.checkout
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 	hpp-manipulation-urdf.checkout
-hpp-python.configure.dep: hpp-python.checkout
 hpp-corbaserver.configure.dep: hpp-core.install hpp-template-corba.install \
 	hpp-constraints.install hpp-corbaserver.checkout
+hpp-python.configure.dep: eigenpy.install hpp-corbaserver.install \
+	hpp-python.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
 qgv.configure.dep: qgv.checkout
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install hpp-python.install \
-	hpp-manipulation-corba.install hpp-python.install hpp_tutorial.checkout
+	hpp-manipulation-corba.install hpp_tutorial.checkout
 hpp-practicals.configure.dep: hpp-practicals.checkout
 hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
-collada-dom.configure.dep: collada-dom.checkout
-osg-dae.configure.dep: collada-dom.install \
-	osg-dae.checkout
-OpenSceneGraph-3.4.0.configure.dep: collada-dom.install \
-	OpenSceneGraph-3.4.0.checkout
 gepetto-viewer.configure.dep: gepetto-viewer.checkout
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 	gepetto-viewer-corba.checkout
@@ -320,7 +291,7 @@ hpp-universal-robot.configure.dep: example-robot-data.install \
 proxsuite.configure.dep: proxsuite.checkout
 example-robot-data.configure.dep: pinocchio.install example-robot-data.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
-hpp-baxter.configure.dep: hpp-baxter.checkout
+hpp-baxter.configure.dep: example-robot-data.install hpp-baxter.checkout
 hpp_romeo.configure.dep: hpp_romeo.checkout
 hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
 hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
@@ -447,46 +418,6 @@ update:
 		cat .git/refs/heads/${$(@:.log=)_branch}; \
 	fi
 
-OpenSceneGraph-3.4.0.checkout:
-	if [ -d $(@:.checkout=) ]; then \
-		echo "$(@:.checkout=) already checkout out."; \
-	else \
-		wget http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.4.0/source/OpenSceneGraph-3.4.0.zip;\
-		cd ${SRC_DIR}; unzip OpenSceneGraph-3.4.0.zip;\
-		rm -f OpenSceneGraph-3.4.0.zip;\
-	fi
-
-robot_model_py.configure: robot_model_py.configure.dep
-	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-	cd ${SRC_DIR}/$(@:.configure=)/urdf_parser_py;\
-	mkdir -p ${BUILD_FOLDER}; \
-	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-
-robot_model_py.install: robot_model_py.configure
-	${MAKE} -C ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER} install; \
-	${MAKE} -C ${SRC_DIR}/$(@:.install=)/urdf_parser_py/${BUILD_FOLDER} install;
-
-universal_robot.configure_nodep:
-	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/ur_description/${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/$(@:.configure_nodep=)/ur_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..;\
-	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/ur_gazebo/${BUILD_FOLDER}; \
-	cd ${SRC_DIR}/$(@:.configure_nodep=)/ur_gazebo/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" ${$(@:.configure_nodep=)_extra_flags} ..
-
-universal_robot.install_nodep:universal_robot.configure_nodep
-	cd ${SRC_DIR}/$(@:.install_nodep=)/ur_description/${BUILD_FOLDER};\
-	make install; \
-	cd ${SRC_DIR}/$(@:.install_nodep=)/ur_gazebo/${BUILD_FOLDER};\
-	make install
-
-universal_robot.install:universal_robot.configure
-	cd ${SRC_DIR}/$(@:.install=)/ur_description/${BUILD_FOLDER};\
-	make install
 
 # }}}
 
