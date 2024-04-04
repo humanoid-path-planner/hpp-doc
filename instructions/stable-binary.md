@@ -1,3 +1,57 @@
+## Binary installation on ubuntu-22.04 64 bit
+
+To install all the packages on ubuntu 22.04 LTS 64 bit, you should do the following steps:
+
+  1. install robotpkg: follow [the robotpkg installation website](http://robotpkg.openrobots.org/debian.html).
+
+  2. install HPP:
+
+    ```bash
+    pyver=310
+    sudo apt-get install robotpkg-py${pyver}-hpp-manipulation-corba robotpkg-py${pyver}-qt5-hpp-gepetto-viewer
+    ```
+
+  3. install (optionnal) extra packages for demonstrations:
+
+    - Tutorials:
+
+      ```bash
+      sudo apt-get install robotpkg-py${pyver}-hpp-tutorial
+      ```
+
+    - GUI:
+
+      ```bash
+      sudo apt-get install robotpkg-py${pyver}-qt5-hpp-gui robotpkg-py${pyver}-qt5-hpp-plot
+      ```
+
+    - Some robot descriptions:
+
+      ```bash
+      sudo apt-get install robotpkg-py${pyver}-hpp-environments robotpkg-romeo-description
+      ```
+
+    - documentation:
+
+      ```bash
+      sudo apt-get install robotpkg-hpp-doc
+      ```
+
+  5. setup your environment variables by adding the following lines (fix Python version if necessary) to your `.bashrc`:
+
+    ```bash
+    export PATH=/opt/openrobots/bin${!PATH:-:}${PATH}
+    export LD_LIBRARY_PATH=/opt/openrobots/lib${!LD_LIBRARY_PATH:-:}${LD_LIBRARY_PATH}
+    export PYTHONPATH=/opt/openrobots/lib/python3.10/site-packages${!PYTHONPATH:-:}${PYTHONPATH}
+    export ROS_PACKAGE_PATH=/opt/openrobots/share${!ROS_PACKAGE_PATH:-:}${ROS_PACKAGE_PATH}
+
+    export CMAKE_PREFIX_PATH=/opt/openrobots${!CMAKE_PREFIX_PATH:-:}${CMAKE_PREFIX_PATH}
+    export PKG_CONFIG_PATH=/opt/openrobots${!PKG_CONFIG_PATH:-:}${PKG_CONFIG_PATH}
+    ```
+
+  6. open `/opt/openrobots/share/doc/hpp-doc/index.html` in a web brower and you
+  will have access to the documentation of most packages.
+
 ## Binary installation on ubuntu-20.04 64 bit with ros-noetic
 
 To install all the packages on ubuntu 20.04 LTS 64 bit, you should do the following steps:
