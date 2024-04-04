@@ -33,6 +33,8 @@ GIT_QUIET=--quiet
 QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
 
+PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
+
 ##################################
 # {{{ Dependencies
 
