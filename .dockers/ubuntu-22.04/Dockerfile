@@ -62,6 +62,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=type=cache,s
     python3-dev \
     python3-empy \
     python3-gnupg \
+    python3-lxml \
     python3-matplotlib \
     python3-netifaces \
     python3-nose \

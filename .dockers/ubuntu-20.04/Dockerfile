@@ -42,9 +42,10 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=type=cache,s
     oxygen-icon-theme \
     psmisc \
     pyqt5-dev \
-    python-is-python3 \
+    python3-lxml \
     python3-pyqt5 \
     python3-matplotlib \
+    python-is-python3 \
     qtdeclarative5-dev \
     qtbase5-private-dev \
     qtmultimedia5-dev \
