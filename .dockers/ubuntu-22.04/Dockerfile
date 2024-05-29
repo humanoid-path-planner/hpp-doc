@@ -53,6 +53,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=type=cache,s
     liburdfdom-headers-dev \
     libyaml-cpp-dev \
     llvm \
+    lsb-release \
     m4 \
     oxygen-icon-theme \
     pkg-config \
