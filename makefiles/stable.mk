@@ -45,7 +45,7 @@ eigenpy_branch=v3.5.1
 eigenpy_repository=${SOT_REPO}
 eigenpy_extra_flags=
 
-pinocchio_branch=v2.7.0
+pinocchio_branch=v3.0.0
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF ${PYTHON_FLAGS}
 
@@ -131,7 +131,7 @@ proxsuite_branch =
 proxsuite_repository=${SIMPLE_ROBOTICS_REPO}
 proxsuite_extra_flags= -DBUILD_WITH_VECTORIZATION_SUPPORT=OFF -DBUILD_TESTING=OFF
 
-example-robot-data_branch=v4.1.0
+example-robot-data_branch=devel  # TODO
 example-robot-data_repository=${GEPETTO_REPO}
 example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
 
