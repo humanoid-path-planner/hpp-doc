@@ -71,11 +71,11 @@ variables:
       paths:
         - workspace
 
-#stable-18.04-build:
-    #image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:18.04
-    #only:
-      #- stable
-    #<<: *build_definition
+stable-22.04-build:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:22.04
+    only:
+      - stable
+    <<: *build_definition
 
 stable-20.04-build:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
@@ -84,11 +84,11 @@ stable-20.04-build:
       - stable
     <<: *build_definition
 
-#devel-18.04-build:
-    #image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:18.04
-    #only:
-      #-  devel
-    #<<: *build_definition
+devel-22.04-build:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:22.04
+    only:
+      -  devel
+    <<: *build_definition
 
 devel-20.04-build:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
@@ -97,13 +97,13 @@ devel-20.04-build:
       -  devel
     <<: *build_definition
 
-#stable-18.04-test:
-    #image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:18.04
-    #dependencies:
-      #- stable-18.04-build
-    #only:
-      #- stable
-    #<<: *test_definition
+stable-22.04-test:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:22.04
+    dependencies:
+      - stable-22.04-build
+    only:
+      - stable
+    <<: *test_definition
 
 stable-20.04-test:
     allow_failure: true
@@ -115,13 +115,13 @@ stable-20.04-test:
     <<: *test_definition
 
 
-#devel-18.04-test:
-    #image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:18.04
-    #dependencies:
-      #- devel-18.04-build
-    #only:
-      #-  devel
-    #<<: *test_definition
+devel-22.04-test:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:22.04
+    dependencies:
+      - devel-22.04-build
+    only:
+      -  devel
+    <<: *test_definition
 
 devel-20.04-test:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
@@ -132,13 +132,13 @@ devel-20.04-test:
       -  devel
     <<: *test_definition
 
-#stable-18.04-doc:
-    #image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:18.04
-    #dependencies:
-      #- stable-18.04-build
-    #only:
-      #- stable
-    #<<: *doc_definition
+stable-22.04-doc:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:22.04
+    dependencies:
+      - stable-22.04-build
+    only:
+      - stable
+    <<: *doc_definition
 
 stable-20.04-doc:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
@@ -149,13 +149,13 @@ stable-20.04-doc:
       - stable
     <<: *doc_definition
 
-#devel-18.04-doc:
-    #image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:18.04
-    #dependencies:
-      #- devel-18.04-build
-    #only:
-      #-  devel
-    #<<: *doc_definition
+devel-22.04-doc:
+    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:22.04
+    dependencies:
+      - devel-22.04-build
+    only:
+      -  devel
+    <<: *doc_definition
 
 devel-20.04-doc:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
