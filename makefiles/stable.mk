@@ -41,7 +41,7 @@ hpp-fcl_branch=v2.4.4
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-eigenpy_branch=v3.4.0
+eigenpy_branch=v3.5.1
 eigenpy_repository=${SOT_REPO}
 eigenpy_extra_flags=
 
@@ -193,7 +193,7 @@ hpp-bezier-com-traj_branch=${HPP_VERSION}
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON  ${PYTHON_FLAGS}
 
-ndcurves_branch=${HPP_VERSION}
+ndcurves_branch=v1.4.1
 ndcurves_repository=${LOCO3D_REPO}
 ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
 
@@ -209,13 +209,8 @@ gepetto-viewer-corba_branch=v5.8.0
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 gepetto-viewer-corba_extra_flags= ${PYTHON_FLAGS}  -DINSTALL_DOCUMENTATION=OFF
 
-qgv_branch=master
-qgv_repository=${HPP_REPO}
-ifeq (${QT_VERSION}, 5)
-	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
-else
-	qgv_extra_flags=-DBINDINGS_QT5=OFF -DBINDINGS_QT4=ON
-endif
+qgv_branch=v1.3.5
+qgv_repository=${GEPETTO_REPO}
 
 hpp-tools_branch=${HPP_VERSION}
 hpp-tools_repository=${HPP_REPO}
