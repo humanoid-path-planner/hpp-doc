@@ -257,7 +257,7 @@ pinocchio.configure.dep: eigenpy.install hpp-fcl.install pinocchio.checkout
 hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install hpp-environments.install\
 	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
-hpp-core.configure.dep: example-robot-data.install \
+hpp-core.configure.dep: example-robot-data.install proxsuite.install \
 	hpp-constraints.install hpp-statistics.install hpp-core.checkout
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
 	hpp-environments.install hpp-constraints.checkout
