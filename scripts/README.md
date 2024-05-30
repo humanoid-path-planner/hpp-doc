@@ -26,7 +26,7 @@ You will find three files in the directory `${DEVEL_HPP_DIR}/tarball/`:
 ## Build docker images for CI
 
 ```
-for ubuntu in 20.04 18.04
+for ubuntu in 20.04 22.04
 do
     docker build -t gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:$ubuntu -f .dockers/ubuntu-$ubuntu/Dockerfile ./scripts
     docker push gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:$ubuntu
