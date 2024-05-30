@@ -142,6 +142,9 @@ hpp-environments_branch=${HPP_VERSION}
 hpp-environments_repository=${HPP_REPO}
 hpp-environments_extra_flags= ${PYTHON_FLAGS}
 
+hpp-universal-robot_branch=${HPP_VERSION}
+hpp-universal-robot_repository=${HPP_REPO}
+
 hpp-baxter_branch=${HPP_VERSION}
 hpp-baxter_repository=${HPP_REPO}
 hpp-baxter_extra_flags= ${PYTHON_FLAGS}
