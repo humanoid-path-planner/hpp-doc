@@ -2,8 +2,8 @@
 
 # Exit on error
 set -e
-HOST_DIST=$(lsb_release -s -c)
-case $HOST_DIST in
+source /etc/lsb-release
+case $DISTRIB_CODENAME in
   xenial)
     APT_DEP="g++ cmake doxygen libboost-dev liburdfdom-dev \
       libassimp-dev ros-kinetic-xacro ros-kinetic-kdl-parser ros-kinetic-common-msgs \
