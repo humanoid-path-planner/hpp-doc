@@ -37,7 +37,7 @@ PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
 ##################################
 # {{{ Dependencies
 
-hpp-fcl_branch=v2.4.4
+hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
 
