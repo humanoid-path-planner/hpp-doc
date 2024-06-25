@@ -39,7 +39,7 @@ PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
 
 hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DHPP_FCL_HAS_QHULL ${PYTHON_FLAGS}
+hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DHPP_FCL_HAS_QHULL=ON ${PYTHON_FLAGS}
 
 eigenpy_branch=devel
 eigenpy_repository=${SOT_REPO}
