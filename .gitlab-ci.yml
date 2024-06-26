@@ -172,6 +172,7 @@ stable-24.04-doc:
 
 stable-22.04-doc:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:22.04
+    allow_failure: true
     dependencies:
       - stable-22.04-build
     only:
@@ -180,7 +181,6 @@ stable-22.04-doc:
 
 stable-20.04-doc:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
-    allow_failure: true
     dependencies:
       - stable-20.04-build
     only:
