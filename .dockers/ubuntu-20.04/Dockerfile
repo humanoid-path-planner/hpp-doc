@@ -32,6 +32,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=type=cache,s
     libltdl-dev \
     libomniorb4-dev \
     libpcre3-dev \
+    libqhull-dev \
     libqt5svg5-dev \
     libqt5webkit5-dev \
     libqt5xmlpatterns5-dev \
