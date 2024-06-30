@@ -59,7 +59,7 @@ MACRO(ADD_PKG pkg)
 ENDMACRO(ADD_PKG)
 
 MACRO(ADD_HPP_PKG pkg)
-  ADD_PKG(${pkg} git://github.com:humanoid-path-planner/${pkg})
+  ADD_PKG(${pkg} git+https://github.com:humanoid-path-planner/${pkg})
 ENDMACRO(ADD_HPP_PKG)
 
 SET(SETUP_DOC_PKG)
