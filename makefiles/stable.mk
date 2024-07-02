@@ -41,7 +41,7 @@ hpp-fcl_branch=v2.4.4
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DHPP_FCL_HAS_QHULL=ON ${PYTHON_FLAGS}
 
-eigenpy_branch=v3.5.1
+eigenpy_branch=v3.7.0
 eigenpy_repository=${SOT_REPO}
 eigenpy_extra_flags=${PYTHON_FLAGS}
 
@@ -89,7 +89,7 @@ hpp-python_branch=master
 hpp-python_repository=${HPP_REPO}
 hpp-python_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
 
-hpp-doc_branch=master
+hpp-doc_branch=stable
 hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=${HPP_VERSION}
@@ -121,7 +121,7 @@ hpp-plot_extra_flags=  -DINSTALL_DOCUMENTATION=OFF
 
 hpp-gui_branch=${HPP_VERSION}
 hpp-gui_repository=${HPP_REPO}
-hpp-gui_extra_flags= ${PYTHON_FLAGS} -DINSTALL_DOCUMENTATION=OFF
+hpp-gui_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS} -DINSTALL_DOCUMENTATION=OFF
 
 # }}}
 ##################################
