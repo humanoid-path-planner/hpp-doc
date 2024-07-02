@@ -54,7 +54,7 @@ pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUIL
 # {{{ Packages supporting HPP_VERSION
 
 # Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=v5.0.0
+HPP_VERSION=v5.1.0
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
 
 hpp-template-corba_branch=${HPP_VERSION}
