@@ -39,11 +39,11 @@ PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
 
 hpp-fcl_branch=v2.4.4
 hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
+hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DHPP_FCL_HAS_QHULL=ON ${PYTHON_FLAGS}
 
 eigenpy_branch=v3.5.1
 eigenpy_repository=${SOT_REPO}
-eigenpy_extra_flags=
+eigenpy_extra_flags=${PYTHON_FLAGS}
 
 pinocchio_branch=v3.0.0
 pinocchio_repository=${SOT_REPO}
@@ -101,15 +101,15 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 
 hpp-manipulation-corba_branch=${HPP_VERSION}
 hpp-manipulation-corba_repository=${HPP_REPO}
-hpp-manipulation-corba_extra_flags= ${PYTHON_FLAGS}
+hpp-manipulation-corba_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
 
 hpp_tutorial_branch=${HPP_VERSION}
 hpp_tutorial_repository=${HPP_REPO}
-hpp_tutorial_extra_flags= ${PYTHON_FLAGS}
+hpp_tutorial_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
 
 hpp-practicals_branch=${HPP_VERSION}
 hpp-practicals_repository=${HPP_REPO}
-hpp-practicals_extra_flags= ${PYTHON_FLAGS}
+hpp-practicals_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
 
 hpp-gepetto-viewer_branch=${HPP_VERSION}
 hpp-gepetto-viewer_repository=${HPP_REPO}
@@ -127,7 +127,7 @@ hpp-gui_extra_flags= ${PYTHON_FLAGS} -DINSTALL_DOCUMENTATION=OFF
 ##################################
 # {{{ Robot specific package + test packages
 
-proxsuite_branch =
+proxsuite_branch = v0.6.6
 proxsuite_repository=${SIMPLE_ROBOTICS_REPO}
 proxsuite_extra_flags= -DBUILD_WITH_VECTORIZATION_SUPPORT=OFF -DBUILD_TESTING=OFF
 
@@ -151,7 +151,7 @@ hpp-baxter_extra_flags= ${PYTHON_FLAGS}
 
 hpp_romeo_branch=${HPP_VERSION}
 hpp_romeo_repository=${HPP_REPO}
-
+hpp_romeo_extra_flags=${PYTHON_FLAGS}
 
 # }}}
 ##################################
