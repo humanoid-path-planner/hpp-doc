@@ -5,7 +5,39 @@ set(PROJECT_NAME hpp-doc)
 set(PROJECT_DESCRIPTION "Documentation for HPP")
 set(PROJECT_URL https://humanoid-path-planner.github.io/hpp-doc/index.html)
 
-include(cmake/hpp.cmake)
+# Check if the submodule cmake have been initialized
+set(JRL_CMAKE_MODULES "${CMAKE_CURRENT_LIST_DIR}/cmake")
+if(EXISTS "${JRL_CMAKE_MODULES}/base.cmake")
+  message(STATUS "JRL cmakemodules found in 'cmake/' git submodule")
+else()
+  find_package(jrl-cmakemodules QUIET CONFIG)
+  if(jrl-cmakemodules_FOUND)
+    get_property(
+      JRL_CMAKE_MODULES
+      TARGET jrl-cmakemodules::jrl-cmakemodules
+      PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
+    message(STATUS "JRL cmakemodules found on system at ${JRL_CMAKE_MODULES}")
+  elseif(${CMAKE_VERSION} VERSION_LESS "3.14.0")
+    message(
+      FATAL_ERROR
+        "\nCan't find jrl-cmakemodules. Please either:\n"
+        "  - use git submodule: 'git submodule update --init'\n"
+        "  - or install https://github.com/jrl-umi3218/jrl-cmakemodules\n"
+        "  - or upgrade your CMake version to >= 3.14 to allow automatic fetching\n"
+    )
+  else()
+    message(STATUS "JRL cmakemodules not found. Let's fetch it.")
+    include(FetchContent)
+    FetchContent_Declare(
+      "jrl-cmakemodules"
+      GIT_REPOSITORY "https://github.com/jrl-umi3218/jrl-cmakemodules.git")
+    FetchContent_MakeAvailable("jrl-cmakemodules")
+    FetchContent_GetProperties("jrl-cmakemodules" SOURCE_DIR JRL_CMAKE_MODULES)
+  endif()
+endif()
+
+
+include("${JRL_CMAKE_MODULES}/hpp.cmake")
 
 COMPUTE_PROJECT_ARGS(PROJECT_ARGS LANGUAGES CXX)
 PROJECT(${PROJECT_NAME} ${PROJECT_ARGS})
@@ -27,7 +59,7 @@ MACRO(ADD_PKG pkg)
 ENDMACRO(ADD_PKG)
 
 MACRO(ADD_HPP_PKG pkg)
-  ADD_PKG(${pkg} git://github.com:humanoid-path-planner/${pkg})
+  ADD_PKG(${pkg} git+https://github.com:humanoid-path-planner/${pkg})
 ENDMACRO(ADD_HPP_PKG)
 
 SET(SETUP_DOC_PKG)

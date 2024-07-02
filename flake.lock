@@ -1,0 +1,666 @@
+{
+  "nodes": {
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719745305,
+        "narHash": "sha256-xwgjVUpqSviudEkpQnioeez1Uo2wzrsMaJKJClh+Bls=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "c3c5ecc05edc7dafba779c6c1a61cd08ac6583e9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "hpp-constraints": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "flake-parts"
+        ],
+        "hpp-pinocchio": "hpp-pinocchio",
+        "hpp-statistics": "hpp-statistics",
+        "hpp-util": "hpp-util",
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719584695,
+        "narHash": "sha256-8K94IgUt8kpdRDASnstfX14cBQN4ZK6+LmvOuq6Sg0I=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-constraints",
+        "rev": "acd1c62fdfcdb329fd0dea19ae2f18e471e3ef08",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-constraints",
+        "type": "github"
+      }
+    },
+    "hpp-corbaserver": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "flake-parts"
+        ],
+        "hpp-core": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core"
+        ],
+        "hpp-template-corba": "hpp-template-corba",
+        "hpp-util": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "hpp-util"
+        ],
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719670731,
+        "narHash": "sha256-1EKv+2sWT3XNrqI+YhJwxrE0Zq77D9k96vnhYJl4KX4=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-corbaserver",
+        "rev": "ab24564c4165f51017bf00c84dc8c16c239ba1fe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-corbaserver",
+        "type": "github"
+      }
+    },
+    "hpp-core": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "flake-parts"
+        ],
+        "hpp-constraints": "hpp-constraints",
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719586831,
+        "narHash": "sha256-oRFZsERQKzaW2NvgcKcxqJZtqtlk7rqDK2inhUTABiQ=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-core",
+        "rev": "733f884a03cde41aeae18758a26b28cf6fdf02fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-core",
+        "type": "github"
+      }
+    },
+    "hpp-environments": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "hpp-pinocchio",
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "hpp-pinocchio",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719580427,
+        "narHash": "sha256-T76zgTJrGm7maKBPwgX+FgQ7MPN7NoLvdZvzARPo9V0=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-environments",
+        "rev": "1c727bcc85145a1f5236357fa73df5a183a31f04",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-environments",
+        "type": "github"
+      }
+    },
+    "hpp-gepetto-viewer": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "flake-parts"
+        ],
+        "hpp-corbaserver": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-corbaserver"
+        ],
+        "nixpkgs": [
+          "hpp-practicals",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719739587,
+        "narHash": "sha256-+iM/dyYHHenn49+TpA6uYKuQtewnxLvvs+xiJ0KbqC0=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-gepetto-viewer",
+        "rev": "8f75c80874d4714eb08a2f9bbf72227f921f297a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-gepetto-viewer",
+        "type": "github"
+      }
+    },
+    "hpp-gui": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "flake-parts"
+        ],
+        "hpp-manipulation-corba": "hpp-manipulation-corba",
+        "nixpkgs": [
+          "hpp-practicals",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719747228,
+        "narHash": "sha256-4ZB/QftRMraegKECgOXs48hLjb5yU35e24LvaskU/E0=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-gui",
+        "rev": "1a62fc770c2d209dbcd6626247a38ac4477d7cee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-gui",
+        "type": "github"
+      }
+    },
+    "hpp-manipulation": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "flake-parts"
+        ],
+        "hpp-core": "hpp-core",
+        "hpp-universal-robot": "hpp-universal-robot",
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719740235,
+        "narHash": "sha256-+Hh4mck3oz1Xr6JXe8yjDD0tvtVW2allIBl8I2LKm0w=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-manipulation",
+        "rev": "770860668e3504dd8b039aa0518e6b50ac3936da",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-manipulation",
+        "type": "github"
+      }
+    },
+    "hpp-manipulation-corba": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "flake-parts"
+        ],
+        "hpp-corbaserver": "hpp-corbaserver",
+        "hpp-manipulation-urdf": "hpp-manipulation-urdf",
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719745657,
+        "narHash": "sha256-hDd/Bh3hgjjAMKC9iAYZ/B5pQ9wNWu3jRXnlTNSe0HQ=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-manipulation-corba",
+        "rev": "b43531f81a5ab993a1dd1f512076ff7d41123b39",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-manipulation-corba",
+        "type": "github"
+      }
+    },
+    "hpp-manipulation-urdf": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "flake-parts"
+        ],
+        "hpp-manipulation": "hpp-manipulation",
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719741779,
+        "narHash": "sha256-8tO8rElefStu4Hmbn4TqB3ZCSkVjQBk8ww7zKcbkNIc=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-manipulation-urdf",
+        "rev": "ab664c2cdf43b7816cf35ee422cc8da3b0da148b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-manipulation-urdf",
+        "type": "github"
+      }
+    },
+    "hpp-pinocchio": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "flake-parts"
+        ],
+        "hpp-environments": "hpp-environments",
+        "hpp-util": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "hpp-util"
+        ],
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719582071,
+        "narHash": "sha256-sRWf973UZIdyrS0fhd+vXdTucR9d7Eks9yU85kcFxfo=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-pinocchio",
+        "rev": "4ec6186223ce18f4c48605421a7ef583fe827352",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-pinocchio",
+        "type": "github"
+      }
+    },
+    "hpp-plot": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "flake-parts"
+        ],
+        "hpp-manipulation-corba": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba"
+        ],
+        "nixpkgs": [
+          "hpp-practicals",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719743778,
+        "narHash": "sha256-xjF6fdcjnJMSq2j0IqmhEJPl0rYfVUKkX5Uw8xKi6PU=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-plot",
+        "rev": "400e9544d9b981b4786e5e5042eea8c1e47d8285",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-plot",
+        "type": "github"
+      }
+    },
+    "hpp-practicals": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "hpp-gepetto-viewer": "hpp-gepetto-viewer",
+        "hpp-gui": "hpp-gui",
+        "hpp-plot": "hpp-plot",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719747434,
+        "narHash": "sha256-edvjGMNiGEBa+EbiyLyf/D7ZBGpuiTStdJyfoBzFf7o=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-practicals",
+        "rev": "ff862939f860aa0e9291b14ecd556c73b60efb1d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-practicals",
+        "type": "github"
+      }
+    },
+    "hpp-statistics": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "flake-parts"
+        ],
+        "hpp-util": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "hpp-util"
+        ],
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719582334,
+        "narHash": "sha256-bzGI7z6hTGkuNs71Vcb3vsVpey1SuR7Okx4rJU1LHFs=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-statistics",
+        "rev": "613b1f9c2788cb33097c1f1c0e4216420665a1e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-statistics",
+        "type": "github"
+      }
+    },
+    "hpp-template-corba": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-corbaserver",
+          "flake-parts"
+        ],
+        "hpp-util": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-corbaserver",
+          "hpp-util"
+        ],
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-corbaserver",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719587477,
+        "narHash": "sha256-bUGCrWnAuEqmhD7sunx+L6yqukHueDs99MbHM7M5/8A=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-template-corba",
+        "rev": "e5512a9505df6bc9ae317d51e3e14cdc27d6583e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-template-corba",
+        "type": "github"
+      }
+    },
+    "hpp-tutorial": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "hpp-gepetto-viewer": [
+          "hpp-practicals",
+          "hpp-gepetto-viewer"
+        ],
+        "hpp-manipulation-corba": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719745805,
+        "narHash": "sha256-FgR0tBZ7RaPRUupWKRuaQxLZOYXySsHqd0Y8avF4dn0=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp_tutorial",
+        "rev": "89376cf0dfe399611c15373fab693f4c3866d9cd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp_tutorial",
+        "type": "github"
+      }
+    },
+    "hpp-universal-robot": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719670288,
+        "narHash": "sha256-9gi96DhSqvAHlXUlTs6O7TG/3dTthL2LETHb1rqP75A=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-universal-robot",
+        "rev": "d9308abb98b864da8ab1041f66f6c78aef2e8d53",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-universal-robot",
+        "type": "github"
+      }
+    },
+    "hpp-util": {
+      "inputs": {
+        "flake-parts": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "hpp-practicals",
+          "hpp-gui",
+          "hpp-manipulation-corba",
+          "hpp-manipulation-urdf",
+          "hpp-manipulation",
+          "hpp-core",
+          "hpp-constraints",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719580825,
+        "narHash": "sha256-trfl8A+P7a1gnACnTXNK98TYWWDAOM3PKfkXxpC3X/8=",
+        "owner": "humanoid-path-planner",
+        "repo": "hpp-util",
+        "rev": "0504f15818a92c7a257cd6b60cd8b6092bd6dbfa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "humanoid-path-planner",
+        "ref": "release/5.1.0",
+        "repo": "hpp-util",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1719674427,
+        "narHash": "sha256-z2hCpVyfnmYTA5iabf1SW4peFV9itE1JJcXNBKIFkDg=",
+        "owner": "nim65s",
+        "repo": "nixpkgs",
+        "rev": "b81610d293fac26c2ec6a81718a979bc25f8c155",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nim65s",
+        "ref": "gepetto",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "hpp-practicals": "hpp-practicals",
+        "hpp-tutorial": "hpp-tutorial",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

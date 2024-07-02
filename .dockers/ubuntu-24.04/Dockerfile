@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 AS sccache
+FROM ubuntu:24.04 AS sccache
 
 ENV VERSION=0.7.7 ARCH=x86_64-unknown-linux-musl RELEASE=https://github.com/mozilla/sccache/releases
 ENV PKG=sccache-v${VERSION}-${ARCH}.tar.gz
@@ -9,12 +9,12 @@ ADD ${RELEASE}/download/v${VERSION}/${PKG}.sha256 /
 RUN test "$(sha256sum ${PKG}|cut -d' ' -f1)" = "$(cat ${PKG}.sha256)" \
  && tar --strip=1 -xf ${PKG}
 
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 COPY --from=sccache /sccache /usr/bin
 ENV SCCACHE_REDIS=redis://asahi CMAKE_CXX_COMPILER_LAUNCHER=sccache
 
-ENV DEVEL_HPP_DIR=/workspace UBUNTU=jammy
+ENV DEVEL_HPP_DIR=/workspace UBUNTU=noble
 
 RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=type=cache,sharing=locked,target=/var/lib/apt \
     apt-get update -qqy && DEBIAN_FRONTEND=noninteractive apt-get install -qqy \
@@ -95,7 +95,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=type=cache,s
     qtbase5-private-dev \
     qtmultimedia5-dev \
     robotpkg-openscenegraph \
-    robotpkg-py310-omniorbpy \
+    robotpkg-py312-omniorbpy \
     robotpkg-qpoases \
     robotpkg-qt5-osgqt \
     texlive-latex-extra \

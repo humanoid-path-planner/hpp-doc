@@ -39,7 +39,7 @@ PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
 
 hpp-fcl_branch=devel
 hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
+hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DHPP_FCL_HAS_QHULL=ON ${PYTHON_FLAGS}
 
 eigenpy_branch=devel
 eigenpy_repository=${SOT_REPO}
@@ -142,6 +142,9 @@ hpp-environments_branch=${HPP_VERSION}
 hpp-environments_repository=${HPP_REPO}
 hpp-environments_extra_flags= ${PYTHON_FLAGS}
 
+hpp-universal-robot_branch=${HPP_VERSION}
+hpp-universal-robot_repository=${HPP_REPO}
+
 hpp-baxter_branch=${HPP_VERSION}
 hpp-baxter_repository=${HPP_REPO}
 hpp-baxter_extra_flags= ${PYTHON_FLAGS}
@@ -210,12 +213,7 @@ gepetto-viewer-corba_repository=${GEPETTO_REPO}
 gepetto-viewer-corba_extra_flags= ${PYTHON_FLAGS}  -DINSTALL_DOCUMENTATION=OFF
 
 qgv_branch=devel
-qgv_repository=${HPP_REPO}
-ifeq (${QT_VERSION}, 5)
-	qgv_extra_flags=-DBINDINGS_QT5=ON -DBINDINGS_QT4=OFF
-else
-	qgv_extra_flags=-DBINDINGS_QT5=OFF -DBINDINGS_QT4=ON
-endif
+qgv_repository=${GEPETTO_REPO}
 
 hpp-tools_branch=${HPP_VERSION}
 hpp-tools_repository=${HPP_REPO}
@@ -231,7 +229,7 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 # For test on gepgitlab, install robot packages first
 test-ci: example-robot-data.install  hpp-environments.install \
 	hpp-baxter.install
-	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-rbprm-corba.install \
+	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-affordance-corba.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
 
@@ -243,7 +241,7 @@ benchmark: example-robot-data.install hpp-environments.install
 	${MAKE} hpp_benchmark.checkout; \
 	${MAKE} hpp-doc.install
 
-rbprm: hpp-rbprm-corba.install hpp-gepetto-viewer.install
+rbprm: hpp-affordance-corba.install hpp-gepetto-viewer.install
 	${MAKE} hpp-doc.install
 
 
