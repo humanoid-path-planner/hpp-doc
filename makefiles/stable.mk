@@ -45,7 +45,7 @@ eigenpy_branch=v3.7.0
 eigenpy_repository=${SOT_REPO}
 eigenpy_extra_flags=${PYTHON_FLAGS}
 
-pinocchio_branch=v3.0.0
+pinocchio_branch=devel
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF ${PYTHON_FLAGS}
 
