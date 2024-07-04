@@ -71,7 +71,6 @@ variables:
 
 stable-24.04-build:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
-    allow_failure: true
     only:
       - stable
     <<: *build_definition
@@ -83,7 +82,6 @@ stable-22.04-build:
     <<: *build_definition
 
 stable-20.04-build:
-    allow_failure: true
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
     only:
       - stable
@@ -91,7 +89,6 @@ stable-20.04-build:
 
 devel-24.04-build:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
-    allow_failure: true
     only:
       -  devel
     <<: *build_definition
@@ -104,14 +101,12 @@ devel-22.04-build:
 
 devel-20.04-build:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
-    allow_failure: true
     only:
       -  devel
     <<: *build_definition
 
 stable-24.04-test:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
-    allow_failure: true
     dependencies:
       - stable-24.04-build
     only:
@@ -128,7 +123,6 @@ stable-22.04-test:
 
 stable-20.04-test:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
-    allow_failure: true
     dependencies:
       - stable-20.04-build
     only:
@@ -137,7 +131,6 @@ stable-20.04-test:
 
 devel-24.04-test:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
-    allow_failure: true
     dependencies:
       - devel-24.04-build
     only:
@@ -154,7 +147,6 @@ devel-22.04-test:
 
 devel-20.04-test:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
-    allow_failure: true
     dependencies:
       - devel-20.04-build
     only:
@@ -163,7 +155,6 @@ devel-20.04-test:
 
 stable-24.04-doc:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
-    allow_failure: true
     dependencies:
       - stable-24.04-build
     only:
@@ -172,7 +163,6 @@ stable-24.04-doc:
 
 stable-22.04-doc:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:22.04
-    allow_failure: true
     dependencies:
       - stable-22.04-build
     only:
@@ -189,7 +179,6 @@ stable-20.04-doc:
 
 devel-24.04-doc:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
-    allow_failure: true
     dependencies:
       - devel-24.04-build
     only:
@@ -198,7 +187,6 @@ devel-24.04-doc:
 
 devel-22.04-doc:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:22.04
-    allow_failure: true
     dependencies:
       - devel-22.04-build
     only:
