@@ -18,7 +18,7 @@ To install all the packages on ubuntu 22.04 LTS 64 bit, you should do the follow
     python3-dev python3-empy python3-gnupg python3-matplotlib \
     python3-netifaces python3-nose python3-numpy python3-paramiko \
     python3-pydot python3-pyqt5 python3-scipy python3-setuptools \
-    python3-sip-dev python3-sphinx python3-yaml python3-pip python-is-python3\
+    python3-sip-dev python3-sphinx python3-yaml python3-pip python-is-python3 \
     qtbase5-private-dev qtmultimedia5-dev robotpkg-openscenegraph \
     robotpkg-py310-omniorbpy robotpkg-qpoases robotpkg-qt5-osgqt \
     texlive-latex-extra
