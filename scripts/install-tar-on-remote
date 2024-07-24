@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 VERSION="v4.6.0"
 HOST=gepettoweb.laas.fr

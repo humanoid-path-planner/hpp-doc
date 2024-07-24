@@ -25,16 +25,9 @@ stdenv.mkDerivation {
   };
 
   prePatch = ''
-    substituteInPlace scripts/auto-install-hpp.sh \
-      --replace-fail /bin/bash ${stdenv.shell}
-    substituteInPlace scripts/install-tar-on-remote \
-      --replace-fail /bin/bash ${stdenv.shell}
-    substituteInPlace scripts/generate-tar-doc \
-      --replace-fail /bin/sh ${stdenv.shell}
     substituteInPlace scripts/packageDep \
-      --replace-fail /usr/bin/python ${python3Packages.python.interpreter}
+      --replace-fail "/usr/bin/env python3" ${python3Packages.python.interpreter}
   '';
-
   strictDeps = true;
 
   nativeBuildInputs = [

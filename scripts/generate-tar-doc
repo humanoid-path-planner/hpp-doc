@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # generate-tar-doc $DEVEL_HPP_DIR/install/share/doc http://gepettoweb.laas.fr/hpp
 # then copy /tmp/hpp.tar.gz on server and inflate archive.
