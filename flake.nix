@@ -1,39 +1,17 @@
 {
   description = "Documentation for project Humanoid Path Planner";
 
-  nixConfig = {
-    extra-substituters = [ "https://gepetto.cachix.org" ];
-    extra-trusted-public-keys = [ "gepetto.cachix.org-1:toswMl31VewC0jGkN6+gOelO2Yom0SOHzPwJMY2XiDY=" ];
-  };
-
   inputs = {
-    nixpkgs.url = "github:nim65s/nixpkgs/gepetto";
+    nixpkgs.url = "github:gepetto/nixpkgs";
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
-    hpp-practicals = {
-      url = "github:humanoid-path-planner/hpp-practicals/release/5.1.0";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-      };
-    };
-    hpp-tutorial = {
-      url = "github:humanoid-path-planner/hpp_tutorial/release/5.1.0";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-        hpp-gepetto-viewer.follows = "hpp-practicals/hpp-gepetto-viewer";
-        hpp-manipulation-corba.follows = "hpp-practicals/hpp-gui/hpp-manipulation-corba";
-      };
-    };
   };
 
   outputs =
-    inputs@{ flake-parts, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [ ];
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
         "aarch64-linux"
@@ -41,21 +19,29 @@
         "x86_64-darwin"
       ];
       perSystem =
+        { pkgs, self', ... }:
         {
-          self',
-          pkgs,
-          system,
-          ...
-        }:
-        {
-          packages = {
-            inherit (pkgs) cachix;
-            default = pkgs.callPackage ./. {
-              hpp-practicals = inputs.hpp-practicals.packages.${system}.default;
-              hpp-tutorial = inputs.hpp-tutorial.packages.${system}.default;
-            };
-          };
           devShells.default = pkgs.mkShell { inputsFrom = [ self'.packages.default ]; };
+          packages = {
+            default = self'.packages.hpp-doc;
+            hpp-doc = pkgs.python3Packages.hpp-doc.overrideAttrs (_: {
+              # TODO: remove this on next release
+              prePatch = ''
+                substituteInPlace scripts/packageDep --replace-fail \
+                  "/usr/bin/env python3" \
+                  "${pkgs.python3Packages.python.interpreter}"
+              '';
+              src = pkgs.lib.fileset.toSource {
+                root = ./.;
+                fileset = pkgs.lib.fileset.unions [
+                  ./CMakeLists.txt
+                  ./doc
+                  ./package.xml
+                  ./scripts
+                ];
+              };
+            });
+          };
         };
     };
 }

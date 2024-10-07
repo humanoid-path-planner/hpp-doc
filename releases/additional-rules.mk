@@ -55,7 +55,7 @@ release:
 		git tag -d v${$(@:.remove-tag=)_version}; \
 	fi
 
-# if repository is HPP_REPO, print version of package 
+# if repository is HPP_REPO, print version of package
 %.print-version:
 	@cd ${SRC_DIR}/$(@:.print-version=); \
 	if [ "${$(@:.print-version=)_repository}" = "${HPP_REPO}" ]; then \

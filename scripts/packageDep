@@ -43,7 +43,6 @@ dependencySet = set()
 
 
 def extractDep(inPkg):
-
     packageSet.add(inPkg)
     depSet = set()
 
