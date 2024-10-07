@@ -25,6 +25,12 @@
           packages = {
             default = self'.packages.hpp-doc;
             hpp-doc = pkgs.python3Packages.hpp-doc.overrideAttrs (_: {
+              # TODO: remove this on next release
+              prePatch = ''
+                substituteInPlace scripts/packageDep --replace-fail \
+                  "/usr/bin/env python3" \
+                  "${pkgs.python3Packages.python.interpreter}"
+              '';
               src = pkgs.lib.fileset.toSource {
                 root = ./.;
                 fileset = pkgs.lib.fileset.unions [
