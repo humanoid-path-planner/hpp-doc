@@ -288,10 +288,10 @@
 	* bootstrap: New.
 	* build-aux/bootstrap: New.
 
-2009/04/30 Florent Lamiraux <florent@laas.fr>	
+2009/04/30 Florent Lamiraux <florent@laas.fr>
 
 	* Fix link to kwsPlus
-	
+
 2009/04/23 hppDoc-1.3 release
 
 	27. Add link to roboptim libraries.
@@ -300,14 +300,14 @@
 	24. Added link to liboptimization
 	23. Update link to hppCmpPlanner
 	22. Update doc to recent changes
-	
+
 2009/03/16 hppDoc-1.2 release
 
 	21. Update links to directories where html doc is now installed.
 	20. Added link to cmake.
 
 2009/02/03 hppDoc-1.1 release
-	
+
 2008/06/19
 	18. Added local information pages for packages not installed.
 	17. Added picture illustrating walk planning on front page.
@@ -322,28 +322,28 @@
 2008/03/06
 	11. Added link to hppTimingPlanner.
 	10. Changed message when package is not installed.
-	
+
 2008/02/22
-	9. When package referenced in the documentation is not installed, the link 
+	9. When package referenced in the documentation is not installed, the link
 	to this package is redirected to a page explaining how to install the package.
-	
+
 2008/02/17
 	8. Added a page briefly explaining autotools.
 
 2008/02/07
 	7. Some packages have been added.
 	6. Documentation is not anymore produced by doxygen
-	
+
 2007/10/31
 	5. Reorganization of the main page and addition of a link to hppModel.
 
 2007/10/02
 	4. Correction of link to dynamicsJRLJapan.
-	
+
 2007/10/01
 	3. Added documentation page on development rules.
 	2. Comment all dependences in configure.ac in order to be able to install the doc before the other packages.
-	
+
 2007/04/25
 	1. add the packages hppTutorialPlanner and kppTutorialPlanner
 
