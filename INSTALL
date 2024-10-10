@@ -9,5 +9,5 @@ It is recommended to create a specific directory to install this package.
 mkdir build
 cd build
 cmake [OPTIONS] ..
-make 
+make
 make install
