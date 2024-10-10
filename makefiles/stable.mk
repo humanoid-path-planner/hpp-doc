@@ -37,15 +37,15 @@ PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
 ##################################
 # {{{ Dependencies
 
-hpp-fcl_branch=v2.4.4
+hpp-fcl_branch=v2.4.5
 hpp-fcl_repository=${HPP_REPO}
 hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DHPP_FCL_HAS_QHULL=ON ${PYTHON_FLAGS}
 
-eigenpy_branch=v3.7.0
+eigenpy_branch=v3.10.0
 eigenpy_repository=${SOT_REPO}
 eigenpy_extra_flags=${PYTHON_FLAGS}
 
-pinocchio_branch=devel
+pinocchio_branch=v3.2.0
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF ${PYTHON_FLAGS}
 
@@ -54,7 +54,7 @@ pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUIL
 # {{{ Packages supporting HPP_VERSION
 
 # Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=v5.1.0
+HPP_VERSION=v5.2.0
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
 
 hpp-template-corba_branch=${HPP_VERSION}
@@ -127,7 +127,7 @@ hpp-gui_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS} -DINSTALL_DOCUMENTATION=O
 ##################################
 # {{{ Robot specific package + test packages
 
-proxsuite_branch = v0.6.6
+proxsuite_branch = v0.6.7
 proxsuite_repository=${SIMPLE_ROBOTICS_REPO}
 proxsuite_extra_flags= -DBUILD_WITH_VECTORIZATION_SUPPORT=OFF -DBUILD_TESTING=OFF
 
@@ -208,7 +208,7 @@ gepetto-viewer_branch=${HPP_VERSION}
 gepetto-viewer_repository=${GEPETTO_REPO}
 gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF -DINSTALL_DOCUMENTATION=OFF
 
-gepetto-viewer-corba_branch=v5.8.0
+gepetto-viewer-corba_branch=v5.8.1
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 gepetto-viewer-corba_extra_flags= ${PYTHON_FLAGS}  -DINSTALL_DOCUMENTATION=OFF
 
