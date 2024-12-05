@@ -61,7 +61,7 @@ endmacro(ADD_HPP_PKG)
 
 set(SETUP_DOC_PKG)
 
-add_hpp_pkg(hpp-fcl)
+add_hpp_pkg(coal)
 add_hpp_pkg(hpp-util)
 add_hpp_pkg(hpp-statistics)
 add_hpp_pkg(pinocchio)

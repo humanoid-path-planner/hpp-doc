@@ -16,7 +16,7 @@ version=$1
 
 # Packages to tag
 # pinocchio
-pkg_main="hpp-util hpp-statistics hpp-fcl hpp-pinocchio \
+pkg_main="hpp-util hpp-statistics hpp-pinocchio \
 hpp-constraints hpp-corbaserver hpp-core hpp_tutorial hpp-doc \
 hpp-manipulation hpp-manipulation-corba hpp-manipulation-urdf \
 hpp-gepetto-viewer hpp-gui hpp-plot"

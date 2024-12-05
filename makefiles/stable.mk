@@ -3,7 +3,7 @@
 # Author: Florent Lamiraux
 #
 
-FCL_REPO=https://github.com/flexible-collision-library
+COAL_REPO=https://github.com/coal-library
 LAAS_REPO=https://github.com/laas
 HPP_REPO=https://github.com/humanoid-path-planner
 SOT_REPO=https://github.com/stack-of-tasks
@@ -37,15 +37,15 @@ PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
 ##################################
 # {{{ Dependencies
 
-hpp-fcl_branch=v2.4.5
-hpp-fcl_repository=${HPP_REPO}
-hpp-fcl_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DHPP_FCL_HAS_QHULL=ON ${PYTHON_FLAGS}
+coal_branch=v3.0.0
+coal_repository=${COAL_REPO}
+coal_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DCOAL_HAS_QHULL=ON ${PYTHON_FLAGS} -DCOAL_BACKWARD_COMPATIBILITY_WITH_HPP_FCL=ON
 
-eigenpy_branch=v3.10.0
+eigenpy_branch=v3.10.1
 eigenpy_repository=${SOT_REPO}
 eigenpy_extra_flags=${PYTHON_FLAGS}
 
-pinocchio_branch=v3.2.0
+pinocchio_branch=v3.3.0
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF ${PYTHON_FLAGS}
 
@@ -250,10 +250,10 @@ rbprm: hpp-affordance-corba.install hpp-gepetto-viewer.install
 # {{{ Dependencies declaration
 
 hpp-doc.configure.dep: hpp-doc.checkout
-hpp-fcl.configure.dep: hpp-fcl.checkout
+coal.configure.dep: coal.checkout
 hpp-util.configure.dep: hpp-util.checkout
 eigenpy.configure.dep: eigenpy.checkout
-pinocchio.configure.dep: eigenpy.install hpp-fcl.install pinocchio.checkout
+pinocchio.configure.dep: eigenpy.install coal.install pinocchio.checkout
 hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install hpp-environments.install\
 	hpp-pinocchio.checkout
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
@@ -298,7 +298,7 @@ example-robot-data.configure.dep: pinocchio.install example-robot-data.checkout
 hpp-environments.configure.dep: hpp-environments.checkout
 hpp-baxter.configure.dep: example-robot-data.install hpp-baxter.checkout
 hpp_romeo.configure.dep: hpp_romeo.checkout
-hpp-affordance.configure.dep: hpp-core.install hpp-fcl.install hpp-affordance.checkout
+hpp-affordance.configure.dep: hpp-core.install coal.install hpp-affordance.checkout
 hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
  hpp-corbaserver.install hpp-affordance-corba.checkout
 anymal-rbprm.configure.dep: anymal-rbprm.checkout

@@ -65,7 +65,7 @@ how to use this project.
 \section hpp_doc_algorithms_motion_planning Motion planning
 
 \par Kinematic chain with geometry
-- @hpp-fcl_LINK@: Modified version of Flexible collision library, for collision detection and distance computation,
+- @coal_LINK@: Modified version of Flexible collision library, for collision detection and distance computation,
 - @pinocchio_LINK@: implementation of kinematic chain with dynamic computations,
 - @hpp-pinocchio_LINK@: Interface between pinocchio and hpp-core,
 
