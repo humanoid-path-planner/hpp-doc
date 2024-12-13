@@ -54,7 +54,7 @@ pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUIL
 # {{{ Packages supporting HPP_VERSION
 
 # Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=v5.2.0
+HPP_VERSION=v6.0.0
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
 
 hpp-template-corba_branch=${HPP_VERSION}
@@ -131,7 +131,7 @@ proxsuite_branch = v0.6.7
 proxsuite_repository=${SIMPLE_ROBOTICS_REPO}
 proxsuite_extra_flags= -DBUILD_WITH_VECTORIZATION_SUPPORT=OFF -DBUILD_TESTING=OFF
 
-example-robot-data_branch=devel  # TODO
+example-robot-data_branch=v4.2.0
 example-robot-data_repository=${GEPETTO_REPO}
 example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
 
@@ -196,7 +196,7 @@ hpp-bezier-com-traj_branch=${HPP_VERSION}
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON  ${PYTHON_FLAGS}
 
-ndcurves_branch=v1.4.1
+ndcurves_branch=v2.0.0
 ndcurves_repository=${LOCO3D_REPO}
 ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
 
@@ -204,7 +204,7 @@ ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
 ##################################
 # {{{ Packages for gepetto-gui
 
-gepetto-viewer_branch=${HPP_VERSION}
+gepetto-viewer_branch=v5.2.0
 gepetto-viewer_repository=${GEPETTO_REPO}
 gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF -DINSTALL_DOCUMENTATION=OFF
 
