@@ -28,7 +28,6 @@ variables:
       - set +e
       - chmod u+x $DEVEL_HPP_DIR/test.sh
       - $DEVEL_HPP_DIR/test.sh hpp-util                    || status=1
-      - $DEVEL_HPP_DIR/test.sh hpp-fcl                     || status=1
       - $DEVEL_HPP_DIR/test.sh hpp-pinocchio               || status=1
       - $DEVEL_HPP_DIR/test.sh hpp-statistics              || status=1
       - $DEVEL_HPP_DIR/test.sh hpp-constraints             || status=1
