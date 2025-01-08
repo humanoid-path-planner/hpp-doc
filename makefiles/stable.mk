@@ -85,7 +85,7 @@ hpp-corbaserver_branch=${HPP_VERSION}
 hpp-corbaserver_repository=${HPP_REPO}
 hpp-corbaserver_extra_flags= ${PYTHON_FLAGS}
 
-hpp-python_branch=master
+hpp-python_branch=${HPP_VERSION}
 hpp-python_repository=${HPP_REPO}
 hpp-python_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
 
@@ -204,11 +204,11 @@ ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
 ##################################
 # {{{ Packages for gepetto-gui
 
-gepetto-viewer_branch=v5.2.0
+gepetto-viewer_branch=${HPP_VERSION}
 gepetto-viewer_repository=${GEPETTO_REPO}
 gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF -DINSTALL_DOCUMENTATION=OFF
 
-gepetto-viewer-corba_branch=v5.8.1
+gepetto-viewer-corba_branch=${HPP_VERSION}
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
 gepetto-viewer-corba_extra_flags= ${PYTHON_FLAGS}  -DINSTALL_DOCUMENTATION=OFF
 
