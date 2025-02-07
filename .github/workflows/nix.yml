@@ -2,6 +2,13 @@ name: "CI - Nix"
 
 on:
   push:
+    branches:
+      - devel
+      - stable
+  pull_request:
+    branches:
+      - devel
+      - stable
 
 jobs:
   tests:
