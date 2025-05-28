@@ -33,6 +33,7 @@ GIT_QUIET=--quiet
 QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
 PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
+BUILD_JOBS=8
 
 ##################################
 # {{{ Dependencies
@@ -48,6 +49,7 @@ eigenpy_extra_flags=${PYTHON_FLAGS}
 pinocchio_branch=devel
 pinocchio_repository=${SOT_REPO}
 pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF ${PYTHON_FLAGS}
+pinocchio_jobs=2
 
 # }}}
 ##################################
@@ -84,6 +86,7 @@ hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 hpp-corbaserver_branch=${HPP_VERSION}
 hpp-corbaserver_repository=${HPP_REPO}
 hpp-corbaserver_extra_flags= ${PYTHON_FLAGS}
+hpp-corbaserver_jobs=1
 
 hpp-python_branch=${HPP_VERSION}
 hpp-python_repository=${HPP_REPO}
@@ -102,6 +105,7 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 hpp-manipulation-corba_branch=${HPP_VERSION}
 hpp-manipulation-corba_repository=${HPP_REPO}
 hpp-manipulation-corba_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
+hpp-manipulation-corba_jobs=1
 
 hpp_tutorial_branch=${HPP_VERSION}
 hpp_tutorial_repository=${HPP_REPO}
@@ -164,6 +168,7 @@ hpp-affordance_extra_flags=${HPP_EXTRA_FLAGS}
 hpp-affordance-corba_branch=${HPP_VERSION}
 hpp-affordance-corba_repository=${HPP_REPO}
 hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
+hpp-affordance-corba_jobs=1
 
 anymal-rbprm_branch=${HPP_VERSION}
 anymal-rbprm_repository=${HPP_REPO}
@@ -250,7 +255,7 @@ rbprm: hpp-affordance-corba.install hpp-gepetto-viewer.install
 # {{{ Dependencies declaration
 
 hpp-doc.configure.dep: hpp-doc.checkout
-coal.configure.dep: coal.checkout
+coal.configure.dep: coal.checkout eigenpy.install
 hpp-util.configure.dep: hpp-util.checkout
 eigenpy.configure.dep: eigenpy.checkout
 pinocchio.configure.dep: eigenpy.install coal.install pinocchio.checkout
@@ -283,19 +288,20 @@ hpp_tutorial.configure.dep: hpp-gepetto-viewer.install hpp-python.install \
 	hpp-manipulation-corba.install hpp_tutorial.checkout
 hpp-practicals.configure.dep: hpp-practicals.checkout
 hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
-gepetto-viewer.configure.dep: gepetto-viewer.checkout
+gepetto-viewer.configure.dep: gepetto-viewer.checkout qgv.install
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
 	gepetto-viewer-corba.checkout
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
 	hpp-gepetto-viewer.checkout
-hpp-gui.configure.dep: gepetto-viewer-corba.install hpp-gui.checkout
+hpp-gui.configure.dep: gepetto-viewer-corba.install hpp-gui.checkout \
+	hpp-corbaserver.install hpp-manipulation-corba.install coal.install
 universal_robot.configure.dep: universal_robot.checkout
 hpp-universal-robot.configure.dep: example-robot-data.install \
 	hpp-universal-robot.checkout
 proxsuite.configure.dep: proxsuite.checkout
 example-robot-data.configure.dep: pinocchio.install example-robot-data.checkout
-hpp-environments.configure.dep: hpp-environments.checkout
+hpp-environments.configure.dep: hpp-environments.checkout example-robot-data.install
 hpp-baxter.configure.dep: example-robot-data.install hpp-baxter.checkout
 hpp_romeo.configure.dep: hpp_romeo.checkout
 hpp-affordance.configure.dep: hpp-core.install coal.install hpp-affordance.checkout
@@ -349,6 +355,13 @@ update:
 		${MAKE} "$$child_dir".update; \
 	done
 
+test:
+	@for child_dir in $$(ls ${SRC_DIR}); do \
+		test -d "$$child_dir" || continue; \
+		test -d "$$child_dir/.git" || continue; \
+		${MAKE} "$$child_dir".test; \
+	done
+
 %.checkout:
 	if [ -d $(@:.checkout=) ]; then \
 		echo "$(@:.checkout=) already checkout out."; \
@@ -395,7 +408,13 @@ update:
 			-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" \
 			${$(@:.configure_nodep=)_extra_flags} ..
 
-%.install:%.configure
+%.build:%.configure
+	${MAKE} -C ${SRC_DIR}/$(@:.build=)/${BUILD_FOLDER} -j $(or $($(@:.build=)_jobs),${BUILD_JOBS})
+
+%.test:%.build
+	${MAKE} -C ${SRC_DIR}/$(@:.test=)/${BUILD_FOLDER} test
+
+%.install:%.build
 	${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install
 
 %.install_nodep:%.configure_nodep
