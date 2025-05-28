@@ -2,6 +2,7 @@ variables:
     GIT_SUBMODULE_STRATEGY: "recursive"
     DEVEL_HPP_DIR: "/workspace"
     BUILD_TYPE: "Release"
+    CTEST_OUTPUT_ON_FAILURE: 1
 
 .build_template: &build_definition
     stage: build
@@ -17,13 +18,29 @@ variables:
       paths:
         - workspace
 
+.build_template_nix: &build_definition_nix
+    stage: build
+    script:
+      - cachix use gepetto
+      - mkdir -p $DEVEL_HPP_DIR/src
+      - export INSTALL_DOCUMENTATION=OFF
+      - cp makefiles/${CI_COMMIT_REF_NAME}.mk $DEVEL_HPP_DIR/src/Makefile
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix/hpp#hpp --command make -C src test-ci
+    after_script:
+      - mv $DEVEL_HPP_DIR $CI_PROJECT_DIR
+    artifacts:
+      expire_in: 1 day
+      when: always
+      paths:
+        - workspace
+
 .test_template: &test_definition
     stage: test
     script:
       - rm -rf /workspace
       - mv workspace /
       - status=0
-      - echo -e "#!/bin/bash\nsource $DEVEL_HPP_DIR/config.sh\ncd $DEVEL_HPP_DIR/src/\$1/build-rel && make CTEST_OUTPUT_ON_FAILURE=1 test" > $DEVEL_HPP_DIR/test.sh || status=1
+      - echo -e "#!/bin/bash\nsource $DEVEL_HPP_DIR/config.sh\ncd $DEVEL_HPP_DIR/src/\$1/build-rel && make test" > $DEVEL_HPP_DIR/test.sh || status=1
       - cat $DEVEL_HPP_DIR/test.sh
       - set +e
       - chmod u+x $DEVEL_HPP_DIR/test.sh
@@ -38,6 +55,33 @@ variables:
       - $DEVEL_HPP_DIR/test.sh hpp-manipulation-corba      || status=1
       #- $DEVEL_HPP_DIR/test.sh hpp-rbprm                   || status=1
       #- $DEVEL_HPP_DIR/test.sh hpp-rbprm-corba             || status=1
+      - set -e
+      - exit $status
+    after_script:
+      - mv $DEVEL_HPP_DIR $CI_PROJECT_DIR
+    artifacts:
+      expire_in: 1 day
+      when: always
+      paths:
+        - workspace
+
+.test_template_nix: &test_definition_nix
+    stage: test
+    script:
+      - rm -rf /workspace
+      - mv workspace /
+      - status=0
+      - make hpp-util.test                    || status=1
+      - make hpp-pinocchio.test               || status=1
+      - make hpp-statistics.test              || status=1
+      - make hpp-constraints.test             || status=1
+      - make hpp-core.test                    || status=1
+      - make hpp-corbaserver.test             || status=1
+      - make hpp-manipulation.test            || status=1
+      - make hpp-manipulation-urdf.test       || status=1
+      - make hpp-manipulation-corba.test      || status=1
+      #- make hpp-rbprm.test                   || status=1
+      #- make hpp-rbprm-corba.test             || status=1
       - set -e
       - exit $status
     after_script:
@@ -80,11 +124,11 @@ stable-22.04-build:
       - stable
     <<: *build_definition
 
-stable-20.04-build:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
+stable-nix-build:
+    image: nixpkgs/cachix-flakes
     only:
       - stable
-    <<: *build_definition
+    <<: *build_definition_nix
 
 devel-24.04-build:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
@@ -98,11 +142,11 @@ devel-22.04-build:
       -  devel
     <<: *build_definition
 
-devel-20.04-build:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
+devel-nix-build:
+    image: nixpkgs/cachix-flakes
     only:
       -  devel
-    <<: *build_definition
+    <<: *build_definition_nix
 
 stable-24.04-test:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
@@ -120,13 +164,13 @@ stable-22.04-test:
       - stable
     <<: *test_definition
 
-stable-20.04-test:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
+stable-nix-test:
+    image: nixpkgs/cachix-flakes
     dependencies:
-      - stable-20.04-build
+      - stable-nix-build
     only:
       - stable
-    <<: *test_definition
+    <<: *test_definition_nix
 
 devel-24.04-test:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
@@ -144,13 +188,13 @@ devel-22.04-test:
       -  devel
     <<: *test_definition
 
-devel-20.04-test:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
+devel-nix-test:
+    image: nixpkgs/cachix-flakes
     dependencies:
-      - devel-20.04-build
+      - devel-nix-build
     only:
       -  devel
-    <<: *test_definition
+    <<: *test_definition_nix
 
 stable-24.04-doc:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
@@ -168,13 +212,13 @@ stable-22.04-doc:
       - stable
     <<: *doc_definition
 
-stable-20.04-doc:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
-    dependencies:
-      - stable-20.04-build
-    only:
-      - stable
-    <<: *doc_definition
+#stable-nix-doc:
+#    image: nixpkgs/cachix-flakes
+#    dependencies:
+#      - stable-nix-build
+#    only:
+#      - stable
+#    <<: *doc_definition_nix
 
 devel-24.04-doc:
     image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:24.04
@@ -192,10 +236,10 @@ devel-22.04-doc:
       -  devel
     <<: *doc_definition
 
-devel-20.04-doc:
-    image: gitlab.laas.fr:4567/humanoid-path-planner/hpp-doc:20.04
-    dependencies:
-      - devel-20.04-build
-    only:
-      -  devel
-    <<: *doc_definition
+#devel-nix-doc:
+#    image: nixpkgs/cachix-flakes
+#    dependencies:
+#      - devel-nix-build
+#    only:
+#      -  devel
+#    <<: *doc_definition_nix
