@@ -16,7 +16,7 @@ To compile all the packages in a Nix devShell, you should do the following steps
     direnv allow
     ```
 
-    (if you don't want to use nix-direnv, `nix develop github:gepetto/nix#hpp` 
+    (if you don't want to use nix-direnv, `nix develop github:gepetto/nix#hpp`
     would also work, but you would have to type that in every shell)
 
     This will define `$DEVEL_HPP_DIR` environment variable to the current working directory.
