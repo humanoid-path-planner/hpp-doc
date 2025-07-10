@@ -273,6 +273,7 @@ hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
 hpp-corbaserver.configure.dep: hpp-core.install hpp-template-corba.install \
 	hpp-constraints.install hpp-corbaserver.checkout
 hpp-python.configure.dep: eigenpy.install hpp-corbaserver.install \
+	hpp-manipulation.install hpp-manipulation-urdf.install \
 	hpp-python.checkout
 hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
 qgv.configure.dep: qgv.checkout
