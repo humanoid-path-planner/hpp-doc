@@ -2,11 +2,11 @@
 
 To open a Nix devShell with all HPP packages already compiled, you can:
 
-  1. (Optional but recommended. Already done on LAAS computers.) 
+  1. (Optional but recommended. Already done on LAAS computers.)
 
      Setup [direnv](https://direnv.net/) with [nix-direnv](https://github.com/nix-community/nix-direnv/)
 
-  2. (Optional but recommended. Already done on LAAS computers.) 
+  2. (Optional but recommended. Already done on LAAS computers.)
 
      Setup Gepetto Nix Binary cache: [gepetto.cachix.org](https://app.cachix.org/cache/gepetto)
 

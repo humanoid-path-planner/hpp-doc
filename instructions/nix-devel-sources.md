@@ -2,11 +2,11 @@
 
 To compile all the packages in a Nix devShell, you should do the following steps:
 
-  1. (Optional but recommended. Already done on LAAS computers.) 
+  1. (Optional but recommended. Already done on LAAS computers.)
 
      Setup [direnv](https://direnv.net/) with [nix-direnv](https://github.com/nix-community/nix-direnv/)
 
-  2. (Optional but recommended. Already done on LAAS computers.) 
+  2. (Optional but recommended. Already done on LAAS computers.)
 
      Setup Gepetto Nix Binary cache: [gepetto.cachix.org](https://app.cachix.org/cache/gepetto)
 
