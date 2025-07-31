@@ -232,9 +232,10 @@ all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-gui.in
 	${MAKE} hpp-doc.install
 
 # For test on gepgitlab, install robot packages first
+# TODO: add hpp-affordance-corba.install back after next coal relse
 test-ci: example-robot-data.install  hpp-environments.install \
 	hpp-baxter.install
-	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install hpp-affordance-corba.install \
+	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install \
 	hpp-universal-robot.install && \
 	${MAKE} hpp-doc.install
 
