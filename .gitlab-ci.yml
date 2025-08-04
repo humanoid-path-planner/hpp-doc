@@ -25,7 +25,7 @@ variables:
       - mkdir -p $DEVEL_HPP_DIR/src
       - export INSTALL_DOCUMENTATION=OFF
       - cp makefiles/${CI_COMMIT_REF_NAME}.mk $DEVEL_HPP_DIR/src/Makefile
-      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix/hpp#hpp --command make -C src test-ci
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src test-ci
     after_script:
       - mv $DEVEL_HPP_DIR $CI_PROJECT_DIR
     artifacts:
