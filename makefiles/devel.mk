@@ -51,7 +51,7 @@ eigenpy_repository=${SOT_REPO}
 # TODO: back to devel after https://github.com/stack-of-tasks/pinocchio/pull/2714
 pinocchio_branch=only-py
 pinocchio_repository=https://github.com/nim65s
-pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF
+pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF
 pinocchio_jobs=2
 
 # }}}
