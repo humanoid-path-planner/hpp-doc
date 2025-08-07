@@ -264,7 +264,7 @@ jrl-cmakemodules.configure.dep: jrl-cmakemodules.checkout
 coal.configure.dep: coal.checkout eigenpy.install
 hpp-util.configure.dep: hpp-util.checkout
 eigenpy.configure.dep: eigenpy.checkout jrl-cmakemodules.install
-pinocchio.configure.dep: eigenpy.install coal.install pinocchio.checkout jrl-cmakemodules.install
+pinocchio.configure.dep: eigenpy.install coal.install pinocchio.checkout jrl-cmakemodules.install example-robot-data.install
 hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install hpp-environments.install\
 	hpp-pinocchio.checkout jrl-cmakemodules.install
 hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout jrl-cmakemodules.install
