@@ -259,7 +259,8 @@ eigenpy.configure.dep: eigenpy.checkout \
 coal.configure.dep: coal.checkout
 coal.configure-py.dep: coal.install \
 	eigenpy.install
-hpp-util.configure.dep: hpp-util.checkout
+hpp-util.configure.dep: hpp-util.checkout \
+	jrl-cmakemodules.install
 pinocchio.configure.dep: pinocchio.checkout \
 	coal.install example-robot-data.install
 pinocchio.configure-py.dep: pinocchio.install \
