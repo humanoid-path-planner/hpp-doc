@@ -10,6 +10,7 @@ SOT_REPO=https://github.com/stack-of-tasks
 GEPETTO_REPO=https://github.com/Gepetto
 LOCO3D_REPO=https://github.com/loco-3d
 SIMPLE_ROBOTICS_REPO=https://github.com/Simple-Robotics
+JRL_REPO=https://github.com/jrl-umi3218
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
 ifndef INSTALL_HPP_DIR
@@ -37,6 +38,9 @@ BUILD_JOBS=4
 
 ##################################
 # {{{ Dependencies
+
+jrl-cmakemodules_branch=v1.0.0
+jrl-cmakemodules_repository=${JRL_REPO}
 
 coal_branch=v3.0.1
 coal_repository=${COAL_REPO}
@@ -255,74 +259,77 @@ rbprm: hpp-affordance-corba.install hpp-gepetto-viewer.install
 # {{{ Dependencies declaration
 
 hpp-doc.configure.dep: hpp-doc.checkout
+jrl-cmakemodules.configure.dep: jrl-cmakemodules.checkout
 coal.configure.dep: coal.checkout eigenpy.install
 hpp-util.configure.dep: hpp-util.checkout
-eigenpy.configure.dep: eigenpy.checkout
-pinocchio.configure.dep: eigenpy.install coal.install pinocchio.checkout
+eigenpy.configure.dep: eigenpy.checkout jrl-cmakemodules.install
+pinocchio.configure.dep: eigenpy.install coal.install pinocchio.checkout jrl-cmakemodules.install
 hpp-pinocchio.configure.dep: pinocchio.install hpp-util.install hpp-environments.install\
-	hpp-pinocchio.checkout
-hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout
+	hpp-pinocchio.checkout jrl-cmakemodules.install
+hpp-statistics.configure.dep: hpp-util.install hpp-statistics.checkout jrl-cmakemodules.install
 hpp-core.configure.dep: example-robot-data.install proxsuite.install \
-	hpp-constraints.install hpp-statistics.install hpp-core.checkout
+	hpp-constraints.install hpp-statistics.install hpp-core.checkout jrl-cmakemodules.install
 hpp-constraints.configure.dep: hpp-pinocchio.install hpp-statistics.install \
-	hpp-environments.install hpp-constraints.checkout
+	hpp-environments.install hpp-constraints.checkout jrl-cmakemodules.install
 hpp-manipulation.configure.dep: hpp-core.install hpp-constraints.install \
-	hpp-manipulation.checkout
+	hpp-manipulation.checkout jrl-cmakemodules.install
 hpp-manipulation-corba.configure.dep: hpp-manipulation-urdf.install \
 	hpp-manipulation.install hpp-corbaserver.install \
-	hpp-template-corba.install hpp-manipulation-corba.checkout
+	hpp-template-corba.install hpp-manipulation-corba.checkout jrl-cmakemodules.install
 hpp-plot.configure.dep: hpp-corbaserver.install hpp-manipulation-corba.install \
-	qgv.install hpp-plot.checkout
+	qgv.install hpp-plot.checkout jrl-cmakemodules.install
 hpp-manipulation-urdf.configure.dep:hpp-manipulation.install \
-	hpp-manipulation-urdf.checkout
+	hpp-manipulation-urdf.checkout jrl-cmakemodules.install
 hpp-corbaserver.configure.dep: hpp-core.install hpp-template-corba.install \
-	hpp-constraints.install hpp-corbaserver.checkout
+	hpp-constraints.install hpp-corbaserver.checkout jrl-cmakemodules.install
 hpp-python.configure.dep: eigenpy.install hpp-corbaserver.install \
 	hpp-manipulation.install hpp-manipulation-urdf.install \
-	hpp-python.checkout
-hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout
-qgv.configure.dep: qgv.checkout
+	hpp-python.checkout jrl-cmakemodules.install
+hpp-template-corba.configure.dep: hpp-util.install hpp-template-corba.checkout jrl-cmakemodules.install
+qgv.configure.dep: qgv.checkout jrl-cmakemodules.install
 robot_model_py.configure.dep: robot_model_py.checkout
 robot_capsule_urdf.configure.dep: robot_model_py.install \
 	robot_capsule_urdf.checkout
 hpp_tutorial.configure.dep: hpp-gepetto-viewer.install hpp-python.install \
-	hpp-manipulation-corba.install hpp_tutorial.checkout
-hpp-practicals.configure.dep: hpp-practicals.checkout
-hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout
-gepetto-viewer.configure.dep: gepetto-viewer.checkout qgv.install
+	hpp-manipulation-corba.install hpp_tutorial.checkout jrl-cmakemodules.install
+hpp-practicals.configure.dep: hpp-practicals.checkout jrl-cmakemodules.install
+hpp_benchmark.configure.dep: hpp_tutorial.install hpp_benchmark.checkout jrl-cmakemodules.install
+gepetto-viewer.configure.dep: gepetto-viewer.checkout qgv.install jrl-cmakemodules.install
 gepetto-viewer-corba.configure.dep: gepetto-viewer.install \
-	gepetto-viewer-corba.checkout
+	gepetto-viewer-corba.checkout jrl-cmakemodules.install
 hpp-gepetto-viewer.configure.dep: gepetto-viewer-corba.install \
 	hpp-corbaserver.install \
-	hpp-gepetto-viewer.checkout
+	hpp-gepetto-viewer.checkout jrl-cmakemodules.install
 hpp-gui.configure.dep: gepetto-viewer-corba.install hpp-gui.checkout \
-	hpp-corbaserver.install hpp-manipulation-corba.install coal.install
+	hpp-corbaserver.install hpp-manipulation-corba.install coal.install jrl-cmakemodules.install
 universal_robot.configure.dep: universal_robot.checkout
 hpp-universal-robot.configure.dep: example-robot-data.install \
-	hpp-universal-robot.checkout
-proxsuite.configure.dep: proxsuite.checkout
-example-robot-data.configure.dep: pinocchio.install example-robot-data.checkout
-hpp-environments.configure.dep: hpp-environments.checkout example-robot-data.install
-hpp-baxter.configure.dep: example-robot-data.install hpp-baxter.checkout
-hpp_romeo.configure.dep: hpp_romeo.checkout
-hpp-affordance.configure.dep: hpp-core.install coal.install hpp-affordance.checkout
+	hpp-universal-robot.checkout jrl-cmakemodules.install
+proxsuite.configure.dep: proxsuite.checkout jrl-cmakemodules.install
+example-robot-data.configure.dep: pinocchio.install example-robot-data.checkout jrl-cmakemodules.install
+hpp-environments.configure.dep: hpp-environments.checkout example-robot-data.install jrl-cmakemodules.install
+hpp-baxter.configure.dep: example-robot-data.install hpp-baxter.checkout jrl-cmakemodules.install
+hpp_romeo.configure.dep: hpp_romeo.checkout jrl-cmakemodules.install
+hpp-affordance.configure.dep: hpp-core.install coal.install hpp-affordance.checkout jrl-cmakemodules.install
 hpp-affordance-corba.configure.dep: hpp-affordance.install hpp-template-corba.install \
- hpp-corbaserver.install hpp-affordance-corba.checkout
-anymal-rbprm.configure.dep: anymal-rbprm.checkout
-hyq-rbprm.configure.dep: hyq-rbprm.checkout
-simple-humanoid-rbprm.configure.dep: simple-humanoid-rbprm.checkout
-solo-rbprm.configure.dep: solo-rbprm.checkout
-talos-rbprm.configure.dep: talos-rbprm.checkout
+ hpp-corbaserver.install hpp-affordance-corba.checkout jrl-cmakemodules.install
+anymal-rbprm.configure.dep: anymal-rbprm.checkout jrl-cmakemodules.install
+hyq-rbprm.configure.dep: hyq-rbprm.checkout jrl-cmakemodules.install
+simple-humanoid-rbprm.configure.dep: simple-humanoid-rbprm.checkout jrl-cmakemodules.install
+solo-rbprm.configure.dep: solo-rbprm.checkout jrl-cmakemodules.install
+talos-rbprm.configure.dep: talos-rbprm.checkout jrl-cmakemodules.install
 hpp-rbprm.configure.dep: hpp-core.install hpp-centroidal-dynamics.install \
-	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install simple-humanoid-rbprm.install solo-rbprm.install \
+	anymal-rbprm.install hyq-rbprm.install talos-rbprm.install \
+	simple-humanoid-rbprm.install solo-rbprm.install \
 	hpp-affordance.install ndcurves.install \
-	hpp-bezier-com-traj.install hpp-rbprm.checkout
+	hpp-bezier-com-traj.install hpp-rbprm.checkout jrl-cmakemodules.install
 hpp-rbprm-corba.configure.dep: hpp-rbprm.install hpp-affordance-corba.install \
- hpp-corbaserver.install hpp-rbprm-corba.checkout
-hpp-centroidal-dynamics.configure.dep: hpp-centroidal-dynamics.checkout
-hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install ndcurves.install hpp-bezier-com-traj.checkout
-ndcurves.configure.dep: ndcurves.checkout
-hpp-tools.configure.dep: hpp-tools.checkout
+ hpp-corbaserver.install hpp-rbprm-corba.checkout jrl-cmakemodules.install
+hpp-centroidal-dynamics.configure.dep: hpp-centroidal-dynamics.checkout jrl-cmakemodules.install
+hpp-bezier-com-traj.configure.dep: hpp-centroidal-dynamics.install ndcurves.install \
+	hpp-bezier-com-traj.checkout jrl-cmakemodules.install
+ndcurves.configure.dep: ndcurves.checkout jrl-cmakemodules.install
+hpp-tools.configure.dep: hpp-tools.checkout jrl-cmakemodules.install
 
 # }}}
 ##################################
