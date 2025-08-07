@@ -32,18 +32,18 @@ TAR=tar
 GIT_QUIET=--quiet
 # Qt version should be either 4 or 5
 QT_VERSION=5
-INSTALL_DOCUMENTATION=ON
+INSTALL_DOCUMENTATION=OFF
 BUILD_JOBS=4
 
 ##################################
 # {{{ Dependencies
 
-jrl-cmakemodules_branch=master
-jrl-cmakemodules_repository=${JRL_REPO}
+jrl-cmakemodules_branch=keep-install
+jrl-cmakemodules_repository=https://github.com/nim65s
 
 coal_branch=devel
 coal_repository=${COAL_REPO}
-coal_extra_flags= -DCOAL_HAS_QHULL=ON -DCOAL_BACKWARD_COMPATIBILITY_WITH_HPP_FCL=ON
+coal_extra_flags= -DCOAL_HAS_QHULL=ON -DCOAL_BACKWARD_COMPATIBILITY_WITH_HPP_FCL=ON -DINSTALL_DOCUMENTATION=OFF -DCOAL_DISABLE_HPP_FCL_WARNINGS=ON
 
 eigenpy_branch=devel
 eigenpy_repository=${SOT_REPO}
