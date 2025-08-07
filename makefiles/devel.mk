@@ -456,40 +456,40 @@ test:
 
 
 %.build:%.configure
-	${MAKE} -C ${SRC_DIR}/$(@:.build=)/${BUILD_FOLDER} -j $(or $($(@:.build=)_jobs),${BUILD_JOBS})
+	cmake --build ${SRC_DIR}/$(@:.build=)/${BUILD_FOLDER} -j $(or $($(@:.build=)_jobs),${BUILD_JOBS})
 
 %.build-py:%.configure-py
-	${MAKE} -C ${SRC_DIR}/$(@:.build-py=)/${BUILD_FOLDER}-py -j $(or $($(@:.build-py=)_jobs),${BUILD_JOBS})
+	cmake --build ${SRC_DIR}/$(@:.build-py=)/${BUILD_FOLDER}-py -j $(or $($(@:.build-py=)_jobs),${BUILD_JOBS})
 
 %.test:%.build
-	${MAKE} -C ${SRC_DIR}/$(@:.test=)/${BUILD_FOLDER} test
+	cmake --build ${SRC_DIR}/$(@:.test=)/${BUILD_FOLDER} -t test
 
 %.test-py:%.build-py
-	${MAKE} -C ${SRC_DIR}/$(@:.test-py=)/${BUILD_FOLDER}-py test
+	cmake --build ${SRC_DIR}/$(@:.test-py=)/${BUILD_FOLDER}-py -t test
 
 %.install:%.build
-	${MAKE} -C ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} install
+	cmake --build ${SRC_DIR}/$(@:.install=)/${BUILD_FOLDER} -t install
 
 %.install-py:%.build-py
-	${MAKE} -C ${SRC_DIR}/$(@:.install-py=)/${BUILD_FOLDER}-py install
+	cmake --build ${SRC_DIR}/$(@:.install-py=)/${BUILD_FOLDER}-py -t install
 
 %.install_nodep:%.configure_nodep
-	${MAKE} -C ${SRC_DIR}/$(@:.install_nodep=)/${BUILD_FOLDER} install
+	cmake --build ${SRC_DIR}/$(@:.install_nodep=)/${BUILD_FOLDER} -t install
 
 %.install_nodep-py:%.configure_nodep-py
-	${MAKE} -C ${SRC_DIR}/$(@:.install_nodep-py=)/${BUILD_FOLDER}-py install
+	cmake --build ${SRC_DIR}/$(@:.install_nodep-py=)/${BUILD_FOLDER}-py -t install
 
 %.uninstall:
-	${MAKE} -C ${SRC_DIR}/$(@:.uninstall=)/${BUILD_FOLDER} uninstall
+	cmake --build ${SRC_DIR}/$(@:.uninstall=)/${BUILD_FOLDER} -t uninstall
 
 %.uninstall-py:
-	${MAKE} -C ${SRC_DIR}/$(@:.uninstall-py=)/${BUILD_FOLDER}-py uninstall
+	cmake --build ${SRC_DIR}/$(@:.uninstall-py=)/${BUILD_FOLDER}-py -t uninstall
 
 %.clean:
-	${MAKE} -C ${SRC_DIR}/$(@:.clean=)/${BUILD_FOLDER} clean
+	cmake --build ${SRC_DIR}/$(@:.clean=)/${BUILD_FOLDER} -t clean
 
 %.clean-py:
-	${MAKE} -C ${SRC_DIR}/$(@:.clean-py=)/${BUILD_FOLDER}-py clean
+	cmake --build ${SRC_DIR}/$(@:.clean-py=)/${BUILD_FOLDER}-py -t clean
 
 %.very-clean:
 	rm -rf ${SRC_DIR}/$(@:.very-clean=)/${BUILD_FOLDER}/*
