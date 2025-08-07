@@ -33,7 +33,6 @@ GIT_QUIET=--quiet
 # Qt version should be either 4 or 5
 QT_VERSION=5
 INSTALL_DOCUMENTATION=ON
-PYTHON_FLAGS=-DPYTHON_STANDARD_LAYOUT=ON
 BUILD_JOBS=4
 
 ##################################
@@ -44,15 +43,14 @@ jrl-cmakemodules_repository=${JRL_REPO}
 
 coal_branch=v3.0.1
 coal_repository=${COAL_REPO}
-coal_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DCOAL_HAS_QHULL=ON ${PYTHON_FLAGS} -DCOAL_BACKWARD_COMPATIBILITY_WITH_HPP_FCL=ON
+coal_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DCOAL_HAS_QHULL=ON -DCOAL_BACKWARD_COMPATIBILITY_WITH_HPP_FCL=ON
 
 eigenpy_branch=v3.11.0
 eigenpy_repository=${SOT_REPO}
-eigenpy_extra_flags=${PYTHON_FLAGS}
 
 pinocchio_branch=v3.7.0
 pinocchio_repository=${SOT_REPO}
-pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF ${PYTHON_FLAGS}
+pinocchio_extra_flags= -DBUILD_PYTHON_INTERFACE=ON -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF
 pinocchio_jobs=2
 
 # }}}
@@ -65,7 +63,6 @@ HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
 
 hpp-template-corba_branch=${HPP_VERSION}
 hpp-template-corba_repository=${HPP_REPO}
-hpp-template-corba_extra_flags= ${PYTHON_FLAGS}
 
 hpp-util_branch=${HPP_VERSION}
 hpp-util_repository=${HPP_REPO}
@@ -89,12 +86,11 @@ hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-corbaserver_branch=${HPP_VERSION}
 hpp-corbaserver_repository=${HPP_REPO}
-hpp-corbaserver_extra_flags= ${PYTHON_FLAGS}
 hpp-corbaserver_jobs=1
 
 hpp-python_branch=${HPP_VERSION}
 hpp-python_repository=${HPP_REPO}
-hpp-python_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
+hpp-python_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-doc_branch=stable
 hpp-doc_repository=${HPP_REPO}
@@ -108,20 +104,20 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 
 hpp-manipulation-corba_branch=${HPP_VERSION}
 hpp-manipulation-corba_repository=${HPP_REPO}
-hpp-manipulation-corba_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
+hpp-manipulation-corba_extra_flags=${HPP_EXTRA_FLAGS}
 hpp-manipulation-corba_jobs=1
 
 hpp_tutorial_branch=${HPP_VERSION}
 hpp_tutorial_repository=${HPP_REPO}
-hpp_tutorial_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
+hpp_tutorial_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-practicals_branch=${HPP_VERSION}
 hpp-practicals_repository=${HPP_REPO}
-hpp-practicals_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
+hpp-practicals_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-gepetto-viewer_branch=${HPP_VERSION}
 hpp-gepetto-viewer_repository=${HPP_REPO}
-hpp-gepetto-viewer_extra_flags= ${PYTHON_FLAGS} -DINSTALL_DOCUMENTATION=OFF
+hpp-gepetto-viewer_extra_flags= -DINSTALL_DOCUMENTATION=OFF
 
 hpp-plot_branch=${HPP_VERSION}
 hpp-plot_repository=${HPP_REPO}
@@ -129,7 +125,7 @@ hpp-plot_extra_flags=  -DINSTALL_DOCUMENTATION=OFF
 
 hpp-gui_branch=${HPP_VERSION}
 hpp-gui_repository=${HPP_REPO}
-hpp-gui_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS} -DINSTALL_DOCUMENTATION=OFF
+hpp-gui_extra_flags=${HPP_EXTRA_FLAGS} -DINSTALL_DOCUMENTATION=OFF
 
 # }}}
 ##################################
@@ -141,25 +137,22 @@ proxsuite_extra_flags= -DBUILD_WITH_VECTORIZATION_SUPPORT=OFF -DBUILD_TESTING=OF
 
 example-robot-data_branch=v4.3.0
 example-robot-data_repository=${GEPETTO_REPO}
-example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
+example-robot-data_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
 hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
 
 hpp-environments_branch=${HPP_VERSION}
 hpp-environments_repository=${HPP_REPO}
-hpp-environments_extra_flags= ${PYTHON_FLAGS}
 
 hpp-universal-robot_branch=${HPP_VERSION}
 hpp-universal-robot_repository=${HPP_REPO}
 
 hpp-baxter_branch=${HPP_VERSION}
 hpp-baxter_repository=${HPP_REPO}
-hpp-baxter_extra_flags= ${PYTHON_FLAGS}
 
 hpp_romeo_branch=${HPP_VERSION}
 hpp_romeo_repository=${HPP_REPO}
-hpp_romeo_extra_flags=${PYTHON_FLAGS}
 
 # }}}
 ##################################
@@ -171,7 +164,7 @@ hpp-affordance_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-affordance-corba_branch=${HPP_VERSION}
 hpp-affordance-corba_repository=${HPP_REPO}
-hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS} ${PYTHON_FLAGS}
+hpp-affordance-corba_extra_flags=${HPP_EXTRA_FLAGS}
 hpp-affordance-corba_jobs=1
 
 anymal-rbprm_branch=${HPP_VERSION}
@@ -188,7 +181,6 @@ solo-rbprm_repository=${HPP_REPO}
 
 talos-rbprm_branch=${HPP_VERSION}
 talos-rbprm_repository=${HPP_REPO}
-talos-rbprm_extra_flags= ${PYTHON_FLAGS}
 
 hpp-rbprm_branch=${HPP_VERSION}
 hpp-rbprm_repository=${HPP_REPO}
@@ -196,18 +188,18 @@ hpp-rbprm_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-rbprm-corba_branch=${HPP_VERSION}
 hpp-rbprm-corba_repository=${HPP_REPO}
-hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}  ${PYTHON_FLAGS}
+hpp-rbprm-corba_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-centroidal-dynamics_branch=${HPP_VERSION}
 hpp-centroidal-dynamics_repository=${HPP_REPO}
 
 hpp-bezier-com-traj_branch=${HPP_VERSION}
 hpp-bezier-com-traj_repository=${HPP_REPO}
-hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON  ${PYTHON_FLAGS}
+hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
 ndcurves_branch=v2.0.0
 ndcurves_repository=${LOCO3D_REPO}
-ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON ${PYTHON_FLAGS}
+ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
 # }}}
 ##################################
@@ -219,7 +211,7 @@ gepetto-viewer_extra_flags= -DPROJECT_USE_QT4=OFF -DINSTALL_DOCUMENTATION=OFF
 
 gepetto-viewer-corba_branch=${HPP_VERSION}
 gepetto-viewer-corba_repository=${GEPETTO_REPO}
-gepetto-viewer-corba_extra_flags= ${PYTHON_FLAGS}  -DINSTALL_DOCUMENTATION=OFF
+gepetto-viewer-corba_extra_flags= -DINSTALL_DOCUMENTATION=OFF
 
 qgv_branch=v1.3.5
 qgv_repository=${GEPETTO_REPO}
