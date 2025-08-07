@@ -100,7 +100,7 @@ foreach(PKG ${SETUP_DOC_PKG})
     if(DEFINED ${PKG}_giturl)
       set(STEPS
           "${STEPS}\\li get the source code through \\c git:
-\\code git clone --recursive ${${PKG}_giturl} \\endcode
+\\code git clone ${${PKG}_giturl} \\endcode
 Then configure, compile and install the package.\n")
     endif(DEFINED ${PKG}_giturl)
     if(DEFINED ${PKG}_robotpkg_package)
