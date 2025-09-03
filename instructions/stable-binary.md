@@ -22,7 +22,7 @@ To install all the packages on ubuntu 24.04 LTS 64 bit, you should do the follow
     - Tutorials:
 
       ```bash
-      sudo apt-get install robotpkg-py${pyver}-hpp-tutorial robotpkg-${pyver}-qt5-hpp-practicals
+      sudo apt-get install robotpkg-py${pyver}-hpp-tutorial robotpkg-py${pyver}-qt5-hpp-practicals
       ```
 
     - GUI:
