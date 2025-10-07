@@ -38,8 +38,8 @@ BUILD_JOBS=4
 ##################################
 # {{{ Dependencies
 
-jrl-cmakemodules_branch=keep-install
-jrl-cmakemodules_repository=https://github.com/nim65s
+jrl-cmakemodules_branch=master
+jrl-cmakemodules_repository=${JRL_REPO}
 
 coal_branch=devel
 coal_repository=${COAL_REPO}
@@ -48,10 +48,9 @@ coal_extra_flags= -DCOAL_HAS_QHULL=ON -DCOAL_BACKWARD_COMPATIBILITY_WITH_HPP_FCL
 eigenpy_branch=devel
 eigenpy_repository=${SOT_REPO}
 
-# TODO: back to devel after https://github.com/stack-of-tasks/pinocchio/pull/2714
-pinocchio_branch=only-py
-pinocchio_repository=https://github.com/nim65s
-pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF
+pinocchio_branch=devel
+pinocchio_repository=${SOT_REPO}
+pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF -DCOAL_DISABLE_HPP_FCL_WARNINGS=ON
 pinocchio_jobs=2
 
 # }}}
@@ -60,7 +59,7 @@ pinocchio_jobs=2
 
 # Either a version tag (e.g. v4.3.0), stable or devel
 HPP_VERSION=devel
-HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING}
+HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING} -DAUTO_UNINSTALL=OFF
 
 hpp-template-corba_branch=${HPP_VERSION}
 hpp-template-corba_repository=${HPP_REPO}
@@ -135,9 +134,8 @@ proxsuite_branch = devel
 proxsuite_repository=${SIMPLE_ROBOTICS_REPO}
 proxsuite_extra_flags= -DBUILD_WITH_VECTORIZATION_SUPPORT=OFF -DBUILD_TESTING=OFF
 
-# TODO: back to devel after https://github.com/Gepetto/example-robot-data/pull/304
-example-robot-data_branch=only-py
-example-robot-data_repository=https://github.com/nim65s
+example-robot-data_branch=devel
+example-robot-data_repository=${GEPETTO_REPO}
 
 hpp_benchmark_branch=devel
 hpp_benchmark_repository=${HPP_REPO}
@@ -197,7 +195,7 @@ hpp-bezier-com-traj_branch=${HPP_VERSION}
 hpp-bezier-com-traj_repository=${HPP_REPO}
 hpp-bezier-com-traj_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
-ndcurves_branch=${HPP_VERSION}
+ndcurves_branch=devel
 ndcurves_repository=${LOCO3D_REPO}
 ndcurves_extra_flags= -DBUILD_PYTHON_INTERFACE=ON
 
