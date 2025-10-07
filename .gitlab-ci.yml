@@ -68,20 +68,21 @@ variables:
 .test_template_nix: &test_definition_nix
     stage: test
     script:
+      - cachix use gepetto
       - rm -rf /workspace
       - mv workspace /
       - status=0
-      - make hpp-util.test                    || status=1
-      - make hpp-pinocchio.test               || status=1
-      - make hpp-statistics.test              || status=1
-      - make hpp-constraints.test             || status=1
-      - make hpp-core.test                    || status=1
-      - make hpp-corbaserver.test             || status=1
-      - make hpp-manipulation.test            || status=1
-      - make hpp-manipulation-urdf.test       || status=1
-      - make hpp-manipulation-corba.test      || status=1
-      #- make hpp-rbprm.test                   || status=1
-      #- make hpp-rbprm-corba.test             || status=1
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-util.test                    || status=1
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-pinocchio.test               || status=1
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-statistics.test              || status=1
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-constraints.test             || status=1
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-core.test                    || status=1
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-corbaserver.test             || status=1
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-manipulation.test            || status=1
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-manipulation-urdf.test       || status=1
+      - cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-manipulation-corba.test      || status=1
+      #- cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-rbprm.test                   || status=1
+      #- cd $DEVEL_HPP_DIR && nix develop github:gepetto/nix#hpp --command make -C src hpp-rbprm-corba.test             || status=1
       - set -e
       - exit $status
     after_script:
