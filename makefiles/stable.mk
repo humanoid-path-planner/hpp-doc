@@ -130,7 +130,7 @@ hpp-gui_extra_flags=${HPP_EXTRA_FLAGS} -DINSTALL_DOCUMENTATION=OFF
 ##################################
 # {{{ Robot specific package + test packages
 
-proxsuite_branch = v0.7.2
+proxsuite_branch = devel
 proxsuite_repository=${SIMPLE_ROBOTICS_REPO}
 proxsuite_extra_flags= -DBUILD_WITH_VECTORIZATION_SUPPORT=OFF -DBUILD_TESTING=OFF
 
