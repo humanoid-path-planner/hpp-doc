@@ -126,7 +126,7 @@ add_custom_command(
           ${CMAKE_BINARY_DIR}/graphDep.dot ${SETUP_DOC_PKG})
 add_custom_target(generate-html ALL DEPENDS graphDep.dot)
 
-install(FILES doc/index.html doc/jquery-3.3.1.min.js
+install(FILES doc/index.html doc/jquery-3.7.1.min.js
               ${CMAKE_BINARY_DIR}/doc/main.dox
         DESTINATION ${CMAKE_INSTALL_DOCDIR})
 install(DIRECTORY doc/figures DESTINATION ${CMAKE_INSTALL_DOCDIR})
