@@ -33,6 +33,8 @@ include("${JRL_CMAKE_MODULES}/hpp.cmake")
 compute_project_args(PROJECT_ARGS LANGUAGES CXX)
 project(${PROJECT_NAME} ${PROJECT_ARGS})
 
+find_package(doxygen)
+
 # Arguments are: - (required) package name - (optional) git url - (optional)
 # robotpkg name
 macro(ADD_PKG pkg)
