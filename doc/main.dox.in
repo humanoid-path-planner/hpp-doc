@@ -5,9 +5,8 @@
 \par Introduction
 
 HPP (Humanoid Path Planner) is a collection of software packages
-implementing path planning functionalities for a humanoid robot.
-The core functionalities are well suited to solve classical path planning problems.
-It can be extended to path planning for other types of robots like digital actors for instance.
+implementing manipulatoin planning functionalities for diverse types of robots, including
+humanoid robot.
 
 \par Installation
 
@@ -16,9 +15,30 @@ Installation instructions can be found on
 
 \par Overview of the architecture
 
-The code relative to HPP is distributed into several software
-packages. See \ref hpp_doc_dependency_graph "dependency graph" for a quick
-view of the package hierarchy.
+The software is composed of C++ libraries implementing the algorithms. Python bindings built on
+boost python are provided to help user easily define and solve problems. Visualization of the
+scene if done in a web browser using \link https://viser.studio/main viser\endlink.
+
+<table>
+  <tr><td width="50%">
+      <img src="../figures/archi-hpp-python.svg" alt="Overview of the architecture" style="max-height: 50vh"/>
+  </td><td width="5%">
+  </td><td width="30%">
+    The algorithmic part, built on @hpp-manipulation_LINK@ is embedded in several python modules
+    by <code>hpp-python</code>
+    <p></p>
+    From a python script, users can define scenes containing robots and environments, they can
+    also define and solve motion planning problems.
+    <p></p>
+    Results of path planning requests as well as individual configurations can
+    be displayed in a web browser via package
+    @hpp-gepetto-viewer_LINK@.
+  </td></tr>
+</table>
+
+\par Overview of the old architecture
+
+We describe here the former architecture that is deprecated, but still in use in some projects.
 
 The packages are distributed into the following categories:
 \li \ref hpp_doc_algorithms "Algorithms" implementing path planning functionalities
@@ -99,18 +119,7 @@ The following packages implement Corba communication functionalities
 
 \par Packages implementing graphical user interface
 
-The following packages implement a corba connection with a graphical display
-\li @gepetto-viewer_LINK@ : Graphical window based on OpenSceneGraph.
-\li @gepetto-viewer-corba_LINK@ : Corba interface to gepetto-gui.
-\li @hpp-gepetto-viewer_LINK@ : Link between hpp and gepetto-viewer-corba.
-
- **/
-
-/**
-
-\page hpp_doc_dependency_graph Dependencies
-
-Graph of dependencies between packages
-\dotfile graphDep.dot "Dependency graph"
+The following package enables user to display scenes in a web browser
+\li @hpp-gepetto-viewer_LINK@ : Link between hpp and viser.
 
  **/
