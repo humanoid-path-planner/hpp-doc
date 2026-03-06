@@ -14,34 +14,25 @@
   outputs =
     inputs:
     inputs.flake-parts.lib.mkFlake { inherit inputs; } (
-      { lib, self, ... }:
+      { lib, ... }:
       {
         systems = import inputs.systems;
         imports = [
           inputs.gepetto.flakeModule
-          { gepetto-pkgs.overlays = [ self.overlays.default ]; }
-        ];
-        flake.overlays.default = _final: prev: {
-          hpp-doc = prev.hpp-doc.overrideAttrs {
-            src = lib.fileset.toSource {
-              root = ./.;
-              fileset = lib.fileset.unions [
-                ./CMakeLists.txt
-                ./doc
-                ./package.xml
-                ./scripts
-              ];
-            };
-          };
-        };
-        perSystem =
-          { pkgs, self', ... }:
           {
-            packages = {
-              default = self'.packages.hpp-doc;
-              hpp-doc = pkgs.python3Packages.hpp-doc;
+            gazebros2nix.overrides.hpp-doc = _final: {
+              src = lib.fileset.toSource {
+                root = ./.;
+                fileset = lib.fileset.unions [
+                  ./CMakeLists.txt
+                  ./doc
+                  ./package.xml
+                  ./scripts
+                ];
+              };
             };
-          };
+          }
+        ];
       }
     );
 }
