@@ -5,7 +5,7 @@
 \par Introduction
 
 HPP (Humanoid Path Planner) is a collection of software packages
-implementing manipulatoin planning functionalities for diverse types of robots, including
+implementing manipulation planning functionalities for diverse types of robots, including
 humanoid robot.
 
 \par Installation
@@ -17,7 +17,7 @@ Installation instructions can be found on
 
 The software is composed of C++ libraries implementing the algorithms. Python bindings built on
 boost python are provided to help user easily define and solve problems. Visualization of the
-scene if done in a web browser using \link https://viser.studio/main viser\endlink.
+scene if done in a web browser using <a href="https://viser.studio/main">viser</a>.
 
 <table>
   <tr><td width="50%">
@@ -68,7 +68,7 @@ The packages are distributed into the following categories:
 
 \par Getting started
 
-Package @hpp_tutorial_LINK@ provides some examples of
+Package <a href="https://github.com/humanoid-path-planner/hpp_tutorial/tree/devel/README.md"> hpp_tutorial </a> provides some examples of
 how to use this project.
 
 **/
