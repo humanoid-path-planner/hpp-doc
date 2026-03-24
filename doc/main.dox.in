@@ -99,6 +99,9 @@ how to use this project.
 - @hpp-manipulation_LINK@: Manipulation planning
 - @hpp-manipulation-urdf_LINK@: SRDF parser for Manipulation planning (handles, grippers, contact surfaces)
 
+\par Python bindings
+- @hpp-python_LINK@: Python bindings built on boost::python.
+
 **/
 
 /**
