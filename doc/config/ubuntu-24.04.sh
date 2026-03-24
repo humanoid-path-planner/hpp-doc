@@ -1,7 +1,7 @@
 export INSTALL_HPP_DIR=$DEVEL_HPP_DIR/install
 export ROBOTPKG=/opt/openrobots
 
-export PATH=$INSTALL_HPP_DIR/sbin:$INSTALL_HPP_DIR/bin:$ROBOTPKG/bin:$ROBOTPKG/sbin:$PATH
+export PATH=$INSTALL_HPP_DIR/bin:$ROBOTPKG/bin:$PATH
 export PKG_CONFIG_PATH=$INSTALL_HPP_DIR/lib/pkgconfig/:$ROBOTPKG/lib/pkgconfig
 
 export PYTHONPATH=$INSTALL_HPP_DIR/lib/python3.12/site-packages:$ROBOTPKG/lib/python3.12/site-packages:$PYTHONPATH
