@@ -1,12 +1,13 @@
 export INSTALL_HPP_DIR=$DEVEL_HPP_DIR/install
+export INSTALL_PIP_DIR=$DEVEL_HPP_DIR/install-pip
 export ROBOTPKG=/opt/openrobots
 
 export PATH=$INSTALL_HPP_DIR/bin:$ROBOTPKG/bin:$PATH
 export PKG_CONFIG_PATH=$INSTALL_HPP_DIR/lib/pkgconfig/:$ROBOTPKG/lib/pkgconfig
 
-export PYTHONPATH=$INSTALL_HPP_DIR/lib/python3.12/site-packages:$ROBOTPKG/lib/python3.12/site-packages:$PYTHONPATH
+export PYTHONPATH=$INSTALL_HPP_DIR/lib/python3.12/site-packages:$INSTALL_PIP_DIR/lib/python3.12/site-packages:$ROBOTPKG/lib/python3.12/site-packages:$PYTHONPATH
 
-export LD_LIBRARY_PATH=$INSTALL_HPP_DIR/lib:$ROBOTPKG/lib:$INSTALL_HPP_DIR/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$INSTALL_HPP_DIR/lib:$INSTALL_PIP_DIR/lib:$ROBOTPKG/lib:$INSTALL_HPP_DIR/lib64:$LD_LIBRARY_PATH
 
 export AMENT_PREFIX_PATH=$INSTALL_HPP_DIR:$ROBOTPKG
 export CMAKE_PREFIX_PATH=$INSTALL_HPP_DIR:$ROBOTPKG:/usr

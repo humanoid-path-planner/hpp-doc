@@ -38,27 +38,17 @@ BUILD_JOBS=4
 ##################################
 # {{{ Dependencies
 
-jrl-cmakemodules_branch=v1.1.0
-jrl-cmakemodules_repository=${JRL_REPO}
-
-coal_branch=v3.0.2
-coal_repository=${COAL_REPO}
-coal_extra_flags= -DCOAL_HAS_QHULL=ON -DCOAL_BACKWARD_COMPATIBILITY_WITH_HPP_FCL=ON -DINSTALL_DOCUMENTATION=OFF -DCOAL_DISABLE_HPP_FCL_WARNINGS=ON
-
-eigenpy_branch=v3.12.0
-eigenpy_repository=${SOT_REPO}
-
-pinocchio_branch=v3.8.0
-pinocchio_repository=${SOT_REPO}
-pinocchio_extra_flags= -DBUILD_UNIT_TESTS=OFF -DBUILD_WITH_COLLISION_SUPPORT=ON -DINSTALL_DOCUMENTATION=OFF -DCOAL_DISABLE_HPP_FCL_WARNINGS=ON
-pinocchio_jobs=2
+# Fork of https://github.com/hungpham2511/toppra
+toppra_branch= main
+toppra_repository=${HPP_REPO}
+toppra_extra_flags= -DBUILD_TESTS=OFF -DPYTHON_BINDINGS=OFF
 
 # }}}
 ##################################
 # {{{ Packages supporting HPP_VERSION
 
 # Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=v6.1.0
+HPP_VERSION=v7.0.0
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING} -DAUTO_UNINSTALL=OFF -DDOXYGEN_GENERATE_XML=YES
 
 hpp-util_branch=${HPP_VERSION}
@@ -83,9 +73,9 @@ hpp-core_extra_flags=${HPP_EXTRA_FLAGS}
 
 hpp-python_branch=${HPP_VERSION}
 hpp-python_repository=${HPP_REPO}
-hpp-python_extra_flags=${HPP_EXTRA_FLAGS}
+hpp-python_extra_flags=${HPP_EXTRA_FLAGS} -DPYTHON_STANDARD_LAYOUT=ON
 
-hpp-doc_branch=stable
+hpp-doc_branch=${HPP_VERSION}
 hpp-doc_repository=${HPP_REPO}
 
 hpp-manipulation_branch=${HPP_VERSION}
@@ -97,36 +87,34 @@ hpp-manipulation-urdf_repository=${HPP_REPO}
 
 hpp_tutorial_branch=${HPP_VERSION}
 hpp_tutorial_repository=${HPP_REPO}
-hpp_tutorial_extra_flags=${HPP_EXTRA_FLAGS}
+hpp_tutorial_extra_flags=${HPP_EXTRA_FLAGS} -DPYTHON_STANDARD_LAYOUT=ON
 
 hpp-practicals_branch=${HPP_VERSION}
 hpp-practicals_repository=${HPP_REPO}
-hpp-practicals_extra_flags=${HPP_EXTRA_FLAGS}
+hpp-practicals_extra_flags=${HPP_EXTRA_FLAGS} -DPYTHON_STANDARD_LAYOUT=ON
 
 hpp-gepetto-viewer_branch=${HPP_VERSION}
 hpp-gepetto-viewer_repository=${HPP_REPO}
-hpp-gepetto-viewer_extra_flags= -DINSTALL_DOCUMENTATION=OFF -DUSE_HPP_PYTHON=ON
+hpp-gepetto-viewer_extra_flags= -DINSTALL_DOCUMENTATION=OFF -DUSE_HPP_PYTHON=ON \
+	-DPYTHON_STANDARD_LAYOUT=ON
 
 hpp-plot_branch=${HPP_VERSION}
 hpp-plot_repository=${HPP_REPO}
 hpp-plot_extra_flags= -DINSTALL_DOCUMENTATION=OFF
 
-hpp-gui_branch=${HPP_VERSION}
-hpp-gui_repository=${HPP_REPO}
-hpp-gui_extra_flags=${HPP_EXTRA_FLAGS} -DINSTALL_DOCUMENTATION=OFF
+hpp-tools_branch=${HPP_VERSION}
+hpp-tools_repository=${HPP_REPO}
+hpp-tools_extra_flags=
+
+hpp-toppra_branch=main
+hpp-toppra_repository=${HPP_REPO}
+hpp-toppra_extra_flags=
 
 # }}}
 ##################################
 # {{{ Robot specific package + test packages
 
-proxsuite_branch = devel
-proxsuite_repository=${SIMPLE_ROBOTICS_REPO}
-proxsuite_extra_flags= -DBUILD_WITH_VECTORIZATION_SUPPORT=OFF -DBUILD_TESTING=OFF
-
-example-robot-data_branch=v4.4.0
-example-robot-data_repository=${GEPETTO_REPO}
-
-hpp_benchmark_branch=devel
+hpp_benchmark_branch=master
 hpp_benchmark_repository=${HPP_REPO}
 
 hpp-environments_branch=${HPP_VERSION}
@@ -140,27 +128,13 @@ hpp_romeo_repository=${HPP_REPO}
 
 # }}}
 ##################################
-# {{{ Packages for gepetto-gui
-
-hpp-tools_branch=${HPP_VERSION}
-hpp-tools_repository=${HPP_REPO}
-hpp-tools_extra_flags=
-
-# }}}
-##################################
 # {{{ High-level targets
 
 all: hpp_tutorial.install hpp-gepetto-viewer.install hpp-plot.install hpp-python.install
 	${MAKE} hpp-doc.install
 
-# For test on gepgitlab, install robot packages first
-test-ci: example-robot-data.install  hpp-environments.install \
-	hpp-baxter.install
-	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install \
-	${MAKE} hpp-doc.install
-
 # For benchmark, install robot packages first
-benchmark: example-robot-data.install hpp-environments.install
+benchmark:
 	${MAKE} hpp_tutorial.install hpp-gepetto-viewer.install; \
 	${MAKE} hpp-baxter.install hpp_romeo.install hpp-plot.install; \
 	${MAKE} hpp_benchmark.checkout; \
@@ -168,42 +142,15 @@ benchmark: example-robot-data.install hpp-environments.install
 
 # }}}
 ##################################
-# {{{ python virtual environment
-python-venv:
-	if [ -d ${DEVEL_HPP_DIR}/.venv ]; then \
-		echo "uv virtual environment already created in $DEVEL_HPP_DIR/.venv"; \
-	else \
-		@ cd ${DEVEL_HPP_DIR} && uv init && \
-		uv venv --system-site-packages && \
-		uv add "numpy==1.26.4" trimesh pycollada viser; \
-	fi
-
-# }}}
-##################################
 # {{{ Dependencies declaration
 
-hpp-doc.configure.dep: hpp-doc.checkout \
-	jrl-cmakemodules.install
-jrl-cmakemodules.configure.dep: jrl-cmakemodules.checkout
-eigenpy.configure.dep: eigenpy.checkout \
-	jrl-cmakemodules.install
-coal.configure.dep: coal.checkout
-coal.configure-py.dep: coal.install \
-	eigenpy.install
-hpp-util.configure.dep: hpp-util.checkout \
-	jrl-cmakemodules.install
-pinocchio.configure.dep: pinocchio.checkout \
-	coal.install example-robot-data.install
-pinocchio.configure-py.dep: pinocchio.install \
-	eigenpy.install coal.install-py
-hpp-pinocchio.configure.dep: hpp-pinocchio.checkout \
-	hpp-util.install hpp-environments.install
-hpp-statistics.configure.dep: hpp-statistics.checkout \
-	hpp-util.install
-hpp-core.configure.dep: hpp-core.checkout \
-	hpp-constraints.install hpp-statistics.install
+hpp-doc.configure.dep: hpp-doc.checkout
+hpp-util.configure.dep: hpp-util.checkout
+hpp-pinocchio.configure.dep: hpp-pinocchio.checkout hpp-util.install
+hpp-statistics.configure.dep: hpp-statistics.checkout hpp-util.install
+hpp-core.configure.dep: hpp-core.checkout hpp-constraints.install hpp-statistics.install
 hpp-constraints.configure.dep: hpp-constraints.checkout \
-	hpp-pinocchio.install hpp-statistics.install hpp-environments.install
+	hpp-pinocchio.install hpp-statistics.install
 hpp-manipulation.configure.dep: hpp-manipulation.checkout \
 	hpp-core.install hpp-constraints.install
 hpp-plot.configure.dep: hpp-plot.checkout hpp-manipulation.install
@@ -211,28 +158,15 @@ hpp-manipulation-urdf.configure.dep: hpp-manipulation-urdf.checkout \
 	hpp-manipulation.install
 hpp-python.configure.dep: hpp-python.checkout \
 	hpp-manipulation.install hpp-manipulation-urdf.install
-qgv.configure.dep: qgv.checkout \
-	jrl-cmakemodules.install
-hpp_tutorial.configure.dep: hpp_tutorial.checkout \
+hpp_tutorial.configure.dep: hpp_tutorial.checkout hpp-toppra.install \
 	hpp-gepetto-viewer.install hpp-python.install hpp-manipulation.install
-hpp-practicals.configure.dep: hpp-practicals.checkout \
-	jrl-cmakemodules.install
-hpp_benchmark.configure.dep: hpp_benchmark.checkout \
-	hpp_tutorial.install
-hpp-gepetto-viewer.configure.dep: hpp-gepetto-viewer.checkout \
-	hpp-python.install
-proxsuite.configure.dep: proxsuite.checkout \
-	jrl-cmakemodules.install
-example-robot-data.configure.dep: example-robot-data.checkout \
-	jrl-cmakemodules.install
-example-robot-data.configure-py.dep: example-robot-data.install \
-	pinocchio.install-py
-hpp-environments.configure.dep: hpp-environments.checkout
-hpp-baxter.configure.dep: hpp-baxter.checkout
-hpp_romeo.configure.dep: hpp_romeo.checkout \
-	jrl-cmakemodules.install
-hpp-tools.configure.dep: hpp-tools.checkout \
-	jrl-cmakemodules.install
+hpp-practicals.configure.dep: hpp-practicals.checkout
+hpp_benchmark.configure.dep: hpp_benchmark.checkout hpp_tutorial.install
+hpp-gepetto-viewer.configure.dep: hpp-gepetto-viewer.checkout hpp-python.install
+hpp_romeo.configure.dep: hpp_romeo.checkout
+hpp-tools.configure.dep: hpp-tools.checkout
+toppra.configure.dep: toppra.checkout
+hpp-toppra.configure.dep: hpp-toppra.checkout hpp-python.install toppra.install
 
 # }}}
 ##################################
@@ -395,6 +329,21 @@ test:
 		cat .git/refs/heads/${$(@:.log=)_branch}; \
 	fi
 
+toppra.configure_nodep:toppra.checkout
+	mkdir -p ${SRC_DIR}/$(@:.configure_nodep=)/cpp/${BUILD_FOLDER}; \
+	cd ${SRC_DIR}/$(@:.configure_nodep=)/cpp/${BUILD_FOLDER}; \
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
+			-DENFORCE_MINIMAL_CXX_STANDARD=ON \
+			-DINSTALL_DOCUMENTATION=${INSTALL_DOCUMENTATION} \
+			-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" \
+			${CLANG_FLAGS} \
+			${$(@:.configure_nodep=)_extra_flags} ..
+
+toppra.install:toppra.configure
+	${MAKE} -C ${SRC_DIR}/$(@:.install=)/cpp/${BUILD_FOLDER} install
+
+toppra.install_nodep:toppra.configure_nodep
+	${MAKE} -C ${SRC_DIR}/$(@:.install_nodep=)/cpp/${BUILD_FOLDER} install
 
 # }}}
 
