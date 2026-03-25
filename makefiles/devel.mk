@@ -108,7 +108,7 @@ hpp-tools_extra_flags=
 
 hpp-toppra_branch=${HPP_VERSION}
 hpp-toppra_repository=${HPP_REPO}
-hpp-toppra_extra_flags=
+hpp-toppra_extra_flags= -DPYTHON_STANDARD_LAYOUT=ON
 
 # }}}
 ##################################
