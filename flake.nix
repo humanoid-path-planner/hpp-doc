@@ -3,12 +3,8 @@
 
   inputs = {
     gepetto.url = "github:gepetto/nix";
-    gazebros2nix.follows = "gepetto/gazebros2nix";
     flake-parts.follows = "gepetto/flake-parts";
-    nixpkgs.follows = "gepetto/nixpkgs";
-    nix-ros-overlay.follows = "gepetto/nix-ros-overlay";
     systems.follows = "gepetto/systems";
-    treefmt-nix.follows = "gepetto/treefmt-nix";
   };
 
   outputs =
@@ -20,7 +16,7 @@
         imports = [
           inputs.gepetto.flakeModule
           {
-            gazebros2nix.overrides.hpp-doc = _final: {
+            flakoboros.overrideAttrs.hpp-doc = _: {
               src = lib.fileset.toSource {
                 root = ./.;
                 fileset = lib.fileset.unions [

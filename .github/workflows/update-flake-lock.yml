@@ -1,10 +1,8 @@
 name: update-flake-lock
-
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 11 6 * *'
-
 jobs:
   update-flake-inputs:
     runs-on: ubuntu-slim
