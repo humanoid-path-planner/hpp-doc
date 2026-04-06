@@ -87,4 +87,3 @@ release:
 pinocchio.push:
 	@cd ${SRC_DIR}/$(@:.push=); \
 	git push ${$(@:.push=)_repository}/$(@:.push=) HEAD:hpp
-
