@@ -71,18 +71,14 @@ The packages are distributed into the following categories:
 Package <a href="https://github.com/humanoid-path-planner/hpp_tutorial/tree/devel/README.md"> hpp_tutorial </a> provides some examples of
 how to use this project.
 
-**/
+\section hpp_doc_algorithms Algorithms
 
-/**
-
-\page hpp_doc_algorithms Algorithms
-
-\section hpp_doc_algorithms_technical_tools Technical tools
+\subsection hpp_doc_algorithms_technical_tools Technical tools
 
 - @hpp-util_LINK@: technical tools for the HPP project (logging, benchmark, quality assurance tools),
 - @hpp-statistics_LINK@: various tools to make statistics on motion planning algorithms,
 
-\section hpp_doc_algorithms_motion_planning Motion planning
+\subsection hpp_doc_algorithms_motion_planning Motion planning
 
 \par Kinematic chain with geometry
 - @coal_LINK@: Modified version of Flexible collision library, for collision detection and distance computation,
@@ -101,6 +97,10 @@ how to use this project.
 
 \par Python bindings
 - @hpp-python_LINK@: Python bindings built on boost::python.
+
+\subsection hpp_doc_algorithms_execution Trajectory execution
+
+- @hpp-exec_LINK@: ROS2 execution utilities to send HPP-generated paths to \c ros2_control, with pre/post action hooks for gripper coordination during manipulation.
 
 **/
 
