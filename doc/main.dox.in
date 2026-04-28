@@ -42,7 +42,6 @@ We describe here the former architecture that is deprecated, but still in use in
 
 The packages are distributed into the following categories:
 \li \ref hpp_doc_algorithms "Algorithms" implementing path planning functionalities
-\li \ref hpp_doc_corba_interface "Corba" communication facilities to control algorithms
 \li \ref hpp_doc_graphical_interface "Graphical user interface" to display configurations and paths.
 
 <table>
@@ -57,8 +56,7 @@ The packages are distributed into the following categories:
     The corba servers are linked to executable \c hppcorbaserver.
     <p></p>
     From a python terminal, clients to the corba servers can be created in order
-    to control the executable. The control of the application is performed via
-    idl interfaces and python classes available in \ref hpp_doc_corba_interface.
+    to control the executable.
     <p></p>
     Results of path planning requests as well as individual configurations can
     be displayed in \c gepetto-gui via package
@@ -103,18 +101,6 @@ how to use this project.
 - @hpp-exec_LINK@: ROS2 execution utilities to send HPP-generated paths to \c ros2_control, with pre/post action hooks for gripper coordination during manipulation.
 
 **/
-
-/**
-
-\page hpp_doc_corba_interface Corba interfaces
-
-\par Packages implementing CORBA interfaces
-
-The following packages implement Corba communication functionalities
-\li @hpp-corbaserver_LINK@ : Corba server embedding a hpp::core::ProblemSolver instance.
-\li @hpp-manipulation-corba_LINK@ : Corba server for @hpp-manipulation_LINK@.
-
- **/
 
 /**
 
