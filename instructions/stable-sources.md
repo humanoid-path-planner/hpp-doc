@@ -37,7 +37,7 @@ To install all the packages on ubuntu 24.04 LTS 64 bit, you should do the follow
 
   ```bash
     wget -O $DEVEL_HPP_DIR/config.sh https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/stable/doc/config/ubuntu-24.04.sh
-    wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/stable/makefiles/devel.mk
+    wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/stable/makefiles/stable.mk
   ```
 
   6. cd into `$DEVEL_HPP_DIR` and type
