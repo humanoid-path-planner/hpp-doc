@@ -98,7 +98,10 @@ how to use this project.
 
 \subsection hpp_doc_algorithms_execution Trajectory execution
 
-- @hpp-exec_LINK@: ROS2 execution utilities to send HPP-generated paths to \c ros2_control, with pre/post action hooks for gripper coordination during manipulation.
+- @hpp-exec_LINK@: ROS2 execution utilities to send HPP-generated paths to
+  \c ros2_control. It documents how paths are converted to
+  \c JointTrajectory messages and how segment pre/post actions coordinate
+  grippers during manipulation.
 
 **/
 
