@@ -11,14 +11,15 @@ GEPETTO_REPO=https://github.com/Gepetto
 LOCO3D_REPO=https://github.com/loco-3d
 SIMPLE_ROBOTICS_REPO=https://github.com/Simple-Robotics
 JRL_REPO=https://github.com/jrl-umi3218
+TOPPRA_REPO=https://github.com/hungpham2511
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
 ifndef INSTALL_HPP_DIR
 INSTALL_HPP_DIR=${DEVEL_HPP_DIR}/install
 endif
 
-BUILD_TYPE?=Release
-BUILD_TESTING?=ON
+BUILD_TYPE=Release
+BUILD_TESTING=ON
 ifeq (${BUILD_TYPE},Debug)
   BUILD_FOLDER=build
 else
@@ -37,11 +38,6 @@ BUILD_JOBS=4
 
 ##################################
 # {{{ Dependencies
-
-# Fork of https://github.com/hungpham2511/toppra
-toppra_branch= main
-toppra_repository=${HPP_REPO}
-toppra_extra_flags= -DBUILD_TESTS=OFF -DPYTHON_BINDINGS=OFF
 
 # }}}
 ##################################
@@ -105,6 +101,14 @@ hpp-plot_extra_flags= -DINSTALL_DOCUMENTATION=OFF
 hpp-tools_branch=${HPP_VERSION}
 hpp-tools_repository=${HPP_REPO}
 hpp-tools_extra_flags=
+
+# }}}
+##################################
+# {{{ Packages for toppra
+
+toppra_repository=${TOPPRA_REPO}
+toppra_branch=0.6.7
+toppra_extra_flags= -DBUILD_TESTS=OFF -DPYTHON_BINDINGS=OFF
 
 hpp-toppra_branch=${HPP_VERSION}
 hpp-toppra_repository=${HPP_REPO}
