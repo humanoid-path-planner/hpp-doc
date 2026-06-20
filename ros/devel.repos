@@ -1,0 +1,121 @@
+repositories:
+  example-robot-data:
+    type: git
+    url: https://github.com/gepetto/example-robot-data
+    version: devel
+  ndcurves:
+    type: git
+    url: https://github.com/loco-3d/ndcurves
+    version: devel
+  hpp-affordance:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-affordance
+    version: devel
+  # hpp-affordance-corba:
+  #   type: git
+  #   url: https://github.com/humanoid-path-planner/hpp-affordance-corba
+  #   version: devel
+  hpp-baxter:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-baxter
+    version: devel
+  # hpp-benchmark:
+  #   type: git
+  #   url: https://github.com/humanoid-path-planner/hpp-benchmark
+  #   version: devel
+  hpp-bezier-com-traj:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-bezier-com-traj
+    version: devel
+  hpp-centroidal-dynamics:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-centroidal-dynamics
+    version: devel
+  hpp-constraints:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-constraints
+    version: devel
+  # hpp-corbaserver:
+  #   type: git
+  #   url: https://github.com/humanoid-path-planner/hpp-corbaserver
+  #   version: devel
+  hpp-core:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-core
+    version: devel
+  # hpp-doc:
+  #   type: git
+  #   url: https://github.com/humanoid-path-planner/hpp-doc
+  #   version: devel
+  hpp-environments:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-environments
+    version: devel
+  hpp-gepetto-viewer:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-gepetto-viewer
+    version: devel
+  # hpp-gui:
+  #   type: git
+  #   url: https://github.com/humanoid-path-planner/hpp-gui
+  #   version: devel
+  hpp-manipulation:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-manipulation
+    version: devel
+  # hpp-manipulation-corba:
+  #   type: git
+  #   url: https://github.com/humanoid-path-planner/hpp-manipulation-corba
+  #   version: devel
+  hpp-manipulation-urdf:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-manipulation-urdf
+    version: devel
+  hpp-pinocchio:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-pinocchio
+    version: devel
+  hpp-plot:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-plot
+    version: devel
+  # hpp-practicals:
+  #   type: git
+  #   url: https://github.com/humanoid-path-planner/hpp-practicals
+  #   version: devel
+  hpp-python:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-python
+    version: devel
+  hpp-romeo:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-romeo
+    version: devel
+  hpp-statistics:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-statistics
+    version: devel
+  # hpp-template-corba:
+  #   type: git
+  #   url: https://github.com/humanoid-path-planner/hpp-template-corba
+  #   version: devel
+  hpp-tools:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-tools
+    version: devel
+  hpp-toppra:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-toppra
+    version: devel
+  hpp-tutorial:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-tutorial
+    version: devel
+  hpp-universal-robot:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-universal-robot
+    version: devel
+  hpp-util:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-util
+    version: devel
