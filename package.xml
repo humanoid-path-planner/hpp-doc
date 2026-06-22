@@ -1,16 +1,32 @@
 <?xml version='1.0'?>
- <package format='2'>
- <name>hpp-doc</name>
- <version>8.0.0</version>
- <description>Documentation of Humanoid Path Planner software </description>
+<package format='3'>
+  <name>hpp_doc</name>
+  <version>8.0.0</version>
+  <description>Documentation of Humanoid Path Planner software </description>
+  <author>Joseph Mirabel</author>
+  <author>Florent Lamiraux</author>
+  <maintainer email='guilhem.saurel@laas.fr'>Guilhem Saurel</maintainer>
+  <license>LGPL</license>
 
- <maintainer email='hpp@laas.fr'>Florent Lamiraux</maintainer>
- <license>LGPL</license>
+  <url type='website'>https://humanoid-path-planner.github.io/hpp-doc/</url>
 
- <!-- <url type='website'>https://github.com/humanoid-path-planner/hpp-core </url> -->
+  <depend>coal</depend>
+  <depend>pinocchio</depend>
+  <depend>hpp_util</depend>
+  <depend>hpp_statistics</depend>
+  <depend>hpp_pinocchio</depend>
+  <depend>hpp_core</depend>
+  <depend>hpp_constraints</depend>
+  <depend>hpp_manipulation</depend>
+  <depend>hpp_manipulation_urdf</depend>
+  <depend>hpp_gepetto_viewer</depend>
+  <depend>hpp_tutorial</depend>
+  <depend>hpp_exec</depend>
 
- <author>Joseph Mirabel</author>
- <author>Florent Lamiraux et al.</author>
+  <buildtool_depend>cmake</buildtool_depend>
+  <build_depend>jrl_cmakemodules</build_depend>
 
- <buildtool_depend>catkin</buildtool_depend>
+  <export>
+    <build_type>cmake</build_type>
+  </export>
  </package>

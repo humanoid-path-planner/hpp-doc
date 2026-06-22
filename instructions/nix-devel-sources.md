@@ -1,6 +1,6 @@
 ## Source installation with Nix
 
-To compile all the packages in a Nix devShell, you should do the following steps:
+To compile all the packages in a Nix devShell, you can follow these steps:
 
   1. (Optional but recommended. Already done on LAAS computers.)
 
@@ -10,8 +10,7 @@ To compile all the packages in a Nix devShell, you should do the following steps
 
      Setup Gepetto Nix Binary cache: [gepetto.cachix.org](https://app.cachix.org/cache/gepetto)
 
-  3. Choose a directory on your file system which we will call
-     `DEVEL_HPP_DIR`.
+  3. Choose a directory on your file system which we will call `DEVEL_HPP_DIR`.
      - the packages will be cloned into `$DEVEL_HPP_DIR/src`,
      - the packages will be installed in `$DEVEL_HPP_DIR/install`.
 
