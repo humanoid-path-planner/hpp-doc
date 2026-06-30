@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-REPOSITORIES=("hpp-core" "hpp-constraints" "hpp-manipulation" "hpp-exec" "hpp-python" "hpp-gepetto-viewer" "hpp-python" "hpp-tutorial" "hpp-plot")
+REPOSITORIES=("hpp-core" "hpp-constraints" "hpp-manipulation" "hpp-exec" "hpp-python" "hpp-gepetto-viewer" "hpp-python" "hpp-tutorial" "hpp-plot" "hpp-pinocchio")
 
 DEST="../src/reference"
 

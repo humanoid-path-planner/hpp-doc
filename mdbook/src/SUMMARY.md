@@ -1,6 +1,7 @@
 # Humanoid Path Planner
 
 [Introduction](introduction/introduction.md)
+[How to Contribute](introduction/contributing.md)
 
 # User Guide
 - [Installation](installation/installation.md)
@@ -25,7 +26,8 @@
 - [hpp-core](reference/hpp-core/README.md)
 - [hpp-manipulation](reference/hpp-manipulation/README.md)
 - [hpp-constraints](reference/hpp-constraints/README.md)
+- [hpp-pinocchio](reference/hpp-pinocchio/README.md)
+- [hpp-python](reference/hpp-python/README.md)
 - [hpp-gepetto-viewer](reference/hpp-gepetto-viewer/README.md)
 - [hpp-plot](reference/hpp-plot/README.md)
-- [hpp-python](reference/hpp-python/README.md)
 - [hpp-exec](reference/hpp-exec/README.md)
