@@ -64,5 +64,5 @@ Results of path planning requests as well as individual configurations can be di
 
 ## Getting started
 
-Package [hpp_tutorial](https://github.com/humanoid-path-planner/hpp_tutorial/tree/devel/README.md) provides some examples of how to use this project. Lets start now ! [Tutorial](../userGuide/tutorials/tutorials.md)
+Package [hpp_tutorial](https://github.com/humanoid-path-planner/hpp_tutorial/tree/devel/README.md) provides some examples of how to use this project. Lets start now ! [Tutorial](/reference/hpp-tutorial/)
 
