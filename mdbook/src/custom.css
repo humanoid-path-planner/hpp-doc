@@ -1,0 +1,24 @@
+.env-variable {
+    color: #d60808 !important; 
+}
+
+.command {
+    color: #005cc5;
+    font-weight: bold;
+}
+
+.path {
+    color: #b31d28;
+}
+
+.sidebar ol {
+    counter-reset: 0;
+}
+
+.sidebar li {
+    display: block;
+}
+
+.sidebar li::before {
+    counter-increment: item;
+}

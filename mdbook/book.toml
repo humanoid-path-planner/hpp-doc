@@ -1,0 +1,10 @@
+[book]
+title = "HPP"
+authors = ["DiegoP-G"]
+language = "en"
+[output.html]
+additional-css = ["src/custom.css"]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
