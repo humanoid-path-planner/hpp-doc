@@ -77,7 +77,7 @@ class PIN,COAL external
 ```
 The software is composed of C++ libraries implementing the algorithms. Python bindings built on Boost.Python are provided to help users easily define and solve problems. Visualization of the scene can be done in a web browser using [viser](https://viser.studio/main), or using ROS/ROS2 with [rviz2](https://wiki.ros.org/rviz2) or [gazebo](https://gazebosim.org/home).
 
-![Rviz Viewer](/introduction/figures/viewer_demo.gif)
+![Rviz Viewer](./introduction/figures/viewer_demo.gif)
 The algorithmic part, built on [hpp-manipulation](/reference/hpp-manipulation/) is embedded in several Python modules by [hpp-python](/reference/hpp-python/).
 From a Python script, users can define scenes containing robots and environments, they can also define and solve motion planning problems.
 Results of path planning requests as well as individual configurations can be displayed in a web browser via package [hpp-gepetto-viewer](@hpp-gepetto-viewer_LINK@).
@@ -88,14 +88,14 @@ Package [hpp_tutorial](https://github.com/humanoid-path-planner/hpp_tutorial/tre
 ## Acknowledgement
 
 
-<img src="/introduction/assets/logo_romeo.jpg" alt="Logo projet ROMEO" title="Projet ROMEO 2" height="70">
-<img src="/introduction/assets/logo_euroc.png" alt="Logo EUROC project" title="EUROC project" height="70">
-<img src="/introduction/assets/logo-FP7.jpg" alt="Framework Program 7" title="Framework Program 7" height="110">
-<img src="/introduction/assets/LOGO_ERC.jpg" alt="Logo ERC" title="ERC Actanthrope" height="110">
-<img src="/introduction/assets/logo_fiad.jpg" alt="EU Project: Factory-in-a-day" title="Factory in a Day" height="110">
-<a href="http://www.agence-nationale-recherche.fr"><img src="/introduction/assets/logo_anr.gif" alt="Logo ANR project" title="ANR project" height="70"></a>
-<img src="/introduction/assets/logo_rob4fam.png" alt="Logo ROB4FAM" title="ROB4FAM" height="60">
-<img src="/introduction/assets/logo_robocom_def_png.png" alt="RoboCom++" title="RoboCom++" height="110">
+<img src="./introduction/assets/logo_romeo.jpg" alt="Logo projet ROMEO" title="Projet ROMEO 2" height="70">
+<img src="./introduction/assets/logo_euroc.png" alt="Logo EUROC project" title="EUROC project" height="70">
+<img src="./introduction/assets/logo-FP7.jpg" alt="Framework Program 7" title="Framework Program 7" height="110">
+<img src="./introduction/assets/LOGO_ERC.jpg" alt="Logo ERC" title="ERC Actanthrope" height="110">
+<img src="./introduction/assets/logo_fiad.jpg" alt="EU Project: Factory-in-a-day" title="Factory in a Day" height="110">
+<a href="http://www.agence-nationale-recherche.fr"><img src="./introduction/assets/logo_anr.gif" alt="Logo ANR project" title="ANR project" height="70"></a>
+<img src="./introduction/assets/logo_rob4fam.png" alt="Logo ROB4FAM" title="ROB4FAM" height="60">
+<img src="./introduction/assets/logo_robocom_def_png.png" alt="RoboCom++" title="RoboCom++" height="110">
 
 ## Contributors
 
