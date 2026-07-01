@@ -9,9 +9,9 @@ HPP is a C++ Software Developement Kit implementing path planning for kinematic 
 HPP is not a toy planner: it is built to handle the kind of complex, contact-rich motion planning problems found in real robotics applications.
 
 - **Built for complex kinematic chains** — from single manipulator arms to full humanoids and multi-robot systems.
-- **Manipulation planning out of the box** — [hpp-manipulation](/reference/hpp-manipulation/) handles grasping, regrasping, and multi-contact scenarios, not just collision-free transit paths.
-- **Fast, reliable collision checking** — powered by a modified Flexible Collision Library (coal) under [hpp-pinocchio](/reference/hpp-pinocchio/).
-- **Python-first workflow** — define scenes, robots, and planning problems from simple Python scripts via [hpp-python](/reference/hpp-python/), with the heavy algorithmic lifting handled in C++.
+- **Manipulation planning out of the box** — [hpp-manipulation](/hpp-doc/reference/hpp-manipulation/) handles grasping, regrasping, and multi-contact scenarios, not just collision-free transit paths.
+- **Fast, reliable collision checking** — powered by a modified Flexible Collision Library (coal) under [hpp-pinocchio](/hpp-doc/reference/hpp-pinocchio/).
+- **Python-first workflow** — define scenes, robots, and planning problems from simple Python scripts via [hpp-python](/hpp-doc/reference/hpp-python/), with the heavy algorithmic lifting handled in C++.
 - **Flexible visualization** — watch your robot plan and move in a web browser with [viser](https://viser.studio/main), or plug into your existing ROS/ROS2 setup with [rviz2](https://wiki.ros.org/rviz2) or [gazebo](https://gazebosim.org/home).
 - **Battle-tested on real industrial use cases** — surface treatment, welding, and assembly tasks, as shown below.
 
@@ -77,25 +77,25 @@ class PIN,COAL external
 ```
 The software is composed of C++ libraries implementing the algorithms. Python bindings built on Boost.Python are provided to help users easily define and solve problems. Visualization of the scene can be done in a web browser using [viser](https://viser.studio/main), or using ROS/ROS2 with [rviz2](https://wiki.ros.org/rviz2) or [gazebo](https://gazebosim.org/home).
 
-![Rviz Viewer](./introduction/figures/viewer_demo.gif)
-The algorithmic part, built on [hpp-manipulation](/reference/hpp-manipulation/) is embedded in several Python modules by [hpp-python](/reference/hpp-python/).
+![Rviz Viewer](/hpp-doc/introduction/figures/viewer_demo.gif)
+The algorithmic part, built on [hpp-manipulation](/hpp-doc/reference/hpp-manipulation/) is embedded in several Python modules by [hpp-python](/hpp-doc/reference/hpp-python/).
 From a Python script, users can define scenes containing robots and environments, they can also define and solve motion planning problems.
 Results of path planning requests as well as individual configurations can be displayed in a web browser via package [hpp-gepetto-viewer](@hpp-gepetto-viewer_LINK@).
 
 ## Getting started
-Package [hpp_tutorial](https://github.com/humanoid-path-planner/hpp_tutorial/tree/devel/README.md) provides some examples of how to use this project. Lets start now ! [Tutorial](/reference/hpp-tutorial/)
+Package [hpp_tutorial](https://github.com/humanoid-path-planner/hpp_tutorial/tree/devel/README.md) provides some examples of how to use this project. Lets start now ! [Tutorial](/hpp-doc/reference/hpp-tutorial/)
 
 ## Acknowledgement
 
 
-<img src="./introduction/assets/logo_romeo.jpg" alt="Logo projet ROMEO" title="Projet ROMEO 2" height="70">
-<img src="./introduction/assets/logo_euroc.png" alt="Logo EUROC project" title="EUROC project" height="70">
-<img src="./introduction/assets/logo-FP7.jpg" alt="Framework Program 7" title="Framework Program 7" height="110">
-<img src="./introduction/assets/LOGO_ERC.jpg" alt="Logo ERC" title="ERC Actanthrope" height="110">
-<img src="./introduction/assets/logo_fiad.jpg" alt="EU Project: Factory-in-a-day" title="Factory in a Day" height="110">
-<a href="http://www.agence-nationale-recherche.fr"><img src="./introduction/assets/logo_anr.gif" alt="Logo ANR project" title="ANR project" height="70"></a>
-<img src="./introduction/assets/logo_rob4fam.png" alt="Logo ROB4FAM" title="ROB4FAM" height="60">
-<img src="./introduction/assets/logo_robocom_def_png.png" alt="RoboCom++" title="RoboCom++" height="110">
+<img src="/hpp-doc/introduction/assets/logo_romeo.jpg" alt="Logo projet ROMEO" title="Projet ROMEO 2" height="70">
+<img src="/hpp-doc/introduction/assets/logo_euroc.png" alt="Logo EUROC project" title="EUROC project" height="70">
+<img src="/hpp-doc/introduction/assets/logo-FP7.jpg" alt="Framework Program 7" title="Framework Program 7" height="110">
+<img src="/hpp-doc/introduction/assets/LOGO_ERC.jpg" alt="Logo ERC" title="ERC Actanthrope" height="110">
+<img src="/hpp-doc/introduction/assets/logo_fiad.jpg" alt="EU Project: Factory-in-a-day" title="Factory in a Day" height="110">
+<a href="http://www.agence-nationale-recherche.fr"><img src="/hpp-doc/introduction/assets/logo_anr.gif" alt="Logo ANR project" title="ANR project" height="70"></a>
+<img src="/hpp-doc/introduction/assets/logo_rob4fam.png" alt="Logo ROB4FAM" title="ROB4FAM" height="60">
+<img src="/hpp-doc/introduction/assets/logo_robocom_def_png.png" alt="RoboCom++" title="RoboCom++" height="110">
 
 ## Contributors
 

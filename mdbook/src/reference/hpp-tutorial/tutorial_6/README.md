@@ -17,7 +17,7 @@ The base tutorial docker image does not include ROS 2 control packages. Build th
 extended image from the tutorial 6 directory **on the host machine** (not inside
 the container):
 
-```bash
+```
 cd tutorial_6
 docker build --build-arg DOCKER_USER=`id -u` --build-arg DOCKER_GROUP=`id -g` \
     -t hpp-ros2:tuto .
@@ -25,7 +25,7 @@ docker build --build-arg DOCKER_USER=`id -u` --build-arg DOCKER_GROUP=`id -g` \
 
 Then start the container from the root shared directory:
 
-```bash
+```
 cd ../../..
 ./src/hpp_tutorial/tutorial_6/run_docker.sh
 ```
@@ -35,7 +35,7 @@ cd ../../..
 On your first `make all` from tutorial 1, the RViz2 plugin sources were notcompiled.
 Build `hpp-rviz`:
 
-```bash
+```
 cd src
 make hpp-rviz.install
 ```
@@ -69,7 +69,7 @@ v.initViewer(robot=robot)
 
 Open a second terminal in the container:
 
-```bash
+```
 docker exec -it hpp bash
 rviz2
 ```

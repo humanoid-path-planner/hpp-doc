@@ -33,12 +33,12 @@ midori
 ## Building and displaying a robot
 
 In the first terminal, go into directory `hpp_tutorial/tutorial_2` and run the following python script
-```bash
+```
 cd /home/user/devel/src/hpp_tutorial/tutorial_2
 python -i init.py
 ```
 You are now in an interactive python terminal. To display the robot that has been loaded by the script, type
-```python
+```
 v = Viewer(robot)
 v.initViewer(open=False, loadModel=True)
 v(q)
@@ -50,7 +50,7 @@ You can have a quick look at the script to see the instructions used to define t
 ## Adding an obstacle to the scene
 
 In the python terminal, copy-paste the following instructions
-```python
+```
 urdf_filename = "package://hpp_tutorial/urdf/ground.urdf"
 srdf_filename = "package://hpp_tutorial/srdf/ground.srdf"
 urdf.loadModel(robot, 0, "ground", "anchor", urdf_filename, srdf_filename, SE3.Identity())
@@ -62,7 +62,7 @@ v(q)
 ## Adding an object to the scene
 
 In the python terminal, copy-paste the following instructions
-```python
+```
 urdf_filename = "package://hpp_tutorial/urdf/box.urdf"
 srdf_filename = "package://hpp_tutorial/srdf/box.srdf"
 urdf.loadModel(robot, 0, "box", "freeflyer", urdf_filename, srdf_filename, SE3.Identity())
@@ -77,9 +77,14 @@ v(q)
 ### Setting bounds to the object translation
 
 Latter on, we will uniformly sample random configurations. To make it possible, we need to set bounds to the translation of the object.
-```python
-robot.setJointBounds("box/root_joint", [-1.5, 1.5,-1.5, 1.5,-0.2, 1.5,-float("Inf"), float("Inf"),-float("Inf"), float("Inf"),
--float("Inf"), float("Inf"),-float("Inf"), float("Inf")])
+```
+robot.setJointBounds("box/root_joint", [-1.5, 1.5,
+    -1.5, 1.5,
+    -0.2, 1.5,
+    -float("Inf"), float("Inf"),
+    -float("Inf"), float("Inf"),
+    -float("Inf"), float("Inf"),
+    -float("Inf"), float("Inf")])
 ```
 The first six values are the minimal and maximal values along x, y, z axes. The eight last
 values apply to the quaternion coefficients that need not being bounded.
@@ -87,7 +92,7 @@ values apply to the quaternion coefficients that need not being bounded.
 ## Explaining the code
 
 Let us have a quick look at the code in `init.py`.
-```python
+```
 robot = Device("tuto")
 ```
 This line creates an empty robot implementing
@@ -169,7 +174,7 @@ Go again to the scene tree. In the tree, expand "pinocchio" then "frames", then 
 ## Defining a manipulation problem
 
 The manipulation problem is defined through a variable of type `Problem` and through the constraint graph that will be constructed by a factory. Let us define those variables.
-```python
+```
 from pyhpp.manipulation import (Graph, Problem, ManipulationPlanner)
 from pyhpp.manipulation.constraint_graph_factory import ConstraintGraphFactory
 
@@ -178,31 +183,31 @@ graph = Graph("robot", robot, problem)
 factory = ConstraintGraphFactory(graph)
 ```
 Later on the graph will solve numerical constraints. We need to set the error threshold and the maximal number of iterations.
-```python
+```
 graph.maxIterations(40)
 graph.errorThreshold(1e-5)
 ```
 Then, we need to define the set of grippers that will be used.
-```python
+```
 factory.setGrippers(["panda/gripper"])
 ```
 We also define the list of objects and for each of them, the list of handles and the list of contact surfaces.
-```python
+```
 objects = ["box"]
 handlesPerObject = [["box/handle"]]
 contactsPerObject = [["box/surface"]]
 factory.setObjects(objects, handlesPerObject, contactsPerObject)
 ```
 Finally, we define the set of environment contact surfaces (surfaces on which objects may be placed).
-```python
+```
 factory.environmentContacts(["ground/surface"])
 ```
 Then we ask the factory to generate the constraint graph corresponding to the manipulation problem.
-```python
+```
 factory.generate()
 ```
 Before initializing the graph, we will add a constraint to all states and transitions in order to keep the gripper open all the time.
-```python
+```
 import numpy as np
 from pyhpp.constraints import (ComparisonType, ComparisonTypes, LockedJoint)
 cts = ComparisonTypes()
@@ -219,7 +224,7 @@ graph.initialize()
 ### Displaying the constraint graph
 
 In the python terminal, copy paste the following lines
-```python
+```
 v.setProblem(problem)
 v.setGraph(graph)
 ```
@@ -237,7 +242,7 @@ By clicking on a state, you can display the constraints of this state. By right 
 ### Back to the manipulation problem
 
 To define a manipulation problem, we now simply need to set the initial and goal configurations. To do so, we move the robot in a collision-free configuration and change only the pose of the box between those configurations
-```python
+```
 q_init = np.array([ 0.   ,  0.   ,  0.   , -0.5  ,  0.   ,  0.5  ,  0.   ,  0.035,
         0.035,  0.4  , -0.2  ,  0.0251,  0.   ,  0.   ,  0.   ,  1.   ])
 q_goal = np.array([ 0.   ,  0.   ,  0.   , -0.5  ,  0.   ,  0.5  ,  0.   ,  0.035,
@@ -252,7 +257,7 @@ v(q_goal)
 ## Solving the manipulation problem
 
 To define and solve the problem,
-```python
+```
 from pyhpp.manipulation import ManipulationPlanner
 problem.initConfig(q_init)
 problem.addGoalConfig(q_goal)
