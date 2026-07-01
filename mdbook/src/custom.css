@@ -6,6 +6,9 @@
     color: #005cc5;
     font-weight: bold;
 }
+.avatar {
+    border-radius: 50%;
+}
 
 .path {
     color: #b31d28;
