@@ -10,6 +10,8 @@
     - [Stable — Nix](installation/nix-stable-binary.md)
     - [Development — Source](installation/devel-sources.md)
     - [Development — Nix](installation/nix-devel-sources.md)
+    - [ROS — Source](installation/ros-devel-sources.md)
+
 
 - [Tutorials Overview](reference/hpp-tutorial/README.md)
   - [Installing the software](reference/hpp-tutorial/tutorial_1/README.md)
