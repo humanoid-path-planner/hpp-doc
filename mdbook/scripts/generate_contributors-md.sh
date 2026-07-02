@@ -2,7 +2,7 @@
 
 ORG=humanoid-path-planner
 
-gh repo list $ORG --limit 200 --json name -q '.[].name' |
+gh repo list $ORG --limit 200 --json name -q '.[].name' | grep ^hpp |
 while read repo; do
     echo "Processing $repo..."
 

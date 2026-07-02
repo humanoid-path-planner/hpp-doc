@@ -8,3 +8,4 @@ fi
 
 ./updatesREADME.sh
 ./updatesTutorialsFigures.sh "$1"
+./updateTutorialsREADME.sh
