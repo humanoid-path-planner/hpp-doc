@@ -211,7 +211,4 @@ Thanks to all the contributors of the HPP project:
 <a href="https://github.com/airobert">
   <img src="https://github.com/airobert.png" width="80" title="airobert (1 contributions)"/>
 </a>
-<a href="https://github.com/0">
-  <img src="https://github.com/0.png" width="80" title="0 ( contributions)"/>
-</a>
 </p>
