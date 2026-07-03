@@ -13,9 +13,9 @@ To compile all the packages in a ROS workspace, you can follow these steps:
   3. Download our repos file to clone HPP packages with [vcs2l](https://github.com/ros-infrastructure/vcs2l):
 
     ```bash
-    mkdir -p $DEVEL_HPP_DIR/src
+    mkdir -p $DEVEL_HPP_DIR
     wget -O $DEVEL_HPP_DIR/hpp.repos https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/ros/devel.repos
-    vcs import --input hpp.repos src
+    vcs import --input hpp.repos
     ```
 
   3. Compile all packages with [colcon](https://colcon.readthedocs.io/):
