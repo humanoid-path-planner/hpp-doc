@@ -54,8 +54,7 @@ flowchart TB
         HCONS["hpp-constraints"]
         HPIN["hpp-pinocchio"]
         HM --> HC
-        HM --> HCONS
-        HC --> HPIN
+        HC --> HCONS
         HCONS --> HPIN
     end
     PIN["pinocchio"]
