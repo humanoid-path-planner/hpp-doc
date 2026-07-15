@@ -1,5 +1,17 @@
 # `pyhpp.manipulation`
 
+## Functions
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">DichotomyProjector</span>(distance: <a href="core.md#distance">pyhpp.core.bindings.Distance</a>, steeringMethod: <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <a href="core.md#dichotomyprojector">pyhpp.core.bindings.DichotomyProjector</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">DichotomyProjector</span>(distance: <a href="core.md#distance">pyhpp.core.bindings.Distance</a>, steeringMethod: <a href="#graphsteeringmethod">GraphSteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <a href="core.md#dichotomyprojector">pyhpp.core.bindings.DichotomyProjector</a></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">GlobalProjector</span>(distance: <a href="core.md#distance">pyhpp.core.bindings.Distance</a>, steeringMethod: <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <a href="core.md#globalprojector">pyhpp.core.bindings.GlobalProjector</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">GlobalProjector</span>(distance: <a href="core.md#distance">pyhpp.core.bindings.Distance</a>, steeringMethod: <a href="#graphsteeringmethod">GraphSteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <a href="core.md#globalprojector">pyhpp.core.bindings.GlobalProjector</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">GraphPartialShortcut</span>(arg1: <span class="hljs-built_in">object</span>) -&gt; <a href="core.md#pathoptimizer">pyhpp.core.bindings.PathOptimizer</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">GraphRandomShortcut</span>(arg1: <span class="hljs-built_in">object</span>) -&gt; <a href="core.md#pathoptimizer">pyhpp.core.bindings.PathOptimizer</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">NoneProjector</span>() -&gt; <a href="core.md#pathprojector">pyhpp.core.bindings.PathProjector</a></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">ProgressiveProjector</span>(distance: <a href="core.md#distance">pyhpp.core.bindings.Distance</a>, steeringMethod: <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <a href="core.md#progressiveprojector">pyhpp.core.bindings.ProgressiveProjector</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">ProgressiveProjector</span>(distance: <a href="core.md#distance">pyhpp.core.bindings.Distance</a>, steeringMethod: <a href="#graphsteeringmethod">GraphSteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <a href="core.md#progressiveprojector">pyhpp.core.bindings.ProgressiveProjector</a></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">RecursiveHermiteProjector</span>(distance: <a href="core.md#distance">pyhpp.core.bindings.Distance</a>, steeringMethod: <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <a href="core.md#recursivehermiteprojector">pyhpp.core.bindings.RecursiveHermiteProjector</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">RecursiveHermiteProjector</span>(distance: <a href="core.md#distance">pyhpp.core.bindings.Distance</a>, steeringMethod: <a href="#graphsteeringmethod">GraphSteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <a href="core.md#recursivehermiteprojector">pyhpp.core.bindings.RecursiveHermiteProjector</a></code> |  |
+
 ## `Device`
 
 *Inherits: [`pyhpp.pinocchio.bindings.Device`](pinocchio.md#device)*
@@ -10,19 +22,21 @@
 >
 > This class also contains pinocchio::Gripper, Handle and JointAndShapes_t
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `addGripper` | Add a gripper to the kinematic chain <br> *Input:* <br> **linkName** — name of the link the handle is attached to, <br> **gripperName** — name of the gripper, <br> **pose** — pose of the gripper in the link frame (SE3), <br> **clearance** — clearance of the gripper, the sum of handle and gripper clearances <br> defines the distance between pregrasp and grasp. |
-| `addHandle` | Add a handle to the kinematic chain <br> *Input:* <br> **linkName** — name of the link the handle is attached to, <br> **handleName** — name of the handle, <br> **pose** — pose of the handle in the link frame (SE3), <br> **clearance** — clearance of the handle, the sum of handle and gripper clearances <br> defines the distance between pregrasp and grasp, <br> **mask** — list of 6 Boolean use to define symmetries in the grasp constraint. |
-| `contactSurfaceNames` | Return list of contact surface names registered on device |
-| `contactSurfaces` | Return dict mapping surface names to list of {joint, points} |
-| `getJointConfig` | Return current configuration values of the named joint. |
-| `getJointNames` | Return list of all joint names in the Pinocchio model. |
-| `grippers` | Return a map from gripper name to Gripper object. |
-| `handles` | Return a map from handle name to Handle object. |
-| `modelsInfo` | Return list of modelsInfo stored in the device, each element contains the urdf path, srdf path, prefix and initial pose of a model loaded in the device |
-| `setJointBounds` | Set joint bounds from a flat list [min0, max0, min1, max1, ...]. |
-| `setRobotRootPosition` | Set the root position of a sub-robot (identified by name) relative to its parent joint. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addGripper</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">str</span>, arg4: pinocchio.pinocchio_pywrap_default.SE3, arg5: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> | Add a gripper to the kinematic chain |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addHandle</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">str</span>, arg4: pinocchio.pinocchio_pywrap_default.SE3, arg5: <span class="hljs-built_in">float</span>, arg6: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-literal">None</span></code> | Add a handle to the kinematic chain |
+| <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">asPinDevice</span>(arg1: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">contactSurfaceNames</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> | Return list of contact surface names registered on device |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">contactSurfaces</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">dict</span></code> | Return dict mapping surface names to list of {joint, points} |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getJointConfig</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">list</span></code> | Return current configuration values of the named joint. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getJointNames</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> | Return list of all joint names in the Pinocchio model. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">grippers</span>(<span class="hljs-params">self</span>) -&gt; <a href="pinocchio.md#grippermap">pyhpp.pinocchio.bindings.GripperMap</a></code> | Return a map from gripper name to Gripper object. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">handles</span>(<span class="hljs-params">self</span>) -&gt; <a href="#handlemap">HandleMap</a></code> | Return a map from handle name to Handle object. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">modelsInfo</span>(<span class="hljs-params">self</span>) -&gt; <a href="#modelsinfovec">modelsInfoVec</a></code> | Return list of modelsInfo stored in the device, each element contains the urdf path, srdf path, prefix and initial pose of a model loaded in the device |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setJointBounds</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span></code> | Set joint bounds from a flat list [min0, max0, min1, max1, ...]. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setRobotRootPosition</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: pinocchio.pinocchio_pywrap_default.SE3) -&gt; <span class="hljs-literal">None</span></code> | Set the root position of a sub-robot (identified by name) relative to its parent joint. |
 
 ---
 
@@ -56,11 +70,12 @@
 >
 > Note that continuity is not tested but enforced by projecting the configuration of the previous sample to compute the configuration at a given sample. DeprecatedThis class has been reimplemented and simplified as steeringMethod::Cartesian.
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `checkFeasibilityOnly` | If enabled, only add one solution to the roadmap. Otherwise add all solutions. |
-| `nDiscreteSteps` | Number of steps to generate goal config (successive projections). |
-| `nRandomConfig` | Get the number of random configurations used to generate the initial config of the final path. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>, arg3: <a href="core.md#roadmap">pyhpp.core.bindings.Roadmap</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">checkFeasibilityOnly</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">checkFeasibilityOnly</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> | If enabled, only add one solution to the roadmap. Otherwise add all solutions. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">nDiscreteSteps</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">nDiscreteSteps</span>(<span class="hljs-params">self</span>, arg2: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>) -&gt; <span class="hljs-literal">None</span></code> | Number of steps to generate goal config (successive projections). |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">nRandomConfig</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">nRandomConfig</span>(<span class="hljs-params">self</span>, arg2: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>) -&gt; <span class="hljs-literal">None</span></code> | Get the number of random configurations used to generate the initial config of the final path. |
 
 ---
 
@@ -68,10 +83,11 @@
 
 *Inherits: [`pyhpp.core.bindings.SteeringMethod`](core.md#steeringmethod)*
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `setTrajectory` | Set the right hand side of the trajectory constraint from a path. param se3Output: set to True if the output of path must be understood as SE3. |
-| `setTrajectoryConstraint` | Set the constraint whose right hand side will vary along the trajectory. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setTrajectory</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#path">pyhpp.core.bindings.Path</a>, arg3: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> | Set the right hand side of the trajectory constraint from a path. param se3Output: set to True if the output of path must be understood as SE3. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setTrajectoryConstraint</span>(<span class="hljs-params">self</span>, arg2: <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a>) -&gt; <span class="hljs-literal">None</span></code> | Set the constraint whose right hand side will vary along the trajectory. |
 
 ---
 
@@ -115,6 +131,10 @@
 >
 > hpp::manipulation::ConstraintSet.
 
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+
 ---
 
 ## `Graph`
@@ -135,73 +155,78 @@
 >
 > The graph and all its components have a unique index starting at 0 for the graph itself. The index of a component can be retrieved using method GraphComponent::id.
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `_get_native_graph` | Return a capsule wrapping the native C++ Graph object (for external interop). |
-| `addLevelSetFoliation` | Add the numerical constraints to a LevelSetTransition that create the foliation. |
-| `addNumericalConstraint` | Add a numerical constraint to a state. |
-| `addNumericalConstraintsForPath` | Add numerical constraints for path to a state. |
-| `addNumericalConstraintsToGraph` | Add a list of numerical constraints to all transitions in the graph. |
-| `addNumericalConstraintsToState` | Add numerical constraints to a state. |
-| `addNumericalConstraintsToTransition` | Add numerical constraints to a TRANSITION. |
-| `applyLeafConstraints` | Apply transition constraints to a configuration. Returns tuple with success flag, output configuration, and error norm. If success, the output configuration is reachable from q_rhs along the transition. |
-| `applyStateConstraints` | Apply constraints to a configuration. Returns tuple with success flag, output configuration, and error norm. |
-| `createGraspConstraint` | Create grasp, complement and hold constraints for a gripper-handle pair. Returns a list [grasp, complement, hold]. |
-| `createLevelSetTransition` | Create a LevelSetTransition. See documentation of class hpp::manipulation::graph::LevelSetEdge for more information. |
-| `createPlacementConstraint` | Create placement constraint between object surfaces and environment surfaces. Creates constraints that ensure proper contact between object and environment. |
-| `createPreGraspConstraint` | Create a pre-grasp constraint for a gripper-handle pair. |
-| `createPrePlacementConstraint` | Create pre-placement constraint with specified width margin. Used for approaching placement configurations before final placement. |
-| `createState` | Create one or several states. The order is important - the first should be the most restrictive one as a configuration will be in the first state for which the constraints are satisfied. |
-| `createSubGraph` | Create a subgraph with guided state selection. |
-| `createTransition` | Create a transition. The weights define the probability of selecting a transition among all the outgoing transitions of a state. The probability of a transition is w_i / sum(w_j), where each w_j corresponds to an outgoing transition from a given state. To have a transition that cannot be selected by the M-RRT algorithm but is still acceptable, set its weight to zero. |
-| `createWaypointTransition` | Create a WaypointTransition. See documentation of class hpp::manipulation::graph::WaypointEdge for more information. |
-| `display` | Display the current graph. The graph is printed in DOT format. |
-| `displayStateConstraints` | Print set of constraints relative to a state in a string. |
-| `displayTransitionConstraints` | Print set of constraints relative to a transition in a string. |
-| `displayTransitionTargetConstraints` | Print set of constraints relative to a transition in a string. |
-| `errorThreshold` | Get error threshold in config projector. |
-| `errorThreshold` | Set error threshold. |
-| `generateTargetConfig` | Generate configuration in destination state on a given leaf. Returns tuple with success flag, output configuration, and error norm. Computes a configuration in the destination state of the transition, reachable from q_rhs. |
-| `getConfigErrorForState` | Get error of a config with respect to a state constraint. Returns whether the configuration belongs to the state. Calls core::ConstraintSet::isSatisfied for the state constraints. |
-| `getConfigErrorForTransition` | Get error of a config with respect to a transition constraint. Returns whether the configuration belongs to the transition. Calls core::ConfigProjector::rightHandSideFromConfig with the input configuration and then core::ConstraintSet::isSatisfied on the transition constraints. |
-| `getConfigErrorForTransitionLeaf` | Get error of a config with respect to a transition foliation leaf. Returns whether config can be the end point of a path of the transition starting at leafConfig. |
-| `getConfigErrorForTransitionTarget` | Get error of a config with respect to the target of a transition foliation leaf. Returns whether config can be the end point of a path of the transition starting at leafConfig. |
-| `getContainingNode` | Get the name of the state in which a transition is. Paths satisfying the transition constraints satisfy the state constraints. |
-| `getNodesConnectedByTransition` | Get the names of the states connected by a transition. |
-| `getNumericalConstraintsForEdge` | Get numerical constraints of an edge. |
-| `getNumericalConstraintsForGraph` | Get numerical constraints of the graph. |
-| `getNumericalConstraintsForState` | Get numerical constraints of a state. |
-| `getRelativeMotionMatrix` | Get relative motion matrix for a transition as list of lists. |
-| `getSecurityMarginMatrixForTransition` | Get security margin matrix for a transition as list of lists. |
-| `getState` | Return the state with the given name. |
-| `getStateFromConfiguration` | Get the name of the state corresponding to the configuration. |
-| `getStateNames` | Return a list of state names. |
-| `getStates` | Return a list of all states in the constraint graph. |
-| `getTransition` | Return the transition with the given name. |
-| `getTransitionNames` | Return a list of transition names. |
-| `getTransitions` | Return a list of all transitions in the constraint graph. |
-| `getWeight` | Get weight of a transition. |
-| `initialize` | Initialize the graph. Performs final initialization of the constraint graph. |
-| `isShort` | Check if a transition is short. |
-| `maxIterations` | Get maximal number of iterations in config projector. |
-| `maxIterations` | Set maximal number of iterations. |
-| `registerConstraints` | Register constraints in the graph. |
-| `removeCollisionPairFromTransition` | Remove collision pairs from a transition. |
-| `resetConstraints` | Reset constraints of a state. |
-| `setContainingNode` | Set in which state a transition is. Paths satisfying the transition constraints satisfy the state constraints. |
-| `setSecurityMarginForTransition` | Set collision security margin for a pair of joints along a transition. |
-| `setShort` | Set that a transition is short. When a transition is tagged as short, extension along this transition is done differently in RRT-like algorithms. Instead of projecting a random configuration in the destination state, the configuration to extend itself is projected in the destination state. This makes the rate of success higher. |
-| `setTargetNodeList` | Set the target state list for guided state selection. |
-| `setWaypoint` | Set waypoint configuration for a waypoint transition. Configures which edge and state to use at the specified waypoint index. |
-| `setWeight` | Set weight of a transition. You cannot set weight for waypoint transitions. |
-| `transitionAtParam` | Return the transition used at a given parameter on a path (static method). |
-| `robot` *(property)* | The robot device of the constraint graph. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <a href="pinocchio.md#device">Device</a>, arg4: <a href="#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">_get_native_graph</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> | Return a capsule wrapping the native C++ Graph object (for external interop). |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addLevelSetFoliation</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: <span class="hljs-built_in">list</span>, arg4: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span></code> | Add the numerical constraints to a LevelSetTransition that create the foliation. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addNumericalConstraint</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>, arg3: <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a>) -&gt; <span class="hljs-literal">None</span></code> | Add a numerical constraint to a state. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addNumericalConstraintsForPath</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>, arg3: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span></code> | Add numerical constraints for path to a state. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addNumericalConstraintsToGraph</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span></code> | Add a list of numerical constraints to all transitions in the graph. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addNumericalConstraintsToState</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>, arg3: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span></code> | Add numerical constraints to a state. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addNumericalConstraintsToTransition</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span></code> | Add numerical constraints to a TRANSITION. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">applyLeafConstraints</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: numpy.ndarray, arg4: numpy.ndarray) -&gt; <span class="hljs-built_in">tuple</span></code> | Apply transition constraints to a configuration. Returns tuple with success flag, output configuration, and error norm. If success, the output configuration is reachable from q_rhs along the transition. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">applyStateConstraints</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-built_in">tuple</span></code> | Apply constraints to a configuration. Returns tuple with success flag, output configuration, and error norm. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createGraspConstraint</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">str</span>, arg4: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">list</span></code> | Create grasp, complement and hold constraints for a gripper-handle pair. Returns a list [grasp, complement, hold]. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createLevelSetTransition</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>, arg3: <a href="#state">State</a>, arg4: <span class="hljs-built_in">str</span>, arg5: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>, arg6: <a href="#state">State</a>) -&gt; <a href="#transition">Transition</a></code> | Create a LevelSetTransition. See documentation of class hpp::manipulation::graph::LevelSetEdge for more information. |
+| <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">createPlacementConstraint</span>(*args, **kwargs)</code> | Create placement constraint between object surfaces and environment surfaces. Creates constraints that ensure proper contact between object and environment. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createPreGraspConstraint</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">str</span>, arg4: <span class="hljs-built_in">str</span>) -&gt; <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a></code> | Create a pre-grasp constraint for a gripper-handle pair. |
+| <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">createPrePlacementConstraint</span>(*args, **kwargs)</code> | Create pre-placement constraint with specified width margin. Used for approaching placement configurations before final placement. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createState</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">bool</span>, arg4: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>) -&gt; <a href="#state">State</a></code> | Create one or several states. The order is important - the first should be the most restrictive one as a configuration will be in the first state for which the constraints are satisfied. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createSubGraph</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <a href="core.md#roadmap">pyhpp.core.bindings.Roadmap</a>) -&gt; <span class="hljs-literal">None</span></code> | Create a subgraph with guided state selection. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createTransition</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>, arg3: <a href="#state">State</a>, arg4: <span class="hljs-built_in">str</span>, arg5: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>, arg6: <a href="#state">State</a>) -&gt; <a href="#transition">Transition</a></code> | Create a transition. The weights define the probability of selecting a transition among all the outgoing transitions of a state. The probability of a transition is w_i / sum(w_j), where each w_j corresponds to an outgoing transition from a given state. To have a transition that cannot be selected by the M-RRT algorithm but is still acceptable, set its weight to zero. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createWaypointTransition</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>, arg3: <a href="#state">State</a>, arg4: <span class="hljs-built_in">str</span>, arg5: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>, arg6: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>, arg7: <a href="#state">State</a>, arg8: <span class="hljs-built_in">bool</span>) -&gt; <a href="#transition">Transition</a></code> | Create a WaypointTransition. See documentation of class hpp::manipulation::graph::WaypointEdge for more information. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">display</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> | Display the current graph. The graph is printed in DOT format. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">displayStateConstraints</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>) -&gt; <span class="hljs-built_in">str</span></code> | Print set of constraints relative to a state in a string. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">displayTransitionConstraints</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>) -&gt; <span class="hljs-built_in">str</span></code> | Print set of constraints relative to a transition in a string. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">displayTransitionTargetConstraints</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>) -&gt; <span class="hljs-built_in">str</span></code> | Print set of constraints relative to a transition in a string. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">errorThreshold</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">errorThreshold</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> | Get error threshold in config projector. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">generateTargetConfig</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: numpy.ndarray, arg4: numpy.ndarray) -&gt; <span class="hljs-built_in">tuple</span></code> | Generate configuration in destination state on a given leaf. Returns tuple with success flag, output configuration, and error norm. Computes a configuration in the destination state of the transition, reachable from q_rhs. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getConfigErrorForState</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-built_in">tuple</span></code> | Get error of a config with respect to a state constraint. Returns whether the configuration belongs to the state. Calls core::ConstraintSet::isSatisfied for the state constraints. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getConfigErrorForTransition</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-built_in">tuple</span></code> | Get error of a config with respect to a transition constraint. Returns whether the configuration belongs to the transition. Calls core::ConfigProjector::rightHandSideFromConfig with the input configuration and then core::ConstraintSet::isSatisfied on the transition constraints. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getConfigErrorForTransitionLeaf</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: numpy.ndarray, arg4: numpy.ndarray) -&gt; <span class="hljs-built_in">tuple</span></code> | Get error of a config with respect to a transition foliation leaf. Returns whether config can be the end point of a path of the transition starting at leafConfig. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getConfigErrorForTransitionTarget</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: numpy.ndarray, arg4: numpy.ndarray) -&gt; <span class="hljs-built_in">tuple</span></code> | Get error of a config with respect to the target of a transition foliation leaf. Returns whether config can be the end point of a path of the transition starting at leafConfig. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getContainingNode</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>) -&gt; <span class="hljs-built_in">str</span></code> | Get the name of the state in which a transition is. Paths satisfying the transition constraints satisfy the state constraints. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getNodesConnectedByTransition</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>) -&gt; <span class="hljs-built_in">tuple</span></code> | Get the names of the states connected by a transition. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getNumericalConstraintsForEdge</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>) -&gt; <span class="hljs-built_in">list</span></code> | Get numerical constraints of an edge. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getNumericalConstraintsForGraph</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> | Get numerical constraints of the graph. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getNumericalConstraintsForState</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>) -&gt; <span class="hljs-built_in">list</span></code> | Get numerical constraints of a state. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getRelativeMotionMatrix</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>) -&gt; <span class="hljs-built_in">list</span></code> | Get relative motion matrix for a transition as list of lists. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getSecurityMarginMatrixForTransition</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>) -&gt; <span class="hljs-built_in">list</span></code> | Get security margin matrix for a transition as list of lists. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getState</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <a href="#state">State</a></code> | Return the state with the given name. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getStateFromConfiguration</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-built_in">str</span></code> | Get the name of the state corresponding to the configuration. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getStateNames</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> | Return a list of state names. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getStates</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> | Return a list of all states in the constraint graph. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getTransition</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <a href="#transition">Transition</a></code> | Return the transition with the given name. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getTransitionNames</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> | Return a list of transition names. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getTransitions</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> | Return a list of all transitions in the constraint graph. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getWeight</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>) -&gt; <span class="hljs-built_in">int</span></code> | Get weight of a transition. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">initialize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> | Initialize the graph. Performs final initialization of the constraint graph. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">isShort</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>) -&gt; <span class="hljs-built_in">bool</span></code> | Check if a transition is short. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maxIterations</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maxIterations</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> | Get maximal number of iterations in config projector. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">registerConstraints</span>(<span class="hljs-params">self</span>, arg2: <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a>, arg3: <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a>, arg4: <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a>) -&gt; <span class="hljs-literal">None</span></code> | Register constraints in the graph. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">removeCollisionPairFromTransition</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: <span class="hljs-built_in">str</span>, arg4: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> | Remove collision pairs from a transition. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">resetConstraints</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>) -&gt; <span class="hljs-literal">None</span></code> | Reset constraints of a state. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setContainingNode</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: <a href="#state">State</a>) -&gt; <span class="hljs-literal">None</span></code> | Set in which state a transition is. Paths satisfying the transition constraints satisfy the state constraints. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setSecurityMarginForTransition</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: <span class="hljs-built_in">str</span>, arg4: <span class="hljs-built_in">str</span>, arg5: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> | Set collision security margin for a pair of joints along a transition. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setShort</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> | Set that a transition is short. When a transition is tagged as short, extension along this transition is done differently in RRT-like algorithms. Instead of projecting a random configuration in the destination state, the configuration to extend itself is projected in the destination state. This makes the rate of success higher. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setTargetNodeList</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span></code> | Set the target state list for guided state selection. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setWaypoint</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>, arg4: <a href="#transition">Transition</a>, arg5: <a href="#state">State</a>) -&gt; <span class="hljs-literal">None</span></code> | Set waypoint configuration for a waypoint transition. Configures which edge and state to use at the specified waypoint index. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setWeight</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>) -&gt; <span class="hljs-literal">None</span></code> | Set weight of a transition. You cannot set weight for waypoint transitions. |
+| <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">transitionAtParam</span>(arg1: <a href="core-path.md#vector">pyhpp.core.path.bindings.Vector</a>, arg2: <span class="hljs-built_in">float</span>) -&gt; <a href="#transition">Transition</a></code> | Return the transition used at a given parameter on a path (static method). |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">robot</span>(*args, **kwargs)<br><br><span class="hljs-meta">@robot.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">robot</span>(*args, **kwargs)</code> | The robot device of the constraint graph. |
+
+---
+
+## `GraphSteeringMethod`
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
 ## `Handle`
-
-*Not instantiable from Python.*
 
 > Frame attached to an object that is aimed at being grasped
 >
@@ -211,19 +236,43 @@
 >
 > However, for some applications, the complement constraint can be customized using setter maskComp. Note that calling setter method mask reinitializes the mask complement.
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `createGrasp` | **gripper** — object containing the gripper information |
-| `createGraspAndComplement` | **gripper** — object containing the gripper information |
-| `createGraspComplement` | **gripper** — object containing the gripper information |
-| `createPreGrasp` | **gripper** — object containing the gripper information |
-| `getParentJointId` | Get index of the joint the handle is attached to in pinocchio Model |
-| `approachingDirection` *(property)* | Approaching direction for pregrasp (unit vector in handle frame, default is x-axis). |
-| `clearance` *(property)* | Distance from the center of the gripper along x-axis that ensures no collision. Also gives an order of magnitude of the gripper size. |
-| `localPosition` *(property)* | Local position of the handle in the joint frame. |
-| `mask` *(property)* | Constraint mask: vector&lt;bool&gt; of size 6 defining the symmetries of the handle. See Handle class documentation for details. |
-| `maskComp` *(property)* | Mask of the complement constraint. |
-| `name` *(property)* | Name of the handle. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createGrasp</span>(<span class="hljs-params">self</span>, gripper: <a href="pinocchio.md#gripper">pyhpp.pinocchio.bindings.Gripper</a>, name: <span class="hljs-built_in">str</span>) -&gt; <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a></code> | **gripper** — object containing the gripper information |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createGraspAndComplement</span>(<span class="hljs-params">self</span>, gripper: <a href="pinocchio.md#gripper">pyhpp.pinocchio.bindings.Gripper</a>, name: <span class="hljs-built_in">str</span>) -&gt; <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a></code> | **gripper** — object containing the gripper information |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createGraspComplement</span>(<span class="hljs-params">self</span>, gripper: <a href="pinocchio.md#gripper">pyhpp.pinocchio.bindings.Gripper</a>, name: <span class="hljs-built_in">str</span>) -&gt; <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a></code> | **gripper** — object containing the gripper information |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">createPreGrasp</span>(<span class="hljs-params">self</span>, gripper: <a href="pinocchio.md#gripper">pyhpp.pinocchio.bindings.Gripper</a>, shift: <span class="hljs-built_in">float</span>, name: <span class="hljs-built_in">str</span>) -&gt; <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a></code> | **gripper** — object containing the gripper information |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getParentJointId</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Get index of the joint the handle is attached to in pinocchio Model |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">approachingDirection</span>(*args, **kwargs)<br><br><span class="hljs-meta">@approachingDirection.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">approachingDirection</span>(*args, **kwargs)</code> | Approaching direction for pregrasp (unit vector in handle frame, default is x-axis). |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">clearance</span>(*args, **kwargs)<br><br><span class="hljs-meta">@clearance.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">clearance</span>(*args, **kwargs)</code> | Distance from the center of the gripper along x-axis that ensures no collision. Also gives an order of magnitude of the gripper size. |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">localPosition</span>(*args, **kwargs)<br><br><span class="hljs-meta">@localPosition.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">localPosition</span>(*args, **kwargs)</code> | Local position of the handle in the joint frame. |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">mask</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span><br><br><span class="hljs-meta">@mask.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">mask</span>(<span class="hljs-params">self</span>, value: list[bool]) -&gt; <span class="hljs-literal">None</span></code> | Constraint mask: vector&lt;bool&gt; of size 6 defining the symmetries of the handle. See Handle class documentation for details. |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maskComp</span>(*args, **kwargs)<br><br><span class="hljs-meta">@maskComp.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maskComp</span>(*args, **kwargs)</code> | Mask of the complement constraint. |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">name</span>(*args, **kwargs)<br><br><span class="hljs-meta">@name.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">name</span>(*args, **kwargs)</code> | Name of the handle. |
+
+---
+
+## `HandleMap`
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__contains__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>) -&gt; <a href="#handle">Handle</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>) -&gt; typing.Iterator[str]</code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__setitem__</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>, value: <a href="#handle">Handle</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+
+---
+
+## `ManipulationPlanner`
+
+*Inherits: [`pyhpp.core.bindings.PathPlanner`](core.md#pathplanner)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -231,36 +280,94 @@
 
 *Inherits: [`pyhpp.core.bindings.Problem`](core.md#problem)*
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `checkProblem` | Check whether the problem is well formulated. |
-| `constraintGraph` | Get the graph of constraints. |
-| `constraintGraph` | Set the graph of constraints. |
-| `fullSteeringMethod` | Set the problem steering method directly. Unlike steeringMethod, this does not wrap the given steering method in a manipulation graph steering method. |
-| `steeringMethod` | Get the inner steering method (unwrapped from the graph steering method if applicable). |
-| `steeringMethod` | Set the steering method. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#device">Device</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">checkProblem</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> | Check whether the problem is well formulated. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">constraintGraph</span>(<span class="hljs-params">self</span>) -&gt; <a href="#graph">Graph</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">constraintGraph</span>(<span class="hljs-params">self</span>, arg2: <a href="#graph">Graph</a>) -&gt; <span class="hljs-literal">None</span></code> | Get the graph of constraints. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">fullSteeringMethod</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a>) -&gt; <span class="hljs-literal">None</span></code> | Set the problem steering method directly. Unlike steeringMethod, this does not wrap the given steering method in a manipulation graph steering method. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">steeringMethod</span>(<span class="hljs-params">self</span>) -&gt; <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">steeringMethod</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a>) -&gt; <span class="hljs-literal">None</span></code> | Get the inner steering method (unwrapped from the graph steering method if applicable). |
+
+---
+
+## `RandomShortcut`
+
+*Inherits: [`pyhpp.core.bindings.PathOptimizer`](core.md#pathoptimizer)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+
+---
+
+## `SplineGradientBased_bezier1`
+
+*Inherits: [`pyhpp.core.bindings.PathOptimizer`](core.md#pathoptimizer)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@QPAccuracy.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@alphaInit.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@alwaysStopAtFirst.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">checkJointBound</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@checkJointBound.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">checkJointBound</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">costOrder</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@costOrder.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">costOrder</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">costThreshold</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@costThreshold.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">costThreshold</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">guessThreshold</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@guessThreshold.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">guessThreshold</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">linearizeAtEachStep</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@linearizeAtEachStep.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">linearizeAtEachStep</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">reorderIntervals</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@reorderIntervals.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">reorderIntervals</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">returnOptimum</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@returnOptimum.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">returnOptimum</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">usePathLengthAsWeights</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@usePathLengthAsWeights.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">usePathLengthAsWeights</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+
+---
+
+## `SplineGradientBased_bezier3`
+
+*Inherits: [`pyhpp.core.bindings.PathOptimizer`](core.md#pathoptimizer)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@QPAccuracy.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@alphaInit.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@alwaysStopAtFirst.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">checkJointBound</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@checkJointBound.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">checkJointBound</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">costOrder</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@costOrder.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">costOrder</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">costThreshold</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@costThreshold.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">costThreshold</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">guessThreshold</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@guessThreshold.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">guessThreshold</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">linearizeAtEachStep</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@linearizeAtEachStep.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">linearizeAtEachStep</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">reorderIntervals</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@reorderIntervals.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">reorderIntervals</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">returnOptimum</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@returnOptimum.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">returnOptimum</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">usePathLengthAsWeights</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@usePathLengthAsWeights.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">usePathLengthAsWeights</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
 ## `State`
 
-*Not instantiable from Python.*
-
 > State of an end-effector.
 >
 > States of the graph of constraints. There is one graph for each end-effector.
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `id` | Return the component id. |
-| `name` | Get the component name. |
-| `neighborEdges` | Get the list of edges connected to this state. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">configConstraint</span>(<span class="hljs-params">self</span>) -&gt; <a href="core.md#constraintset">pyhpp.core.bindings.ConstraintSet</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">id</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Return the component id. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">name</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> | Get the component name. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">neighborEdges</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> | Get the list of edges connected to this state. |
+
+---
+
+## `StatesPathFinder`
+
+*Inherits: [`pyhpp.core.bindings.PathPlanner`](core.md#pathplanner)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
 ## `Transition`
-
-*Not instantiable from Python.*
 
 > Transition between two states of a constraint graph
 >
@@ -270,15 +377,14 @@
 >
 > Configuration constraints  are constraints that configurations in the destination state should satisfy and the constraints that paths should satisfy. For instance, if the edge links a state where the robot does not hold the object to a state where the robot holds the object, the configuration constraints represent a fixed relative position of the object with respect to the gripper and a stable position of the object. Configuration constraints are necessary to generate a configuration in the destination state of the edge that is reachable from a given configuration in the start state by an admissible path.
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `id` | Return the component id. |
-| `isWaypointTransition` | **Error** — Could not find member (.*) isWaypointEdge of class hpp::manipulation::graph::Edge |
-| `name` | Get the component name. |
-| `nbWaypoints` | **Error** — Could not find member (.*) nbWaypoints of class hpp::manipulation::graph::Edge |
-| `nbWaypoints` | **Error** — Could not find member (.*) nbWaypoints of class hpp::manipulation::graph::Edge |
-| `pathValidation` | Get path validation associated to the edge. |
-| `waypoint` | **Error** — Could not find member (.*) waypoint of class hpp::manipulation::graph::Edge |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">id</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Return the component id. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">isWaypointTransition</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span></code> | **Error** — Could not find member (.*) isWaypointEdge of class hpp::manipulation::graph::Edge |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">name</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> | Get the component name. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">nbWaypoints</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">nbWaypoints</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | **Error** — Could not find member (.*) nbWaypoints of class hpp::manipulation::graph::Edge |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">pathValidation</span>(<span class="hljs-params">self</span>) -&gt; <a href="core.md#pathvalidation">pyhpp.core.bindings.PathValidation</a></code> | Get path validation associated to the edge. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">waypoint</span>(<span class="hljs-params">self</span>, arg2: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>) -&gt; <a href="#transition">Transition</a></code> | **Error** — Could not find member (.*) waypoint of class hpp::manipulation::graph::Edge |
 
 ---
 
@@ -306,20 +412,61 @@
 >
 > Method timeParameterization  computes a time parameterization of a given path.
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `clearPathOptimizers` | Clear path optimizers. |
-| `directPath` | Compute a direct path on a transition. Returns (success, path, status). |
-| `innerPlanner` | Get the inner planner. |
-| `innerPlanner` | Set the inner planner. |
-| `innerProblem` | Get the inner problem. |
-| `optimizePath` | :param :input path |
-| `pathProjector` | Set the path projector. |
-| `planPath` | **qInit** — initial configuration, <br> :param qGoals goal:configurations, <br> **resetRoadmap** — whether to reset the roadmap |
-| `setEdge` | **id** — index of the transition in the constraint graph |
-| `setReedsAndSheppSteeringMethod` | Create a Reeds and Shepp steering method and path it to the problem. |
-| `setTransition` | **id** — index of the transition in the constraint graph |
-| `timeParameterization` | :param :input path |
-| `validateConfiguration` | Validate configuration against the graph state identified by id. Returns (valid, report). |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addPathOptimizer</span>(<span class="hljs-params">self</span>, pathOptimizer: <a href="core.md#pathoptimizer">pyhpp.core.bindings.PathOptimizer</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">clearPathOptimizers</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> | Clear path optimizers. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">computePath</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray, self_: <span class="hljs-built_in">bool</span>) -&gt; <a href="core-path.md#vector">pyhpp.core.path.bindings.Vector</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">directPath</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray, arg4: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-built_in">tuple</span></code> | Compute a direct path on a transition. Returns (success, path, status). |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">innerPlanner</span>(<span class="hljs-params">self</span>) -&gt; <a href="core.md#pathplanner">pyhpp.core.bindings.PathPlanner</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">innerPlanner</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#pathplanner">pyhpp.core.bindings.PathPlanner</a>) -&gt; <span class="hljs-literal">None</span></code> | Get the inner planner. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">innerProblem</span>(<span class="hljs-params">self</span>) -&gt; <a href="core.md#problem">pyhpp.core.bindings.Problem</a></code> | Get the inner problem. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">optimizePath</span>(<span class="hljs-params">self</span>, path: <a href="core.md#path">pyhpp.core.bindings.Path</a>) -&gt; <a href="core-path.md#vector">pyhpp.core.path.bindings.Vector</a></code> | :param :input path |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">pathProjector</span>(<span class="hljs-params">self</span>, pathProjector: <a href="core.md#pathprojector">pyhpp.core.bindings.PathProjector</a>) -&gt; <span class="hljs-literal">None</span></code> | Set the path projector. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">planPath</span>(<span class="hljs-params">self</span>, qInit: numpy.ndarray, qGoals: numpy.ndarray, resetRoadmap: <span class="hljs-built_in">bool</span>) -&gt; <a href="core-path.md#vector">pyhpp.core.path.bindings.Vector</a></code> | **qInit** — initial configuration, :param qGoals goal:configurations, **resetRoadmap** — whether to reset the roadmap |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setEdge</span>(<span class="hljs-params">self</span>, id: <a href="#transition">Transition</a>) -&gt; <span class="hljs-literal">None</span></code> | **id** — index of the transition in the constraint graph |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setReedsAndSheppSteeringMethod</span>(<span class="hljs-params">self</span>, turningRadius: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> | Create a Reeds and Shepp steering method and path it to the problem. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setTransition</span>(<span class="hljs-params">self</span>, id: <a href="#transition">Transition</a>) -&gt; <span class="hljs-literal">None</span></code> | **id** — index of the transition in the constraint graph |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">timeParameterization</span>(<span class="hljs-params">self</span>, path: <a href="core-path.md#vector">pyhpp.core.path.bindings.Vector</a>) -&gt; <a href="core-path.md#vector">pyhpp.core.path.bindings.Vector</a></code> | :param :input path |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">validateConfiguration</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-built_in">tuple</span></code> | Validate configuration against the graph state identified by id. Returns (valid, report). |
+
+---
+
+## `map_indexing_suite_HandleMap_entry`
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__repr__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">data</span>(<span class="hljs-params">self</span>) -&gt; <a href="#handle">Handle</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">key</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+
+---
+
+## `modelsInfo`
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">pose</span>(<span class="hljs-params">self</span>) -&gt; pinocchio.pinocchio_pywrap_default.SE3<br><br><span class="hljs-meta">@pose.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">pose</span>(<span class="hljs-params">self</span>, arg2: pinocchio.pinocchio_pywrap_default.SE3) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">prefix</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span><br><br><span class="hljs-meta">@prefix.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">prefix</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">srdfPath</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span><br><br><span class="hljs-meta">@srdfPath.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">srdfPath</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">urdfPath</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span><br><br><span class="hljs-meta">@urdfPath.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">urdfPath</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+
+---
+
+## `modelsInfoVec`
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__contains__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__setitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">append</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">extend</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---

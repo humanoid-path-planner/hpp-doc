@@ -2,7 +2,7 @@
 
 ## `BySubstitution`
 
-*Inherits: `HierarchicalIterative`*
+*Inherits: [`HierarchicalIterative`](#hierarchicaliterative)*
 
 > Solve a non-linear system equations with explicit and implicit constraints
 >
@@ -18,18 +18,38 @@
 >
 > See Section III of the above mentioned paper for the description of the constraint resolution.
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `describeError` | Describe the constraint error for configuration q. Returns a list of (constraint_name, error_norm) pairs. |
-| `explicitConstraintSet` | Get explicit constraint set. |
-| `explicitConstraintSetHasChanged` | Should be called whenever explicit solver is modified. |
-| `rightHandSide` | Set right hand side of a constraint. <br> Size of rhs should be equal to the total dimension of parameterizable <br> constraints (type Equality). |
-| `rightHandSide` | Set the right hand side. <br> Size of rhs should be equal to the total dimension of parameterizable <br> constraints (type Equality). |
-| `rightHandSide` | Get the right hand side. <br> Size of result is equal to total dimension of parameterizable <br> constraints (type Equality). |
-| `rightHandSideFromConfig` | Compute right hand side of equality constraints from a configuration. <br> For each constraint of type Equality, set right hand side as rhs = f(q). <br> Only parameterizable constraints (type Equality) are set. |
-| `rightHandSideFromConfig` | Compute right hand side of a constraint from a configuration. <br> Set right hand side as rhs = f(q). <br> Only parameterizable constraints (type Equality) are set. |
-| `solve` | Solve the constraints from configuration q. Returns (output_config, status). |
-| `errorThreshold` *(property)* | Get error threshold. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">describeError</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-built_in">tuple</span></code> | Describe the constraint error for configuration q. Returns a list of (constraint_name, error_norm) pairs. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">explicitConstraintSet</span>(<span class="hljs-params">self</span>) -&gt; <a href="#explicitconstraintset">ExplicitConstraintSet</a></code> | Get explicit constraint set. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">explicitConstraintSetHasChanged</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> | Should be called whenever explicit solver is modified. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSide</span>(<span class="hljs-params">self</span>, arg2: <a href="#implicit">Implicit</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSide</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSide</span>(<span class="hljs-params">self</span>) -&gt; numpy.ndarray</code> | Set right hand side of a constraint. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSideFromConfig</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; numpy.ndarray<br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSideFromConfig</span>(<span class="hljs-params">self</span>, arg2: <a href="#implicit">Implicit</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-built_in">bool</span></code> | Compute right hand side of equality constraints from a configuration. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">solve</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-built_in">tuple</span></code> | Solve the constraints from configuration q. Returns (output_config, status). |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">errorThreshold</span>(*args, **kwargs)<br><br><span class="hljs-meta">@errorThreshold.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">errorThreshold</span>(*args, **kwargs)</code> | Get error threshold. |
+
+---
+
+## `ComparisonType`
+
+*Inherits: `int`*
+
+---
+
+## `ComparisonTypes`
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__contains__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__setitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">append</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">extend</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -43,20 +63,26 @@
 >
 > The value of the function for a given input can be accessed by method value . The Jacobian of the function for a given input can be accessed by method jacobian .
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `J` | Compute Jacobian matrix and return as a numpy array. |
-| `__call__` | Evaluate the function at a given parameter. |
-| `inputSize` | Get dimension of input vector. |
-| `jacobian` | :param :jacobian will be stored in this argument <br> **argument** — point at which the jacobian will be computed |
-| `name` | Get function name. |
-| `outputDerivativeSize` | Get dimension of output derivative vector. |
-| `outputSize` | Get dimension of output vector. |
-| `outputSpace` | Get output space. |
-| `ndi` *(property)* | Get dimension of input derivative vector. <br> The dimension of configuration vectors might differ from the dimension <br> of velocity vectors since some joints are represented by non minimal <br> size vectors: e.g. quaternion for SO(3). |
-| `ndo` *(property)* | Get dimension of output derivative vector. |
-| `ni` *(property)* | Get dimension of input vector. |
-| `no` *(property)* | Get dimension of output vector. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">J</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; numpy.ndarray</code> | Compute Jacobian matrix and return as a numpy array. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__call__</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <a href="pinocchio.md#liegroupelement">pyhpp.pinocchio.bindings.LiegroupElement</a></code> | Evaluate the function at a given parameter. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>, arg3: <span class="hljs-built_in">int</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_compute</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupelementref">pyhpp.pinocchio.bindings.LiegroupElementRef</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_compute</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupelementref">pyhpp.pinocchio.bindings.LiegroupElementRef</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_jacobian</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_jacobian</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">inputDerivativeSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">inputSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Get dimension of input vector. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">jacobian</span>(<span class="hljs-params">self</span>, jacobian: numpy.ndarray, argument: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> | :param :jacobian will be stored in this argument **argument** — point at which the jacobian will be computed |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">name</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">name</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> | Get function name. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">outputDerivativeSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Get dimension of output derivative vector. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">outputSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Get dimension of output vector. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">outputSpace</span>(<span class="hljs-params">self</span>) -&gt; <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a></code> | Get output space. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">value</span>(<span class="hljs-params">self</span>, result: <a href="pinocchio.md#liegroupelement">pyhpp.pinocchio.bindings.LiegroupElement</a>, argument: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">ndi</span>(*args, **kwargs)</code> | Get dimension of input derivative vector. |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">ndo</span>(*args, **kwargs)</code> | Get dimension of output derivative vector. |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">ni</span>(*args, **kwargs)</code> | Get dimension of input vector. |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">no</span>(*args, **kwargs)</code> | Get dimension of output vector. |
 
 ---
 
@@ -128,6 +154,10 @@
 >
 > space. If the input value is not in the definition subspace, the explicit constraint will throw an exception of type FunctionNotDefinedForThisValue.
 
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>, arg3: <a href="#differentiablefunction">DifferentiableFunction</a>, arg4: <span class="hljs-built_in">list</span>, arg5: <span class="hljs-built_in">list</span>, arg6: <span class="hljs-built_in">list</span>, arg7: <span class="hljs-built_in">list</span>, arg8: <a href="#comparisontypes">ComparisonTypes</a>) -&gt; <span class="hljs-built_in">object</span></code> | Create an explicit constraint mapping output DOF from input DOF. |
+
 ---
 
 ## `ExplicitConstraintSet`
@@ -186,9 +216,12 @@
 >
 > $out$ for the set of indices of output variables.
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `add` | **constraint** — explicit constraint |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">self</span>, constraint: <a href="#explicit">Explicit</a>) -&gt; <span class="hljs-built_in">int</span></code> | **constraint** — explicit constraint |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">errorSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
 
 ---
 
@@ -248,20 +281,20 @@
 >
 > freeVariables (const Indices_t& indices).
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `add` | **constraint** — implicit constraint <br> **priority** — level of priority of the constraint: priority are in decreasing order: 0 is the highest priority level, |
-| `constraintsForPriority` | Return list of constraints at the given priority level. |
-| `dimension` | Return total dimension of the active constraints. |
-| `numberStacks` | Return the number of priority stacks. |
-| `rightHandSide` | Set right hand side of a constraint. <br> Size of rhs should be equal to the total dimension of parameterizable <br> constraints (type Equality). |
-| `rightHandSide` | Set the right hand side. <br> Size of rhs should be equal to the total dimension of parameterizable <br> constraints (type Equality). |
-| `rightHandSide` | Get the right hand side. <br> Size of result is equal to total dimension of parameterizable <br> constraints (type Equality). |
-| `rightHandSideFromConfig` | Compute right hand side of equality constraints from a configuration. <br> For each constraint of type Equality, set right hand side as rhs = f(q). <br> Only parameterizable constraints (type Equality) are set. |
-| `rightHandSideFromConfig` | Compute right hand side of a constraint from a configuration. <br> Set right hand side as rhs = f(q). <br> Only parameterizable constraints (type Equality) are set. |
-| `lastIsOptional` *(property)* | Whether the last priority level is treated as optional. |
-| `maxIterations` *(property)* | Get maximal number of iterations in config projector. |
-| `solveLevelByLevel` *(property)* | Whether to solve constraints one priority level at a time. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">self</span>, constraint: <a href="#implicit">Implicit</a>, priority: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-built_in">bool</span></code> | **constraint** — implicit constraint **priority** — level of priority of the constraint: priority are in decreasing order: 0 is the highest priority level, |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">constraintsForPriority</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-built_in">list</span></code> | Return list of constraints at the given priority level. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">dimension</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Return total dimension of the active constraints. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">numberStacks</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Return the number of priority stacks. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSide</span>(<span class="hljs-params">self</span>, arg2: <a href="#implicit">Implicit</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSide</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSide</span>(<span class="hljs-params">self</span>) -&gt; numpy.ndarray</code> | Set right hand side of a constraint. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSideFromConfig</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; numpy.ndarray<br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSideFromConfig</span>(<span class="hljs-params">self</span>, arg2: <a href="#implicit">Implicit</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-built_in">bool</span></code> | Compute right hand side of equality constraints from a configuration. |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">errorThreshold</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@errorThreshold.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">errorThreshold</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">lastIsOptional</span>(*args, **kwargs)<br><br><span class="hljs-meta">@lastIsOptional.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">lastIsOptional</span>(*args, **kwargs)</code> | Whether the last priority level is treated as optional. |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maxIterations</span>(*args, **kwargs)<br><br><span class="hljs-meta">@maxIterations.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maxIterations</span>(*args, **kwargs)</code> | Get maximal number of iterations in config projector. |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">solveLevelByLevel</span>(*args, **kwargs)<br><br><span class="hljs-meta">@solveLevelByLevel.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">solveLevelByLevel</span>(*args, **kwargs)</code> | Whether to solve constraints one priority level at a time. |
 
 ---
 
@@ -313,18 +346,20 @@
 >
 > The right hand side of the constraint may depend on time, for instance if the constraint is associated to a trajectory following task. In this case, the right hand side is a function from $\mathbf{R}$ to $\mathbf{L}$.
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `comparisonType` | Return the ComparisonType. |
-| `comparisonType` | Set the comparison type. |
-| `function` | Return a reference to function $h$. |
-| `getFunctionOutputSize` | Return the output size of the underlying differentiable function. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="#differentiablefunction">DifferentiableFunction</a>, arg3: <a href="#comparisontypes">ComparisonTypes</a>, arg4: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | Create an implicit constraint from a differentiable function and comparison types. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">comparisonType</span>(<span class="hljs-params">self</span>) -&gt; <a href="#comparisontypes">ComparisonTypes</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">comparisonType</span>(<span class="hljs-params">self</span>, arg2: <a href="#comparisontypes">ComparisonTypes</a>) -&gt; <span class="hljs-literal">None</span></code> | Return the ComparisonType. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">function</span>(<span class="hljs-params">self</span>) -&gt; <a href="#differentiablefunction">DifferentiableFunction</a></code> | Return a reference to function $h$. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getFunctionOutputSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Return the output size of the underlying differentiable function. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">parameterSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">rightHandSideSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
 
 ---
 
 ## `LockedJoint`
 
-*Inherits: `Implicit`*
+*Inherits: [`Implicit`](#implicit)*
 
 > Implementation of constraint specific to a locked joint.
 >
@@ -344,31 +379,57 @@
 >
 > As such, the relation between the explicit formulation and the implicit formulation is the default one.
 
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">str</span>, arg4: numpy.ndarray) -&gt; <span class="hljs-built_in">object</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">str</span>, arg4: numpy.ndarray, arg5: <a href="#comparisontypes">ComparisonTypes</a>) -&gt; <span class="hljs-built_in">object</span></code> | Create a locked joint constraint fixing the named joint to the given configuration. |
+
 ---
 
 ## `Manipulability`
 
-*Inherits: `DifferentiableFunction`*
+*Inherits: [`DifferentiableFunction`](#differentiablefunction)*
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `lockJoint` | Lock a joint by name so it is excluded from the Jacobian. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="#differentiablefunction">DifferentiableFunction</a>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a manipulability function for the given robot. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">lockJoint</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> | Lock a joint by name so it is excluded from the Jacobian. |
 
 ---
 
 ## `MinManipulability`
 
-*Inherits: `DifferentiableFunction`*
+*Inherits: [`DifferentiableFunction`](#differentiablefunction)*
 
-| Method | Description |
+| def | Description |
 |:---|:---|
-| `lockJoint` | Lock a joint by name so it is excluded from the Jacobian. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="#differentiablefunction">DifferentiableFunction</a>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a minimum-manipulability function for the given robot. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">lockJoint</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> | Lock a joint by name so it is excluded from the Jacobian. |
+
+---
+
+## `Orientation`
+
+*Inherits: [`DifferentiableFunction`](#differentiablefunction)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: pinocchio.pinocchio_pywrap_default.SE3, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j2** — index of joint that holds frame 2, frame2 (SE3): pose of frame 2 in joint 2, frame1 (SE3): pose of frame 1 in world frame, **mask** — tuple of Boolean. |
+
+---
+
+## `Position`
+
+*Inherits: [`DifferentiableFunction`](#differentiablefunction)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: pinocchio.pinocchio_pywrap_default.SE3, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j2** — index of joint that holds frame 2, frame2 (SE3): pose of frame 2 in joint 2, frame1 (SE3): pose of frame 1 in world frame, **mask** — tuple of Boolean. |
 
 ---
 
 ## `RelativeCom`
 
-*Inherits: `DifferentiableFunction`*
+*Inherits: [`DifferentiableFunction`](#differentiablefunction)*
 
 > Constraint on the relative position of the center of mass
 >
@@ -391,5 +452,75 @@
 > $\mathbf{x}$ is the position of the center of mass,
 >
 > $\mathbf{x}^{*}$ is the desired position of the center of mass expressed in joint frame.
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, robot: <span class="hljs-built_in">object</span>, joint: <span class="hljs-built_in">object</span>, reference: numpy.ndarray, mask: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <a href="#relativecom">RelativeCom</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>, arg4: numpy.ndarray, arg5: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <a href="#relativecom">RelativeCom</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">object</span>, arg5: numpy.ndarray, arg6: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <a href="#relativecom">RelativeCom</a></code> | Return a shared pointer to a new instance. |
+
+---
+
+## `RelativeOrientation`
+
+*Inherits: [`DifferentiableFunction`](#differentiablefunction)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
+
+---
+
+## `RelativePosition`
+
+*Inherits: [`DifferentiableFunction`](#differentiablefunction)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
+
+---
+
+## `RelativeTransformation`
+
+*Inherits: [`DifferentiableFunction`](#differentiablefunction)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
+
+---
+
+## `RelativeTransformationR3xSO3`
+
+*Inherits: [`DifferentiableFunction`](#differentiablefunction)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
+
+---
+
+## `SolverStatus`
+
+*Inherits: `int`*
+
+---
+
+## `Transformation`
+
+*Inherits: [`DifferentiableFunction`](#differentiablefunction)*
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: pinocchio.pinocchio_pywrap_default.SE3, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j2** — index of joint that holds frame 2, frame2 (SE3): pose of frame 2 in joint 2, frame1 (SE3): pose of frame 1 in world frame, **mask** — tuple of Boolean. |
+
+---
+
+## `segment`
+
+| def | Description |
+|:---|:---|
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>, arg3: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">first</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@first.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">first</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">second</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@second.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">second</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
