@@ -1,10 +1,9 @@
 FROM ros:jazzy
 
 WORKDIR /ws
-RUN mkdir src
 
 ADD devel.repos .
-RUN vcs import --input devel.repos src
+RUN vcs import --input devel.repos
 
 RUN --mount=type=cache,sharing=locked,target=/var/cache/apt \
     --mount=type=cache,sharing=locked,target=/var/lib/apt \
