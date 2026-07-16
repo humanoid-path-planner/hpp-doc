@@ -40,7 +40,7 @@ This project uses [pre-commit](https://pre-commit.com/) to automatically check c
    ```
 2. Enable the hooks in your local clone:
    ```bash
-   pre-commit install
+   prek install
    ```
 3. From then on, checks run automatically on every `git commit`.
    You can also run them manually on all files:
