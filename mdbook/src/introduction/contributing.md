@@ -22,10 +22,9 @@ Thanks for your interest in contributing to this project! Here are a few simple 
 5. If you add a feature, add or update the corresponding tests.
 6. Make sure the project builds and the tests pass:
    ```bash
-   mkdir build && cd build
-   cmake ..
-   make
-   make test
+   cmake -B build
+   cmake --build build
+   cmake --build build -t test
    ```
 7. Push your branch and open a Pull Request against the upstream repository.
 8. Clearly describe what your PR does and why.
