@@ -51,6 +51,10 @@ repositories:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-environments
     version: devel
+  src/hpp-exec:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-exec
+    version: devel
   src/hpp-gepetto-viewer:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-gepetto-viewer
