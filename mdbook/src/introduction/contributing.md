@@ -13,7 +13,7 @@ Thanks for your interest in contributing to this project! Here are a few simple 
 ## Proposing a change (Pull Request)
 
 1. Fork the repository, then clone your fork.
-2. Create a dedicated branch from `devel` (or `master`, depending on the repo):
+2. Create a dedicated branch from `devel`:
    ```bash
    git checkout -b my-feature
    ```
