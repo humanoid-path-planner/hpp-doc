@@ -45,7 +45,7 @@ This project uses [pre-commit](https://pre-commit.com/) to automatically check c
 3. From then on, checks run automatically on every `git commit`.
    You can also run them manually on all files:
    ```bash
-   pre-commit run --all-files
+   prek run --all-files
    ```
 4. If a hook modifies files (auto-formatting), stage those changes and commit again:
    ```bash
