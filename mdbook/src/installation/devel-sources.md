@@ -26,7 +26,7 @@ install robotpkg: follow [the robotpkg installation website](http://robotpkg.ope
   robotpkg-py312-pinocchio robotpkg-py312-proxsuite robotpkg-qt5-qgv
   ```
 
-## 3. Choose a directory on your file system 
+## 3. Choose a directory on your file system
 
 - Define the environment variable <code class="env-variable">DEVEL_HPP_DIR</code> with the full path to this directory.
 - the packages will be cloned into <code class="env-variable">$DEVEL_HPP_DIR/src</code>,
@@ -64,6 +64,6 @@ mkdir -p $DEVEL_HPP_DIR/src
   make all
 ```
 
-## 8. Documentation acces 
+## 8. Documentation acces
 
 open <code class="env-variable">$DEVEL_HPP_DIR/install/share/doc/hpp-doc/index.html</code> in a web brower and you will have access to the documentation of most packages.

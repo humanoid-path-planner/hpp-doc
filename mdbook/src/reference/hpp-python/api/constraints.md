@@ -106,17 +106,17 @@
 >
 > Let us notice that $n_{ic} + n_{oc}$ is less than the robot configuration size, and $n_{iv} + n_{ov}$ is less than the velocity size. Some degrees of freedom may indeed be neither input nor output.
 >
-> Then the differential function is of the form      
+> Then the differential function is of the form
 >
 > $$\begin{align*}\mathbf{q}_{out} - g \left(\mathbf{q}_{in}\right) \ \ &\text{with}& \mathbf{q}_{out} = \left(q_{oc_{1}} \cdots q_{oc_{n_{oc}}}\right)^T, \ \ \ \mathbf{q}_{in} = (q_{ic_{1}} \cdots q_{ic_{n_{ic}}})^T\end{align*}$$
 >
->  It is straightforward that an equality constraint with this function can be solved explicitely:     
+>  It is straightforward that an equality constraint with this function can be solved explicitely:
 >
 > $$\begin{align*}\mathbf{q}_{out} &- g \left(\mathbf{q}_{in}\right) = rhs \\ & \text{if and only if}\\ \mathbf{q}_{out} &= g \left(\mathbf{q}_{in}\right) + rhs \\\end{align*}$$
 >
 >
 >
-> If function $f$ takes values in a Lie group (SO(2), SO(3)), the above "+" between a Lie group element and a tangent vector has to be undestood as the integration of the constant velocity from the Lie group element:   
+> If function $f$ takes values in a Lie group (SO(2), SO(3)), the above "+" between a Lie group element and a tangent vector has to be undestood as the integration of the constant velocity from the Lie group element:
 >
 > $$\begin{equation*}\mathbf{q} + \mathbf{v} = \mathbf{q}.\exp (\mathbf{v})\end{equation*}$$
 >
@@ -130,11 +130,11 @@
 >
 > $\dot{q}_i$ is an output degree of freedom: $\exists j$ integer, $1\leq j \leq n_{ov}$ such that $i=ov_{j}$, or
 >
-> $\dot{q}_i$ neither input nor output. In this case, the corresponding column is equal to 0.              
+> $\dot{q}_i$ neither input nor output. In this case, the corresponding column is equal to 0.
 >
 > $$\begin{equation*}J = \left(\begin{array}{cccccccccccc} \cdots & ov_1 & \cdots & iv_{1} & \cdots & ov_2 & \cdots & iv_2 & \cdots & ov_{n_{ov}} & \cdots \\ & 1 & & & & 0 & & & & & \\ & 0 & & & & 1 & & & & & \\ & & & -\frac{\partial g}{q_1} & & & & -\frac{\partial g}{q_2} \\ &&&&&\\ & 0 & & & & 0 & & & & 1 \end{array}\right)\end{equation*}$$
 >
->  The rows corresponding to values in SO(3) have the following expression.     
+>  The rows corresponding to values in SO(3) have the following expression.
 >
 > $$\begin{equation*}J = \left(\begin{array}{cccccccccccc} ov_1 \ ov_2 \ ov_3 & iv_1 \cdots iv_{n_{iv}} \\ J_{log}(R_{g}^T R_{out}) & -J_{log}(R_{g}^T R_{out})R_{out}^T R_{g} \frac{\partial g}{\partial q_{in}} \end{array}\right)\end{equation*}$$
 >
@@ -144,7 +144,7 @@
 >
 > $R_{g}$ is the rotation matrix corresponding to the part of the output value of $f$ corresponding to SO(3),
 >
-> $J_{log}$ is the Jacobian matrix of function that associates to a rotation matrix $R$ the vector $\omega$ such that   
+> $J_{log}$ is the Jacobian matrix of function that associates to a rotation matrix $R$ the vector $\omega$ such that
 >
 > $$\begin{equation*}R = \exp (\left[\omega\right]_{\times})\end{equation*}$$
 >
@@ -180,7 +180,7 @@
 >
 > for any $\mathbf{p}\in\mathcal{C}$,  $\mathbf{q} =
 >
-> E(\mathbf{p})$ is defined by    
+> E(\mathbf{p})$ is defined by
 >
 > $$\begin{align}&\mathbf{q}_{\bar{out}} = \mathbf{p}_{\bar{out}}\\ &\mathbf{q}_{out} = f (\mathbf{p}_{in}).\end{align}$$
 >
@@ -198,7 +198,7 @@
 >
 > The right hand side may be set using the various methods ExplicitConstraintSet::rightHandSide and ExplicitConstraintSet::rightHandSideFromInput.
 >
-> For some applications like manipulation planning, an invertible function $ g $ (of known inverse $ g^{-1} $) can be specified for each explicit constraint $E$. The above expression then becomes:   
+> For some applications like manipulation planning, an invertible function $ g $ (of known inverse $ g^{-1} $) can be specified for each explicit constraint $E$. The above expression then becomes:
 >
 > $$\begin{equation}g(\mathbf{q}_{out}) = f(\mathbf{p}_{in}) + rhs\end{equation}$$
 >
@@ -235,7 +235,7 @@
 >
 > The algorithm used is a Newton-Raphson like algorithm that works as follows: for a single level of priority, let $f (\mathbf{q}) = 0$ be the system of equations where $f$ is a $C^1$ mapping from the robot configuration space to a Lie group space $\mathcal{L}$.
 >
-> Starting from initial guess $\mathbf{q}_0$, the method HierarchicalIterative::solve builds a sequence of configurations $\mathbf{q}_i$ as follows:     
+> Starting from initial guess $\mathbf{q}_0$, the method HierarchicalIterative::solve builds a sequence of configurations $\mathbf{q}_i$ as follows:
 >
 > $$\begin{align*}\mathbf{q}_{i+1} = \mathbf{q}_i - \alpha_i \frac{\partial f}{\partial \mathbf{q}}(\mathbf{q}_i)^{+} f (\mathbf{q}_i)\end{align*}$$
 >
@@ -316,7 +316,7 @@
 >
 > A configuration $\mathbf{q}$ is said to satisfy the constraint for a given right hand side if and only if the error $e$ as computed below is smaller in norm than a given threshold.
 >
-> Let   
+> Let
 >
 > $$\Delta = h (\mathbf{q}) - rhs \in \mathbf{R}^{n_v},$$
 >
@@ -336,7 +336,7 @@
 >
 > Parameterizable right hand side
 >
-> Lines with $\mathbf{Equality}$ comparator in the above definition of the error need a parameter, while lines with comparators $\mathbf{Inferior}$, $\mathbf{Superior}$, or $\mathbf{EqualToZero}$ do not. As a consequence, the right hand side of the constraint is defined by a vector $\lambda$ of parameters of size the number of $\mathbf{Equality}$ occurences in vector $\mathbf{c}$. The right hand side is then defined as in the following example:       
+> Lines with $\mathbf{Equality}$ comparator in the above definition of the error need a parameter, while lines with comparators $\mathbf{Inferior}$, $\mathbf{Superior}$, or $\mathbf{EqualToZero}$ do not. As a consequence, the right hand side of the constraint is defined by a vector $\lambda$ of parameters of size the number of $\mathbf{Equality}$ occurences in vector $\mathbf{c}$. The right hand side is then defined as in the following example:
 >
 > $$rhs = \exp\left(\begin{array}{c}\lambda_1 \\ 0 \\ 0 \\ \lambda_2 \\ \vdots \end{array}\right) \ \ \ \ \mathbf{c} = \left(\begin{array}{c}\mathbf{Equality} \\ \mathbf{EqualToZero} \\ \mathbf{Inferior} \\ \mathbf{Equality} \\ \vdots \end{array}\right)$$
 >
@@ -363,7 +363,7 @@
 
 > Implementation of constraint specific to a locked joint.
 >
-> The implicit formulation as defined in class Implicit is given by   
+> The implicit formulation as defined in class Implicit is given by
 >
 > $$\begin{equation}h (\mathbf{q}) = q_{out} - value\end{equation}$$
 >
@@ -371,7 +371,7 @@
 >
 > Note that $h$ takes values in $\mathbf{R}^{nv}$ where $nv$ is the dimension of the joint tangent space.
 >
-> The explicit formulation is given by   
+> The explicit formulation is given by
 >
 > $$\begin{equation}q_{out} = value + rhs\end{equation}$$
 >

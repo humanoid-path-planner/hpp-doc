@@ -29,6 +29,7 @@ Thanks for your interest in contributing to this project! Here are a few simple 
 7. Push your branch and open a Pull Request against the upstream repository.
 8. Clearly describe what your PR does and why.
 
+
 ## Pre-commit
 
 This project uses [pre-commit](https://pre-commit.com/) to automatically check code formatting and quality before each commit.

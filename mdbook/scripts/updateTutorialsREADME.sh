@@ -10,7 +10,7 @@ for i in {1..9}; do
     # DL THE README
     wget -O "$DEST/tutorial_${i}/README.md" \
         "${HPP_REPO}tutorial_${i}/README.md"
-   
+
 done
 
 # Patch  README.md →  (bug mdBook #984) https://github.com/rust-lang/mdBook/issues/984

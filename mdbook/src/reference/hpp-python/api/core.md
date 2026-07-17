@@ -64,7 +64,7 @@
 
 > Implicit non-linear constraint
 >
-> This class defines a numerical constraints on a robot configuration of the form:     
+> This class defines a numerical constraints on a robot configuration of the form:
 >
 > $$\begin{align*}f_1 (\mathbf{q}) & = \text{or} \leq & f_1^0 \\ & \vdots\\ f_m (\mathbf{q}) & = \text{or} \leq & f_m^0\end{align*}$$
 >
@@ -360,7 +360,7 @@
 
 > Abstraction of paths: mapping from time to configuration space
 >
-> A path $ p $ is defined by:    
+> A path $ p $ is defined by:
 >
 > $$\begin{align*}p : [t_0, t_1] &\to & \mathcal{C} \\ t &\mapsto & constraints.apply( q(t) )\end{align*}$$
 >
@@ -372,7 +372,7 @@
 >
 > constraints.apply corresponds to calling Constraint::apply to constraints
 >
-> Optionally, it is possible to time-parameterize the path with a function $ s $. By default, $ s $ is the identity. The model becomes:    
+> Optionally, it is possible to time-parameterize the path with a function $ s $. By default, $ s $ is the identity. The model becomes:
 >
 > $$\begin{align*}p : [t_0, t_1] &\to & \mathcal{C} \\ t &\mapsto & constraints.apply( q(s(t)) )\end{align*}$$
 >

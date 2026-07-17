@@ -15,5 +15,3 @@ for repo in ${REPOSITORIES[*]}; do
 done
 
 echo "README files downloaded into $DEST"
-
-

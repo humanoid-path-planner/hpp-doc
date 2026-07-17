@@ -12,7 +12,7 @@ while read repo; do
 
 done > contributors.tsv
 
-# removes bots: 
+# removes bots:
 grep -v '\[bot\]' contributors.tsv > contributors_no_bots.tsv
 
 
@@ -31,4 +31,3 @@ do
 done < contributors_total.tsv
 
 echo "</p>" >> CONTRIBUTORS.md
-
