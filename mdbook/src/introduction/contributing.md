@@ -32,29 +32,25 @@ Thanks for your interest in contributing to this project! Here are a few simple 
 
 ## Pre-commit
 
-This project uses [pre-commit](https://pre-commit.com/) to automatically check code formatting and quality before each commit.
+This project uses [prek](https://prek.j178.dev/) (a faster, drop-in replacement for pre-commit) to automatically check code formatting and quality before each commit.
 
-1. Install pre-commit (one-time setup):
-   ```bash
-   pip install pre-commit
-   ```
+1. Install `prek` (one-time setup): follow the instructions at https://prek.j178.dev/installation/
 2. Enable the hooks in your local clone:
-   ```bash
-   prek install
-   ```
+```bash
+prek install
+```
 3. From then on, checks run automatically on every `git commit`.
    You can also run them manually on all files:
-   ```bash
-   prek run --all-files
-   ```
+```bash
+prek run --all-files
+```
 4. If a hook modifies files (auto-formatting), stage those changes and commit again:
-   ```bash
-   git add -u
-   git commit
-   ```
+```bash
+git add -u
+git commit
+```
 
 The repository also uses `pre-commit.ci`, so the hooks will automatically be checked on your Pull Request as well.
-
 ## Commit messages
 
 - Use short, descriptive, imperative-mood messages (e.g. `Fix collision check in hpp-core`).
