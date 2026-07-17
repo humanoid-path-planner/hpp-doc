@@ -28,8 +28,13 @@ jobs:
         with:
           mdbook-version: latest
 
+
       - name: Install mdbook-mermaid
         run: cargo install mdbook-mermaid
+
+      - name: Setup mermaid assets
+        working-directory: mdbook
+        run: mdbook-mermaid install .
 
       - name: Install mdbook-toc
         run: cargo install mdbook-toc
