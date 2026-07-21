@@ -1,8 +1,9 @@
-name: Deploy mdBook
+name: Build and Deploy book
 
 on:
   push:
-  workflow_dispatch:
+    branches:
+      - devel
 
 permissions:
   contents: read
@@ -46,11 +47,11 @@ jobs:
         working-directory: mdbook
         run: mdbook build
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: ./mdbook/book
 
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
