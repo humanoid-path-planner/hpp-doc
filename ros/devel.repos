@@ -95,6 +95,10 @@ repositories:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-romeo
     version: devel
+  src/hpp-rviz:
+    type: git
+    url: https://github.com/humanoid-path-planner/hpp-rviz
+    version: devel
   src/hpp-statistics:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-statistics
