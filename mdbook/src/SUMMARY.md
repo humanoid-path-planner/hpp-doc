@@ -1,0 +1,46 @@
+# Humanoid Path Planner
+
+[Introduction](introduction/introduction.md)
+[How to Contribute](introduction/contributing.md)
+
+# User Guide
+- [Installation](installation/installation.md)
+    - [Stable — Binary](installation/stable-binary.md)
+    - [Stable — Source](installation/stable-sources.md)
+    - [Stable — Nix](installation/nix-stable-binary.md)
+    - [Development — Source](installation/devel-sources.md)
+    - [Development — Nix](installation/nix-devel-sources.md)
+    - [ROS — Source](installation/ros-devel-sources.md)
+
+
+- [Tutorials Overview](reference/hpp-tutorial/README.md)
+  - [Installing the software](reference/hpp-tutorial/tutorial_1/README.md)
+  - [Solving a simple pick and place task](reference/hpp-tutorial/tutorial_2/README.md)
+  - [Using HPP in manufacturing](reference/hpp-tutorial/tutorial_3/README.md)
+  - [Controlling the trajectory of a tool](reference/hpp-tutorial/tutorial_4/README.md)
+  - [Optimizing and time-parameterizing paths](reference/hpp-tutorial/tutorial_5/README.md)
+  - [Using RViz2 visualization](reference/hpp-tutorial/tutorial_6/README.md)
+  - [Executing motions on a simulated robot](reference/hpp-tutorial/tutorial_7/README.md)
+  - [Pick and place with a gripper](reference/hpp-tutorial/tutorial_8/README.md)
+  - [Efficient pre- and post-actions](reference/hpp-tutorial/tutorial_9/README.md)
+
+# Reference
+- [hpp-core](reference/hpp-core/README.md)
+- [hpp-manipulation](reference/hpp-manipulation/README.md)
+- [hpp-constraints](reference/hpp-constraints/README.md)
+- [hpp-pinocchio](reference/hpp-pinocchio/README.md)
+- [hpp-python](reference/hpp-python/README.md)
+  - [API Reference](reference/hpp-python/api/index.md)
+    - [pyhpp.core](reference/hpp-python/api/core.md)
+    - [pyhpp.core.path](reference/hpp-python/api/core-path.md)
+    - [pyhpp.core.path\_optimization](reference/hpp-python/api/core-path_optimization.md)
+    - [pyhpp.core.problem\_target](reference/hpp-python/api/core-problem_target.md)
+    - [pyhpp.constraints](reference/hpp-python/api/constraints.md)
+    - [pyhpp.manipulation](reference/hpp-python/api/manipulation.md)
+    - [pyhpp.manipulation.urdf](reference/hpp-python/api/manipulation-urdf.md)
+    - [pyhpp.manipulation.steering\_method](reference/hpp-python/api/manipulation-steering_method.md)
+    - [pyhpp.pinocchio](reference/hpp-python/api/pinocchio.md)
+    - [pyhpp.pinocchio.urdf](reference/hpp-python/api/pinocchio-urdf.md)
+- [hpp-gepetto-viewer](reference/hpp-gepetto-viewer/README.md)
+- [hpp-plot](reference/hpp-plot/README.md)
+- [hpp-exec](reference/hpp-exec/README.md)

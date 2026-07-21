@@ -1,0 +1,16 @@
+[book]
+title = "Humanoid Path Planner"
+authors = ["DiegoP-G"]
+description = "Documentation for the Humanoid Path Planner (HPP) framework."
+language = "en"
+
+[output.html]
+additional-css = ["src/custom.css"]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[preprocessor.katex]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.toc]
