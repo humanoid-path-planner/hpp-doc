@@ -3,10 +3,6 @@ repositories:
     type: git
     url: https://github.com/gepetto/example-robot-data
     version: devel
-  src/ndcurves:
-    type: git
-    url: https://github.com/loco-3d/ndcurves
-    version: devel
   src/hpp-affordance:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-affordance
