@@ -7,10 +7,6 @@ repositories:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-affordance
     version: devel
-  # src/hpp-affordance-corba:
-  #   type: git
-  #   url: https://github.com/humanoid-path-planner/hpp-affordance-corba
-  #   version: devel
   src/hpp-baxter:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-baxter
@@ -31,10 +27,6 @@ repositories:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-constraints
     version: devel
-  # src/hpp-corbaserver:
-  #   type: git
-  #   url: https://github.com/humanoid-path-planner/hpp-corbaserver
-  #   version: devel
   src/hpp-core:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-core
@@ -55,18 +47,10 @@ repositories:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-gepetto-viewer
     version: devel
-  # src/hpp-gui:
-  #   type: git
-  #   url: https://github.com/humanoid-path-planner/hpp-gui
-  #   version: devel
   src/hpp-manipulation:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-manipulation
     version: devel
-  # src/hpp-manipulation-corba:
-  #   type: git
-  #   url: https://github.com/humanoid-path-planner/hpp-manipulation-corba
-  #   version: devel
   src/hpp-manipulation-urdf:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-manipulation-urdf
@@ -99,10 +83,6 @@ repositories:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-statistics
     version: devel
-  # src/hpp-template-corba:
-  #   type: git
-  #   url: https://github.com/humanoid-path-planner/hpp-template-corba
-  #   version: devel
   src/hpp-tools:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-tools
