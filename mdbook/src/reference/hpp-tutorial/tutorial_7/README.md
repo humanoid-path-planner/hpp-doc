@@ -83,7 +83,7 @@ times = []
 for i in range(n_samples + 1):
     t = (i / n_samples) * p_timed.length()
     q, success = p_timed(t)
-    assert(success)
+    assert success
     configs.append(np.array(q))
     times.append(t)
 
@@ -98,8 +98,9 @@ Now send the waypoints to Gazebo via ros2_control:
 from hpp_exec import send_trajectory
 
 send_trajectory(
-    configs, times,
-    joint_names=[f'fr3_joint{i}' for i in range(1, 8)],
+    configs,
+    times,
+    joint_names=[f"fr3_joint{i}" for i in range(1, 8)],
     joint_indices=list(range(7)),
 )
 ```
