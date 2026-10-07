@@ -25,6 +25,7 @@
   - [Efficient pre- and post-actions](reference/hpp-tutorial/tutorial_9/README.md)
 
 # Reference
+- [C++ API](reference/cpp-api.md)
 - [hpp-core](reference/hpp-core/README.md)
 - [hpp-manipulation](reference/hpp-manipulation/README.md)
 - [hpp-constraints](reference/hpp-constraints/README.md)

@@ -8,6 +8,15 @@ language = "en"
 additional-css = ["src/custom.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
+[output.html.redirect]
+"/download.html" = "installation/installation.html"
+"/documentation.html" = "reference/cpp-api.html"
+"/tutorials.html" = "reference/hpp-tutorial/index.html"
+"/contributing.html" = "introduction/contributing.html"
+"/support.html" = "introduction/contributing.html"
+"/authors.html" = "introduction/introduction.html#contributors"
+"/showcase.html" = "introduction/introduction.html#applications"
+
 [preprocessor.katex]
 
 [preprocessor.mermaid]
