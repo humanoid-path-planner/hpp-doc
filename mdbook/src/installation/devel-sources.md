@@ -1,14 +1,14 @@
-# Source installation on ubuntu-24.04 64 bit
+# Development sources on Ubuntu 24.04 64 bit
 
-To install all the packages on ubuntu 24.04 LTS 64 bit, you should do the following steps:
+To install the development version of HPP from source on Ubuntu 24.04 LTS 64 bit, follow these steps.
 
 ## 1. Install dependencies
 
-install robotpkg: follow [the robotpkg installation website](http://robotpkg.openrobots.org/debian.html).
+Install robotpkg by following [the robotpkg installation website](http://robotpkg.openrobots.org/debian.html).
 
 ## 2. Install by apt-get
 ```bash
-  sudo apt-get update && apt-get install \
+  sudo apt-get update && sudo apt-get install \
   assimp-utils cmake coinor-libipopt-dev coinor-libipopt1v5 cython3 doxygen \
   git ffmpeg gcovr gfortran graphviz libassimp-dev libboost-all-dev \
   libbullet-dev libccd-dev libcdd-dev libconsole-bridge-dev libeigen3-dev \
@@ -29,10 +29,10 @@ install robotpkg: follow [the robotpkg installation website](http://robotpkg.ope
 ## 3. Choose a directory on your file system
 
 - Define the environment variable <code class="env-variable">DEVEL_HPP_DIR</code> with the full path to this directory.
-- the packages will be cloned into <code class="env-variable">$DEVEL_HPP_DIR/src</code>,
-- the packages will be installed in  <code class="env-variable">$DEVEL_HPP_DIR/install</code>.
+- the packages will be cloned into <code class="env-variable">&#36;DEVEL_HPP_DIR/src</code>,
+- the packages will be installed in  <code class="env-variable">&#36;DEVEL_HPP_DIR/install</code>.
 
-It is recommanded to set variable  <code class="env-variable">DEVEL_HPP_DIR</code> in your  <code class="env-variable">.bashrc</code> for future use.
+It is recommended to set <code class="env-variable">DEVEL_HPP_DIR</code> in your <code class="env-variable">.bashrc</code> for future use.
 
 ```bash
 mkdir -p $DEVEL_HPP_DIR/src
@@ -64,6 +64,6 @@ mkdir -p $DEVEL_HPP_DIR/src
   make all
 ```
 
-## 8. Documentation acces
+## 8. Documentation access
 
-open <code class="env-variable">$DEVEL_HPP_DIR/install/share/doc/hpp-doc/index.html</code> in a web brower and you will have access to the documentation of most packages.
+Open <code class="env-variable">&#36;DEVEL_HPP_DIR/install/share/doc/hpp-doc/index.html</code> in a web browser and you will have access to the documentation of most packages.

@@ -20,8 +20,8 @@ This step is already done on LAAS computers.
 
 Choose a directory on your filesystem. This directory will be referred to as <code class="env-variable">DEVEL_HPP_DIR</code>.
 
-* The packages will be cloned into <code class="env-variable">$DEVEL_HPP_DIR/src</code>.
-* The packages will be installed into <code class="env-variable">$DEVEL_HPP_DIR/install</code>.
+* The packages will be cloned into <code class="env-variable">&#36;DEVEL_HPP_DIR/src</code>.
+* The packages will be installed into <code class="env-variable">&#36;DEVEL_HPP_DIR/install</code>.
 
 Create the directory and enter it:
 
