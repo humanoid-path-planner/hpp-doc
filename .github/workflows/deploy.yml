@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - devel
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -24,6 +27,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+
+      - uses: actions/checkout@v7
+        with:
+          repository: humanoid-path-planner/hpp_tutorial
+          ref: devel
+          path: hpp_tutorial
+
+      - name: Update package READMEs and tutorials
+        working-directory: mdbook/scripts
+        run: ./buildMdbook.sh "$GITHUB_WORKSPACE/hpp_tutorial"
 
       - uses: peaceiris/actions-mdbook@v2
         with:
@@ -46,6 +59,14 @@ jobs:
       - name: Build mdBook
         working-directory: mdbook
         run: mdbook build
+
+      - name: Check that math is only rendered in the Python API pages
+        working-directory: mdbook/book
+        run: |
+          if grep -rl 'class="katex"' --include=*.html . | grep -v -e 'reference/hpp-python/api/' -e 'print\.html$'; then
+            echo "Unexpected math rendering: check for unescaped \$ in the pages above."
+            exit 1
+          fi
 
       - uses: actions/configure-pages@v6
 

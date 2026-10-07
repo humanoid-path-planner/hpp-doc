@@ -4,12 +4,12 @@ DEST="../src/reference/hpp-tutorial"
 HPP_REPO="https://raw.githubusercontent.com/humanoid-path-planner/hpp-tutorial/devel/"
 
 mkdir -p "$DEST"
-for i in {1..9}; do
-    mkdir -p "$DEST/tutorial_${i}"
+for name in tutorial_{1..9} exercise_10; do
+    mkdir -p "$DEST/${name}"
 
     # DL THE README
-    wget -O "$DEST/tutorial_${i}/README.md" \
-        "${HPP_REPO}tutorial_${i}/README.md"
+    wget -O "$DEST/${name}/README.md" \
+        "${HPP_REPO}${name}/README.md"
 
 done
 
