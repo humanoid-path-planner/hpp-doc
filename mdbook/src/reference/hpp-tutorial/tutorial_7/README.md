@@ -7,9 +7,16 @@ Having completed [tutorial 6](../tutorial_6/).
 ## Overview
 
 This tutorial plans a simple arm motion for the Franka FR3 robot and executes it
-on a Gazebo simulation via ROS2. It introduces the `hpp_exec` package which
+on a Gazebo simulation via ROS2. It introduces the `hpp-exec` package which
 bridges HPP paths to `ros2_control`.
 
+## Terminal 1: Compiling hpp-exec
+
+In the docker terminal, install package hpp-exec
+```
+cd ~/devel/src
+make hpp-exec.install_nodep
+```
 
 ## Terminal 1: Launching the simulation
 
@@ -17,7 +24,7 @@ Launch the Gazebo simulation with
 a `joint_trajectory_controller`:
 
 ```
-ros2 launch hpp_tutorial tutorial_6_launch.py
+ros2 launch hpp_tutorial tutorial_7_launch.py
 ```
 
 Wait until you see `Configured and activated joint_trajectory_controller` in the
@@ -34,7 +41,7 @@ docker exec -it hpp bash
 Source the environments and run the tutorial script:
 
 ```
-cd ~/devel/src/hpp_tutorial/tutorial_6
+cd ~/devel/src/hpp_tutorial/tutorial_7
 python -i init.py
 ```
 
@@ -120,3 +127,5 @@ You can also play the reverse motion using
 ```
 p_reversed = p_timed.reverse()
 ```
+
+Continue to [tutorial 8](../tutorial_8/).

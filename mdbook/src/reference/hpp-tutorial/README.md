@@ -12,8 +12,4 @@ The various tutorials are:
 7. [tutorial 7](./tutorial_7/) How to execute motions on a simulated robot.
 8. [tutorial 8](./tutorial_8/) Pick and place with gripper, introducing pre and post-actions.
 9. [tutorial 9](./tutorial_9/) A more efficient way to assign pre or post-actions.
-
-[![Pipeline status](https://gitlab.laas.fr/humanoid-path-planner/hpp_tutorial/badges/master/pipeline.svg)](https://gitlab.laas.fr/humanoid-path-planner/hpp_tutorial/commits/master)
-[![Coverage report](https://gitlab.laas.fr/humanoid-path-planner/hpp_tutorial/badges/master/coverage.svg?job=doc-coverage)](https://gepettoweb.laas.fr/doc/humanoid-path-planner/hpp_tutorial/master/coverage/)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/humanoid-path-planner/hpp_tutorial/master.svg)](https://results.pre-commit.ci/latest/github/humanoid-path-planner/hpp_tutorial)
+10. [exercise 10](./exercise_10/) Pick and place on the Stäubli robot on MFJA (https://accueil-mfja.iut-tlse3.fr)

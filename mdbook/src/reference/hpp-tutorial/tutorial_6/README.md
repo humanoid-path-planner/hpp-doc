@@ -145,13 +145,13 @@ Landmarks can be placed in three ways:
 
 - **From a named frame** (Python):
   ```python
-  v.addLandmarkFromFrame("panda/gripper", "first landmark")
+  v.addLandMarkFromFrame("panda/gripper", "first landmark")
   ```
   This publishes the current pose of the given frame as a landmark.
 
 - **From explicit coordinates** (Python):
   ```python
-  v.addLandmark(xyz=[0.8, 0.0, 1.0], quat_xyzw=[0.0, 0.0, 0.0, 1.0], "landmark")
+  v.addLandMark(xyz=[0.8, 0.0, 1.0], quat_xyzw=[0.0, 0.0, 0.0, 1.0], name="landmark")
   ```
 
 ![Alt Text](figures/landmark.gif)
@@ -162,8 +162,10 @@ Landmarks can be placed in three ways:
 | `v(q)` | Display configuration `q` |
 | `v.loadPath(p)` | Register path `p` for trajectory control |
 | `v.displayPath(p, target_frame=...)` | Publish the spatial trace of a frame along `p` |
-| `v.addLandmarkFromFrame(frame)` | Publish current pose of `frame` as a landmark |
-| `v.addLandmark(xyz, quat_xyzw)` | Publish an explicit pose as a landmark |
+| `v.addLandMarkFromFrame(frame, name)` | Publish current pose of `frame` as a landmark |
+| `v.addLandMark(xyz, quat_xyzw)` | Publish an explicit pose as a landmark |
 | `v.setProblem(problem)` | Register problem for graph viewer |
 | `v.setGraph(graph)` | Register constraint graph for graph viewer |
 | `v.launch_graph_viewer()` | Open the constraint graph viewer (React app) |
+
+Continue to [tutorial 7](../tutorial_7/).
