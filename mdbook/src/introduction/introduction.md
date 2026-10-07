@@ -1,22 +1,17 @@
 # Humanoid Path Planner Documentation
 
-*A motion planning toolkit for kinematic chains evolving among obstacles — from industrial robot arms to full humanoids.*
-
 ## Introduction
-HPP is a C++ Software Developement Kit implementing path planning for kinematic chains in environments cluttered with obstacles. Collision checking is performed by a modified version of the Flexible Collision Library developed at University of North Carolina. Robots can be loaded from URDF model. It is a collection of software packages handled by cmake and pkg-config.
+HPP is a C++ software development kit for path planning and manipulation planning of kinematic chains in environments cluttered with obstacles, from industrial manipulators to humanoid robots. Robots and objects are loaded from URDF and SRDF files. Collision checking relies on [coal](https://github.com/coal-library/coal), a modified version of the Flexible Collision Library. HPP is a collection of packages built with CMake.
 
-## Why HPP?
-HPP is not a toy planner: it is built to handle the kind of complex, contact-rich motion planning problems found in real robotics applications.
-
-- **Built for complex kinematic chains** — from single manipulator arms to full humanoids and multi-robot systems.
-- **Manipulation planning out of the box** — [hpp-manipulation](/hpp-doc/reference/hpp-manipulation/) handles grasping, regrasping, and multi-contact scenarios, not just collision-free transit paths.
-- **Fast, reliable collision checking** — powered by a modified Flexible Collision Library (coal) under [hpp-pinocchio](/hpp-doc/reference/hpp-pinocchio/).
-- **Python-first workflow** — define scenes, robots, and planning problems from simple Python scripts via [hpp-python](/hpp-doc/reference/hpp-python/), with the heavy algorithmic lifting handled in C++.
-- **Flexible visualization** — watch your robot plan and move in a web browser with [viser](https://viser.studio/main), or plug into your existing ROS/ROS2 setup with [rviz2](https://wiki.ros.org/rviz2) or [gazebo](https://gazebosim.org/home).
-- **Battle-tested on real industrial use cases** — surface treatment, welding, and assembly tasks, as shown below.
+## Main features
+- Path planning for kinematic chains subject to nonlinear constraints ([hpp-core](/hpp-doc/reference/hpp-core/), [hpp-constraints](/hpp-doc/reference/hpp-constraints/)).
+- Manipulation planning: grasping, placement and regrasping are modelled by a constraint graph ([hpp-manipulation](/hpp-doc/reference/hpp-manipulation/)).
+- Python bindings to define robots and problems and to call the planners ([hpp-python](/hpp-doc/reference/hpp-python/)).
+- Display of configurations and paths in a web browser with [viser](https://viser.studio/main), or in rviz2.
+- Execution of planned paths on `ros2_control` controllers ([hpp-exec](/hpp-doc/reference/hpp-exec/)).
 
 ## Applications
-HPP is already used to plan motions for real industrial robotic tasks — here are a few examples in action.
+The videos below show HPP on industrial tasks.
 
 ### Surface treatment
 Planning a tool path to sweep and abrade the surface of a cylinder, while avoiding self-collisions and obstacles in the workspace.
@@ -79,10 +74,10 @@ The software is composed of C++ libraries implementing the algorithms. Python bi
 ![Rviz Viewer](/hpp-doc/introduction/figures/viewer_demo.gif)
 The algorithmic part, built on [hpp-manipulation](/hpp-doc/reference/hpp-manipulation/) is embedded in several Python modules by [hpp-python](/hpp-doc/reference/hpp-python/).
 From a Python script, users can define scenes containing robots and environments, they can also define and solve motion planning problems.
-Results of path planning requests as well as individual configurations can be displayed in a web browser via package [hpp-gepetto-viewer](@hpp-gepetto-viewer_LINK@).
+Results of path planning requests as well as individual configurations can be displayed in a web browser via package [hpp-gepetto-viewer](/hpp-doc/reference/hpp-gepetto-viewer/).
 
 ## Getting started
-Package [hpp_tutorial](https://github.com/humanoid-path-planner/hpp_tutorial/tree/devel/README.md) provides some examples of how to use this project. Lets start now ! [Tutorial](/hpp-doc/reference/hpp-tutorial/)
+The [tutorials](/hpp-doc/reference/hpp-tutorial/) of package [hpp_tutorial](https://github.com/humanoid-path-planner/hpp_tutorial) cover installation, the definition and resolution of a pick-and-place problem, and the execution of planned motions on a simulated robot.
 
 ## Acknowledgement
 

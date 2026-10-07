@@ -18,7 +18,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -28,7 +28,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -40,7 +40,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
 
 ---
 
@@ -76,7 +76,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">str</span>, arg4: <span class="hljs-built_in">float</span>, arg5: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">str</span>, arg4: <span class="hljs-built_in">float</span>, arg5: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">self</span>, numericalConstraint: <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a>, priority: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-built_in">bool</span></code> | **numericalConstraint** — The numerical constraint. **priority** — priority of the function. The last level might be optional. |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">errorThreshold</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">errorThreshold</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span></code> | Set error threshold. |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">lastIsOptional</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">lastIsOptional</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> | Get whether the last priority level is treated as optional. |
@@ -137,7 +137,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__eq__</span>(<span class="hljs-params">self</span>, arg2: <a href="#connectedcomponent">ConnectedComponent</a>) -&gt; <span class="hljs-built_in">bool</span></code> | Return true if both objects refer to the same connected component. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;eq&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#connectedcomponent">ConnectedComponent</a>) -&gt; <span class="hljs-built_in">bool</span></code> | Return true if both objects refer to the same connected component. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">nodes</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> | Access to the nodes. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">reachableFrom</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">reachableTo</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">list</span></code> |  |
@@ -154,7 +154,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">apply</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-built_in">bool</span></code> | Apply constraint to q in-place. Returns true on success. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">copy</span>(<span class="hljs-params">self</span>) -&gt; <a href="#constraint">Constraint</a></code> | Return a copy of this constraint. |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">isSatisfied</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">isSatisfied</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray) -&gt; <span class="hljs-built_in">bool</span></code> | Return true if configuration q satisfies the constraint. |
@@ -172,7 +172,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addConstraint</span>(<span class="hljs-params">self</span>, constraint: <a href="#constraint">Constraint</a>) -&gt; <span class="hljs-literal">None</span></code> | Add a constraint to the set. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">configProjector</span>(<span class="hljs-params">self</span>) -&gt; <a href="#configprojector">ConfigProjector</a></code> | Return pointer to config projector if any. |
 
@@ -192,7 +192,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, robot: <span class="hljs-built_in">object</span>, tolerance: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a dichotomy-based continuous path validation. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, robot: <span class="hljs-built_in">object</span>, tolerance: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a dichotomy-based continuous path validation. |
 
 ---
 
@@ -204,7 +204,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, distance: <a href="#distance">Distance</a>, steeringMethod: <a href="#steeringmethod">SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a dichotomy-based path projector with the given step size. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, distance: <a href="#distance">Distance</a>, steeringMethod: <a href="#steeringmethod">SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a dichotomy-based path projector with the given step size. |
 
 ---
 
@@ -214,7 +214,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -232,7 +232,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, robot: <span class="hljs-built_in">object</span>, stepSize: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a discretized collision-checking path validation. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, robot: <span class="hljs-built_in">object</span>, stepSize: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a discretized collision-checking path validation. |
 
 ---
 
@@ -252,7 +252,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -264,7 +264,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, distance: <a href="#distance">Distance</a>, steeringMethod: <a href="#steeringmethod">SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a global path projector with the given step size. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, distance: <a href="#distance">Distance</a>, steeringMethod: <a href="#steeringmethod">SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a global path projector with the given step size. |
 
 ---
 
@@ -274,7 +274,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -286,11 +286,11 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">joint_</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">lowerBound_</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span></code> |  |
-| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rank_</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
-| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">upperBound_</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span></code> |  |
-| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">value_</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">joint&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">lowerBound&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rank&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">upperBound&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span></code> |  |
+| <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">value&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span></code> |  |
 
 ---
 
@@ -300,7 +300,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -318,7 +318,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <a href="#connectedcomponent">ConnectedComponent</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <a href="#connectedcomponent">ConnectedComponent</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addInEdge</span>(<span class="hljs-params">self</span>, edge: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addOutEdge</span>(<span class="hljs-params">self</span>, edge: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">configuration</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
@@ -334,9 +334,9 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <a href="#parameter">Parameter</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <a href="#parameter">Parameter</a></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">boolValue</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span></code> | Return the boolean value of this parameter. |
-| <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">create_bool</span>(arg1: <span class="hljs-built_in">bool</span>) -&gt; <a href="#parameter">Parameter</a></code> | Create a Parameter holding a boolean value. |
+| <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">create&#95;bool</span>(arg1: <span class="hljs-built_in">bool</span>) -&gt; <a href="#parameter">Parameter</a></code> | Create a Parameter holding a boolean value. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">floatValue</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span></code> | Return the floating-point value of this parameter. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">intValue</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Return the integer value of this parameter. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">matrixValue</span>(<span class="hljs-params">self</span>) -&gt; numpy.ndarray</code> | Return the matrix value of this parameter. |
@@ -352,7 +352,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 
 ---
 
@@ -380,8 +380,8 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__call__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">tuple</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__call__</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">bool</span></code> | Evaluate path at parameter t. Returns (configuration, success). |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;call&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">tuple</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;call&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">bool</span></code> | Evaluate path at parameter t. Returns (configuration, success). |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">constraints</span>(<span class="hljs-params">self</span>) -&gt; <a href="#constraintset">ConstraintSet</a></code> | Return the constraint set attached to the path, or None. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">copy</span>(<span class="hljs-params">self</span>) -&gt; <a href="#path">Path</a></code> | Return a shared pointer to a copy of this. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">derivative</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>, arg3: <span class="hljs-built_in">int</span>) -&gt; numpy.ndarray</code> | Compute derivative of given order at parameter t. Returns a numpy vector. |
@@ -481,12 +481,12 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="#interval">interval</a>, arg3: <span class="hljs-built_in">int</span>, arg4: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#interval">interval</a>, arg3: <span class="hljs-built_in">int</span>, arg4: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">copy</span>(<span class="hljs-params">self</span>) -&gt; <a href="#path">Path</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">copy</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">copy_constrained</span>(<span class="hljs-params">self</span>, arg2: <a href="#constraintset">ConstraintSet</a>) -&gt; <a href="#path">Path</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">copy_constrained</span>(<span class="hljs-params">self</span>, arg2: <a href="#constraintset">ConstraintSet</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">copy&#95;constrained</span>(<span class="hljs-params">self</span>, arg2: <a href="#constraintset">ConstraintSet</a>) -&gt; <a href="#path">Path</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">copy&#95;constrained</span>(<span class="hljs-params">self</span>, arg2: <a href="#constraintset">ConstraintSet</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">end</span>(<span class="hljs-params">self</span>) -&gt; numpy.ndarray<br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">end</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_compute</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_compute</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_derivative</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">float</span>, arg4: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_derivative</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">float</span>, arg4: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl&#95;compute</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl&#95;compute</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl&#95;derivative</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">float</span>, arg4: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl&#95;derivative</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <span class="hljs-built_in">float</span>, arg4: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">initPtr</span>(<span class="hljs-params">self</span>, arg2: <a href="#pathwrap">PathWrap</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">initial</span>(<span class="hljs-params">self</span>) -&gt; numpy.ndarray<br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">initial</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">reverse</span>(<span class="hljs-params">self</span>) -&gt; <a href="#path">Path</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">reverse</span>(<span class="hljs-params">self</span>) -&gt; <a href="#path">Path</a></code> |  |
@@ -499,7 +499,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="#pathplanner">PathPlanner</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#pathplanner">PathPlanner</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -521,7 +521,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addConfigValidation</span>(<span class="hljs-params">self</span>, configValidation: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> | Add a config validation method. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addGoalConfig</span>(<span class="hljs-params">self</span>, config: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">addNumericalConstraintsToConfigProjector</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">list</span>, arg4: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">addNumericalConstraintsToConfigProjector</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span></code> | Add constraints with priorities to the config projector, creating it if needed. |
@@ -577,7 +577,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, robot: <span class="hljs-built_in">object</span>, tolerance: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a progressive continuous path validation. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, robot: <span class="hljs-built_in">object</span>, tolerance: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a progressive continuous path validation. |
 
 ---
 
@@ -589,7 +589,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, distance: <a href="#distance">Distance</a>, steeringMethod: <a href="#steeringmethod">SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a progressive path projector with the given step size. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, distance: <a href="#distance">Distance</a>, steeringMethod: <a href="#steeringmethod">SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a progressive path projector with the given step size. |
 
 ---
 
@@ -599,7 +599,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 
 ---
 
@@ -609,7 +609,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 
 ---
 
@@ -621,7 +621,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, distance: <a href="#distance">Distance</a>, steeringMethod: <a href="#steeringmethod">SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a recursive Hermite path projector with the given step size. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, distance: <a href="#distance">Distance</a>, steeringMethod: <a href="#steeringmethod">SteeringMethod</a>, step: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a recursive Hermite path projector with the given step size. |
 
 ---
 
@@ -631,7 +631,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -641,8 +641,8 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="#distance">Distance</a>, arg3: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#distance">Distance</a>, arg3: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">addEdge</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray, arg4: <a href="#path">Path</a>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">addEdge</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray, arg4: <a href="#path">Path</a>, arg5: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> | Add nodes at from and to, then add a directed edge between them. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addEdges</span>(<span class="hljs-params">self</span>, from_: <a href="#node">Node</a>, to: <a href="#node">Node</a>, path: <a href="#path">Path</a>) -&gt; <span class="hljs-literal">None</span></code> | **from** — first node **to** — second node :param :path going from |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addGoalNode</span>(<span class="hljs-params">self</span>, config: numpy.ndarray) -&gt; <a href="#node">Node</a></code> | **config** — configuration If configuration is already in the roadmap, tag corresponding node as goal node. Otherwise create a new node. |
@@ -675,7 +675,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>, arg3: <a href="#roadmap">Roadmap</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>, arg3: <a href="#roadmap">Roadmap</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -685,7 +685,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 
 ---
 
@@ -695,7 +695,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maxAcceleration</span>(*args, **kwargs)<br><br><span class="hljs-meta">@maxAcceleration.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maxAcceleration</span>(*args, **kwargs)</code> | The maximum acceleration for each degree of freedom. Not considered if negative. |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">order</span>(*args, **kwargs)<br><br><span class="hljs-meta">@order.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">order</span>(*args, **kwargs)</code> | The desired continuity order (0, 1, or 2). |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">safety</span>(*args, **kwargs)<br><br><span class="hljs-meta">@safety.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">safety</span>(*args, **kwargs)</code> | A scaling factor for the velocity bounds. |
@@ -708,7 +708,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -718,7 +718,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -728,7 +728,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -738,7 +738,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(*args, **kwargs)<br><br><span class="hljs-meta">@QPAccuracy.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(*args, **kwargs)</code> | Accuracy of the QP solver (only used by proxqp). |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(*args, **kwargs)<br><br><span class="hljs-meta">@alphaInit.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(*args, **kwargs)</code> | In [0,1]. Initial value when interpolating between non-colliding current solution and the optimal colliding trajectory. |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(*args, **kwargs)<br><br><span class="hljs-meta">@alwaysStopAtFirst.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(*args, **kwargs)</code> | If true, consider only one (not all) collision constraint per iteration. |
@@ -759,7 +759,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(*args, **kwargs)<br><br><span class="hljs-meta">@QPAccuracy.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(*args, **kwargs)</code> | Accuracy of the QP solver (only used by proxqp). |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(*args, **kwargs)<br><br><span class="hljs-meta">@alphaInit.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(*args, **kwargs)</code> | In [0,1]. Initial value when interpolating between non-colliding current solution and the optimal colliding trajectory. |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(*args, **kwargs)<br><br><span class="hljs-meta">@alwaysStopAtFirst.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(*args, **kwargs)</code> | If true, consider only one (not all) collision constraint per iteration. |
@@ -780,7 +780,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(*args, **kwargs)<br><br><span class="hljs-meta">@QPAccuracy.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(*args, **kwargs)</code> | Accuracy of the QP solver (only used by proxqp). |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(*args, **kwargs)<br><br><span class="hljs-meta">@alphaInit.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(*args, **kwargs)</code> | In [0,1]. Initial value when interpolating between non-colliding current solution and the optimal colliding trajectory. |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(*args, **kwargs)<br><br><span class="hljs-meta">@alwaysStopAtFirst.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(*args, **kwargs)</code> | If true, consider only one (not all) collision constraint per iteration. |
@@ -803,7 +803,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__call__</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray) -&gt; <a href="#path">Path</a></code> | Compute a path between two configurations using the steering method. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;call&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray) -&gt; <a href="#path">Path</a></code> | Compute a path between two configurations using the steering method. |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">constraints</span>(<span class="hljs-params">self</span>, constraints: <a href="#constraintset">ConstraintSet</a>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">constraints</span>(<span class="hljs-params">self</span>) -&gt; <a href="#constraintset">ConstraintSet</a></code> | Set constraint set. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">problem</span>(<span class="hljs-params">self</span>) -&gt; <a href="#cppcoreproblem">CppCoreProblem</a></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">steer</span>(<span class="hljs-params">self</span>, q1: numpy.ndarray, q2: numpy.ndarray) -&gt; <a href="#path">Path</a></code> |  |
@@ -816,7 +816,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -826,7 +826,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>, arg3: numpy.ndarray, arg4: numpy.ndarray, arg5: <a href="#interval">interval</a>, arg6: <a href="#constraintset">ConstraintSet</a>) -&gt; <span class="hljs-built_in">object</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: numpy.ndarray, arg4: numpy.ndarray, arg5: <a href="#interval">interval</a>, arg6: <a href="#constraintset">ConstraintSet</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>, arg3: numpy.ndarray, arg4: numpy.ndarray, arg5: <a href="#interval">interval</a>, arg6: <a href="#constraintset">ConstraintSet</a>) -&gt; <span class="hljs-built_in">object</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: numpy.ndarray, arg4: numpy.ndarray, arg5: <a href="#interval">interval</a>, arg6: <a href="#constraintset">ConstraintSet</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 
 ---
 
@@ -836,7 +836,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maxAcceleration</span>(*args, **kwargs)<br><br><span class="hljs-meta">@maxAcceleration.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maxAcceleration</span>(*args, **kwargs)</code> | Maximum acceleration for each output degree of freedom. |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maxVelocity</span>(*args, **kwargs)<br><br><span class="hljs-meta">@maxVelocity.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">maxVelocity</span>(*args, **kwargs)</code> | Maximum velocity for each output degree of freedom. |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">minimumDuration</span>(*args, **kwargs)<br><br><span class="hljs-meta">@minimumDuration.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">minimumDuration</span>(*args, **kwargs)</code> | Minimum duration assigned to each non-empty subpath. |
@@ -855,7 +855,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
 
 ---
 
@@ -865,7 +865,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -879,8 +879,8 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">asDistancePtr_t</span>(<span class="hljs-params">self</span>) -&gt; <a href="#distance">Distance</a></code> | Return a clone of this WeighedDistance as a Distance shared pointer. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">asDistancePtr&#95;t</span>(<span class="hljs-params">self</span>) -&gt; <a href="#distance">Distance</a></code> | Return a clone of this WeighedDistance as a Distance shared pointer. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getWeights</span>(<span class="hljs-params">self</span>) -&gt; numpy.ndarray</code> | Return the weight vector used when computing distances. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setWeights</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> | Set the weight vector used when computing distances. |
 
@@ -890,7 +890,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>, arg3: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>, arg3: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">first</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@first.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">first</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">second</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@second.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">second</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
@@ -902,6 +902,6 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="manipulation.md#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---

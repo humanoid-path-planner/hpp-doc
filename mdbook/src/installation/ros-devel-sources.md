@@ -1,31 +1,49 @@
-## Source installation with ROS
+# Source installation with ROS
 
-To compile all the packages in a ROS workspace, you can follow these steps:
+To compile all the packages in a ROS 2 workspace, follow these steps. They are
+the steps run by [ros/Dockerfile](https://github.com/humanoid-path-planner/hpp-doc/blob/devel/ros/Dockerfile).
 
-  1. Choose, setup, and activate a ROS distribution: <https://www.ros.org/blog/getting-started/>
+## 1. Install ROS 2
 
-  2. Choose a directory on your file system which we will call `DEVEL_HPP_DIR`.
-     - the packages will be cloned into `$DEVEL_HPP_DIR/src`,
-     - the packages will be installed in `$DEVEL_HPP_DIR/install`.
+Choose, install and activate a ROS 2 distribution: <https://www.ros.org/blog/getting-started/>
 
-     Create that directory and enter inside
+## 2. Choose a workspace directory
 
-  3. Download our repos file to clone HPP packages with [vcs2l](https://github.com/ros-infrastructure/vcs2l):
+Choose a directory on your file system, which we will call `DEVEL_HPP_DIR`.
+The packages will be cloned into `$DEVEL_HPP_DIR/src` and installed into
+`$DEVEL_HPP_DIR/install`.
 
-    ```bash
-    mkdir -p $DEVEL_HPP_DIR/src
-    wget -O $DEVEL_HPP_DIR/hpp.repos https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/ros/devel.repos
-    vcs import --input hpp.repos src
-    ```
+```bash
+mkdir -p $DEVEL_HPP_DIR
+cd $DEVEL_HPP_DIR
+```
 
-  3. Compile all packages with [colcon](https://colcon.readthedocs.io/):
+## 3. Clone the packages
 
-    ```bash
-    colcon build
-    ```
+Download our repos file and clone the packages with [vcs2l](https://github.com/ros-infrastructure/vcs2l):
 
-  4. Activate the install prefix of the workspace
+```bash
+wget https://raw.githubusercontent.com/humanoid-path-planner/hpp-doc/devel/ros/devel.repos
+vcs import --input devel.repos
+```
 
-    ```bash
-    source install/setup.bash
-    ```
+## 4. Install the dependencies
+
+If rosdep has never been initialized on your machine, run `sudo rosdep init`
+and `rosdep update` first.
+
+```bash
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+## 5. Compile all packages with [colcon](https://colcon.readthedocs.io/)
+
+```bash
+colcon build
+```
+
+## 6. Activate the install prefix of the workspace
+
+```bash
+source install/setup.bash
+```

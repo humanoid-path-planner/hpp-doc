@@ -6,13 +6,13 @@ Having completed [tutorial 8](../tutorial_8/).
 
 ## Overview
 
-Tutorial 7 opens the gripper as a blocking pre-action before the approach
+Tutorial 8 opens the gripper as a blocking pre-action before the approach
 motion. This tutorial uses `hpp_exec.BackgroundAction` to start opening the
 gripper in the background, let the arm begin travelling, then wait for the
 opening action just before grasping the box.
 
 The planning problem, Gazebo setup, and pick-and-place path are the same as in
-tutorial 7. Only the execution actions change.
+tutorial 8. Only the execution actions change.
 
 For the full `hpp_exec` API, see the
 [hpp-exec documentation](https://gepetto.github.io/doc/hpp-exec/doxygen-html/index.html).
@@ -24,10 +24,10 @@ built it yet, see the [tutorial 6 instructions](../tutorial_6/).
 
 ## Terminal 1: Launching the simulation
 
-Launch the same FR3 and gripper simulation as tutorial 7:
+Launch the same FR3 and gripper simulation as tutorial 8:
 
 ```
-ros2 launch hpp_tutorial tutorial_7_launch.py
+ros2 launch hpp_tutorial tutorial_8_launch.py
 ```
 
 Wait until you see `Configured and activated gripper_controller` in the output.
@@ -46,12 +46,12 @@ docker exec -it hpp bash
 Run the tutorial script:
 
 ```
-cd ~/devel/src/hpp_tutorial/tutorial_8
+cd ~/devel/src/hpp_tutorial/tutorial_9
 python -i init.py
 ```
 
 The script loads the FR3, the ground, and a box. It solves the same
-pick-and-place problem as tutorial 7, optimizes the path, enforces transition
+pick-and-place problem as tutorial 8, optimizes the path, enforces transition
 semantics, and time-parameterizes it with `SimpleTimeParameterization`.
 
 You can visualize the planned path in the browser viewer:
@@ -173,3 +173,5 @@ carries it to the goal, opens again, and retreats.
 
 `reset_box_pose()` detaches the simulated box if needed and places it back at
 the planned start pose before execution.
+
+Continue to [exercise 10](../exercise_10/).

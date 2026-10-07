@@ -6,7 +6,7 @@ Having completed [tutorial 7](../tutorial_7/).
 
 ## Overview
 
-Tutorial 6 executed one arm trajectory with `send_trajectory`. This tutorial
+Tutorial 7 executed one arm trajectory with `send_trajectory`. This tutorial
 adds the gripper: the robot must open the fingers before approaching the box,
 close them before transport, then open them again at the goal.
 
@@ -27,7 +27,7 @@ built it yet, see the [tutorial 6 instructions](../tutorial_6/).
 Launch Gazebo with the FR3 and its gripper:
 
 ```
-ros2 launch hpp_tutorial tutorial_7_launch.py
+ros2 launch hpp_tutorial tutorial_8_launch.py
 ```
 
 Wait until you see `Configured and activated gripper_controller` in the output.
@@ -46,7 +46,7 @@ docker exec -it hpp bash
 Run the tutorial script:
 
 ```
-cd ~/devel/src/hpp_tutorial/tutorial_7
+cd ~/devel/src/hpp_tutorial/tutorial_8
 python -i init.py
 ```
 
@@ -115,7 +115,7 @@ def release_box():
 
 `open_gripper` and `close_gripper` send a reference value for
 `fr3_finger_joint1` to open or close the gripper. They use `send_trajectory`,
-as in `tutorial_6`. On the real robot, this would be performed by a ROS action
+as in `tutorial_7`. On the real robot, this would be performed by a ROS action
 instead.
 
 `grasp_box` and `release_box` call `attach_box` and `detach_box` respectively.
@@ -161,6 +161,7 @@ segments_by_name = segments_by_transition(segments)
 segments[0].pre_actions.append(open_gripper)
 for segment in segments_by_name[GRASP_TRANSITION]:
     segment.pre_actions.append(grasp_box)
+
 for segment in segments_by_name[RELEASE_TRANSITION]:
     segment.pre_actions.append(release_box)
 
@@ -198,3 +199,5 @@ box, the arm carry the box to the goal, the fingers open, and the arm retreat.
 
 `reset_box_pose()` detaches the simulated box if needed and places it back at
 the planned start pose before execution.
+
+Continue to [tutorial 9](../tutorial_9/).

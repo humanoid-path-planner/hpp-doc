@@ -1,65 +1,46 @@
 # How to Contribute
 
-Thanks for your interest in contributing to this project! Here are a few simple guidelines to follow.
+HPP is developed on GitHub in the
+[humanoid-path-planner](https://github.com/humanoid-path-planner)
+organization. Each package is a separate repository. Development takes place
+on branch `devel`.
 
 ## Reporting a bug
 
-- Check that a similar issue doesn't already exist in the *Issues* section.
-- Open a new issue describing:
-  - the expected behavior and the observed behavior,
-  - steps to reproduce the problem,
-  - your environment (OS, package version, compiler, Python version...).
+Open an issue on the repository of the package concerned. Give the HPP version
+or commit, the operating system, the installation method, a minimal script
+that reproduces the problem and the complete error message.
 
-## Proposing a change (Pull Request)
+## Pull requests
 
-1. Fork the repository, then clone your fork.
-2. Create a dedicated branch from `devel`:
-   ```bash
-   git checkout -b my-feature
-   ```
-3. Make your changes, keeping commits clear and atomic.
-4. Follow the existing code style of the file you're modifying (C++ or Python).
-5. If you add a feature, add or update the corresponding tests.
-6. Make sure the project builds and the tests pass:
-   ```bash
-   cmake -B build
-   cmake --build build
-   cmake --build build -t test
-   ```
-7. Push your branch and open a Pull Request against the upstream repository.
-8. Clearly describe what your PR does and why.
+Fork the repository, create a branch from `devel` and open the pull request
+against `devel`. Before pushing, build the package and run the tests:
 
+```bash
+cmake -B build
+cmake --build build
+cmake --build build -t test
+```
 
-## Pre-commit
+A new feature should come with a test or an example.
 
-This project uses [prek](https://prek.j178.dev/) (a faster, drop-in replacement for pre-commit) to automatically check code formatting and quality before each commit.
+## Formatting
 
-1. Install `prek` (one-time setup): follow the instructions at https://prek.j178.dev/installation/
-2. Enable the hooks in your local clone:
+Formatting is checked by pre-commit hooks, run on each pull request by
+pre-commit.ci. To run them locally, install [prek](https://prek.j178.dev/) and
+type in the repository:
+
 ```bash
 prek install
-```
-3. From then on, checks run automatically on every `git commit`.
-   You can also run them manually on all files:
-```bash
 prek run --all-files
 ```
-4. If a hook modifies files (auto-formatting), stage those changes and commit again:
-```bash
-git add -u
-git commit
-```
 
-The repository also uses `pre-commit.ci`, so the hooks will automatically be checked on your Pull Request as well.
 ## Commit messages
 
-- Use short, descriptive, imperative-mood messages (e.g. `Fix collision check in hpp-core`).
-- One change = one commit whenever possible.
+Prefix the subject with the modified component in brackets, for instance
+`[tutorial_8] Use tutorial_8_launch.py`.
 
 ## License
 
-By contributing, you agree that your code will be distributed under the project's license (see the `LICENSE` file of the relevant repository).
-
-## Questions
-
-For any questions, open an issue or check the documentation at https://humanoid-path-planner.github.io/hpp-doc/
+Contributions are distributed under the license of the repository (see file
+`LICENSE`).

@@ -47,8 +47,8 @@ robotpkg-romeo-description
 
 Define the environment variable <code class="env-variable">DEVEL_HPP_DIR</code> with the full path to this directory.
 
-* The documentation will be cloned into <code class="env-variable">$DEVEL_HPP_DIR/src</code>.
-* The documentation will be installed into <code class="env-variable">$DEVEL_HPP_DIR/install</code>.
+* The documentation will be cloned into <code class="env-variable">&#36;DEVEL_HPP_DIR/src</code>.
+* The documentation will be installed into <code class="env-variable">&#36;DEVEL_HPP_DIR/install</code>.
 
 It is recommended to set <code class="env-variable">DEVEL_HPP_DIR</code> in your <code class="env-variable">.bashrc</code> for future use.
 
@@ -66,7 +66,7 @@ wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-p
 
 ## 7. Configure the environment
 
-Go to <code class="env-variable">$DEVEL_HPP_DIR</code> and source the configuration file:
+Go to <code class="env-variable">&#36;DEVEL_HPP_DIR</code> and source the configuration file:
 
 ```bash
 cd ${DEVEL_HPP_DIR}
@@ -141,13 +141,13 @@ sudo apt-get install robotpkg-hpp-doc
 Add the following lines to your <code class="env-variable">.bashrc</code> file (adjust the Python version if necessary):
 
 ```bash
-export PATH=/opt/openrobots/bin${!PATH:-:}${PATH}
-export LD_LIBRARY_PATH=/opt/openrobots/lib${!LD_LIBRARY_PATH:-:}${LD_LIBRARY_PATH}
-export PYTHONPATH=/opt/openrobots/lib/python3.10/site-packages${!PYTHONPATH:-:}${PYTHONPATH}
-export ROS_PACKAGE_PATH=/opt/openrobots/share${!ROS_PACKAGE_PATH:-:}${ROS_PACKAGE_PATH}
+export PATH=/opt/openrobots/bin${PATH:+:}${PATH}
+export LD_LIBRARY_PATH=/opt/openrobots/lib${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}
+export PYTHONPATH=/opt/openrobots/lib/python3.10/site-packages${PYTHONPATH:+:}${PYTHONPATH}
+export ROS_PACKAGE_PATH=/opt/openrobots/share${ROS_PACKAGE_PATH:+:}${ROS_PACKAGE_PATH}
 
-export CMAKE_PREFIX_PATH=/opt/openrobots${!CMAKE_PREFIX_PATH:-:}${CMAKE_PREFIX_PATH}
-export PKG_CONFIG_PATH=/opt/openrobots${!PKG_CONFIG_PATH:-:}${PKG_CONFIG_PATH}
+export CMAKE_PREFIX_PATH=/opt/openrobots${CMAKE_PREFIX_PATH:+:}${CMAKE_PREFIX_PATH}
+export PKG_CONFIG_PATH=/opt/openrobots${PKG_CONFIG_PATH:+:}${PKG_CONFIG_PATH}
 ```
 
 ## 5. Documentation access
@@ -216,13 +216,13 @@ Add the following lines to your <code class="env-variable">.bashrc</code> file:
 ```bash
 source /opt/ros/noetic/setup.bash
 
-export PATH=/opt/openrobots/bin${!PATH:-:}${PATH}
-export LD_LIBRARY_PATH=/opt/openrobots/lib${!LD_LIBRARY_PATH:-:}${LD_LIBRARY_PATH}
-export PYTHONPATH=/opt/openrobots/lib/python2.7/site-packages${!PYTHONPATH:-:}${PYTHONPATH}
-export ROS_PACKAGE_PATH=/opt/openrobots/share${!ROS_PACKAGE_PATH:-:}${ROS_PACKAGE_PATH}
+export PATH=/opt/openrobots/bin${PATH:+:}${PATH}
+export LD_LIBRARY_PATH=/opt/openrobots/lib${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}
+export PYTHONPATH=/opt/openrobots/lib/python3.8/site-packages${PYTHONPATH:+:}${PYTHONPATH}
+export ROS_PACKAGE_PATH=/opt/openrobots/share${ROS_PACKAGE_PATH:+:}${ROS_PACKAGE_PATH}
 
-export CMAKE_PREFIX_PATH=/opt/openrobots${!CMAKE_PREFIX_PATH:-:}${CMAKE_PREFIX_PATH}
-export PKG_CONFIG_PATH=/opt/openrobots${!PKG_CONFIG_PATH:-:}${PKG_CONFIG_PATH}
+export CMAKE_PREFIX_PATH=/opt/openrobots${CMAKE_PREFIX_PATH:+:}${CMAKE_PREFIX_PATH}
+export PKG_CONFIG_PATH=/opt/openrobots${PKG_CONFIG_PATH:+:}${PKG_CONFIG_PATH}
 ```
 
 ## 6. Documentation access

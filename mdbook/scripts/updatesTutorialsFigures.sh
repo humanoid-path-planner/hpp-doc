@@ -11,12 +11,12 @@ DEST="../src/reference/hpp-tutorial"
 
 mkdir -p "$DEST"
 
-for i in {1..9}; do
-    SRC_DIR="${SRC_REPO}/tutorial_${i}"
-    DST_DIR="${DEST}/tutorial_${i}"
+for name in tutorial_{1..9} exercise_10; do
+    SRC_DIR="${SRC_REPO}/${name}"
+    DST_DIR="${DEST}/${name}"
 
     if [ ! -d "$SRC_DIR" ]; then
-        echo "tutorial_${i} introuvable dans $SRC_REPO, ignoré"
+        echo "${name} introuvable dans $SRC_REPO, ignoré"
         continue
     fi
 

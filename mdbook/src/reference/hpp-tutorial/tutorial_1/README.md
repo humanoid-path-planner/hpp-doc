@@ -62,8 +62,8 @@ cd /home/user/devel/src
 make all
 ```
 
-Everything is now installed. You can now exit the container by typing CTRL-D and proceed to [tutorial 2](../tutorial_2/).
-
 ### Note
 
 The docker container shares the current directory in your host machine with `/home/user/devel`. As a consequence, if you restart it later, you do not need to redo the previous steps.
+
+Everything is now installed. You can now exit the container by typing CTRL-D and proceed to [tutorial 2](../tutorial_2/).

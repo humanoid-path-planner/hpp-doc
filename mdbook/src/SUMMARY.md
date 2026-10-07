@@ -23,8 +23,10 @@
   - [Executing motions on a simulated robot](reference/hpp-tutorial/tutorial_7/README.md)
   - [Pick and place with a gripper](reference/hpp-tutorial/tutorial_8/README.md)
   - [Efficient pre- and post-actions](reference/hpp-tutorial/tutorial_9/README.md)
+  - [Exercise 10: MFJA pick and place](reference/hpp-tutorial/exercise_10/README.md)
 
 # Reference
+- [C++ API](reference/cpp-api.md)
 - [hpp-core](reference/hpp-core/README.md)
 - [hpp-manipulation](reference/hpp-manipulation/README.md)
 - [hpp-constraints](reference/hpp-constraints/README.md)

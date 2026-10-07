@@ -284,3 +284,5 @@ from pyhpp.core import RandomShortcut
 optimizer = RandomShortcut(problem)
 p1 = optimizer.optimize(p)
 ```
+
+Continue to [tutorial 3](../tutorial_3/).

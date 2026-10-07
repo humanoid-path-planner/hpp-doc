@@ -31,8 +31,8 @@ robotpkg-py312-pinocchio robotpkg-py312-proxsuite robotpkg-qt5-qgv
 
 Choose a directory on your filesystem and define the environment variable <code class="env-variable">DEVEL_HPP_DIR</code> with its full path.
 
-* The packages will be cloned into <code class="env-variable">$DEVEL_HPP_DIR/src</code>.
-* The packages will be installed into <code class="env-variable">$DEVEL_HPP_DIR/install</code>.
+* The packages will be cloned into <code class="env-variable">&#36;DEVEL_HPP_DIR/src</code>.
+* The packages will be installed into <code class="env-variable">&#36;DEVEL_HPP_DIR/install</code>.
 
 It is recommended to set <code class="env-variable">DEVEL_HPP_DIR</code> in your <code class="env-variable">.bashrc</code> file for future use.
 
@@ -50,7 +50,7 @@ wget -O $DEVEL_HPP_DIR/src/Makefile https://raw.githubusercontent.com/humanoid-p
 
 ## 5. Configure the environment
 
-Go to <code class="env-variable">$DEVEL_HPP_DIR</code> and source the configuration file:
+Go to <code class="env-variable">&#36;DEVEL_HPP_DIR</code> and source the configuration file:
 
 ```bash
 cd $DEVEL_HPP_DIR

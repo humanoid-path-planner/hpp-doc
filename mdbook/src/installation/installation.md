@@ -1,12 +1,11 @@
 # Installation
 
-## Choosing the Right Installation Method
-
-| Method                                         | Stable | Requires Compilation | Uses Nix | Recommended For          |
-| ---------------------------------------------- | :----: | :------------------: | :------: | ------------------------ |
-| Stable - Binary                                |    ✅  |          No          |     ❌   | Most users               |
-| Stable - Source                                |    ✅  |          Yes         |     ❌   | Advanced users           |
-| Stable - Nix Environment (HPP Binary Packages) |    ✅  |          No          |     ✅   | Nix users                |
-| Development - Source                           |    ❌  |          Yes         |     ❌   | Contributors and testers |
-| Development - Nix Environment (HPP Sources)    |    ❌  |          Yes         |     ✅   | HPP developers           |
-| ROS - Source                                   |    ❌  |          Yes         |     ❌   | ROS users                |
+- [Binary packages](stable-binary.md) (Ubuntu, robotpkg): to use the latest
+  release of HPP without modifying it.
+- [Stable sources](stable-sources.md): to compile the latest release.
+- [Nix, binary packages](nix-stable-binary.md): released packages in a Nix
+  environment.
+- [Development sources](devel-sources.md) and
+  [Nix, development sources](nix-devel-sources.md): to work on HPP itself.
+- [ROS workspace](ros-devel-sources.md): to compile HPP with colcon in a ROS 2
+  workspace.

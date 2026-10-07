@@ -80,6 +80,7 @@ cd ~/devel/src && make all
 ```python
 from hpp_exec import (
     BackgroundAction,
+    JointStateReader,
     Segment,
     execute_segments,
     read_current_configuration,
@@ -141,6 +142,12 @@ execute_segments(
 )
 
 # Read the robot state before planning from the live position.
+reader = JointStateReader("/joint_states")
+while reader.get_current_configuration() is None:
+    rclpy.spin_once(reader)
+q_start = reader.get_current_configuration()
+
+# Reorder by joint name when message order is not guaranteed.
 q_start = read_current_configuration(
     node,
     joint_names=["joint1", "joint2", ...],
@@ -150,6 +157,20 @@ q_start = read_current_configuration(
 
 See the generated Doxygen documentation for `send_trajectory_async()`,
 `configs_to_joint_trajectory()`, and other lower-level helpers.
+
+`send_trajectory()` accepts `positions_only=True` for controllers that use
+their configured speed when velocities are omitted. Its optional
+`wait_for_completion(node, result_future)` callback can wait for measured
+arrival and a stopped controller. The callback spins the supplied node and
+raises on failure. Once it returns, hpp-exec waits up to five seconds for a
+successful ROS result. Failed, timed-out or interrupted waits request
+cancellation. Without this callback, the existing ROS-result wait
+and 60-second timeout apply.
+
+`execute_segments()` accepts these same two options. Its completion callback
+receives `(node, result_future, segment_configs)` for the current segment,
+before its post-actions run. Joint selection applies to the sent message;
+the callback receives the original configuration vectors for that segment.
 
 ## Tutorials
 

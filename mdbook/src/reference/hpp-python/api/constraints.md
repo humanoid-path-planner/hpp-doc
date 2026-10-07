@@ -20,7 +20,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">describeError</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-built_in">tuple</span></code> | Describe the constraint error for configuration q. Returns a list of (constraint_name, error_norm) pairs. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">explicitConstraintSet</span>(<span class="hljs-params">self</span>) -&gt; <a href="#explicitconstraintset">ExplicitConstraintSet</a></code> | Get explicit constraint set. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">explicitConstraintSetHasChanged</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> | Should be called whenever explicit solver is modified. |
@@ -41,13 +41,13 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__contains__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__setitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;contains&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;delitem&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;getitem&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;iter&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;len&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;setitem&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">append</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">extend</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
@@ -66,11 +66,11 @@
 | def | Description |
 |:---|:---|
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">J</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; numpy.ndarray</code> | Compute Jacobian matrix and return as a numpy array. |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__call__</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <a href="pinocchio.md#liegroupelement">pyhpp.pinocchio.bindings.LiegroupElement</a></code> | Evaluate the function at a given parameter. |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>, arg3: <span class="hljs-built_in">int</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_compute</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupelementref">pyhpp.pinocchio.bindings.LiegroupElementRef</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_compute</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupelementref">pyhpp.pinocchio.bindings.LiegroupElementRef</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_jacobian</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl_jacobian</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;call&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <a href="pinocchio.md#liegroupelement">pyhpp.pinocchio.bindings.LiegroupElement</a></code> | Evaluate the function at a given parameter. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>, arg3: <span class="hljs-built_in">int</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl&#95;compute</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupelementref">pyhpp.pinocchio.bindings.LiegroupElementRef</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl&#95;compute</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupelementref">pyhpp.pinocchio.bindings.LiegroupElementRef</a>, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl&#95;jacobian</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">impl&#95;jacobian</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">inputDerivativeSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">inputSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Get dimension of input vector. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">jacobian</span>(<span class="hljs-params">self</span>, jacobian: numpy.ndarray, argument: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> | :param :jacobian will be stored in this argument **argument** — point at which the jacobian will be computed |
@@ -156,7 +156,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>, arg3: <a href="#differentiablefunction">DifferentiableFunction</a>, arg4: <span class="hljs-built_in">list</span>, arg5: <span class="hljs-built_in">list</span>, arg6: <span class="hljs-built_in">list</span>, arg7: <span class="hljs-built_in">list</span>, arg8: <a href="#comparisontypes">ComparisonTypes</a>) -&gt; <span class="hljs-built_in">object</span></code> | Create an explicit constraint mapping output DOF from input DOF. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>, arg3: <a href="#differentiablefunction">DifferentiableFunction</a>, arg4: <span class="hljs-built_in">list</span>, arg5: <span class="hljs-built_in">list</span>, arg6: <span class="hljs-built_in">list</span>, arg7: <span class="hljs-built_in">list</span>, arg8: <a href="#comparisontypes">ComparisonTypes</a>) -&gt; <span class="hljs-built_in">object</span></code> | Create an explicit constraint mapping output DOF from input DOF. |
 
 ---
 
@@ -218,8 +218,8 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">self</span>, constraint: <a href="#explicit">Explicit</a>) -&gt; <span class="hljs-built_in">int</span></code> | **constraint** — explicit constraint |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">errorSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
 
@@ -283,8 +283,8 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#liegroupspace">pyhpp.pinocchio.bindings.LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">self</span>, constraint: <a href="#implicit">Implicit</a>, priority: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-built_in">bool</span></code> | **constraint** — implicit constraint **priority** — level of priority of the constraint: priority are in decreasing order: 0 is the highest priority level, |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">constraintsForPriority</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-built_in">list</span></code> | Return list of constraints at the given priority level. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">dimension</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Return total dimension of the active constraints. |
@@ -348,7 +348,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="#differentiablefunction">DifferentiableFunction</a>, arg3: <a href="#comparisontypes">ComparisonTypes</a>, arg4: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | Create an implicit constraint from a differentiable function and comparison types. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#differentiablefunction">DifferentiableFunction</a>, arg3: <a href="#comparisontypes">ComparisonTypes</a>, arg4: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | Create an implicit constraint from a differentiable function and comparison types. |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">comparisonType</span>(<span class="hljs-params">self</span>) -&gt; <a href="#comparisontypes">ComparisonTypes</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">comparisonType</span>(<span class="hljs-params">self</span>, arg2: <a href="#comparisontypes">ComparisonTypes</a>) -&gt; <span class="hljs-literal">None</span></code> | Return the ComparisonType. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">function</span>(<span class="hljs-params">self</span>) -&gt; <a href="#differentiablefunction">DifferentiableFunction</a></code> | Return a reference to function $h$. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">getFunctionOutputSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> | Return the output size of the underlying differentiable function. |
@@ -381,7 +381,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">str</span>, arg4: numpy.ndarray) -&gt; <span class="hljs-built_in">object</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">str</span>, arg4: numpy.ndarray, arg5: <a href="#comparisontypes">ComparisonTypes</a>) -&gt; <span class="hljs-built_in">object</span></code> | Create a locked joint constraint fixing the named joint to the given configuration. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">str</span>, arg4: numpy.ndarray) -&gt; <span class="hljs-built_in">object</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">str</span>, arg4: numpy.ndarray, arg5: <a href="#comparisontypes">ComparisonTypes</a>) -&gt; <span class="hljs-built_in">object</span></code> | Create a locked joint constraint fixing the named joint to the given configuration. |
 
 ---
 
@@ -391,7 +391,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="#differentiablefunction">DifferentiableFunction</a>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a manipulability function for the given robot. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#differentiablefunction">DifferentiableFunction</a>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a manipulability function for the given robot. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">lockJoint</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> | Lock a joint by name so it is excluded from the Jacobian. |
 
 ---
@@ -402,7 +402,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="#differentiablefunction">DifferentiableFunction</a>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a minimum-manipulability function for the given robot. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#differentiablefunction">DifferentiableFunction</a>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">object</span></code> | Create a minimum-manipulability function for the given robot. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">lockJoint</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> | Lock a joint by name so it is excluded from the Jacobian. |
 
 ---
@@ -413,7 +413,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: pinocchio.pinocchio_pywrap_default.SE3, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j2** — index of joint that holds frame 2, frame2 (SE3): pose of frame 2 in joint 2, frame1 (SE3): pose of frame 1 in world frame, **mask** — tuple of Boolean. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: pinocchio.pinocchio_pywrap_default.SE3, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j2** — index of joint that holds frame 2, frame2 (SE3): pose of frame 2 in joint 2, frame1 (SE3): pose of frame 1 in world frame, **mask** — tuple of Boolean. |
 
 ---
 
@@ -423,7 +423,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: pinocchio.pinocchio_pywrap_default.SE3, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j2** — index of joint that holds frame 2, frame2 (SE3): pose of frame 2 in joint 2, frame1 (SE3): pose of frame 1 in world frame, **mask** — tuple of Boolean. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: pinocchio.pinocchio_pywrap_default.SE3, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j2** — index of joint that holds frame 2, frame2 (SE3): pose of frame 2 in joint 2, frame1 (SE3): pose of frame 1 in world frame, **mask** — tuple of Boolean. |
 
 ---
 
@@ -455,7 +455,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, robot: <span class="hljs-built_in">object</span>, joint: <span class="hljs-built_in">object</span>, reference: numpy.ndarray, mask: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <a href="#relativecom">RelativeCom</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>, arg4: numpy.ndarray, arg5: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <a href="#relativecom">RelativeCom</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">object</span>, arg5: numpy.ndarray, arg6: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <a href="#relativecom">RelativeCom</a></code> | Return a shared pointer to a new instance. |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, robot: <span class="hljs-built_in">object</span>, joint: <span class="hljs-built_in">object</span>, reference: numpy.ndarray, mask: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <a href="#relativecom">RelativeCom</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>, arg4: numpy.ndarray, arg5: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <a href="#relativecom">RelativeCom</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">object</span>, arg5: numpy.ndarray, arg6: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <a href="#relativecom">RelativeCom</a></code> | Return a shared pointer to a new instance. |
 
 ---
 
@@ -465,7 +465,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
 
 ---
 
@@ -475,7 +475,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
 
 ---
 
@@ -485,7 +485,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
 
 ---
 
@@ -495,7 +495,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: <span class="hljs-built_in">int</span>, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.SE3, arg8: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j1** — index of joint that holds frame 1, **j2** — index of joint that holds frame 2, frame1 (SE3): pose of frame 1 in joint 1, frame2 (SE3): pose of frame 2 in joint 2, **mask** — tuple of Boolean. |
 
 ---
 
@@ -511,7 +511,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: pinocchio.pinocchio_pywrap_default.SE3, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j2** — index of joint that holds frame 2, frame2 (SE3): pose of frame 2 in joint 2, frame1 (SE3): pose of frame 1 in world frame, **mask** — tuple of Boolean. |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">object</span>, arg4: <span class="hljs-built_in">int</span>, arg5: pinocchio.pinocchio_pywrap_default.SE3, arg6: pinocchio.pinocchio_pywrap_default.SE3, arg7: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-built_in">object</span></code> | **name** — name of the constraint, **robot** — device the constraint applies to, **j2** — index of joint that holds frame 2, frame2 (SE3): pose of frame 2 in joint 2, frame1 (SE3): pose of frame 1 in world frame, **mask** — tuple of Boolean. |
 
 ---
 
@@ -519,7 +519,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>, arg3: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>, arg3: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">first</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@first.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">first</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">second</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@second.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">second</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
