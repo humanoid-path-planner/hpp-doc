@@ -8,10 +8,14 @@ HPP (Humanoid Path Planner) is a collection of software packages
 implementing manipulation planning functionalities for diverse types of robots, including
 humanoid robot.
 
+This page gives access to the C++ API documentation of the installed packages.
+Installation instructions, tutorials and the Python API reference are on the
+<a target="_blank" href="https://humanoid-path-planner.github.io/hpp-doc/">HPP documentation website</a>.
+
 \par Installation
 
 Installation instructions can be found on
-<a target="_blank" href="https://humanoid-path-planner.github.io/hpp-doc/download.html">github</a>.
+<a target="_blank" href="https://humanoid-path-planner.github.io/hpp-doc/installation/installation.html">the HPP documentation website</a>.
 
 \par Overview of the architecture
 
