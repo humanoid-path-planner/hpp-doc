@@ -16,7 +16,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">computeForwardKinematics</span>(<span class="hljs-params">self</span>, self_: <span class="hljs-built_in">int</span>) -&gt; <span class="hljs-literal">None</span></code> | Compute forward kinematics computing everything. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">computeFramesForwardKinematics</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">configSize</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
@@ -60,13 +60,13 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__contains__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>) -&gt; <a href="#gripper">Gripper</a></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>) -&gt; typing.Iterator[str]</code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__setitem__</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>, value: <a href="#gripper">Gripper</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;contains&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;delitem&#95;&#95;</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;getitem&#95;&#95;</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>) -&gt; <a href="#gripper">Gripper</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;iter&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; typing.Iterator[str]</code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;len&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;setitem&#95;&#95;</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>, value: <a href="#gripper">Gripper</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -76,10 +76,10 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__add__</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__sub__</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupelement">LiegroupElement</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;add&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;sub&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupelement">LiegroupElement</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">space</span>(<span class="hljs-params">self</span>) -&gt; <a href="#liegroupspace">LiegroupSpace</a></code> | list index out of range |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">vector</span>(<span class="hljs-params">self</span>) -&gt; numpy.ndarray</code> | list index out of range |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">v</span>(<span class="hljs-params">self</span>) -&gt; numpy.ndarray<br><br><span class="hljs-meta">@v.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">v</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
@@ -92,10 +92,10 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__add__</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__sub__</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupelementref">LiegroupElementRef</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;add&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;sub&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupelementref">LiegroupElementRef</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">space</span>(<span class="hljs-params">self</span>) -&gt; <a href="#liegroupspace">LiegroupSpace</a></code> | list index out of range |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">vector</span>(<span class="hljs-params">self</span>) -&gt; numpy.ndarray</code> | list index out of range |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">v</span>(<span class="hljs-params">self</span>) -&gt; numpy.ndarray<br><br><span class="hljs-meta">@v.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">v</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
@@ -130,15 +130,15 @@
 | <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">Rn</span>(n: <span class="hljs-built_in">int</span>) -&gt; <a href="#liegroupspace">LiegroupSpace</a></code> | **n** — dimension of vector space |
 | <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">SE2</span>() -&gt; <a href="#liegroupspace">LiegroupSpace</a></code> | Return $SE(2)$. |
 | <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">SE3</span>() -&gt; <a href="#liegroupspace">LiegroupSpace</a></code> | Return $SE(3)$. |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__eq__</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__imul__</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <a href="#liegroupspace">LiegroupSpace</a></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__mul__</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <a href="#liegroupspace">LiegroupSpace</a></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__ne__</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">dDifference_dq0</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: numpy.ndarray, arg4: numpy.ndarray, arg5: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">dDifference_dq1</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: numpy.ndarray, arg4: numpy.ndarray, arg5: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">dIntegrate_dq</span>(arg1: <span class="hljs-built_in">object</span>, arg2: <span class="hljs-built_in">object</span>, arg3: numpy.ndarray, arg4: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">dIntegrate_dv</span>(arg1: <span class="hljs-built_in">object</span>, arg2: <span class="hljs-built_in">object</span>, arg3: numpy.ndarray, arg4: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;eq&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;imul&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <a href="#liegroupspace">LiegroupSpace</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;mul&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <a href="#liegroupspace">LiegroupSpace</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;ne&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="#liegroupspace">LiegroupSpace</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;str&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">dDifference&#95;dq0</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: numpy.ndarray, arg4: numpy.ndarray, arg5: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">dDifference&#95;dq1</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: numpy.ndarray, arg4: numpy.ndarray, arg5: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">dIntegrate&#95;dq</span>(arg1: <span class="hljs-built_in">object</span>, arg2: <span class="hljs-built_in">object</span>, arg3: numpy.ndarray, arg4: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">dIntegrate&#95;dv</span>(arg1: <span class="hljs-built_in">object</span>, arg2: <span class="hljs-built_in">object</span>, arg3: numpy.ndarray, arg4: numpy.ndarray) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">empty</span>() -&gt; <a href="#liegroupspace">LiegroupSpace</a></code> | Return empty Lie group. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">mergeVectorSpaces</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">name</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> | Return name of Lie group. |
@@ -149,8 +149,8 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__repr__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;repr&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">data</span>(<span class="hljs-params">self</span>) -&gt; <a href="#gripper">Gripper</a></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">key</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
 

@@ -24,7 +24,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addGripper</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">str</span>, arg4: pinocchio.pinocchio_pywrap_default.SE3, arg5: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> | Add a gripper to the kinematic chain |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addHandle</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <span class="hljs-built_in">str</span>, arg4: pinocchio.pinocchio_pywrap_default.SE3, arg5: <span class="hljs-built_in">float</span>, arg6: pinocchio.pinocchio_pywrap_default.StdVec_Bool) -&gt; <span class="hljs-literal">None</span></code> | Add a handle to the kinematic chain |
 | <code><span class="hljs-meta">@staticmethod</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">asPinDevice</span>(arg1: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
@@ -72,7 +72,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>, arg3: <a href="core.md#roadmap">pyhpp.core.bindings.Roadmap</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>, arg3: <a href="core.md#roadmap">pyhpp.core.bindings.Roadmap</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">checkFeasibilityOnly</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">checkFeasibilityOnly</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> | If enabled, only add one solution to the roadmap. Otherwise add all solutions. |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">nDiscreteSteps</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">nDiscreteSteps</span>(<span class="hljs-params">self</span>, arg2: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>) -&gt; <span class="hljs-literal">None</span></code> | Number of steps to generate goal config (successive projections). |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">nRandomConfig</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">nRandomConfig</span>(<span class="hljs-params">self</span>, arg2: <a href="core-path.md#splineb3">pyhpp.core.path.bindings.SplineB3</a>) -&gt; <span class="hljs-literal">None</span></code> | Get the number of random configurations used to generate the initial config of the final path. |
@@ -85,7 +85,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setTrajectory</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#path">pyhpp.core.bindings.Path</a>, arg3: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> | Set the right hand side of the trajectory constraint from a path. param se3Output: set to True if the output of path must be understood as SE3. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">setTrajectoryConstraint</span>(<span class="hljs-params">self</span>, arg2: <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a>) -&gt; <span class="hljs-literal">None</span></code> | Set the constraint whose right hand side will vary along the trajectory. |
 
@@ -133,7 +133,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 
 ---
 
@@ -157,8 +157,8 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <a href="pinocchio.md#device">Device</a>, arg4: <a href="#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">_get_native_graph</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> | Return a capsule wrapping the native C++ Graph object (for external interop). |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>, arg3: <a href="pinocchio.md#device">Device</a>, arg4: <a href="#problem">Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;get&#95;native&#95;graph</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> | Return a capsule wrapping the native C++ Graph object (for external interop). |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addLevelSetFoliation</span>(<span class="hljs-params">self</span>, arg2: <a href="#transition">Transition</a>, arg3: <span class="hljs-built_in">list</span>, arg4: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span></code> | Add the numerical constraints to a LevelSetTransition that create the foliation. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addNumericalConstraint</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>, arg3: <a href="constraints.md#implicit">pyhpp.constraints.bindings.Implicit</a>) -&gt; <span class="hljs-literal">None</span></code> | Add a numerical constraint to a state. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addNumericalConstraintsForPath</span>(<span class="hljs-params">self</span>, arg2: <a href="#state">State</a>, arg3: <span class="hljs-built_in">list</span>) -&gt; <span class="hljs-literal">None</span></code> | Add numerical constraints for path to a state. |
@@ -222,7 +222,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -256,13 +256,13 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__contains__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>) -&gt; <a href="#handle">Handle</a></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>) -&gt; typing.Iterator[str]</code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__setitem__</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>, value: <a href="#handle">Handle</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;contains&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;delitem&#95;&#95;</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;getitem&#95;&#95;</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>) -&gt; <a href="#handle">Handle</a></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;iter&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; typing.Iterator[str]</code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;len&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;setitem&#95;&#95;</span>(<span class="hljs-params">self</span>, key: <span class="hljs-built_in">str</span>, value: <a href="#handle">Handle</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -272,7 +272,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -282,7 +282,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#device">Device</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="pinocchio.md#device">Device</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">checkProblem</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> | Check whether the problem is well formulated. |
 | <code><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">constraintGraph</span>(<span class="hljs-params">self</span>) -&gt; <a href="#graph">Graph</a><br><br><span class="hljs-meta">@typing.overload</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">constraintGraph</span>(<span class="hljs-params">self</span>, arg2: <a href="#graph">Graph</a>) -&gt; <span class="hljs-literal">None</span></code> | Get the graph of constraints. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">fullSteeringMethod</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#steeringmethod">pyhpp.core.bindings.SteeringMethod</a>) -&gt; <span class="hljs-literal">None</span></code> | Set the problem steering method directly. Unlike steeringMethod, this does not wrap the given steering method in a manipulation graph steering method. |
@@ -296,7 +296,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 
 ---
 
@@ -306,7 +306,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@QPAccuracy.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@alphaInit.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@alwaysStopAtFirst.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
@@ -327,7 +327,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@QPAccuracy.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">QPAccuracy</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">float</span><br><br><span class="hljs-meta">@alphaInit.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alphaInit</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">float</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">bool</span><br><br><span class="hljs-meta">@alwaysStopAtFirst.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">alwaysStopAtFirst</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
@@ -363,7 +363,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
 ---
 
@@ -414,7 +414,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <a href="core.md#problem">pyhpp.core.bindings.Problem</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">addPathOptimizer</span>(<span class="hljs-params">self</span>, pathOptimizer: <a href="core.md#pathoptimizer">pyhpp.core.bindings.PathOptimizer</a>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">clearPathOptimizers</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> | Clear path optimizers. |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">computePath</span>(<span class="hljs-params">self</span>, arg2: numpy.ndarray, arg3: numpy.ndarray, self_: <span class="hljs-built_in">bool</span>) -&gt; <a href="core-path.md#vector">pyhpp.core.path.bindings.Vector</a></code> |  |
@@ -436,8 +436,8 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__repr__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;repr&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">data</span>(<span class="hljs-params">self</span>) -&gt; <a href="#handle">Handle</a></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">key</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span></code> |  |
 
@@ -447,7 +447,7 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">pose</span>(<span class="hljs-params">self</span>) -&gt; pinocchio.pinocchio_pywrap_default.SE3<br><br><span class="hljs-meta">@pose.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">pose</span>(<span class="hljs-params">self</span>, arg2: pinocchio.pinocchio_pywrap_default.SE3) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">prefix</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span><br><br><span class="hljs-meta">@prefix.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">prefix</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-meta">@property</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">srdfPath</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">str</span><br><br><span class="hljs-meta">@srdfPath.setter</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">srdfPath</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">str</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
@@ -459,13 +459,13 @@
 
 | def | Description |
 |:---|:---|
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__contains__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
-| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">__setitem__</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;contains&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">bool</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;delitem&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;getitem&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;init&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;iter&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">object</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;len&#95;&#95;</span>(<span class="hljs-params">self</span>) -&gt; <span class="hljs-built_in">int</span></code> |  |
+| <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">&#95;&#95;setitem&#95;&#95;</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>, arg3: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">append</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 | <code><span class="hljs-keyword">def</span> <span class="hljs-title function_">extend</span>(<span class="hljs-params">self</span>, arg2: <span class="hljs-built_in">object</span>) -&gt; <span class="hljs-literal">None</span></code> |  |
 
