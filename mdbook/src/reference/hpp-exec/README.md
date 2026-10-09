@@ -57,9 +57,10 @@ The HPP configuration vector typically includes all robot DOFs. Use `joint_indic
 from hpp_exec import send_trajectory
 
 send_trajectory(
-    configs, times,
+    configs,
+    times,
     joint_names=["joint1", "joint2", ...],  # ROS2 joint names
-    joint_indices=list(range(7)),            # Which HPP config indices to use
+    joint_indices=list(range(7)),  # Which HPP config indices to use
 )
 ```
 
@@ -92,10 +93,10 @@ from hpp_exec import (
 
 # Main function - send trajectory to ros2_control
 send_trajectory(
-    configs,              # List[np.ndarray] from HPP
-    times,                # List[float] timestamps in seconds
-    joint_names,            # List[str] ROS2 joint names
-    controller_topic="...", # FollowJointTrajectory action topic
+    configs,  # List[np.ndarray] from HPP
+    times,  # List[float] timestamps in seconds
+    joint_names,  # List[str] ROS2 joint names
+    controller_topic="...",  # FollowJointTrajectory action topic
 )
 
 # Expose the HPP graph segments.
@@ -105,9 +106,7 @@ print_segments(segments)
 # Inspect every occurrence of each graph transition.
 segments_by_name = segments_by_transition(segments)
 segments_by_name["fr3/gripper > box/handle | f_23"][0].pre_actions.append(grasp_box)
-segments_by_name["fr3/gripper < box/handle | 0-0_21"][0].pre_actions.append(
-    release_box
-)
+segments_by_name["fr3/gripper < box/handle | 0-0_21"][0].pre_actions.append(release_box)
 
 # Or overlap a blocking action with the next segment's arm motion.
 background_open = BackgroundAction(open_gripper, name="open_gripper")

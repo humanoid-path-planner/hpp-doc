@@ -158,7 +158,9 @@ from hpp_exec import execute_segments
 close_gripper()
 reset_box_pose()
 execute_segments(
-    segments, configs, times,
+    segments,
+    configs,
+    times,
     joint_names=[f"fr3_joint{i}" for i in range(1, 8)],
     joint_indices=list(range(7)),
     pre_actions_by_transition=pre_actions_by_transition,
