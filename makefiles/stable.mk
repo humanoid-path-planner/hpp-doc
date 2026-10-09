@@ -48,7 +48,7 @@ toppra_extra_flags= -DBUILD_TESTS=OFF -DPYTHON_BINDINGS=OFF
 # {{{ Packages supporting HPP_VERSION
 
 # Either a version tag (e.g. v4.3.0), stable or devel
-HPP_VERSION=v7.0.0
+HPP_VERSION=v9.0.2
 HPP_EXTRA_FLAGS= -DBUILD_TESTING=${BUILD_TESTING} -DAUTO_UNINSTALL=OFF -DDOXYGEN_GENERATE_XML=YES
 
 hpp-util_branch=${HPP_VERSION}
@@ -106,7 +106,7 @@ hpp-tools_branch=${HPP_VERSION}
 hpp-tools_repository=${HPP_REPO}
 hpp-tools_extra_flags=
 
-hpp-toppra_branch=main
+hpp-toppra_branch=${HPP_VERSION}
 hpp-toppra_repository=${HPP_REPO}
 hpp-toppra_extra_flags= -DPYTHON_STANDARD_LAYOUT=ON
 
