@@ -16,7 +16,7 @@ Install robotpkg by following [the robotpkg installation website](http://robotpk
 
 ```bash
 pyver=312
-sudo apt-get install robotpkg-py${pyver}-hpp-manipulation-corba \
+sudo apt-get install robotpkg-py${pyver}-hpp-python \
 robotpkg-py${pyver}-qt5-hpp-gepetto-viewer
 ```
 
@@ -25,15 +25,7 @@ robotpkg-py${pyver}-qt5-hpp-gepetto-viewer
 ### Tutorials
 
 ```bash
-sudo apt-get install robotpkg-py${pyver}-hpp-tutorial \
-robotpkg-py${pyver}-qt5-hpp-practicals
-```
-
-### GUI
-
-```bash
-sudo apt-get install robotpkg-py${pyver}-qt5-hpp-gui \
-robotpkg-py${pyver}-qt5-hpp-plot
+sudo apt-get install robotpkg-py${pyver}-hpp-tutorial
 ```
 
 ### Robot descriptions
@@ -104,7 +96,7 @@ Install robotpkg by following [the robotpkg installation website](http://robotpk
 
 ```bash
 pyver=310
-sudo apt-get install robotpkg-py${pyver}-hpp-manipulation-corba \
+sudo apt-get install robotpkg-py${pyver}-hpp-python \
 robotpkg-py${pyver}-qt5-hpp-gepetto-viewer
 ```
 
@@ -114,13 +106,6 @@ robotpkg-py${pyver}-qt5-hpp-gepetto-viewer
 
 ```bash
 sudo apt-get install robotpkg-py${pyver}-hpp-tutorial
-```
-
-### GUI
-
-```bash
-sudo apt-get install robotpkg-py${pyver}-qt5-hpp-gui \
-robotpkg-py${pyver}-qt5-hpp-plot
 ```
 
 ### Robot descriptions
@@ -176,7 +161,7 @@ Install robotpkg by following [the robotpkg installation website](http://robotpk
 
 ```bash
 pyver=38
-sudo apt-get install robotpkg-py${pyver}-hpp-manipulation-corba \
+sudo apt-get install robotpkg-py${pyver}-hpp-python \
 robotpkg-py${pyver}-qt5-hpp-gepetto-viewer
 ```
 
@@ -186,13 +171,6 @@ robotpkg-py${pyver}-qt5-hpp-gepetto-viewer
 
 ```bash
 sudo apt-get install robotpkg-py${pyver}-hpp-tutorial
-```
-
-### GUI
-
-```bash
-sudo apt-get install robotpkg-py${pyver}-qt5-hpp-gui \
-robotpkg-py${pyver}-qt5-hpp-plot
 ```
 
 ### Robot descriptions

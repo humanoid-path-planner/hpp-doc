@@ -14,17 +14,18 @@ assimp-utils cmake coinor-libipopt-dev coinor-libipopt1v5 cython3 doxygen \
 git ffmpeg gcovr gfortran graphviz libassimp-dev libboost-all-dev \
 libbullet-dev libccd-dev libcdd-dev libconsole-bridge-dev libeigen3-dev \
 libglpk-dev libgraphviz-dev libgtest-dev liblapack-dev liblog4cxx-dev \
-libltdl-dev liboctomap-dev libopencv-dev libpcl-dev libqt5svg5-dev \
-libqt5xmlpatterns5-dev libtinyxml2-dev libtinyxml-dev libtool-bin \
-liburdfdom-dev liburdfdom-headers-dev libyaml-cpp-dev llvm m4 \
-oxygen-icon-theme pkg-config psmisc pyqt5-dev python3-defusedxml \
+libltdl-dev liboctomap-dev libopencv-dev libpcl-dev \
+libtinyxml2-dev libtinyxml-dev libtool-bin \
+liburdfdom-dev liburdfdom-headers-dev libyaml-cpp-dev llvm m4 nodejs npm \
+pkg-config psmisc python3-defusedxml \
 python3-dev python3-empy python3-gnupg python3-matplotlib python3-venv \
 python3-netifaces python3-nose python3-numpy python3-paramiko \
-python3-pydot python3-pyqt5 python3-scipy python3-setuptools \
-python3-sip-dev python3-sphinx python3-yaml python3-pip python-is-python3 \
-qtbase5-private-dev qtmultimedia5-dev texlive-latex-extra wget \
+python3-pydot python3-scipy python3-setuptools \
+python3-sphinx python3-yaml python3-pip python-is-python3 \
+texlive-latex-extra wget \
+robotpkg-example-robot-data \
 robotpkg-romeo-description robotpkg-py312-eigenpy robotpkg-py312-coal \
-robotpkg-py312-pinocchio robotpkg-py312-proxsuite robotpkg-qt5-qgv
+robotpkg-py312-pinocchio robotpkg-py312-proxsuite
 ```
 
 ## 3. Choose a development directory

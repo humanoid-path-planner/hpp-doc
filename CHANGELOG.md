@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+- [mdbook] Remove Qt and CORBA packages from installation instructions; add nodejs, npm and example-robot-data
 - [mdbook] Fix gazebo link
 - Update and clean mdbook doc
 
