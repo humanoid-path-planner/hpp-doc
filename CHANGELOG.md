@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+- [mdbook] Fix gazebo link
 - Update and clean mdbook doc
 
 ## [7.0.0] - 2026-03-06

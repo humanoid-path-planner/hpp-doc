@@ -69,7 +69,7 @@ flowchart TB
 classDef external fill:#C8E6C9,stroke:#2E7D32;
 class PIN,COAL external
 ```
-The software is composed of C++ libraries implementing the algorithms. Python bindings built on Boost.Python are provided to help users easily define and solve problems. Visualization of the scene can be done in a web browser using [viser](https://viser.studio/main), or using ROS/ROS2 with [rviz2](https://wiki.ros.org/rviz2) or [gazebo](https://gazebosim.org/home).
+The software is composed of C++ libraries implementing the algorithms. Python bindings built on Boost.Python are provided to help users easily define and solve problems. Visualization of the scene can be done in a web browser using [viser](https://viser.studio/main), or using ROS/ROS2 with [rviz2](https://wiki.ros.org/rviz2) or [gazebo](https://gazebosim.org/).
 
 ![Rviz Viewer](/hpp-doc/introduction/figures/viewer_demo.gif)
 The algorithmic part, built on [hpp-manipulation](/hpp-doc/reference/hpp-manipulation/) is embedded in several Python modules by [hpp-python](/hpp-doc/reference/hpp-python/).
