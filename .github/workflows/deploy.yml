@@ -35,6 +35,19 @@ jobs:
         working-directory: mdbook/scripts
         run: ./buildMdbook.sh "$GITHUB_WORKSPACE/hpp_tutorial"
 
+      - name: Update the Python API reference from hpp-python CI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          run_id=$(gh run list -R humanoid-path-planner/hpp-python -w nix.yml -b devel -e push -s success -L 1 --json databaseId -q '.[0].databaseId')
+          if ! gh run download "$run_id" -R humanoid-path-planner/hpp-python -n pyhpp-api-md -D api-md; then
+            echo "::warning::No Python API reference in hpp-python CI run $run_id, keeping the committed one."
+          elif grep -rq 'is not documented' api-md; then
+            echo "::warning::Python API reference of hpp-python CI run $run_id lacks docstrings, keeping the committed one."
+          else
+            cp api-md/*.md mdbook/src/reference/hpp-python/api/
+          fi
+
       - uses: peaceiris/actions-mdbook@v2
         with:
           mdbook-version: latest
