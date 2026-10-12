@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+- [doc] Remove the description of the CORBA architecture
 - [CI] Get the Python API reference from hpp-python CI
 - [CI] Check the links of the book
 - [CI] Deploy the book only from humanoid-path-planner/hpp-doc

@@ -5,8 +5,6 @@ set(PROJECT_NAME hpp-doc)
 set(PROJECT_DESCRIPTION "Documentation for HPP")
 set(PROJECT_URL https://humanoid-path-planner.github.io/hpp-doc/index.html)
 
-option(USE_CORBA "Enable dependency to hpp-manipulation-corba" OFF)
-
 find_package(jrl-cmakemodules QUIET CONFIG)
 if(jrl-cmakemodules_FOUND)
     get_property(
@@ -66,12 +64,6 @@ add_hpp_pkg(hpp-gepetto-viewer)
 add_hpp_pkg(hpp-tutorial)
 add_hpp_pkg(hpp-python)
 add_hpp_pkg(hpp-exec)
-if(USE_CORBA)
-    add_hpp_pkg(hpp-corbaserver)
-    add_hpp_pkg(hpp-manipulation-corba)
-    add_hpp_pkg(gepetto-viewer)
-    add_hpp_pkg(gepetto-viewer-corba)
-endif()
 
 foreach(PKG ${SETUP_DOC_PKG})
     add_project_dependency(${PKG})
