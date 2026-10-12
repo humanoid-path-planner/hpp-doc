@@ -40,34 +40,6 @@ scene if done in a web browser using <a href="https://viser.studio/main">viser</
   </td></tr>
 </table>
 
-\par Overview of the old architecture
-
-We describe here the former architecture that is deprecated, but still in use in some projects.
-
-The packages are distributed into the following categories:
-\li \ref hpp_doc_algorithms "Algorithms" implementing path planning functionalities
-\li \ref hpp_doc_graphical_interface "Graphical user interface" to display configurations and paths.
-
-<table>
-  <tr><td width="50%">
-      <img src="../figures/archi.svg" alt="Overview of the architecture" style="max-height: 50vh"/>
-  </td><td width="5%">
-  </td><td width="30%">
-    The algorithmic part, built on @hpp-core_LINK@ is
-    embedded in corba servers implemented by
-    @hpp-corbaserver_LINK@ or extensions like
-    @hpp-manipulation-corba_LINK@.
-    The corba servers are linked to executable \c hppcorbaserver.
-    <p></p>
-    From a python terminal, clients to the corba servers can be created in order
-    to control the executable.
-    <p></p>
-    Results of path planning requests as well as individual configurations can
-    be displayed in \c gepetto-gui via package
-    @hpp-gepetto-viewer_LINK@.
-  </td></tr>
-</table>
-
 \par Getting started
 
 Package <a href="https://github.com/humanoid-path-planner/hpp_tutorial/tree/devel/README.md"> hpp_tutorial </a> provides some examples of

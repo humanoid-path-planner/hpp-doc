@@ -18,12 +18,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
+    if: github.event_name != 'schedule' || github.repository == 'humanoid-path-planner/hpp-doc'
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - uses: actions/checkout@v7
@@ -37,6 +34,19 @@ jobs:
       - name: Update package READMEs and tutorials
         working-directory: mdbook/scripts
         run: ./buildMdbook.sh "$GITHUB_WORKSPACE/hpp_tutorial"
+
+      - name: Update the Python API reference from hpp-python CI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          run_id=$(gh run list -R humanoid-path-planner/hpp-python -w nix.yml -b devel -e push -s success -L 1 --json databaseId -q '.[0].databaseId')
+          if ! gh run download "$run_id" -R humanoid-path-planner/hpp-python -n pyhpp-api-md -D api-md; then
+            echo "::warning::No Python API reference in hpp-python CI run $run_id, keeping the committed one."
+          elif grep -rq 'is not documented' api-md; then
+            echo "::warning::Python API reference of hpp-python CI run $run_id lacks docstrings, keeping the committed one."
+          else
+            cp api-md/*.md mdbook/src/reference/hpp-python/api/
+          fi
 
       - uses: peaceiris/actions-mdbook@v2
         with:
@@ -68,11 +78,30 @@ jobs:
             exit 1
           fi
 
-      - uses: actions/configure-pages@v6
+      - name: Check internal links
+        run: mdbook/scripts/checkLinks.py mdbook/book
+
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: false
+          args: --scheme https --scheme http --no-progress --exclude-path mdbook/book/print.html mdbook/book
 
       - uses: actions/upload-pages-artifact@v5
         with:
           path: ./mdbook/book
+
+  deploy:
+    if: github.repository == 'humanoid-path-planner/hpp-doc'
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - uses: actions/configure-pages@v6
 
       - id: deployment
         uses: actions/deploy-pages@v5
