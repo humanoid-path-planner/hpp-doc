@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+- [CI] Deploy the book only from humanoid-path-planner/hpp-doc
 - [makefiles] Build release v9.0.2 in stable.mk
 - [mdbook] Remove Ubuntu 20.04 installation
 - [mdbook] Remove Qt and CORBA packages from installation instructions; add nodejs, npm and example-robot-data
