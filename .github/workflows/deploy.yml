@@ -65,6 +65,15 @@ jobs:
             exit 1
           fi
 
+      - name: Check internal links
+        run: mdbook/scripts/checkLinks.py mdbook/book
+
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: false
+          args: --scheme https --scheme http --no-progress --exclude-path mdbook/book/print.html mdbook/book
+
       - uses: actions/upload-pages-artifact@v5
         with:
           path: ./mdbook/book
