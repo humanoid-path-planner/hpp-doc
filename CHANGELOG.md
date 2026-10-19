@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+- [CI] Build the Sphinx website, deploy it on forks with DEPLOY_PAGES
 - [sphinx] Add a Sphinx website with the C++ and Python API references
 - [doc] Remove the description of the CORBA architecture
 - [CI] Get the Python API reference from hpp-python CI
