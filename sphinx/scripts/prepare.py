@@ -19,6 +19,8 @@ import shutil
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
+from collections import Counter
+from html import escape
 from pathlib import Path
 
 CPP_PACKAGES = [
@@ -50,7 +52,9 @@ EXTRACT_ALL = YES
 GENERATE_HTML = NO
 GENERATE_LATEX = NO
 GENERATE_XML = YES
-HAVE_DOT = NO
+HAVE_DOT = YES
+INCLUDE_GRAPH = NO
+INCLUDED_BY_GRAPH = NO
 XML_OUTPUT = {xml}
 QUIET = YES
 WARNINGS = NO
@@ -66,6 +70,20 @@ PREDEFINED = HPP_PINOCCHIO_PARSED_BY_DOXYGEN \
              EIGEN_MAKE_ALIGNED_OPERATOR_NEW= EIGEN_STRONG_INLINE=inline \
              HPP_PREDEF_CLASS(x)= HPP_SERIALIZABLE()= HPP_SERIALIZABLE_SPLIT()=
 """
+GRAPH = """```{{graphviz}}
+:alt: Inheritance diagram of {name}
+:align: center
+
+digraph {{
+  graph [rankdir={rankdir} bgcolor=transparent nodesep=0.2 ranksep=0.2]
+  node [shape=box style="rounded,filled" fillcolor="#ffffff" color="#2980b9"
+        fontname=Helvetica fontsize=11 fontcolor="#404040" margin="0.15,0.05"]
+  edge [color="#8c8c8c" arrowhead=empty arrowsize=0.8]
+{body}}}
+```
+
+"""
+TEMPLATE = re.compile(r"<[^<>]*>")
 LINK = re.compile(r"\]\(([^):#/][^):]*)\)")
 BADGE = re.compile(r"^\[!\[.*\n", re.MULTILINE)
 UNDOCUMENTED = re.compile(r'"""\s*Cannot find doxygen-xml[^\n]*\s*"""')
@@ -77,6 +95,9 @@ root = Path(__file__).resolve().parent.parent
 build = root / "_build"
 site_packages = Path(sys.argv[1]).resolve()
 ref = sys.argv[2] if len(sys.argv) > 2 else "devel"
+# Address of the page of each class from the page of another class, by refid
+# and by name.
+class_pages = {}
 
 
 def clone(repo, ref):
@@ -141,6 +162,57 @@ def tutorials():
             )
 
 
+def inheritance_graph(name, path):
+    """Inheritance graph of a class, with UML arrows from the derived classes to
+    their bases and links to the pages of the other classes. Bases are above
+    their derived classes, or on their left when they have many."""
+    graph = ET.parse(path).find("compounddef/inheritancegraph")
+    if graph is None or len(graph) < 2:
+        return ""
+    derived = Counter(
+        base.get("refid") for node in graph for base in node.iter("childnode")
+    )
+    body = []
+    for node in graph:
+        label, n = node.findtext("label"), node.get("id")
+        # The classes of other packages have no link.
+        link = node.find("link")
+        page = class_pages.get(label if link is None else link.get("refid"))
+        namespace = label.partition("<")[0].rpartition("::")[0]
+        short = escape(abbreviate(label).removeprefix(f"{namespace}::"))
+        if n == "1":  # the class itself
+            short, attributes = f"<b>{short}</b>", ' fillcolor="#e7f2fa" penwidth=1.5'
+        elif page:
+            attributes = f' URL="{page}" target="_top"'
+        else:
+            attributes = ' color="#c9c9c9" fontcolor="#808080"'
+        if namespace:
+            short = f'<font point-size="9" color="#808080">{escape(namespace)}</font><br/>{short}'
+        body.append(f'  "{n}" [label=<{short}> tooltip="{label}"{attributes}]')
+        for base in node.findall("childnode"):
+            b = base.get("refid")
+            # Several derived classes share the arrow to their base, as in UML.
+            style = ["arrowhead=none"] * (derived[b] > 1)
+            style += ["style=dashed"] * (base.get("relation") != "public-inheritance")
+            body.append(f'  "{n}" -> "{b}{"-" * (derived[b] > 1)}" [{" ".join(style)}]')
+    for b in (b for b, count in derived.items() if count > 1):
+        body.append(f'  "{b}-" [shape=point width=0 height=0]\n  "{b}-" -> "{b}"')
+    rankdir = "RL" if max(derived.values()) > 4 else "BT"
+    return GRAPH.format(name=name, rankdir=rankdir, body="\n".join(body) + "\n")
+
+
+def abbreviate(name):
+    """Class name with only the first template argument, e.g. A< B<…>, … >."""
+    head, bracket, arguments = name.partition("<")
+    if not bracket:
+        return name
+    arguments = arguments.removesuffix(">")
+    while (nested := TEMPLATE.sub("‹…›", arguments)) != arguments:
+        arguments = nested
+    first, more, _ = arguments.replace("‹…›", "<…>").partition(",")
+    return f"{head}< {first.strip()}{', …' * bool(more)} >"
+
+
 def cpp_api(package):
     src = clone(package, ref)
     xml = build / "xml" / package
@@ -171,6 +243,7 @@ def cpp_api(package):
     classes = {
         c.findtext("name") for c in compounds if c.get("kind") in ("class", "struct")
     }
+    pages = []
     namespaces = {}
     for c in compounds:
         name, refid = c.findtext("name"), c.get("refid")
@@ -197,11 +270,15 @@ def cpp_api(package):
         elif name in classes and name.rpartition("::")[0] not in classes:
             namespace, _, short = name.rpartition("::")
             namespaces.setdefault(namespace, []).append((short, refid))
-            (dest / f"{refid}.md").write_text(
-                f"# {name}\n\n"
-                f"```{{doxygen{c.get('kind')}}} {name}\n:project: {package}\n"
-                ":members:\n:protected-members:\n:undoc-members:\n```\n"
-            )
+            class_pages[name] = class_pages[refid] = f"../{package}/{refid}.html"
+            pages.append((name, refid, c.get("kind")))
+    # Written once the pages of the package are known, for the inheritance graphs.
+    for name, refid, kind in pages:
+        (dest / f"{refid}.md").write_text(
+            f"# {name}\n\n{inheritance_graph(name, xml / f'{refid}.xml')}"
+            f"```{{doxygen{kind}}} {name}\n:project: {package}\n"
+            ":members:\n:protected-members:\n:undoc-members:\n```\n"
+        )
 
     index = [
         f"# {package}\n",

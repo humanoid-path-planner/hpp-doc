@@ -36,10 +36,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install Doxygen and Sphinx
+      - name: Install Doxygen, Graphviz and Sphinx
         run: |
           sudo apt-get update
-          sudo apt-get install -y doxygen
+          sudo apt-get install -y doxygen graphviz
           pip install -r sphinx/requirements.txt
 
       - name: Get the pyhpp stubs from the hpp-python CI run of this version

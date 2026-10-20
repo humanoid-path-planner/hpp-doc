@@ -7,6 +7,7 @@ html_title = f"{project} {release}"
 extensions = [
     "myst_parser",
     "breathe",
+    "sphinx.ext.graphviz",
     "autoapi.extension",
     "sphinxcontrib.mermaid",
     "sphinx_reredirects",
@@ -33,6 +34,7 @@ cpp_packages = [
     "hpp-manipulation-urdf",
 ]
 breathe_projects = {p: os.path.abspath(f"_build/xml/{p}") for p in cpp_packages}
+graphviz_output_format = "svg"
 
 autoapi_dirs = ["_build/python"]
 autoapi_file_patterns = ["*.pyi", "*.py"]

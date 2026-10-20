@@ -29,3 +29,13 @@
 .wy-nav-content {
     max-width: 1200px;
 }
+
+/* Inheritance graphs of the C++ classes: scroll the wide ones, do not shrink them. */
+div.graphviz {
+    margin-bottom: 24px;
+    overflow-x: auto;
+}
+
+div.graphviz object {
+    max-width: none;
+}
