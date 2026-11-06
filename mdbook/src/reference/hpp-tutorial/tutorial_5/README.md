@@ -70,7 +70,7 @@ toppra = Toppra(problem)
 toppra.velocityScale = 0.5
 toppra.effortScale = -1
 toppra.N = 100
-toppra.selectJoints([f"staubli/joint_{i}" for i in range(1,7)])
+toppra.selectJoints([f"staubli/joint_{i}" for i in range(1, 7)])
 toppra.accelerationLimits = np.array(6 * [0.5])
 p3 = toppra.optimize(p2)
 print(f"TOPPRA duration: {p3.length():.3f} s")
