@@ -1,4 +1,6 @@
-FROM ros:jazzy
+ARG ROS_DISTRO=jazzy
+FROM ros:${ROS_DISTRO}
+ARG ROS_DISTRO=jazzy
 
 WORKDIR /ws
 
@@ -10,5 +12,5 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt \
     apt update \
  && rosdep install --from-paths src --ignore-src -r -y
 
-RUN . /opt/ros/jazzy/setup.sh \
+RUN . "/opt/ros/${ROS_DISTRO}/setup.sh" \
  && colcon build

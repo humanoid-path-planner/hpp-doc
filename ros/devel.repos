@@ -1,8 +1,4 @@
 repositories:
-  src/example-robot-data:
-    type: git
-    url: https://github.com/gepetto/example-robot-data
-    version: devel
   src/hpp-affordance:
     type: git
     url: https://github.com/humanoid-path-planner/hpp-affordance
