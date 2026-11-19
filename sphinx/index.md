@@ -1,0 +1,281 @@
+# Humanoid Path Planner Documentation
+
+## Introduction
+HPP is a C++ software development kit for path planning and manipulation planning of kinematic chains in environments cluttered with obstacles, from industrial manipulators to humanoid robots. Robots and objects are loaded from URDF and SRDF files. Collision checking relies on [coal](https://github.com/coal-library/coal), a modified version of the Flexible Collision Library. HPP is a collection of packages built with CMake.
+
+## Main features
+- Path planning for kinematic chains subject to nonlinear constraints ([hpp-core](reference/hpp-core/index.md), [hpp-constraints](reference/hpp-constraints/index.md)).
+- Manipulation planning: grasping, placement and regrasping are modelled by a constraint graph ([hpp-manipulation](reference/hpp-manipulation/index.md)).
+- Python bindings to define robots and problems and to call the planners ([hpp-python](reference/hpp-python/index.md)).
+- Display of configurations and paths in a web browser with [viser](https://viser.studio/main), or in rviz2.
+- Execution of planned paths on `ros2_control` controllers ([hpp-exec](reference/hpp-exec/index.md)).
+
+## Applications
+The videos below show HPP on industrial tasks.
+
+### Surface treatment
+Planning a tool path to sweep and abrade the surface of a cylinder, while avoiding self-collisions and obstacles in the workspace.
+<p align="center">
+
+<iframe title="Sweeping a surface on a cylinder with an abrasion tool" width="560" height="315" src="https://peertube.laas.fr/videos/embed/hSHX1HZ2icsVMgwuw95jYk" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+</p>
+
+### Welding
+Planning collision-free trajectories for a welding tool around complex parts.
+
+<p align="center">
+<iframe title="welding" width="560" height="315" src="https://peertube.laas.fr/videos/embed/2vHankanje9jfRRXTGXyXA" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+</p>
+
+### Assembly / construction
+Planning manipulation sequences to assemble a structure piece by piece, combining grasping, regrasping, and placement.
+
+<p align="center">
+<iframe width="560" height="315"
+title="construction set"
+src="https://www.youtube.com/embed/ZVvePCl6qP0"
+style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+</iframe>
+</p>
+
+## Overview of the architecture
+```mermaid
+flowchart TB
+    HPPY["hpp-python"]
+    subgraph HPP_STACK["HPP stack"]
+        direction TB
+        HM["hpp-manipulation"]
+        HC["hpp-core"]
+        HCONS["hpp-constraints"]
+        HPIN["hpp-pinocchio"]
+        HM --> HC
+        HC --> HCONS
+        HCONS --> HPIN
+    end
+    PIN["pinocchio"]
+    COAL["coal"]
+    HPIN --> PIN
+    HPIN --> COAL
+    HPPY --> HPP_STACK
+   subgraph HPP_VIZ["HPP Visualization"]
+        direction TB
+        VW["Viewer"]
+        GPV["Gepetto Viewer"]
+        GV["Graph Viewer"]
+        VW --> GPV
+        VW --> GV
+   end
+   HPPY -->  |import| VW
+classDef external fill:#C8E6C9,stroke:#2E7D32;
+class PIN,COAL external
+```
+The software is composed of C++ libraries implementing the algorithms. Python bindings built on Boost.Python are provided to help users easily define and solve problems. Visualization of the scene can be done in a web browser using [viser](https://viser.studio/main), or using ROS/ROS2 with [rviz2](https://wiki.ros.org/rviz2) or [gazebo](https://gazebosim.org/).
+
+![Rviz Viewer](introduction/figures/viewer_demo.gif)
+The algorithmic part, built on [hpp-manipulation](reference/hpp-manipulation/index.md) is embedded in several Python modules by [hpp-python](reference/hpp-python/index.md).
+From a Python script, users can define scenes containing robots and environments, they can also define and solve motion planning problems.
+Results of path planning requests as well as individual configurations can be displayed in a web browser via package [hpp-gepetto-viewer](reference/hpp-gepetto-viewer/index.md).
+
+## Getting started
+The [tutorials](reference/hpp-tutorial/index.md) of package [hpp_tutorial](https://github.com/humanoid-path-planner/hpp_tutorial) cover installation, the definition and resolution of a pick-and-place problem, and the execution of planned motions on a simulated robot.
+
+## Acknowledgement
+
+
+<img src="introduction/assets/logo_romeo.jpg" alt="Logo projet ROMEO" title="Projet ROMEO 2" style="height: 70px">
+<img src="introduction/assets/logo_euroc.png" alt="Logo EUROC project" title="EUROC project" style="height: 70px">
+<img src="introduction/assets/logo-FP7.jpg" alt="Framework Program 7" title="Framework Program 7" style="height: 110px">
+<img src="introduction/assets/LOGO_ERC.jpg" alt="Logo ERC" title="ERC Actanthrope" style="height: 110px">
+<img src="introduction/assets/logo_fiad.jpg" alt="EU Project: Factory-in-a-day" title="Factory in a Day" style="height: 110px">
+<a href="http://www.agence-nationale-recherche.fr"><img src="introduction/assets/logo_anr.gif" alt="Logo ANR project" title="ANR project" style="height: 70px"></a>
+<img src="introduction/assets/logo_rob4fam.png" alt="Logo ROB4FAM" title="ROB4FAM" style="height: 60px">
+<img src="introduction/assets/logo_robocom_def_png.png" alt="RoboCom++" title="RoboCom++" style="height: 110px">
+
+## Contributors
+
+Thanks to all the contributors of the HPP project:
+
+
+<p align="center">
+<a href="https://github.com/jmirabel">
+  <img src="https://github.com/jmirabel.png" width="80" title="jmirabel (5424 contributions)"/>
+</a>
+<a href="https://github.com/nim65s">
+  <img src="https://github.com/nim65s.png" width="80" title="nim65s (4650 contributions)"/>
+</a>
+<a href="https://github.com/florent-lamiraux">
+  <img src="https://github.com/florent-lamiraux.png" width="80" title="florent-lamiraux (3621 contributions)"/>
+</a>
+<a href="https://github.com/pFernbach">
+  <img src="https://github.com/pFernbach.png" width="80" title="pFernbach (1932 contributions)"/>
+</a>
+<a href="https://github.com/psardin001">
+  <img src="https://github.com/psardin001.png" width="80" title="psardin001 (345 contributions)"/>
+</a>
+<a href="https://github.com/laastp">
+  <img src="https://github.com/laastp.png" width="80" title="laastp (140 contributions)"/>
+</a>
+<a href="https://github.com/stonneau">
+  <img src="https://github.com/stonneau.png" width="80" title="stonneau (127 contributions)"/>
+</a>
+<a href="https://github.com/hrp2-14">
+  <img src="https://github.com/hrp2-14.png" width="80" title="hrp2-14 (116 contributions)"/>
+</a>
+<a href="https://github.com/thomas-moulard">
+  <img src="https://github.com/thomas-moulard.png" width="80" title="thomas-moulard (90 contributions)"/>
+</a>
+<a href="https://github.com/Toefinder">
+  <img src="https://github.com/Toefinder.png" width="80" title="Toefinder (89 contributions)"/>
+</a>
+<a href="https://github.com/DiegoP-G">
+  <img src="https://github.com/DiegoP-G.png" width="80" title="DiegoP-G (59 contributions)"/>
+</a>
+<a href="https://github.com/wxmerkt">
+  <img src="https://github.com/wxmerkt.png" width="80" title="wxmerkt (54 contributions)"/>
+</a>
+<a href="https://github.com/nmansard">
+  <img src="https://github.com/nmansard.png" width="80" title="nmansard (38 contributions)"/>
+</a>
+<a href="https://github.com/andreadelprete">
+  <img src="https://github.com/andreadelprete.png" width="80" title="andreadelprete (33 contributions)"/>
+</a>
+<a href="https://github.com/DianeBury">
+  <img src="https://github.com/DianeBury.png" width="80" title="DianeBury (32 contributions)"/>
+</a>
+<a href="https://github.com/ymontmarin">
+  <img src="https://github.com/ymontmarin.png" width="80" title="ymontmarin (26 contributions)"/>
+</a>
+<a href="https://github.com/jcarpent">
+  <img src="https://github.com/jcarpent.png" width="80" title="jcarpent (22 contributions)"/>
+</a>
+<a href="https://github.com/Kotochleb">
+  <img src="https://github.com/Kotochleb.png" width="80" title="Kotochleb (20 contributions)"/>
+</a>
+<a href="https://github.com/loanBRNT">
+  <img src="https://github.com/loanBRNT.png" width="80" title="loanBRNT (9 contributions)"/>
+</a>
+<a href="https://github.com/sebastiendalibard">
+  <img src="https://github.com/sebastiendalibard.png" width="80" title="sebastiendalibard (6 contributions)"/>
+</a>
+<a href="https://github.com/JasonChmn">
+  <img src="https://github.com/JasonChmn.png" width="80" title="JasonChmn (6 contributions)"/>
+</a>
+<a href="https://github.com/aorthey">
+  <img src="https://github.com/aorthey.png" width="80" title="aorthey (6 contributions)"/>
+</a>
+<a href="https://github.com/RenaudViry">
+  <img src="https://github.com/RenaudViry.png" width="80" title="RenaudViry (5 contributions)"/>
+</a>
+<a href="https://github.com/MaximilienNaveau">
+  <img src="https://github.com/MaximilienNaveau.png" width="80" title="MaximilienNaveau (5 contributions)"/>
+</a>
+<a href="https://github.com/ksyy">
+  <img src="https://github.com/ksyy.png" width="80" title="ksyy (5 contributions)"/>
+</a>
+<a href="https://github.com/alexandrethiault">
+  <img src="https://github.com/alexandrethiault.png" width="80" title="alexandrethiault (5 contributions)"/>
+</a>
+<a href="https://github.com/timtmit">
+  <img src="https://github.com/timtmit.png" width="80" title="timtmit (4 contributions)"/>
+</a>
+<a href="https://github.com/rlefevre1">
+  <img src="https://github.com/rlefevre1.png" width="80" title="rlefevre1 (3 contributions)"/>
+</a>
+<a href="https://github.com/IliasHar">
+  <img src="https://github.com/IliasHar.png" width="80" title="IliasHar (3 contributions)"/>
+</a>
+<a href="https://github.com/teguhSL">
+  <img src="https://github.com/teguhSL.png" width="80" title="teguhSL (2 contributions)"/>
+</a>
+<a href="https://github.com/olivier-stasse">
+  <img src="https://github.com/olivier-stasse.png" width="80" title="olivier-stasse (2 contributions)"/>
+</a>
+<a href="https://github.com/thanhndv212">
+  <img src="https://github.com/thanhndv212.png" width="80" title="thanhndv212 (1 contributions)"/>
+</a>
+<a href="https://github.com/petrikvladimir">
+  <img src="https://github.com/petrikvladimir.png" width="80" title="petrikvladimir (1 contributions)"/>
+</a>
+<a href="https://github.com/fvalenza">
+  <img src="https://github.com/fvalenza.png" width="80" title="fvalenza (1 contributions)"/>
+</a>
+<a href="https://github.com/daeunSong">
+  <img src="https://github.com/daeunSong.png" width="80" title="daeunSong (1 contributions)"/>
+</a>
+<a href="https://github.com/airobert">
+  <img src="https://github.com/airobert.png" width="80" title="airobert (1 contributions)"/>
+</a>
+</p>
+
+```{toctree}
+:hidden:
+:caption: Introduction
+
+Overview <self>
+How to Contribute <introduction/contributing>
+```
+
+```{toctree}
+:hidden:
+:caption: Installation
+
+installation/installation
+Stable — Binary <installation/stable-binary>
+Stable — Source <installation/stable-sources>
+Stable — Nix <installation/nix-stable-binary>
+Development — Source <installation/devel-sources>
+Development — Nix <installation/nix-devel-sources>
+ROS — Source <installation/ros-devel-sources>
+```
+
+```{toctree}
+:hidden:
+:caption: Tutorials
+
+Overview <reference/hpp-tutorial/index>
+Installing the software <reference/hpp-tutorial/tutorial_1/index>
+Solving a simple pick and place task <reference/hpp-tutorial/tutorial_2/index>
+Using HPP in manufacturing <reference/hpp-tutorial/tutorial_3/index>
+Controlling the trajectory of a tool <reference/hpp-tutorial/tutorial_4/index>
+Optimizing and time-parameterizing paths <reference/hpp-tutorial/tutorial_5/index>
+Using RViz2 visualization <reference/hpp-tutorial/tutorial_6/index>
+Executing motions on a simulated robot <reference/hpp-tutorial/tutorial_7/index>
+Pick and place with a gripper <reference/hpp-tutorial/tutorial_8/index>
+Efficient pre- and post-actions <reference/hpp-tutorial/tutorial_9/index>
+Exercise 10: MFJA pick and place <reference/hpp-tutorial/exercise_10/index>
+```
+
+```{toctree}
+:hidden:
+:caption: Packages
+
+hpp-core <reference/hpp-core/index>
+hpp-manipulation <reference/hpp-manipulation/index>
+hpp-constraints <reference/hpp-constraints/index>
+hpp-pinocchio <reference/hpp-pinocchio/index>
+hpp-python <reference/hpp-python/index>
+hpp-gepetto-viewer <reference/hpp-gepetto-viewer/index>
+hpp-plot <reference/hpp-plot/index>
+hpp-exec <reference/hpp-exec/index>
+```
+
+```{toctree}
+:hidden:
+:caption: API Reference (C++)
+
+api/cpp/index
+hpp-util <api/cpp/hpp-util/index>
+hpp-statistics <api/cpp/hpp-statistics/index>
+hpp-pinocchio <api/cpp/hpp-pinocchio/index>
+hpp-constraints <api/cpp/hpp-constraints/index>
+hpp-core <api/cpp/hpp-core/index>
+hpp-manipulation <api/cpp/hpp-manipulation/index>
+hpp-manipulation-urdf <api/cpp/hpp-manipulation-urdf/index>
+```
+
+```{toctree}
+:hidden:
+:caption: API Reference (Python)
+
+pyhpp <api/python/pyhpp/index>
+```

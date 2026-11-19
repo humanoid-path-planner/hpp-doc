@@ -1,0 +1,86 @@
+name: Build the website with Sphinx
+
+on:
+  push:
+    branches:
+      - devel
+  pull_request:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Branch of the HPP packages
+        default: devel
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sphinx-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  HPP_VERSION: ${{ inputs.ref || 'devel' }}
+  HPP_PYTHON_REPOSITORY: ${{ vars.HPP_PYTHON_REPOSITORY || 'humanoid-path-planner/hpp-python' }}
+
+jobs:
+  build:
+    if: github.event_name != 'schedule' || github.repository == 'humanoid-path-planner/hpp-doc'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install Doxygen, Graphviz and Sphinx
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y doxygen graphviz
+          pip install -r sphinx/requirements.txt
+
+      - name: Get the pyhpp stubs from the hpp-python CI run of this version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sha=$(gh api "repos/$HPP_PYTHON_REPOSITORY/commits/$HPP_VERSION" -q .sha)
+          run_id=$(gh run list -R "$HPP_PYTHON_REPOSITORY" -w nix.yml -c "$sha" -e push -s success -L 1 --json databaseId -q '.[0].databaseId')
+          test -n "$run_id"
+          gh run download "$run_id" -R "$HPP_PYTHON_REPOSITORY" -n pyhpp -D site-packages/pyhpp
+
+      - name: Generate the pages from the HPP packages
+        run: sphinx/scripts/prepare.py site-packages "$HPP_VERSION"
+
+      - name: Build the website
+        run: sphinx-build -j auto sphinx sphinx/_build/html
+
+      - name: Check internal links
+        run: mdbook/scripts/checkLinks.py sphinx/_build/html
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: sphinx/_build/html
+
+  # Preview on a fork with Pages and the repository variable DEPLOY_PAGES set to true.
+  deploy:
+    if: >-
+      github.repository != 'humanoid-path-planner/hpp-doc' && vars.DEPLOY_PAGES == 'true'
+      && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - uses: actions/configure-pages@v6
+
+      - id: deployment
+        uses: actions/deploy-pages@v5

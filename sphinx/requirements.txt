@@ -1,0 +1,7 @@
+sphinx
+sphinx-rtd-theme
+myst-parser
+breathe
+sphinx-autoapi
+sphinxcontrib-mermaid
+sphinx-reredirects
