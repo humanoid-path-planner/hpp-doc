@@ -62,7 +62,6 @@ from pyhpp_rviz import RVizVisualizer as Viewer
 
 v = Viewer()
 v.initViewer(robot=robot)
-
 ```
 
 ## Configuring RViz2
